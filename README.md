@@ -1,4 +1,5 @@
-# *ReqList*, *ReqNet* and *ReqSim*
+# *ReqList*, *ReqNet* and *ReqSim* [![DOI](https://zenodo.org/badge/787057888.svg)](https://zenodo.org/doi/10.5281/zenodo.10976096)
+
 ---
 > Dataset for the publication:
 
