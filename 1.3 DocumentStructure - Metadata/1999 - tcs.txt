@@ -1,0 +1,152 @@
+D	Tactical Control System (TCS) System/Subsystem Specification - Cruise Missiles Project and Unmanned Air Vehicles Joint Project
+3	ENGINEERING REQUIREMENTS
+3.1	Required States And Modes
+3.1.1	Startup State
+3.1.1.1	Normal Startup Mode
+3.1.1.2	Recovery Startup Mode
+3.1.2	Operations State
+3.1.2.1	Normal Operations Mode
+3.1.2.2	Training Operations Mode
+3.1.2.3	Maintenance Operations Mode
+3.1.3	Shutdown State
+3.2	System Capability Requirements
+3.2.1	Mission Planning Function
+3.2.1.1	Flight Route Planning Capability
+3.2.1.1.1	Map Display Task
+3.2.1.2	Payload Planning Capability
+3.2.2	Mission Control And Monitoring Functions
+3.2.2.1	AV Control And Monitoring Capability
+3.2.2.1.1	AV Flight Control Task
+3.2.2.1.1.1	Flight Behavior Characteristics
+3.2.2.1.2	AV Navigation Control Task
+3.2.2.1.3	ADT Control Task
+3.2.2.1.3.1	ADT Antenna Control
+3.2.2.1.3.2	ADT Transmitter And Receiver Control
+3.2.2.1.4	AV Launch/Recovery Task
+3.2.2.1.4.1	Emergency Recovery
+3.2.2.1.5	AV Monitoring Task
+3.2.2.1.5.1	AV Monitoring Displays
+3.2.2.2	Payload Control And Monitoring Capability
+3.2.2.2.1	Payload Control Task
+3.2.2.2.2	Payload Monitoring Task
+3.2.2.2.2.1	Payload Monitoring Displays
+3.2.2.3	Data Terminal Control And Monitoring Capability
+3.2.2.3.1	Data Terminal Control Task
+3.2.2.3.1.1	Antenna And Pedestal Control
+3.2.2.3.1.2	Transmitter And Receiver Control
+3.2.2.3.2	Data Terminal Monitoring Task
+3.2.3	Payload Product Management Function
+3.2.3.1	Payload Product Processing Capability
+3.2.3.2	Payload Product Display Capability
+3.2.3.3	Payload Product Exploitation Capability
+3.2.4	Targeting Function
+3.2.4.1	Target Coordinate Development Capability
+3.2.4.2	Target Accuracy Estimation Capability
+3.2.5	C4I System Interface Function
+3.2.5.1	C4I Interface Control Capability
+3.2.5.1.1	C4I Digital Interface Control Capability
+3.2.5.1.2	C4I Analog Interface Control Capability
+3.2.5.2	C4I Interface Data Processing Capability
+3.2.5.2.1	C4I Digital Interface Data Processing Capability
+3.2.5.2.2	C4I Analog Interface Data Processing Capability
+3.2.5.3	C4I Interface Monitoring Capability
+3.2.6	AV Maintenance Function
+3.2.7	Payload Maintenance Function
+3.2.8	Data Terminal Maintenance Function
+3.2.9	Workstation and Peripheral Equipment Maintenance Function
+3.2.10	Fault Detection/Location Function
+3.2.11	Software Upgrade Function
+3.2.12	Software Debug and Monitoring Function
+3.3	System External Interface Requirements
+3.3.1	Interface Identification
+3.3.1.1	TCS to C4I
+3.3.1.1.1	TCS to  ASAS
+3.3.1.1.2	TCS to  JSTARS GSM
+3.3.1.1.3	TCS to  JMCIS
+3.3.1.1.4	TCS to  JSIPS-N
+3.3.1.1.5	TCS to  AFATDS
+3.3.1.1.6	TCS to  JSIPS-AF
+3.3.1.1.7	TCS to  CARS
+3.3.1.1.8	TCS to  CCTV
+3.3.1.1.9	TCS to  Service Mission Planners
+3.3.1.1.9.1	TCS to Army Miss ion Planning System
+3.3.1.1.9.2	TCS to Air Force Mission Support System
+3.3.1.1.9.3	TCS to Tactical Aircraft Mission Planning System
+3.3.1.1.10	TCS to  GCS/ACS IPF
+3.3.1.1.11	TCS to  JDISS
+3.3.1.1.12	TCS to TES
+3.3.1.1.13	TCS to  IAS
+3.3.1.1.14	TCS to  ATHS
+3.3.1.1.15	TCS to  ATWCS
+3.3.1.1.16	TCS to  TROJAN SPIRIT II
+3.3.1.1.17	TCS to  TBMCS
+3.3.1.1.18	TCS to  MIES
+3.3.1.1.19	TCS to  ETRAC
+3.3.1.1.20	TCS to  COMPASS
+3.3.1.1.21	TCS to TEG
+3.3.1.2	TCS to  DT Control
+3.3.1.3	TCS to  Printer
+3.3.1.4	External Data Storage Systems
+3.3.1.5	TCS to  External Power
+3.3.1.6	TCS to  Geopositional Data
+3.4	System Internal Interface Requirements
+3.4.1	AV Standard Interface
+3.4.2	Real Time Processor
+3.4.2.1	Distributed Processing
+3.4.3	SAR Processor
+3.4.4	Intercom
+3.4.5	VCR
+3.4.6	Printer
+3.4.7	Data Storage Devices
+3.4.7.1	CD Drive
+3.4.7.2	Tape Drive
+3.4.7.3	Redundant Array Of Inexpensive Disks (RAID)
+3.4.8	Uninterruptible Power
+3.5	System Internal Data Requirements
+3.6	Adaptation Requirements
+3.7	Safety Requirements
+3.7.1	Air Vehicle Safety
+3.7.2	Human Safety
+3.7.3	System Safety And Health Hazard Assets
+3.8	Security And Privacy Requirements
+3.8.1	Computer Security
+3.8.2	Communications Security
+3.8.3	Physical Security
+3.8.4	Personnel Security
+3.9	System Environment Requirements
+3.10	Resource Requirements
+3.10.1	Hardware Requirements
+3.10.1.1	Performance
+3.10.1.2	Mass Storage
+3.10.1.3	Power
+3.10.2	Hardware Resource Utilization Requirements
+3.10.3	Computer Software Requirements
+3.10.3.1	Display
+3.10.4	Computer Communication Requirements
+3.11	System Quality Factors
+3.11.1	Functionality
+3.11.2	Reliability
+3.11.3	Maintainability
+3.11.4	Availability
+3.11.5	Flexibility
+3.11.6	Portability
+3.11.8	Testability
+3.12	Design And Construction Constraints
+3.12.1	Documentation
+3.12.2	Materials
+3.12.3	Electromagnetic Radiation
+3.12.4	Software
+3.12.5	Hardware
+3.12.6	Responsiveness
+3.12.7	Endurance
+3.13	Personnel-Related Requirements
+3.13.1	Human Factors Engineering (HFE)
+3.14	Training Related Requirements
+3.15	Logistics-Related Requirements
+3.15.1 Transportability
+3.15.1.1 Ground
+3.15.1.2 Air
+3.15.1.3 Sea
+3.15.1.4 Rail
+3.15.1.5 Preparation Time
+3.16 Other Requirements

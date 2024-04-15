@@ -1,0 +1,233 @@
+1.1.1	This document shall serve as a reference guide to the developer for software design, implementation, and maintenance.
+1.2.1	The system shall provide to the user the ability to prepare applications, utilize HATS to apply transformations, and display and manipulate the output resulting from execution of transformations.
+2.1.0.1	The HATS-GUI shall provide a user with the ability to construct and use transformations. The HATS-GUI shall facilitate the following activities:  • management of applications; • parsing of transformation language programs and target programs; • execution of transformation language programs; and • examination of SDT and pretty-printed output from transformations.
+2.1.1.1	The HATS-GUI shall facilitate the creation, deletion, and modification of the files related to an application.
+2.1.1.2	As a practical matter, all files related to an application shall be stored in the same directory or folder.
+2.1.1.3	In addition, the HATS-GUI shall manage file associations within an application. File associations are relationships between files. For example, target files will be associated with the most recently used pretty-print style files.
+2.1.1.4	The HATS-GUI shall allow the user to examine and modify these associations.
+2.1.2.1	The HATS-GUI shall orchestrate the parsing of transformation language programs and target files.
+2.1.3.1	The HATS-GUI shall orchestrate the execution of transformation language programs.
+2.1.3.2	In order for HATS-SML to execute a transformation program, the program must be parsed and saved as an SDT.
+2.1.3.3	The HATS-GUI shall capture data written to these streams and make that data available to the user.
+2.1.4.1	The HATS-GUI shall facilitate the display of transformation output and error messages received from HATS-SML in response to parsing or transformation.
+2.2.1	Before applying a transformation to a target file, a user must first prepare the application.
+3.1.1.1	Any operation requiring the user to supply a file name shall allow the user either to select the files from a list derived from files in the currently open application or to key in a file name, a relative path name, or a complete path name.
+3.1.1.2	For any operation where the user is prompted to select from a list, the user shall be able to cancel the operation.
+3.1.1.3	When collecting generated output files from HATS-SML, the HATS-GUI shall overwrite any file whose name is generated automatically. For example, given a transformation language program X.tlp , the file X.tlp.parsed  is generated when the parser is executed. If X.tlp.parsed  existed prior to executing the parser, it shall be overwritten without prompting the user.
+3.1.1.4	When saving or copying files, the HATS-GUI shall use the following sequence of actions: • The HATS-GUI shall prompt the user for a file name for the file to be saved. • The HATS-GUI shall examine the contents of the application directory.  • If a file with the given name already exists, the HATS-GUI shall prompt the user to overwrite the existing file. If the user agrees to overwrite the file, the HATS-GUI shall:  o attempt to write the new file using a temporary name,  o delete the previously existing file,  o then rename the new file.  • If the user does not agree to overwrite the existing file or if system errors occur while writing or renaming the new file or deleting the previous file, the new file shall not be written and the previous file shall be left unchanged. • In the case of an error, the HATS-GUI shall notify the user of the error.
+3.1.1.5	Output pretty-printed text files and SDTs shall only be displayed when the user requests.
+3.1.1.6	The main interface shall be menu driven.
+3.1.1.7	The File menu shall contain menu items related to manipulating individual files and for closing the HATS-GUI application.
+3.1.1.8	The Application menu shall contain items related to manipulating entire applications.
+3.1.1.9	The Configure menu shall contain items related to modifying the configuration of the application.
+3.1.1.10	The Run menu shall contain items related to executing the HATS-SML programs.
+3.1.1.11	The View menu shall contain items related to viewing HATS-SML output.
+3.1.1.12	The File/Select menu item shall provide an interface for selecting files within the currently open application.
+3.1.1.13	The File/Edit menu item shall provide an interface for starting an editor as an external process. The editor shall be started according to information in the application configuration.
+3.1.1.14	The File/Save-as menu item shall provide an interface for saving a previously selected file under a different name.
+3.1.1.15	The File/Delete menu item shall provide an interface for deleting a selected file. The HATS-GUI shall prompt the user to confirm deletion prior to completing this action.
+3.1.1.16	The File/Exit menu item shall provide an interface for exiting the HATS-GUI.
+3.1.1.17	The Application/Select menu item shall provide an interface for selecting and opening an application.
+3.1.1.18	The Application/Close menu item shall provide an interface for closing an application.
+3.1.1.19	The Application/Save menu item shall provide an interface for saving application configuration information.
+3.1.1.20	The Application/Save-as menu item shall provide an interface for saving an application and its associated files under a different name.
+3.1.1.21	The Application/Delete menu item shall provide an interface for deleting an application and all the files in the application directory. The HATS-GUI shall prompt the user to confirm deletion prior to completing this action.
+3.1.1.22	The Configure/Editors menu item shall provide an interface for the user to enter editor configuration information. This information shall be used when editors are started as processes.
+3.1.1.23	The Configure/Node Display menu item shall provide an interface for configuring the display of nodes.
+3.1.1.24	The HATS-GUI shall allow the user to specify the number of levels of nodes to expand during SDT viewing.
+3.1.1.25	The HATS-GUI shall allow the user to select the colors for types of displayed nodes in a displayed graph. At a minimum, the system shall provide eight colors (red, yellow, white, black, green, blue, orange, and violet) for displayed nodes.
+3.1.1.26	The HATS-GUI shall allow the user to select the shapes for types of displayed nodes in a displayed graph. At a minimum, the system shall provide two shapes, rectangles and ellipses, for displayed nodes.
+3.1.1.27	The Configure/File Associations menu item shall provide an interface for associating files in an application. File associations are shown in Table 6.
+3.1.1.28	The Configure/HATS-SML menu item shall provide an interface for the user to enter implementation-dependent information for starting HATS-SML processes.
+3.1.1.29	The Run/Generate Parser menu item shall provide an interface for generating a parser program.
+3.1.1.30	The Run/Parse Target menu item shall provide an interface for selecting and parsing target programs.
+3.1.1.31	The Run/Parse Program menu item shall provide an interface for selecting and parsing transformation language programs.
+3.1.1.32	The Run/Execute Transforms menu item shall provide an interface for selecting and executing transformation language programs.
+3.1.1.33	The Run/Pretty-print menu item shall provide an interface for selecting SDTs and pretty-print style files and formatting the SDT according to the style.
+3.1.1.34	The View/SDT menu item shall provide an interface for viewing, navigating through, and searching SDTs output from the execution of transformation programs.
+3.1.1.35	The View/Text menu item shall provide an interface for viewing and searching pretty-printed text.
+3.1.1.36	The View/Standard Error menu item shall provide an interface for viewing error strings collected from HATS-SML.
+3.1.1.37	The View/Standard Output menu item shall provide an interface for viewing debugging information collected from HATS-SML.
+3.1.1.38	The View/Select Text menu item shall provide an interface for selecting pretty-printed text or text strings associated with SDT displays.
+3.1.1.39	The View/Copy Text menu item shall provide an interface for copying selected text  into an operating system buffer.
+3.1.3.1.1	The HATS-GUI shall interface with HATS-SML (version 2.0) in order to parse transformation language programs, execute transformation language programs, and create output SDTs, error messages, pretty-printed text, and parsed transformation language programs.
+3.1.3.1.2	The interface shall consist of starting HATS-SML programs and passing command line arguments and capturing data written to the standard output and standard error streams of the HATS-SML processes.
+3.1.3.1.3	The GUI shall allow the user to create, modify, copy, or delete applications or files regardless of the current status of HATS-SML.
+3.1.3.1.4	If the HATS-GUI attempts to start a HATS-SML program and fails, the HATS-GUI shall notify the user by displaying the following message: “Unable to start HATS-SML.”
+3.1.3.1.5	The HATS-GUI shall provide any other details related to the failure that are available from the Host OS.
+3.1.3.2.1	The HATS-GUI shall be able to communicate with Sun Solaris, Linux, and Windows 2000.
+3.1.3.2.2	Data sets shall be saved as files using file names with the appropriate extensions.
+3.1.3.2.3	The user shall be able to initiate processes from an interface provided by the HATS-GUI.
+3.1.3.2.4	The HATS-GUI shall optionally pass command line arguments to the process. Command sequences for initiating processes are part of the application configuration.
+3.1.3.2.5	After initiating processes for editing files, the HATS-GUI is not responsible for communications with the process other than passing command line arguments.
+3.1.3.2.6	The HATS-GUI shall interact with the HOST OS file services to perform the following tasks: • Create new files • Delete existing files • Open an existing file for read and/or write • Read from an open file • Write to an open file • Close an open file.
+3.1.3.2.7	The HATS-GUI shall interact with the HOST OS to find files in directories. (This capability is necessary for the HATS-GUI to display file lists.)
+3.1.3.2.8	The HATS-GUI shall interact with the HOST OS to compare time stamps for files. Time stamps indicate the date and time of the most recent update to a file. These time stamps must be reported with a precision of one second or less.
+3.2.1.1.1	The HATS-GUI shall allow a user to create an application minimally consisting of a lexical specification file, a grammar file, a user-defined functions file, and application configuration information. The user shall be able to name this application.
+3.2.1.1.2	All files associated with a given application shall be stored in one directory.
+3.2.1.1.3	The directory in which application files are stored shall be named with the application name.
+3.2.1.1.4	There shall be exactly one file describing the lexical specification of inputs associated with an application. It shall have the file extension. spec.
+3.2.1.1.5	There shall be exactly one file describing the grammar of inputs associated with an application. It shall have the file extension. grm.
+3.2.1.1.6	There shall be exactly one file describing the interpretation of function symbols associated with an application.  This file shall be written in ML and have the file extension. lib.
+3.2.1.1.7	The HATS-GUI shall suggest a file name for the user whenever it prompts the user to enter a file name.
+3.2.1.1.8	The HATS-GUI shall suggest the same file name for files copied to a different directory.
+3.2.1.1.9	The HATS-GUI shall suggest a file name with a sequentially numbered extension for files copied to the same directory. For example, if NatLang.txt exists, a suggested file name would be NatLang.txt.2.
+3.2.1.1.10	An application shall have associated with it an application configuration.
+3.2.1.2.1	The HATS-GUI shall display output written to the standard output and standard error streams in a tab-selectable window. Text in this window shall be cleared prior to executing individual HATS-SML programs, unless the programs are contained in a program script. In the case of a script, the window contents shall be cleared prior to executing the script. Refer to section 3.2.3.2 for a discussion of the execution of script files.
+3.2.1.4.1	The system shall open a new window when the user selects to display output.
+3.2.1.4.2	Display windows opened by the system shall have buttons for closing the windows.
+3.2.1.4.3	A navigation window shall be available.
+3.2.1.4.4	Each active display window shall have a mouse cursor, which indicates the location of the pointing device in the window.
+3.2.1.4.5	Each display window shall have a keyboard cursor to track the current location in the display.
+3.2.1.4.6	The keyboard cursor shall be movable by the arrow keys.
+3.2.1.4.7	The keyboard cursor shall be set to the location of the mouse cursor when the pointing device is clicked.
+3.2.2.0.1	This section details the response the HATS-GUI shall make when it receives stimulus either from the user, the Host OS, or HATS-SML.
+3.2.2.1.1.1	When a user selects the File/Select menu item, the HATS-GUI shall provide the user with a list of files in the currently open application and allow the user to select a file. This file becomes the currently selected file. If no application is currently open, the HATS-GUI will prompt the user to select and open an application, then prompt the user to select a file.
+3.2.2.1.1.2	When a user selects the File/Save As menu item, the HATS-GUI shall prompt the user to enter a new name. A new file shall be created in the currently open application with the newly entered file name. The contents of the selected file shall be written into the new file, and the new file shall become the currently selected file.
+3.2.2.1.1.3	When a user selects the File/Delete menu item, the HATS-GUI shall prompt the user to confirm the deletion operation. If the user confirms, the currently selected file shall be deleted. No file shall be currently selected at the end of this operation.
+3.2.2.1.1.4	When a user selects the File/Edit menu item, the HATS-GUI shall request that the operating system start a process and load that process with the editor specified by the application configuration.
+3.2.2.1.1.4.1	The name of a selected file shall be passed to the editor as a command line argument.
+3.2.2.1.1.4.2	The editor started by the HATS-GUI shall be the editor associated with the file in the application configuration, or if there is no editor associated with the file, then the editor associated with the file type of the file in the application configuration.
+3.2.2.1.1.4.3	If no editor is associated with either the file or the file type, then the default editor shall be used. If no default editor has been selected, then the HATS-GUI shall present a list of the configured editors and allow the user to select an editor.
+3.2.2.1.1.4.4	If no editors have been configured, then the HATS-GUI shall inform the user that an editor must be configured before starting an editor.
+3.2.2.1.1.5	When a user selects the File/Exit menu option, the HATS-GUI shall request the host operating system to kill all currently active HATS-SML processes started by the HATS-GUI and halt the HATS-GUI process.
+3.2.2.1.1.5.1	If changes have been made to the configuration but have not been saved, the user shall be prompted to save the configuration.
+3.2.2.1.1.5.2	If the user agrees, the configuration shall be saved. If the user does not agree, the configuration shall not be saved.
+3.2.2.1.2.1	When a user selects the Application/Select menu item, the HATS-GUI shall display a list of directory names in the current working directory, allow a user to navigate the directory structure, and allow a user to select a previously created application. This application becomes the currently selected application.
+3.2.2.1.2.2	When a user selects the Application/Close menu item, the HATS-GUI shall close the currently selected application. No application is currently selected at the end of this operation.
+3.2.2.1.2.2.1	If changes have been made to the configuration but have not been saved, the user shall be prompted to save the configuration.
+3.2.2.1.2.2.2	If the user agrees, the configuration shall be saved. If the user does not agree, the configuration shall not be saved.
+3.2.2.1.3.1	When a user selects the Application/Save menu item, the HATS-GUI shall save all application configuration information to nonvolatile storage.
+3.2.2.1.2.4	When a user selects the Application/Save As menu item, the HATS-GUI shall prompt the user for a new application name.
+3.2.2.1.2.4.1	The HATS-GUI shall create a new directory at the same level as the currently selected application.
+3.2.2.1.2.4.2	All files in the application directory, including all subdirectories, shall be copied to the new directory, and the new directory shall become the currently selected application.
+3.2.2.1.2.5	When a user selects the Application/Delete menu item, the HATS-GUI shall prompt the user to confirm the deletion operation.
+3.2.2.1.2.5.1	If the user confirms, all files in the application directory shall be deleted and the application directory itself shall be deleted. No application is currently selected at the end of this operation.
+3.2.2.1.2.6	When deleting an application directory, if the application directory contains a subdirectory, the system shall confirm the deletion of the subdirectory with the user before continuing.
+3.2.2.1.2.6.1	If the user does not confirm the deletion of the subdirectory, the application director shall not be deleted.
+3.2.2.1.3.1	When a user selects the Configure menu options, the HATS-GUI shall provide a list of elements in the application configuration, allow the user to select an element, then prompt the user for a value for the configuration element.
+3.2.2.1.4.1	When a user selects the Run/Generate Parser menu option, the HATS-GUI shall generate the parser using the MakeParser HATS-SML program as described in Appendix D.
+3.2.2.1.4.2	When a user selects the Run/Parse Target menu option, the HATS-GUI shall parse the selected target program by using the ParseTarget HATS-SML programs as described in Appendix D.
+3.2.2.1.4.2.1	If no target program is selected, the HATS-GUI shall first prompt the user to select a target program.
+3.2.2.1.4.3	When a user selects the Run/Parse Program menu option, the HATS-GUI shall parse the selected transformation language program by using the ParseTlp HATS-SML programs as described in Appendix D.
+3.2.2.1.4.3.1	If no target program is selected, the HATS-GUI shall first prompt the user to select a transformation language program.
+3.2.2.1.4.4	When a user selects the Run/Execute Transforms menu option, the HATS-GUI shall execute the ApplyTransformations HATS-SML programs as described in Appendix  D.
+3.2.2.1.4.5	When a user selects the Run/Pretty-print menu option, the HATS-GUI shall execute the Pretty-print HATS-SML programs as described in Appendix  D. This process is further described in Section 3.2.3.
+3.2.2.1.5.1	When a user selects the View/SDT menu option, the HATS-GUI shall prompt the user to select an SDT file in the current application. The file list shall include SDTs in the application. The viewing of outputs is detailed in Section 3.2.3.
+3.2.2.1.5.2	When a user selects the View/Text menu option, the HATS-GUI shall prompt a user to select a pretty-printed text file in the current application. The viewing of text outputs is detailed in Section 3.2.3.
+3.2.2.1.5.3	When a user selects the View/Standard Error menu option, the HATS-GUI shall display the standard error screen showing all outputs written to the standard error stream since the most recent clearing of this data.  The viewing of errors is detailed in Section 3.2.3.
+3.2.2.1.5.4	When a user selects the View/Standard Output menu option, the HATS-GUI shall display the standard error screen showing all outputs written to the standard output stream since the most recent clearing of this data.  The viewing of output is detailed in Section 3.2.3.
+3.2.2.2.1	When viewing an SDT, a single left mouse click on an expandable displayed node shall expand the node by displaying the node’s children or collapse the node by hiding the node’s children.
+3.2.2.2.2	When a displayed node is expanded, the number of levels of children added to the displayed graph shall be determined by the application configuration.
+3.2.2.2.3	When viewing an SDT, a single left mouse click on an already-expanded displayed node shall collapse the displayed node. When a displayed node is collapsed, all descendants of the node are removed from the displayed graph.
+3.2.2.3.1	The HATS-GUI shall collect process exit codes from HATS-SML processes. Process exit codes of 0 indicate nominal completion of the process. Process exit codes other than 0 indicate failure.
+3.2.3.1.1	The GUI shall allow the user to import a file into the selected application. Importing a file consists of copying the file into the application directory.
+3.2.3.2.1	The HATS-GUI shall facilitate parsing transformation language programs and target files.
+3.2.3.2.2	The HATS-GUI shall orchestrate executing transformation language programs. Parsing is accomplished by sending a parser file and an input file to HATS-SML.
+3.2.3.2.3	To execute a transformation language program, the parsed transformation language program and the user-defined library file are sent to HATS-SML. During execution of a transformation language program, HATS-SML writes a sequence of new SDTs. These output SDTs are specified in the transformation language program. The HATS-GUI shall make these data sets available for viewing and/or saving as permanent files in the application. In addition to the output file, the transformation language program may specify that debugging output be written to the standard output stream. Errors encountered during program execution are written to the standard error stream. The HATS-GUI shall capture data written to these streams and make that data available to the user.
+3.2.3.2.4	The HATS-GUI shall use the protocol and program signatures listed in Appendix D when executing HATS-SML programs.
+3.2.3.2.5	To perform a transformation in an application, the HATS-GUI shall execute the following sequence of actions:
+3.2.3.2.5.1	The HATS-GUI shall confirm that the transformation language program exists. (It is an error if the program does not exist.)
+3.2.3.2.5.2	The HATS-GUI shall check that the parser file is younger than the grammar and lexical specification files and that the parser file was generated from the grammar and lexical specification files. If this is not the case, the HATS-GUI shall generate a new parser file.
+3.2.3.2.5.3	The HATS-GUI shall check that a parsed version of the transformation language program exists and is younger than the parser file and the transformation language program file. If it is not, the HATS-GUI shall generate a new parsed version of the transformation language program.
+3.2.3.2.5.4	The HATS-GUI shall start the FindTarget  program using the transformation language program as input.
+3.2.3.2.5.5	The HATS-GUI shall take the list of target program files generated by FindTarget , and for each file in the list it shall check that a parsed version of the target program exists and is younger than the target parser file and the target program file. If it is not, the HATS-GUI shall generate a new parsed version of the target program.
+3.2.3.2.5.6	The HATS-GUI shall start the ApplyTransformation  program in HATS-SML and pass the parsed transformation language program file name, the user defined library file name, and the output file name to the ApplyTransformation  program. The HATS-GUI shall redirect the standard output and standard error streams and capture any text written to those streams.
+3.2.3.2.6	The HATS-GUI shall allow the user to continue working while transformations are taking place. Thus a user shall be able to edit files, view output, and transmit other problems to HATS-SML while waiting for HATS-SML to generate output.
+3.2.3.2.7	The HATS-GUI shall allow the user to execute a script file. A script file shall contain a linear sequence of HATS-SML programs.
+3.2.3.2.8	The HATS-GUI shall begin with the first command and execute the commands sequentially until either an error occurs or all commands in the script file have been executed.
+3.2.3.2.9	Prior to starting the execution of a script file, the display screens for the standard error and the standard output shall be cleared.
+3.2.3.3.0.1	The HATS-GUI shall allow a user to select output files in the application to display.
+3.2.3.3.0.2	The HATS-GUI shall allow a user to display selected output files. The manner in which the output is displayed shall depend on the type of the output.
+3.2.3.3.1	The user shall be able to select an arbitrary set of displayed nodes in a displayed graph. Selected displayed nodes shall be indicated visually. The following methods shall be used to select displayed nodes.
+3.2.3.3.1.0.1	A single node shall be selected by right-clicking the mouse cursor on the node.
+3.2.3.3.1.0.2	A single node shall be selected by moving the keyboard cursor to the node (using the tab key) and pressing the enter key.
+3.2.3.3.1.0.3	Clicking and dragging the pointing device selection rectangle around a set of displayed nodes shall select a set of adjacent nodes.
+3.2.3.3.1.0.4	A set of nodes shall be selected by holding the shift key while selecting nodes using the methods specified previously in this section.
+3.2.3.3.1.1	The user shall be able to deselect all selected displayed nodes by • clicking either the right or left mouse buttons while the mouse cursor is not pointed at any displayed nodes and the shift key is not depressed; or • by pressing the escape  key.
+3.2.3.3.1.2	When viewing an SDT, selecting nodes shall result in the highlight of all displayed nodes in the smallest well-formed tree of the selected nodes.
+3.2.3.3.1.3	When the system displays a navigation window, the user shall be able to select a current SDT location by clicking the mouse cursor in the navigation window. The center of the displayed graph will be the displayed node closest to the mouse cursor when the mouse is clicked.
+3.2.3.3.1.4	When both an SDT and a pretty-printed text display corresponding to a single transformed target file are open, highlighting and cursor location motion shall be mirrored in the two windows. Thus, when a displayed node is selected in the SDT display, the corresponding text in the pretty-print window is highlighted. When the user scrolls to the end of the pretty-printed text display, the display of the SDT should also scroll to the corresponding displayed nodes.
+3.2.3.3.2.1	The user shall be able to resize windows dynamically. When displayed graph windows are resized, the HATS-GUI shall respond by utilizing the space available.
+3.2.3.3.2.2	The display of an SDT shall also result in the display of text from leaf nodes in a text display area.
+3.2.3.3.2.3	The text displayed in the text display area shall correspond to the concatenation of the node labels (separated by spaces) of the leaf nodes of the displayed graph (in-order traversal, left to right).
+3.2.3.3.2.3.1	If a leaf displayed node corresponds to a non-terminal SDT node, the label in the text window shall be surrounded by pointed brackets (<>). For example, if a non-terminal TERM  appears in a leaf node, its text representation shall be <TERM>.
+3.2.3.3.2.4	The HATS-GUI shall provide for the copying of text from the text display area to a system buffer available for pasting into other applications (such as an editor).
+3.2.3.3.2.5	The user shall be able to display more than one SDT at a time. Each SDT shall be displayed in a separate window.
+3.2.3.3.3.1	The HATS-GUI shall provide for the manipulation and display of SDTs.
+3.2.3.3.3.2	SDTs shall be displayed as directed acyclic graphs with nodes and edges. Nodes in the displayed graph correspond to nodes in the SDT. Edges in the displayed graph correspond to the parent-child relationship between nodes in the SDT.
+3.2.3.3.3.3	Initially, a displayed graph will have a single displayed node. That node will correspond to the root of the SDT.
+3.2.3.3.3.4	When a displayed node and its children are displayed simultaneously, the parent node shall be displayed higher than the children.
+3.2.3.3.3.5	All displayed children of a single node shall appear at the same height.
+3.2.3.3.3.6	The user shall be able to control the display by choosing the color and shapes of displayed nodes based on node type. The HATS-GUI shall use the shape and color of displayed node types stored in the application configuration to display nodes.
+3.2.3.3.3.7	The user shall be able to expand displayed nodes (provided it is possible to expand the selected nodes).  The HATS-GUI shall change the graph display by adding the descendant nodes to the displayed graph (thus changing the expandable nodes to internal nodes).
+3.2.3.3.3.8	The user shall be able to collapse displayed nodes.
+3.2.3.3.3.8.1	The HATS-GUI shall change the displayed graph by removing all descendants of the selected displayed nodes (thus changing the internal nodes to non-expandable leaf nodes).
+3.2.3.3.3.9	The user shall be able to hide a set of selected displayed nodes.
+3.2.3.3.3.9.1	The HATS-GUI shall change the display by removing the selected nodes from the display and changing the parent and descendant nodes of the removed nodes to nodes with hidden descendants and parents, respectively.
+3.2.3.3.3.10	The user shall be able to issue an unhide instruction that reverses the hide instruction for all displayed nodes.
+3.2.3.3.3.11	After issuing the unhide instruction, a user shall be able to issue a rehide instruction that reverses the unhide instruction.
+3.2.3.3.3.11.1	All displayed nodes hidden before the most recent unhide instruction shall become hidden.
+3.2.3.3.3.12	The HATS-GUI shall allow the user to expand the SDT by a predetermined number of node levels. The number of levels expanded is set in the application configuration.
+3.2.3.3.3.13	The HATS-GUI shall provide the function to fully expand a sub-tree regardless of the node expansion level in the application configuration.
+3.2.3.3.3.14	The user shall be able to view multiple SDTs simultaneously.
+3.2.3.3.3.15	SDT displays shall also provide the user with a view of text associated with the leaves of the displayed sub-tree. This text shall be copy-and-pasteable in the host operating system. Thus, text displayed in a HATS-GUI window can be pasted into other applications such as text editors that may be running concurrently with the HATS-GUI.
+3.2.3.3.3.16	SDT displays shall provide the user with the option to refresh the display. When a display is refreshed, the current display is erased, the SDT file is read, and a new SDT display is generated.
+3.2.3.3.3.16.1	The new SDT display shall approximate the previous SDT display by expanding the SDT to the same number of nodes, if this is possible.
+3.2.3.3.4.1	If a displayed graph or a text display is too large to fit inside its window, the windows shall have scroll bars attached to them.
+3.2.3.3.4.1.1	Dragging scrollbar buttons shall scroll the display. Pressing the arrow keys of the keyboard shall also scroll the display.
+3.2.3.3.4.2	For text windows, the keyboard cursor location shall move according the following rules: • A left arrow key moves the cursor to the left one character. If the cursor is at the beginning of a line, the cursor is moved to the end of the previous line. If there is no previous line, the cursor does not move. • A right arrow key moves the cursor to the right one character. If the cursor is at the end of a line, the cursor is moved to the first character of the next line. If there is no line after the current line, the cursor is  not moved. • An up arrow key moves the cursor up one line. If there is text in the same column, the column does not change. If there is no text in the column above the current cursor location, the cursor is moved to the end of the previous line. (A space is considered text.) • A down arrow key moves the cursor down one line. If there is text in the same column, the column does not change. If there is no text in the column below the current cursor location, the cursor is moved to the end of the previous line. (A space is considered text.)
+3.2.3.3.4.3	If keyboard cursor movement causes the keyboard cursor to move to text or graph nodes not currently displayed, the display will scroll the minimal amount to display the current cursor location.
+3.2.3.3.4.4	For displayed graph windows, the keyboard cursor location shall move according the following rules: • A left arrow key moves the cursor to the next unhidden node to the left. The node to the left does not need to be a sibling of the current node, but it does need to be at the same level as the current node. If there are no nodes to the left, the cursor does not move. • A right arrow key moves the cursor to the next unhidden node to the right. The node to the right does not need to be a sibling of the current node, but it does need to be at the same level as the current node. If there are no nodes to the right, the cursor does not move. • An up arrow key moves the cursor to the closest ancestor that is not hidden. If there is no such node, the cursor does not move. • An down arrow key moves the cursor to the leftmost, nearest descendant that is not hidden. If there is no such node, the cursor does not move.
+3.2.3.3.4.5	The pointing-device cursor shall track the motion of the pointing device.
+3.2.3.3.4.5.1	The keyboard cursor shall move to the text element or graph node closest to the pointing-device cursor when the pointing device is clicked.
+3.2.3.3.4.6	If the displayed graph of the entire SDT is too large for the window, a separate, small window with a compressed view of the SDT shall be displayed. The compressed view is called the navigation window display. In this navigation window, a representation of the entire SDT will be drawn. A small box will be displayed showing the part of the SDT currently displayed in the main tree display window.
+3.2.3.3.4.7	The user shall be able to turn the navigation window on and off.
+3.2.3.3.4.8	The HATS-GUI shall provide the user the capability to search SDTs. The search criteria are described in Appendix E.
+3.2.3.3.4.8.1	The user shall enter a search pattern. The HATS-GUI shall search the SDT for a matching pattern.
+3.2.3.3.4.8.2	When a match is found, the HATS-GUI shall highlight the matching displayed nodes and center the display on the left-most, top-level displayed node in the matching pattern. The keyboard cursor is set to this node.
+3.2.3.3.4.8.3	If no matches are found, the HATS-GUI shall display a message stating “No Match Found.”
+3.2.3.3.4.9	To initiate an SDT search, the user shall be able to use the following sequence of actions. • The user selects a set of nodes using the mouse cursor. • The user presses the Ctrl-Insert key combination. • The user selects the tree search option. • The HATS-GUI presents a prompt for entering the search pattern. • The user presses the Ctrl-Shift-Insert key combination. • The HATS-GUI fills the search pattern entry box with text concatenated from the nodes highlighted at the time of the Ctrl-Insert key press. • The user selects initiation of search.
+3.2.3.3.4.10	When searching for SDT patterns, search begins at the SDT node corresponding to the node at the current keyboard cursor location. This becomes the original starting location. Search continues top-to-bottom, left-to-right until the end of the SDT is encountered. When the end of the SDT is encountered, search will continue from the root of the SDT until arriving back at the starting location.
+3.2.3.3.4.11	The HATS-GUI shall provide for repeating a search.
+3.2.3.3.4.11.1	Repeating a search shall find the next matching sub-tree starting from the current keyboard cursor location. Search terminates when either a matching sub-tree is found or the search arrives at the original starting location.
+3.2.3.3.4.12	The HATS-GUI shall provide for repeating a search in the reverse direction. Searching in the reverse direction continues right-to-left, bottom-to-top. Search terminates when either a matching sub-tree is found or the search arrives at the original starting location.
+3.2.3.3.4.13	The HATS-GUI shall provide the user the capability to search the text display for text sub-strings. The search criteria are described in Appendix F.
+3.2.3.3.4.14	The user shall be prompted to enter a text string describing a string pattern.
+3.2.3.3.4.14.1	The HATS-GUI shall search the text for a matching pattern.
+3.2.3.3.4.14.2	When a match is found, the HATS-GUI shall highlight the matching text and center the display on the left-most element of the matching text.
+3.2.3.3.4.14.3	If no matches are found, the HATS-GUI shall display a message stating “No Match Found.”
+3.2.3.3.4.15	When searching for text patterns, search begins at the current keyboard cursor location and continues left-to-right, top-to-bottom until the end of the text is encountered. When the end of the text is encountered, search will continue from the start of the text until arriving back at the starting location.
+3.2.3.3.5.1	The formatting of the displayed pretty-printed text shall be faithful to the formatting represented in the pretty-printed text file.
+3.2.3.3.5.1.1	No additional white space shall be inserted, and a fixed width font shall be used to display the text.
+3.2.3.3.5.2	The user shall be able to select pretty-printed text files to display.
+3.2.3.3.5.3	Selected pretty-printed text shall be displayed in a separate window.
+3.2.3.3.5.4	Windows for pretty-printed text shall allow for scrolling left, right, up, and down if the text is too large to display in the window.
+3.2.3.3.5.5	The HATS-GUI shall provide the user the capability to search the text display for text sub-strings. The search criteria are described in Appendix F.
+3.2.3.3.5.5.1	The user shall be prompted to enter a text string describing a string pattern.
+3.2.3.3.5.5.2	The HATS-GUI shall search the text for a matching pattern.
+3.2.3.3.5.5.3	When a match is found, the HATS-GUI shall highlight the matching text and center the display on the left-most element of the matching text. The keyboard cursor shall be set to this location.
+3.2.3.3.5.5.4	If no matches are found, the HATS-GUI shall display a message stating “No Match Found.”
+3.2.3.3.5.6	When searching for text patterns, search begins at the location of the keyboard cursor and continues left-to-right, top-to-bottom until the end of the text is encountered. When the end of the text is encountered, search will continue from the start of the text until arriving back at the starting location.
+3.2.3.3.6.1	The HATS-GUI shall not halt as a result of any error messages received from HATS-SML.
+3.2.3.3.6.2	The HATS-GUI shall collect error messages from HATS-SML in a single display area.
+3.2.3.3.6.2.1	This display area shall be initially clear, and shall contain all error messages generated by HATS-SML since the HATS-GUI was started.
+3.2.3.3.6.2.2	The display area shall be a window accessible via a window tab.
+3.2.3.3.6.2.3	The display shall list all error received from HATS-SML in the order received.
+3.2.3.3.6.3	Errors shall not be displayed until requested by the user.
+3.2.3.3.6.4	The user shall be able to clear the error window without restarting the HATS-GUI.
+3.2.3.3.7.1	When both an SDT and a pretty-printed text display corresponding to a single transformed target file are open, navigation in the SDT window shall result in navigation in the pretty-printed text window.
+3.2.3.3.7.1.1	Searching, selecting, and cursor location motion should be mirrored in the two windows. Specifically, when a node is selected in the displayed graph, the corresponding text in the pretty-print window is highlighted. For this purpose, the corresponding text is all the text that corresponds to terminal nodes of the SDT that are descendants of the SDT nodes that correspond to the selected display nodes.
+3.2.3.3.7.2	When both an SDT and a pretty-printed text display corresponding to a single transformed target file are open, navigation in the pretty-printed text window shall result in navigation in the SDT display.
+3.2.3.3.7.2.1	Selecting, and cursor location motion should be mirrored in the two windows. Specifically, when text is selected in the text window, the displayed nodes corresponding nodes in the SDT are highlighted.
+3.3.1.1	The HATS-GUI shall display and SDT with 10,000 nodes in five seconds or less.
+3.3.1.2	The HATS-GUI shall display 1,000,000 node SDTs in the same amount of time, plus or minus two seconds, as it takes to display a 10,000 node SDT.
+3.3.1.3	The HATS-GUI shall allow a user to request transformations while HATS-SML is performing transformations or parsing.
+3.3.1.4	The HATS-GUI shall allow a user to navigate through the display of an SDT with 10,000 nodes so that scrolling a screen width with any portion of the SDT displayed takes less than 3 seconds.
+3.3.1.5	The complexity of the text search algorithm shall not exceed  O(n2) for n nodes.
+3.3.1.6	The complexity of the tree search algorithm shall not exceed  O(n2) for n nodes.
+3.3.1.7	The complexity of the scrolling algorithms for text and displayed graphs shall not exceed  O(n2) for n displayed nodes.
+3.3.2.1	The user shall not be required to log in or authenticate his/her identity when using the system.
+3.3.2.2	The GUI shall run on Windows 2000, Sun Solaris 8, and Linux operating systems without modification of the Java code.
+3.3.3.1	The system shall be implemented in the Java 1.3 programming language.
+3.3.3.2	One algorithm for displaying an SDT has been implemented and found to be unacceptable: • Draw SDT into large virtual window with a smaller viewing area; • Zoom in on portions of the tree;

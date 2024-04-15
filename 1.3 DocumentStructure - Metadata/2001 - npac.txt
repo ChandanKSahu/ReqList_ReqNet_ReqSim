@@ -1,0 +1,1269 @@
+D	Number Portability Administration Center (NPAC) Service Management System (SMS)
+3	NPAC DATA ADMINISTRATION
+3.2	NPAC Personnel Functionality
+3.2.3.3	Create NPA-NXX data for a Service Provider
+3.2.6.2	Mass Update Filter Usage
+3.2.7.1	Select Subscription Versions mass changes for one or more Subscription Versions
+3.2.7.2	Administer Mass update on one or more selected Subscription Versions
+3.2.7.3 	Mass Update Selection Criteria
+3.2.7.4 	Mass Update Service Provider Id
+3.2.7.5	Mass Update - Creation of Old Subscription Version 
+3.2.7.6	 Mass Update - Old Subscription Version No Broadcast
+3.2.7.7	Mass Update Error Processing
+3.2.7.8	Mass Update Exception Report
+3.2.7.9	Mass Update Required Entry of Service Provider ID
+3.2.13	NPAC SMS mass change update capability to the Local SMS
+3.2.1	Block Holder, Mass Update
+3.2.1.0	Block Holder Information Mass Update – Update Fields
+3.2.1.1	Block Holder Information Mass Update – Block Intersection Rejection
+3.2.1.2	Block Holder Information Mass Update – Block Status Validation
+3.2.1.3	Block Holder Information Mass Update – Download to EDR Local SMS
+3.2.1.4	Block Holder Information Mass Update – Download to non-EDR Local SMS
+3.2.1.5	Block Holder Information Mass Update – Download of SVs of Type POOL to non-EDR Local SMS
+3.2.1.6	Block Holder Information Mass Update - Creation of Old Block
+3.2.1.7	Block Holder Information Mass Update - Old Block No Broadcast
+3.3	System Functionality
+3.3.8	Off-line batch updates for Local SMS Disaster Recovery
+3.3.9	NPAC SMS download of network data to the Local SMS and SOA
+3.3.66	Number Pool NPA-NXX-X Holder Information – NPAC SMS download of network data to the SOA or Local SMS
+3.3.67.1	Number Pool NPA-NXX-X Holder Information – NPAC SMS download via SOA and/or Local SMS Interface of NPA-NXX-X allocation to the Service Providers
+3.3.10	NPAC SMS notification of NPA-NXX availability to the Service Providers
+3.3.11	NPAC SMS notification of LRNs and Service Provider data by Service Provider
+3.3.67.2	Number Pool NPA-NXX-X Holder Information – NPAC SMS download via Web Bulletin Board of NPA-NXX-X allocation to the Service Providers
+3.4	Additional Requirements
+3.4.1.1.1	Service Provider NPA-NXX Data Addition
+3.4.1.1.2	Service Provider NPA-NXX Data Effective Date Validation
+3.4.1.2	Service Provider LRN Data Addition
+3.4.3.1	Service Provider NPA-NXX Data Deletion
+3.4.3.2	Service Provider LRN Data Deletion
+3.4.1	Service Provider Download Indicator 
+3.4.2	Service Provider Download Indicator 
+3.4.14	Bulk Database Extracts
+3.4.15	FTP Site for Database Extracts
+3.4.16	Database Extract File Creation
+3.4.17	Scope of Database Extract File Creation
+3.4.3	NPAC SMS Input Restrictions 
+3.4.4	Create LRN data for a Service Provider
+3.4.15 	NPAC Clock Synchronization
+3.5	NPA Splits Requirements
+3.5.1	NPA Split Permissive Dialing
+3.5.2	NPA split
+3.5.3	NPA Split Permissive Dialing Cleanup
+3.5.4.1	NPA Split Information Source
+3.5.4.1	NPA Split – NPA-NXX existence prior to the NPA Split
+3.5.4.2	NPA Split - NPA-NXX existence prior to the NPA Split - Error
+3.5.4.3	NPA Split – NPA-NXX Effective Date Validation
+3.5.4.4	NPA Split – NPA-NXX Effective Date Validation – Error
+3.5.4.5	NPA Split – NPA-NXX involved in one NPA Split Validation
+3.5.4.6	NPA Split – NPA-NXX involved in one NPA Split Validation
+3.5.4.7	NPA Split – No Active Subscription Versions in the new NPA-NXX
+3.5.4.8	NPA Split – No Active Subscription Versions in the new NPA-NXX – Error
+3.5.4.9	NPA Split - Prevention of NPA-NXX Deletion
+3.5.4.11	NPA Split - No modification of LRN data
+3.5.4.12	NPA Split – Exception Processing for Subscription Versions that exist in the New and Old NPA-NXX
+3.5.4.13	NPA Split - No Modification of Filter Data
+3.5.4.14	NPA Split – Audit Processing
+3.5.4.15	NPA Split – Entering of Split Data
+3.5.4.16	NPA Split – Modification of End Date of Permissive Dialing Date
+3.5.4.17	NPA Split – Removal of NPA-NXX during Permissive Dialing
+3.5.4.18	NPA Split – Removal of NPA-NXX during Permissive Dialing – Subscription Version Processing
+3.5.4.19	NPA Split – Addition of NPA-NXX before or during Permissive Dialing
+3.5.4.20	NPA Split – Removal of NPA Split Information prior to NPA Split
+3.5.4.21	NPA Split – Removal of NPA Split Information after Permissive Dialing Period End Date
+3.5.4.22	NPA Split – No Broadcast of Subscription Version Modification
+3.5.4.23	NPA Split – Retention of Subscription Version Id
+3.5.4.24	NPA Split - Update of Subscription Versions at the Beginning of Permissive Dialing
+3.5.4.25	NPA Split - Old NPA-NXX involved in one NPA Split Validation
+3.5.4.26	NPA Split - Old NPA-NXX involved in one NPA Split Validation - Error
+3.5.4.27	NPA Split - Validation of the Permissive Dialing Period  
+3.5.4.28	NPA Split - Old NPA-NXX and New NPA-NXX Ownership Validation
+3.5.4.29	NPA Split - Old NPA-NXX and New NPA-NXX Ownership Validation - Error
+3.5.4.30	NPA Split - Creation of a Subscription Version during the Permissive Dialing Period
+3.5.4.31	NPA Split Current and Pending NPA Split Report
+3.5.4.32	NPA Split - NPA Split History Report
+3.5.4.36 	NPA Split -Creation of Old Subscription Version
+3.5.4.37	NPA Split - Old Subscription Version No Broadcast
+3.5.219	NPA Splits – Deletion of Old NPA-NXX at the end of permissive dialing
+3.5.1	NPA-NXX-X Holder, NPA Splits
+3.5.1.31	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New NPA Split Automatic Create of New NPA-NXX-X
+3.5.1.32	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New NPA Split Error Message if New NPA-NXX-X Already Exists
+3.5.1.33	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New NPA Split Field Values for Automatic Add of New NPA-NXX-X
+3.5.1.34	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New NPA Split, Skip Block and Subscription Version Create
+3.5.1.35	NPA Splits and the Number Pool NPA-NXX-X Holder Information – NXX Removal from NPA Split prior to the end of PDP
+3.5.1.36.1	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Addition of an NPA-NXX-X scheduled for an NPA Split
+3.5.1.36.2	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New Addition of an NPA-NXX-X scheduled for an NPA Split With an Error Message
+3.5.1.36.3	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Addition of an NPA-NXX-X currently in Permissive Dialing in an NPA Split
+3.5.1.37.1	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Modification of an NPA-NXX-X scheduled for an NPA Split
+3.5.1.37.2	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New Modification of an NPA-NXX-X scheduled for an NPA Split With an Error 3.5.1-37.3	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Modification of an NPA-NXX-X involved in an NPA Split
+3.5.1.38.1	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Deletion of an NPA-NXX-X involved in an NPA Split
+3.5.1.38.2	NPA Splits and the Number Pool NPA-NXX-X Holder Information – New Deletion of an NPA-NXX-X scheduled for an NPA Split With an Error Message
+3.5.1.38.3	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Deletion of an NPA-NXX-X involved in an NPA Split
+3.5.1.39	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Broadcast of Addition or Deletion of NPA-NXX-X Split Data
+3.5.1.40	NPA Splits and the Number Pool NPA-NXX-X Holder Information – Deletion of Old NPA-NXX-X at the end of permissive dialing
+3.5.2	Block Holder, NPA Splits
+3.5.2.41	NPA Splits and the Number Pooling Block Holder Information –  Recognition of Both Old NPA and New NPA
+3.5.2.42	NPA Splits and the Number Pooling Block Holder Information – NXX Removal from Split
+3.5.2.43	NPA Splits and the Number Pool Block Holder Information – Addition of a Block involved in an NPA Split
+3.5.2.44	NPA Splits and the Number Pool Block Holder Information – Addition of a Block for an NPA-NXX involved in an NPA Split
+3.5.2.45	NPA Splits and the Number Pool Block Holder Information – Broadcast of a Block Create for an NPA-NXX involved in an NPA Split
+3.5.2.46	NPA Splits and the Number Pool Block Holder Information – Modification of a Block for an NPA-NXX involved in an NPA Split
+3.5.2.47	NPA Splits and the Number Pool Block Holder Information – Broadcast of a Block Modify Active for an NPA-NXX involved in an NPA Split
+3.5.2.48	NPA Splits and the Number Pool Block Holder Information – De-pooling of the Block during PDP
+3.5.2.49	NPA Splits and the Number Pool Block Holder Information – Mass Update that includes one or more Blocks for an NPA-NXX involved in an NPA 
+3.5.2.50	NPA Splits and the Number Pool Block Holder Information – Broadcast of a Mass Update that includes one or more Blocks for an NPA-NXX involved in an NPA Split
+3.5.2.51.1	NPA Splits and the Number Pool Block Holder Information – Creation of Old Block
+3.5.2.51.2	NPA Splits and the Number Pool Block Holder Information – Old Block No Broadcast
+3.5.2.218	NPA Splits and the Number Pool Block Holder Information – Broadcast of Subscription Versions for an NPA-NXX involved in an NPA Split
+3.6	NPA-NXX Filter Management Requirements
+3.6.5	Create Filtered NPA-NXX for a Local SMS
+3.6.6	Delete Filtered NPA-NXX for a Local SMS
+3.6.7	Query Filtered NPA-NXXs for a Local SMS
+3.6.8	Query Filtered NPA-NXXs - NPA-NXX Not Provided
+3.6.9	Query Filtered NPA-NXXs - NPA-NXX Provided
+3.7	Business Hour and Days Requirements
+3.7.10	Business Hours and Days
+3.7.11	Business Day Definition – Short
+3.7.30	Business Day Definition -Long
+3.7.12.1	Business Day Duration - Tunable Parameter
+3.7.12.2	Business Day Duration - Tunable Parameter Modification
+3.7.12.3	Short Business Day Duration - Tunable Parameter Default
+3.7.12.4	Long Business Day Duration - Tunable Parameter Default 
+3.7.13.1	Business Day Start Time - Tunable Parameter
+3.7.13.2	Business Day Start Time - Tunable Parameter Modification
+3.7.13.3	Short Business Day Start Time - Tunable Parameter Default
+3.7.13.4	Long Business Day Start Time - Tunable Parameter Default
+3.7.14	Business Holidays
+3.8	Multiple Service Provider Ids Per SOA Association Requirements
+3.8.16 	Addition of NPAC Customer Associated Service Provider Information
+3.8.17	Deletion of NPAC Customer Associated Service Provider Information
+3.8.18	NPAC Customer Associated Service Provider Information – SPID validation
+3.8.19 	NPAC Customer Associated Service Provider Information – Associated SPID
+3.8.5 	Associated Service Provider Multiple Service Provider Ids
+3.8.20	NPAC Customer Associated Service Provider Information – Validation Error
+3.8.21	NPAC Deletion of Service Provider Validation 
+3.8.22 	 Association Rejection for Associated Service Provider Id
+3.8.23 	Associated Service Provider Id Use over a Primary Service Provider Id Association 
+3.8.24	Validation of Old and New/Current for Associated Service Provider Id
+3.8.25	Use of Primary Service Provider Key List
+3.8.26	 Notifications for Associated Service Providers
+3.8.1	Associated Service Provider Notification Aggregation
+3.8.27	 Filters for Associated Service Providers
+3.8.28	Associated Service Provider and Primary Service Provider messages		
+3.8.29	Recovery for an Associated Service Provider
+3.9	Bulk Data Download Functionality
+3.9.220	Bulk Data Download File Creation
+3.9.221	Bulk Data Download – File Naming Convention
+3.9.222	Bulk Data Download – File Format
+3.9.223	Bulk Data Download – Selection Criteria for File Creation
+3.9.224	Bulk Data Download – Required Selection Criteria for Network Data File Generation
+3.9.225	Bulk Data Download –Required Selection Criteria for Subscription Data File Generation
+3.9.226	Bulk Data Download – Optional Selection Criteria for Subscription Data File Generation
+3.9.227	Bulk Data Download – FTP Sub-Directory
+3.10	NPA-NXX-X Information
+3.10.1	NPA-NXX-X Download Indicator Management
+3.10.1.52	NPAC Customer SOA NPA-NXX-X Indicator
+3.10.1.53	NPAC Customer SOA NPA-NXX-X Indicator – Default
+3.10.1.54	NPAC Customer SOA NPA-NXX-X Indicator – Modification
+3.10.1.55	NPAC Customer LSMS NPA-NXX-X Indicator
+3.10.1.56	NPAC Customer LSMS NPA-NXX-X Indicator – Default
+3.10.1.57	NPAC Customer LSMS NPA-NXX-X Indicator – Modification
+3.10.1.58	NPAC Customer LSMS EDR Indicator
+3.10.1.59	NPAC Customer LSMS EDR Indicator – Default
+3.10.1.60	NPAC Customer LSMS EDR Indicator – Modification
+3.10.2	NPA-NXX-X Holder Information 
+3.10.2.61	Number Pool NPA-NXX-X Holder Information – NPAC Personnel OpGUI
+3.10.2.62	Number Pool NPA-NXX-X Holder Information – Service Provider Request
+3.10.2.63	Number Pool NPA-NXX-X Holder Information – NPA-NXX Validation
+3.10.2.64	Number Pool NPA-NXX-X Holder Information – NPA-NXX Effective Date
+3.10.2.65	Number Pool NPA-NXX-X Holder Information – Duplicate NPA-NXX-X Validation
+3.10.2.68	Number Pool NPA-NXX-X Holder Information – Service Provider Local SMS NPA-NXX-X Indicator Download of NPA-NXX-X Object
+3.10.2.69	Number Pool NPA-NXX-X Holder Information – Service Provider Local SMS NPA-NXX-X Indicator Suppression of Download of NPA-NXX-X Object
+3.10.2.70	Number Pool NPA-NXX-X Holder Information – Filters for NPA-NXX-X Download to the Local SMS
+3.10.2.71	Number Pool NPA-NXX-X Holder Information – Service Provider SOA NPA-NXX-X Indicator Download of NPA-NXX-X Object
+3.10.2.72	Number Pool NPA-NXX-X Holder Information – Service Provider SOA NPA-NXX-X Indicator Suppression of Download of NPA-NXX-X Object
+3.10.2.73	Number Pool NPA-NXX-X Holder Information – Filters for NPA-NXX-X Download to the SOA
+3.10.2.74	Number Pool NPA-NXX-X Holder Information – Validation Error
+3.10.3	NPA-NXX-X Holder, NPAC Scheduling/Re-Scheduling of Block Creation
+3.10.3.75.1	Number Pool NPA-NXX-X Holder Information –OpGUI Entry Field for NPAC or SOA Origination
+3.10.3.75.2	Number Pool NPA-NXX-X Holder Information –OpGUI Entry Mechanism for Immediate or Scheduled Block Creation
+3.10.3.75.3	Number Pool NPA-NXX-X Holder Information –OpGUI Entry Field for Scheduled Date/Time
+3.10.3.76.1	Number Pool NPA-NXX-X Holder Information –Default for Scheduled Date/Time Entry Field
+3.10.3.76.2	Number Pool NPA-NXX-X Holder Information –Scheduled Date/Time Entry Field Validation
+3.10.3.77	Number Pool NPA-NXX-X Holder Information –Use of Scheduled Date/Time and NPAC Origination Entry Fields
+3.10.3.78	Number Pool NPA-NXX-X Holder Information – Routing Data for NPAC Origination
+3.10.3.79.1	Number Pool NPA-NXX-X Holder Information – Routing Data Field Level Validation
+3.10.3.79.2	Number Pool NPA-NXX-X Holder Information – Routing Data LRN Validation
+3.10.3.80.1	Number Pool NPA-NXX-X Holder Information – Modification of Block Create Event
+3.10.3.80.2	Number Pool NPA-NXX-X Holder Information – Modification of Scheduled Date/Time for Block Create Event
+3.10.3.80.3	Number Pool NPA-NXX-X Holder Information – Modification of Routing Data for Block Create Event
+3.10.3.81.1	Number Pool NPA-NXX-X Holder Information – Re-schedule of NPAC Initiated Block Create
+3.10.3.81.2	Number Pool NPA-NXX-X Holder Information – Re-schedule of Block Create Scheduling Options
+3.10.3.81.3	Number Pool NPA-NXX-X Holder Information – Re-schedule of Block Create Immediate Execution Edit Check
+3.10.3.82.1	Number Pool NPA-NXX-X Holder Information – Reject Re-schedule Based on Status
+3.10.3.82.2	Number Pool NPA-NXX-X Holder Information – Reject Re-schedule Based on Existing Block Create Event
+3.10.3.82.3	Number Pool NPA-NXX-X Holder Information – Validation Error for Schedule/Re-Schedule of Block Create Event
+3.10.3.83.1	Number Pool NPA-NXX-X Holder Information – Error Message for Pending-Like No-Active SVs during Block Create
+3.10.3.83.2	Number Pool NPA-NXX-X Holder Information – Pending-Like No-Active SVs Report Output Destinations
+3.10.3.83.3	Number Pool NPA-NXX-X Holder Information – Pending-Like No-Active SVs Report Output Destinations for Multiple Destinations
+3.10.3.83.4	Number Pool NPA-NXX-X Holder Information – Output Destination for Pending-Like No-Active SVs
+3.10.4	NPA-NXX-X Holder, Addition
+3.10.4.84	Addition of Number Pooling NPA-NXX-X Holder Information – Required Fields
+3.10.4.85	Addition of Number Pooling NPA-NXX-X Holder Information – SPID Validation
+3.10.4.86	Addition of Number Pooling NPA-NXX-X Holder Information – Check for Pending-Like No-Active SVs
+3.10.4.87	Addition of Number Pooling NPA-NXX-X Holder Information – Check for Pending-Like Port-To-Original SVs
+3.10.4.88.1	Addition of Number Pooling NPA-NXX-X Holder Information – Error Message for Pending-Like No-Active SVs and Pending-Like Port-To-Original 3.10.4-88.2	Addition of Number Pooling NPA-NXX-X Holder Information –Pending-Like No-Active SVs and Pending-Like Port-To-Original SVs Report Selection of Output Destinations
+3.10.4.88.3	Addition of Number Pooling NPA-NXX-X Holder Information –Pending-Like No-Active SVs and Pending-Like Port-To-Original SVs Report Output Destinitions for Multiple Destinations
+3.10.4.89	Addition of Number Pooling NPA-NXX-X Holder Information – Output Destination for Pending-Like No-Active SVs and Pending-Like Port-To-Original SVs
+3.10.4.90	Addition of Number Pooling NPA-NXX-X Holder Information Effective Date Window– Tunable Parameter
+3.10.4.91	Addition of Number Pooling NPA-NXX-X Holder Information Effective Date Window – Tunable Parameter Default
+3.10.4.92	Addition of Number Pooling NPA-NXX-X Holder Information Effective Date – Validation
+3.10.4.93	Addition of Number Pooling NPA-NXX-X Holder Information Effective Date – OpGUI Default
+3.10.4.94	Addition of Number Pooling NPA-NXX-X Holder Information – Successful Validation
+3.10.5	NPA-NXX-X Holder, Modification
+3.10.5.95	Modification of Number Pool NPA-NXX-X Holder Information – Effective Date Modification from OpGUI
+3.10.5.96	Modification of Number Pool NPA-NXX-X Holder Information - Effective Date versus Current Date
+3.10.5.97	Modification of Number Pool NPA-NXX-X Holder Information - Effective Date Update to Scheduled Block Create
+3.10.5.98	Modification of Number Pool NPA-NXX-X Holder Information Effective Date Window – Tunable Parameter Modification
+3.10.5.99	Modification of Number Pool NPA-NXX-X Holder Information Effective Date – Validation for Current Date
+3.10.5.100	Modification of Number Pool NPA-NXX-X Holder Information Effective Date – Validation for Tunable
+3.10.5.101	Modification of Number Pooling NPA-NXX-X Holder Information – Successful Validation
+3.10.6	NPA-NXX-X Holder, Deletion
+3.10.6.102	Deletion of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X Data
+3.10.6.103	Deletion of Number Pool NPA-NXX-X Holder Information – Single NPA-NXX-X at a time from OpGUI
+3.10.6.104	Deletion of Number Pooling NPA-NXX-X Holder Information – Check for Pending-Like With Active POOL SVs
+3.10.6.105	Deletion of Number Pooling NPA-NXX-X Holder Information – Check for Port-to-Original SVs
+3.10.6.106	Deletion of Number Pooling NPA-NXX-X Holder Information – Check for non-Active Block
+3.10.6.107	Deletion of Number Pooling NPA-NXX-X Holder Information – Check for Sending SVs
+3.10.6.108.1	Deletion of Number Pooling NPA-NXX-X Holder Information – Error Message for Pending-Like With Active POOL SVs and Pending-Like Port-To-Original SVs
+3.10.6.108.2	Deletion of Number Pooling NPA-NXX-X Holder Information –Pending-Like With Active POOL SVs and Pending-Like Port-To-Original SVs Report Selection of Output Destinations
+3.10.6.108.3	Deletion of Number Pooling NPA-NXX-X Holder Information –Pending-Like With Active POOL SVs and Pending-Like Port-To-Original SVs Report Output Destinations for Multiple Destinations
+3.10.6.109	Deletion of Number Pooling NPA-NXX-X Holder Information – Output Destination for Pending-Like and Active POOL SVs and Pending-Like Port-To-Original SVs
+3.10.6.110	Deletion of Number Pool NPA-NXX-X Holder Information – Block and Subscription Version Data Dependency
+3.10.6.111	Deletion of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X Dependency
+3.10.6.112	Deletion of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X With an Associated Block Create Scheduled Event
+3.10.7	NPA-NXX-X Holder, First Port Notification
+3.10.7.228	Number Pool NPA-NXX-X Holder information notification of First Port
+3.10.8	NPA-NXX-X Holder, Query
+3.10.8.113	Query of Number Pool NPA-NXX-X Holder Information – NPAC Personnel and Service Provider Personnel
+3.10.8.114	Query of Number Pool NPA-NXX-X Holder Information – Return of Queried Data
+3.10.8.115	Query of Number Pool NPA-NXX-X Holder Information – Return of Queried Data to NPAC Personnel Only
+3.10.9	NPA-NXX-X Holder, Bulk Data Download
+3.10.9.116	Number Pool NPA-NXX-X Holder Information Bulk Download File – Separate File containing all NPA-NXX-X Data
+3.10.9.117	Number Pool NPA-NXX-X Holder Information Bulk Download File – Filters for NPA-NXX-X Data
+3.10.9.118	Number Pool NPA-NXX-X Holder Information Bulk Download File – FTP Sub-Directory
+3.11	Block Information
+3.11.2	Block Holder, General
+3.11.2.119	Number Pool Block Holder Information – NPAC Personnel OpGUI
+3.11.2.120	Number Pool Block Holder Information – NPAC Customer EDR Indicator Download of Block Object
+3.11.2.121	Number Pool Block Holder Information – NPAC Customer EDR Indicator Download of SVs
+3.11.2.122	Number Pool Block Holder Information – NPAC Customer EDR Indicator For Requests But Not Retries
+3.11.2.123	Number Pool Block Holder Information – Data Integrity for Block and Pooled Subscription Versions
+3.11.2.124	Number Pool Block Holder Information – Service Provider Validation
+3.11.2.125	Number Pool Block Holder Information – SPID Validation
+3.11.2.126	Number Pool Block Holder Information – NPA-NXX-X Data Validation 
+3.11.2.127	Number Pool Block Holder Information – NPA-NXX-X Effective Date
+3.11.2.128	Number Pool Block Holder Information – LRN Validation
+3.11.2.129	Number Pool Block Holder Information – Duplicate Block Validation
+3.11.2.130	Number Pool Block Holder Information – SOA Origination Values
+3.11.2.131	Number Pool Block Holder Information – Validation Error
+3.11.2.132	Number Pooling Block Holder Information –Update Notification
+3.11.2.133	Number Pooling Block Holder Information –Update Notification Suppression
+3.11.2.134	Number Pooling Block Holder Information – Failed SP List Update for Block for EDR Local SMS
+3.11.2.135	Number Pooling Block Holder Information – Failed SP List Update for Subscription Versions for non-EDR Local SMS
+3.11.2.136	Number Pooling Block Holder Information – Failed SP List Sent to Block Holder
+3.11.2.137.1	Number Pooling Block Holder Information – Synchronization of Block Status and Subscription Version Status
+3.11.2.137.2	Number Pooling Block Holder Information – Synchronization of Block Status and Subscription Version Status for Block Creation
+3.11.2.137.3	Number Pooling Block Holder Information – Synchronization of Block Status and Subscription Version Status for Block Modification
+3.11.2.137.4	Number Pooling Block Holder Information – Synchronization of Block Status and Subscription Version Status for Block Deletion
+3.11.2.138.1	Number Pooling Block Holder Information – Synchronization of Block Failed SP List and Subscription Version Failed SP List
+3.11.2.138.2	Number Pooling Block Holder Information – Synchronization of Block Failed SP List and Subscription Version Failed SP List for Block
+3.11.2.139	Number Pooling Block Holder Information – Synchronization of Block Failed SP List and Subscription Version Failed SP List for the last failed Subscription Version in the 1K Block
+3.11.2.140	Number Pooling Block Holder Information – Synchronization of Block Failed SP List and Subscription Version Failed SP List for the Block
+3.11.2.141.1	Number Pooling Block Holder Information – Unique Error Message for Partial Failure or Failed Status Update to a Block for Block Activation Requests Initiated by NPAC Personnel
+3.11.2.141.3	Number Pooling Block Holder Information – Unique Error Message for Active Status With a Failed SP List Update to a Block
+3.11.2.141.4	Number Pooling Block Holder Information – Unique Error Message for Old Status With a Failed SP List Update to a Block
+3.11.2.142.1	Number Pooling Block Holder Information – Block Broadcast Monitoring Mechanism
+3.11.2.142.2	Number Pooling Block Holder Information – Block Broadcast Monitoring Mechanism Completion
+3.11.2.143	Number Pool Block Holder Information – Filters for Blocks
+3.11.3	Block Holder, Addition
+3.11.3.144	Addition of Number Pooling Block Holder Information
+3.11.3.145	Addition of Number Pool Block Holder Information – Rejected from LSMS
+3.11.3.146	Addition of Number Pooling Block Holder Information – Required Data
+3.11.3.147	Addition of Number Pooling Block Holder Information – Check for pending-like SVs for NPAC Personnel
+3.11.3.148	Addition of Number Pooling Block Holder Information – Error Message to SOA for pending-like SVs
+3.11.3.149	 Addition of Number Pooling Block Holder Information – Field-level Data Validation
+3.11.3.151	Addition of Number Pooling Block Holder Information – Activation Broadcast Complete Timestamp Update
+3.11.3.152	Addition of Number Pooling Block Holder Information – Status Update
+3.11.3.153	Addition of Number Pooling Block Holder Information – Failed SP List Update
+3.11.4	Block Holder, Modification
+3.11.4.154	Block's SOA Origination Indicator – NPAC Personnel OpGUI
+3.11.4.155	Block's SOA Origination Indicator – Suppress Broadcast
+3.11.4.156	Block's SOA Origination Indicator – Suppress Creation When False
+3.11.4.157	Modification of Number Pooling Block Holder Information – Routing Data
+3.11.4.158	Modification of Number Pool Block Holder Information – Rejected from LSMS
+3.11.4.159	Modification of Number Pooling Block Holder Information – SPID Validation
+3.11.4.160	Modification of Number Pooling Block Holder Information – Selection Criteria
+3.11.4.161	Modification of Number Pooling Block Holder Information – Current status and Failed SP List
+3.11.4.162	Modification of Number Pooling Block Holder Information – Sending Status Update
+3.11.4.163	Modification of Number Pooling Block Holder Information – Broadcast of Block Data
+3.11.4.164	Modification of Number Pooling Block Holder Information – Modify Broadcast Complete Timestamp Update
+3.11.4.165	Modification of Number Pooling Block Holder Information –Status Update
+3.11.4.166	Modification of Number Pooling Block Holder Information – Failed SP List Update
+3.11.5	Block Holder, Deletion
+3.11.5.169	Deletion of Number Pool Block Holder Information – NPAC
+3.11.5.170	Deletion of Number Pool Block Holder Information – SOA
+3.11.5.171	Deletion of Number Pool Block Holder Information – Rejected from LSMS
+3.11.5.172	Deletion of Number Pool Block Holder Information – LTI
+3.11.5.173	Deletion of Number Pooling NPA-NXX-X Holder Information – Sending Status Update to Block
+3.11.5.174	Deletion of Number Pool NPA-NXX-X Holder Information – Broadcast of Block Data
+3.11.5.175	Deletion of Number Pooling Block Holder Information – Disconnect Complete Timestamp Update
+3.11.5.176	Deletion of Number Pooling NPA-NXX-X Holder Information – Status Update to Block
+3.11.5.177	Deletion of Number Pooling NPA-NXX-X Holder Information – Failed SP List Update
+3.11.5.178	Deletion of Number Pooling NPA-NXX-X Holder Information – Creation of Old Block
+3.11.5.179	Deletion of Number Pooling NPA-NXX-X Holder Information – Old Block No Broadcast
+3.11.6	Block Holder, Query
+3.11.6.180	Query of Number Pool Block Holder Information – NPAC Personnel
+3.11.6.181	Query of Number Pool Block Holder Information – Service Provider Personnel
+3.11.6.182	Query of Number Pool Filtered Block Holder Information – Query Block
+3.11.7	Block Holder, Default Routing Restoration
+3.11.7.183	Number Pool Block Holder Information Use of Number Pool Default Routing Information – Existing Block
+3.11.7.184	Number Pool Block Holder Information Use of Number Pool Notification of TN Re-assignment – During De-Pooling
+3.11.8	Block Holder, Re-Send
+3.11.8.185	Re-Send of Number Pool Block Holder Information – Filters for Blocks
+3.11.8.186.1	Re-Send of Number Pooling Block Holder Information – NPAC Personnel OpGUI Single Block
+3.11.8.186.2	Re-Send of Number Pooling Block Holder Information – NPAC Personnel OpGUI One or All Service Providers
+3.11.8.187	Re-Send of Number Pooling Block Holder Information – Use of EDR Indicator for Re-Send data
+3.11.8.188	Re-Send of Number Pooling Block Holder Information – Re-Send to EDR Local SMS
+3.11.8.189	Re-Send of Number Pooling Block Holder Information – Re-Send to non-EDR Local SMS
+3.11.8.190	Re-Send of Number Pooling Block Holder Information – Failed Block Status Set to Sending
+3.11.8.191	Re-Send of Number Pooling Block Holder Information – Partial Failure Block Status Set to Sending
+3.11.8.192	Re-Send of Number Pooling Block Holder Information – Sending Status Update to Active Block
+3.11.8.193	Re-Send of Number Pooling Block Holder Information – Sending Status Update to Old Block
+3.11.8.194	Re-Send of Number Pool Block Holder Information – Broadcast of Block Data
+3.11.8.195	Re-Send of Number Pooling Block Holder Information – Update to Failed SP List
+3.11.8.196	Re-Send of Number Pooling Block Holder Information –Status Update to Block after Re-Send
+3.11.8.197	Re-Send of Number Pooling Block Holder Information – Failed SP List Update
+3.11.9	Block Holder, Bulk Data Downloads
+3.11.9.198	Number Pool Block Holder Information Bulk Download File Creation – Blocks
+3.11.9.199	Number Pool Block Holder Information Bulk Download File Creation – Selection Criteria
+3.11.9.200.1	Number Pool Block Holder Information Bulk Download File Creation – Active and Partial Failure Blocks Only or Latest View of Block Activity Choice
+3.11.9.200.2	Number Pool Block Holder Information Bulk Download File Creation – Data in Active Blocks Only Choice
+3.11.9.200.3	Number Pool Block Holder Information Bulk Download File Creation – Data in Latest View of Block Activity Choice
+3.11.9.201.1	Number Pool Block Holder Information Bulk Download File Creation – Time Range Fields
+3.11.9.201.2	Number Pool Block Holder Information Bulk Download File Creation – Time Range Fields and Block Data Model
+3.11.9.202	Number Pool Block Holder Information Bulk Download File Creation – Block Range Fields
+3.11.9.203	Number Pool Block Holder Information Bulk Download File Creation – Selection Criteria Combinations
+3.11.9.204	Number Pool Block Holder Information Bulk Data Download – Block Results
+3.11.9.205	Number Pool Block Holder Information Bulk Data Download – Block Results Sort Order
+3.11.9.206	Number Pool Block Holder Information Bulk Data Download – Filters for Blocks
+3.11.9.207	Number Pool Block Holder Information Bulk Data Download – FTP Sub-Directory
+4	Service Provider Data Administration
+4.1	Service Provider Data Administration and Management
+4.1.1.1	Service Provider ID
+4.1.1	User Functionality
+4.1.1.1	Create Service Providers
+4.1.1.2	Modify Service Providers
+4.1.1.3	Delete Service Providers
+4.1.1.4	View of Service Provider Data
+4.1.1.5.1	View List of Service Provider Subscriptions
+4.1.1.5.2	Authorized Service Providers View Their Own Data
+4.1.1.2	Authorized Service Providers Modify Their Own Data
+4.1.1.4.1	Broadcast NPAC Customer Names
+4.1.2	System Functionality
+4.1.2.1	Service Provider Data Creation
+4.1.2.1.6	New Service Provider ID
+4.1.2.1.7.1	Examine for Duplicate Service Provider ID
+4.1.2.1.7.2	Error notification of Duplicate Service Provider
+4.1.2.1.8	Service Provider Data Elements
+4.1.2.1.9	Service Provider data validation
+4.1.2.1.10	Notification of successful add for new Service Provider
+4.1.2.1.11	Failure notification of Service Provider creation
+4.1.2.2	Service Provider Data Modification
+4.1.2.2.13	Service Provider Key selection for modifying Service Provider data
+4.1.2.2.14	Error notification of invalid Service Provider ID or Name during Modify
+4.1.2.2.15.1	Modify restrictions on Service Provider data - Service Providers
+4.1.2.2.15.2	Modify restrictions on Service Provider data - NPAC Operations Personnel
+4.1.2.2.16	Re-validation of Service Provider data after Modify
+4.1.2.2.17	Modify Validation Error Message
+4.1.2.3	Delete Service Provider Data
+4.1.2.3.20	Service Provider key for delete
+4.1.2.3.21	Error Message for Delete key search
+4.1.2.3.22.1	No Subscription Versions during Service Provider Delete
+4.1.2.3.22.2	Subscription during Service Provider Delete
+4.1.2.3.22.3	Service Provider subscription restrictions during Network Data Delete.
+4.1.3	Service Provider Queries
+4.1.3.1	User Functionality
+4.1.3.1.24.1	Display of Service Provider ID and related subscription data
+4.1.3.1.24.2	Display of LRN and related subscription data
+4.1.3.1.24.3	Display of NPA-NXX and related subscription data
+4.1.3.2	System Functionality
+4.1.3.2.1	Service Provider Query
+4.1.3.2.1.25	Service Provider as Key for queries
+4.1.3.2.1.26.1	Error message for unknown Service Provider during a query
+4.1.3.2.1.26.2	Results returned to Service Provider during a query
+4.1.3.2.1.27	Service Provider Query Types
+4.1.3.2.1.28	Service Provider Information Message during query
+4.1.3.2.2	Subscription List Query
+4.1.3.2.2.29	Service Provider subscription query options
+4.1.3.2.2.30.1	Service Provider subscription query
+4.1.3.2.2.30.2	NPAC SMS shall return all Subscription Versions
+4.1.3.2.2.30.6	Count of subscription information during a query
+4.1.3.2.2.30.8	Error Message for Service Provider subscription query
+4.2	Additional Requirements
+4.2.1	Service Provider Network Data Addition/Deletion
+4.2.1.1	Removal of Service Provider with Respect to LRNs
+4.2.1.2	Removal of Service Provider with Respect to NPA-NXXs
+4.2.1.3.1	Removal of NPA-NXX – Subscription Version Check
+4.2.1.3.2	Removal of NPA-NXX – NPA-NXX-X Check 
+4.2.1.4.2.1	Removal of LRN – Subscription Version Check
+4.2.1.4.2.2	Removal of LRN – Block Check
+4.2.1.5	Duplicate NPA-NXX Validation
+4.2.1.5.6	Duplicate NPA-NXX Validation – Error Processing
+4.2.1.5.7	Duplicate LRN Validation
+4.2.1.5.8	Duplicate LRN Validation – Error Processing
+5	Subscription Management
+5.1	Subscription Version Management
+5.1.0.1	Subscription Version Status - Only One Per Subscription
+5.1.0.2	Subscription Version Status - Only One Active Version
+5.1.0.3	Subscription Version Status - Multiple Old/Canceled
+5.1.1	Subscription Version Management
+5.1.1.1	Version Status
+5.1.1.2.1	Old Subscription Retention - Tunable Parameter
+5.1.1.2.2	Old Subscription Retention - Tunable Parameter Modification
+5.1.1.2.3	Old Subscription Retention - Tunable Parameter Default
+5.1.1.3.1	Cancel-Pending Subscription Retention - Tunable Parameter
+5.1.1.3.2	Cancel-Pending Subscription Retention - Tunable Parameter Modification
+5.1.1.3.3	Cancel-Pending Subscription Retention - Tunable Parameter Default
+5.1.1.3.4	Cancel-Conflict Subscription Retention - Tunable Parameter
+5.1.1.3.5	Cancel-Conflict Subscription Retention - Tunable Parameter Modification
+5.1.1.3.6	Cancel-Conflict Subscription Retention - Tunable Parameter Default
+5.1.1.1.1	Pending Subscription Retention - Tunable Parameter
+5.1.1.1.2	Pending Subscription Retention - Tunable Parameter Modification
+5.1.1.1.3	Pending Subscription Retention - Tunable Parameter Default
+5.1.1.1.4	Pending Subscription Retention - Tunable Parameter Expiration
+5.1.1.5	Subscription Versions Creation for TN Ranges
+5.1.1.6	Subscription Administration Transaction Logging
+5.1.2	Subscription Administration Requirements
+5.1.2.1	User Functionality
+5.1.2.1.7	Creating a Subscription Version
+5.1.2.1.55	Create Pending Provider Port – NPAC Personnel or Service Provider After Block Activation
+5.1.2.1.8.1	Modifying a Subscription Version
+5.1.2.1.9	Activating a Subscription version
+5.1.2.1.10.1	Setting a Subscription Version to Conflict
+5.1.2.1.10.2	Subscription Version Conflict Status Rule
+5.1.2.1.11	Disconnecting a Subscription Version
+5.1.2.1.12	Canceling a Subscription Version
+5.1.2.1.13	Querying a Subscription Version
+5.1.2.2	System Functionality
+5.1.2.2.1	Subscription Version Creation
+5.1.2.2.1.3	Create Subscription Version - Notify NPA-NXX First Usage
+5.1.2.2.1.53	Create Subscription Version - Notify NPA-NXX First Usage of a New NPA-NXX involved in an NPA Split
+5.1.2.2.1.1	Subscription Version Creation - Inter-Service Provider Ports
+5.1.2.2.1.1.14	Create Subscription Version - Old Service Provider Input Data
+5.1.2.2.1.1.15.1	Create “Inter-Service Provider Port” Subscription Version - New Service Provider Input Data
+5.1.2.2.1.1.15.2	Create “porting to original” Subscription Version - New Service Provider Input Data
+5.1.2.2.1.1.16	Create Subscription Version - New Service Provider Optional input data
+5.1.2.2.1.1.18.1	Create Subscription Version - Field-level Data Validation
+5.1.2.2.1.1.18.2	Create Subscription Version - Due Date Consistency Validation
+5.1.2.2.1.1.18.3	Create Subscription Version - Due Date Validation
+5.1.2.2.1.1.18.4	Create Subscription Version - Ported TN NPA-NXX Validation
+5.1.2.2.1.1.44	Create Subscription Version – Due Date Validation for NPA-NXX effective date
+5.1.2.2.1.1.18.5	Create Subscription Version - Service Provider ID Validation
+5.1.2.2.1.1.18.6	Create Subscription Version - LRN Validation
+5.1.2.2.1.1.18.7	Create Subscription Version - Originating Service Provider Validation
+5.1.2.2.1.1.18.8	Create Subscription Version - Duplicate Authorization Validation
+5.1.2.2.1.1.18.9	Create Subscription Version - Service Provider ID Validation
+5.1.2.2.1.1.18.10	Create Subscription Version - Status Change Cause Code Validation
+5.1.2.2.1.1.19.1	Create Subscription Version - Old Service Provider ID Validation
+5.1.2.2.1.1.19.2	Create Subscription Version - Old Service Provider ID Validation - No Active Subscription Version
+5.1.2.2.1.1.19.3	Create Subscription Version – Timer Type Selection 
+5.1.2.2.1.1.19.4	Create Subscription Version – Timer Type Selection - Mismatch
+5.1.2.2.1.1.19.5	Create Subscription Version – Business Hours and Days Selection 
+5.1.2.2.1.1.19.6	Create Subscription Version – Business Hours and Days Selection - Mismatch
+5.1.2.2.1.1.20.1	Create Subscription Version - Validation Failure Notification
+5.1.2.2.1.1.20.2	Create Subscription Version - Validation Failure - No Update
+5.1.2.2.1.1.20.3	Create Subscription Version - Validation Failure - No Create
+5.1.2.2.1.1.20.4	Create Subscription Version - Validation Success - Update Existing
+5.1.2.2.1.1.20.5	Create Subscription Version - Validation Success - Create New
+5.1.2.2.1.1.21.1	Initial Concurrence Window - Tunable Parameter
+5.1.2.2.1.1.21.2	Initial Concurrence Window - Tunable Parameter Modification
+5.1.2.2.1.1.21.3	Long Initial Concurrence Window - Tunable Parameter Default
+5.1.2.2.1.1.21.4	Short Initial Concurrence Window - Tunable Parameter Default
+5.1.2.2.1.1.21.6	Create Subscription Version - Set to Pending
+5.1.2.2.1.1.21.7	Create Subscription Version - Notify User Success
+5.1.2.2.1.1.2.1	Create Subscription Version - Set to Conflict
+5.1.2.2.1.1.2.2	Create Subscription Version - Set Conflict Timestamp
+5.1.2.2.1.1.2.3	Create Subscription Version - Conflict Notification
+5.1.2.2.1.1.2.4 	Cause Code in Conflict Notification - Creation
+5.1.2.2.1.1.22	Create Subscription Version - Initial Concurrence Window Tunable Parameter Expiration
+5.1.2.2.1.1.23.1	Final Concurrence Window - Tunable Parameter
+5.1.2.2.1.1.23.2	Final Concurrence Window Tunable - Tunable Parameter Modification
+5.1.2.2.1.1.23.3	Long Final Concurrence Window Tunable - Tunable Parameter Default
+5.1.2.2.1.1.52	Short Final Concurrence Window Tunable - Tunable Parameter Default
+5.1.2.2.1.1.23.4	New Service Provider Fails to Authorize Transfer of Service
+5.1.2.2.1.1.56	Create Inter-Service Provider Port-to-Original Port – NPAC and SOA After NPA-NXX-X Creation
+5.1.2.2.1.1.57	Create Inter-Service Provider Port-to-Original Subscription Version – After Block Activation
+5.1.2.2.1.1.23.5	Activation without Old Service Provider Authorization 
+5.1.2.2.1.1.23.6	Activation without Old Service Provider Authorization - Time restriction 
+5.1.2.2.1.1.23.3	Old Service Provider Final Concurrence Timer Expiration Notification
+5.1.2.2.1.2	Subscription Version Creation - Intra-Service Provider Port
+5.1.2.2.1.2.4	Create “Intra-Service Provider Port” Subscription Version - Current Service Provider Input Data
+5.1.2.2.1.2.5	Create “Intra-Service Provider Port” Subscription Version - Current Service Provider Optional Input Data
+5.1.2.2.1.2.6.1	Create “Intra-Service Provider Port” Subscription Version - Field-level Data Validation
+5.1.2.2.1.2.6.2	Create “Intra-Service Provider Port” Subscription Version - New and Old Service Provider ID Match
+5.1.2.2.1.2.6.3	Create “Intra-Service Provider Port” Subscription Version - Due Date Validation
+5.1.2.2.1.2.6.4	Create “Intra-Service Provider Port” Subscription Version - Ported TN NPA-NXX Validation
+5.1.2.2.1.2.45	Create “Intra-Service Provider Port” Subscription Version – Due Date Validation for NPA-NXX effective date
+5.1.2.2.1.2.6.5	Create “Intra-Service Provider Port” Subscription Version - LRN Validation
+5.1.2.2.1.2.6.6	Create “Intra-Service Provider Port” Subscription Version - Duplicate Authorization Validation
+5.1.2.2.1.2.6.7	Create “Intra-Service Provider Port” Subscription Version - Old Service Provider ID Validation
+5.1.2.2.1.2.6.8	Create “Intra-Service Provider Port” Subscription Version - No Active Version
+5.1.2.2.1.2.6.9	Create “Intra-Service Provider Port” Subscription Version - Old Service 			Provider ID Validation - No Active 5.7.1	Create “Intra-Service Provider Port” Subscription Version - Validation Failure Notification
+5.1.2.2.1.2.7.2	Create “Intra-Service Provider Port” Subscription version - Validation Failure - No Create
+5.1.2.2.1.2.8	Create “Intra-Service Provider Port” Subscription version - Set to Pending
+5.1.2.2.1.2.9	Create “Intra-Service Provider Port” Subscription version - Notify User of Creation
+5.1.2.2.1.2.58	Create Intra-Service Provider Port – NPAC Personnel After NPA-NXX-X Creation
+5.1.2.2.1.2.59	Create Intra-Service Provider Port – SOA After NPA-NXX-X Creation
+5.1.2.2.2	Subscription Version Modification
+5.1.2.2.2.1	Modification of a Pending or Conflict Subscription Version
+5.1.2.2.2.1.25	Modify Subscription Version - Invalid Version Status Notification
+5.1.2.2.2.1.26	Modify Subscription Version - Version Identification
+5.1.2.2.2.1.27.1	Modify Subscription Version - New Service Provider Data Values
+5.1.2.2.2.1.27.2	Modify “porting to original” Subscription Version - New Service Provider Data Values
+5.1.2.2.2.1.27.3	Modify Subscription Version - Old Service Provider Data Values
+5.1.2.2.2.1.27.4	Old Service Provider authorization Flag Modification to False 
+5.1.2.2.2.1.28	Modify Subscription Version - New Service Provider Optional input data.
+5.1.2.2.2.1.29.1	Modify Subscription Version - Field-level Data Validation
+5.1.2.2.2.1.29.2	Modify Subscription Version - Due Date Validation
+5.1.2.2.2.1.54	Modify Subscription Version - Due Date Validation for NPA-NXX Effective Date
+5.1.2.2.2.1.29.3	Modify Subscription Version - LRN Validation
+5.1.2.2.2.1.29.4	Modify Subscription Version - Originating Service Provider Validation
+5.1.2.2.2.1.29.5	Modify Subscription Version - Status Change Cause Code Validation
+5.1.2.2.2.1.30.1	Modify Subscription Version - Validation Failure Notification
+5.1.2.2.2.1.30.2	Modify Subscription Version - Validation Error Processing
+5.1.2.2.2.1.31.3	Modify Subscription Version - Successful Modification Notification
+5.1.2.2.2.1.10.1	Modify Subscription Version - Set Conflict Timestamp
+5.1.2.2.2.1.10.2	Modify Subscription Version - Conflict Notification
+5.1.2.2.2.1.10.3	Modify Subscription Version - Cause Code in Notification
+5.1.2.2.2.2	Modification of an Active Subscription Version
+5.1.2.2.2.2.11	Modify Active Subscription Version - Service Provider Owned
+5.1.2.2.2.2.35	Modify Active Subscription Version - Version Identification
+5.1.2.2.2.2.36	Modify Active Subscription Version - Input Data
+5.1.2.2.2.2.37	Active Subscription Version - New Service Provider Optional input data.
+5.1.2.2.2.2.38.1	Modify Active Subscription Version - Field-level Data Validation
+5.1.2.2.2.2.38.2	Modify Active Subscription Version - LRN Validation
+5.1.2.2.2.2.39.1	Modify Active Subscription Version - Validation Failure Notification
+5.1.2.2.2.2.39.2	Modify Active Subscription Version - Validation Error Processing
+5.1.2.2.2.2.46	Modify Active Subscription Version- Creation of Old Subscription Version
+5.1.2.2.2.2.47	Modify Active Subscription Version- Old Subscription Version No Broadcast
+5.1.2.2.2.2.40.1	Modify Active Subscription Version - Broadcast Date/Time Stamp
+5.1.2.2.2.2.40.3	Modify Active Subscription Version - Modification Success User Notification
+5.1.2.2.2.2.40.4	Modify Active Subscription Version - Broadcast complete Time Stamp
+5.1.2.2.2.2.41	Activation Of A Modified Subscription Version
+5.1.2.2.2.2.41.1	Broadcast Modified Active Subscription - Local SMS Identification
+5.1.2.2.2.2.41.2	Broadcast Modified Active Subscription - Send to Local SMSs
+5.1.2.2.2.2.41.3	Broadcast Modified Active Subscription - Set to Sending
+5.1.2.2.2.2.41.4	Modify Active Subscription Version - Return Status
+5.1.2.2.2.2.41.5	Modify Active Subscription Activation Retry Attempts - Tunable Parameter
+5.1.2.2.2.2.41.6	Modify Active Subscription Activation Retry Interval - Tunable Parameter
+5.1.2.2.2.2.41.7	Modify Active Subscription Version Failure Retry
+5.1.2.2.2.2.41.8	Modify Active Subscription Version Failure - Status Sending
+5.1.2.2.2.2.41.9	Modify Active Subscription Version Failure - Local SMS Identification
+5.1.2.2.2.2.41.10	Subscription Version Activation - Resend to Failed Local SMSs
+5.1.2.2.2.2.41.11	Modify Active Subscription Version - Failed Local SMS Notification Current Service Provider
+5.1.2.2.3	Subscription Version Conflict
+5.1.2.2.3.1	Placing a Subscription Version in Conflict
+5.1.2.2.3.1.42	Conflict Subscription Version - Version Identification
+5.1.2.2.3.1.43.1	Conflict Subscription Version - Invalid Status Notification
+5.1.2.2.3.1.43.2	Conflict Subscription Version - No Cause Code Notification
+5.1.2.2.3.1.42.1	Conflict Subscription Version - Old Service Provider Number Restriction
+5.1.2.2.3.1.42.2	Conflict Subscription Version - Conflict Restriction Window
+5.1.2.2.3.1.50	Conflict Subscription Version - Conflict Restriction Window- Old Service Provider
+5.1.2.2.3.1.51	Conflict Subscription Version – Conflict Restriction Rules for Old Service Provider
+5.1.2.2.3.1.2	Conflict Restriction Window Tunable due date value
+5.1.2.2.3.1.42.3	Conflict Subscription Version - Conflict Restriction Window Tunable
+5.1.2.2.3.1.42.4	Conflict Subscription Version - Conflict Restriction Window Tunable Default
+5.1.2.2.3.1.42.5	Conflict Subscription Version – Short Timer Usage
+5.1.2.2.3.1.44.1	Conflict Subscription Version - Set Status to Conflict
+5.1.2.2.3.1.44.2	Conflict Subscription Version - Set Conflict Date and Time
+5.1.2.2.3.1.44.3	Conflict Subscription Version - Successful Completion Message
+5.1.2.2.3.1.45.1	Conflict Expiration Window - Tunable Parameter
+5.1.2.2.3.1.45.2	Conflict Expiration Window - Tunable Parameter Default
+5.1.2.2.3.1.45.3	Conflict Expiration Window - Tunable Parameter Modification
+5.1.2.2.3.1.45.4	Conflict Subscription Version - Set to Cancel
+5.1.2.2.3.1.45.5	Conflict Subscription Version - Set Cancellation Date Timestamp
+5.1.2.2.3.1.45.6	Conflict Subscription Version - Inform Service Providers of Cancel Status
+5.1.2.2.3.2	Removing a Subscription Version from Conflict
+5.1.2.2.3.2.46	Conflict Resolution Subscription Version - Version Identification
+5.1.2.2.3.2.47	Conflict Resolution Subscription Version - Invalid Status Notification
+5.1.2.2.3.2.50.1	Conflict Resolution Subscription Version - Set Status
+5.1.2.2.3.2.50.2	Conflict Resolution Subscription Version - Status Message
+5.1.2.2.3.2.12.1	Conflict Resolution Subscription Version - Inform Both Service Providers of Pending Status
+5.1.2.2.3.2.12.3	Conflict Resolution New Service Provider Restriction Tunable Parameter
+5.1.2.2.3.2.12.4	Long Conflict Resolution New Service Provider Restriction - Tunable Parameter Default
+5.1.2.2.3.2.12.5	Conflict Resolution New Service Provider Restriction Tunable Parameter Modification
+5.1.2.2.3.2.12.6	Short Conflict Resolution New Service Provider Restriction - Tunable Parameter Default
+5.1.2.2.3.2.14 	Conflict Resolution Acknowledgment - Update Conflict Resolution Date and Time Stamp
+5.1.2.2.4	Subscription Version Activation
+5.1.2.2.4.51.1	Activate Subscription Version - Version Identification
+5.1.2.2.4.51.2	Activate Subscription Version - Broadcast Complete Date and Time Stamp
+5.1.2.2.4.21	Activate “porting to original” Subscription Version
+5.1.2.2.4.22	Activate Subscription Version - Set Activation Received Timestamp
+5.1.2.2.4.52	Activate Subscription Version - Invalid Status Notification
+5.1.2.2.4.53.1	Activate Subscription Version - Validation
+5.1.2.2.4.53.2	Activate Subscription Version Validation Error Message
+5.1.2.2.4.53.3	Activate Subscription Version - Validate Due Date
+5.1.2.2.4.55	Activate Subscription Version - Local SMS Identification
+5.1.2.2.4.57.1	Activate Subscription Version - Send to Local SMSs
+5.1.2.2.4.57.2	Activate Subscription Version - Set to Sending
+5.1.2.2.4.57.3	Activate Subscription Version - Date and Time Stamp
+5.1.2.2.4.58.1	Local SMS Activation message logging
+5.1.2.2.4.58.2	Local SMS Activation Log Retention Period - Tunable Parameter
+5.1.2.2.4.58.3	Local SMS Activation Log Retention Period - Tunable Parameter Modification
+5.1.2.2.4.58.4	Local SMS Activation Log Retention Period - Tunable Parameter Default
+5.1.2.2.4.58.5	Local SMS Activation Message Log - Viewing
+5.1.2.2.4.59.1	Activate Subscription Version - Set Status of Current to Active
+5.1.2.2.4.59.2	Activate Subscription Version - Set Status of Previous to Old
+5.1.2.2.4.60.1	Subscription Activation Retry Attempts - Tunable Parameter
+5.1.2.2.4.60.2	Subscription Activation Retry Interval - Tunable Parameter
+5.1.2.2.4.60.3	Subscription Activation Retry Attempts - Tunable Parameter Modification
+5.1.2.2.4.60.4	Subscription Activation Retry Interval - Tunable Parameter Modification
+5.1.2.2.4.60.5	Subscription Activation Retry Attempts - Tunable Parameter Default
+5.1.2.2.4.60.6	Subscription Activation Retry Interval - Tunable Parameter Default
+5.1.2.2.4.60.7	Subscription Version Activation Failure Retry
+5.1.2.2.4.60.8	Subscription Version Activation Failure - After Retries
+5.1.2.2.4.60.9	Subscription Version Activation Failure - Status Sending
+5.1.2.2.4.60.10	Subscription Version Activation Failure - Local SMS Identification
+5.1.2.2.4.60.11	Subscription Version Activation Failure - Set Status to Partial Failure
+5.1.2.2.4.60.12	Subscription Version Partial Activation Failure - Set Status of Previous to Old
+5.1.2.2.4.61.1	Subscription Version Activation - Set Status to Failure
+5.1.2.2.4.61.2	Subscription Version Activation Subscription Version - Failure Notification
+5.1.2.2.4.61.3	Subscription Version Activation - Resend to Failed Local SMSs
+5.1.2.2.4.22.1	Subscription Version Activation - Failed Local SMS Notification - Both Service Providers
+5.1.2.2.4.22.2	Subscription Version Activation - Failed Local SMS Notification - Current Service Provider
+5.1.2.2.4.60	Activate Intra-Service Provider Port – After NPA-NXX-X Creation and Prior to the Existence of the Block
+5.1.2.2.4.61	Activate Port-to-Original Subscription Version – Broadcast of Subscription Data Creation
+5.1.2.2.4.62	Activate Port-to-Original Subscription Version – Broadcast of Subscription Data Deletion
+5.1.2.2.5	Subscription Version Disconnect
+5.1.2.2.5.62	Disconnect Subscription Version - Version Identification
+5.1.2.2.5.23.1	Disconnect Subscription Version - Required Input Data
+5.1.2.2.5.23.2	Disconnect Subscription Version - Optional Input Data
+5.1.2.2.5.10	Disconnect Subscription Version - Invocation by Current Service Provider
+5.1.2.2.5.63	Disconnect Subscription Version - Invalid Status Notification
+5.1.2.2.5.64.1	Disconnect Subscription Version - Cancel Other Version Notification
+5.1.2.2.5.48	Disconnect Pending Subscription Version- Creation of Old Subscription Version
+5.1.2.2.5.49 	Disconnect Pending Subscription Version- Old Subscription Version No Broadcast
+5.1.2.2.5.24	Disconnect Subscription Version -Set to Disconnect Pending 
+5.1.2.2.5.25.1	Disconnect Subscription Version - Disconnect Pending Status Notification
+5.1.2.2.5.25.2	Disconnect Subscription Version - Customer Disconnect Date Notification
+5.1.2.2.5.65.1	Disconnect Subscription Version -Immediate Broadcast
+5.1.2.2.5.65.2	Disconnect Subscription Version - Deferred Broadcast
+5.1.2.2.5.65.4	Disconnect Subscription Version - Broadcast Interface Message to Local SMSs
+5.1.2.2.5.65.5	Disconnect Subscription Version - Disconnect Broadcast Date and Time Stamp
+5.1.2.2.5.65.6	Disconnect Subscription Version - Set to Sending
+5.1.2.2.5.66.2	Disconnect Subscription Version Complete - Set Disconnect Complete Date
+5.1.2.2.5.66.3	Disconnect Subscription Version Complete - Set Disconnect to Old
+5.1.2.2.5.66.4	Disconnect Subscription Version Complete – Status Update of SV
+5.1.2.2.5.67.1	Disconnect Subscription Version - Set Status to Active
+5.1.2.2.5.67.2	Disconnect Pending Subscription Version - Failure Notification
+5.1.2.2.5.67.3	Disconnect Subscription Version - Resend Disconnect Requests to All Local SMSs
+5.1.2.2.5.68.1	Disconnect Subscription Version - Subscription Disconnect Retry Attempts - Tunable Parameter
+5.1.2.2.5.68.2	Disconnect Pending Subscription Version - Subscription Disconnect Retry Attempts - Tunable Parameter Default
+5.1.2.2.5.68.3	Disconnect Subscription Version - Subscription Disconnect Retry Interval - Tunable Parameter
+5.1.2.2.5.68.4	Disconnect Subscription Version - Subscription Disconnect Retry Interval - Tunable Parameter Default
+5.1.2.2.5.68.5	Disconnect Subscription Version - Retry Processing
+5.1.2.2.5.68.6	Disconnect Subscription Version - Sending Status during Retries
+5.1.2.2.5.68.7	Disconnect Subscription Version - Retry Failed
+5.1.2.2.5.68.8	Disconnect Subscription Version - Failure Notification after Retries Complete
+5.1.2.2.5.68.9	Disconnect Subscription Version - Set to Old
+5.1.2.2.5.68.10	Disconnect Subscription Version - Resend Disconnect Requests to Failed Local SMSs
+5.1.2.2.5.63	Disconnect Subscription Version or Port-To-Original – Pooled Number Block Default Routing Restoration
+5.1.2.2.5.64	Disconnect Subscription Version - Customer Disconnect Date Notification for Pooled Number
+5.1.2.2.5.65	Disconnect Subscription Version – Broadcast of Subscription Data Creation
+5.1.2.2.5.66	Disconnect Subscription Version – Broadcast of Subscription Data Deletion
+5.1.2.2.5.67.1	Disconnect Subscription Version – Updates to the Status for Disconnect
+5.1.2.2.5.67.2	Disconnect Subscription Version – Setting of the Status for Disconnected SV
+5.1.2.2.5.67.3	Disconnect Subscription Version – Setting of the Status for Newly Created SV
+5.1.2.2.5.68.1	Disconnect Subscription Version – Updates to the Status for Port-to-Original
+5.1.2.2.5.68.2	Disconnect Subscription Version – Setting of the Status for Port-to-Original SV
+5.1.2.2.5.68.3	Disconnect Subscription Version – Setting of the Status for Port-to-Original SV that was active prior to the PTO 
+5.1.2.2.5.68.4	Disconnect Subscription Version – Setting of the Status for Port-to-Original for Newly Created SV
+5.1.2.2.5.69	Disconnect Subscription Version – Updates to the Failed SP List for Disconnect
+5.1.2.2.5.70	Disconnect Subscription Version – Updates to the Failed SP List for Port-To-Original
+5.1.2.2.6	Subscription Version Cancellation
+5.1.2.2.6.26.1	Cancel Subscription Version - Inform Both Service Providers of Cancel Pending Status 
+5.1.2.2.6.69	Cancel Subscription Version - Version Identification
+5.1.2.2.6.70	Cancel Subscription Version - Invalid Status Notification
+5.1.2.2.6.27	Cancel Subscription Version - Validate Service Provider
+5.1.2.2.6.71.2	Cancel Subscription Version - Set Cancellation Date and Time Stamp
+5.1.2.2.6.71.3	Cancel Subscription Version- Set to Cancel Old Service Provider only
+5.1.2.2.6.71.4	Cancel Subscription Version- Set to Cancel New Service Provider only
+5.1.2.2.6.71.5	Cancel Subscription version- Error on Cancellation
+5.1.2.2.6.71.6	Cancel Subscription Version- Set Pending subscription version to Cancel Pending Status Inter-Service Provider port
+5.1.2.2.6.71.8	Cancel Subscription Version- Set Conflict Subscription to Cancel New Service Provider only
+5.1.2.2.6.71.9	Cancel Subscription Version - Rejection of Old Service Provider Conflict Cancellation
+5.1.2.2.6.71.10	Cancel Subscription Version- Set Disconnect Pending subscription version to Active
+5.1.2.2.6.71.11	Cancel Subscription Version- Set to Cancel Status - Intra-Service Provider port
+5.1.2.2.6.28.1	Cancel Subscription Version - Set to Cancel After Service Provider Acknowledge
+5.1.2.2.6.29.1	Cancel Subscription Version - Inform Both Service Providers of Cancel Status
+5.1.2.2.6.29.2	Cancel Subscription Version - Inform Current Service Provider of Cancel Status
+5.1.2.2.6.30	Cancel Subscription Version Acknowledgment - Update Old Service Provider Date and Time Stamp
+5.1.2.2.6.31	Cancel Subscription Version Acknowledgment - Update New Service Provider Date and Time Stamp
+5.1.2.2.6.32.1	Cancellation-Initial Concurrence Window - Tunable Parameter
+5.1.2.2.6.32.2	Cancellation-Initial Concurrence Window - Tunable Parameter Modification
+5.1.2.2.6.32.3	Long Cancellation-Initial Concurrence Window - Tunable Parameter Default
+5.1.2.2.6.32.4	Short Cancellation-Initial Concurrence Window - Tunable Parameter Default
+5.1.2.2.6.33.1	Cancellation-Final Concurrence Window - Tunable Parameter
+5.1.2.2.6.33.2	Cancellation-Final Concurrence Window Tunable Parameter Modification
+5.1.2.2.6.33.3	Long Cancellation-Final Concurrence Window - Tunable Parameter Default
+5.1.2.2.6.33.4	Short Cancellation-Final Concurrence Window - Tunable Parameter Default
+5.1.2.2.6.34	Cancellation-Initial Concurrence Window - Tunable Parameter Expiration
+5.1.2.2.6.35.1	Cancellation-Final Concurrence Window - Tunable Parameter Expiration New Service Provider
+5.1.2.2.6.35.2	Cancellation-Final Concurrence Window - Tunable Parameter Expiration Old Service Provider
+5.1.2.2.6.36	Cancel Subscription Version - Inform Service Providers of Conflict Status
+5.1.2.2.7	Subscription Version Resend
+5.1.2.2.7.38.1.1	Resend Subscription Version - Identify Subscription Version
+5.1.2.2.7.38.1.2	Resend Subscription Version – Identify Multiple Subscription Versions
+5.1.2.2.7.38.2	Resend Subscription Version - Input Data
+5.1.2.2.7.38.3	Resend Subscription Version - Error Message
+5.1.2.2.7.38.4	Resend Subscription Version - Activation Request
+5.1.2.2.7.38.5	Resend Subscription Version - Disconnect Request
+5.1.2.2.7.38.6	Resend Subscription Version - Failed or Partial Failure
+5.1.2.2.7.38.7	Resend Subscription Version - Standard Activation Processing
+5.1.2.2.7.38.8	Resend Subscription Version - Standard Disconnect Processing
+5.1.2.2.7.38.9	Resend Subscription Version – Modify Active Request
+5.1.2.2.7.38.10	Resend Subscription Version - Standard Modify Active Processing
+5.1.2.2.7.71	Re-Send of Number Pooling Subscription Version Information – NPAC Personnel OpGUI
+5.1.2.2.7.72	Re-Send of Number Pooling Subscription Version Information – Subscription Versions sent to discrepant non-EDR Local SMS
+5.1.2.2.7.73	Re-Send of Number Pooling Subscription Version Information – Sending Status Update to Failed Subscription Versions for Block 
+5.1.2.2.7.74	Re-Send of Number Pooling Subscription Version Information – Sending Status Update to Partial failure Subscription Versions for 
+5.1.2.2.7.75	Re-Send of Number Pooling Subscription Version Information – Sending Status Update to Active Subscription Version for Block 
+5.1.2.2.7.76	Re-Send of Number Pooling Subscription Version Information – Sending Status Update to Old Subscription Version for Block Deletion
+5.1.2.2.7.77	Re-Send of Number Pooling Subscription Version Information – Update to Failed SP List
+5.1.2.2.7.78	Re-Send of Number Pooling Subscription Version Information –Status Update to Subscription Version after Re-Send
+5.1.2.2.7.79	Re-Send of Number Pooling Subscription Version Information –Failed SP List Update to Subscription Version after Re-Send
+5.1.2.2.7.80	Re-Send of Subscription Version Information – Disconnect or Port-To-Original of a TN within a Pooled 1K Block
+5.1.2.2.7.81.1	Re-Send of Subscription Version Information – Disconnect TN within a Pooled 1K Block to EDR Local SMS
+5.1.2.2.7.81.2	Re-Send of Subscription Version Information – Disconnect TN within a Pooled 1K Block to non-EDR Local SMS
+5.1.2.2.7.82.1	Re-Send of Subscription Version Information –Port-To-Original TN within a Pooled 1K Block to EDR Local SMS
+5.1.2.2.7.82.2	Re-Send of Subscription Version Information –Port-To-Original TN within a Pooled 1K Block to non-EDR Local SMS
+5.1.3	Subscription Queries
+5.1.3.1	User Functionality
+5.72	Query Subscription Version - Request
+5.1.3.2	System Functionality 
+5.1.3.2.73	Query Subscription Version - Version Identification
+5.1.3.2.74.1	Query Subscription Version - Status Supplied
+5.1.3.2.74.2	Query Subscription Version - Return All Subscription Versions for Ported TN
+5.1.3.2.74.3	Query Subscription Version - Output Data
+5.1.3.2.74.4	Query Subscription Version - Output Data
+5.1.3.2.75	Query Subscription Version -No Data Found
+5.1.3.2.4	Query Subscription Version - Retrieve Data, Modification Not Allowed 
+5.1.3.2.5	Query Subscription Version - Retrieve Data Based on Single Ported TN Only
+5.1.3.2.6	Query Subscription Version - View for Any Ported TN
+5.1.3.2.39	Query Subscription Version - View Old, Partial Failure, Disconnect Pending, Canceled or Active Only
+5.1.3.2.40	Query Subscription Version - Online Records Only
+5.1.3.2.83	Query Subscription Version – LNP Type of POOL
+5.1.4	Subscription Version Processing for National Number Pooling
+5.1.4.1	Subscription Version, General
+5.1.4.1.84	Number Pooling Subscription Version Information – Reject Messages
+5.1.4.1.85	Number Pooling Subscription Version Information – Suppression of Notifications
+5.1.4.1.86	Number Pooling Subscription Version Information – Filters for “Pooled Number” Subscription Versions
+5.1.4.1.87	Number Pooling Subscription Version Information – Broadcast of Subscription Data
+5.1.4.1.88	Number Pooling Subscription Version Information – Failed SP List Update for Block
+5.1.4.1.89	Number Pooling Subscription Version Information – Data Integrity for Pooled Subscription Versions and Block
+5.1.4.2	Subscription Version, Addition for Number Pooling
+5.1.4.2.90	Addition of Number Pooling Subscription Version Information – Subscription Data
+5.1.4.2.91	Addition of Number Pooling Subscription Version Information – Create “Pooled Number” Subscription Version
+5.1.4.2.92	Addition of Number Pooling Subscription Version Information Create “Pooled Number” Subscription Version – Bypass of Existing
+5.1.4.2.93	Addition of Number Pooling Subscription Version Information Create “Pooled Number” Subscription Version - Set to Sending
+5.1.4.2.94	Addition of Number Pooling Subscription Version Information – Status Update
+5.1.4.2.95	Addition of Number Pooling Subscription Version Information – Failed SP List
+5.1.4.3	Subscription Version, Block Create Validation of Subscription Versions
+5.1.4.3.96	Block Create Validation of Subscription Versions – Subscription Version Completion Check
+5.1.4.3.97	Block Create Validation of Subscription Versions – First Time Execution of Subscription Version Completion Check
+5.1.4.3.98	Block Create Validation of Subscription Versions – Subscription Version Create for Missing TNs
+5.1.4.3.99	Block Create Validation of Subscription Versions – Subscription Version Broadcast to non-EDR Local SMS
+5.1.4.3.100	Block Create Validation of Subscription Versions – Block Status Update
+5.1.4.3.101	Block Create Validation of Subscription Versions – Block Failed SP List Update
+5.1.4.3.102	Block Create Validation of Subscription Versions – Subscription Version Logging
+5.1.4.4	Subscription Version, Modification for Number Pooling
+5.1.4.4.103	Modification of Number Pooling Subscription Version Information – Subscription Data
+5.1.4.4.104	Modification of Number Pooling Subscription Version Information – Status Update to Sending
+5.1.4.4.105	Modification of Number Pooling Subscription Version Information – Status Update
+5.1.4.4.106	Modification of Number Pooling Subscription Version Information – Failed SP List
+5.1.4.5	Subscription Version, Deletion for Number Pooling
+5.1.4.5.107	Deletion of Number Pooling Subscription Version Information – Sending Status Update to Subscription Versions
+5.1.4.5.108	Deletion of Number Pooling Subscription Version Information – Broadcast of Subscription Version Data
+5.1.4.5.109	Deletion of Number Pooling Subscription Version Information – Status Update to Subscription Versions
+5.1.4.5.110	Deletion of Number Pooling Subscription Version Information – Failed SP List
+5.1.4.6	Subscription Version, Block Delete Validation of Subscription Versions
+5.1.4.6.111	Block Delete Validation of Subscription Versions – Ensure no Subscription Versions with LNP Type POOL
+5.1.4.7	Subscription Version, Bulk Data Downloads
+5.1.4.7.112	Bulk Download File Creation – Pooled Subscription Versions Filtered for EDR Local SMS
+6	NPAC SMS Interfaces
+6.1	SOA to NPAC SMS Interface
+6.2	NPAC SMS to Local SMS Interface
+6.3	Interface Transactions
+6.3.22	Manager-agent relationship of interface transactions
+6.4	Interface and Protocol Requirements
+6.4.23	Open interfaces
+6.4.1	Protocol Requirements
+6.4.1.24	Interface protocol stack
+6.4.1.25	Multiple application associations
+6.4.2	Interface Performance Requirements
+6.4.2.26	Interface availability
+6.4.2.27	Interface reliability
+6.1	Range Activations
+6.2	Percent of Range Activations
+6.28.1	SOA to NPAC SMS interface transaction rates - sustained
+6.28.2	SOA to NPAC SMS interface transaction rates - peak
+6.29.1	NPAC SMS to Local SMS interface transaction rates
+6.29.2	NPAC SMS to Local SMS interface transaction rates - sustainable
+6.4.3	Interface Performance Requirements
+6.4.3.30.1	Interface specification
+6.4.3.30.2	Interface specification identification
+6.4.3.35	NPAC SMS Interoperable Interface Specification extensibility
+6.4.3.1	Acknowledgment of a Cancel Pending for a Subscription Version
+6.4.3.2	Acknowledgment of a Conflict Resolution for a Subscription Version
+6.4.3.3	Deferred Disconnect of a Subscription Version
+6.4.3.4	Cancel Request Notification
+6.4.3.5	Conflict Resolution Request Notification
+6.4.4	Request Restraints
+6.4.4.8	Tunable Parameter Number of Aggregated Download Records
+6.4.4.9	Download Time Tunable Parameter to Restricted Time Range
+6.4.4.13	Queries Constrained by NPA-NXX
+6.4.4.14	Subscription Version Resynchronization Filter Usage
+6.5	NPAC SOA Low-tech Interface
+6.5.2.1	NPAC SOA Low-tech Interface
+6.5.2.2	SOA to NPAC SMS Create Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.2.3	SOA to NPAC SMS Cancel Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.2.4	SOA to NPAC SMS Modify Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.2.5	SOA to NPAC SMS Query Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.2.6	SOA to NPAC SMS Activate Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.2.7	SOA to NPAC SMS Disconnect Subscription Versions administration requests via an NPAC SOA Low-tech Interface
+6.5.3	SOA to NPAC SMS audit requests
+6.5.35	SOA to NPAC SMS Number Pool Block Create Request via the SOA Low-tech Interface
+6.5.36	SOA to NPAC SMS Number Pool Block Modify Request via the SOA Low-tech Interface
+6.5.4	NPAC SMS Notification Handling
+6.6	CMIP Request Retry Requirements
+6.6.15	SOA Retry Attempts - Tunable Parameter
+6.6.16	SOA Retry Interval - Tunable Parameter
+6.6.17	SOA Retry Attempts - Tunable Parameter Modification
+6.6.18	SOA Retry Interval - Tunable Parameter Modification
+6.6.19	SOA Retry Attempts - Tunable Parameter Default
+6.6.20	SOA Retry Interval - Tunable Parameter Default
+6.6.21	SOA Activation Failure Retry
+6.6.22	LSMS Retry Attempts - Tunable Parameter
+6.6.23	LSMS Retry Interval - Tunable Parameter
+6.6.24	LSMS Retry Attempts - Tunable Parameter Modification
+6.6.25	LSMS Retry Interval - Tunable Parameter Modification
+6.6.26	LSMS Retry Attempts - Tunable Parameter Default
+6.6.27	LSMS Retry Interval - Tunable Parameter Default
+6.6.28	LSMS Activation Failure Retry
+6.7	Notification Recovery -- General
+6.7.29	Notification Recovery
+6.7.30 	Notification Recovery – Order of Recovery
+6.7.31 	Notification Recovery – Time Range Limit
+6.7.32 	Notification Recovery – SOA and LSMS Independence
+6.7.33 	Notification Recovery – SOA Notifications
+6.7.34	 Notification Recovery – LSMS Notifications
+6.8	Network Data Recovery
+6.8.37	Network Data Recovery
+6.8.38	Network Data Recovery – Order of Recovery
+6.8.39	Network Data Recovery – Time Range Limit
+6.8.40	Network Data Recovery – SOA and LSMS Independence
+6.8.41	Network Data Recovery – SOA Network Data
+6.8.42	Network Data Recovery – LSMS Network Data
+6.8.43	Network Data Recovery – Network Data Criteria
+6.8.44	Network Data Recovery – Network Data Choices
+6.8.45	Resynchronization of Number Pool NPA-NXX-X Holder Information – Local SMS NPA-NXX-X Indicator set to TRUE
+6.8.46	Resynchronization of Number Pool NPA-NXX-X Holder Information – Local SMS NPA-NXX-X Indicator set to FALSE
+6.8.47	Resynchronization of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X resync and queuing of messages to Local SMS
+6.8.48	Resynchronization of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X resync and sending of queued messages to Local SMS
+6.8.49	Resynchronization of Number Pool NPA-NXX-X Holder Information – Filters on NPA-NXX-X resync to Local SMS
+6.8.50	Resynchronization of Number Pool NPA-NXX-X Holder Information – SOA NPA-NXX-X Indicator set to TRUE
+6.8.51	Resynchronization of Number Pool NPA-NXX-X Holder Information – SOA NPA-NXX-X Indicator set to FALSE
+6.8.52	Resynchronization of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X resync and queuing of messages to SOA
+6.8.53	Resynchronization of Number Pool NPA-NXX-X Holder Information – NPA-NXX-X resync and sending of queued messages to SOA
+6.8.54	Resynchronization of Number Pool NPA-NXX-X Holder Information – Filters on NPA-NXX-X resync to SOA
+6.9	Subscription Data Recovery
+6.9.55	Subscription Data Recovery 
+6.9.56	Subscription Data Recovery – Order of Recovery
+6.9.57	Subscription Data Recovery – Time Range Limit
+6.9.58	Subscription Data Recovery – Subscription Data Choices
+6.9.59	Subscription Data Recovery – Full Failure SV
+6.9.60	Subscription Data Recovery – SV Timestamp for Requested Time Range
+6.9.61	Subscription Data Recovery – Removal of Service Provider from Failed List
+6.9.62	Subscription Data Recovery – Successful Recovery of SV Data and Removal of Service Provider from Failed List – Both Service 
+6.9.63	Subscription Data Recovery – Successful Recovery of SV Data and Removal of Service Provider from Failed List – New Service 
+6.9.64	Number Pool Block Holder Information Resynchronization – Block
+6.9.65	Number Pool Block Holder Information Resynchronization – Block Criteria
+6.9.66	Number Pool Block Holder Information Resynchronization – Block Range Tunable Parameters
+6.9.67	Number Pool Block Holder Information Resynchronization – Rejection of Block Criteria
+6.9.68	Number Pool Block Holder Information Resynchronization – Block resync and queuing of messages
+6.9.69	Number Pool Block Holder Information Resynchronization – Block resync and sending of queued messages
+6.9.70	Number Pool Block Holder Information Resynchronization – Filters on Block resync
+6.9.71	Number Pool Block Holder Information Resynchronization – Update to Failed SP List
+6.9.72	Number Pool Block Holder Information Resynchronization – Status Update to Block after Successful Resynchronization
+6.9.73	Number Pooling Subscription Version Information Resynchronization – Filters on Subscription Versions Resync
+6.9.74	Number Pooling Subscription Version Information Resynchronization – Disconnect or Port-To-Original of a TN within a Pooled 1K 
+6.9.75	Number Pooling Subscription Version Information Resynchronization – Disconnect TN within a Pooled 1K Block to EDR Local SMS
+6.9.76	Number Pooling Subscription Version Information Resynchronization – Disconnect TN within a Pooled 1K Block to non-EDR Local SMS
+6.9.77	Number Pooling Subscription Version Information Resynchronization –Port-To-Original TN within a Pooled 1K Block to EDR Local SMS
+6.9.78	Number Pooling Subscription Version Information Resynchronization – Port-To-Original TN within a Pooled 1K Block to non-EDR Local 
+7.	Security
+7.2	Identification
+7.2.l	Unique User Identification Codes - Individuals
+7.2.2	Assigned Userid Identification
+7.2.3	Current Active User List Maintenance
+7.2.4	User Invoked Processes 
+7.2.5.1	Userids, Unused - Disabling
+7.2.5.2	Unused Userid Disable Period - Tunable Parameter
+7.2.5.3	Unused Userid Disable Period - Tunable Parameter Modification
+7.2.5.4	Unused Userid Disable Period - Tunable Parameter Default
+7.2.6.1	Userids, Disabled - Reinstatement
+7.2.6.2	Userids - Deletion
+7.2.7	Userids - Temporary Disabling
+7.2.8	Userids, Disabled - Automatic Reactivation
+7.2.9.1	Userids - One Active Login 
+7.2.9.2	Second Login Attempt
+7.3	Authentication
+7.3.10	User Authentication
+7.3.12	Authentication Data Protection 
+7.3.1	Password Requirements
+7.3.1.14	Passwords - Userid Unique
+7.3.1.15	Passwords - One Way Encrypted
+7.3.1.16	Passwords, Encrypted - Privileged Users Access Control
+7.3.1.18	Passwords, Entry - Automatic Clear Text Suppression
+7.3.1.19	Passwords - Network Transmission Clear Text Suppression 
+7.3.1.20	Passwords - Non-Null
+7.3.1.21	Passwords - User-Changeable
+7.3.1.22	Passwords - Reset Capability
+7.3.1.23.1	Passwords - Aging Enforcement
+7.3.1.23.2	Password Aging Default
+7.3.1.24.1	Passwords - Expiration Notification
+7.3.1.24.2	Passwords - Expiration Notification Default
+7.3.1.24.3	Passwords - Require User to Enter New Password
+7.3.1.25.1	Passwords - Non-Reusable
+7.3.1.25.2	Password Reuse Default
+7.3.1.26.1	Passwords - Minimum Structure Standard #1  
+7.3.1.26.2	Passwords - Associated Userid
+7.3.1.27.1	Password Generator
+7.3.1.27.2	Passwords, System Generated - Attack Resistant
+7.3.1.27.3	Passwords, System Generated - Random
+7.4	Access Control
+7.4.1	System Access
+7.4.1.28.1	System Access - Individuals
+7.4.1.28.2	System Access - Remote Machines
+7.4.1.29.1	System Access, User Information - Entry 
+7.4.1.29.2	System Access, User Information - Modification 
+7.4.1.31	System Access, Login - Trusted Communication
+7.4.1.32.1	System Access - Disconnect User 
+7.4.1.32.2	Non-use Disconnect Tunable Parameter
+7.4.1.33.1	System Access - User Authentication Failure  
+7.4.1.33.2	Incorrect Login Exit Default
+7.4.1.34	System Access, User Authentication Failure - Notification 
+7.4.1.35.1	System Access - Login Process I/O Port Restart 
+7.4.1.35.2	Login Process Restart Default
+7.4.1.36	System Access, User Authentication Failure - Userid Non-Suspension 
+7.4.1.37	System Access, User Authentication Procedure - Entry
+7.4.1.38	System Access, User Authentication Procedure Entry - Error Feedback 
+7.4.1.39	System Access, User Authentication Procedure Entry - Time Parameters 
+7.4.1.40.1	System Access, User Authentication Procedure Entry - Method
+7.4.1.40.2	System Access, User Authentication Procedure Entry - Location
+7.4.1.41	System Access, User Authentication Procedure Entry - Dial-Up Limitations 
+7.4.1.42.1	System Access - Network Basis 
+7.4.1.42.2	System Access - Per-Port Basis 
+7.4.1.43.1	System Access, Network Authentication
+7.4.1.43.2	Internet Access
+7.4.1.43.3	Dial-in Access
+7.4.1.44	System Access - Secure Logoff Procedures 
+7.4.1.46	System Access, Unauthorized Use Message - Specifiable 
+7.4.1.47.1	System Access, Unauthorized Use Message - Specifiable 
+7.4.1.47.2	Advisory Warning Message Default
+7.4.1.48.1	System Access - User’s Last Successful Access
+7.4.1.48.2	System Access - User’s Unsuccessful Access Attempts
+7.4.1.49.1	System Access, Security Administration - Authorize Users  
+7.4.1.49.2	System Access, Security Administration - Revoke Users  
+7.4.1.50.1	System Access, Security Administration -Adding Users 
+7.4.1.50.2	System Access, Security Administration -Deleting Users 
+7.4.2	Resource Access
+7.4.2.51	Data Access for Authorized Users
+7.4.2.52	Service Provider Data Protected
+7.4.2.53.1	Authorized User Access to Software
+7.4.2.53.2	Authorized User Access to Transactions
+7.4.2.53.3	Authorized User Access to Data
+7.4.2.54.1	Access Control of Executable Software
+7.4.2.55	Access Control of Resources
+7.4.2.56	Use of Encryption
+7.4.2.57	Resource Access to Users
+7.4.2.58	Resource Access Denied to Users
+7.4.2.60	Only NPAC Personnel Can Modify User Access
+7.4.2.61	Removal of User Access Rights
+7.5	Data and System Integrity
+7.5.63	Identify Originator of System Resources
+7.5.64	Identify Originator of Information Received Across Communication Channels
+7.5.65.1	Monitor System Resources
+7.5.65.2	Detect Error Conditions
+7.5.65.3	Detect Communication Errors
+7.5.65.4	Detect Link Outages
+7.5.66.1	Rule Checking on Update
+7.5.66.2	Handling of Duplicate Inputs
+7.5.66.3	Check Return Status
+7.5.66.4	Validate Inputs
+7.5.66.5	Transaction Serialization
+7.5.67	Database Integrity Checking
+7.6	Audit
+7.6.1	Audit Log Generation
+7.6.1.68.1	Security Audit Log for After the Fact Investigation
+7.6.1.68.2	Security Audit Data Availability
+7.6.1.68.3	Security Audit Data Archived
+7.6.1.69	User Identification Retained
+7.6.1.70	Protection of Security Audit Log Access
+7.6.1.71.2	NPAC Personnel Delete Security Audit Log
+7.6.1.72	Security Audit Control Protected
+7.6.1.73.1	Log Invalid User Authentication Attempts
+7.6.1.73.2	Log NPAC SMS End User Logins
+7.6.1.73.3	Log NPAC Personnel Activities
+7.6.1.73.4	Log Unauthorized Data Access
+7.6.1.73.5	Log Unauthorized Transaction Access
+7.6.1.74	No Disable of Security Auditing
+7.6.1.75	Security Audit Record Contents
+7.6.1.76.1	Recorded Login Attempts
+7.6.2	Reporting and Intrusion Detection
+7.6.2.77.1	Exception Reports on Data Items
+7.6.2.77.2	Exception Reports on Users
+7.6.2.77.3	Exception Reports on Communication Failures
+7.6.2.77.4	Summary Reports on Data Items
+7.6.2.77.5	Summary Reports on Users
+7.6.2.77.6	Summary Reports on Communication Failures
+7.6.2.77.7	Detailed Reports on Data Items
+7.6.2.77.8	Detailed Reports on Users
+7.6.2.77.9	Detailed Reports on Communication Failures
+7.6.2.78	Review User Actions
+7.6.2.79.1	Monitor Network Address
+7.6.2.80.1	Real-time Security Monitor
+7.6.2.80.2	Security Event Notification
+7.7	Continuity of Service
+7.7.81	System Made Unavailable by Service Provider
+7.7.82	Detect Service Degrading Conditions
+7.7.83	System Recovery After Failure
+7.7.84.1	Software Backup Procedures
+7.7.84.2	Data Backup Procedures
+7.7.84.3	Software Restoration Procedures
+7.7.84.4	Data Restoration Procedures
+7.7.85.1	Software Version Number
+7.7.85.2	Software Version Number
+7.8	Software Vendor
+7.8.86	Software Development Methodology
+7.8.87	Bypass of Security
+7.8.88	Documented Entry
+7.9	OSI Security Environment
+7.9.2	Security Services
+7.9.2.89	Authentication
+7.9.2.90	Data Origin Authentication
+7.9.2.91.1	Detection of Message Replay
+7.9.2.91.2	Deletion of a Message
+7.9.2.91.3	Modification of a Message
+7.9.2.91.4	Delay of a Message
+7.9.2.92	Non repudiation of Origin
+7.9.2.93	Access Control
+7.9.3	Security Mechanisms
+7.9.3.1	Encryption
+7.9.3.1.94.1	Public Key Crypto System (PKCS)
+7.9.3.1.94.2	Digital Signature Algorithms
+7.9.3.1.95	RSA Encryption Modulus Size
+7.9.3.2	Authentication
+7.9.3.2.96	Digital Signature Algorithm
+7.9.3.2.97	Authenticator Contents
+7.9.3.2.98	Authenticator in Access Control Field
+7.9.3.3	Data Origin Authentication
+7.9.3.3.99.1	Subsequent Messages Contain Access Control Field
+7.9.3.3.99.2	Separate Counter for Association Sequence Numbers
+7.9.3.3.99.3	Increment Sequence Numbers
+7.9.3.4	Integrity and Non-repudiation
+7.9.3.4.100.1	Security Field
+7.9.3.4.100.2	Security Field Syntax
+7.9.3.4.102	Notifications in Confirmed Mode
+7.9.3.5	Access Control
+7.9.3.5.104	Responsible for Access Control
+7.9.3.5.105.2	Generalized Time
+7.9.3.6	Audit Trail
+7.9.3.6.106	Log Contents
+7.9.3.7	Key Exchange
+7.9.3.7.107.1	Lists of Keys
+7.9.3.7.107.2	Keys in Electronic Form
+7.9.3.7.107.3	Paper copy of MD5 Hashes of the Keys
+7.9.3.7.107.4	Key List Exchange
+7.9.3.7.107.5	Remote Key List Exchange
+7.9.3.7.108.1	Remote Reception Acknowledgment
+7.9.3.7.108.2	Acknowledgment Contents
+7.9.3.7.108.3	Phone Confirmation
+7.9.3.7.109.1	Periodic Paper List of Public Keys NPAC Uses
+7.9.3.7.109.2	Acknowledgment of Paper List of Public Keys
+7.9.3.7.110.1	List Encryption Keys
+7.9.3.7.110.3	List Encryption Keys
+7.9.3.7.111.1	New Encryption Key Can Be Chosen
+7.9.3.7.111.2	Keys Not Reused
+7.9.3.7.111.3	Compromised Keys
+7.9.3.7.111.4	Key Change Once Per Year
+7.9.3.7.111.5	Key Size Increase Per Year
+7.9.3.7.111.6	Per Service Provider Application Basis
+7.9.3.7.111.7	NPAC Key Change Algorithm
+7.9.3.7.111.8	Service Provider Key Marked Used/Invalid
+7.9.3.7.1	Load Key List
+7.9.3.7.1	Authenticator Contents - Individual System Clock Accuracy
+7.9.3.7.2	Authenticator Contents - Zero Sequence Number
+7.9.3.7.2	Modifying User Name
+8	Audit Administration
+8.1	Overview
+8.1.1	Service Provider Audits Issued Immediately
+8.2	Service Provider User Functionality
+8.2.1	Service Providers Audit Request - Single TN
+8.2.2.1	Service Providers Audit Request - Range of TNs 
+8.3	Service Providers Specify Audit Scope
+8.3.3	NPAC User Functionality
+8.3.4	NPAC Personnel Audit Request - Single TN
+8.3.5.1	NPAC Personnel Audit Request - Range of TNs
+8.3.6.1	Specify an Immediate Audit Request
+8.3.9	NPAC Personnel Specify Audit Scope
+8.3.10	NPAC Personnel Status of Audit Request
+8.3.11	Audit Progress Indicators
+8.3.12	NPAC Personnel Cancel of an Audit
+8.4	System Functionality
+8.4.15.1	NPAC Personnel View of ALL Audit Requests
+8.4.15.2	Mechanized SOA Interface Obtain Audit Requests
+8.4.15.3	Send Audit Results to Originating SOA
+8.4.16.1	Flow of Audit Execution
+8.4.17.1	Compare NPAC SMS Subscription Versions to Service Provider Subscription Versions
+8.4.17.2	Add TNs to Service Provider Subscription Versions 
+8.4.17.3	Modify Erroneous TNs
+8.4.17.4	Delete Discrepant TNs from Service Provider Subscription Versions
+8.4.19	Record Audit Results in an Audit Log
+8.4.4	Skip Subscription Versions with a Status of Sending
+8.4.5	Report No Discrepancies Found in Audit Results for Skipped Subscription Versions
+8.5	Audit Report Management
+8.5.20	Service Providers Audit Retrieval
+8.5.21.1	Generate an Audit Report
+8.5.21.2	Audit Report Contents
+8.5.22	NPAC Personnel Generate and View an Audit Report
+8.5.23.1	NPAC Personnel View an In-progress Audit Report
+8.5.23.2	Service Providers View Results of Audits They Have Requested
+8.5.25	NPAC Personnel Specify Time Audit Results Retained
+8.6	Additional Requirements 
+8.6.1	Valid Audit Statuses
+8.7	Database Integrity Sampling
+8.7.1	Random Sampling of Active Subscription Versions
+8.7.2.1	Data Integrity Sample Size - Tunable Parameter
+8.7.2.2	Data Integrity Sample Size - Tunable Parameter Modification
+8.7.2.3	Data Integrity Sample Size - Tunable Parameter Default
+8.7.3.1	Data Integrity Frequency - Tunable Parameter
+8.7.3.2	Data Integrity Frequency - Tunable Parameter Modification
+8.7.3.3	Data Integrity Frequency - Tunable Parameter Default
+8.8	Audit Processing in a Number Pool Environment
+8.8.6	Audit Processing for All Subscription Versions in a Number Pooling Environment
+8.8.7	Audit Discrepancy and Results Notifications for Pooled Number Subscription Versions to Requesting SOA
+8.8.8	Audit Discrepancy and Results Notifications for Pooled Number Subscription Versions for Audited TNs
+8.8.9	Audit Status Attribute Value Change Notification Send for Pooled Number Blocks
+8.8.10	Audit Attribute Value Change Notification Send for Pooled Number Blocks
+8.8.11	Audit for Pooled Numbers and Block to EDR Local SMS
+8.8.12	Audit Response – Ignore missing SVs for Pooled Ports at EDR Local SMS
+8.8.13	Audit Response – Delete erroneous SVs for Pooled Ports at EDR Local SMS
+8.8.14	Audit Response – Compare NPAC SMS Block to Service Provider Block at EDR Local SMS
+8.8.15	Audit Response – Block Missing from EDR Local SMS
+8.8.16	Audit Response – Block Discrepant at EDR Local SMS
+8.8.17	Audit Response – Extra Block at EDR Local SMS
+8.8.18	Audit Processing – Skipping In-Progress Blocks
+9	Reports
+9.2	User Functionality
+9.2.1	NPAC Personnel Report Selection
+9.2.2	NPAC Personnel Selection of Output Destination
+9.2.3	NPAC Personnel Re-print of Reports
+9.2.4	NPAC Personnel Create Customized Reports
+9.2.5	NPAC Personnel Define Scope and Filtering
+9.2.6	Service Providers Receive Reports on Their Activities
+9.2.1	Service and Network Data Reports
+9.2.2	Service Provider Reports
+9.2.3	Subscription Data Reports
+9.2.4	System Reports
+9.2.5	Security Reports
+9.2.6	Log File Reports
+9.2.7	Audit Reports
+9.2.8	Regularly Scheduled Reports
+9.2.1	Data Integrity Report – Database Sample Report
+9.3	System Functionality
+9.3.9	Verification of User Privileges
+9.3.10	Support of On-line File Transfer
+9.3.11	Transaction History Log
+9.3.12.1	Error Log - Transaction Errors
+9.3.12.2	Error Log - Transmission Errors
+9.3.1	National Number Pooling Reports
+9.3.1.7	Pooled Number Reports – OpGUI Report Generation
+9.3.1.2	Pooled Number Reports – Query functions
+9.3.1.8	Pooled Number Reports – Block Holder Default Routing Report
+9.3.1.3	Pooled Number Reports – Block Holder Default Routing Report Data Elements
+9.3.1.4	Pooled Number Reports – Block Holder Default Routing Report Page Break
+9.3.1.9	Pooled Number Reports – Active-Like TNs in a NPA-NXX-X Report
+9.3.1.10	Pooled Number Reports – Active-Like TNs in a NPA-NXX-X Report Data Elements
+9.3.1.11	Pooled Number Reports – Pending-Like No-Active and Pending-Like Port-to-Original Subscription Versions Report
+9.3.1.12	Pooled Number Reports – Pending-Like No-Active and Pending-Like Port-to-Original Subscription Versions Report Data Elements
+9.3.1.13	Pooled Number Reports – Pending-Like No-Active and Pending-Like Port-to-Original Subscription Versions Report Sort Priority
+9.3.1.14	Pooled Number Reports – Pending-Like No-Active and Pending-Like Port-to-Original Subscription Versions Report Page Break
+9.3.1.15	Pooled Number Reports – Pending-Like With Active POOL Subscription Versions Report
+9.3.1.16	Pooled Number Reports – Pending-Like With Active POOL Subscription Versions Report Data Elements
+9.3.1.17	Pooled Number Reports – Pending-Like With Active POOL Subscription Versions Report Sort Priority
+9.3.1.18	Pooled Number Reports – Pending-Like With Active POOL Subscription Versions Report Page Break
+10	Performance and Reliability
+10.1		Availability and Reliability
+10.1.1	System Availability
+10.1.2	System Reliability
+10.1.3	Unscheduled Downtime
+10.1.4	Mean Time to Repair for Unscheduled Downtime
+10.1.5	Scheduled Downtime
+10.1.1	Scheduled Downtime
+10.1.6.1	Communication Link Monitoring
+10.1.6.2	Detecting Communication Link Failures
+10.1.7	Detecting Single Bit Data Transmission Errors
+10.1.9.1	Self Checking Logic
+10.1.9.2	Continuous Hardware Checking
+10.1.9.3	Duplexing of Hardware
+10.1.9.4	Transparent Hardware Fault Tolerance
+10.1.10.1	Service Provider Notification of System Unavailability
+10.1.10.2	System Availability Notification Method
+10.1.10.3	System Availability Notification Contents
+10.1.11	Updates Highest Priority
+10.1.12.1	Tolerance to Communication Link Outages
+10.1.12.2	Alternate routing
+10.1.13.1	Switch to Backup or Disaster Recovery Machine
+10.1.13.2	Time to Switch Machines
+10.1.13.3	Total Disaster Recovery
+10.1.13.4	Full Functionality Restored
+10.1.14	Reports on Reliability
+10.2		Capacity and Performance
+10.2.16	Capacity
+10.2.18	History File Data Storage
+10.2.19	Broadcast Update Response Time
+10.2.20	Request/Transaction Response Time
+10.2.21	Future System Growth
+10.3		Requirements in RFP Not Given a Unique ID
+10.3.2	Return to the Primary Machine SOA Notification
+10.3.3	Return to the Primary Machine Local SMS Notification
+10.3.4	Database Sync After Return to the Primary Machine
+11	Billing
+11.2	Accounting Measurements Will Not Degrade the Basic System Performance
+11.1	User Functionality
+11.1.1	Toggling the Generation of Usage Measurements 
+11.2	System Functionality
+11.2.2	Generating Usage Measurements for NPAC Resources
+11.2.3	Generating Usage Measurements for Allocated Connections
+11.2.4	Generating Usage Measurements for Allocated Mass Storage
+11.2.5	Generating Usage Measurements for the Number of Messages Processed by type
+11.2.6	Generating Usage Measurements for the Number of Messages Downloaded
+11.2.8	Generating Detailed Usage Measurement Reports
+11.2.9	Billing Report Types
+11.2.10	Full Billing Report
+11.2.11	Billing Report Creation by NPAC Personnel
+11.2.12	Billing Report Creation by Service Provider
+11.2.13	NPAC Personnel Billing Report Destination
+11.2.14	Service Provider Billing Report Destination
+11.2.15	NPAC Personnel Only Can Access Billing System

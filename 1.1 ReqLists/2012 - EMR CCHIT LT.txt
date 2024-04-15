@@ -1,0 +1,33 @@
+1.30.1	The solution should provide the ability to capture a list of the patient's specialized medical equipment and each prosthetic, orthotic, or implantable device.
+1.30.2	The solution should provide the ability to capture the reason for the specialized medical equipment and each prosthetic, orthotic, or implantable device.
+1.30.3	The solution should provide the ability to capture the specific type of specialized medical equipment, prosthetic, orthotic, or implantable device.
+1.30.4	The solution should provide the ability to capture in a discrete field that the patient has No Known specialized medical equipment or prosthetic, orthotic, or implantable device for the patient.
+1.30.5	The solution should provide the ability to capture information necessary to identify and track the equipment/device as discrete entries. Such information may include, but is not limited to: type, manufacturer, manufacture date, date implanted (or placed into
+1.30.6	The solution should provide the ability to delete or inactivate the documentation of the specialized medical equipment or prosthetic, orthotic, or implantable devices.
+1.30.7	The solution should provide the ability to present a list of the deleted inactivated/discontinued specialized medical equipment or prosthetic, orthotic, or implantable devices and reason for deletion.
+1.30.8	The solution should provide the ability to electronically receive and maintain relevant clinical data captured by telemedicine devices in the patient’s home.
+1.32.1	The solution should provide the ability to generate reports of clinical and administrative data using either internal or external reporting tools.
+1.32.2	The solution should provide the ability to generate reports consisting of all or part of an individual patient’s medical record (e.g. patient summary).
+1.32.3	The solution should provide the ability to generate reports regarding multiple patients (e.g. diabetes roster).
+1.32.4	The solution should provide the ability to access reports outside the EHR application.
+1.32.5	The solution should provide the ability to specify report parameters (sort and filter criteria) based on patient demographic and clinical data (e.g., all male patients over 50 that are diabetic and have a HbA1c value of over 7.0, or that are on a certain med
+1.32.6	The solution should provide the ability to produce reports based on the absence of a clinical data element (e.g., a lab test has not been performed or a blood pressure has not been measured in the last year).
+1.32.7	The solution should provide the ability to save report parameters for generating subsequent reports.
+1.32.8	The solution should provide the ability to modify one or more parameters of a saved report specification when generating a report using that specification.
+1.33.1	The solution should provide the ability to define one or more reports as the formal health record for disclosure purposes.
+1.33.2	The solution should provide the ability to generate hardcopy or electronic output of part or all of the individual patient's medical record.
+1.33.3	The solution should provide the ability to generate hardcopy and electronic output for an identified individual by date and/or date range.
+1.33.4	The solution should provide the ability to create hardcopy and electronic report summary information (procedures, medications, labs, immunizations, allergies, and vital signs).
+1.33.5	The solution should provide the ability to support for disclosure management in compliance with HIPAA and applicable law.
+1.33.6	The solution should provide the ability to include patient identifying information, as well as time and date report printed, on each page of individual patient-specific reports generated.
+1.33.7	The solution should provide the ability to export structured data which removes those identifiers listed in the HIPAA definition of a limited dataset.  This export on hardcopy and electronic output should leave the actual PHI data unmodified in the original record.
+2.07.1	The solution should receive and store general laboratory results (including the ability to differentiate preliminary results and final results and the ability to process a corrected result) using the HL7 v.2.5.1 ORU message standard.
+2.07.2	The solution should receive and store microbiology laboratory results with organisms recorded as free-text.
+2.07.4	The solution should receive and store microbiology laboratory results with sensitivity testing coded using LOINC.
+2.09.6	The solution should send an electronic prescription to pharmacy.
+2.09.9	The solution should respond to a request for a resupply to the pharmacy.
+2.09.3	The solution should send a query to verify prescription drug insurance eligibility and apply response to formulary and benefit files to determine coverage.
+2.09.4	The solution should capture and display formulary information from pharmacy or PBM (Pharmacy Benefits Manager) by applying eligibility response.
+2.09.5	The solution should send a query for medication history to PBM or pharmacy to capture and display medication list from the HER.
+2.10.10	The solution should display HITSP C32/CCD documents and file them as intact documents in the HER.  Summary patient record content information will include: patient demographics, medication list, and medication allergy list.
+2.11.21	The solution should generate and format patient summary  documents per the following specifications: HITSP C32 (v2.3 or v2.5). Summary patient record content information will include: patient demographics, medications, and medication allergies.

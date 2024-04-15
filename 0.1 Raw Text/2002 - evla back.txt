@@ -1,0 +1,620 @@
+
+ 
+ 
+SYSTEM REQUIREMENTS SPECIFICATION 
+ 
+EVLA Correlator Backend  
+ 
+Project Document: A25251N0000 
+Revision 2.0 
+ 
+ 
+Tom Morgan, May 10, 2002 
+ 
+National Radio Astronomy Observatory 
+Array Operations Center 
+P.O. Box O 
+Socorro, NM 87801-0387
+EVLA Operations System SRS iiRevision History 
+ 
+Date Version Description Author 
+26-Feb-2002 1.0 Initial draft Tom Morgan 
+05-Mar-2002 1.1 Revised section 3.2.2 Tom Morgan 
+10-May-2002 2.0 Clean-up of section 1, revisions to section 2 and 3 Tom Morgan 
+    
+    
+EVLA Operations System SRS iiiTable of Contents 
+1 Introduction ................................................................................................................... ........................ 1  
+1.1 Purpose ........................................................................................................................ .................. 1  
+1.2 Scope .......................................................................................................................... .................... 1  
+1.3 Definitions, Acronyms, and Abbrevia tions................................................................................. 1  
+1.3.1 Definitions .................................................................................................................... .......... 1  
+1.3.2 Acronyms ....................................................................................................................... ........ 2  
+1.4 References ..................................................................................................................... ................ 2  
+1.5 Overview....................................................................................................................... ................. 2  
+2 Overall description............................................................................................................ ..................... 4  
+2.1 Product pers pective ............................................................................................................ .......... 4  
+2.2 Product func tionality.......................................................................................................... .......... 4  
+2.2.1 Data Input ..................................................................................................................... .......... 4  
+2.2.2 Data Processing ................................................................................................................ ...... 4  
+2.2.3 Data Ou tput .................................................................................................................... ........ 4  
+2.2.4 Monitoring..................................................................................................................... ......... 5  
+2.2.5 Recovery....................................................................................................................... .......... 5  
+2.2.6 Control........................................................................................................................ ............ 5  
+2.3 User charact eristics ........................................................................................................... ........... 6  
+2.3.1 Array Operator................................................................................................................. ....... 7  
+2.3.2 Engineers and Technicians ..................................................................................................... 7  
+2.3.3 Astronomer/Scientist ........................................................................................................... ... 7 
+2.3.4 Software Developer ............................................................................................................. ... 7 
+2.3.5 Web User....................................................................................................................... ......... 7  
+2.4 Constraints .................................................................................................................... ................ 7  
+2.4.1 Criticality of the Application ................................................................................................. .7 
+2.4.2 Computer Hardware Limitations ............................................................................................ 7  
+2.4.3 Communications Limitations.................................................................................................. 8  
+2.4.4 Reliab ility .................................................................................................................... ........... 8  
+2.5 Assumptions .................................................................................................................... .............. 8  
+2.5.1 Incoming Data Stream ........................................................................................................... .8 
+2.5.2 Auxiliary  Data ................................................................................................................. ....... 8  
+2.5.3 Outgoing Data Stream ........................................................................................................... .8 
+3 Specific requ iremen ts .......................................................................................................... .................. 9  
+3.1 External Interface Requirements................................................................................................ 9 
+3.1.1 Correlator to Backend Interface.............................................................................................. 9  
+3.1.2 Backend to End-to-End Interface ......................................................................................... 10  
+3.1.3 Backend to/from Monitor and Control Interface .................................................................... 9  
+3.2 Functional Re quireme nts........................................................................................................ ... 10 
+3.2.1 Information and data flows................................................................................................... 10  
+3.2.2 Process Descriptions........................................................................................................... .. 10 
+3.2.3 Data Construct Specifications............................................................................................... 12  
+3.3 Performance Re quirem ents ....................................................................................................... 13 
+3.3.1 General ........................................................................................................................ ......... 13  
+3.3.2 Hardware ....................................................................................................................... ....... 13  
+3.3.3 Software....................................................................................................................... ......... 14  
+EVLA Operations System SRS iv3.4 Reliability/A vailability ....................................................................................................... ........ 14  
+3.5 Servicea bility................................................................................................................. .............. 15  
+3.6 Maintain ability ................................................................................................................ ........... 15  
+3.7 Scalability .................................................................................................................... ................ 15  
+3.8 Security....................................................................................................................... ................. 16  
+3.9 Installation and Upgr ades...................................................................................................... .... 16  
+3.10 Documentation.................................................................................................................. .......... 17  
+EVLA Operations System SRS 11 Introduction 
+ 
+1.1 Purpose 
+ 
+The primary goal of this document is to provide a complete and accurate list of requirements for 
+the EVLA Correlator Backend System. Upon completion, the document will act as a binding contract between developers and users and will provide a common point of reference for system expectations. 
+ 
+The primary audience of this document includes, but is not limited to, project leaders, the 
+designers and developers of the system and the end user. The document may also be of interest to EVLA project scientists and engineers or as a reference for individuals involved in similar projects with similar requirements.  The requirements contained in this document are numbered based on the section/subsection in 
+which they appear.  
+ Note: Text found between “<” and “>” indicates questions or comments to myself and/or readers.  And In most cases, the phrase “The user” can be replaced with “An authorized user”. 
+ 
+ 
+1.2 Scope 
+ 
+The Correlator Backend System lies between the Correlator and the End-to-End Systems. It is the primary component of the real-time astronomical data processing capability (the processing pipeline) of the EVLA. Its primary responsibility is to perform basic data assembly, formatting and processing services and to support the desire for real-time inspection of the astronomical data stream. 
+ 
+The major functions the Correlator Backend System must perform are as follows:  
+/g183/g32Receive data from the Correlator in real-time. 
+/g183/g32Assemble time-series from the Correlator lag output. 
+/g183/g32Perform Fourier Transforms of the assembled time series. 
+/g183/g32Perform a limited number of additional processes upon user request.  
+/g183/g32Deliver suitably formatted results to the End-to-End System. 
+ 
+This document will define only those requirements that must be fulfilled by the Correlator Backend System.  
+ 
+1.3 Definitions, Acronyms, and Abbreviations 
+1.3.1 Definitions 
+Administrator – An individual with unrestricted access to all aspects of the system.   
+Auxiliary Data  – All other (non-astronomical) data. 
+Data  – Astronomical observational data. 
+EVLA Operations System SRS 2Lag Set – A complete, properly ordered series of lag values that can be submitted to the Fourier 
+Transform function. The lag frames received from the Correlator will contain up to 128 lag values, so lag sets longer than 128 values will span multiple lag frames and require proper ordering and 
+assembly into complete lag sets. 
+Metadata  – All data about the astronomical data. 
+NaN – Literally, “Not a Number”. For floating point data types, a bit string that does not translate 
+into a valid floating point number. Non-real-time  – Offline operations with data input from some external storage device or 
+generated internal (e.g., for testing). 
+Processing Pipeline – The series of BE functions performed on the astronomical data, i.e., that set 
+of functions that the data passes directly through. Processor  – A physical computation device (hardware). 
+Process  – A data processing procedure (software). 
+Real-time  – Online operations with active astronomical data streaming from the Correlator. 
+ 
+1.3.2 Acronyms 
+AOC  –Array Operations Center 
+CMIB  – Correlator Monitor Interface Board 
+CMCS – Correlator Monitor and Control System 
+e2e – End-to-End System (archive) 
+M&C – Monitor and Control System 
+EVLA  – The VLA Expansion Project 
+RFI – Radio Frequency Interference 
+SyRS  – Refers to the System Requirements  document. 
+SRS – Refers to the Software Requirements Specification  document. 
+ 
+ 
+1.4 References 
+ 
+1) ANSI/IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements 
+Specifications 
+2) ANSI/IEEE Std 1233-1996, IEEE Guide for Developing System Requirements Specifications 
+3) EVLA Memo No. 15, Scientific Requirements for the EVLA Real-Time System 
+4) EVLA Project Book 5) EVLA System Requirements (SyRS) 6) EVLA Architecture and Design 7) The Very Large Array Observing Log (J. Nieri, February 1994) 8) Refined EVLA WIDAR Correlator Architecture, NRC-EVLA Memo# 014, Brent Carlson, Oct. 
+2, 2001. 
+9) EVLA Correlator Monitor and Control System, Test Software, and Backend Software 
+Requirements and Design Concepts, NRC-EVLA Memo # 015, Brent Carlson, Jan. 23, 2002. 
+  
+1.5 Overview 
+ 
+The remainder of this document contains a more detailed description of the Correlator Backend 
+System as well as the requirements necessary to design and build the system. Section 2 provides a 
+general description of the Correlator Backend System. Section 3 details the requirements of the product and is the core of this document. 
+ 
+EVLA Operations System SRS 3The format of the document follows that outlined in the IEEE STD 830 document, IEEE 
+Recommended Practice for Software Requirements Specifications.  
+EVLA Operations System SRS 42 Overall Description 
+ 
+2.1 Product Perspective 
+ 
+The EVLA Correlator Backend System will be designed and implemented as a real-time data processing system. The system is expected to be implemented on a distributed memory cluster of connected processors. Computers in the system will all be exactly the same and operating systems and applications running on them will communicate with one another and the Monitor and Control System over a network. Data input to the system from the Correlator and output from it to the 
+End-to-End System will be over very high-speed networks. The networks connecting the internal 
+processors, the Correlator and the E2E are part of the BE System. Currently, only a conceptual diagram exists for the system and should be viewed as such (see Figure 1). The BE Management functions will run on one of the cluster processors with one or more shadow processors standing by. The remaining processors will be running the Data Processing functions.  
+ 
+2.2 Product Functionality 
+2.2.1 Data Input 
+Correlator lag data will be received directly from the Correlator Baseline Boards in the form of 
+Lag Frames. The lag frames contain correlation lag values and all auxiliary parameters needed to assemble the lags into complete lag sets (properly ordered time series). It is currently assumed that 
+all observational modes yielding correlator results that are transmitted to the Backend will be in 
+the form of lag frames.  Additional auxiliary data and meta-data needed for processing prior to output to the e2e System will arrive via the Monitor and Control System, whether produced by the Correlator or some other part of the EVLA System. 
+ 
+The BE will receive and act upon status requests and control commands originating in or via the M&C System. 
+2.2.2 Data Processing 
+The Correlator lag frames will be assembled into time series, normalized, and when necessary time stamp adjusted. The time series will also be Fourier Transformed and other user selectable time and/or frequency domain processes will be applied. Prior to output, the end results will be formatted to meet the internal needs of the e2e. 
+2.2.3 Data Output 
+Formatted spectra will be transferred to the End-to-End System. All pertinent meta-data will be contained in the formatted output. The fundamental unit of output is the minimum sub-band cross-power spectrum produced by the Correlator. (No “stitching” operations that combine spectra from different sub-bands will be performed.)  
+The BE will produce a variety of error, warning, status and other reports and messages that will be 
+transferred to the M&C for final disposition. 
+EVLA Operations System SRS 52.2.4 Monitoring 
+The Correlator Backend System will conduct a number of self-monitoring activities on application 
+and system software as well as hardware systems to detect system failure and out of spec 
+conditions. 
+2.2.5 Recovery 
+The ability to attempt recovery from failure and out of spec performance conditions will be built 
+into the system. 
+2.2.6 Control 
+The system will provide control and auxiliary parameters to input, output, processing, monitor, 
+recovery, and other functions and receive status and performance data from them. It will also 
+communicate with the external Monitor and Control System. 
+EVLA Operations System SRS 6Backend 
+ManagerData
+Processing
+Pipeline
+e2e SystemCorrelator M&C System
+Backend System
+ 
+ 
+ 
+2.3 User characteristics 
+All use of the Correlator Backend System will be indirect via the Monitor and Control System. The BE system will not directly produce any user interface screens. 
+ Figure 1: Correlator Backend System Ma in Functional Components Diagram 
+EVLA Operations System SRS 72.3.1 Array Operator 
+The primary contact with array operations will be via status and error messages channeled through 
+the Monitor and Control System. 
+ 
+2.3.2 Engineers and Technicians 
+The ability of the Backend System to achieve and maintain real-time processing will be vitally 
+dependent upon reliable operation and rapid diagnosi s and repair of faults in the hardware and 
+software systems. These individuals will be responsible for performing corrective and preventive maintenance along with periodic performance tests and upgrades. Engineers and technicians will need tools to inspect individual devices from remote locations.  
+2.3.3 Astronomer/Scientist 
+These individuals are primarily interested in the science that is obtained from the instrument. Their main interaction will be to select and provide parameters for any additional data processing beyond the Fourier transforms.  
+2.3.4 Software Developer 
+These individuals are responsible for developing the software and will interact with the system to 
+ensure that it is functioning properly. The softwa re developer requires remote access to the system 
+so that troubleshooting can be accomplished away from the EVLA and during non-working hours.  
+ 
+2.3.5 Web User 
+A few authorized individuals may be allowed access to parts of the system that are usually 
+considered restricted.  
+ 
+2.4 Constraints 
+ 
+2.4.1 Criticality of the Application 
+The Correlator Backend System is a critical component in the Astronomical data path. If it is 
+unavailable, incoming astronomical data will be lost. 
+ 
+2.4.2 Computer Hardware Limitations 
+The ultimate throughput capability of the real-time data processing pipeline of the Backend 
+System will be constrained by the computational performance limits of available computer 
+hardware and the practical ability to configure and maintain large numbers of processors. 
+ 
+2.4.3 Computer Software Limitations 
+The ultimate throughput capability of the real-time data processing pipeline of the Backend 
+System will be constrained by the efficiency of supporting software systems, data processing code 
+and our ability to configure and tune them for maximum performance. . 
+EVLA Operations System SRS 8 
+2.4.4 Communications Limitations 
+The ability to realize and maintain real-time operations is critically dependent upon the 
+performance levels of available network systems.  
+2.4.5 Processing Limitations 
+Operations performed shall be reversible. That is, the original raw uncorrected data must be recoverable from the processing output.  
+2.4.6 Reliability 
+The ability to maintain real-time operations over realistic extended periods of time is dependent on the mean time to failure of the hardware and software components of the computing and communications systems.     
+2.5 Assumptions 
+2.5.1 Incoming Data Stream 
+It is assumed that the Correlator will deliver suitably formatted network data packets to the input network of the Backend System. Lag frames will not necessarily arrive in Lag Set order. All lag frames for the same baseline will be directed to the same Backend processor. It is further assumed that the number of lags per Lag Set will always be a power of two.  
+2.5.2 Auxiliary Data 
+It is assumed that all auxiliary data needed for processing and formatting operations will be provided directly by the correlator or indirectly by the Monitor and Control System in a timely manner. Much of this data will originate from the Station Board CMIBS.  
+2.5.3 Outgoing Data Stream 
+It is assumed that the e2e System will be capable of accepting output data rates and volumes generated by the Backend System. Visibility data from different baselines could be processed by different BE processors. Final assembly of all visibility data is expected to be performed by the e2e 
+system. 
+EVLA Operations System SRS 93 Specific Requirements 
+ 
+3.1 External Interface Requirements 
+ 
+3.1.1 Correlator to Backend Interface 
+. 
+ 
+ Description 
+3.1.1.1 Lag Frames – The BE shall receive LTA or Sp eed Dump Lag Frames from 
+the Correlator . For a detailed description of the two dump formats see 
+Reference 8, pages 69 to 71. This will most likely be in the form of one or more frames per UDP/IP packet 
+3.1.1.2 Transfers – The transfer shall take place in such a manner that all data 
+needed to perform any Fourier Transform shows-up on a single processor. 
+  
+3.1.2 Backend to/from Monitor and Control Interface 
+ 
+ 
+Req. ID Description 
+3.1.2.1 State Counts – The BE shall receive, via M&C,  State Count data produced 
+by the Correlator.  
+3.1.2.2 Data Valid Counts -  
+3.1.2.3 Quantizer Power Measurement Data -  
+3.1.2.4 Filter Parameters -  
+3.1.2.5 Frequency Shift Parameters - 
+3.1.2.6 Windowing Parameters - 
+3.1.2.7 Observational Mode – The BE shall receive, via M&C, data and 
+parameters specific to the current EVL A Observational Mode needed for 
+processing the Correlator Lag values . 
+3.1.2.8 Meta-data – The BE shall receive, via M&C, all meta-data necessary to 
+format BE results for delivery to the E2E . 
+3.1.2.9 Operational Status and Control – The BE shall provide operational status 
+data to and receive control data from the M&C System . This includes Lag 
+Frame destination addresses and address changes. 
+3.1.2.10 Error and Warning – The BE shall provide error and warning reports to 
+M&C as operating conditions warrant . 
+3.1.2.11 Debug/Test Messages – The BE shall provide several optionally selectable 
+levels of printed messages detailing operational parameters at critical 
+locations in the system . 
+ 
+ 
+ 
+   
+EVLA Operations System SRS 103.1.3 Backend to e2e Interface 
+ 
+Req. ID Description 
+3.1.3.1 Formatted Output – The BE shall deliver formatted final results to the e2e 
+System . The BE shall produce all data needed by the e2e System for 
+archiving and further processing . The output is currently expected to be in 
+a form compatible with AIPS++ Measurement Sets. 
+ 
+    
+ 
+ 
+3.2 Functional Requirements 
+ 
+3.2.1 Information and data flows 
+ 
+Req. ID Description 
+3.2.1.1 Monitor and Control System – The BE shall acknowledge receipt of all 
+data received from M&C.  
+3.2.1.2 Correlator System – The BE shall notify M&C of any detected 
+interruptions of data delivery from the Correlator . 
+3.2.1.3 e2e – The BE shall verify successful delivery of output to the e2e.  
+3.2.1.4 Internal Data – The BE shall guarantee safe delivery of all internal 
+messages . 
+3.2.1.5 Lag Frames – The BE shall be able to handle lag frames of less than 128 
+values.  
+3.2.1.6 Lag Sets - The BE shall be able to handle lag sets up to a maximum size of 
+262,144 values.  
+ 
+3.2.2 Process Descriptions 
+ 
+Req. ID Description 
+3.2.2.1 Data Receive – The BE shall receive incomi ng data packets from the 
+Correlator to Backend network interface . This network is a part of the BE 
+System. 
+3.2.2.2 Verify Receive – The BE shall verify the successful receipt of incoming 
+data from the Correlator . This includes checking for receive errors and 
+determining that all expected data was received, accumulation of error statistics and comparison against tolerances, and reporting of all out of tolerance conditions. 
+3.2.2.3 Input Data Management - The BE shall store input data records in a 
+memory buffer and track buffer loca tions of all input data until data 
+processing is complete . Report any buffer overflow conditions. 
+3.2.2.4 Processing Management – The BE shall respond to incoming correlator 
+mode changes, user optional processing sequence and/or parameter changes, and other external inputs that affect the data processing pipeline . 
+U
+pdate internal parameter tables and s ynchronize data processin g pipeline 
+EVLA Operations System SRS 11with new operational conditions.  
+3.2.2.5 Time Series Assembly – The BE shall assemble the received input data 
+into continuous time series (lag sets) . 
+3.2.2.6 Data Integrity Verification – The BE shall ensure that time series data is 
+correctly ordered and contains valid data values along its entire extent . 
+Compare against tolerances and report all out of tolerance conditions. 
+3.2.2.7 Data Invalid – The BE shall replace all invalid data with zero values . 
+3.2.2.8 Data Invalid Count – The BE shall keep track of data invalids . 
+3.2.2.9 Normalization – The BE shall be able to apply normalizations based on 
+reported data invalid counts . 
+3.2.2.10 Coarse Quantization Correction - The BE shall be able to apply 
+corrections based on state count and/or quantizer power measurement 
+data. This is the VanVleck correction 
+3.2.2.11 Time Stamp Adjustment – The BE shall be able to make time stamp 
+adjustments as required by the observational mode and correlator output parameters . This may arise when recirculation is used. 
+3.2.2.12 Windowing – The BE shall be able to perform windowing operations 
+prior and subsequent to Fourier Transform . This will be needed for 
+narrow band RFI mitigation. Post Fourier Transform windowing will be applied as a convolution. 
+3.2.2.13 Time Domain Processing – The BE shall be able to apply user selected 
+time domain processes . These processes should be constructed to be 
+chainable (output of any  time domain process can be piped to input of any 
+other, including replica of self and Fourier Transform) and repeatable in the chain. No Optional time domain processes have as yet been proposed. 
+3.2.2.14 Fourier Transform Processing – The BE shall be able to perform Fourier 
+Transform the lag set time series . A power-of-two complex-to-complex 
+Fast Fourier Transform with retention of all output positive and negative frequencies will be used. This proce ss must be able to accept as input the 
+output of any of the time domain processes. 
+3.2.2.15 Frequency Domain Processing – The BE shall be able to apply user 
+selected frequency domain processes . These processes should be 
+constructed to be chainable (output of Fourier Transform and any frequency domain process can be piped to input of any frequency domain process including replica of self) and repeatable in the chain. No 
+frequency domain processes have as yet been proposed. 
+3.2.2.16 Integration – The BE shall be able to sum th e frequency domain, spectral 
+results . The amount (time duration) of summation will be controlled by an 
+observational mode parameter obtained via M&C. The BE shall keep track 
+of the number of samples/dumps integrated in each spectral channel.  The 
+summation will occur after all optional frequency domain processing, or if none, after the Fourier Transform. Integration for long periods of time is what will throttle the output of the Correlator to a rate manageable by the 
+E2E. 
+3.2.2.17 Output Formatting – The BE shall combine the finished spectra with meta- 
+and auxiliary data to form suitably formatted output data sets .  AIPS++ 
+Measurement Sets are the expected entities. 
+3.2.2.18 Output Data Management – The BE shall store formatted output data 
+records in a memory buffer with backup disk buffering . Store data ready 
+for transmission to the e2e System until successful transfer has occurred. Report any errors and buffer overflow conditions that occur. 
+3.2.2.19 Data Send – The BE shall send output data to the e2e System . 
+3.2.2.20 Send Verify – The BE shall verify that all sent data was successfully 
+received . Report all errors. 
+3.2.2.21 Monitor I/O Performance – The BE shall monitor data trans fer rates from 
+EVLA Operations System SRS 12the Correlator and to the e2e . Accumulate data transfer statistics and 
+compare against tolerances. Report all out of tolerance conditions. 
+3.2.2.22 Monitor Compute Performance – The BE shall monitor the overall data 
+processing rate . Compare against tolerances and report all out of tolerance 
+conditions. 
+3.2.2.23 Monitor Compute Errors – The BE shall trap, flag and repair inf’s, NaN’s, 
+underflows, overflows and other computation errors . Accumulate 
+computation error statistics and compare against tolerances. Report all out of tolerance conditions. 
+3.2.2.24 Monitor Processes – The BE shall periodically or upon request check 
+PID’s and assure that all started tasks are alive and running . Report 
+missing, stopped, defunct and other damaged processes. 
+3.2.2.25 Monitor Processors – The BE shall periodically or upon request check 
+Backend physical processors and assure that all needed processors are alive and responding. Report all crashed, stopped, or unresponsive 
+processors. 
+3.2.2.26 Monitor Networks – The BE shall periodically or upon request check all 
+Backend internal networks and assure that all communication connections are intact and functioning . Report all non-functioning components. 
+3.2.2.27 Start Process – The BE shall be able to initiate a processing task on any 
+Backend processor . 
+3.2.2.28 Stop Process  – The BE shall be able to signal a kill for any Backend 
+process . 
+3.2.2.29 Alter Priority – The BE shall be able to alter the priority of any of the BE 
+tasks.  
+3.2.2.30 Reboot Processor – The BE shall be able to initiate a reboot of any 
+Backend a physical processor . 
+3.2.2.31  Reboot network – The BE shall be able to initiate a reboot of any internal 
+network.  
+3.2.2.32 Offload – The BE shall be able to redistribute internal workload among its 
+processors. This may involve change of destination IP address(es) for the 
+Correlator network. 
+3.2.2.33 General – BE processes shall not violate archive data requirements. All 
+processes shall be reversible ; the raw unconverted input always being 
+recoverable from the output. 
+    
+3.2.3 Data Construct Specifications 
+ 
+Req. ID Description 
+3.2.3.1 Input Data Queue – a memory buffer of lag frames. Data entry status 
+queue to track each record in the buffer. The lag frames will contain all information necessary to properly assemble complete lag sets. 
+3.2.3.2 Output Data Queue – a memory buffer plus backup disk storage of all 
+processed spectra. These will be converted to output AIPS++ Measurement Set entities prior to transfer to the e2e. Data entry status queue to track each record in the buffer. 
+3.2.3.3 Processing Parameters – names, position(s) in sequence, and adjustable 
+parameters for all fixed and user selectable processing pipeline 
+applications. 
+3.2.3.4 Processing flags – a table of flags needed to identify various internal 
+conditions relating to error response and processing state. 
+EVLA Operations System SRS 133.2.3.5 Metadata – All internally and externally generated data about the 
+processed time series and spectra including invalid data flags, processes applied, coordinates, etc. 
+3.2.3.6  Error Report – error number (translata ble into text error message), error 
+source, error rates (as applicable), and time stamp. 
+3.2.3.7 Warning Report – warning number (translatable into text warning 
+message), warning source, warning rates (as applicable), and time stamp. 
+3.2.3.8 Failure Report – internal system component (e.g., disk drive, processors, 
+processes, and networks) failure number (translatable into text error 
+message) and time stamp. 
+3.2.3.9 Recovery Report – internal system component (process, processor, 
+network) recovery action result. 
+3.2.3.10 Status Report – internal system component (process, processor, network) 
+functional state. 
+ 
+ 
+3.3 Performance Requirements 
+ 
+3.3.1 General 
+3.3.1.1 Data Integrity – the Backend System shall main tain input data fidelity and 
+dynamic range across all processing, manipulation and I/O functions . 
+3.3.1.2 Error Handling – the system shall be capable of flagging and marking 
+corrupted data segments and proceeding without interrupti on or effect on 
+other data.  This includes, but is not limited to, partial data, zero data, 
+underflows, overflows, infinities, and NaN’s whether obtained on input or arising during processing. 
+ 
+3.3.2 Hardware 
+Req. ID Description 
+3.3.2.1 Input – The BE System shall be capable of accepting an aggregate data 
+input stream from the Correlator of a minimum of 1.6 Gbytes/sec . This 
+must be done simultaneously with the output stream, but not necessarily over the same interconnects. This is an initial deployment specification and will be increased over time. 
+3.3.2.2 Output – The BE System shall be capable of delivering an output data 
+stream to the e2e System of a minimum of 25 MBytes/sec . This includes 
+resends and simultaneous transfer of data stored due to a previous e2e 
+connection outage. This must be done simultaneously with the output 
+stream, but not necessarily over the same interconnects. This is an initial deployment specification and will be increased over time. 
+3.3.2.3 CPU – The total processor capability of the BE System shall be 
+(combination of numbers of processors and individual processor speed) sufficient to accomplish all processing tasks while avoiding loss or delay on the input and output data streams .  
+3.3.2.4 Memory – The BE System shall have sufficient (amount TBD) memory 
+with sufficient (rate TBD) access speeds to accomplish all processing 
+tasks while avoiding loss or delay on the input and output data streams . 
+3.3.2.5 Excess Storage – The BE System shall have sufficient storage (memory 
+and/or disk ) with su fficient access s peeds to meet short duration 
+EVLA Operations System SRS 14Correlator bursting demands (level TB D) plus a standby reserve (amount 
+TBD) to meet reliability needs and handle outage recovery demands . 
+ 
+ 
+3.3.3 Software 
+ 
+3.3.3.1 Applications – all math/science application software shall take optimal 
+advantage of all language, compiler, and system computational features and resources to reduce run times to the minimum practical level . 
+3.3.3.2 Management – all management software functions shall take optimal 
+advantage of all language, compiler and system features and resources to reduce overheads to the minimum practical level . 
+3.3.3.2 I/O – all input and output, and storage and retrieval operations shall take 
+optimal advantage of all system resources to reduce overhead and latency 
+to the minimal practical level . 
+3.3.3.4 Processing – all data processing functions shall be chainable (outputs 
+pipeable to inputs) and repeatable in the processing pipeline in cases where this makes computational sense . 
+3.3.3.5 General - Operating system, message passing and other middle-ware, and 
+programming language(s) used shall follow industry standards and be commonly available and widely used. Availability of source code for the OS will be very important.  
+ 
+  
+3.4 Reliability/Availability 
+ 
+3.4.1 Auto-correction – the Backend System shall be self-monitoring.  It will be  
+capable of detecting, reporting on and automatically taking action to remedy or lessen the impact of, at a minimum, the following types of abnormal conditions: processor hardware failure, operating system hangs or crashes, computational performance below minimum specifications, 
+computational error rates above maximum specification, internal 
+communications failures, and external (with the Correlator and E2E) communications disruptions. 
+3.4.2 Software – the software part of the system shall be able to perform without 
+total system restart due to internal failure between array maintenance windows.  
+3.4.3 Hardware – the hardware part of the system shall be able to perform 
+indefinitely without complete loss of service, except in the event of total 
+failure of primary and backup power . 
+3.4.4 Correlator mode changes – the system shall be capable of responding in a 
+loss-less manner to I/O and processing changes arising from Correlator 
+mode changes. 
+3.4.5 Loss of e2e – the system shall continue to operate in a loss-less manner in 
+the event of a temporary (time duration TBD) loss of availability of the e2e System . 
+3.4.6 Loss of Correlator – the system shall be able to complete processing of all 
+onboard data, deliver the results to the End-to-End System and maintain availability for immediate resumption of operations once Correlator access is restored.  
+3.4.7 Loss of M&C – the system shall continue to o perate durin g the absence o f 
+EVLA Operations System SRS 15the M&C System until the first encoun ter of unavailable critical auxiliary 
+data.  The system will cache a predetermined amount (TBD) of correlator 
+data after the first encounter of unavailable critical data and complete all 
+requested operations on cached data once the unavailable critical data is 
+obtained. 
+3.4.8 Standby Mode – the system shall be able to sit at idle and resume 
+operations with minimal (amount TBD) delay . 
+ 
+ 
+3.5 Serviceability 
+ 
+3.5.1 Hardware Accessibility – all system processing and interconnect 
+hardware shall be readily accessible for maintenance, repair, replacement and/or reconfiguration.  
+3.5.2 Software Accessibility – all systems and application source code shall be 
+available to or on the systems that execute it . 
+3.5.3 Debugging – all software application modules shall be debuggable.  
+3.5.4 Processes – all software processes shall be killable, restartable, 
+debuggable and testable without affecting normal operations . 
+ 
+3.6 Maintainability 
+ 
+ 
+3.6.1 Software tools – software tools and pre-built applications that do not have 
+source code available shall come with a complete diagnostic package and 
+customer support . 
+3.6.2 Operating Systems – operating system software shall either have source 
+code available or come with suffic ient diagnostics and customer support . 
+ 
+ 
+3.7 Scalability 
+ 
+ 
+3.7.1 Hardware – I/O, communications, and processing hardware shall be 
+easily expandable, reconfigureable, augmentable and replaceable to meet increasing data transfer and processing demands imposed by EVLA 
+science, Correlator changes, and availability of new hardware.  
+3.7.2 Transparency – 3.7.1, above, shall be accomplished in manner that is 
+transparent to processing, communications and I/O software functions 
+with the possible exception of  recompilation of executables . 
+3.7.3 Seamlessness – 3.7.1, above, shall be accomplished in a manner that is 
+seamless, in that it does not affect hardware modules or software functionality that it meets at interfaces . 
+3.7.4 Performance – the Backend system shall ultimately be scaleable to an 
+extent that it will be capable of handlin g up to two Gbytes per second per 
+Correlator output channel in real-time . 
+ 
+ 
+EVLA Operations System SRS 163.8 Security 
+ 
+The Backend System needs a robust security mechanism in place so that unauthorized users are not allowed access. Authorized users are expected to be restricted to software and hardware 
+development, testing, maintenance and operations personnel. 
+ 
+All users of the Backend System must be uniquely identified. This could be done via a username and associated password scheme that would authenticate and authorize the user access to the system and, if applicable, grant the user access to restricted or controlled parts of the system. If a 
+user cannot be identified, they will not be given access. In order to monitor all past access to the system, all attempts to access the system should be logged. 
+ 
+Users’ needs and expectations from the system will be different. Systems operations should be given unrestricted access to all aspects of the system and should have the authority to grant and revoke privileges on a per-user basis. Development, testing and maintenance personnel, on the other hand, require access to some parts of the system, but not all, indicating that an access level is needed that allows privileges to be granted on a per-user and what-do-you-need-to-do basis.  
+ 
+ 
+Req. ID Description 
+3.8.1 All users of the system shall login using some form of unique 
+identification. (e.g., username and password) 
+ 
+3.8.2 All login attempts shall be done in a secure manner. (e.g., encrypted 
+passwords) 
+ 
+3.8.3 A system administrator shall have unrestricted access to all aspects of the 
+system . 
+ 
+3.8.4 Each user shall have a set of system access properties that defines the  
+user’s privileges within the system.  (e.g., the subsystems a user may 
+control or system tools the user may access).  
+3.8.5 The administrator shall have the ability to create and add a new user to 
+the system . 
+ 
+3.8.6 The administrator shall have the ability to remove a user from the system . 
+ 
+3.8.7 The administrator shall have the ability to edit a user’s system access 
+properties . 
+ 
+3.8.8 The administrator shall have the ability to block all access to the system 
+for all users or selectively by user . (All blocked users with active sessions 
+shall automatically be logged off.)  
+  
+3.9 Installation and Upgrades 
+  
+3.9.1 Operations Activities – the system shall continue operations, although not 
+necessaril
+y at full ca pacity, on all una ffected resources durin g partial 
+EVLA Operations System SRS 17shutdowns for maintenance, repair and/or upgrade . 
+3.9.2 Test Mode – the system shall be able to handle non-real-time operations 
+in a transparent fashion (i.e., as if real-time).  Note: non-real-time refers to 
+input data from a source other than the Correlator (defined as real-time). 
+3.9.3 Replaceability –modular design principles shall be employed to the 
+maximum extent possible. Maximal practical use of available “hot-
+swappable” devices and components shall be made . 
+ 
+3.10   Documentation 
+ 
+ 
+3.10.1 Hardware – complete and comprehensible hardware systems 
+specifications and configuration inform ation shall be readily available . 
+3.10.2 Software Coding Practices– software system and application code shall be 
+well documented and written in a generally familiar language or languages (preferably not more than two).  Software shall be written in a 
+style that is easily readable and using practices that allow for minimal confusion.  
+ 
+.  
+ 
+ 
+ 
+Filename: be_srs_2.0.doc 
+Directory: C:\TEMP Template: C:\WINNT\Profiles\tromero\Application 
+Data\Microsoft\Templates\Normal.dot 
+Title: EVLA Operations System  Subject:  Author: rich Keywords:  Comments:  
+Creation Date: 5/10/02 4:58 PM 
+Change Number: 2 Last Saved On: 5/10/02 4:58 PM Last Saved By: tromero Total Editing Time: 2 Minutes Last Printed On: 5/10/02 5:02 PM 
+As of Last Complete Printing 
+ Number of Pages: 21  Number of Words: 5,453 (approx.)  Number of Characters: 31,086 (approx.) 
+ 

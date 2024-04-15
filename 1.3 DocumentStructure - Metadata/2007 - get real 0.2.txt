@@ -1,0 +1,8 @@
+D	Software Requirements Specification For Get Real Website
+4	External Interface Requirements
+4.1	User Interfaces
+4.2	Hardware Interfaces
+5	Other Nonfunctional Requirements
+5.1	Performance Requirements
+5.2	Security Requirements
+5.3	Software Quality Attributes

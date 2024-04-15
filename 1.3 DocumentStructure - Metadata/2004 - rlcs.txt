@@ -1,0 +1,37 @@
+D	I-15 Reversible Lane Control System (I-15 RLCS) - State of California Department of Transportation
+3	SPECIFIC REQUIREMENTS
+3.1	EXTERNAL INTERFACE REQUIREMENTS
+3.1.1	Hardware Interfaces
+3.1.2	External System Interfaces
+3.2	FUNCTIONAL REQUIREMENT
+3.2.1	Graphical User Interface (GUI)
+3.2.2	Process Monitoring and Control
+3.2.3	Sequencing  
+3.2.4	Data Processing and Security
+3.2.5	Reporting
+3.3	PERFORMANCE
+3.3.1	External Interfaces
+3.3.2	User Interface (GUI)
+3.3.3	Process Monitoring and Control
+3.3.4	Sequencing
+3.3.5	Data Processing and Security
+3.3.6	Reporting
+3.3.7	Communications
+3.5	DESIGN CONSTRAINTS
+3.5.1	Commercial Off-the-Shelf Software
+3.5.2	Security
+3.6	RLCS  APPLICATION SOFTWARE ATTRIBUTES
+3.6.1	Reliability
+3.6.2	Availability
+3.6.3	Maintainability
+4	INITIAL SYSTEM CONFIGURATION DATA FOR OPERATIONAL SEQUENCES AND SYSTEM MODES
+4.1	Open Entrances  
+4.2	Roadway Closure Device Status
+4.3	Opening Sequences
+4.4	Closing Sequences 
+4.5	‘Halted’ Opening and Closing Sequences
+4.6	Multiple Entrances
+4.7	Safety Screening of Commands
+4.8	Control System Integrity
+4.9	Control System Integrity Verification
+4.10	Access and Safety Characteristics of the I-15 Reversible Roadway

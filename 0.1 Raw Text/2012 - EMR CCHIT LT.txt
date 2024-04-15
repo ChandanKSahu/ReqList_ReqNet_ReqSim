@@ -1,0 +1,38 @@
+Unique ID	Label	Requirement Statement	Solution Scope	Solution Approach
+CCHIT LT 30. Medical Equipment				
+2277	CCHIT LT 30.01	The solution should provide the ability to capture a list of the patient's specialized medical equipment and each prosthetic, orthotic, or implantable device.	Unknown	Unknown
+2278	CCHIT LT 30.02	The solution should provide the ability to capture the reason for the specialized medical equipment and each prosthetic, orthotic, or implantable device.	Unknown	Unknown
+2279	CCHIT LT 30.03	The solution should provide the ability to capture the specific type of specialized medical equipment, prosthetic, orthotic, or implantable device.	Unknown	Unknown
+2280	CCHIT LT 30.04	The solution should provide the ability to capture in a discrete field that the patient has No Known specialized medical equipment or prosthetic, orthotic, or implantable device for the patient.	Unknown	Unknown
+2281	CCHIT LT 30.05	The solution should provide the ability to capture information necessary to identify and track the equipment/device as discrete entries. Such information may include, but is not limited to: type, manufacturer, manufacture date, date implanted (or placed into	Unknown	Unknown
+2282	CCHIT LT 30.06	The solution should provide the ability to delete or inactivate the documentation of the specialized medical equipment or prosthetic, orthotic, or implantable devices.	Unknown	Unknown
+2283	CCHIT LT 30.07	The solution should provide the ability to present a list of the deleted inactivated/discontinued specialized medical equipment or prosthetic, orthotic, or implantable devices and reason for deletion.	Unknown	Unknown
+2284	CCHIT LT 30.08	The solution should provide the ability to electronically receive and maintain relevant clinical data captured by telemedicine devices in the patient’s home.	Unknown	Unknown
+CCHIT LT 32. Report Generation				
+2306	CCHIT LT 32.01	The solution should provide the ability to generate reports of clinical and administrative data using either internal or external reporting tools.	Unknown	Unknown
+2307	CCHIT LT 32.02	The solution should provide the ability to generate reports consisting of all or part of an individual patient’s medical record (e.g. patient summary).	Unknown	Unknown
+2308	CCHIT LT 32.03	The solution should provide the ability to generate reports regarding multiple patients (e.g. diabetes roster).	Unknown	Unknown
+2309	CCHIT LT 32.04	The solution should provide the ability to access reports outside the EHR application.	Unknown	Unknown
+2310	CCHIT LT 32.05	The solution should provide the ability to specify report parameters (sort and filter criteria) based on patient demographic and clinical data (e.g., all male patients over 50 that are diabetic and have a HbA1c value of over 7.0, or that are on a certain med	Unknown	Unknown
+2311	CCHIT LT 32.06	The solution should provide the ability to produce reports based on the absence of a clinical data element (e.g., a lab test has not been performed or a blood pressure has not been measured in the last year).	Unknown	Unknown
+2312	CCHIT LT 32.07	The solution should provide the ability to save report parameters for generating subsequent reports.	Unknown	Unknown
+2313	CCHIT LT 32.08	The solution should provide the ability to modify one or more parameters of a saved report specification when generating a report using that specification.	Unknown	Unknown
+CCHIT LT 33. Health record output				
+2314	CCHIT LT 33.01	The solution should provide the ability to define one or more reports as the formal health record for disclosure purposes.	Unknown	Unknown
+2315	CCHIT LT 33.02	The solution should provide the ability to generate hardcopy or electronic output of part or all of the individual patient's medical record.	Unknown	Unknown
+2316	CCHIT LT 33.03	The solution should provide the ability to generate hardcopy and electronic output for an identified individual by date and/or date range.	Unknown	Unknown
+2317	CCHIT LT 33.04	The solution should provide the ability to create hardcopy and electronic report summary information (procedures, medications, labs, immunizations, allergies, and vital signs).	Unknown	Unknown
+2318	CCHIT LT 33.05	The solution should provide the ability to support for disclosure management in compliance with HIPAA and applicable law.	Unknown	Unknown
+2319	CCHIT LT 33.06	The solution should provide the ability to include patient identifying information, as well as time and date report printed, on each page of individual patient-specific reports generated.	Unknown	Unknown
+2171	CCHIT LT 33.07	The solution should provide the ability to export structured data which removes those identifiers listed in the HIPAA definition of a limited dataset.  This export on hardcopy and electronic output should leave the actual PHI data unmodified in the original record.	Unknown	Unknown
+CCHIT LT Laboratory				
+2337	CCHIT IO-LT 07.01	The solution should receive and store general laboratory results (including the ability to differentiate preliminary results and final results and the ability to process a corrected result) using the HL7 v.2.5.1 ORU message standard.	Unknown	Unknown
+2338	CCHIT IO-LT 07.02	The solution should receive and store microbiology laboratory results with organisms recorded as free-text.	Unknown	Unknown
+2339	CCHIT IO-LT 07.04	The solution should receive and store microbiology laboratory results with sensitivity testing coded using LOINC.	Unknown	Unknown
+2340	CCHIT IO-LT 09.06	The solution should send an electronic prescription to pharmacy.	Unknown	Unknown
+2341	CCHIT IO-LT 09.09	The solution should respond to a request for a resupply to the pharmacy.	Unknown	Unknown
+2342	CCHIT IO-LT 09.13	The solution should send a query to verify prescription drug insurance eligibility and apply response to formulary and benefit files to determine coverage.	Unknown	Unknown
+2343	CCHIT IO-LT 09.14	The solution should capture and display formulary information from pharmacy or PBM (Pharmacy Benefits Manager) by applying eligibility response.	Unknown	Unknown
+2344	CCHIT IO-LT 09.15	The solution should send a query for medication history to PBM or pharmacy to capture and display medication list from the HER.	Unknown	Unknown
+2345	CCHIT IO-LT 10.10	The solution should display HITSP C32/CCD documents and file them as intact documents in the HER.  Summary patient record content information will include: patient demographics, medication list, and medication allergy list.	Unknown	Unknown
+2346	CCHIT IO-LT 11.21	The solution should generate and format patient summary  documents per the following specifications: HITSP C32 (v2.3 or v2.5). Summary patient record content information will include: patient demographics, medications, and medication allergies.	Unknown	Unknown

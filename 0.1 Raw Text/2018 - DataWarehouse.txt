@@ -1,0 +1,2142 @@
+
+ 
+ 
+European Commission, B -1049 Brussel s - Belgium. Telephone: (32 -2) 299 11 11.  
+ EUROPEAN COMMISSION  
+ENTERPRISE AND INDUSTRY   DIRECTORATE -GENERAL  
+ 
+Aerospace, Maritime, Security and Defence Industries  
+Copernicus : Infrastructures  
+ 
+  
+ 
+Data Warehouse Requirements – Version 2 .0 
+Copernicus  Data Access  
+Specifications of the space -based  Earth Observation needs for 
+the period 201 4-2020 
+ 
+ 
+ii APPROVAL  
+ 
+Title:  
+Data Warehouse Requirements – Version 2 .0 
+Copernicus  Data Access  
+Specifications of the space -based Earth Observ ation needs for the period 2014 -2020  
+Issue  2  Revision  number : 0 
+Author : D. Quintart  (ENTR  G/3)  Date : 5/3/2014  
+ 
+Approved by : R. Schulte -Braucks (ENTR G/3)  Date : 5/3/20 14 
+ 
+ 
+iii CHANGE  LOG  
+Reason for change  Issue  Revision  Date 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+iv CHANGE RECORD  
+Issue  Revision  
+Reason for ch ange  Date  Pages  Paragraph  
+    
+    
+1 TABLE OF CONTENTS  
+DATA WAREHOUSE REQUI REMENTS – VERSION 2.0  ................................ .............  1 
+1. INTRODUCTION  ................................ ................................ ................................ ....... 4 
+1.1. Background  ................................ ................................ ................................ ........  4 
+1.2. Scope and objective  ................................ ................................ ...........................  4 
+1.3. Reference documents  ................................ ................................ .........................  5 
+2. GENERAL DEFINITIONS  ................................ ................................ .........................  7 
+3. NOTIONS AND CONVENTI ONS  ................................ ................................ .............  9 
+3.1. User categories and use purposes  ................................ ................................ ...... 9 
+3.1.1.  Copernicus Services [Copernicus Services]  ................................ ........  9 
+3.1.2.  Institutions and bodies of the Union [ Union_Inst]  ..............................  9 
+3.1.3.  Participants to a research project financed under the Union 
+research programmes [Union_Research_Projects]  ..............................  9 
+3.1.4.  Public authority [Public_Auth]  ................................ ..........................  10 
+3.1.5.  International Organisations and international NGOs 
+[INT_ORG_NGO]  ................................ ................................ .............  10 
+3.1.6.  Public [Public]  ................................ ................................ ...................  10 
+3.2. Usage types (services)  ................................ ................................ .....................  11 
+3.2.1.  DISCOVERY Service  ................................ ................................ ....... 11 
+3.2.2.  VIEW Service  ................................ ................................ ....................  11 
+3.2.3.  DOWNLOAD Service  ................................ ................................ ....... 11 
+3.3. Usage rights  ................................ ................................ ................................ ..... 12 
+3.4. Access to datasets for public tasks and research projects  ................................  12 
+4. GENERAL OVERVIEW OF THE REQUIREMENTS  ................................ ............  13 
+4.1. CORE datasets  ................................ ................................ ................................ . 13 
+4.2. ADDITIONAL datasets with predefined quotas  ................................ .............  13 
+4.3. Access to Contributing Mission data provided under p revious phases  ...........  14 
+4.4. Licensing conditions  ................................ ................................ ........................  14 
+5. DATASET REQUIREMENTS  ................................ ................................ .................  16 
+5.1. Overall dataset requirements  ................................ ................................ ...........  16 
+5.2. Overall requirements for CORE datasets  ................................ ........................  16 
+2 5.3. Dataset requirements for Cope rnicus Land service over Europe  ....................  17 
+5.3.2.  Optical HR Pan Europe coverage (HR_IMAGE_2015)  ....................  19 
+5.3.3.  Optical VHR multispectral and  panchromatic coverage over 
+Europe (VHR_IMAGE_2015) ................................ ...........................  25 
+5.3.4.  European optical MR1 composites (MR_IMAGE_2015)  .................  30 
+5.4. Dataset Re quirements for Copernicus Global land  ................................ .........  34 
+5.4.1.  Optical worldwide HR1 coverage (HR1 
+_OPTICAL_GLOBAL)  ................................ ................................ ..... 34 
+5.4.2.  Optical HR2 world wide coverage 
+(HR2_OPTICAL_GLOBAL)  ................................ ............................  35 
+5.4.3.  Optical MR2 worldwide coverage 
+(MR_OPTICAL_GLOBAL) ................................ ..............................  36 
+5.4.4.  Optical LR worldwide c overage (LR_OPTICAL_GLOBAL) ...........  37 
+5.4.5.  SAR MR1 Worldwide coverage (MR1_SAR_GLOBAL)  ................  39 
+5.4.6.  SAR LR Worldwide coverage (LR_SAR_GL OBAL)  ......................  40 
+5.4.7.  SAR Altimetry MR2 Worldwide coverage 
+(MR2_ALTIMETRY)  ................................ ................................ ....... 41 
+5.5. Fixed / CORE Dataset requirements for marine, atmos phere, climate 
+change applications ................................ ................................ ..........................  42 
+5.5.1.  Sea Ice Monitoring MR1 SAR (MR1_SAR_SEA_ICE)  ...................  43 
+5.5.2.  Global/Regional Systematic O cean Colour data (CORE_012)  .........  44 
+5.5.3.  Systematic Global and Regional sea surface temperature data 
+(CORE_013)  ................................ ................................ ......................  44 
+5.5.4.  Systemati c Global and Regional Altimeter / Sea Level data 
+(CORE_014)  ................................ ................................ ......................  44 
+5.5.5.  Data for aerosol monitoring and forecasting (CORE_017)  ...............  44 
+5.5.6.  Data for sulphur dioxide (SO2) atmospheric composition 
+monitoring and forecasting (CORE_018)  ................................ ..........  45 
+5.5.7.  Data for formaldehyde (HCHO) atmospheric composition 
+monitoring and forecasting (C ORE_019)  ................................ ..........  45 
+5.5.8.  Data for Ozone (O3) atmospheric composition monitoring 
+and forecasting (CORE_020)  ................................ ............................  45 
+5.5.9.  Data for Carbon M onoxide (CO) atmospheric composition 
+monitoring and forecasting (CORE_021)  ................................ ..........  45 
+5.5.10.  Data for Carbon Dioxide (CO2) atmospheric composition 
+monitoring and forecasting (CORE_022)  ................................ ..........  45 
+5.5.11.  Data for Methane (CH4) atmospheric composition monitoring 
+and forecasting (CORE_023)  ................................ ............................  45 
+5.5.12.  Data for Nitrogen Dioxide (NO2) atm ospheric composition 
+monitoring and forecasting (CORE_024)  ................................ ..........  46 
+3 5.6. Archived CORE Datasets  ................................ ................................ ................  46 
+5.7. Flexible / ADDITIONAL datasets  requirements  ................................ .............  47 
+5.7.1.  Overall requirements are:  ................................ ................................ .. 48 
+5.7.2.  Archive rush retrieval  ................................ ................................ ........  49 
+5.7.3.  New acquisitions in rush mode  ................................ ..........................  49 
+5.7.4.  Archive standard retrieval  ................................ ................................ . 50 
+5.7.5.  New acquisitions in st andard mode  ................................ ...................  50 
+5.7.6.  Quota management  ................................ ................................ ............  52 
+5.8. Already acquired ADDITIONAL datasets  ................................ ......................  53 
+6. FUTURE REQUIREMENTS  ................................ ................................ ....................  53 
+6.1. Datasets to be considered for future requirements  ................................ ..........  53 
+6.1.1.  Video datasets  ................................ ................................ ....................  53 
+ANNEX 1.  ADDITIONAL DATASET S PECIFICATIONS  ...............................  55 
+ANNEX 2.  FILE FORMAT CONVENTI ONS  ................................ ....................  57 
+ANNEX 3.  MAP OF "LARGE REGION S" FOR HR IMAGE 2015  AND 
+VHR IMAGE 2015  ................................ ................................ ................................ .... 58 
+ANNEX 4.  MAP OF "ZONES WITH D IFFERENT ACQUISITION  
+APPROACHES" FOR HR I MAGE 2015  ................................ ................................ . 59 
+ANNEX 5.  HR IMAGE 2015 AND VH R IMAGE 2015: ACQUIS ITION 
+WINDOWS  61 
+ANNEX 6.  NATIONAL PROJECTIONS  TABLE  ................................ ..............  64 
+ANNEX 7.  DATA QUALITY LAYER  ................................ ...............................  65 
+ANNEX 8.  QUALITY BASED COVERA GE PRICING  ................................ .... 66 
+ANNEX 9.  EXAMPLES OF TYPICAL  CLOUD COVER AND HAZE  
+SITUATIONS   ................................ ................................ ................................ ...........  67 
+ 
+4  
+1. INTRODUCTION  
+1.1. Background  
+For an initial period of 2007 -2011 , data access management was funded through a 
+data access grant between the EC and ESA.  
+As from October  2010 the next step of the EC -ESA cooperation, the Delegation 
+Agreement  [RD1], ensure d continuity of the data provision . That new phase was 
+intend ed to widen the scope of the data access to a broader community.  It introduced 
+the concept of a Data Warehouse , capturing the require ments of the  different  user 
+communit ies. The Data Warehouse  is based on two types of data: (i) a fixed part , 
+called 'CORE datasets' , which are typically well defined large datasets covering the 
+needs of FP7 project  participant s and other users and (ii) a f lexible part called 
+'ADDITIONAL' datasets. This approach has proven to be  flexible enough to 
+accommodate further additional requirements or specific requirements which were  
+not covered by the CORE datasets and not known in advance.  
+This Data Warehouse v2.0 document build s on the previous experience and contains  
+the new Copernicus data requirements for the period 2014 -2020 during which time a 
+fully operational Copernicus programme  will be established . This document also 
+addresses access to observation datase ts already provided under the previous phases.  
+1.2. Scope and objective  
+This document presents the Copernicus requirements  for space -based Earth 
+Observation data  for the period covered by the Copernicus Regulation . It contains 
+the requirements collected from Co pernicus services and other users  requesting 
+Earth Observation data , whether financed by the Union or related to policies of the  
+Union, like Union -financed research projects and the activities of Union agencies 
+(EEA, EMSA, SatCen (previously EUSC), etc .). 
+This document has a strong focus on the requirements for Contributing Mission data 
+to be procured, it being understood that priority should be given to the use of 
+dedicated Copernicus ( Sentinel ) data wherever  feasible. Thus,  it may progressively 
+evolve tow ards the consolidation of all satellite data requirements for Copernicus 
+services independently of whether licences for the data need to be procured or not. It 
+should also be noted that s ome users are exclusively interested in E arth Observation  
+data openly  disseminated to ensure that any interested parties questioning the results 
+of their analysis may put them to the test using the same E arth Observation  data as 
+inputs.  
+Where datasets need to be procured, licensing conditions are negotiated with 
+contributin g mission data providers and will depart from conditions of use of 
+datasets available under an open data policy. The procurement of datasets requires 
+the establishment of a contractual framework between the Copernicus Contributing 
+Mission (CCM) Entities, E SA and the users , which should not be confused with the 
+Copernicus Data and Information Policy  which enshrines free, full and open access . 
+5 Technical specifications should be extracted from the requirements expressed in this 
+document to ensure the provision  or procurement of Earth Observation data  from 
+Copernicus Contributing Missions . ESA play s a key role in the provision of these 
+Earth Observation data from Copernicus Contributing Missions as captured in the 
+Delegation Agreement between the Commission and ESA [RD 4]. EUMETSAT  also 
+plays an important  role in providing Contributing Mission data in accordance with 
+the Delegation Agreement between the Commission and EUMETSAT  [RD5]. 
+The approach suggested in this document aims at deepening , as much as possible , 
+users' right s along th e following  major principles:  
+(1) A strong emphasis on providing the necessary datasets to ensure the optimal 
+functioning of the Copernicus services while mutualising as much as 
+possible the needs of different user communities, mainly inst itutional and 
+related to the Space t heme of Horizon 2020 research programme ; 
+(2) The licensed rights must ensure the fulfilment of the Copernicus services' 
+operational tasks , the goal is to avoid any restrictions on the dissemination of 
+the information extract ed from the CCM data by the Copernicus services;  
+(3) Predefinition of CORE  datasets  when the specifications can be provided in 
+advance with sufficient detail ; 
+(4) Bulk  agreement for ADDITIONAL  datasets  with flexible specifications, e.g. 
+geographical area, under th e establishment of predefined quotas ; 
+(5) Access to datasets procured in the previous phases of the provision of 
+Contributing Mission datasets.  
+The CORE Datasets are define d in this document . By definition , the ADDITIONAL  
+datasets are flexible and are not know n in advance, therefore technical details cannot 
+be provided at this stage, but only general requirements and principles on the quota 
+management mechanism.  
+As some ADDITIONAL dataset requirements are more precisely defined than 
+other s, it is interesting to  provide the available information  on these requirements 
+while , for the time being , leaving them in the ADDITIONAL datasets category.  
+The approach for the procurement of the two types of da tasets  will consequently 
+also be different: CORE  datasets can be pr ocured on the basis of pre -defined 
+specifications, ADDITIONAL  datasets through a quota  mechanism and bulk 
+agreements with data providers for the provision of data within a financial envelop e. 
+1.3. Reference documents  
+RD[1]: Commission Delegation Agreement with ESA (2009)  
+RD[2] Data Warehouse Document version 1. 9 
+RD[3] GMES Space Component Data Access Portfolio: Data Warehouse 
+2011 -2014, GMES -PMAN -EOPG -TN-11-0006, version 2.7.1  
+RD[4]: Commission Delegation Agreement with ESA ( in preparation ) 
+6 RD[5] Commission Delegation Agreement with E UMETSAT  (in 
+preparation ) 
+7 2.  GENERAL DEFIN ITIONS  
+(1) Primary Dataset : Any spatial dataset  originating from a Copernicus  Contributing 
+Mission Entity (CCM E) and provided by ESA /EUMETSAT /CCM E to the 
+beneficiary . A Primary Data  set is understo od to include  spacecraft and instrument  
+data and is comprised of single -mission Level 1 or Level 2 data (with  exceptional 
+provision of higher -level products such as single -mission Level 3 data on a case-
+by-case basis).  
+(2) Altered Prima ry Dataset : A dataset de rived from a Primary Dataset retaining 
+enough information to allow the re trieval  of the Primary Dataset (e.g. sensor pixel 
+information) and therefore to allow the replication of the Primary Dataset as such. 
+Examples: histogram stretched images, ortho -rectified images, resampled and 
+rescaled images  and mosaics.  
+(3) Derived Information , Derived Product  or Secondary Dataset : A Dataset or 
+information derived from a Primary Dataset or Altered Primary Dataset which 
+does not allow the re trieval  of the Primary Dataset (e.g. sensor pixel information) 
+and therefore do es not allow the replication of the Primary Dataset as such. 
+Examples: land cover classifications, vegetation indexes.  
+(4) Metadata:  Information describing spatial data sets and spatial data services and 
+making i t possible to discover  them , populate an inventory  with them  and use 
+them. In the case of spatial dataset s, metadata may include a preview of the full 
+dataset.  
+(5) Union Public tasks : The development, implementation and monitoring of 
+policies and related activ ities as defined by the EC Treaty and subsequent 
+Community legislation.  
+(6) Spatial Data sets, Spatial D ata and Spatial Data Services : As defined in 
+Directive 2007/2/EC of 14/3/2007 . 
+(7) Composite:  Multi-scene or multi -image aggregation over the same scene/image. 
+Usually used to remove clouds for optical sensor  datasets . Can be applied to 
+different sensors, but is preferably based on the same sensor. A composite is 
+multi -temporal (made of several scenes/images acquired at different dates /times ). 
+(8) Mosaic:  Multi-scene or multi -image aggregation to cover a larger area than a 
+given scene/image. Can be applied to different sensors. A mosaic is generally 
+mono temporal (or made of scenes/images collected within a given time period 
+that can range from a few days to a season).  
+(9) Bundled Data P roduct:  Refers to a commercial offer providing all datasets 
+acquired simultaneously by the same satellite mission and simultaneously 
+covering more than one range of spectral resolutions (e.g. multispectral and 
+panchromatic), which are groupe d into a single product, but which are still 
+comprise d of each of the separate spectral bands.  
+8 (10) Ground sampling distance (GSD) : Specifies the extent of a single pixel of the 
+sensor(s) that makes the dataset. Pixels are assumed to be square. Unless 
+otherwise  specified  the values are:  
+(a) VHR1 : <= 1m  
+(b) VHR2 : >1m – <=4m  
+(c) HR1 : >4m – <=10m  
+(d) HR2 : >10m – <=30m 
+(e) MR1:  >30m – <=100m 
+(f) MR2:  >100m  – <=300m  
+(g) LR: >300m  
+ 
+9 3. NOTIONS AND CONVENTIO NS 
+Many requirements contained in this Data Warehouse document will be used to 
+draft  the technical specifications for the public procurement of EO remote sensing 
+datasets. In this context a number of notions and conventions must be provided  and 
+are part of  the requirements . 
+3.1. User categories  and use purposes  
+User types are defined below. The sectio ns below also define the usage allowed by 
+each user category. User categories are referred to in the specifications by their 
+abbreviation in square brackets. These user categories  shall only be applied  for 
+datasets provided under restrictive dissemination conditions by the CCME . 
+Wherever contributing mission data providers mak e available  datasets under an 
+open data policy, the user indications under licensing requirements are meaningless 
+most of the time  as all users including the general public may have ac cess to the data 
+from the contributing mission data providers.  
+3.1.1.  Copernicus Services [Copernicus Services]  
+Copernicus Services first established under the EU Regulation 911/2010 and 
+then under the subsequent EU Regulation establishing the Copernicus 
+programm e.  
+This category is provided for clarification. Legally speaking, Copernicus 
+Services providers are either Institutions and bodies of the Union (see below) 
+or their sub -contractors and therefore do not need an extension of licensing 
+rights beyond these pr ovided to the [Union _Inst] , in particular for already 
+acquired licensing right s on datasets  from previous Data Warehouse 
+exercise s. 
+3.1.2.  Institutions and bodies of the Union  [Union _Inst]  
+The institutions and bodies of the Union,  as well as their contractors , may 
+use the Primary Datasets  and Altered Primary Datasets for activities whose 
+purpose is within the Union  Public tasks (development, implementation and 
+monitoring of policies and related activities as defined by the Union  Treat ies 
+and subsequent Union  legal  acts). 
+It includes:  
+(1) The European Institutions set up under the Union  Treaties ; 
+(2) The European Union Agencies.  
+3.1.3.  Participants to a research project financed under the Union research 
+programmes  [Union_Research_Projects ] 
+This includes a ny natural or legal person  officially registered as participant 
+of a project funded under the FP 7 or H orizon 2020 Space themes.  
+Participants in such projects  may use the Primary Datasets for activities 
+within the project.  
+10 As an option, p articipants to a project financed under Horizon 2020 outside 
+the Space themes may use for activities within the project , already  acquired  
+Primary Datasets . 
+3.1.4.  Public authority [Public_Auth]  
+Public authorities include:  
+(1) Any government or other public administration  of States participating 
+in the Copernicu s programme , including public advisory bodies, at 
+national, regional or local level .; 
+(2) Any natural or legal person performing public administrative 
+functions under national law, including specific duties, activities or 
+services in relation to a Union  policy ; 
+(3) Any natural or legal person having public responsibilities or 
+functions, or providing public services relating to a Union  policy 
+under the control of a body or person fall ing within (1) or (2), such as 
+a contractor of a public authority;  
+(4) Any research and academic organisation.  
+Public authorities , as well as their contractors , may use the Primary Datasets  
+and Altered Primary Datasets for activities whose purpose is within the 
+Union  Public tasks.  
+3.1.5.  International  Organisations  and international NGOs 
+[INT_ORG_NGO ] 
+Interna tional  Organisations  are defined as:  Any International Governmental 
+Organisation created by an international treaty which can be looked up in the 
+UN online  database of treaties. Specialis ed agencies of the UN are included;  
+International Organisations , as well as their contractors , may use the Primary 
+Datasets  for activities whose purpose is within the Union  Public tasks . 
+The international NGOs are defined as:  Any International Non -
+Governme ntal Organisation speciali sed in humanitarian , development or 
+environmental activities.  
+Non-Governmental Organisation s, as well as their contractors , may use the 
+Primary Datasets  for activities whose purpose is within the Union  Public 
+tasks . 
+3.1.6.  Public [Public ] 
+Any natural or legal person.  
+In the case that the Download service (see below) is authorised for  the 
+Public, the use of the Primary Datasets  may be limited to non-commercial 
+activities.  
+11 3.2. Usage types (services)  
+The usage types have been defined adhering to  the INSPIRE nomenclature ( Article 
+11(1) (a), (b) and (c) of Directive 2007/2/EC) . For each dataset the usage type per 
+user category should be specified . 
+ 
+3.2.1.  DISCOVERY  Service  
+The DISCOVERY service shall make it possible to  search for spatial 
+datasets and ser vices on the basis of the content of the corresponding 
+metadata and to display the content of the metadata.  
+All users can access such service s. 
+3.2.2.  VIEW Service  
+The VIEW service shall make it possible, as a minimum, to display, 
+navigate, zoom in/out, pan or ov erlay viewable spatial datasets and to display  
+legend information and any relevant content of metadata.  
+3.2.3.  DOWNLOAD Service  
+The DOWNLOAD service shall enable the beneficiary:  
+(1) to make an unlimited number of copies of the Primary Dataset  as 
+needed (archiving an d backup purposes included);  
+(2) to install on as many individual computers as needed, including 
+internal computer network;  
+(3) to alter or modify the Primary Dataset  by invoking a computer 
+application to produce Altered Primary Dataset  and Secondary 
+Dataset ; 
+(4) to post Metadata of the Primary Dataset  or its Altered Primary 
+Dataset  on an Internet website with the display of a credit in the 
+following form : “includes material (c) Mission name (year of 
+acquisition), all rights reserved”;  
+(5) to make hard  copies or to display  on an Internet web site a 
+Representation of any extract of the Primary Dataset  or its Altered 
+Primary Dataset  at any resolution, with the display of a credit in the 
+following form : “includes material (c) Mission name (year of 
+acquisition), all rights rese rved”;  the data received  by client 
+applications , through the above Internet posting, should be such that 
+it is not possible to recreate  the Primary Dataset or Altered Primary 
+Dataset  (unless that right is provided) ; 
+(6) to use the Primary Dataset  or its Altere d Primary Dataset  for internal 
+or external demonstration purposes;  
+(7) to retain all Intellectual Property Rights associated with any 
+Secondary Dataset developed on the basis of the Primary Dataset . 
+12 3.3. Usage rights  
+(a) The licensed usage rights must ensure the fulfil ment of the 
+Copernicus services' operational tasks  as defined under the 
+Copernicus Regulation . In particular the licensed rights shall not 
+prevent  the generation and dissemination of Copernicus service 
+information  (derived information from CCM primary datasets used as 
+inputs) under a free, full  and open dissemination regime in 
+application of the Commission Delegated Regulation No 1159/2013  
+and the Copernicus Regulation . 
+(b) In the case of the Copernicus Emergency Management Service and 
+the Copernicus Security S ervice, [Public_Auth]  shall have access to 
+Primary Datasets.  
+(c) When the  CCME provides download access to CCM data with the 
+authorisation to set up a viewing service  for these data , the 
+[Union _Inst]  will have the righ t to set up such viewing service . 
+3.4. Access t o datasets for public tasks and research projects  
+The operational nature of Copernicus implies operational access conditions 
+to contributing missions. However, some Copernicus users may not need 
+access to remote sensing data in operational mode and therefo re should also 
+enquire about other access schemes to these data.  
+– Researchers may benefit from access schemes to EO data designed for 
+their needs ; 
+– Public authorities also benefit from specific access schemes for data 
+needs in the accomplishment of their pub lic tasks.  
+13 4. GENERAL OVERVIEW OF T HE REQUIREMENT S 
+4.1. CORE  datasets  
+The CORE datasets aim at consolidating predefined needs collected from 
+Copernicus services and other activities requesting Earth Observation data 
+whether financed by the Union or related to pol icies of the  Union , like Union 
+financed research projects and the activities of Union agencies (EEA, 
+EMSA, SatCen , etc.). This approach allows a more robust and cost -effective 
+access mechanism, which will be offered to a broad range of users and 
+activities . In particular : 
+(1) For the f ulfilment of the data needs for the Copernicus Land  
+Monitoring service , it should cover:  
+(a) Pan-European (EEA39)  High Resolution (HR)  cloud free 
+image coverage for the requirements of land cover/ land cover 
+change activities (Corine : CLC and CLCC ), and 5 High 
+Resolution Layers (HRLs) on land cover characteristics  
+(imperviousness, forestry, agriculture (grasslands), permanent 
+wetlands and small water -bodies . It shall include access to 
+archives . 
+(b) Full European Very High Resolution ( VHR ) coverage over 
+Europe (EEA39) matching the requirements of applications at 
+European  level (Urban Atlas,  Land cover on riparian zones for  
+the purpose of biodiversity monitoring,  monitoring of coastal 
+areas, risk areas, protected areas ( Natura 2000 sites ), Lan d 
+Parcel Identification  and at national level.  
+(c) For Dynamic Land monitoring: daily L ow Resolution (LR)  
+and M edium Resolution (MR)  full globe coverage for the 
+production of biogeophysical parameters in the global 
+component of Copernicus Land Monitoring servi ce. 
+(d) For seasonal vegetation monitoring: monthly to 15-day cloud 
+free composites of Medium Resolution (MR) full European 
+(EEA39) coverage during the vegetation period March -
+October . 
+(2) For the f ulfilment of the data needs of the Copernicus M arine  
+Environment Monitoring , Atmosphere Monitoring and Climate 
+Change services . 
+4.2. ADDITIONAL  datasets with predefined quotas  
+ADDITIONAL  datasets are needed to complement the CORE datasets , as 
+many  data characteristics are not know n in advance (e.g. satellite tasking for 
+rapid  mapping or security applications , selected areas for biodiversity 
+monitoring ). 
+14 As for the CORE  datasets, these ADDITIONAL  datasets are expected to 
+fulfil the needs collected from Copernicus services and other activities 
+requesting Earth Observation data , whether financed by the Union or related 
+to policies of the  Union, like Union financed research projects and the 
+activities of Union agencies (EEA, EMSA, SatCen, etc .). 
+Some assumptions have been made for the specification of requirements:  
+ The envelop e estimates should be made on the basis of a 
+combination of statistics and requirements from operational 
+Copernicus services, current European research  projects, previous 
+projects and other related activities ; 
+ The needs of Copernicus  services in support to cris is management 
+are consi dered with the highest priority;  
+ ADDITIONAL datasets covering 'non-crisis' activities (e.g. specific 
+requirements for Copernicus Land Monitoring service not covered 
+by the CORE datasets ) will be provided with medium priority ; 
+ In addi tion some specific requirements from EU Institutions and 
+agencies ( e.g. EMSA, SatCen ) can be satisfied through the provision 
+of ADDITIONAL datasets ; 
+ Horizon 2020  project  needs may be covered by ADDITIONAL 
+datasets . 
+4.3. Access to Contributing Mission data provi ded under previous phases  
+Access to CORE datasets and ADDITIONAL datasets from previous 
+acquisition campaign s should  be ensured  wherever feasible . Where the 
+licensing conditions made for the use of these  datasets were  limited in time, 
+the extension of the licence shall be made when the datasets are used in 
+recurring monitoring activities  and reference. As a principle t he licenc e shall 
+not limit in time the use of the data sets by Copernicus . 
+4.4. Licensing conditions  
+The overall principle should be to have a broa d access to CORE  datasets, 
+whereas access to ADDITIONAL  data managed through quotas could be 
+more limited.  
+Regarding the pan-Europe and Europe  CORE  datasets  (wall -to-wall HR pan-
+Europe  coverage, VHR Europe  coverage, monthly 15 -day HR composites) 
+and the Gl obal MR and LR coverage , the licence s should include 
+unrestricted access to the Primary Data set for the Copernicus Services,  
+Union Institutions, Public Authorities and Union financed research  projects. 
+This should be the case also for the archive d full sub -Saharan  HR coverage , 
+which  also include s access for International organisations and NGOs 
+involved in land monitoring activities in these African countries.  
+15 Regarding the ADDITIONAL  dataset f or emergency service activities  
+included in Union  Public Tasks , the licences should include unrestricted 
+access to the Primary Dataset  for Copernicus s ervices, Union  Institutions , 
+and Union financed research  projects , as well as  for Member States 
+authorities willing to benefit from unrestricted access to the Primary Dat aset 
+to ensure an efficient management of emergencies.  
+ 
+16  
+5. DATASET  REQUIREMENTS  
+This section provides the definition of required datasets. The objective of this 
+section is to present  the Copernicus requirements , identifying  the criteria , which 
+will have a s ignificant impact on the co st of data . This should give sufficient 
+details to derive technical specification s as input for the data/licence procurement . 
+5.1. Overall dataset requirements  
+REQ -5.1.1 -1 Use of Sentinel data  
+Whe rever Sentinel data can be used to fulfil the requ irements  expressed in 
+this document , they should be considered with priority.  In view of 
+budgetary limitations, some requiremen ts may need a progressive phase -in 
+with the availability of Sentinel data fulfilling these needs.  
+REQ -5.1.1 -2 Data archiv ing and a ccess  to ar chives  
+When the licences on satellite datasets need to be procured, the datasets 
+must remain accessible as archives for future use by users benefiting from 
+the rights attached to the DWH licence . 
+5.2. Overall requirements  for CORE datasets  
+REQ -5.2.1 -1 Sensor transitions  
+The provision of datasets shall support a seamless transition when satellite 
+missions supporting the data provision are replaced by new ones, as far as 
+technically possible. The data provision scheme shall thus support the 
+parallel provision of data from the  old and the new missions for the 
+duration necessary to allow cross calibration and comparability of datasets 
+(as far as the implication on the budget distribution is reasonable).  
+REQ -5.2.1 -2 Consistency  
+During each acquisition campaign the dataset characteristics of procured 
+data shall not be modified unilaterally by the data providers.  
+REQ -5.2.1 -3 Formats, INSPIRE metadata  and File naming  
+CCME data shall be delivered in standard formats; with complete and 
+validated INSPIRE compliant  metadata . The datasets shall be identified 
+according to a standard file naming convention.  
+A single, common harmonised format should be considered for the 
+delivery of individual files used to provide wall -to-wall coverage of an 
+AOI from different missions.  
+ 
+17 5.3. Dataset requirements  for Copernicus Land ser vice over Europe  
+The requirements for Copernicus Land service over Europe have been 
+drafted within the following boundary conditions:  
+ Requirements are based on the knowledge as of today of the pan -
+European  and local Land service configuration for the refer ence year 
+2015 +/ - 1 year.  Continuity of a series of existing services for the 
+reference year 2012 +/ - 1 year are taken as a baseline, extended with 
+requirements for the 2015 +/ -1 reference year.  
+ Subject to adaptations as soon as the Sentinel data start to  become 
+available: this is expected to considerably improve the acquisition 
+possibilities, and therefore needs a distinction between the periods 
+before and after  Sentinel data become available in nominal mode.  
+ The land service portfolio for the 2018 +/ - 1 reference year is subject 
+to partial continuity, partial changes, following the outcome of a 
+(continuous) process of Land service evolution. The sensor offer will 
+have substantially changed by then.  Both conditions entail the need for 
+a revision before sta rting the 2018 (+/ - 1 y) reference year acquisitions.  
+REQ -5.3.1 -1 Preserving spectral information  
+Each optical CORE dataset shall be provided as a set of individual images 
+(scenes) with separated spectral bands at pixel value (bundled with other 
+products if requested  or offered ) to allow for the maximum level of 
+flexibility in automated classification and visual interpretations, including  
+future developments.  
+REQ -5.3.1 -2 Standard Formats  
+The delivery of e ach individual file in a dataset shall be provided in a 
+single, common harmon ised format for level 2 and 3 products. From the 
+start of the operational delivery of Sentinel -2 data, the delivery of CCME 
+level 2 and 3 products shall meet a  standard file format  and structure  with 
+complete and validated INSPIRE compliant  metadata , and a ccording to the 
+standard file naming convention ( see Annex 2 ). 
+The general aim of the harmonisation of file structure, metadata and 
+naming shall be to facilitate automation of the retrieval and processing of 
+the datasets, as much as possible on a common ba sis. 
+Furthermore, from the start of the operational delivery of Sentinel -2 data, 
+each dataset shall be accompanied by a data quality layer, encoded 
+according to the specifications in Annex 7 . 
+REQ -5.3.1 -3 Reference Year and Repetitiveness  
+The acquisition campaigns shal l be repeated every 3 years taking the year 
+2012 as starting reference year (n -3). To ensure the full coverage of the 
+area of interest (AOI), the acquisition campaign shall start the year before 
+(n-1). The overall objective shall be to acquire full coverag e of the AOI 
+18 within the first 2 years. The year after (n+1) may be used for remaining 
+gap-filling. Adjustment must be made to make optimal use of available 
+SWIR sensors in particular in 2014.  
+REQ -5.3.1 -4 Harmonised Cloud Cover delineation  
+For procured optical imagery,  a common and consistent way of delineating 
+and encoding Cloud Coverage and Cloud shadows  shall be  put in place, 
+taking  into account the cloud fringe areas and treat separately the 
+indication of cloud shadow areas  and the presence of haze  in order to 
+allow  automatic processing of the data . Guidelines on how to identify 
+typical C loud Coverage  issues are made available in Annex 9 . 
+REQ -5.3.1 -5 Unique and single workflow monitoring tool  
+To ensure an adequate management of each step in the full workflow of 
+acquisition campa ign, pre -processing and information production over 
+large territories and involving multiple stakeholder groups, it is mandatory 
+to maintain the status of all key steps in the full cycle in a single master 
+shape -file, constantly updated during the full cyc le of any acquisition 
+campaign (yearly basis) with key attributes, allowing all to have access to 
+the same comprehensive status overview.  
+The acquired scenes shall be referred to in a master shape -file of the 
+EEA39 countries in LAEA ETRS89 (EPSG code 3035)  as background 
+layer, and comprising layers on a per -sensor and per -year basis.  Each layer 
+shall contain ALL scene footprints taken into consideration for 
+programming the acquisitions (each scene being the smallest spatial 
+object).  
+Separate layers shall be  added for gap -filling through archive retrieval 
+and/or extensions to other sensors.  
+Each footprint shall have as minimum the following list of attributes:  
+ Identification of the scene ; 
+ Date of acquisition ; 
+ Status of pre -processing ; 
+ Encoding of cloud cover ; 
+ Encoding of haze ; 
+ Encoding of technical quality of image ; 
+ Availability in the data warehouse ; 
+ Acceptation/rejection . 
+19 Attributes shall be encoded in a semantically standardised structure, thus 
+allowing easy search, selection, filtering and combination quer ies in order to 
+facilitate management of the actual status of acquisitions.  
+The master shape -file shall be managed by ESA, and constantly updated 
+during the acquisition campaign by the CCMEs.  The master -file shall be 
+accessible for all stakeholders in the process through a point of access  
+facility  ensuring that all partners at any point of time are dealing with the 
+same information content.  
+REQ -5.3.1 -6 Success criteria and remuneration  
+For all wall -to-wall optical CORE dataset acquisition campaigns, in order to 
+maximis e the chances o f successful coverage matching the acquisition 
+requirements, a new remuneration mechanism shall be applied. Simple per -
+scene remuneration has shown not to be appropriate. Therefore a scheme 
+shall be put in place, which, while encouraging dat a providers to acquire and 
+deliver as much images as possible, will reward them in the end according to 
+the quality of the best possible coverage accomplished.  
+At the end of the acquisition campaign for any year, the data providers  
+(CCMEs)  shall propose a mosaic composed of all scenes they consider 
+matching the acquisition specifications, for assessing the quality parameters, 
+which will determine the final pri ce. 
+A total of five quality indicators will be evaluated based on the final mosaic:  
+ Total coverage achieved;  
+ Number of scenes required;  
+ Average size of all areas composed of contiguously connected scenes;  
+ Max size of the largest data gap (incl. clouds and snow, excl. 
+perennial snow and glaciers);  
+ RMS distance (in days) of acquisitions date from target d ate; 
+ Max difference of acquisition date of adjacent pixels.  
+An example of a  quality based pricing scheme is  provided in  Annex  8. 
+5.3.2.  Optical HR Pan Europe coverage (HR_IMAGE_2015)  
+Applications  
+Main purposes: continuation of pan -European land services, includin g 
+Corine Land Cover (CLC) and the production of High Resolution Layers 
+(HRL) on land cover characteristics by the Union, EEA and Member States. 
+These requirements could also partially meet EFFIS requirements.  
+REQ -5.3.2 -1 Sensor acquisition characteristics  
+20 Spatial reso lution: Sensors between 5m and maximum 30m GSD (ground 
+sampling distance) shall be considered. (Remark: the acquisition pixel size is 
+linked  with the fi nal data product resolution, see Data Product requirements 
+below ). 
+Spectral resolution: Optical multispe ctral sensors used for all 
+HR_IMAGE_2015 acquisitions must have at least one independent spectral 
+band centred in each of the following spectral ranges to allow optimal 
+analysis of vegetation:  
+Gree n [0.5 -0.6μm], Red [0.6 -0.68μm], NIR [0.7 -0.9μm], SWIR1 [ 1.5-
+1.8μm]  
+Radiometric resolution: minimum bit depth of 7 -bits signal dynamic range  is 
+acceptable , higher bit depth is preferred  (e.g. 16 -bits). 
+REQ -5.3.2 -2 Areas of Interest (AOI)  
+The overall AOI of interest co mprises the EEA39 national territories to a 
+total of ~6 M km². Within this Area a number of 'large regions'  have been 
+delineated as acquisition subunits  as displayed in Annex  3. 
+The overall AOI shall be extended by a 2 nautical miles buffer for the 2014 -
+2015 acquisition campaign. From the operational availability of Sentinel -2 
+onwards , the standard territorial water of 12 nautical miles into the sea/ocean 
+shall be taken as the buffer.  
+REQ -5.3.2 -3 Tasking and Acquisition – Objectives  
+The objective of the wall -to-wall CO RE HR image acquisition is to cover 
+once or twice the entire AOI (depending of the Zone) with:  
+ The least possible number of scenes ; 
+ Coming from the least possible sensors ; 
+ Leaving only the smallest possible gaps and  
+ Being acquired as close as possible to the respective reference date.  
+Data acquisition shall start the year before the reference year.  The bulk of 
+acquisitions shall be within the reference year.  The reference year +1 is only 
+used for gap -filling, in which case those scenes would  receive an add itional 
+7 days “off date” quality bias. In that case the increase in quality and 
+coverage will determine the price . 
+REQ -5.3.2 -4 Acquisition zones  
+For the acquisition campaign, separate zones are identified in Annex 4  
+covering a range of areas indicatively correspondin g with risk levels to 
+acquire complete coverage. It comprises a Zone A for the cloudiest areas, 
+Zone B for cloud -prone areas, Zone C for the areas with statistically limited 
+cloud cover frequencies and Zone D for French DOM situated under the 
+21 tropics. The requirements for Zone C apply to Zone B and D if not specified 
+otherwise.  
+To account for differences with respect to phenological effects and 
+observation conditions (cloud probability, sun angles)  and the resulting 
+difficulties to meet the quality requirem ents, each AOI subunit  is assigned to 
+one of the following zones:  
+Zone A:  a minimum  of one cloud -free coverage (VNIR + SWIR).  
+Areas at northern latitudes and/or with very narrow phenological windows 
+and or very difficult observation conditions.  
+Zone B:  two cloud -free coverages (one VNIR + SWIR; second: preferably 
+VNIR + SWIR, but VNIR only acceptable as second choice) . 
+Areas at mid -latitudes with a high probability of suitable acquisition 
+windows during the observation periods.  
+Two target dates will be spec ified, however the completion of the second 
+coverage is considered a best effort.  
+Zone C:  two cloud -free coverages with preferably homogenous sensor 
+VNIR + SWIR acquisitions . 
+Areas at lower latitudes with extended phenological observation periods and 
+predo minantly clear sky conditions during those.  
+Two target dates will be specified and accordingly two coverages are 
+expected.  
+Zone D : one cloud -free coverage (VNIR + SWIR) . 
+Overseas areas (e.g. French DOMs) . 
+REQ -5.3.2 -5 Acquisition windows  
+The acquisition windows are def ined in Annex 5  with extended and narrow 
+windows. The starting and ending dates of these extended and narrow 
+windows can be subject to modifications with a ten day advance notice to 
+allow for extension of acquisition with an earlier start and/or later end.  
+REQ -5.3.2 -6 Acquisition strategy  
+Zone A:  One VNIR + SWIR coverage in the narrow windows of acquisition; 
+multi -mission systematic tasking over the same areas to ensure adequate 
+coverage of the cloudiest regions.  
+Purchase criteria for Zone A: As a minimum, any part of acquisition (grid) 
+with less than the high cloud coverage defined in 'Cloud Cover and Haze ' 
+requirements as long as it contributes to reaching the goal of one cloud free 
+coverage of Zone A.  
+22 Zone B:  A first and most important coverage including VNIR + SWIR shall 
+be acquired during the narrow window of acquisition, preferably through 
+systematic tasking of one sensor, complemented with speculative tasking 
+from other sensors and/or outside the narrow window but still inside the 
+extended window . 
+The second cover age shall be acquired with ideall y 6 weeks, but minimally 
+with a 4 week  time difference to the first coverage.  The second coverage can 
+be either upfront or after the first coverage, but within the extended 
+acquisition window. Preference is given to VNIR + SWIR. VNIR only is 
+acceptable for the second coverage if SWIR is not available (second 
+priority).  
+Purchase criteria for Zone B: As a minimum, any part of the acquisition grid  
+with less than the cloud coverage defined in 'Cloud Cover and Haze ' 
+requirements as long as it contributes to reaching the goal of completing 
+Zone B.  
+Zone C:  A first and most important coverage including VNIR + SWIR shall 
+be acquired during the narrow window of acquisition.  
+The second coverage shall be acquired with ideally 6 weeks, bu t minimally 
+with a 4 week time  difference to the first coverage.  The second coverage can 
+be either upfront or after the first coverage, but within the extended 
+acquisition window. Preference is given to VNIR + SWIR. VNIR only is 
+acceptable for the second c overage if SWIR is not available (second 
+priority).  
+Purchase criteria for Zone C: As a minimum, any part of the acquisition grid 
+with less than the  cloud coverage defined in 'Cloud Cover and Haze ' 
+requirements  as long as it contributes to reaching the goal  of completing 
+Zone C.  
+Zone D:  One coverage including VNIR + SWIR shall be acquired during the 
+extended window of acquisition.  
+Purchase criteria for Zone D: As a minimum, any part of the acquisition grid 
+with less than the cloud coverage defined in 'Cloud Cover and Haze ' 
+requirements  as long as it contributes to reaching the goal of one cloud free 
+coverage of Zone D.  
+REQ -5.3.2 -7 Cloud Cover  and H aze 
+The maximum cloud coverage allowed  is defined as per a grid of 25x25 km 
+and varies per Zone A, B. C or D ( see Annex 4). It is also a function of the 
+spatial distribution of the clouds on the scene (the presence of cloud spread 
+all over the scene is not ac ceptable). This  restriction aims at reducing the 
+number of scenes to be processed and ensuring processing homogeneity. See  
+Guidelines in Annex 9 . 
+23 The overall AOI comprising zones A, B, C, D will be subdivided in a 
+uniform grid of 25 km cell side. Grid cells will, according to zone 
+dependency, have a maximum allowed C loud Coverage  threshold as follows:  
+ Zone A (cloudiest):  CC 2 0% max ; 
+ Zone B (cloud prone): CC 10%  max; 
+ Zones C/D (limited cloud): CC 5% max.  
+Scenes comprising haze shall be flagged accordingly for further 
+consideration, and are subject to rejection by the Copernicus service 
+coordinator, in consultation with the serv ice providers implementing the land 
+services.  
+Presence of perennial snow and glaciers is allowed.  However, temporary 
+snow, saturated pixels and data gaps have to be included for the above listed 
+calculation of the max. allowed percentages.  
+REQ -5.3.2 -8 Illumination/Rad iometry  
+The sun elevation angle shall be higher than 20° to ensure sufficient 
+illumination  and to minimize the effect of shadows . 
+The off -nadir viewing angle shall be less than 2 5°. 
+Saturated pixels, snow (excl. perennial), clouds and areas with a signal t o 
+noise ratio of less than 50:1 (at 35% ground reflectance) will count as data 
+gaps.  
+REQ -5.3.2 -9 Selection and rejection of scenes  
+The data provider must assess the quality of the datasets.  
+It is up to the service coordinator, in consultation with the service provider s 
+to review the scenes proposed by the CCMEs at the end of the acquisition 
+campaign on their appropriateness for further processing.  
+REQ -5.3.2 -10 Processing  Levels  
+The scenes shall be provided with two different levels of processing:  
+Level2 (ortho -rectified to ETRS89/E TRS-LAEA)) : 
+ Ortho-rectified at -sensor radiance values (resampled using cubic 
+convolution method) ; 
+ GCP file with respect to reference data set ; 
+ INSPIRE compliant m etadata . 
+Level1 (system correction) : 
+24  System corrected and at -sensor radiometric and geometric calibrated 
+data; 
+ Ortho layer, (i.e. x, y coordinates (ETRS89) ) INSPIRE compliant 
+metadata . 
+REQ -5.3.2 -11 Radiometric and atmospheric correction  
+A cascade approach may be considered for radiometric and atmospheric 
+corrections in decreasing order of priority as follows:  
+(a) Atmospheric corrected Surface Reflectance (or Bottom of Atmosphere 
+(BOA)), 16 -bit data. However this option requires a well-established  
+method. Atmospheric bands in Sentinel -2 will allow for that, entailing 
+that this option only be considered from Sentinel -2 onwards.  
+(b) Top of Atmosphere (TOA) planetary reflectances, 16 -bit data.  Sensor 
+specific in band  solar irradiance values (ESUN) shall be provided.  
+(c) ESUN corrected but not solar elevation corrected.  
+(d) Radiometric calibrated data with calibration parameters enab ling the 
+conversion of image digital numbers (DN) into spectral radiance 
+(W/m2/sr/um) . Solar spectral irradiances within each spectral band 
+and the solar elevation for each scene  are required to  convert the 
+image DNs into TOA (Top Of Atmosphere) reflectanc e values . 
+REQ -5.3.2 -12 Ortho -rectification  
+ Ortho ready processing shall include basic corrections such as 
+rectilinear  geometry, radiometric distortion (i.e. source data) . 
+ Ortho -rectification has to be full -parametric or making use of RPC 
+functions and shall be based on  the EU -DEM. In case a different DEM 
+is used it must be supplied with the data.  
+ European projection is required for all coverage ETRS89, LAEA 
+(EPSG code 3035). National projection is optional and may be 
+requested on a case by case basis.  
+ Grid alignment: Ge oTIFF key: The GeoTIFF key 
+"GTRasterTypeGeoKey" shall have the value 1, corresponding to 
+"RasterPixelIsArea".  
+ Pixel alignment: The values of the coordinates for the upper -left 
+corner (x and y) of the upper -left pixel of an image dataset shall be an 
+integer  multiple of the pixel size (resolution) in the corresponding 
+direction (x and y).  
+ Ortho -rectification accuracy:  
+o Relative accuracy (2014 -2015): Reference less than 1 pixel 
+difference with HR_IMAGE_2012.  
+25 o Absolute accuracy (from S2 onwards): Ortho -rectificat ion must 
+be accurate to less than 0.75 pixel size equivalent RMSE and a 
+max displacement of less than 1.5 pixels in no more than 0.1% 
+of any 50x50sqkm area within the AOI with respect to the 
+reference data set.  
+REQ -5.3.2 -13 Data Products  
+Optical multispectral HR data p roducts with a 20 m pixel resolution. GSD of 
+the sensor shall be no worse than 1. 5 times the product raster width . 
+From the operational availability of Sentinel -2 onwards, HR products will be 
+delivered at 10 m pixel resolution.  
+Level 2 products shall be pr ovided according to standard and harmonised 
+format specifications ( see Annex 2 ). 
+REQ -5.3.2 -14 Delivery  
+Zone A : After selection , delivery will be made no later than 60 days after 
+selection.  
+Zone B : To the extent that systematic tasking has been applied for a sensor 
+over Zone B, the same delivery requirement shall be maintained as for zone 
+A. For non -systematic acquisitions d elivery shall be  made  on a continuous 
+basis, but no later than 60 days after the end of the extended acquisition 
+window s. 
+Zones C:  Delivery shall be made on a continuous basis, but no later than 60 
+days after the end of the extended acquisition window s. 
+For all zones, delivery shall be made per large scale regions (acquisition 
+subunits defined in Annex 3 ). 
+REQ -5.3.2 -15 Licensing  (for datasets with restrictive licen sing conditions)  
+Multi -user DOWNLOAD and VIEW licences shall be acquired to cover as a 
+baseline all relevant activities of users in [Copernicus Services ], 
+[Union_Inst ], [Union_Research _Proj ects] and [Public_Authorities].  
+[INT_ORG_NGO ] and [Public]  shall ha ve access in DISCOVERY mode.  
+VIEW mode should however be considered an option towards 
+[INT_ORG_NGO ] and will be used if affordable . 
+5.3.3.  Optical VHR multispectral and panchromatic coverage over Europe 
+(VHR_IMAGE_2015)  
+Applications  
+Land local component applicati ons for hotspots, i.e. specific areas of interest 
+at pan -European level (EEA39) (land cover over riparian zones for the 
+purpose of biodiversity monitoring, monitoring of coastal areas, risk areas, 
+26 protected areas (Natura 2000 sites), Land Parcel Identifica tion…) and at 
+national level . 
+Land local component applications over hotspots at pan -European level 
+(Urban Atlas, Land Parcel Identification…) and at national level . 
+REQ -5.3.3 -1 Sensor acquisition characteristics  
+Spatial resolution: pixel sizes up to maximum 2m shall be considered. 
+(Remark: the acquisition pixel size is linked with the final data product 
+resolution, (see. Data Product requirements below )). 
+Spectral resolution: Optical multispectral sensors used for all 
+VHR_IMAGE_2015 acquisitions must have at least one  independent 
+spectral band centred in each of the following spectral ranges to allow 
+optimal analysis of vegetation:  
+Green [0.5 -0.6μm], Red [0.6 -0.68μm], NIR [0.7 -0.9μm] . 
+Panchromatic [0.45 -0.85μm] . 
+SWIR1 [ 1.5-1.8μm] is considered optional.  The availabilit y of sensor 
+capacities allowing for systematic inclusion without jeopardising other 
+requirements shall trigger an investigation by ESA on the feasibility of 
+revision of specifications to include SWIR.  
+Radiometric resolution: minimum bit depth of 7 -bit signal dynamic range  is 
+acceptable, higher bit depth is preferred , e.g. 16 -bit depth.  
+REQ -5.3.3 -2 Areas of Interest (AOI)  
+The overall AOI of interest comprises the EEA39 national territories to a 
+total of ~6 M km² . 
+The overall AOI shall be extended by a 2 nautical miles b uffer.  
+REQ -5.3.3 -3 Tasking and Acquisition  
+Objectives:  
+The objective of the wall -to-wall CORE VHR image acquisition is to cover 
+once the entire AOI with:  
+ The least possible number of scenes ; 
+ Coming from the least possible sensors ; 
+ Leaving only the smallest possible g aps and  
+ Being acquired as close as possible to the respective reference date.  
+Data acquisition shall start the year before the reference year.  The bulk of 
+acquisitions shall be within the reference year.  The reference year +1 is only 
+used for gap -filling,  in which case those scenes will receive an additional 7 
+27 days “off date” quality bias. In that case the increase in quality and coverage 
+will determine the price . 
+REQ -5.3.3 -4 Acquisition windows  
+The acquisition windows are defined in Annex 5  with extended and  narrow 
+windows. The starting and ending dates of these extended and narrow 
+windows can be subject to modifications with a ten day  advance notice to 
+allow for extension of acquisition with an earlier start and/or later end.  
+REQ -5.3.3 -5 Acquisition  Strategy  
+The acquisition stra tegy shall take into account the knock -on effects of 
+scattered footprint patterns (i.e. different sensors, different years, different 
+seasons), having a multiplicative effect on the coherence and size of working 
+units as a collection of images with suffici ently stable characteristics to 
+automate classification processes on single selection of areas. This entails 
+optimisation of series of acquisitions with regard to the areas as defined in  
+Annex 4 . 
+REQ -5.3.3 -6 Cloud Cover and Haze  
+The maximum cloud coverage allowed per scene is function of the swath of 
+the sensor and the percentage of cloud de fined per Zone A, B,  C or D ( see. 
+Annex 4) . The maximum cloud coverage allowed per scene is also function  
+of the spatial distribution of the clouds on the scene (the presence of clo ud 
+spread all over the scene is not acceptable). This restriction aims at reducing 
+the number of scenes to be processed and ensuring processing homogeneity.  
+The overall AOI comprising zones A, B, C, D will be subdivided in a 
+uniform grid of side 25 km. Gri d cells will, according to zone dependency, 
+have a maximum allowed C loud Coverage (CC)  threshold as follows:  
+ Zone A (cloudie st): CC 20% max ; 
+ Zone B (cloud prone): CC 10% max ; 
+ Zones C/D (limited cloud): CC 5% max.  
+Scenes comprising haze shall be flagged acc ordingly for further 
+consideration, and are subject to rejection by the Copernicus service 
+coordinator, in consultation with the service providers implementing the land 
+services.  
+Presence of perennial snow and glaciers is allowed.  However, temporary 
+snow, saturated pixels and data gaps have to be included for the abov e listed 
+calculation of the maximum  allowed percentages.  
+REQ -5.3.3 -7 Illumination/Radiometry  
+The sun elevation angle shall be higher than 20° (preferable higher than 23°) 
+to ensure sufficient illumination  and to minimize the effect of shadows . 
+28 The off -nadir viewing angle shall be less than 30°. 
+Saturated pixels, snow (excl. perennial), clouds and areas with a signal to 
+noise ratio of less than 50:1 (at 35% ground reflectance) will count as data 
+gaps.  
+REQ -5.3.3 -8 Select ion and rejection of scenes  
+The data provider (CCME) must assess the quality of the datasets.  
+The service coordinator, in consultation with the service providers, maintains  
+the right to reject scenes that are not suited for further processing.  
+REQ -5.3.3 -9 Processing l evels  
+The scenes shall be provided with two different levels of processing:  
+Level 2  (ortho -rectified to ETRS89/ETRS -LAEA)) : 
+ Ortho-rectified at -sensor radiance values (resampled using cubi c 
+convolution method);  
+ GCP file wi th respect to reference data set;  
+ INSPIRE compliant m etadata . 
+Level 1  (system correction) : 
+ System corrected and at -sensor radiometri c and geometric calibrated 
+data;  
+ Ortho layer, (i.e. x, y coordinates (ETRS89 ) INSPIRE compliant 
+metadata . 
+REQ -5.3.3 -10 Radiometric and atmospheric correction  
+A cascade appr oach may be considered for radiometric and atmospheric 
+corrections in decreasing order of priority as follows:  
+(a) Atmospheric corrected Surface Reflectance (or Bottom of Atmosphere 
+(BOA)), 16 -bit data. However this option requires a well-established  
+method. A tmospheric bands in Sentinel -2 will allow for that, entailing 
+that this option only be considered from Sentinel -2 onwards.  
+(b) Top of Atmosphere (TOA) planetary reflectances, 16 -bit data.  Sensor 
+specific in band  solar irradiance values (ESUN) shall be provided . 
+(c) ESUN corrected but not solar elevation corrected.  
+(d) Radiometric calibrated data with calibration parameters enabling the 
+conversion of image digital numbers (DN) into spectral radiance 
+(W/m2/sr/um) . Solar spectral irradiances within each spectral band 
+and the solar elevation for each scene  are required to  convert the 
+image DNs into TOA (Top Of Atmosphere) reflectance values . 
+29 REQ -5.3.3 -11 Ortho -rectification  
+ Ortho ready processing shall include basic corrections such as 
+rectilinear  geometry, radiometric distortion (i.e. source data) . 
+ Ortho -rectification has to be full -parametric or making use of RPC 
+functions and shall be based on the EU -DEM. In case a different DEM 
+is used it must be supplied with the data.  
+ European projection is required for all coverage ETRS89, LAEA 
+(EPSG code 3035). National projection is optional and may be 
+requested on a case by case basis.  
+ Grid alignment: GeoTIFF key: The GeoTIFF key 
+"GTRasterTypeGeoKey" shall have the value 1, corresponding to 
+"RasterPixelIsArea".  
+ Pixel alignment: The values of the  coordinates for the upper -left 
+corner (x and y) of the upper -left pixel of an image dataset shall be an 
+integer multiple of the pixel size (resolution) in the corresponding 
+direction (x and y). Ortho -rectification processing:  
+ Ortho -rectification accuracy:  
+o Relative accuracy (2014 -2015): Reference less than 1 pixel 
+difference with VHR_IMAGE_2012.  
+o Absolute accuracy (from Sentinel -2 onwards): Ortho -
+rectification must be accurate to less than 0.75 pixel size 
+equivalent RMSE and a max displacement of less than 1 .5 
+pixels in no more than 0.1% of any 50x50sqkm area within the 
+AOI with respect to the reference data set.  
+REQ -5.3.3 -12 Data Products  
+Optical multispectral VHR 2 data products . 
+Multispectral, VNIR sensors must be used for all acquisitions to allow 
+optimal analysis of v egetation.  
+Panchromatic VHR1 data products  for higher resolution application.  
+This coverage should use both VHR multispectral and pa nchromatic scene 
+possibly in a B undle Data Product.  
+Level 2 products shall be provided according to standard and harmonised 
+format specifications ( see. Annex 2 ). 
+REQ -5.3.3 -13 Delivery  
+For all zones, the s cenes shall be delivered per large scale r egions ( Annex 
+3). 
+30 Delivery shall be  made no later than 9 0 days after the end of the extended 
+acquisition window s. 
+When a  selection  by the user is n eeded,  delivery will be made on continuous 
+basis  no later than 90 days after selection.  
+REQ -5.3.3 -14 Licensing  
+Multi -user licences shall be acquired to cover as a baseline for [Copernicus 
+Services ], [Union_Inst ], [Union_Research _Proj ects] and as option for 
+[Public_Auth orities] (DOWNLOAD service). [INT_ORG_NGO ] and 
+[Public]  should have access in DISCOVERY mode. VIEW mode should 
+however be considered an option towards [Public] and will be used if 
+affordable  
+5.3.4.  European optical MR1 composites (MR_IMAGE_2015)  
+Application  
+Pan-European land services and EFFIS .  
+Intra-seasonal time series are essential for the production of High Resolution 
+Layers (HRL) on land cover characteristics by the Union, EEA and Member 
+States, in particular for vegetation related discrimination of characte ristics, 
+such as grasslands or semi -natural vegetation.  
+These requirements could also partially meet EFFIS requirements . 
+REQ -5.3.4 -1 Sensor acquisition characteristics  
+Spatial resolution: Sensors between 30m and maximum 60m GSD shall be 
+considered. (Remark: the acquis ition pixel size links with the fi nal data 
+product resolution, see Data Products  below) . 
+Spectral resolution: Optical multispectral sensors used for all 
+MR_IMAGE_2015 acquisitions must have at least one independent spectral 
+band centred in each of the foll owing spectral ranges to allow optimal 
+analysis of vegetation:  
+Green [0.5 -0.6μm], Red [0.6 -0.68μm], NIR [0.7 -0.9μm], SWIR1 [ 1.5-
+1.8μm] . 
+Radiometric resolution: Minimum bit depth of 7 -bit signal dynamic range is 
+mandatory, a maximum of up to 16 -bit depth can be considered.  
+REQ -5.3.4 -2 Areas of Interest (AOI)  
+The overall AOI of int erest comprises the EEA39 national territories to a 
+total of ~6 M km² . 
+The overall AOI shall be extended by a 12 nautical miles buffer (territorial 
+waters).  
+REQ -5.3.4 -3 Tasking and Acquisition  
+31 Objectives:  
+The objective of the wall -to-wall CORE  MR image acquisition is to cover 
+minimum 3, better 5 and optimally 8 monthly composites of  the entire AOI 
+with:  
+ The least possible number of scenes ; 
+ Coming from the least possible sensors ; 
+ Leaving only the smallest possible gaps and  
+Data acquisition shall start the year before t he reference year.  The bulk of 
+acquisitions shall be within the reference year.  The reference year +1 is only 
+used for gap -filling, in which case those scenes will receive an additional 7 
+days “off date” quality bias. In that case the increase in quality a nd coverage 
+will determine the reimbursement.  
+REQ -5.3.4 -4 Acquisition  windows  
+March to October within the same year.  
+In order of priority, composites over the following subgroups of months are 
+important:  
+1. June-July 
+2. April -May 
+3. August -September  
+4. March  
+5. October  
+Ideally, the area to be covered by the MR composites shall be temporally and 
+spatially synchronised with HR_IMAGE_2015.  
+REQ -5.3.4 -5 Cloud Cover  and H aze 
+Cloud cover shall be excluded from any monthly composite.  
+Presence of perennial snow and glaciers is allowed. However, temporar y 
+snow, saturated pixels and data gaps have to be excluded from the monthly 
+composites.  
+REQ -5.3.4 -6 Illumination/Radiometry  
+The sun elevation angle shall be higher than 20° (preferable higher than 23°) , 
+to ensure sufficient illumination  and to minimize the effect of s hadows . The 
+off-nadir viewing angle shall be less than 25°.  
+32 Saturated pixels, snow (excl. perennial), clouds and areas with a signal to 
+noise ratio of less than 50:1 (at 35% ground reflectance) will count as data 
+gaps.  
+REQ -5.3.4 -7 Selection and rejection of scenes  
+The data provider must assess the quality of the datasets.  
+REQ -5.3.4 -8 Processing  Levels  
+The scenes shall be provided with two different levels of processing:  
+Level 2  (ortho -rectified to ETRS89/ETRS -LAEA)) : 
+ Ortho-rectified at -sensor radiance values (resampled using cubi c 
+convolution method);  
+ GCP file wi th respect to reference data set;  
+ INSPIRE compliant m etadata . 
+Level  1 (system correction) : 
+ System corrected and at -sensor radiometric and geometric calibrated 
+data; 
+ Ortho layer, (i.e. x, y coordinates (ETRS89) for each pixe l centre ; 
+ INSPIRE compliant m etadata . 
+REQ -5.3.4 -9 Radiometric and atmospheric correction  
+A cascade approach may be considered for radiometric and atmospheric 
+corrections in decreasing order of priority as follows:  
+(a) Atmospheric corrected Surface Reflectance (or Bottom o f Atmosphere 
+(BOA)), 16 -bit data. Howe ver this option requires a well -established 
+method. Atmospheric bands in S2 will allow for that, entailing that 
+this option only be considered from S2 onwards.  
+(b) Top of Atmosphere (TOA) planetary reflectances, 16 -bit dat a. Sensor 
+specific in band  solar irradiance values (ESUN) shall be provided.  
+(c) ESUN corrected but not solar elevation corrected.  
+Radiometric calibrated data with calibration parameters enabling the 
+conversion of image digital numbers (DN) into spectral radia nce 
+(W/m2/sr/um) . Solar spectral irradiances within each spectral band and the 
+solar elevation for each scene  are required to  convert the image DNs into 
+TOA (Top Of Atmosphere) reflectance values . 
+REQ -5.3.4 -10 Ortho -rectification  
+33  Ortho ready processing shall include ba sic corrections such as 
+rectilinear  geometry, radiometric distortion (i.e. source data) . 
+ Ortho -rectification has to be full -parametric or making use of RPC 
+functions and shall be based on the EU -DEM. In case a different DEM 
+is used it must be supplied with  the data.  
+ European projection is required for all coverage ETRS89, LAEA 
+(EPSG code 3035).  
+ Grid alignment: GeoTIFF key: The GeoTIFF key 
+"GTRasterTypeGeoKey" shall have the value 1, corresponding to 
+"RasterPixelIsArea".  
+ Pixel alignment: The values of the co ordinates for the upper -left 
+corner (x and y) of the upper -left pixel of an image dataset shall be an 
+integer multiple of the pixel size (resolution) in the corresponding 
+direction (x and y). Ortho -rectification processing:  
+ Ortho -rectification accuracy:  
+o Absolute accuracy: Ortho -rectification must be accurate to less 
+than 0.75 pixel size equivalent RMSE and a max displacement 
+of less than 1.5 pixels in no more than 0.1% of any 50x50 km2 
+area within the AOI with respect to the reference data set.  
+REQ -5.3.4 -11 Products  
+Optical Monthly MR 1 composites  multispectral comprising VIS, NIR, 
+SWIR bands. Optical multispectral MR products shall have a 60 m pixel 
+resolution. Geometric resolution shall be no worse than 1.8 times the pixel 
+size of the sensor acquisition characteristics . 
+Level 2 products shall be provided according to standard and harmonised 
+format specifications  (see. Annex 2 ). 
+REQ -5.3.4 -12 Delivery  
+Composites shall be provided  60 days after the end of the acquisition month.  
+REQ -5.3.4 -13 Licensing  
+Multi -user DOWNLOAD and VIEW licences shall be ac quired to cover as a 
+baseline all relevant activities of users in [Copernicus Services ], 
+[Union_Inst ], [Union_Research _Proj ects] and [Public_Authorities].  
+[INT_ORG_NGO ] and [Public]  shall have access in DISCOVERY mode.  
+VIEW mode should however be considere d an option towards 
+[INT_ORG_NGO ] and will be used if affordable . 
+REQ -5.3.4 -14 Miscellaneous  
+34 Priority : The revisit cycle (n umber  of monthly composites) has a higher 
+priority than the licence extension to provide a view service.  
+ 
+5.4. Dataset Requirements for Copernicus Glob al land  
+In view of the large volume of data needed by the Copernicus Global Land  
+and the variety of requested data , this service component will rely heavily on 
+data from the Sentinel  mission s as soon as available.  
+5.4.1.  Optical worldwide HR1 coverage (HR1 _OPTIC AL_GLOBAL )  
+Main application: Global Land for monitoring protected areas and validation 
+of biophysical products . 
+This need is expected to be covered by Sentinel -2. 
+REQ -5.4.1 -1 Sensor acquisition characteristics  
+Spatial resolution: HR1 (4m < x <= 1 0m). 
+Spectral resolut ion: Optical multispectral sensors with visible and near infra -
+red (VNIR ); short wave infra -red (SWIR ). 
+SWIR bands should be preferably at the same spatial resolution than the 
+VNIR bands . 
+Radiometric accuracy : < 5% absolute . 
+Radiometric resolution: 12 bits per pixel . 
+REQ -5.4.1 -2 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+AOI in km² :149248300.  
+Among which : 15 000km² (Protected areas in Bolivia for PACSBIO) + at 
+least 100  000 km² for validation sites . 
+Non-contiguous AOI.  
+REQ -5.4.1 -3 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+90 days lead time . 
+35 REQ -5.4.1 -4 Processing  Levels  
+With atmospheric correction . 
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular latitude/longitude grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error threshold [m] required on product) shall be 1/3 resol ution . 
+REQ -5.4.1 -5 Data Products  
+Composite characteristics: single date.  
+REQ -5.4.1 -6 Delivery  
+The data should be delivered in normal mode . 
+REQ -5.4.1 -7 Licensing  (for datasets with restrictive licensing conditions)  
+N/A 
+5.4.2.  Optical HR2 worldwide coverage (HR2_OPTICAL_GLOBAL)  
+Main application: Glob al Land for monitoring protected areas . 
+This need is expected to be covered by Sentinel -2. 
+REQ -5.4.2 -1 Sensor acquisition characteristics  
+Spatial resolution: HR2 (10m < x <= 3 0m). 
+Spectral resolution: Optical multispectral sensors with visible and near infra -
+red ( VNIR ); short wave infra -red ( SWIR ); middle wave infra -red ( MIR); 
+thermal infra -red (TIR) . 
+SWIR and MIR bands should be preferably at the same spatial resolution 
+than the VNIR bands . TIR is a suitable band, it can be at a lower resolution.  
+Radiometric accuracy : < 5% absolute . 
+Radiometric resolution: 12 bits per pixel . 
+REQ -5.4.2 -2 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+Amount in km²: at least 173 000km² (protected areas in Bolivia) + 3 000 000 
+km² (protected areas in Africa) . 
+36 Non-contiguous AOI.  
+REQ -5.4.2 -3 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+10 days lead t ime. 
+REQ -5.4.2 -4 Processing  Levels  
+With  atmospheric correction . 
+Maximum cloud coverage: 20% . 
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular latitude/longitude grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error  threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.4.2 -5 Data Products  
+Composite characteristics: single date, daily composite, monthly composite . 
+REQ -5.4.2 -6 Delivery  
+The data should be delivered in normal mode . 
+REQ -5.4.2 -7 Licensing  (for datasets with restrictive licensing conditions)  
+N/A 
+5.4.3.  Optical MR2 worldwide coverage ( MR_OPTICAL_GLOBAL )  
+Main applications: Global Land and EFFIS . 
+REQ -5.4.3 -1 A worldwide coverage in MR2 data with imaging multi -spectral 
+radiometers shall be provided for the production of bio -geophysical 
+parameters.  
+REQ -5.4.3 -2 Senso r acquisition characteristics  
+Spatial resolution: MR2 (100m < x <= 300m) . 
+Spectral resolution: Optical multispectral sensors with visible and near infra -
+red (VNIR ); short wave infra -red (SWIR ); middle wave infra -red (MIR). 
+SWIR bands should be preferably at the same spatial resolution than the 
+VNIR bands . 
+Radiometric accuracy should be equal to  2% absolute , 0.1% relative . 
+37 Radiometric resolution: 10 bits per pixel . 
+REQ -5.4.3 -3 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° So uth 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+AOI in km² :149248300.  
+Non-contiguous AOI.  
+REQ -5.4.3 -4 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+90 days lead time . 
+REQ -5.4.3 -5 Processing  Levels  
+Both w ith and without atmospheric correction . 
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular latitude/longitude grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square E rror threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.4.3 -6 Data Products  
+Composite characteristics: single date; daily composite; weekly composite; 
+10 days composite.  
+REQ -5.4.3 -7 Delivery  
+The data should be delivered within 24h after the acquisition (Fast24h) . 
+REQ -5.4.3 -8 Licensing  (for datasets with restrictive licensing conditions)  
+Authorised users for DOWNLOAD service are [Copernicus Services ], 
+[Union_Inst ] and [Union_Research _Proj ects]. In addition [Publ_Auth] , 
+[INT_ORG_NGO ] and [Public]  should have access to DISCOVERY 
+service.  
+5.4.4.  Optical LR worldwide coverage  (LR_OPTICAL_GLOBAL)  
+Main applications: Global Land . 
+38 REQ -5.4.4 -1 Worldwide coverage in LR data with imaging multi -spectral radiometers 
+shall be provided for the production of biogeophysical parameters . 
+REQ -5.4.4 -2 Sensor acquisition characteri stics 
+Spatial resolution: LR (x > 300m) . 
+Spectral resolution: Optical multispectral sensors with visible and near infra -
+red ( VNIR ); short wave infra -red ( SWIR ); middle wave infra -red ( MIR); 
+thermal infra -red (TIR) . Characteristics: VIS (min: blue and red),  NIR (min 1 
+channel) and SWIR (min 1 channel). Target: TIR (3 channels: 1 in the 3.5 -
+5.5 micron window, 2 in the 8 -14 micron window).  
+VIS, SWIR, TIR bands in the field of view ( IFOV ) should be similar. SWIR, 
+TIR bands IFOV shall not be larger than 2 times the VIS IFOV.  
+Radiometric accuracy should be equal to  2% absolu te, 0.1% relative . 
+Radiometric resolution: 10 bits per pixel . 
+REQ -5.4.4 -3 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+AOI in km²:149248300.  
+Non-contiguous AOI.  
+REQ -5.4.4 -4 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+90 days lead time . 
+REQ -5.4.4 -5 Processing  Level s 
+Single day passes (satellite orbits) shall be provided as TOA reflectance. 
+Daily and multi -date syntheses shall be provided as TOA and/or TOC 
+reflectance . 
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Footprint of the IFOV across the whole swath > 1/3km. T arget: 1km +/ - 25% 
+- projected over a regular latitude/longitude grid, - pixel size = 1/112° . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error threshold [m] required on product) shall be 1/3 resolution . 
+39 REQ -5.4.4 -6 Data Products  
+Compos ite characteristics: single date; daily composite; weekly composite; 
+10 days composite  (from 1st to 10th from 11th to 20th, and from 21st to end 
+of the month) . 
+REQ -5.4.4 -7 Delivery  
+The data should be delivered within 24h after the acquisition (Fast24h) . 
+REQ -5.4.4 -8 Licensing  (for datasets with restrictive licensing conditions)  
+Authorised users for DOWNLOAD service are [Copernicus Services ], 
+[Union_Inst ], and [ Union_Research _Proj ects]. In addition [Publ_Auth], 
+[INT_ORG_NGO ] and [Public]  should have access to DISCOVERY 
+service.  
+5.4.5.  SAR MR1 Worldwide coverage (MR1_SAR_GLOBAL)  
+Main applications: Global Land . 
+This needs is expected to be covered by sentinel -1. 
+REQ -5.4.5 -1 Sensor acquisition characteristics  
+SAR.  
+Spatial resolution: MR1.  
+Frequency band : C. 
+Dual polarimetry: HH-HV, VV -HV. 
+InSAR (Interfero metry) . 
+Radiometric accuracy should be equal to  1dB. 
+Radiometric resolution: 8 bits per pixel . 
+REQ -5.4.5 -2 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land mas ses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+AOI in km²:149248300 . 
+Non-contiguous AOI.  
+REQ -5.4.5 -3 Tasking and Acquisition  
+Standard acquisition . 
+40 Multiple  sensors can be used . 
+90 days lead time . 
+REQ -5.4.5 -4 Processing  Levels  
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.4.5 -5 Data Products  
+Daily  composite.  
+REQ -5.4.5 -6 Delivery  
+The data should be delivere d within 24h after the acquisition (Fast24h) . 
+REQ -5.4.5 -7 Licensing  (for datasets with restrictive licensing conditions)  
+N/A 
+5.4.6.  SAR LR Worldwide coverage (LR_SAR_GLOBAL)  
+Main applications: Global Land  
+This need is expected to be covered by Ascat data on Metop satellites.  
+REQ -5.4.6 -1 Sensor acquisition characteristics  
+Worldwide coverage  SAR.  
+Spatial resolution: LR. 
+Frequency band  C. 
+Single  polarimetry: VV.  
+No InSAR (Interferometry) . 
+Radiometric accuracy should be equal to  0.6 dB. 
+Radiometric resolution: 8 bits per pixel . 
+REQ -5.4.6 -2 Areas of Inte rest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+41 AOI in km²:149248300 . 
+Non-contiguou s AOI.  
+REQ -5.4.6 -3 Tasking and Acquisition  
+Standard acquisition . 
+Single  sensors should  be used . 
+90 days lead time . 
+REQ -5.4.6 -4 Processing  Levels  
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional R oot Mean 
+Square Error threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.4.6 -5 Data Products  
+Daily composite.  
+The SSM (surface soil moisture) products derived from Metop/Ascat are 
+also required.  
+REQ -5.4.6 -6 Delivery  
+The data should be delivered within 24h after the  acquisition (Fast24h) . 
+REQ -5.4.6 -7 Licensing  (for datasets with restrictive licensing conditions)  
+N/A 
+5.4.7.  SAR Altimetry MR2 Worldwide coverage (MR2_ALTIMETRY ) 
+This need is expected to be covered by the SAR Radar Altimeter (SRAL) of 
+Sentinel -3, and by the POSEIDON/JASON a ltimeter data series . 
+REQ -5.4.7 -1 Sensor acquisition characteristics  
+SAR  
+Spatial resolution: MR 2 . 
+Frequency band s: Ku and C.  
+Radiometric resolution: 8 bits per pixel . 
+REQ -5.4.7 -2 Areas of Interest (AOI)  
+Worldwide coverage: ta rget: all land surfaces from 90° North to 90° South 
+and from 180 ° West to 180 ° East.  
+42 Minimum basel ine: all land masses between 75° North and 56° South and 
+between 180 ° West and 180 ° East . 
+AOI in km²:149248300 . 
+Non-contiguous AOI.  
+REQ -5.4.7 -3 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+90 days lead time . 
+REQ -5.4.7 -4 Processing  Levels  
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.4.7 -5 Data P roducts  
+Daily composite.  
+REQ -5.4.7 -6 Delivery  
+The data should be delivered within 24h after the acquisition (Fast24h) . 
+REQ -5.4.7 -7 Licensing  (for datasets with restrictive licensing conditions)  
+N/A 
+5.5. Fixed / CORE Dataset requirements for marine,  atmosphere, climate 
+change applicati ons 
+Remarks:  
+ Only data provided within stringent timeliness requirements  (cut-
+off) can be used to enter data assimilation and data monitoring 
+procedures  in pre -operational and operational systems and contribute 
+to the forecast production.  
+ The domain covere d is global, except in the case of geostationary 
+satellites, which have only regional coverage.  
+ To ensure tr ansparency and traceability, a  requirement imposed on 
+data used for the production of climate reanalyses is that the original 
+input observations, to gether with metadata about uncertainties, can 
+be made available for research purposes without restriction. To avoid 
+43 complex data policy issues , only free-of-charge input data are 
+therefore used for the main current climate reanalysis production.  
+5.5.1.  Sea Ice Mo nitoring  MR1 SAR (MR1_SAR_ SEA_ICE ) 
+These requirements shall be covered by Sentinel data.  
+Main applications: sea ice monitoring to support marine activit ies and data 
+assimilation for ice and weather forecast models.  
+REQ -5.5.1 -1 Sensor acquisition characteristics  
+SAR.  
+Spatial resolution: MR1.  
+Frequency band : L, C. 
+Dual polarimetry: HH-HV. 
+Radiometric resolution: 32 bits per pixel . 
+REQ -5.5.1 -2 Areas of Interest (AOI)  
+European Arctic, Greenl and waters, Svalbard, Barents Sea and Kara Sea.  
+AOI changes during sea ice se ason. 
+Non-contiguo us AOI.  
+REQ -5.5.1 -3 Tasking and Acquisition  
+Priority  acquisition . 
+REQ -5.5.1 -4 Processing  Levels  
+Geometric processing:  GCP points showing x,y.lat,long . 
+REQ -5.5.1 -5 Data Products  
+Daily . 
+Total area covered at least once per day. Preferable more.  
+REQ -5.5.1 -6 Delivery  
+The data should be delivered : NRT1h (Optimal); NRT3h  (latest ). 
+REQ -5.5.1 -7 Licensing  (for datasets with restrictive licensing conditions)  
+Authorised users for DOWNLOAD service are [Copernicus Services], 
+[Union_Inst], and [ Union_Research_Projects]. In addition [Publ_Auth], 
+[INT_ORG_NGO] and [Public] shall  have access to DISCOVERY 
+service.  
+44 5.5.2.  Global/Regional Systematic Ocean Colour data (CORE_012)  
+Main purposes:  
+a. Global/Regional Systematic Ocean colour data  for marine 
+applications ; 
+b. Global and regional Ocean colour, continuous tracking over oceans , 
+reprocessing  of archived data for climatic application, when 
+improved algorithms or auxiliary data become available.  
+REQ -5.5.2 -1 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.3.  Systematic Global and Regional sea surface temperature data 
+(CORE_013)  
+Main purposes:  
+a. Marine Requirements: Global and regional sea surface temperature, 
+continuous tracking over oceans ; 
+b. Reprocessing of archived data for climatic  application, when 
+improved algorithms or auxiliary data become available . 
+REQ -5.5.3 -1 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service ).  
+5.5.4.  Systematic Global and Regional Altimeter / Sea Level data 
+(CORE_014)  
+Main purposes:  
+a. Marine Requirements: Global and regional sea level, continuous 
+tracking over oceans ; 
+b. Reprocessing of archived data for climatic application, when 
+improved algorithms or  auxiliary data become available . 
+REQ -5.5.4 -1 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.5.  Data for aerosol monitoring and foreca sting (CORE_017)  
+Main purposes: Atmospheric composition analysis and forecast. Data to be 
+used for assimilation of aerosol optical depth for near -real-time atmospheric 
+composition analysis and forecast and for reanalyses . 
+REQ -5.5.5 -1 Timeliness requirements shall have  precedence over amount of data . 
+45 REQ -5.5.5 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.6.  Data for sulphur dioxide (SO2)  atmosphe ric composition  monitoring 
+and forecasting (CORE_018)  
+REQ -5.5.6 -1 Timeliness requirements shall have precedence over amount of data.  
+REQ -5.5.6 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Or ganisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.7.  Data for formaldehyde (HCHO) atmospheric composition 
+monitoring and forecasting (CORE_ 019) 
+REQ -5.5.7 -1 Timeliness requirements shall have precedence over amount of data.  
+REQ -5.5.7 -2 Authorised users are [Copernicus_Services], [Unio n_Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.8.  Data for Ozone (O3) atmospheric composition monitoring and 
+forecasting (CORE_ 020) 
+REQ -5.5.8 -1 Timeliness requirements shall have prec edence over amount of data.  
+REQ -5.5.8 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.9.  Data for Carbon Monoxide (CO) atmospheric co mposition 
+monitoring and forecasting (CORE_ 021) 
+REQ -5.5.9 -1 Timeliness requirements shall have precedence over amount of data.  
+REQ -5.5.9 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisa tion_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.10.  Data for Carbon Dioxide (CO2) atmospheric composition 
+monitoring and forecasting (CORE_ 022) 
+REQ -5.5.10 -1 Timeliness requirements shall have precedence over amount of data.  
+REQ -5.5.10 -2 Authorised users are [Copernicus_Services], [Union _Institutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.11.  Data for Methane (CH4) atmospheric composition monitoring and 
+forecasting (CORE_ 023) 
+REQ -5.5.11 -1 Timeliness requirements shall have preced ence over amount of data.  
+46 REQ -5.5.11 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisation_NGO] and [Public] ( DOWNLOAD  service).  
+5.5.12.  Data for Nitrogen Dioxide (NO2) atmospheric co mposition 
+monitoring and forecasting (CORE_ 024) 
+REQ -5.5.12 -1 Timeliness requirements shall have precedence over amount of data.  
+REQ -5.5.12 -2 Authorised users are [Copernicus_Services], [Union _Inst itutions ] and 
+[Union _Research_ Projects], [Public_Authorities], 
+[International_Organisa tion_NGO] and [Public] ( DOWNLOAD  service).  
+5.6. Archived CORE Datasets  
+REQ -5.6.1 -1 When licences are procured, the CORE Datasets provided under 
+previous acquisition campaigns should , wherever feasible,  be made 
+available as download to [Copernicus Services], [Union _Inst]  
+[Union_Research_Projects ], [Public_Auth] ; the [INT_ORG_NGO ] and 
+[Public]  should have discovery and view access.  Archive_CORE_09 - 
+Sub-Saharan Optical coverage should also be available to 
+[INT_ORG_NGO ] as download.  
+REQ -5.6.1 -2 ESA shall manage the archiving of these COR E datasets  unless where 
+for some datasets, [Copernicus Services] or [Union _Inst]  were entrusted 
+with this task in the past. Copernicus services may also archive the 
+CORE datasets  where necessary.  
+The list of these Archived CORE datasets follows:  
+1. Archived_ CORE_01 - Optical HR Pan EU  
+2. Archived_CORE_03 - Optical VHR2 coverage over EU 2011 -2013  
+3. Archived_CORE_04 - Optical new worldwide LR coverage  
+4. Archived_CORE_05 - Optical archive worldwide LR coverage  
+5. Archived_CORE_06 - Optical new worldwide MR coverage  
+6. Archived_CORE_07 - Optical archive worldwide MR coverage  
+7. Archived_CORE_08 - European Monthly MR composites 2011 -2012  
+8. Archived_CORE_09 - Sub-Saharan Optical coverage HR2  
+9. Archived_ CORE_11 - Sea Ice monitoring  
+10. Archived_ CORE_12 - Global/Regional Systematic Ocean colour data  
+11. Archived_ CORE_13 - Systematic Global and Regional sea surface 
+temperature data  
+47 12. Archived_CORE_14 - Systematic Global and Regional Altimeter/ Sea 
+Level data  
+13. Archived_CORE_17 - Data for aerosol monitoring and forecasting 
+(CORE_17)  
+14. Archiv ed_CORE_18 Data for sulphur dioxide (SO2) atmospheric 
+composition monitoring and forecasting (CORE_18)  
+15. Archived_CORE_19 Data for formaldehyde (HCHO) atmospheric 
+composition monitoring and forecasting (CORE_19)  
+16. Archived_CORE_20 Data for Ozone (O3) atmosphe ric composition 
+monitoring and forecasting (CORE_20)  
+17. Archived_CORE_21 Data for Carbon Monoxide (CO) atmospheric 
+composition monitoring and forecasting (CORE_21)  
+18. Archived_CORE_22 Data for Carbon Dioxide (CO2) atmospheric 
+composition monitoring and forecas ting (CORE_22)  
+19. Archived_CORE_23 Data for Methane (CH4) atmospheric composition 
+monitoring and forecasting (CORE_23)  
+20. Archived_CORE_24 Data for Nitrogen Dioxide (NO2) atmospheric 
+composition monitoring and forecasting (CORE_24)  
+21. Archived_CORE_30 - Extended Urban Atlas including access to 
+former DAP_MG2b_ 01. 
+REQ -5.6.1 -3 Access to Image2000, Image2006 Image2009 and Image2012 archive s 
+shall be provided, by extending the existing licen ces if required , to 
+[Copernicus Services ], [Union_Inst ], [Union_Research _Proj ects] and 
+[Public_Authorities] (DOWNLOAD service). [INT_ORG_NGO ] and 
+[Public]  should have access in DISCOVERY mode. VIEW mode should 
+however be considered an option towards [Public] and will be used if 
+affordable.  
+ 
+5.7. Flexible / ADDITIONAL  datasets requirements  
+Dataset s in rush mode will mainly serve the objectives of the Copernicus 
+Emergency Management Service and the Security service. Both archived 
+data and new tasked satellite data (new acquisitions) shall be made available.  
+The objective of datasets in standard mode is  to allow beneficiaries to access 
+contributing mission archives in optical  and SAR MR1, HR1/2 and VHR1/2  
+resolutions in order to be able, for example, to build time series, make 
+comparisons and to feed users with new ADDITIONAL images both, for 
+emergency a nd security (outside crisis phase) services as well as for the 
+different components of the Land Monitoring service, in particular VHR 
+images for global land.  
+48 ADDITIONAL  datasets  also serve [Union_Research_Projects ]. 
+Archived CORE datasets shall be used whe re fulfilling the user 
+requirements.  
+ADDITIONAL datasets are split into categories, according to their 
+timeliness requireme nts: rush mode or standard mode with the following 
+possible characteristics: resolution, optical/SAR, archive/new acquisition.  
+5.7.1.  Over all requirements are:  
+REQ -5.7.1 -1 ADDITIONAL datasets shall be provided in order to serve the objectives 
+of the Copernicus services, some requirements specific to Union agencies 
+(e.g. EMSA, SatCen , etc.) as well as where the budget allows for the 
+requirements of [Unio n_Research_Projects ]. 
+REQ -5.7.1 -2 Authorised users of ADDITIONAL datasets are [Copernicus Services], 
+[Union _Inst itutions ] and [Union_Research_Projects ] (download service). 
+ADDITIONAL datasets ordered in rush mode for Copernicus EMS 
+should be available to [Public_Autho rities] (DOWNLOAD service). 
+Access to datasets ordered for other reasons, shall be provided to 
+[Public_Authorities] as an option (DOWNLOAD service) . 
+REQ -5.7.1 -3 Where applicable optical  ADDITIONAL  dataset shall be provided as a 
+set of individual images (scenes) with s eparated spectral bands at pixel 
+value (bundled with other products if requested) to allow for the 
+maximum level of flexibility in automated classification and visual 
+interpretations, including future developments.  
+REQ -5.7.1 -4 Data sets shall be made available on dema nd from the beneficiary.  
+REQ -5.7.1 -5 Data ordering and associated timeliness requirements for rush mode data 
+require a 24h/7 service availability (including for the CCMEs providing 
+the datasets requested in rush mode).  
+REQ -5.7.1 -6 In rush mode for the Copernicus Emergency Managem ent Service, the 
+data ordering and satellite tasking must be organised in the most efficient 
+way to ensure the fastest delivery of the required datasets.  
+REQ -5.7.1 -7 The speed of data delivery (including ftp) has to match the time 
+requirements for rush mode service an d should not be a bottleneck in data  
+provision. The bandwidth for data transmission shall be adequate for rush 
+mode.  
+REQ -5.7.1 -8 The preferred solution to meet the targeted timeliness in  Rush Mode for 
+Copernicus EMS would implement a 'first come, first s erve principle ' 
+whereby  the CCMs should be invited to task their satellites to c over the 
+area of interest and  the first imagery of required parameters and 
+acceptable quality would  be acquired for Copernicus EMS Rush Mode . 
+REQ -5.7.1 -9 In rush mode for the Copernicus Emergency Manage ment Service, the 
+scene shall have no more than 20% cloud cover unless specified in the 
+service request form. Together with the acquisition plan and if cut -off 
+49 time allows, CCMEs should also communicate their forecast of cloud 
+coverage for area of interest . 
+REQ -5.7.1 -10 Timeliness requirements have precedence over data volume.  
+5.7.2.  Archive  rush retrieval  
+REQ -5.7.2 -1 The targeted timeliness for archive retrieval (e.g. the data are ready to be 
+downloaded by requestor)  in rush mode shall be 1 hours from request . 
+REQ -5.7.2 -2 Archived data should not be  older than 3 years over EEA39, and should 
+not be older than 5 years over high risk areas as defined by the 
+Emergency service outside EEA39.  
+REQ -5.7.2 -3 Archived data should be made available over the whole world.  
+REQ -5.7.2 -4 The following archived data shall be made available  
+1. Optical HR1 data under the reference ADD_001a  
+2. Optical HR2  data under the reference ADD_001b  
+3. Optical VHR1  data under the reference ADD_003a  
+4. Optical VHR2 data under the reference ADD_003b  
+5. SAR HR1 data under the reference ADD_005a  
+6. SAR HR2 data under the referen ce ADD_005b  
+7. SAR VHR1 data under the reference ADD_007a  
+8. SAR VHR2 data under the reference ADD_007b   
+9. Optical MR1 data under the reference  ADD_021a  
+10.  SAR MR1 data under the reference  ADD_023a  
+5.7.3.  New acquisitions in rush mode  
+REQ -5.7.3 -1 The targeted timeliness  for availabili ty of newly acquired data in rush 
+mode shall be 16 hours from  validated activation  request.  All CCMs have 
+to provide the cut -off time for tasking; the cut -off time have to be as 
+close as possible to image acquisition time.  
+REQ -5.7.3 -2 The following new acquisition in rush mode shall be made available : 
+1. Optical HR1 d ata under the reference ADD_002 a 
+2. Optical HR2 data1 u nder the reference ADD_002 b 
+3. Optical VHR1 data under the reference ADD_004a  
+4. Optical VHR2 data under the reference ADD_004b  
+50 5. SAR HR1 data under the reference A DD_006a  
+6. SAR HR2 data under the reference ADD_006b  
+7. SAR VHR1 data under the reference ADD_008a  
+8. SAR VHR2 data under the reference ADD_008b  
+9. Optical MR1 data under the reference ADD_022a  
+10. SAR MR1 data under the reference  ADD_024a  
+REQ -5.7.3 -3 In case of natural disasters and  humanitarian conflicts, the Copernicus 
+Emergency Management Service and Security service shall have 
+precedence over other beneficiaries in requesting new acquisitions.  
+5.7.4.  Archive standard retrieval  
+REQ -5.7.4 -1 Archived data should not be older than 3 years over EEA39.  
+REQ -5.7.4 -2 Archived data shall be made available over the whole world.  
+REQ -5.7.4 -3 The following archived data shall be made available:  
+1. Optical HR1 data under the reference ADD_009a  
+2. Optical HR2 data under the reference ADD_009b  
+3. Optical VHR1 data under the reference ADD_011a  
+4. Optic al VHR2 data under the reference ADD_011b  
+5. SAR HR1 data under the reference ADD_013a  
+6. SAR HR2 data under the reference ADD_013b  
+7. SAR VHR1 data under the reference ADD_015a  
+8. SAR VHR2 data under the reference ADD_015b  
+9. SAR_MR1 data under the reference ADD_019a  
+10. SAR_MR2 data under the reference ADD_019b  
+11. Optical_MR1 data under the reference ADD_020a  
+12. Optical_MR2 data under the reference ADD_020b  
+5.7.5.  New acquisitions in standard mode  
+REQ -5.7.5 -1 The following new acquisition in standard mode shall be made available:  
+1. Optical HR1 data u nder the reference ADD_010a  
+2. Optical HR2 data under the reference ADD_010b  
+51 3. Optical VHR1 data under the reference ADD_012a  
+4. Optical VHR2 data under the reference ADD_012b  
+5. SAR HR1 data under the reference ADD_014a  
+6. SAR HR2 data under the reference ADD_014b  
+7. SAR VHR1 data under the reference ADD_016a  
+8. SAR VHR2 data under the reference ADD_016b  
+9. SAR_MR1 data under the reference ADD_017a  
+10. SAR_MR2 data under the reference ADD_017b  
+11. Optical_MR1 data under the reference ADD_018a  
+12. Optical_MR2 data under the reference ADD_018 b 
+REQ -5.7.5 -2 In case of conflict, the Copernicus Emergency Management Service and 
+Security service shall have precedence over other beneficiaries in 
+requesting new acquisitions  
+REQ -5.7.5 -3 To satisfy EFFIS requirements:  VHR2/HR1 multispectral coverage over 
+EU. AOI: 5000 systemat ic sample of sites of 100 sq. km size (4000 in 
+tropics and 1000 in pan -Europe). In total: 500000 sq. km 
+ADDITIONAL datasets with pre -defined characteristics  under new acquisition Optical 
+VHR2 ADD_012b  
+(a) GLOBAL LAND Optical VHR2  
+Main application: Global Land  for monitoring protected areas (BIOPAMA)  
+REQ -5.7.5 -4 Sensor acquisition characteristics  
+Spatial resolution: VHR2 (1m < x <= 4 m). 
+Spectral resolution: Optical multispectral sensors with visible and near infra -
+red (VNIR); short wave infra -red (SWIR); middle wave infra -red (MIR) . 
+SWIR and MIR bands should be preferably at the same spatial resolution 
+than the VNIR bands . 
+Radiometric accuracy : < 5% absolute . 
+Radiometric resolution: 12 bits per pixel . 
+REQ -5.7.5 -5 Areas of Interest (AOI)  
+Amount in km²: at least 7 000km² (protected areas  in ACP countries) . 
+Non-contiguous AOI.  
+52 REQ -5.7.5 -6 Tasking and Acquisition  
+Standard acquisition . 
+Multiple  sensors can be used . 
+10 days lead time . 
+REQ -5.7.5 -7 Processing  Levels  
+With  atmospheric correction . 
+Maximum cloud coverage: 20%  
+With  ortho -rectification. EPSG CODE: WGS84 . 
+Projected over a regular latitude/longitude grid . 
+Geometric accuracy: RMSE (i.e. max. absolute 1 -Dimensional Root Mean 
+Square Error threshold [m] required on product) shall be 1/3 resolution . 
+REQ -5.7.5 -8 Delivery  
+The data should be delivered in standard  mode . 
+5.7.6.  Quota mana gement  
+REQ -5.7.6 -1 The overall quota for ADDITIONAL datasets is defined in Annex 1  
+REQ -5.7.6 -2 The quota mechanism shall ensure that all needs of the Emergency 
+Management Service and Security service are fulfilled, with priority 
+given to crisis phase.  
+REQ -5.7.6 -3 For other services, a maximu m quota will be assigned and shall be 
+managed on a per service basis. They  will be informed in advance of the 
+envelope of quotas allocated to their activities (based on the initial 
+estimate of their requirements).  
+REQ -5.7.6 -4 A continuous monitoring of the consumption  of the quotas shall be 
+maintained on a per service basis and make this information available to 
+the services.  
+REQ -5.7.6 -5 At regular intervals, the quota consumption should be assessed by the 
+Commission and ESA, in order to take corrective measures if required.  
+REQ -5.7.6 -6 Servi ces will be responsible for managing themselves their own annual 
+quotas , under the control of ESA. As a first step the beneficiary will 
+approach ESA with a requirement for a certain area to be covered with 
+certain data types in a certain time frame based u pon the quota assigned 
+by EC, and issues by ESA in the DAP . The Operations team ( ESA/SCI 
+team)  will issue the orders to the Copernicus Contributing Missions, and 
+will inform the beneficiary of the progress status on a regular basis.  
+53 5.8. Already acquired ADDITI ONAL datasets  
+REQ -5.8.1 -1 Once the licence procured and the ADDITIONAL datasets  delivered, 
+these  datasets shall be archived and made available upon request to users 
+belonging to the user categories  benefiting from the necessary licensing 
+rights. ESA shall manage the a rchiving of these ADDITIONAL datasets  
+and ensure the respect of the licence conditions. Copernicus services may 
+also archive the ADDITIONAL datasets  where necessary.  
+6. FUTURE REQUIREMENTS  
+6.1. Datasets to be considered for future requirements  
+6.1.1.  Video datasets  
+The p rovision of video datasets  in the future is an interesting development 
+for example in the context of Copernicus EMS. It is however expected that 
+the integration of video datasets in the data warehouse would have technical 
+consequences  substantially differe nt from  the integration of still datasets  
+from new contributing missions . It is therefore necessary that ESA  conduct 
+an analysis on the feasibility of such integration and its consequences.  
+ 
+54  
+Annexes  
+55 Annex 1.  ADDITIONAL  DATASET SPECIFICATIONS  
+Estimated envelop e of ADDITIONAL  data for the period 201 4-2020  
+(Total km² per datasets)  
+01a_Archive_Rush_Optical_HR1  756,000  
+01b_Archive_Rush_Optical_HR2  6,804,000  
+02a_New acquisition_Rush_Optical_HR1  1,281,000  
+02b_New acquisition_Rush_Optical_HR2  6,834,000  
+03a_Archive_R ush_Optical_VHR1  80,100  
+03b_Archive_Rush_Optical_VHR2  44,000  
+04a_New acquisition_Rush_Optical_VHR1  130,500  
+04b_New acquisition_Rush_Optical_VHR2  393,500  
+05a_Archive_Rush_SAR_HR1  144,000  
+05b_Archive_Rush_SAR_HR2  1,406,250  
+06a_New acquisition_Rush_SAR_ HR1 3,046,500  
+06b_New acquisition_Rush_SAR_HR2  1,406,250  
+07a_Archive_Rush_SAR_VHR1  17,380  
+07b_Archive_Rush_SAR_VHR2  18,400  
+08a_New acquisition_Rush_SAR_VHR1  66,680  
+08b_New acquisition_Rush_SAR_VHR2  403,500  
+09a_Archive_Standard_Optical_HR1  2,088,634  
+09b_Archive_Standard_Optical_HR2  1,845,158  
+10a_New acquisition_Standard_Optical_HR1  17,714,60
+4 
+10b_New acquisition_Standard_Optical_HR2  20,826,00
+1 
+11a_Archive_Standard_Optical_VHR1  433,609  
+11b_Archive_Standard_Optical_VHR2  1,458,368  
+12a_New acquisitio n_Standard_Optical_VHR1  435,223  
+12b_New acquisition_Standard_Optical_VHR2  1,186,724  
+13a_Archive_Standard_SAR_HR1  198,543  
+13b_Archive_Standard_SAR_HR2  1,978,684  
+14a_New acquisition_Standard_SAR_HR1  467,558  
+14b_New acquisition_Standard_SAR_HR2  735,608  
+15a_Archive_Standard_SAR_VHR1  139,056  
+15b_Archive_Standard_SAR_VHR2  622,387  
+16a_New acquisition_Standard_SAR_VHR1  232,764  
+16b_New acquisition_Standard_SAR_VHR2  1,489,323  
+17a_New acquisition_Standard_SAR_MR1  7,555,380  
+17b_New acquisition_Standard_SAR_M R2 4,500,000  
+18a_New acquisition_Standard_Optical_MR1  6,720,000  
+18b_New acquisition_Standard_Optical_MR2  6,720,000  
+19a_Archive_Standard_SAR_MR1  7,555,380  
+19b_Archive_Standard_SAR_MR2  4,500,000  
+20a_Archive_Standard_Optical_MR1  6,720,000  
+56 20b_Archive_St andard_Optical_MR2  6,720,000  
+21a_Archive_Rush_Optical_MR1  300,000  
+22a_New acquisition_Rush_Optical_MR1  300,000  
+23a_Archive_Rush_SAR_MR1  300,000  
+24a_New acquisition_Rush_SAR_HR1  300,000  
+ 
+ 
+57 Annex 2.  FILE FORMAT CONVENTIO NS 
+1. File format and structure:  
+geoTIFF f ully compliant with TIFF version 6.  
+Remark : 
+Special attention shall be given to respect the following in ortho -rectified products:  
+ Grid alignment: GeoTIFF key: The GeoTIFF key "GTRasterTypeGeoKey" shall 
+have the value 1, corresponding to "RasterPixelIsAre a".  
+ Pixel alignment: The values of the coordinates for the upper -left corner (x and y) of 
+the upper -left pixel of an image dataset shall be an integer multiple of the pixel size 
+(resolution) in the corresponding direction (x and y).  
+2. INSPIRE compliant m etadata  
+INSPIRE compliant metadata shall be included in the products as an XML metadata file.  
+3. File name conventions  
+Any file -naming convention shall ensure  unambiguous identification of scenes according 
+to a harmonised convention applied by all CCMEs. 
+ 
+ 
+European Commission, B -1049 Brussel s - Belgium. Telephone: (32 -2) 299 11 11.  Annex 3.  MAP OF "LARGE REGIONS " FOR HR  IMAGE 2015  AND VHR  IMAGE 2015  
+ 
+59 Annex 4.  MAP OF "ZONES WITH DIFFERENT  ACQUISITION APPROACH ES" FOR HR  IMAGE 2015  
+Cloud cover assessment and zones delineation  
+In order to divide Europe in three zones with respect to cloud probability, a n approach based on spatial and temporal interpolation was 
+implemented. The processing was done on a 25km sized grid covering all Europe, by considering as input two sources of multi -year cloud 
+cover statistics: the first was obtained from OAK RIDGE NATION AL LABORATORY – Distributed Active Archive Center, con taining  data 
+over a period of more than 30 years (from 1960 to 1991) ; the second was calculated from 8 years of daily MODIS data (from 2006 to 2013).  
+The acquisition window, narrow and extended, define d in Copernicus DWH 2014 -2020 were considered as input data and used to temporarily 
+“spatialize” cloud probability over the grid cells. The results obtained from the two cloud cover statistics were then averag ed on a cell -per-cell 
+basis and a simple classi fication scheme was used to assign to each cell one of three zones based on the cloud cover probability inside the 
+narrow acquisition window.  
+The following map shows the result obtained considering these cloud probability ranges: zone C [0,40], zone B (40, 65] and zone A (65,100] . 
+Zone A has been extended to cover the full group of Northern countries, in order to fully take into account the short summer season and 
+shallow sun angles, which equally limit chances on successful acquisitions, and therefore requi re a more intensive acquisition strategy.  
+These three zones are used to implement a remuneration schema that takes into account how difficult it is to obtain a cloud -free coverage in the different 
+parts of Europe.  
+ 
+60 
+ 
+61 Annex 5.  HR  IMAGE 2015  AND VHR  IMAGE 2015:  ACQU ISITION WINDOWS  
+ 
+Spatial 
+Arrangement  Contiguous/Coverage type  
+Area of Interest 
+(AoI)  39 European states, ~ 6 Mio km2: Albania, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, 
+Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany,  Greece, Hungary, 
+Iceland, Ireland, Italy, Kosovo under the UN Security Council Resolution 1244/99, Latvia, 
+Liechtenstein, Lithuania, Luxembourg, Malta, Montenegro,  the Netherlands, Norway, Poland, Portugal, 
+Republic of Macedonia, Romania, Serbia and Monte negro, Slovakia, Slovenia, Spain, Sweden, 
+Switzerland, Turkey, United Kingdom [including all islands of those countries , e.g. Azores, Madeira, 
+Canary, Baleares, Greek islands, Corsica, Sardinia etc. + French Overseas Department but excluding 
+French Overse as Territories]  
+Country temporal 
+window (Coverage 
+1 & 2)   within following 39 narrow + extended windows:  
+Country  Code  Extended 
+window: 
+Start  Narrow 
+window: 
+Start  Narrow 
+window: 
+End Extended 
+window: 
+End 
+Albania  AL 15-Jun 01-Jul 31-Jul 15-Aug 
+Austria We st (<13°E)  AT_W  15-Jun 01-Jul 15-Aug 31-Aug 
+Austria East (>13°E)  AT_E  15-Jun 15-Jun 15-Aug 15-Sep 
+Belgium  BE 01-Jun 15-Jun 15-Sep 15-Sep 
+Bosnia and 
+Herzegovina  BA 01-Jun 15-Jun 15-Aug 15-Sep 
+Bulgaria  BG 01-Jun 15-Jun 15-Sep 15-Sep 
+Croatia  HR 01-Jun 15-Jun 15-Sep 15-Sep 
+Cyprus  CY 01-May  01-Jun 31-Jul 15-Aug 
+Czech Republic  CZ 01-Jun 15-Jun 15-Sep 15-Sep 
+Denmark  DK 05-Jun 15-Jun 15-Sep 15-Sep 
+Estonia  EE 05-Jun 15-Jun 15-Aug 31-Aug 
+Finland North  FI_N  20-Jun 01-Jul 10-Aug 15-Aug 
+Finland Centra l FI_C  15-Jun 01-Jul 10-Aug 15-Aug 
+62 Finland South  FI_S 05-Jun 01-Jul 10-Aug 20-Aug 
+France North  FR_N  01-Jun 15-Jun 15-Sep 15-Sep 
+France South  FR_S  01-Jun 15-Jun 15-Sep 15-Sep 
+Germany  DE 01-Jun 15-Jun 15-Sep 15-Sep 
+Greece  GR 01-May  01-Jul 31-Jul 15-Aug 
+Hungary  HU 01-Jun 15-Jun 15-Sep 15-Sep 
+Iceland  IS 01-Jul 15-Jul 15-Sep 30-Sep 
+Ireland  IE 01-Jun 15-Jun 15-Sep 15-Sep 
+Italy North (> 41°N)  IT_N  15-Jun 15-Jun 15-Aug 15-Aug 
+Italy South (< 41°N)  IT_S  01-May  01-Jul 31-Jul 15-Aug 
+Kosovo  XK 01-Jun 15-Jun 31-Aug 15-Sep 
+Latvia  LV 05-Jun 15-Jun 15-Aug 31-Aug 
+Liechtenstein  LI 15-Jun 15-Jun 15-Aug 15-Sep 
+Lithuania  LT 05-Jun 15-Jun 15-Aug 31-Aug 
+Luxembourg  LU 01-Jun 15-Jun 15-Sep 15-Sep 
+Malta  MT 01-May  01-Jun 31-Jul 15-Aug 
+Macedonia (Republic 
+of)  MK 01-Jun 15-Jun 31-Aug 15-Sep 
+Montenegro  ME 01-Jun 15-Jun 15-Aug 31-Aug 
+Netherlands  NL 01-Jun 15-Jun 15-Sep 15-Sep 
+Norway North (> 
+65°N)  NO_N  01-Jul 05-Jul 10-Aug 15-Aug 
+Norway South (< 
+65°N)  NO_S  01-Jul 05-Jul 10-Aug 31-Aug 
+Poland  PL 01-Jun 15-Jun 15-Sep 15-Sep 
+Portugal  PT 15-May  01-Jul 15-Aug 15-Aug 
+Romania  RO 01-Jun 15-Jun 15-Sep 15-Sep 
+Serbia  RS 01-Jun 15-Jun 15-Sep 15-Sep 
+Slovakia  SK 01-Jun 15-Jun 15-Sep 15-Sep 
+Slovenia  SI 15-Jun 15-Jun 15-Sep 15-Sep 
+Spain  ES 15-May  01-Jul 31-Jul 15-Aug 
+63 Sweden North (> 
+65°N)  SE_N  01-Jul 05-Jul 10-Aug 15-Aug 
+Sweden Central (61°N 
+- 65° N)  SE_C  01-Jul 05-Jul 10-Aug 31-Aug 
+Sweden South (< 
+61°N)  SE_S  05-Jun 15-Jun 15-Aug 15-Sep 
+Switzerland  CH 15-Jun 01-Jul 15-Aug 31-Aug 
+Turkey West (< 30°E)  TR_W  15-May  01-Jul 31-Jul 15-Aug 
+Turkey Central -West 
+(30°E - 35°E)  TR_C -W 01-Jun 15-Jun 15-Aug 31-Aug 
+Turkey Central -East 
+(35°E - 40°E)  TR_C -E 15-Jun 15-Jun 15-Aug 31-Aug 
+Turkey East (>40°E)  TR_E  01-Jul 01-Jul 31-Jul 15-Aug 
+United Kingdom 
+North (Scotland + N . 
+Ireland)  UK_N  15-Jun 15-Jun 15-Sep 15-Sep 
+United Kingdom 
+South (England + 
+Wales)  UK_S  01-Jun 15-Jun 15-Sep 15-Sep 
+ 
+ 
+ 
+ 
+64 Annex 6.  NATIONAL PROJECTIONS TABLE  
+ 
+ 
+ 
+European Commission, B -1049 Brussel s - Belgium. Telephone: (32 -2) 299 11 11.  Annex 7.  DATA QUALITY LAYER  
+A mask of the same extent as the imagery and the following per -pixel information sh all 
+be provided:  
+Band 1 ( 1byte 8bit  MSB ): 
+Bit #  not set (0)  set (1)  
+1 Pixel outside FOV, no 
+measurement   Pixel within FOV 
+(measurement recorded)  
+2 Measurement either invalid 
+(saturated or erroneous, bit1 
+set) or missing (bit1 not set)  Measurement within  valid 
+range (requires bit1 to be set)  
+3 water  land 
+4 snow  no snow  
+5   
+6   
+7 Values 1 -4 for cloud mask:  
+[00]: confident cloud  
+[01]: thick haze – probably cloud  
+[10]: probably clear – light haze  
+[11]: confident clear  8 
+ 
+In the absence of interpretab le data, the Water/Land differentiation will be made 
+according to a pre -defined land/water mask.  
+66 
+ Annex 8.  QUALITY BASED COVERAG E PRICING  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A x B y P=A*B P*C*(1+0.25*(D+E+F+G))
+C D E
+Zone A Zone B Zone C Zone A Zone B Zone C Zone A Zone B Zone C
+100 1.00 1.00 1.00 < 10 1.00 1.00 1.00 < 0 1.00 1.00 1.00
+99 0.99 0.99 0.99 20 0.80 0.80 0.80 0 0.90 1.00 1.00
+98 0.98 0.98 0.98 30 0.60 0.60 0.60 0.1 0.80 0.90 1.00
+97 0.97 0.97 0.97 40 0.40 0.40 0.40 0.2 0.70 0.80 0.90
+96 0.95 0.96 0.96 50 0.20 0.20 0.20 0.5 0.60 0.70 0.80
+95 0.94 0.95 0.95 > 50 0.00 0.00 0.00 1 0.50 0.60 0.70
+94 0.92 0.94 0.94 2 0.40 0.50 0.60
+93 0.90 0.93 0.93 3 0.30 0.40 0.50
+92 0.87 0.92 0.92 4 0.20 0.30 0.40
+91 0.84 0.91 0.91 5 0.10 0.20 0.30
+90 0.80 0.90 0.90 > 5 0.00 0.10 0.20
+89 0.75 0.89 0.89
+88 0.70 0.88 0.88
+87 0.60 0.87 0.87
+86 0.55 0.86 0.86
+< 86 0.50 0.85 0.85
+F G
+Zone A Zone B Zone C Zone A Zone B Zone C
+< 4 1.00 1.00 1.00 < 10 1.00 1.00 1.00
+5 0.90 1.00 1.00 15 0.70 0.80 1.00
+6 0.80 0.90 1.00 20 0.40 0.60 0.80
+7 0.70 0.80 0.90 25 0.00 0.35 0.60
+8 0.50 0.70 0.80 30 0.00 0.00 0.40
+10 0.30 0.50 0.70 40 0.00 0.00 0.20
+12 0.10 0.30 0.50 > 40 0.00 0.00 0.00
+20 0.00 0.10 0.20
+> 20 0.00 0.00 0.00% of AOI covered
+[second coverage, date: >10 days after first]additional number of scenes in final coverage [% 
+compared to nominal]largest contiguous data gap (sqkm, 8-
+neigbourhood)
+RMS distance from target date (in days)max acquisition difference in days between adjacent 
+pixels (8-neigbourhood)nominal number of 
+scenesaverage price per 
+sceneFinal product prize: Nominal prize
+67 
+ Annex 9.  EXAMPLES OF TYPICAL C LOUD COVER AND HAZE SITUATIONS   
+An in -depth analysis carried out on a database of satelli te images obtained from various 
+sensors has led to the determination of a classification of the problems that typically 
+occur . These pro blems arise  in the images wi th different orders of gravity and may limit 
+or completely compromise the profitable use of the images themselves. The identified 
+classes are the following:  
+1) Almost transparent  haze  
+2) Semi -transparent  haze /clouds  
+3) Cloud s 
+4) Shadow s 
+5) Snow  
+Below we provide some typical examples for each of the above classes : 
+ 
+Class  Image info  Image sample  
+Almost transpare nt 
+haze  SPOT5 2.5 meters  
+CORE003  
+ 
+Almost transparent 
+haze  WorldView2 0.5 
+meters  
+ 
+68 
+ Almost transparent 
+haze  SPOT5 2.5 meters  
+CORE003  
+ 
+Semi -transparent 
+haze/clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+Semi -transparent 
+haze/clouds  WorldView2 0.5 
+meters  
+ 
+69 
+ Semi -transparent 
+haze/clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+Semi -transparent 
+haze/clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+Clouds  SPOT4 20 meters  
+ 
+70 
+ Clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+Clouds  GeoEye 2.0 meters  
+ 
+Clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+71 
+ Clouds  Rapideye 6. 5 
+meters  
+ 
+Clouds  SPOT5 2.5 meters  
+CORE003  
+ 
+Shadows  SPOT5 2.5 meters  
+CORE003  
+ 
+72 
+ Shadows  WorldView2 0.5 
+meters  
+ 
+Shadows  WorldView1 0.5 
+meters  
+PAN  
+ 
+Snow  SPOT5 2.5 meters  
+CORE003  
+ 
+73 
+ Snow  SPOT5 2.5 meters  
+CORE003  
+ 
+Snow  SPOT5 10 meters  
+ 
+Snow  Rapideye  6.5 
+meters  
+ 
+ 
+ 

@@ -1,0 +1,1029 @@
+
+  
+Software Requirements 
+Specification  
+  for 
+PDF Split and Merge  
+Requirements for Version 2.1.0 
+ 
+ 
+Prepared by Ploutarchos Spyridonos , AUTH 
+February 6, 2010  
+Software  Requirements Specification for PDF Split and Merge   
+ Table of Contents  
+1. Introduction ..............................................................................................................................1  
+1.1 Purpose  ........................................................................................................................................ 1 
+1.2 Document Conventions  ............................................................................................................... 1 
+1.3 Intended Audience and Reading Suggestions  ............................................................................. 1 
+1.4 Project Scope  ............................................................................................................................... 1 
+1.5 References ................................................................................................................................... 3 
+2. Overall Description  ..................................................................................................................4  
+2.1 Product Perspective ..................................................................................................................... 4 
+2.2 Product Features  .......................................................................................................................... 4 
+2.3 User Classes and Characteristics ................................................................................................. 5 
+2.4 Operating Environment  ............................................................................................................... 5 
+2.5 Design and Implementation Constraints  ..................................................................................... 5 
+2.6 User Documentation  .................................................................................................................... 6 
+2.7 Assumptions and Dependencies  .................................................................................................. 6 
+3. System Features  ........................................................................................................................7  
+3.1 System Feature 1 -  Split .............................................................................................................. 7 
+3.2 System Feature 2 -  Merge/Extract  ............................................................................................... 9 
+3.3 System Feature 3 -  Alternate Mix  ............................................................................................. 10 
+3.4 System Feat ure 4 -  Rotate  .......................................................................................................... 12 
+3.5 System Feature 5 -  Visually reorder  .......................................................................................... 13 
+3.6 System Feature 6 -  Visually compose  ....................................................................................... 15 
+3.7 System Feature 7 -  Working Environment  ................................................................................ 16 
+3.8 System Feature 8 -  Log Panel  .................................................................................................... 17 
+3.9 System Feature 9 -  Settings  ....................................................................................................... 18 
+4. External Interface Requirements  .........................................................................................20  
+4.1 User Interfaces -  GUI  ................................................................................................................ 20 
+4.2 Hardware Interfaces .................................................................................................................. 28 
+4.3 Software Interfaces .................................................................................................................... 28 
+4.4 Communications Interfaces ....................................................................................................... 28 
+5. Other Nonfunctional Requirements  .....................................................................................29  
+5.1 Performance Requirements ....................................................................................................... 29 
+5.2 Safety Requirements .................................................................................................................. 29 
+5.3 Security Requirements .............................................................................................................. 29 
+5.4 Software Quality Attributes  ...................................................................................................... 29 
+5.5 Other Requirements – GNU GPL License  ................................................................................ 29 
+6. Appendix  .................................................................................................................................30  
+6.1 Appendix A: Glossary  ............................................................................................................... 30 
+6.2 Appendix B: Analysis Models – Use Case diagrams ................................................................ 31 
+6.2.1 Use case 1 -  Splitting a pdf document:  ................................................................................. 31 
+6.2.2 Use case 2 – Embedded help:  ............................................................................................... 31 
+6.2.3 Use case 3 – Log panel:  ........................................................................................................ 31 
+6.2.4 Use case 4 – Merging pdf documents:  .................................................................................. 32 
+6.2.5 Use case 5 – Save/Load the working Environment:  ............................................................. 32 
+ 
+Software  Requirements Specification for PDF Split and Merge  Page 1 
+ 1. Introduction  
+1.1 Purpose  
+This document details the software requirements s pecification for the PDF Split and Merge v2.1.0 
+open source project.  It will later  be used as a base for the extension of the existing software itself.  
+This document follows the IEEE standard for software r equirements specification documents.  
+PDF is the most popular file format for secure, dependable electronic information exchange. It is 
+used by more than half billion people and has become one of the world’s most trusted 
+technologies. PDF files can be viewed from almost any platform ( Macintosh®, Windows®, U NIX® 
+and LINUX® as well as numerous mobile platforms and devices ) but the manipulation of these 
+files is not usually free.  
+The purpose of this  project is to provide a n easy way to handle pdf files  efficiently  and free through 
+a simple graphical interface.  
+1.2 Document Conventions  
+PDF Split and Merge was created prior to this document, so all requirements stated here are 
+already satisfied. It is very important to update this document with every future requirement and clarify its priority for consistency purposes, so that this document can remain useful.  
+Because of the fact that PDFs am is already implemented, parts of this document have a style 
+similar to a m anual document.  
+Some technical information has been included. Readers can refer to Appendix A at the end of the 
+document for terms definition (glossary).  
+1.3 Intended Audience and  Reading Suggestions 
+This Software Requirements document  is intended for:  
+− Developers who can review project’s capabilities and more easily understand where their 
+efforts should be targeted to improve or add more features to it (design and code the 
+applicat ion – it sets the guidelines for future development ). 
+− Project testers can use this document as a base for their testing strategy as some bugs are 
+easier to find using a requirements document.  This way testing becomes more methodically 
+organized.  
+− End users of this application who wish to read about what this project can do.  
+1.4 Project Scope  
+PDF Split and Merge is a FOSS tool that can split, merge and manipulate PDF documents.  It 
+provides a graphical I nterface (GUI) and a shell I nterface (Console). It is available in two versions , 
+basic and enhanced, both are open source.  
+Software  Requirements Specification for PDF Split and Merge  Page 2 
+ The GUI provides the user with all the functionality needed to handle a PDF file (or more files 
+together).  The functionalities are distributed in plugins.  Each plugin performs a specific function  
+and loads in the main GUI . 
+In the basic  version, the GUI  contains  six plugins:  
+− Alternate Mix  
+− Merge/Extract  
+− Rotate 
+− Split 
+− Visual document composer  
+− Visual reorder  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+This is a picture of a plugin of PDFsam 
+The Console is a command- line application. It’s the core application and it provides both the 
+enhanced and the basic features for pdf manipulation.  
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 3 
+ 1.5 References  
+− The official website  of the project contains  a brief description of the project, screenshots, links, 
+FAQ’s and a blog with all t he news of the project : http://www.pdfsam.org/  
+− Project’s development and distribution website at Sourceforge. It provides the project’s source 
+code, a bug reporting and tracking system , and all the available file downloads of the project : 
+http://sourceforge.net/projects/pdfsam/  
+− PDFsam wiki: http://www.pdfsam.org/mediawiki/  
+ 
+Software  Requirements Specification for PDF Split and Merge  Page 4 
+ 2. Overall Description  
+2.1 Product Perspective  
+PDF Split and Merge is a multi functional tool for manipulating pdf files . It is free and open source 
+with a GNU General Public License (GPL).  Although there are many programs for viewing pdfs, 
+there is not any program to handle pdfs with so many features as PDFsam.  The fact that it is open 
+source is an extra motive for the users who have the knowledge to help with the project’s 
+development. In addition, there is also an enhanced version of the software that provides even more capabilities.  
+2.2 Product Features  
+The basic  version provides : 
+− Splitting pdf documents (into chapters, single pages, etc).  
+− Merging many pdf documents or subsections of them.  
+− Extract  section from a pdf document in a single pdf document.  
+− Mix alternate pages taken from two pdf documents in str aight or reverse order into a single 
+document.  
+− Rotate pages  of the selected pdf documents.  
+− Visually reorder pages of a selected pdf document.  
+− Visually compose a document, dragging pages from selected pdf documents.  
+− Save and load the working environment , so that recurrent jobs are automated . 
+− Managing PDFsam settings and setting an environment to load at  start up.  
+Any of those features can be executed as command prompt from the command line Console application.  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 5 
+ 2.3 User Classes and Characteristics 
+This project refers to several types of users of any computer system . However, this  project is 
+meant to be used by two major user classes:  
+1. General users who can use the software to cover specific needs : 
+− People of all age groups without much experience because the PDFsam interface is pleasant 
+and user friendly and its functions are relatively simple.  
+− Users with more experience on computer systems could use some advanced features offered 
+by PDFsam , such as executing its functions in command prompt  from the command line 
+application. A command line console could be useful  for batch jobs, server jobs ( e.g. to 
+manipulate larger pdf files)  
+2. Open source software developers and contributors : 
+− Software Developers : People with very good knowledge of  programming language project, in 
+order to understand and be able to extend project’s source code.  
+− Translators : People of all age groups with very good knowledge of a language not included in 
+the current translation list.  
+− Anyone who wants to help FOSS community . The whole project i s based on the conception of 
+Free and Open Source S oftware, so all people are welcome to contribute any way the 
+can/like.  
+2.4 Operating Environment  
+PDFsam is platform independent and  it runs on every platform where a Java Virtual Machine is 
+available (requires  a JVM version 1.6 or higher) . 
+It has been tested on: 
+− Microsoft Windows  
+− GNU/Linux distributions  
+− Mac OS X  
+Hardware requirements of the project:  
+− Maximum m emory  usage: 254MB * (by default)  
+− Disk space needed: 13.9MB  
+*it depends on the size of the pdf files. U ser can change the default value of memory with the 
+appropriate commands if he has to handle large pdf  files. 
+2.5 Design and Implementation Constraints 
+PDFsam  is platform independent and is written in Java.  Its user interface is written with Java 
+Swing , so anyone who wishes  to work on further development of PDFsam  has to know th is 
+programming language.  
+PDFsam is GNU GPLv2  licensed and the PDFsam -console is dual licensed (GPLv2 and LGPLv2).  
+Everyone,  that does or is going to develop or use PDFsam,  should agree and fully accept the 
+terms of this kind of license.  
+ 
+Software  Requirements Specification for PDF Split and Merge  Page 6 
+ 2.6 User Documentation  
+User documentation components are available on project ’s official website : 
+− http://www.pdfsam.org/  (in the Resources section)  
+Refer to section 1.5 of this document for further information.  
+2.7 Assumptions and Dependencies  
+A working Java Runtime Environment  version 1.6 or above is necessary.  
+Software  Requirements Specification for PDF Split and Merge  Page 7 
+ 
+3. System Features  
+PDFsam consists of a number of plugins which constitute its basic f unctions, and some additional 
+features that make the whole process easier and faster.  All plugins are locat ed in the “plugins tree”  
+on the left side of the GUI Interface.  
+This section describes the functional requirements of the application and the features it provides. 
+System features are described in detail to help the future extension and testing  of the system. 
+Features stated here are already parts of the implemented system so no prioritization is needed. Priority is needed for features to be developed that will be added to this document later.  
+3.1 System Feature 1  - Split  
+Split a pdf document  through the GUI Interface.  This plugin allows you to set a number of options 
+that will be used to split the document.  
+3.1.1 Description  
+ The user  can divide  a pdf document into parts, following 
+some options for  how to split the document . Then he can 
+save the output pdf  files in a directory he want s. 
+3.1.2 Stimulus/Response Sequences  
+ The user has to select the Split option from the plugins tree (or press the “S” key)  to 
+display the split  panel . 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+This is a  screenshot of the Split plugin  
+
+Software  Requirements Specification for PDF Split and Merge  Page 8 
+  The GUI Split p anel consists of  the following parts : 
+ Selection panel: The user selects  the document  he wants to split  from a 
+directory. When the file is imported, some information about the file displayed 
+(such as pages number , pdf version…). If the document is protected the user 
+have to enter the password to the appropriate field and then reload the pdf . 
+ Split options : The user can choose between 7  types  of split ting: 
+− Burst : the input file will be split in single pages.  
+− Split every “n” pages : the input file will be split every “ n” pages.  
+− Split even pages : the input file will be split at every even page.  
+− Split odd pages : the input file will be split at every odd page.  
+− Split after these pages : the input file will be split at the given pages 
+numbers . 
+− Split at this size : the input file will be split in files of the given size (roughly) . 
+− Split by bookmark level : the input file will be split at every page linked by the 
+bookmarks of the selected level (this can be very  useful if you want to split 
+an e-book in chapters).  
+ Destination folder : The user selects the destination folder for the output files  
+(specific or same as source) . Also, he can select  whether he wants the out put 
+files to be compressed or not, and the pdf version of the generated document s. 
+ Output options : Here the user can define a pattern that will generate filenames 
+for the output files.  The available complex prefix es that  can be used are: 
+−  [CURRENTPAGE] : This prefix variable ensures unique output filenames 
+and it's replaced with the current page number. The number of digits of the 
+generated prefix can be speci fied appending any number of “#” at the prefix 
+name, inside the square brackets (e.g. the prefix [CU RRENTPAGE###] will 
+generate prefixes like ‘001’, ‘002’ ...). 
+− [TIMESTAMP] : This prefix variable ensures unique output filenames and it's 
+replaced with the current date and time. Time has milliseconds precision and 
+the replaced variable will be something like “20100206_0 45107232” that is 
+“YYYYMMDD_HHmmssSSS” . 
+− [FILENUMBER] : This prefix variable ensures unique output filenames and 
+it's replaced with a file number according to the output order. The number of digits of the generated prefix can be specified appendi ng any number of '#' 
+at the prefix name, inside the square brackets  (e.g. [FILENUMBER###] will 
+generate prefixes like '001', '002'...) . A starting number can be appended at 
+the prefix name inside the square brackets  (e.g. [FILENUMBER13] will 
+generate prefi xes like '13', '14'...) . Finally, it can be combined a started 
+number and the number of digits (e.g. [FILENUMBER###13] will generate prefixes like '013', '014'...).  
+− [BASENAME] : This prefix variable is replaced with the original name of the 
+input document . It does not  ensure unique output filenames and it must  be 
+used together with other variables.  If it is used alone, the system will use the 
+default filename pattern.  
+− [BOOKMARK_NAME] : This prefix variable can be used only when splitting 
+by bookmarks level. I t ensures unique output filenames (unless two or more 
+bookmarks have the same name) and it enables variable substitution. It's replaced with the bookmark name. Some characters of the bookmark name could be stripped if they are not valid character for a fil e name.  
+Software  Requirements Specification for PDF Split and Merge  Page 9 
+ − If left blank, the output filenames will take the default  pattern 
+[CURRENTPAGE] _ [BASENAME].  
+− It can be written anything before or after of these prefixes.  
+ RUN button: After the user sets all these parameters, he presses the RUN button 
+and the splitting  starts. 
+3.1.3 Functional Requirements  
+REQ -1: The user can split only once document at a time. 
+REQ -2: The compression of the output  files requires pdf version 1.5 or above . 
+REQ -3: The number of digits that can be used for the unique [FILENUMBER] 
+prefi x must be 10 or less . 
+3.2 System Feature 2  - Merge/Extract  
+Merge many pdf documents or subsections of them . 
+Extract sections of a document into a single document.  
+3.2.1 Description  
+ Users can merge many pdf documents or subsections of them together. In the same 
+way, they can extract some sections of a pdf document into a single document.  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+This is a  screenshot of the Merge/Extract plugin 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 10 
+ 3.2.2 Stimulus/Response Sequences  
+ The user has to select the Merge/Extract option from the plugins  tree (or press the 
+“M” key) to display the merge/extract  panel.  
+ The GUI Merge/Extract panel enables the user to select more than one file  to 
+handle. Once  the user selects the file/files they are automatically inserted in to the 
+selection table with some specific details.  Now, the user can change the order and/or 
+select the pages of the file/files that he want s to be included in  the final document.  
+ In the Page Selection column of the table, user can write : 
+− “All”: to merge the whole document.  
+− “page - to page” : to merge pages between “page” and “to page” (e.g. 8- 15 if he 
+want to merge pages between 8 and 15).  
+− “page -”: to merge pages starting from “page” till the end of the document.  
+− A single page number , if he wants  only that page of the document . 
+− Commas (with out any blanks) to separate the different values  (e.g. “2,12-16,17- ” 
+if he wants to merge page 2, pages between 12 and 16, and all the other pages 
+from page17 to the end) . 
+In the Password column user has to set the password if the document is protected 
+and then reload the file. T he user can change the order of the files by using “Move 
+Up” and “Move Down” buttons , or make the list be ordered by the value of a specific 
+column by clicking the header of that column.  
+The user has the ability to export the list of the selected files as an xml file that can 
+be used as an input file for the console “concat” command, - l option.  
+If the pdf documents contain forms, the user must  add that to the m erge options.  
+Finally, the user selects the output file path or let the PD Fsam create one by default 
+to the same folder as one of the imported files. Also, he can select whether he 
+wants the output file to be compressed or not, and the pdf version of the generated 
+document . The user presses the RUN button to start  the merging  of the files . 
+3.2.3 Functional Requirements  
+REQ -1: pages number in the page selection must be comprehended. 
+REQ -2: The compression of the output files requires pdf version 1.5 or above . 
+3.3 System Feature 3 - Alternate Mix  
+Mix two pdf document s. 
+3.3.1 Descriptio n 
+ Users may want to combine documents together by taking pages alternatively from 
+two existing pdf documents (e.g. for documents coming from one- sided scanners). 
+The resulting document will be composed by pages taken alternatively from the two 
+input documents.  
+3.3.2 Stimulus/Response Sequences  
+ The GUI Alternate Mix panel consists of the following parts:  
+ Selection panel: The user selects the two document s that he wants to mix  from a 
+directory. When the files are imported, some information about the file displayed 
+Software  Requirements Specification for PDF Split and Merge  Page 11 
+ to the selection table (such as pages number, pdf version…). If the documents 
+are protected the user has to enter the password to the appropriate field and 
+then reload the pdf.  The user can change the order of the two files by using 
+“Move Up” and “Move Down” buttons, or make the list be ordered by the value of 
+a specific column by clicking the header of that column.  
+ Mix options: The user can modify the following parameters : 
+− Reverse first document : if he want s to take pages from the first document in 
+reverse order (starting from the last page).  
+− Reverse second document : if he want s to take pages from the second 
+document in reverse order (starting from the last page) . 
+− Number of pages to switch document : the user with this option can define 
+the step size of the mix. The default behavior is to take one page from the 
+first docum ent and one from the second one.  However this step can be 
+configured by this option telling PDF sam how many pages it should take 
+from one document before switching to the other . 
+ Destin ation output file: The user selects the destination folder for the output files  
+or let the PDFsam create one by default to the same folder as one of the imported files . Also, he can select whether he wants the output files to be 
+compressed or not, and the pdf version of the generated document s. 
+ RUN button: After t he user sets the parameters, he presses the RUN button and 
+the mixing of the 2 documents  starts. 
+3.3.3 Functional Requirements  
+REQ -1: The user can mix only 2 documents at a time (not more or less). 
+ 
+   
+ 
+             
+This is a  screenshot of the Alternate Mix plugin 
+
+Software  Requirements Specification for PDF Split and Merge  Page 12 
+ 3.4 System Feature 4 - Rotate 
+Rotates pages of pdf documents . 
+3.4.1 Description  
+ The users  have the ability to bulk rotate pages in different documents. With this 
+plugin they cannot select specific  pages that they  want to rotate but all the 
+document/documents  will be rotated.  
+3.4.2 Stimulus/Response Sequences  
+ The GUI Rotate panel consists of the following parts:  
+ Selection panel: The user s select  the documents that want  to rotate their pages 
+from a directory. When the files are imported, some information about the file 
+displayed to the selection table (such as pages number, pdf version…). If the 
+documents are protected the user s has to enter the password to the appropriate 
+field and then reload t he pdf.  The users cannot select the pages that they want to 
+rotate, so the whole document/documents will be rotated (for specific page rotate 
+refer to section 3.5) . 
+ 
+         
+ 
+    
+  
+ 
+  
+ 
+This is a  screenshot of the Rotate plugin
+ 
+ Rotation options: The user can modify the following parameters:  
+− Clockwise rotation (in degrees) : the users select the rotation degrees. The 
+rotation will be applied clockwise.  
+− Pages : the users select the pages they want to rotate (All, Even or Odd). 
+
+Software  Requirements Specification for PDF Split and Merge  Page 13 
+  Destination output file: The user selects the destination folder for the output files 
+or let the PDFsam create one by default to the same folder as one of the imported files. Also, he can select whether he wants the output files to be 
+compressed or not, and the pdf version of the generated document s. 
+ Output options: Here the user can define a pattern that will generate filenames for the output files. (for the available complex prefixes that can be used refer to section 1)  
+ RUN button: After the user sets the parameters, he presses the RUN button and the rotation of the 2 documents start s. 
+3.4.3 Functional Requirements  
+REQ -1: The compression of the output files requires pdf version 1.5 or above . 
+REQ -2: The number of digits that can be used for the unique [FILENUMBER] 
+prefix must be 10 or less . 
+3.5 System Feature 5  - Visually reorder  
+Rotate, reorder  and delete specific pages from a pdf document . 
+3.5.1 Description  
+ Users want  an easy way to manipulate specific pages of a pdf  document through a 
+user friendly graphical interface with simple functions . With this plugin they  can 
+rotate, reorder or  delete selected pages  of a pdf file.  
+3.5.2 Stimulus/Response Sequences  
+ The GUI Visual reorder  panel consists of the following parts:  
+ Selection panel: The users select the document that  they want to manipulate 
+from a directory.  The program creates thumbnails for each page of the pdf 
+document and presents  them into a subpanel.  When the thumbnails load,  the 
+users have the following abilities:  
+− Select specific pages by clicking on them through the graphical interface.  
+− Change the order: The user can change pages order  by: 
+• Dragging  them . 
+• Using  the “Move Up” and “Move Down” functions . 
+• Reversing  the selected pages: The user can select some pages and 
+reverse their order using the “Reverse” button.  
+− Zoom -in/Zoom -out: the user can change the zoom level of the thumbnails 
+preview.  
+− Delete/Undelete: these pages won’t be included in  the output file.  
+− Rotate left/right: the user can rotate the selected pages  clockwise or 
+anticlockwise.  
+− Reverse selected pages: The user can select some pages and reverse their 
+order.  
+− Preview a selected page in a built -in Image viewer.  
+All these conversions  can be accessed either by right clicking on the selected 
+pages or by the graphical interface’s buttons. The changes  will be applied to the 
+output file.  
+Software  Requirements Specification for PDF Split and Merge  Page 14 
+  
+   
+ 
+ 
+ 
+         
+This is a  screenshot of the Visual reorder plugin 
+      
+ 
+         
+This is a  screenshot of the built-in Image viewer  
+ 
+ Destination output file: The user selects the destination folder for the output file 
+or let s PDFsam create one by default to the same folder  of the imported file. 
+
+Software  Requirements Specification for PDF Split and Merge  Page 15 
+ Also, he can sel ect whether he wants the output file to be compressed or not, 
+and the pdf version of the generated document s. 
+ RUN butto n: After the user makes the changes he wants , he can press the RUN 
+button to start the operation.  
+3.5.3 Functional Requirements  
+REQ -1: The compression of the output files requires pdf version 1.5 or above . 
+REQ -2: The user can manipulate only 1 document at a time (not more).  
+3.6 System Feature 6  - Visually compose  
+Compose a pdf document from the pages of others pdf documents . 
+3.6.1 Description  
+ Users can combine multiple pdf documents in a single pdf document through a user 
+friendly graphical interface with simpl e utilities . They can open one or more pdf 
+documents and compose a single document that consists of parts of the original 
+documents. They can also make all the basic  functions (reorder, rotate, reverse...) to 
+the final document.  
+3.6.2 Stimulus/Response Sequences  
+ The GUI Visual  document  composer panel consists of the following parts:  
+ Selection panel: The Selection panel is divided into two parts:  
+− The panel where the user can open the input pdf documents . The user can 
+open several files together . They can:  
+• Zoom in/out to change the scale size of the thumbnails.  
+• Preview any page they want in the Image Viewer.  
+− And the panel where the user composes the final document.  It offers all the 
+basic utilities:  
+• “Move Up” and “Move Down” functions.  
+• Delete any page.  
+• Rotate clockwise and anticlockwise.  
+• Reversing the selected pages.  
+• Preview any selected page in the Image Viewer.  
+All these conversions can be accessed either by right clicking on the selected pages or by the graphical interface’s buttons. The changes will be appl ied to the 
+output file.  
+ Destination output file: The user selects the destination folder for the output file or sets the same output folder of an imported file. Also, he can select whether he wants the output file to be compressed or not, and the pdf versi on of the 
+generated document s. 
+ RUN button: After the user makes the changes he wants, he can press the RUN button to start the operation.  
+ 
+ 
+ 
+Software  Requirements Specification for PDF Split and Merge  Page 16 
+  
+   
+ 
+ 
+ 
+        
+ 
+This is a  screenshot of the Visual document composer  plugin 
+3.6.3 Functional Requirements  
+N/A 
+3.7 System Feature 7 - Working Environment  
+Save/Load a w orking environment . 
+3.7.1 Description and Priority  
+ Users have the ability to save the working environment with all the status of every 
+part of the application, so they don’t have to set the options of each pl ugin every time 
+they open the application. This feature is very useful for repetitive tasks , where users 
+save  a lot of  time with this possibility . 
+3.7.2 Stimulus/Response Sequences  
+ The user can access this feature by : 
+ Pressing “Alt + S” for save, and “Alt + L” for load the environment . 
+ Pressing the File button at the very top of the window, and then choose Save or 
+Load the environment.  
+ Pressing the appropriate icons under the bar menu.  
+ 
+  
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 17 
+  
+   
+ 
+ 
+ 
+      
+This is a  screenshot of the feature of saving/loading the Working Environment  
+3.7.3 Functional Requirements  
+REQ -1: Operation system on the computer system  
+3.8 System Feature 8  - Log Panel  
+Displays log messages for the operation of PDFsam’s  functions . 
+3.8.1 Description and Priority  
+ Users can understand how PDFsam responds to their actions by viewing the log 
+messages  in the log panel . 
+3.8.2 Stimulus/Response Sequences  
+ Users can discern the proper function of the application by the messages that are 
+displayed in the log panel. There are 3 kinds of message separating by color:  
+ Black message (DEBUG or INFO) is just an information about what the 
+application is doing.  
+ Blue message (WARNING) is a Warning telling that there’s an unexpected situation that the application can handle.  
+ Red message (ERROR or FATAL) is an error t hat PDFsam can’t handle.  
+There is also the possibility to select and copy the log text, clear it, or save the log text to a file.  
+ 
+  
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 18 
+  
+   
+ 
+ 
+ 
+          
+This is a  screenshot of the Log panel  
+3.8.3 Functional Requirements  
+REQ -1: Log level must not be OFF (i n the Settings panel) in order to work this 
+function 
+3.9 System Feature 9 - Settings  
+Settings for the main PDFsam’s GUI.  
+3.9.1 Description  
+ Users are allowed to make modifications on PDFsam’s working environment, in 
+order to adapt to their preferences and cover  their needs more sufficiently. In 
+general, available settings refer on: application language, theme of the application 
+GUI Interface, alert sounds and dialog boxes, the log detail level, the thumbnails creation library, auto update, default working environment and the default working directory.  
+3.9.2 Stimulus/Response Sequences  
+ The user has to select Settings below the plugins tree and the Settings main panel 
+appears with all the available choices that the user can do. Specifically, in this section a user can modify the following options:  
+ Language: The user can select the preferred application language.  
+ Look and feel: The user sets his preferred PDFsam’s look and feel and his preferred theme to be used.  
+
+Software  Requirements Specification for PDF Split and Merge  Page 19 
+  Log level: The user can set the detail of the log mess ages that he want to see in 
+the log panel.  
+ The thumbnails creation library  
+ Check for updates automatically.  
+ Turn on or off alert sounds.  
+ Ask for overwrite confirmation: Show a dialogue box asking the user for 
+confirmation when “Overwrite” is selected.  
+ Default environment: The user selects a previously saved environment file that 
+will be automatically loaded at start up.  
+ Default working directory: The directory where the documents will be saved and 
+loaded by default.  
+The user has to click the Save button and restart the application to have his 
+changes applied.  
+            
+ 
+ 
+ 
+        
+ 
+This is a  screenshot of the Settings main window  
+3.9.3 Functional Requirements  
+REQ -1: Restart PDFsam application to be the changes applied.  
+
+Software  Requirements Specification for PDF Split and Merge  Page 20 
+ 4. External Interface Requirements  
+4.1 User Interfaces  - GUI  
+The PDFsam GUI is a simple designed user interf ace which loads all the plugins  that constitute 
+the basic  functions  of the program . 
+ The main t oolbar:  The most common features of PDFsam’s GUI  are:  
+ 
+ 
+ 
+ Working environment  (load/save) : 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ Browsing window for pdf /xml files: 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 21 
+  Settings panel:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ About panel:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 22 
+  Log panel:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ Image viewer  (to preview pdf pages) : 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 23 
+  Save image (in the Image viewer):  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ PDFsam loading screen:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 24 
+ In the basic  version PDFsam includes six plugins:  
+ Alternate Mix  Interface:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ Merge/Extract  Interface:  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 25 
+  Rotate Interface:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ Split Interface:  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 26 
+  Visual document composer  Interface:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ Visual reorder  Interface:  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 27 
+ PDFsam Embedded help:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+Error/confirmation Messages:  
+  
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+The basic k eyboard shortcuts  that are supported:  
+ Alt-S: to save the working Environment.  
+ Alt-L: to load the working Environment.  
+ Alt-F4: to close the program.  
+
+Software  Requirements Specification for PDF Split and Merge  Page 28 
+ Available translations:  
+Arabic , Asturian, Bosnian, Brazilian Portuguese, Bulgarian, Catalan, Chinese (Hong 
+Kong),Croatian, Czech, Danish, Dutch, English (UK), Estonian, Finnish, French, Galician, German, 
+Greek, Hebrew, Hiligaynon, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian, Lithuanian, 
+Malayalam, Norwegian Bokmal, Persian, Polish, Portuguese, Russian, Slovak, Slovenian, Spanish, Swedish,  Thai, Turkish, Ukrainian, Vietnamese.  
+As listed here: https://translations.launchpad.net/pdfsam  
+4.2 Hardware Interfaces  
+N/A 
+4.3 Software Interfaces  
+PDFsam is compatible with every system supports a JRE and pdf files. That means that is 
+independent f rom the operating system of the computer system on which it runs.  
+PDFsam runs on every platform where a Java Virtual Machine is available (requires a JVM version 
+1.6 or higher).  It has been tested on various versions of Microsoft Windows, GNU/Linux 
+distrib utions and Mac  OS X . 
+4.4 Communications Interfaces 
+PDFsam is not a web application, so the network communication is only necessary  to check for 
+software updates.  
+ 
+ 
+The Check for updates option in the Settings panel  
+
+Software  Requirements Specification for PDF Split and Merge  Page 29 
+ 5. Other Nonfunctional Requirements  
+5.1 Performanc e Requirements  
+Furthermore, t he system can check for updates whenever is requested by the user, or 
+automatically when opening  the application. In this way PDFsam will be always up- to-date with all 
+new supported features and bug fixes.  PDFsam is an application that needs  a few system resources to work. This is designed not to 
+delay the system from other key processes. The response time of the program  is direct and the 
+application is considered real -time.  
+5.2 Safety Requirements  
+The application must ensure that i t leaves untouched the input pdf files. No modification is allowed 
+to these files.  
+Moreover, the application should function even in cases of wrong data insertion or wrong settings. 
+In case of error it should provide users with appropriate help messages.  
+5.3 Security Requirements  
+PDFsam does not introduce any security level, since the data it manages is  not critical. The users 
+in the application are all equal so there is not the need of any identity management level.  
+5.4 Software Quality Attributes  
+This application provides a pleasant  and user friendly graphical interface with relatively simple 
+functions. Any user should be able to use PDFsam without any specific knowledge or experience 
+by reading the user manuals (or the help messages that are embedded in the appli cation). Users 
+only need to provide some pdf documents and with just a few clicks they can perform any action.  
+5.5 Other Requirements  – GNU GPL License 
+The project is released under the GNU General Public License. The philosophy of this license 
+implies some basic principles which apply to the project.  
+The GPL is a free software license, and therefore it permits people to use and even redistribute the software without being required to pay anyone a fee for doing so.  
+− The freedom to run the program, for any purpos e. 
+− The freedom to study how the program works, and adapt it to your needs. Access to the source 
+code is a precondition for this.  
+− The freedom to redistribute copies so you can help your neighbor.  
+− The freedom to improve the program, and release your improvem ents to the public, so that the 
+whole community benefits. Access to the source code is a precondition for this.  
+Source: http://www.gnu.org/copyleft/gpl.html  
+Software  Requirements Specification for PDF Split and Merge  Page 30 
+ 6. Appendix  
+6.1 Appendix A: Glossary 
+PDF (Portable Document Form at): is a file format created by Adobe Systems in 1993 for document  
+exchange.  
+PDFsam  (PDF Split and Merge): The software described in this document . 
+JRE (Java Runtime Environment) : is the Java software that needs a computer in order to run Jav a 
+applications.  
+JVM (Java Virtual Machine):  is a platform -independent execution environment that converts Java 
+bytecode into machine language and executes it.  The JVM is the instance of the JRE, comes into 
+action when a Java program is executed. When execution is complete, this instance is garbage-
+collected.  
+IEEE (Institu te of Electrical and Electronics Engineers ): IEEE is the world’s largest professional 
+association advancing innovation and technological excellence for the benefit of humanity.  
+SRS Document  (Software Requirements Specification Document): is a complete description of 
+the behavior of the system to be developed.   
+Source: http://en.wikipedia.org/wiki/Software_Requir ements_Specification  
+GPL: The GNU General Public License is a free, “ copy  left” license for software and other kinds of  
+works. It is intended to guarantee freedom to share and change all versions of a program to make sure it remains free software for all its users.  
+Source: http://www.gnu.org/copyleft/gpl.html  
+FOSS (Free and Open Source Software):  is software that is liberally licensed to grant the right of 
+users to study, change, and improve its design through the availability of its source code.  
+ 
+ 
+ 
+Software  Requirements Specification for PDF Split and Merge  Page 31 
+ 6.2 Appendix B: Analysis Models – Use Case diagrams 
+6.2.1 Use case 1  - Splitting a pdf document : 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+6.2.2 Use case 2 – Embedded help:  
+ 
+ 
+ 
+ 
+ 
+6.2.3 Use case 3 – Log panel : 
+ 
+ 
+ 
+ 
+
+Software  Requirements Specification for PDF Split and Merge  Page 32 
+  
+6.2.4 Use case 4 – Merging  pdf documents : 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+6.2.5 Use case 5 – Save/Load the working Environment : 
+ 
+ 
+ 

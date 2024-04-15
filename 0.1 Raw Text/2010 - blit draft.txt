@@ -1,0 +1,283 @@
+
+[Company Logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+[system name]
+Functional Requirements Specification
+BLIT102
+Version: Draft 
+[Company Logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+Table of Contents
+ Approval Log                                                                                                                     .................................................................................................................  3  
+ Revision History                                                                                                                ............................................................................................................  4  
+ Project Team                                                                                                                     .................................................................................................................  5  
+1 Introduction                                                                                                                     .................................................................................................................  6  
+1.1 Purpose                                                                                                                      ..................................................................................................................  6  
+1.2 Scope                                                                                                                         .....................................................................................................................  6  
+2 Specific Requirements                                                                                                    ................................................................................................  7  
+2.1 Functionality                                                                                                               ...........................................................................................................  7  
+2.1.1 Module: Admin                                                                                                           .......................................................................................................  7  
+2.2 Usability                                                                                                                      ..................................................................................................................  8  
+2.2.1 User Interface Guidelines                                                                                           .......................................................................................  8  
+2.3 Reliability                                                                                                                    ................................................................................................................  8  
+2.3.1 System Downtime                                                                                                      ..................................................................................................  8  
+2.4 Performance                                                                                                               ...........................................................................................................  9  
+2.4.1 Quality Assurance                                                                                                      ..................................................................................................  9  
+2.5 Supportability                                                                                                             .........................................................................................................  9  
+2.5.1 Coding Standards                                                                                                      ..................................................................................................  9  
+2.5.2 Maintainability Standards                                                                                           .......................................................................................  9  
+2.6 Design Constraints                                                                                                     .................................................................................................  9  
+2.6.1 Development Platform                                                                                                ............................................................................................  9  
+2.6.2 Production Releases                                                                                                ............................................................................................  10  
+2.6.3 Development Process                                                                                              ..........................................................................................  10  
+2.7 Online User Documentation and Help System Requirements                                  ..............................  11  
+2.7.1 Robohelp Tool: RoboHelp version 8 will be used to create the online [system  
+name] Help hypertext links. The [system name] system will display a hypertext link  
+labeled “Help” at the top right corner on each of the user screens to provide assistance  
+to the user. Each of the Help topic pop-up windows will contain that same content that  
+is available within the [system name] user’s manuals.                                                      ..................................................  11  
+2.8 Interfaces                                                                                                                 .............................................................................................................  11  
+2.9 Applicable Standards                                                                                               ...........................................................................................  11  
+2.9.1 HIPAA Compliance                                                                                                  ..............................................................................................  11  
+3 Glossary                                                                                                                         .....................................................................................................................  12  
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+ 
+Approval Log
+Print NameRoleDate Signature
+Created on 7/15/2009 Page 3 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+Revision History
+DateVersionAuthor Description
+06/02/08DraftNHarris Document Created - Initial Revision
+08/11/08DraftNHarris Added [employee name] to the project team
+08/11/08DraftNHarris Updated with functional requirements based on  
+use cases.
+08/15/08DraftNHarris Updated with functional requirements based on  
+the approved use cases.
+08/18/08DraftNHarris Updated with functional requirements based on  
+the approved use cases for iterations 1 and 2. 
+Created on 7/15/2009 Page 4 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+Project Team
+NameTitle/Role Department/Team PhoneE-mail
+xxxCIO and  Business/Technical  
+Owner/Final ApproverIT xxxxxx@xxx.com
+xxxManager IT – QA/QC & 
+Implementationxxxxxx@xxx.com
+xxxProgrammer Analyst/Project  
+ManagerIT - Development xxxxxx@xxx.com
+xxxProgrammer Analyst/SME IT - Development xxxxxx@xxx.com
+xxxProgrammer Analyst/SME IT - Development xxxxxx@xxx.com
+xxxTechnical Writer IT – QA/QC & 
+Implementationxxxxxx@xxx.com
+xxxSr. Business Systems Analyst IT – QA/QC & 
+Implementationxxxxxx@xxx.com
+xxxQA Analyst IT – QA/QC & 
+Implementationxxxxxx@xxx.com
+xxxTechnical Writer IT – QA/QC & 
+Implementationxxxxxx@xxx.com
+Created on 7/15/2009 Page 5 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+1Introduction
+The management of [company name]. has identified a potential need for re-writing its core  
+Laboratory Information System (LIS) to improve the performance. In general, this project  
+will provide a stable environment, automate decisions, streamline workflows, and employ  
+industry standard coding and documentation practices. This effort will ensure System  
+Integrity/Reliability by developing a system that is reliable and low maintenance including  
+security and confidentiality requirements as dictated by HIPAA and FDA regulatory  
+standards.
+1.1Purpose
+This Functional Requirements Specification (FRS) is intended to capture the changes in  
+functionality that will occur during [system name] Re-Writing effort, which is part of the xxx  
+Enhancements project. All functionalities for the new [system name] system would be  
+documented in this FRS. Any undocumented requirements will be considered out of scope  
+and will not be implemented during this phase of Re-Writing.
+1.2Scope
+The existing functionalities in the core [system name] will remain same. This project is  
+limited in scope to the enhancements and defects that are critical in the severity level that is  
+the issues that cause great burden to the system users and the enhancements in system  
+architecture, which will facilitate efficient growth of [system name] and the [company name]  
+business, will fall under the purview of this project scope.
+The functional issues and requirements that will be discussed and gathered respectively as  
+well as validated in the Requirements Gathering and Validating Sessions started on  
+MM/DD/YYYYwould be documented in this FRS moving forward. The project team has  
+decided that system development will occur on module by module basis.
+Created on 7/15/2009 Page 6 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+2Specific Requirements
+2.1Functionality
+2.1.1Module: Admin
+2.1.1.1Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000  
+2.1.1.1.1System shall display the hyperlinks and descriptions for the user to perform the desired  
+functions as specified in the related UIS.
+2.1.1.1.2The User shall be able to view the hyperlinks and descriptions listed.
+2.1.1.1.3The User shall be able to choose a function by clicking the hyperlink.
+2.1.1.1.4The system shall display the desired operational page for the user after clicking the  
+hyperlink.
+2.1.1.2Use Case: xxx Page, UC ID: UC_RR_xxx_xxx_000  
+2.1.1.2.1Action: Create/Add User
+2.1.1.2.1.1A user with admin privileges shall be able to Add/Create a new user and associate the  
+user with specified role(s) in the system.
+2.1.1.2.1.2The system shall display an error message if the new user is found in the [system name]  
+system.
+2.1.1.2.1.3The system shall display an error message if the new user is not active in the Active  
+Directory.
+2.1.1.2.1.4The system shall display the xxx tab as the default tab.
+2.1.1.2.1.5The user shall be able to create/add a new user manually or from a template.
+2.1.1.2.1.6The user record shall inherit all specified role(s) settings in the template when the user  
+record is created from the user template
+2.1.1.2.1.7The user shall be able to add additional roles manually while creating/adding a new user  
+from a user template.
+2.1.1.2.1.8The system shall save the user info to the database with specified roles associated with  
+divisions for the newly created/added user.
+2.1.1.2.1.9The system shall perform a search on the [system name] user display name and user  
+name columns in the user tables to find the user and verify the user’s existence.
+2.1.1.2.1.10The system shall perform a search in the Active Directory to verify the status of the user
+— Active/Inactive within the company—when the user attempts to create/add a new user  
+in the [system name] system.
+Created on 7/15/2009 Page 7 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+2.1.1.2.1.11The system shall generate a standard confirmation message after saving data and  
+warning/caution messages after the cancel or close button is clicked.
+2.1.1.2.1.12The user must have the flexibility to click any tab to commence the adding process,  
+although the xxx Tab shall display as the default tab.
+2.1.1.2.1.13All required fields as specified in the UIS must be marked with a red asterisk alerting the  
+user to fill the required fields in.
+2.1.1.2.1.14The user shall be able to save data after creating/adding a new user or cancel data to  
+abort the process. 
+2.1.1.2.1.15The system shall clear up data if the user chooses to click the Cancel button in the midst  
+of creating/adding a new user.
+2.1.1.2.1.16The system shall direct the user to the xxx Page if the user chooses to click the close  
+button without entering any data. 
+2.1.1.2.1.17The user must associate at least one role, division, designator code, and lab location at  
+the time of creating/adding a new user.
+2.1.1.2.1.18The user must fill in the required fields—User Name and Display Name—in the User  
+Information section at the time of creating/adding a new user.
+2.1.1.2.1.19The system shall generate a standard error/warning message after the user attempts to  
+save data without associating one of each of the following criteria—xxx—and/or without  
+filling in the required fields in the User Information section.
+2.2Usability
+2.2.1User Interface Guidelines
+2.2.1.1The Project Team must demonstrate mockups of UI changes to project stakeholders early  
+in the development process.
+2.2.1.2The Project Team must permit reasonable adjustment to the user interfaces of new  
+functionality by project stakeholders when project schedule permits those adjustments.
+2.3Reliability
+2.3.1System Downtime
+2.3.1.1The Project Team shall schedule updates to the production environment only on Tuesdays  
+between 7pm and 7am. (Example)
+Created on 7/15/2009 Page 8 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+2.4Performance
+2.4.1Quality Assurance
+2.4.1.1The Project Team must perform applicable and appropriate testing against new functionality  
+prior to releasing that functionality/build to the production environment.
+2.4.1.2The project Team must allow a reasonable time to conduct User Acceptance Testing (UAT)  
+against the built functionalities prior to deploying the product to the production environment.
+2.5Supportability
+2.5.1Coding Standards
+2.5.1.1The Development Team shall define coding standards for the application and follow those  
+standards consistently.
+2.5.1.2The Development Team shall be required to adjust existing source code to follow accepted  
+coding standards only if that source code must be modified.
+2.5.2Maintainability Standards
+2.5.2.1The system shall log errors, warnings, and informational messages to an external log file on  
+the application server.
+2.5.2.2The Development Team shall be required to adjust existing source code to use the external  
+log file only if that source code must be modified to implement another requirement.
+2.5.2.3The system shall log an error message to the external data file when the user is directed to  
+the [SYSTEM NAME] error page. 
+2.5.2.4The system shall send a notification email to a Client Services email distribution list if the  
+user is directed to the xxx error page. 
+2.6Design Constraints
+2.6.1Development Platform
+2.6.1.1The Development Team shall develop functionalities using the xx language and on the  
+supported .NET 3.5 Platform. 
+2.6.1.2The Development Team shall utilize established open source frameworks instead of  
+proprietary custom components wherever appropriate. 
+2.6.1.3The system shall continue to depend upon and use a single SQL Server 2008 database.
+Created on 7/15/2009 Page 9 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+2.6.2Production Releases
+2.6.2.1The Technical Owner/Lead shall provide signoff before any [SYSTEM NAME] build can be  
+deployed to the production environment.
+2.6.3Development Process
+2.6.3.1The Development Team shall perform weekly integrations of the [SYSTEM NAME] system  
+and deploy these system updates to the Staging environment.
+2.6.3.2The Development Team shall label every scheduled [SYSTEM NAME] build in the source  
+control system.
+2.6.3.3The Development Team shall perform scheduled [SYSTEM NAME] builds using code  
+checked out of source control using the label as defined and specified.
+2.6.3.4The Development Team shall develop and then send out release notes via e-mail to all  
+Project Team after each [SYSTEM NAME] build deployed to the Staging environment.
+2.6.3.5The Technical Lead shall perform code reviews of every system change before those  
+changes may be committed to source control.
+2.6.3.6The QA/QC Team must perform regression testing against all scheduled builds.
+Created on 7/15/2009 Page 10 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+2.7Online User Documentation and Help System Requirements
+2.7.1Robohelp Tool: RoboHelp version 8 will be used to create the online [system name]  
+Help hypertext links. The [system name] system will display a hypertext link labeled  
+“Help” at the top right corner on each of the user screens to provide assistance to the  
+user. Each of the Help topic pop-up windows will contain that same content that is  
+available within the [system name] user’s manuals.
+2.7.1.1The system shall provide the capability to open a pop-up window displaying information  
+about the specific page along with links to supporting help topics upon selecting each Help  
+link.
+2.7.1.2The system shall display “[system name] Overview” page located under the Getting Started  
+section of Help as default help topic page that will load upon selecting Help hypertext link.
+2.7.1.3The system must allow users to easily navigate through each of the help topics by selecting  
+a corresponding hypertext link provided in the left frame of the pop-up Help window.
+2.7.1.4The system shall display the [company name] logo in the top, right side of the screen on  
+each of the help pages.
+2.7.1.5The system must exhibit each of the help pages using the same color scheme and  
+background as specified.
+2.7.1.6The system shall provide searching ability to the users to quickly find specific topic material  
+through the online help tool.
+2.7.1.7The system shall provide an index to the users for a more in-depth search of topic contents  
+through the online help tool.
+2.7.1.8The system shall provide a Glossary for industry-related terms associated with [company  
+name] and the [system name] system to the users through the online help tool.
+2.8Interfaces
+2.9Applicable Standards
+2.9.1HIPAA Compliance
+2.9.1.1The system shall retain existing HIPAA compliance capabilities.
+2.9.1.2The system shall follow HIPAA compliance capabilities in new functionality introduced to the  
+system.
+Created on 7/15/2009 Page 11 of 12
+Last modified on 6/17/2010
+[Company logo] Functional Requirements  
+SpecificationInformation Technology
+BLIT102
+3Glossary
+Term Description
+Created on 7/15/2009 Page 12 of 12
+Last modified on 6/17/2010

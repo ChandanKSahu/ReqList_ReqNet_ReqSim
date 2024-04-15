@@ -1,0 +1,48 @@
+D	Software Requirements Specification for the Management Processes of an Integrated Library System
+1	Introduction
+1.6	Operating Environment
+1.7	Design and Implementation Constraints
+1.8	User Documentation
+1.9	Assumptions and Dependencies
+2	System Requirements
+2.1	Management Tools: General
+2.1.1	streamlined staff login
+2.1.2	report templates
+2.1.3	reports permissions
+2.1.4	query tool
+2.1.5	board reports
+2.1.6	transaction data archive
+2.1.7	periodic reports, examples
+2.1.8	Query selections
+2.1.9	Reports queuing
+2.1.10	PINES-Specific Reports Examples
+2.1.11	PINES-Specific Fine-Grained Requirements
+2.2	Management Tools: Demographics
+2.2.1	behavior and use analysis
+2.2.2	demographic statistics
+2.3	Management Tools: Inventory Control
+2.3.1	material volume report
+2.3.2	system capacity interface
+2.3.3	shelf space report
+2.3.4	uncataloged material
+2.3.5	item transfer utility
+2.3.6	missing and damaged items report
+2.3.7	in-transit items report
+2.3.8	item record purging
+2.3.9	deletions
+2.4	Management Tools: Patron Records
+2.4.1	patron characteristics
+2.4.2	inactive patrons report
+2.5	Management Tools: Transaction Records
+2.5.1	transaction history
+2.5.2	examples of useful backroom statistics
+2.5.3	types of check-in
+2.5.4	types of check-out
+2.5.5	holds and locations
+2.5.6	transactions report
+2.6	Management Tools: Financial Records
+2.6.1	value of items report
+2.6.2	standard accounting practice and auditing requirements
+2.6.3	financial data (patrons)
+2.6.4	financial reports
+2.6.5	financial audit trail

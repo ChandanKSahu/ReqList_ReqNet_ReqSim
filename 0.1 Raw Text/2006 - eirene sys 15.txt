@@ -1,0 +1,4192 @@
+
+ 
+ EUROPEAN INTEGRATED RAILWAY RADIO 
+ENHANCED NETWORK  
+ 
+ Source:  GSM-R Operators Group 
+ Date: 17 May 2006 
+ Reference:  PSA167D006 
+ Version:  15 
+ Number of pages:  Cover + 136 pages UIC Project EIRENE  
+System Requirements Specification  
+ 
+
+PSA167D006-15   Page 1
+  
+This document is subject to further evolution and may therefore be used at the sole and 
+entire responsibility of the organisation or entity deciding to do so. 
+The UIC is not liable for any consequence of any kind resulting from the use by third 
+parties of the information extracted from this document. Important notice 
+Page 2  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 3
+  
+ 
+Version Date Details 
+10.1 14 July 1998 All sections incorporated into one document 
+CR 98-105.1 
+CR 98-106.1 
+CR 98-107.1 
+CR 98-108.1 rev 1 
+CR 98-109.1 
+CR 98-110.1 
+CR 98-111.1 
+CR 98-112.1 
+CR 98-113.1 
+CR 98-114.1 
+CR 98-115.1 
+CR 98-116.1 
+CR 98-117.1  
+CR 98-119.1 
+Editorial changes 
+10.2 5 August 1998 CR 98-118.1 
+CR 98-119.1 
+CR 98-120.1  
+CR 98-121.1 
+10.3 24 September 1998 CR 98-122.1 (rev 1) 
+CR 98-123.1 (rev 1) 
+CR 98-124.1 (rev 1) 
+CR 98-125.1 (rev 1) 
+CR 98-126.1 (rev 1) 
+CR 98-127.1 (rev 1) 
+CR 98-128.1 (rev 1) 
+CR 98-129.1 
+CR 98-130.1 (rev 1) 
+CR 98-131.1 (rev 1) 
+CR 98-132.1 (rev 1) 
+CR 98-133.1 
+CR 98-134.1 (rev 1) 
+CR 98-135.1 (rev 1) 
+CR 98-136.1 
+CR 98-137.1 
+CR 98-138.1 (rev 1)  
+CR 98-139.1 
+CR 98-140.1 
+CR 98-141.1 
+CR 98-142.1 (rev 1)  
+CR 98-143.1 
+   Document History 
+Page 4  PSA167D006-15 
+  
+Version Date Details 
+10.3 (cont)  CR 98-144.1 
+CR 98-145.1 
+CR 98-146.1 
+CR 98-147.1 
+CR 98-148.1 
+CR 98-149.1 
+CR 98-150.1  
+CR 98-151.1 
+CR 98-152.1 (rev 1)  
+CR 98-157.1 
+11.0 22 December 1998 CR 98-153.1 
+CR 98-154.2 
+CR 98-155.2 
+CR 98-156.2 
+CR 98-160.2 
+CR 98-161-1 
+CR 98-162-1 
+CR 98-164.2 
+CR 98-165.2 
+CR 98-166.1 
+CR 98-167.2 
+CR 98-168-2 
+CR 98-169-4 
+CR 98-170-1 
+CR 98-171-1 
+CR 98-172-1 
+CR 98-173-1 
+CR 98-174-1 
+CR 98-175-1 
+CR 98-176-1 
+CR 98-177-1 
+CR 98-178-1 
+CR 98-179-1 
+CR 98-181-2 
+CR 98-182-1 
+CR 98-183-2 
+CR 98-184-3 
+CR 98-185-2 
+CR 98-186-1 
+CR 98-187-1 
+CR 98-188-1 
+CR 98-189-1 
+CR 98-190-1 
+CR 98-191-1 
+   
+PSA167D006-15   Page 5 
+  
+Document History 
+Version Date Details 
+12.0 20 December 1999 SCR 99-192.3 
+SCR 99-193.1 
+SCR 99-195.1 
+SCR 99-196.2 
+SCR 99-197.1 
+SCR 99-198.2 
+SCR 99-199.2 
+SCR 99-201.2 
+SCR 99-202.2 
+SCR 99-203.2 
+SCR 99-204.1 
+SCR 99-205.1 
+SCR 99-206.2 
+SCR 99-207.1 
+SCR 99-208.1 
+SCR 99-209.2 
+SCR 99-212.2 
+SCR 99-213.2 
+SCR 99-214.2 
+SCR 99-215.2 
+SCR 99-216.2 
+SCR 99-219.2 
+SCR 99-220.1 
+SCR 99-221.1 
+SCR 99-222.1 
+SCR 99-224.4 
+SCR 99-228.1 
+SCR 99-229.2 
+SCR 99-230.3 
+SCR 99-231.1 
+SCR 99-232.1 
+SCR 99-233.1 
+SCR 99-237.1 
+SCR 99-239.1 
+SCR 99-240.1 
+SCR 99-242.2 
+Page 6  PSA167D006-15 
+  
+Version Date Details 
+13.0 15 December 2000 SCR 99-241.1 
+SCR 00-243.1 
+SCR 00-245.1 
+SCR 00-246.1 
+SCR 00-247.1 
+SCR 00-248.2 
+SCR 00-249.4 
+SCR 00-250.2 
+SCR 00-251.4 
+SCR 00-252.1 
+SCR 00-253.1 
+SCR 00-254.1 
+SCR 00-255.4 
+SCR 00-256.1 
+SCR 00-257.4 
+SCR 00-258.1 
+SCR 00-259.2 
+SCR 00-260.2 
+SCR 00-261.1 
+SCR 00-262.3 
+SCR 00-263.2 
+SCR 00-264.2 
+SCR 00-265.1 
+SCR 00-266.1 
+SCR 00-267.2 
+SCR 00-268.2 
+SCR 00-269.1 
+SCR 00-270.1 
+SCR 00-272.1 
+SCR 00-273.1 
+SCR 00-274.1 
+SCR 00-275.2 
+SCR 00-276.2 
+SCR 00-277.1 
+SCR 00-278.2 
+SCR 00-279.1 
+SCR 00-280.1 
+SCR 00-281.1 
+PSA167D006-15   Page 7 
+  
+Document History 
+Version Date Details 
+14.0 21 October 2003 O-9004 (SCR 01-284.2) 
+O-9005 (SCR 01-285.1) 
+O-9006 (SCR 01-286.1) 
+O-9007 (SCR 01-287.1) 
+O-9008 (SCR 01-288.1) 
+O-9009 (SCR 01-289.1) 
+O-9010 (SCR 01-290.1) 
+O-9011 (SCR 01-291.1) 
+O-9012 (SCR 01-294.1) 
+O-9013 (SCR 01-295.1) 
+O-9014 (SCR 01-296.1) 
+O-9015 (SCR 02-299.1) 
+O-9016 (SCR 02-300.1) 
+O-9017 (SCR 02-303.1) 
+Page 8  PSA167D006-15 
+  
+Version Date Details 
+15.0 29 March 2006 O-9019 
+O-9020 
+O-9021 
+O-9022 
+O-9023 
+O-9033 
+O-9036 
+O-9037 
+O-9038 
+O-9039 
+O-9040 
+O-9041 
+O-9047 
+O-9049 
+O-9050 
+O-9051 
+O-9052 
+O-9053 
+O-9055 
+O-9056 
+O-9060 
+O-9062 
+O-9063 
+O-9064 
+O-9065 
+O-9066 
+O-9067 
+O-9068 
+O-9069 
+O-9070 
+O-9071 
+O-9073 
+O-9074 
+O-9075 
+O-9080 
+O-9081 
+O-9082 
+O-9085 
+O-9088 
+O-9089 
+O-9096 
+O-9097 
+O-9099 
+PSA167D006-15   Page 9 
+  
+Document History 
+Version Date Details 
+15 17 May 2006 Approved by GSM-R  
+Operators Group,  
+Functional Group and  
+Industry Group 
+ 
+Page 10  PSA167D006-15 
+  
+ 
+ 
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 11
+  
+Important notice 1 
+Document History 3 
+List of abbreviations 15 
+List of definitions 19 
+1 Introduction 25 
+1.1 General 25 
+1.2 Scope 25 
+1.3 Applicability 26 
+1.4 System overview 27 
+1.5 Structure of the specification 32 
+2 Network requirements 35 
+2.1 Introduction 35 
+2.2 GSM teleservices 35 
+2.3 GSM bearer services 36 
+2.4 GSM supplementary services 37 
+2.5 Railway specific services 38 
+2.6 Alerting duration 38 
+3 Network configuration 39 
+3.1 Introduction 39 
+3.2 Coverage 39 
+3.3 Handover and cell selection 40 
+3.4 Call setup time requirement 40 
+3.5 Frequency band and channel arrangements 41 
+3.6 DTMF tones and signals 41 
+3.7 Termination of VGCS/VBS calls 41 
+3.8 Muting and unmuting for VGCS calls 41 
+4 Mobile equipment core specification 43 
+4.1 Introduction 43 
+4.2 Radio interface aspects 44 
+4.3 Services and facilities 45 
+4.4 Core MMI requirements 49 
+4.5 Core environmental requirements 50 
+5 Cab radio 55 
+5.1 Introduction 55 
+5.2 System components 55 
+5.3 Driver call-related functions 56 
+5.4 MMI functions 58 
+5.5 Handling of calls 59 
+5.6 Other Cab radio functions 63 
+5.7 Environmental and physical 65 List of contents 
+Page 12  PSA167D006-15 
+  
+5.8 Cab radio interfaces to on-train systems 67 
+5.9 Train borne recorder 67 
+5.10 ERTMS/ETCS interface 67 
+5.11 Public Address interface 68 
+5.12 UIC Intercom 68 
+5.13 Driver’s Safety Device 68 
+5.14 Other interfaces 68 
+5.15 Train Interface Unit (TIU) 68 
+5A Handling of calls 71 
+5A.1 Call arbitration table 71 
+5A.2 Call termination of outgoing calls table 75 
+5A.3 Call termination of incoming calls table 76 
+6 General purpose radio 77 
+6.1 Introduction 77 
+6.2 System components 77 
+6.3 General purpose radio functions 77 
+6.4 Environmental and physical 78 
+7 Operational radio 81 
+7.1 Introduction 81 
+7.2 System components 81 
+7.3 Operational radio functions 81 
+7.4 Shunting radio requirements 82 
+7.5 Environmental and physical 82 
+8 Controller equipment specifications 85 
+8.1 General 85 
+8.2 Termination of VGCS/VBS calls 85 
+8.3 Muting and unmuting for VGCS calls 85 
+9 Numbering plan 87 
+9.1 General 87 
+9.2 Numbering plan requirements 87 
+9.3 Numbering plan limitations 89 
+9.4 Types of numbers 89 
+9.5 Use of National EIRENE Numbers 90 
+9.6 Use of International EIRENE Numbers 97 
+9.7 Use of MSISDN numbers 98 
+9.8 Use of Short Dialling Codes 98 
+9.9 Use of group addresses 99 
+9.10 Access to external networks 100 
+9.11 Calls from external networks to the GSM-R network 101 
+9A Function Codes 103 
+9B Numbering plan overview 105 
+PSA167D006-15   Page 13 
+  
+List of contents 
+10 Subscriber management 107 
+10.1 Introduction 107 
+10.2 Allocation of priorities 107 
+10.3 Access classes 108 
+10.4 Closed user groups 109 
+10.5 Network selection 109 
+10.6 Cell broadcast message identifiers 109 
+10.7 Encryption and authentication 110 
+11 Functional numbering and location dependent addressing 111 
+11.1 Introduction 111 
+11.2 Ground-train addressing 111 
+11.3 Functional numbering 111 
+11.4 Re-establishment of functional number correlation 114 
+11.5 Presentation of functional identities 115 
+11.6 Inter EIRENE network interfacing 116 
+11.7 Location dependent addressing 116 
+11.8 Calls from external networks to the EIRENE network 117 
+12 Text messaging 119 
+12.1 Introduction 119 
+12.2 System requirements 119 
+13 Railway emergency calls 121 
+13.1 Introduction 121 
+13.2 Provision of Railway emergency calls 121 
+13.3 Initiation of Railway emergency calls 121 
+13.4 Receipt of Railway emergency calls 122 
+13.5 Confirmation of Railway emergency calls 122 
+14 Shunting mode 125 
+14.1 Introduction 125 
+14.2 System requirements: Operational Radio 125 
+14.3 System requirements: Cab radio 128 
+14.4 System requirements: Operational radio and Cab radio 129 
+14.5 Numbering plan 129 
+14.6 Control of shunting group membership 130 
+14.7 Link assurance signal 130 
+15 Direct mode 131 
+15.1 Introduction 131 
+15.2 System requirements 131 
+A References 133 
+A.1 List of normative references 133 
+A.2 List of informative references 135 
+ 
+Page 14  PSA167D006-15 
+  
+ 
+ 
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 15
+  
+3GPP Third Generation Partnership Project 
+AoC Advice of Charge 
+ARFCN  Absolute Radio Frequency Channel Number 
+ATC Automatic Train Control 
+BOIC Barring of Outgoing International Calls 
+BSC Base Station Controller  
+BSS Base Station System 
+BTS Base Transceiver Station  
+CCBS Completion of Calls to Busy Subscribers 
+CFU Call Forwarding Unconditional 
+CLI Calling Line Identity 
+CLIP Calling Line Identity Presentation 
+CLIR Calling Line Identification Restriction 
+CN Coach Number 
+CoLP Connected Line Identification Presentation 
+CoLR Connected Line Identification Restriction 
+COTS Commercial Off-the-Shelf 
+CT Call Type 
+CUG Closed User Group 
+CW Call Waiting 
+DM Direct Mode 
+ECT Explicit Call Transfer 
+EIRENE European Integrated Railway Radio Enhanced Network 
+eMLPP Enhanced Multi-Level Precedence and Pre-emption 
+EN Engine Number 
+ENAN EIRENE Network Access Number 
+ERTMS European Rail Traffic Management System 
+ETCS European Train Control System 
+ETSI European Telecommunications Standards Institute 
+FC Function Code 
+FFFIS Form Fit Functional Interface Specification 
+FFFS Form Fit Functional Specification 
+FIS Functional Interface Specification 
+FN Functional Number 
+GCR Group Call Register List of abbreviations 
+Page 16  PSA167D006-15 
+  
+GGSN Gateway GPRS Support Node 
+GLN Group Location Number 
+GPRS General Packet Radio Service 
+GSM Global System for Mobile communications 
+GSM-R GSM - Railway 
+HLR Home Location Register 
+IC International Code 
+IEC International Electrotechnical Commission 
+IFN International Functional Number 
+IMSI International Mobile Subscriber Identity 
+ISDN Integrated Services Digital Network 
+ITU International Telecommunications Union 
+ITU-T International Telecommunications Union – Telecommunications 
+LN Location Number 
+MAP Mobile Application Part 
+ME Mobile Equipment 
+MMI Man-Machine Interface 
+MO/PP Mobile Originated/Point-to-Point (short message) 
+MORANE MObile radio for RAilway Networks in Europe 
+MPTY Multi ParTY service 
+MS  Mobile Station 
+MSC Mobile Services Centre 
+MSISDN Mobile Station International ISDN Number 
+MT Mobile Termination 
+MT/PP Mobile Terminated/Point-to-Point (short message) 
+MTLN Maintenance Team Location Number 
+NFN National Functional Number 
+NSS Network Sub-System 
+OMC Operation and Maintenance Centre 
+PA Public Address 
+PABX Private Automatic Branch Exchange 
+PDP Packet Data Protocol 
+PLMN Public Land Mobile Network 
+PTT Push-To-Talk 
+QoS Quality of Service 
+PSA167D006-15   Page 17 
+  
+List of abbreviations 
+RBC Radio Block Centre 
+SA Service Area 
+SGSN Serving GPRS Support Node 
+SIM Subscriber Identity Module 
+SMS Short Message Service 
+STLN Shunting Team Location Number 
+TBD To Be Determined 
+TCLN Train Controller Location Number 
+TDMA Time Division Multiple Access 
+TN Train Number 
+TRX Transceiver 
+TS Technical Specification 
+UA Unnumbered Acknowledge 
+UIC Union Internationale des Chemins de Fer 
+UIN User Identifier Number 
+Um GSM air interface 
+UN User Number 
+USSD Unstructured Supplementary Service Data 
+UUS1 User-to-User Signalling type 1 
+VBS Voice Broadcast Service 
+VGCS Voice Group Call Service 
+VLR Visitor Location Register 
+ 
+ 
+Page 18  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 19
+  
+Balise  
+ A passive or active device normally mounted in proximity to the track for 
+communications with passing trains. A standard for passive balises has been 
+devised within the EUROBALISE project. 
+Broadcast call 
+ A call made to all members of a pre-defined group within a local geographical 
+area. Only the initiator of the call may talk with all other group members 
+listening only. 
+Cab radio  
+ The radio and associated user and other interfaces installed in the cab of a 
+locomotive and for use principally by the locomotive driver. Definition also 
+includes those radios supporting ATC. 
+Call type 
+ A prefix used to identify the User Number dialled. 
+Chief conductor 
+ A member of the train crew with overall responsibility for passenger related 
+Railway activities on-board the train. 
+Coach number 
+ A number assigned to an item of rolling stock on a permanent basis. The coach 
+number may form a component of a functional number used to address 
+users/systems on an item of rolling stock. 
+Controller  
+ An individual responsible for the conduct of some aspect of train operations 
+(also known as dispatcher). For the purposes of this specification the following 
+functional roles of controllers are defined: 
+- primary controller; 
+- secondary controller; 
+- traffic controller; 
+- power supply controller. 
+ Dependent upon local circumstances, a number of functional roles can be carried 
+out by a single controller or a single functional role can be carried out by a 
+number of controllers. List of definitions 
+Page 20  PSA167D006-15 
+  
+Direct mode  
+ The term for back-to-back or set-to-set radio communications without the use of 
+any ground infrastructure. 
+Driver safety device 
+ An on-train system which monitors the alertness of the driver and provides 
+warning and alarms to other systems as appropriate. 
+EIRENE network 
+ An EIRENE network is a railway telecommunications network, based on the 
+ETSI GSM standard, which complies with all related mandatory requirements 
+specified in the EIRENE FRS and SRS. An EIRENE network may also include 
+optional features and these shall then be implemented as specified in the 
+EIRENE FRS and SRS. The EIRENE network excludes terminals. 
+EIRENE Network Access Number 
+ A number dialled as an access code to allow use of functional numbers not 
+compliant with the ITU-T Rec E.164. 
+EIRENE system 
+ An EIRENE system is a railway telecommunications system based on the ETSI 
+GSM standard, which complies with all related mandatory requirements as 
+specified in the EIRENE FRS and SRS. An EIRENE system may also include 
+optional features and these shall then be implemented as specified in the 
+EIRENE FRS and SRS. The EIRENE System includes terminals. 
+Engine number 
+ A number assigned to an item of traction stock on a permanent basis. The engine 
+number may form a component of a functional number used to address 
+users/systems on an item of traction stock. 
+Fiche 
+ A UIC fiche or leaflet is a document adopted by UIC members. Statements 
+within the fiche may comprise specifications which are binding on UIC members 
+(‘obligatory’ specifications) or optional (‘recommended’ specifications). The 
+existing track-to-train radio standard is contained within UIC fiche 751-3. It is 
+envisaged that the EIRENE standard will be covered by a new UIC fiche, 751-4. 
+ 
+ 
+PSA167D006-15   Page 21 
+  
+List of definitions 
+Functional addressing/numbering 
+ A term used to describe the process of addressing a call using a number 
+representing the function a user is performing, rather than a number identifying 
+the user’s terminal equipment. 
+Functional identity 
+ The full alphanumeric description of the function performed by a called or 
+calling party within the functional numbering scheme, identifying them by 
+function or role rather than by a specific item of radio equipment or user 
+subscription. The functional identity can include characters and/or numbers. 
+Functional number 
+ The full number used within the functional addressing scheme to contact an end 
+user/system by function or role rather than by a specific item of radio equipment 
+or user subscription. 
+General purpose radio 
+ A standard GSM radio based closely on commercially available units for general 
+use. 
+Group call 
+ A call made to all members of a pre-defined group within a local geographical 
+area. Only one member of the group may talk at any instant with all other group 
+members listening only. 
+Handover 
+ The process by which connection between the GSM mobile and the GSM 
+network is maintained as the mobile moves from area to area, by passing 
+communication channel control from one base station to another or between 
+different channels in one cell. 
+High speed line 
+ A section of route forming part of the European High Speed Rail Network and 
+any additional routes specified as such by national administrations. 
+Link assurance signal 
+ A form of unidirectional signalling transmitted periodically or constantly from 
+one radio to another to allow the receiving user to detect a break in radio 
+transmission during critical manoeuvres (eg during shunting). 
+Page 22  PSA167D006-15 
+  
+Location dependent addressing 
+ A term used to describe the process of addressing a particular function (typically 
+a controller) based on the current location of the user (typically a train). 
+Multi-party call 
+ A voice communication method whereby a number of parties defined by the call 
+initiator may participate in the call. All parties may talk simultaneously.  
+Multiple driver communications 
+ A term used to describe communications between the drivers of each active cab 
+in a train comprising multiple traction vehicles. 
+Operational communications 
+ These are railway communications directly concerned with train movements or 
+train operation. For example controller-driver communications. 
+Operational radio 
+ A handheld radio suitable for use by people involved in railway operations (eg 
+shunting team members). 
+Power supply controller 
+ A controller responsible for the management of the traction power supply. 
+Primary controller  
+ The location and direction of movement of any particular train permits the 
+unique identification of a Primary Controller. The Primary Controller is 
+currently the co-ordinator of train emergency calls. The Primary Controller is 
+normally responsible for the operation of a designated area of track. The exact 
+responsibilities of the Primary Controller are determined on a national basis. 
+Radio Block Centre 
+ An ERTMS/ETCS term referring to a centralised safety unit to establish and 
+control train separation using radio as the train to ground communication 
+medium. 
+PSA167D006-15   Page 23 
+  
+List of definitions 
+Railway Access Code 
+ A prefix used to identify an EIRENE network outside the network the calling 
+party is operating in. 
+Railway emergency call 
+ A high priority call for informing drivers, controllers and other concerned 
+personnel of a level of danger requiring all Railway movements in a pre-defined 
+area to stop. Two types of Railway emergency calls are defined: 
+- Train emergency calls (for Railway emergencies whilst not involved in Shunting 
+operations). 
+- Shunting emergency calls (for Railway emergencies whilst involved in Shunting 
+operations). 
+Roaming  
+ The use of a mobile on any communications network other than the user’s home 
+network.  
+Routing database 
+ The database that contains the registered relationships between the functional 
+number and the MSISDN. 
+Secondary controller 
+ A Secondary Controller is a train controller who holds responsibility for the safe 
+running of trains on a designated area of track (e.g. a signaller). Secondary 
+Controllers require the facility to communicate with trains in all situations in 
+order to perform their function. The split of responsibilities between Primary 
+Controllers and Secondary Controllers is determined on a national basis. 
+Shunting emergency call 
+ A Railway emergency call used to instruct shunting teams to cease shunting 
+movements immediately. 
+Shunting team 
+ A group of people manoeuvring trains in order to change their composition. 
+Communications for shunting are particularly critical when a driver at the front 
+of a train is pushing it backwards towards buffers or other potential obstructions. 
+In this case a lookout is often required to report progress to the driver. 
+Page 24  PSA167D006-15 
+  
+Stock number 
+ A number assigned to an item of traction or rolling stock on a permanent basis. 
+A stock number may form a component of a functional number used to address 
+users/systems on an item of traction or rolling stock. 
+Support communications 
+ These are railway communications which are not directly concerned with train 
+movements or train operation. For example such communications might involve 
+the passage of catering, maintenance or timetable information. 
+Traffic controller 
+ A controller who has responsibility for the scheduling of trains and the ‘flow’ of 
+trains over the network. For example, traffic control personnel are responsible for 
+such activities as holding connecting services and minimising disruption to the 
+timetable. The traffic control function has no formal safety responsibility. 
+Train control system (TCS) 
+ The process by which the movement of a train is influenced without any action 
+by the driver. For the purposes of this specification, reference to the train control 
+system also encompasses automatic train protection, automatic train operation 
+and in-cab signalling. 
+Train controller 
+ A controller who has responsibility for the safe movement of trains. 
+Train number 
+ A number given to a train by operational staff for a particular journey. A train 
+number may form a component of functional number used to address 
+users/systems on a train. 
+Tromboning   
+ Tromboning may occur when a call is placed to a roaming mobile in the same 
+country as the call originator. Tromboning is the term given to the routing of a 
+call via the mobile’s home country and back. This is obviously undesirable. 
+User number 
+ The entry in a routing database. It consists of two parts: the User Identifier 
+Number and the Functional Code. 
+ 
+ 
+PSA167D006-15   Page 25
+  
+1.1 General  
+1.1.1 This specification has been developed within UIC Project EIRENE. It specifies a digital 
+radio standard for the European railways. It forms part of the specification for 
+technical interoperability. (I) 
+1.2 Scope 
+1.2.1 The EIRENE System Requirements Specification defines a radio system satisfying the 
+mobile communications requirements of the European railways [EIRENE FRS]. It 
+encompasses ground-train voice and data communications, together with the ground-
+based mobile communications needs of trackside workers, station and depot staff and 
+railway administrative and managerial personnel. (I) 
+1.2.2 Figure 1-1 shows how the EIRENE system is covered in this specification, by 
+associating each element of the system with its corresponding section number(s). 
+References specifying the main interfaces are also cited, and are detailed more 
+extensively in Appendix A. (I) 1 Introduction 
+Page 26  PSA167D006-15 
+  
+EIRENENetwork
+requirements
+(section 2)Network
+configuration
+(section 3)
+Subscriber
+management
+(section 10)Numbering plan
+(sections 9,11)Mobile 
+Equipment
+Cab radio
+(sections 4,5)GP radio
+(sections 4,6)Operational
+radio
+(sections 4,7)(MORANE LDA FIS)
+(MORANE PFN FIS)(MORANE CHPC FIS)
+(MORANE FA FIS)Fixed Network
+(no interoperability requirements)
+Direct mode
+(section 15)Fixed
+NetworkController
+equipment
+Controller equipment
+(section 8)
+no interoperability specifications
+GSM
+ETCS/ERTMS
+(section 5)Train Control Operationalno interoperability specifications
+GSMEIRENEGSM-R
+NetworkNetwork
+requirements
+(section 2)Network
+configuration
+(section 3)
+Subscriber
+management
+(section 10)Numbering plan
+(sections 9,11)Mobile 
+Equipment
+Cab radio
+(sections 4,5)GP radio
+(sections 4,6)Operational
+radio
+(sections 4,7)(MORANE LDA FIS)
+(MORANE PFN FIS)(MORANE CHPC FIS)
+(MORANE FA FIS)Fixed Network
+(no interoperability requirements)
+Direct mode
+(section 15)Fixed
+NetworkController
+equipment
+Controller equipment
+(section 8)
+Data Transmission (section 5), Text messaging (section 12), Emergency calls (section 13), Shunting mode (section 14)
+no interoperability specifications
+GSM
+ETCS/ERTMS
+(section 5)
+(MORANE EURO FFFIS)Train Control Operationalno interoperability specifications
+GSMRadio Block
+Centre
+ 
+PFN = Presentation of Functional Numbers LDA = Location Dependent Addressing 
+CHPC = Confirmation of High Priority Calls FA = Functional Addressing 
+ EURO = EURORADIO 
+ Figure 1-1: Layout of EIRENE specifications and details of interfaces 
+1.2.3 The application of this specification will ensure interoperability for trains and staff 
+crossing national or other borders between systems. It also intends to provide 
+manufacturing economies of scale wherever practical. (I) 
+1.3 Applicability  
+1.3.1 The EIRENE System Requirements Specification defines the set of requirements which 
+a railway radio system shall comply with in order to ensure interoperability between 
+national railways. (I) 
+PSA167D006-15   Page 27 
+  
+1 Introduction 
+1.3.2 The EIRENE Functional Requirements Specification [EIRENE FRS] specifies the 
+functional requirements for EIRENE. (I) 
+1.3.3 The specification distinguishes between requirements affecting a railway’s network 
+infrastructure, onto which mobiles will roam, and the requirements concerning 
+mobiles which may be used in any EIRENE compliant network. (I) 
+1.3.4 The statements made in the specification are assigned to one of three categories: (I) 
+- Mandatory (indicated by ‘(M)’ at the end of the paragraph). It is mandatory that 
+each railway meets these specifications where interoperability on lines, or 
+equipment interoperability, is required. 
+- Optional (indicated by ‘(O)’ at the end of the paragraph). Whilst not being 
+mandatory for interoperability, when the option is selected, the method defined in 
+the SRS and FRS by which such features are implemented becomes mandatory, 
+both to provide a consistent service and to present a recognised and agreed 
+standard to manufacturers in order to obtain economies of scale in development 
+and manufacture. 
+- Information (indicated by ‘(I)’ at the end of the paragraph). These are statements 
+intended to provide explanatory notes. 
+1.4 System overview 
+1.4.1 Extent of specification 
+1.4.1.1 The system is based on the ETSI GSM standard. To meet additional functionality and 
+performance requirements, this standard is to be supplemented by: (I) 
+- the following GSM services: 
+- voice broadcast service; 
+- voice group call service; 
+- enhanced multi-level precedence and pre-emption; 
+- General Packet Radio Service (GPRS); 
+- railway specific applications: 
+- exchange of number and location information between train and ground to support 
+functional and location dependent addressing; 
+- emergency calls; 
+- shunting mode; 
+- multiple driver communications; 
+- direct mode facility for set-to-set operation; 
+- railway specific features, network parameters and standards: 
+- link assurance signal; 
+Page 28  PSA167D006-15 
+  
+- calling and connected line presentation of functional identities; 
+- cab radio, man-machine and other interfaces; 
+- environmental specifications; 
+- controller position functional specifications; 
+- system configuration (numbering plans, priority levels, subscriber details, closed 
+user groups, etc). 
+1.4.1.2 The scope of the specification is shown in figure 1-2, showing the hierarchy of the 
+GSM, and railway features to be implemented. (I) 
+ 
+ 
+ 
+Figure 1-2: Scope of the GSM-R system with reference to functionality provided by GSM 
+1.4.1.3 A list of ETSI and 3GPP specifications is provided in the normative references 
+section of this document. (I) 
+1.4.1.4 Compliance to the list of normative documents is mandatory for all of the GSM 
+services necessary to provide the functionality specified in the [EIRENE FRS]. (M) 
+1.4.1.5 Later releases of these specifications may be used, providing that the system is 
+backwards-compatible with the versions listed. (I) 
+1.4.2 Outline architecture 
+1.4.2.1 The system is based on the GSM architecture which is summarised in figure 1-3. (I) 
+PSA167D006-15   Page 29 
+  
+1 Introduction 
+ 
+Figure 1-3: GSM architecture overview 
+1.4.2.2 The system comprises the following elements: (I) 
+- Base station sub-systems (BSSs) of base station controllers (BSCs) controlling base 
+transceiver stations (BTSs) each containing a number of transceivers (TRXs). 
+- Network sub-systems (NSSs) interfacing to the BSS via the GSM ‘A’ interface. The 
+NSS contains mobile services switching centres (MSCs) with primary responsibility 
+for call control. The MSC is supported by a visitor location register (VLR) 
+containing temporary details of subscribers active within the MSC area, a group 
+call register (GCR) containing attributes of voice group and broadcast call 
+configurations for the related MSC area and home location registers (HLRs) 
+holding subscriber details on a permanent basis. 
+- The network also comprises General Packet Radio Service (GPRS) infrastructure 
+elements supporting the respective packet radio services. The serving GPRS 
+support node (SGSN) is a location register function storing subscription 
+information and location information for each subscriber registered in that node. It 
+interfaces to the BSS via the Gb interface and to the MSC/VLR via the Gs interface 
+and to the HLR via the Gr interface. The gateway GPRS support node (GGSN) is a 
+location register function storing subscription information and routeing 
+information (needed to tunnel packet data traffic destined for a GPRS MS to the 
+SGSN where the MS is registered) for each subscriber for which the GGSN has at 
+least one PDP context active. It interfaces to the SGSN via the Gn interface, to the 
+HLR via the Gx interface, to external packet data networks via the Gi interface and 
+to other GSM/GPRS networks via the Gp interface. 
+- Mobile equipment (ME) interfacing to the BSS via the air (Um) interface. 
+- Subscriber Identity Modules (SIMs) containing information specific to single 
+subscribers. A standardised interface links mobile equipment to SIM cards. A SIM 
+and ME combined are termed a mobile station (MS). 
+- Operation and Maintenance Centre (OMC) for managing the network. 
+Page 30  PSA167D006-15 
+  
+- Billing Centre. 
+1.4.2.3 Signalling within the NSS and between NSSs is carried out according to signalling 
+system number 7, SS7, making specific use of the mobile application part (MAP) of that 
+standard. (I) 
+1.4.2.4 Railway networks may implement a short message service centre to be interfaced to 
+the GSM network in order to support railway specific messaging applications. (I) 
+1.4.2.5 A railway GSM network is also likely to have external interfaces to: (I) 
+- private railway fixed networks; 
+- public operator networks; 
+- controller equipment; 
+- specialised railway systems (eg train control systems). 
+1.4.2.6 EIRENE will provide the radio bearer for ERTMS/ETCS. The EURORADIO layers are 
+responsible for ensuring the overall safety of the transmission link between train-borne 
+and trackside ERTMS/ETCS applications. (I) 
+1.4.2.7 In addition to a GSM capability, a direct mode capability may be provided for railway 
+mobiles for set-to-set operation. (I) 
+1.4.2.8 Standardised interface protocols are to be provided to allow applications external to 
+EIRENE to access EIRENE bearer services. (I) 
+1.4.2.9 Applications may include: (I) 
+- public address; 
+- intercom; 
+- driver safety device; 
+- train borne recorder. 
+1.4.3 Railway specific services and facilities 
+1.4.3.1 To meet the specific railway requirements, a number of additional features are 
+required some of which have been incorporated in the GSM Standard. The main 
+aspects are summarised in the following paragraphs. (I) 
+1.4.3.2 Frequency: Equipment is to be capable of operation in the following frequency bands: 
+(I) 
+ 
+ 
+PSA167D006-15   Page 31 
+  
+1 Introduction 
+Band Frequencies (MHz) 
+Railway GSM (R-GSM) 876-915/921-960 
+Note: the R-GSM band includes the Public GSM (P-GSM) and Extended GSM (E-GSM) 
+bands. 
+1.4.3.3 Voice broadcast and group call facilities: All mobiles are to support these services as 
+defined in the relevant GSM specifications. The services will mainly be used to: (I) 
+- broadcast messages from controllers to certain groups of trains in a controller area; 
+- broadcast messages from trains or shunting team members to controllers or other 
+mobiles in a defined area; 
+- conduct group calls between train drivers and controllers over pre-defined areas; 
+- conduct group calls between trackside workers, shunting team members, station 
+staff and similar groups, typically over local areas. 
+1.4.3.4 Enhanced multi-level precedence and pre-emption: This GSM specification is to be 
+implemented in order to achieve the high performance requirements necessary for 
+emergency group calls. It is also necessary to meet different grades of service 
+requirements for different types of communications traffic on the system (eg safety (eg 
+train control system), operational and administrative communications). (I) 
+1.4.3.5 Functional numbering: Many railway staff need to be addressed by functional rather 
+than personal numbers. The functional numbers may change on a regular basis. The 
+principal example is that of train drivers, who need to be addressed by train numbers 
+which change with each journey. To overcome this difficulty a translation facility will 
+be provided to allow calls to functional numbers to be forwarded to the most 
+appropriate personal number at that time. Thus calls made to a train number are 
+forwarded by the network to the appropriate driver or locomotive for that train at that 
+time. (I) 
+1.4.3.6 A follow-me service will be implemented in the EIRENE network using the GSM 
+Unstructured Supplementary Service Data (USSD) facility to allow users to establish 
+and terminate the forwarding of calls from a functional number to their personal 
+number. (I) 
+1.4.3.7 Location dependent addressing: Train drivers need to be able to contact controllers 
+and other staff at the push of a single button. As the train moves through different 
+areas, controllers are liable to change. As a consequence it is necessary to provide a 
+means of addressing calls from a train to certain functions based on the location of the 
+train. (I) 
+1.4.3.8 The only source of location information available within the GSM network is the cell 
+that the train is in. However, there are a number of external sources from which more 
+accurate location information may be derived: (I) 
+- on-train location systems; 
+Page 32  PSA167D006-15 
+  
+- trackside balises; 
+- information from ground based systems. 
+1.4.3.9 Within EIRENE, the primary means of determining the location of a train for the 
+purpose of location dependent addressing will be based on the cell dependent routing. 
+This may be supplemented with additional information from external systems to 
+provide a greater degree of accuracy. (I) 
+1.4.3.10 Direct mode: Railway mobiles may support a direct communications mode whereby a 
+mobile can communicate with all other railway mobiles in a local area without the use 
+of GSM infrastructure. Such a mode is required for use where: (I) 
+- no GSM infrastructure is provided; 
+- GSM infrastructure equipment has failed. 
+1.5 Structure of the specification 
+1.5.1 The specification is divided into the following separate sections: (I) 
+1. Introduction; 
+2. Network requirements; 
+3. Network configuration; 
+4. Mobile equipment core specification; 
+5. Cab radio; 
+6. General purpose radio; 
+7. Operational radio; 
+8. Controller equipment specifications; 
+9. Numbering plan; 
+10. Subscriber management; 
+11. Functional numbering and location dependent addressing; 
+12. Text messaging; 
+13. Railway emergency calls; 
+14.  Shunting mode; 
+15. Direct mode; 
+A. References. 
+1.5.2 Section 2 lists the services and facilities which are to be supported by GSM-R networks. 
+Section 3 provides requirements and recommendations concerning the configuration, 
+planning and implementation of networks. (I) 
+PSA167D006-15   Page 33 
+  
+1 Introduction 
+1.5.3 Sections 4, 5, 6, and 7 are concerned with mobile equipment. Section 4 provides 
+specifications applicable to all GSM-R mobiles. Sections 5, 6, and 7 detail the additional 
+requirements for Cab radio, General purpose radio, and Operational radio equipment 
+respectively. Note that for the handheld version of the General purpose radio, 
+commercial standards apply. (I) 
+1.5.4 Section 8 covers controller equipment. Section 9 is concerned with a numbering plan 
+for the variety of functional numbers which are required. Section 10 details the 
+handling of other information, such as priority, closed user groups and encryption 
+algorithms, which must be applied consistently in all networks. (I) 
+1.5.5 Section 11 specifies functional and location dependent addressing. Section 12 refers to 
+the possible use of pre-defined text messages (not required for interoperability). (I) 
+1.5.6 Sections 13 to 15 describe the implementation of emergency calls, shunting mode and 
+direct mode. (I) 
+1.5.7 References for all sections are included in appendix A. (I) 
+Page 34  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 35
+  
+2.1 Introduction 
+2.1.1 The network services necessary to meet the range of UIC requirements are detailed 
+below. These services are to be considered as a minimum set for implementation 
+within each GSM-R standard network. Railways may implement additional network 
+services as desired. (I) 
+2.2 GSM teleservices 
+2.2.1 The GSM teleservices [EN 301 515, Index [24]] to be supported are indicated in table 2-1. 
+ 
+Category Teleservice Requirement Notes 
+11 Telephony M  1 Speech 
+transmission 
+12 Emergency calls M For ‘112’ calls and not necessarily 
+railway operational emergencies. 
+21 Short message MT/PP O 
+22 Short message MO/PP O Service may be used for the passage 
+of text messages.  2 Short message 
+service 
+23 Short message cell 
+broadcast O  
+61 Alternate speech and 
+fax group 3 O  6 Facsimile 
+transmission 
+62 Automatic fax group 3 O  
+91 Voice Group Call 
+Service (VGCS) M  9 Voice Group 
+service* 
+92 Voice Broadcast Service 
+(VBS) M  
+MT/PP - Mobile Terminated/Point-to-Point  
+MO/PP - Mobile Originated/Point-to-Point 
+* Voice Group service specifications contain implementation options. The options required for 
+interoperability are as stated in [MORANE ASCI OPTIONS] 
+Table 2-1: GSM teleservices to be supported 2 Network requirements 
+Page 36  PSA167D006-15 
+  
+2.3 GSM bearer services 
+2.3.1 The GSM bearer services [EN 301 515, Index [23]] to be supported are listed in table 2-2. 
+ 
+Bearer service Requirement Notes  
+20. Asynchronous General Bearer Service O   
+21. Asynchronous 300 bps T 
+21. Asynchronous 300 bps NT O 
+O   
+22. Asynchronous 1.2 kbps T 
+22. Asynchronous 1.2 kbps NT O 
+O   
+23. Asynchronous 1200/75 bps T 
+23. Asynchronous 1200/75 bps NT O 
+O   
+24. Asynchronous 2.4 kbps T 
+24. Asynchronous 2.4 kbps NT M 
+O Eg V.21, V.22, V.22 bis, V.23, V.32 
+access  
+25. Asynchronous 4.8 kbps T 
+25. Asynchronous 4.8 kbps NT M 
+O Connection to standard ISDN fixed 
+networks  
+26. Asynchronous 9.6 kbps T 
+26. Asynchronous 9.6 kbps NT M 
+O   
+30. Synchronous General Bearer Service O   
+31. Synchronous 1.2 kbps T 
+31. Synchronous 1.2 kbps NT O 
+O   
+32. Synchronous 2.4 kbps T 
+32. Synchronous 2.4 kbps NT O 
+O   
+33. Synchronous 4.8 kbps T 
+33. Synchronous 4.8 kbps NT O 
+O   
+34. Synchronous 9.6 kbps T 
+34. Synchronous 9.6 kbps NT O 
+O   
+40. General PAD Access Bearer Service O   
+41. PAD access 300 bps T 
+41. PAD access 300 bps NT O 
+O   
+42. PAD access 1.2 kbps T 
+42. PAD access 1.2 kbps NT O 
+O   
+43. PAD access 1200/75 bps T 
+43. PAD access 1200/75 bps NT O 
+O   
+44. PAD access 2.4 kbps T 
+44. PAD access 2.4 kbps NT O 
+O   
+45. PAD access 4.8 kbps T 
+45. PAD access 4.8 kbps NT O 
+O   
+46. PAD access 9.6 kbps T 
+46. PAD access 9.6 kbps NT O 
+O   
+61. Alternate speech/data O   
+70. GPRS O   
+81. Speech followed by data O   
+T - Transparent; NT - Non-transparent 
+Table 2-2: GSM bearer services to be supported 
+2.3.2 Note: The Adaptive Multi-Rate (AMR) CODEC is not suitable for voice group calls or 
+for voice broadcast calls. (I) 
+PSA167D006-15   Page 37 
+  
+2 Network requirements 
+2.4 GSM supplementary services 
+2.4.1 The GSM supplementary services [EN 301 515, Index [9]] to be supported are listed in table 
+2-3. The applicability of these supplementary services to GSM basic services will be as 
+indicated in [GSM 02.81-02.89 and EN 301 515, Index [28]]. (I) 
+ 
+Supplementary service Requirement Notes 
+Calling Line Identification Presentation (CLIP) M Note 1 
+Calling Line Identification Restriction (CLIR) O  
+Connected Line Identification Presentation (CoLP) M Note 1 
+Connected Line Identification Restriction (CoLR) O  
+Call Forwarding Unconditional (CFU) M Note 2 
+Call Forwarding on Mobile Subscriber Busy (CFB) M Note 3 
+Call Forwarding on No Reply (CFNRy) O  
+Call forwarding on Mobile Subscriber Not Reachable (CFNRc) O  
+Call waiting (CW) M  
+Call hold (HOLD) M  
+Multi Party Service (MPTY) M  
+Closed User Group (CUG) M  
+Advice of Charge (Information) (AoCI) O  
+Advice of Charge (Charging) (AoCC) O  
+Barring of All Outgoing Calls (BAOC) O  
+Barring of Outgoing International Calls (BOIC) O  
+BOIC except those to Home PLMN Country (BOIC-exHC) M  
+Barring of All Incoming Calls (BAIC) O  
+Barring of Incoming Calls when Roaming Outside the Home 
+PLMN Country (BIC-Roam) M  
+Unstructured Supplementary Service Data (USSD) M  
+Sub-addressing* M  
+Enhanced Multi-Level Precedence and Pre-emption (eMLPP) M  
+Explicit Call Transfer (ECT) O  
+Completion of Calls to Busy Subscribers (CCBS) O Note 4 
+User-to-User Signalling 1 (UUS1) M Notes 4 and 5 
+Note 1 - Provide additional safety check for driver-controller communications 
+Note 2 - Can be used for train number conversion (see section 11) 
+Note 3 - To be used for call forwarding where there are multiple radios in the cab 
+Note 4 - When available - Specification underway 
+Note 5 - Used for the transfer of functional numbers (sender and receiver) and railway emergency call 
+confirmation messages 
+* Sub-addressing is not a GSM supplementary service but for convenience is listed in the above table 
+Table 2-3: GSM supplementary services to be supported 
+Page 38  PSA167D006-15 
+  
+2.5 Railway specific services 
+2.5.1 The railway specific services to be supported are listed in table 2-4. 
+ 
+Railway service Requirement Notes  
+Functional addressing (section 11) M   
+Location dependent addressing (section 11) M   
+Shunting mode (section 14) M   
+Multiple driver communications (section 5) M   
+Emergency calls (section 13) M   
+Table 2-4: Railway specific services to be supported 
+2.6 Alerting duration 
+2.6.1 The call waiting service (CW) permits a party A to be notified of an incoming call from 
+party C whilst the traffic channel is not available for the incoming call and party A is 
+engaged in an active call with party B. However call waiting does not operate during 
+the prior set up of the call between the parties A and B (including alerting if used). 
+Therefore the alerting duration has to be as short as possible in order to minimize the 
+risk for the party A of missing notification of an incoming call from party C with a 
+higher eMLPP priority. Taking into account technical and operational aspects, it is 
+recommended to set the relevant timer(s) in the network in such a way that the 
+maximum alerting duration is limited to 60s. (I) 
+ 
+PSA167D006-15   Page 39
+  
+3.1 Introduction 
+3.1.1 EIRENE mobiles are specified to conform to a common minimum standard of 
+performance. It is the responsibility of national railways to design their EIRENE 
+networks to provide the required level of service to EIRENE compliant mobiles. (I) 
+3.1.2 This section draws together specifications and information related to the planning of 
+an EIRENE network and provides guidance on target performance levels. Additional 
+information on communication requirements for the ERTMS/ETCS application is 
+provided in [ERTMS COMMS]. (I) 
+3.2 Coverage  
+3.2.1 For network planning, the coverage level is defined as the field strength at the antenna 
+on the roof of a train (nominally a height of 4m above the track). An isotropic antenna 
+with a gain of 0dBi is assumed. This criterion will be met with a certain probability in 
+the coverage area. (The target coverage power level is dependent on the statistical 
+fluctuations caused by the actual propagation conditions.) (I) 
+3.2.2 The following minimum values shall apply: (M) 
+- coverage probability of 95% based on a coverage level of 38.5 dBmV/m (-98 dBm) 
+for voice and non-safety critical data; 
+- coverage probability of 95% based on a coverage level of 41.5 dBmV/m (-95 dBm) 
+on lines with ETCS levels 2/3 for speeds lower than or equal to 220km/h. 
+3.2.3 The following minimum values are recommended: (I) 
+- coverage probability of 95% based on a coverage level of 44.5 dBmV/m (-92 dBm) 
+on lines with ETCS levels 2/3 for speeds above 280km/h; 
+- coverage probability of 95% based on a coverage level between 41.5 dBmV/m and 
+44.5 dBmV/m (-95 dBm and –92 dBm) on lines with ETCS levels 2/3 for speeds 
+above 220km/h and lower than or equal to 280km/h. 
+3.2.4 The EIRENE mobile installation shall be designed to operate in a network meeting the 
+criteria in 3.2.2 and 3.2.3. (M) 
+Note 1:  The specified coverage probability means that with a probability value of at 
+least 95% in each location interval (length: 100m) the measured coverage level 
+shall be greater than or equal to the figures stated above. The coverage levels 
+specified above consider a maximum loss of 3 dB between antenna and 
+receiver and an additional margin of 3 dB for other factors such as ageing. (I). 
+Note 2: The values for ETCS levels 2/3 concerning coverage and speed-limitations are 
+to be validated and, if necessary, reviewed after the first operational 
+implementation of ETCS. (I) 3 Network configuration 
+Page 40  PSA167D006-15 
+  
+3.3 Handover and cell selection 
+3.3.1 The handover success rate should be at least 99.5% over train routes under design load 
+conditions (as given in [EN 301 515, Index [30]]). (O) 
+3.3.2 To avoid the necessity for large cell overlaps to accommodate high speed train 
+operations, optimisation of the handover process for such trains is considered 
+necessary. Suitable algorithms will be tested and refined as necessary during the trials 
+process. (I) 
+3.3.3 The proposed events for measurement of the start and stop of the handover execution 
+at the mobile are: (I) 
+- receipt of ‘handover command’; 
+- receipt of ‘UA’ after ‘physical info’ on new channel. 
+3.3.4 There is a quality of service requirement for handover executions (eg a break of 10s 
+would clearly be unacceptable to the user). 300ms represents our current best estimate 
+of the QoS figure, although this will need to be confirmed through user trials. (I) 
+3.3.5 An additional option is available to reduce the handover break period, namely the use 
+of the synchronous handover capability to reduce the break period to about 150ms. 
+Synchronous handover requires the BTS transmissions in different cells to be 
+synchronised by the system. Each authority can decide whether it wishes to use 
+synchronised BTSs. (I) 
+3.4 Call setup time requirement 
+3.4.1 Call setup time requirement is dependent upon the eMLPP priority of a call [EN 301 515, 
+Index [27]]. The required priority level for each call type is given in section 10.2. (I) 
+3.4.2 Call setup times as defined in the EIRENE FRS shall be achieved with authentication 
+and ciphering procedures enabled. (M) 
+Note: Authentication may be delayed if necessary to achieve the required call setup 
+times.  
+3.4.3 In order to achieve these times the passage of the call through any networks external to 
+GSM (eg from the GSM MSC to a controller linked by an ISDN connection) must take 
+less than 250ms. (I) 
+3.4.4 Achievement of fast call setup times requires information in the setup message to be 
+compressed. A maximum of 12 digits may be sent as mobile originator-to-dispatcher 
+information. (I) 
+PSA167D006-15   Page 41 
+  
+3 Network configuration 
+3.5 Frequency band and channel arrangements 
+3.5.1 The network shall operate in a sub-band, or combination of sub-bands, of the R-GSM 
+band as defined in [EN 301 515, Index [35]]. (M) 
+3.5.2 The UIC frequency band for GSM-R is defined in [CEPT 25-09], [1999/569/EC] and 
+[ECC(02)05]: (I) 
+- 876 – 880 MHz (mobile station transmit); paired with 
+- 921 – 925 MHz (base station transmit). 
+3.5.3 The carrier frequency is designated by the absolute radio frequency channel number 
+(ARFCN), and is defined in [EN 301 515, Index [35]]. For carriers in the UIC frequency 
+band the following convention shall be used, where Fl(n) is the frequency value of the 
+carrier ARFCN n in the lower band, and Fu(n) the corresponding frequency value in 
+the upper band: (M) 
+- Fl(n) = 890 + 0.2*(n-1024)  955 £ n £ 973 
+- Fu(n) = Fl(n) + 45 
+Frequencies are in MHz. 
+3.6 DTMF tones and signals 
+3.6.1 The minimum duration of a DTMF tone and the length of pause between tones 
+generated by the network (DTMF sender) and needed for the DTMF digit recognition 
+in the network (DTMF receiver) are specified in [3G TS 23.014, Support of Dual Tone Multi 
+Frequency (DTMF) signalling]. (I)  
+3.7 Termination of VGCS/VBS calls 
+3.7.1 An entitled controller may terminate a VGCS/VBS call based on DTMF signalling [EN 
+301 515, Index [4] & [5]]. (I) 
+3.7.2 The network shall terminate the ongoing VGCS/VBS call if it receives the 3-digit 
+sequence “***” transmitted via DTMF signals. (M) 
+3.7.3 In order to minimise the discomfort caused by the DTMF tone added in the voice 
+channel, the duration of the tone generated by the fixed line dispatcher shall be 70ms ± 
+5ms, and there shall be a minimum gap of 65ms between each tone. (M) 
+3.8 Muting and unmuting for VGCS calls 
+3.8.1 The muting and unmuting for VGCS shall be in line with [EN 301 515, Index [4]]. (M) 
+Page 42  PSA167D006-15 
+  
+3.8.2 The network shall send the SET-PARAMETER message with the attribute “D-ATT = 
+T”1 [EN 301 515, Index [6]] to the mobile station of the talking subscriber if it receives the 3-
+digit sequence “###” transmitted via DTMF or the group call SETUP message2 from a 
+controller terminal. However, receiving the 3-digit sequence “###” or the group call 
+SETUP message related to an additional controller while any other controller is talking 
+shall not result in sending another SET-PARAMETER message with the attribute “D-
+ATT = T”. (M)  
+3.8.3 When the network has detected the 3-digit DTMF sequence “###” transmitted via 
+DTMF from a controller terminal and if the controller was not previously talking it 
+should indicate its recognition by playing a single DTMF grant tone “#” of duration of 
+100ms ± 5ms to be sent to that controller terminal only. (O) 
+3.8.4 The network shall send the SET-PARAMETER message with the attribute “D-ATT = 
+F”3 [EN 301 515, Index [6]] to the mobile of the talking subscriber only if it has received the 
+3-digit sequence “#**” transmitted via DTMF from all the talking controllers4. (M) 
+3.8.5 The duration of each tone (see 3.8.2 and 3.8.4) added in the voice channel, shall be 70ms 
+± 5ms, and there shall be a minimum gap of 65ms between each tone. (M) 
+ 
+ 
+ 
+                                                      
+1 On receiving this message, the mobile of the current talking subscriber will stop muting the down-link, thus allowing 
+the subscriber to hear the controller’s voice. 
+2 In the case of a controller as a group call originator, joiner and re-joiner speaking for the first time. 
+3 On receiving this message, the mobile of the current talking subscriber will resume muting the down-link, thus 
+preventing the subscriber from hearing their own echo. 
+4 This indicates that all of the controllers have indicated that they no longer wish to speak (for example, by releasing 
+their PTT buttons). 
+PSA167D006-15   Page 43
+  
+4.1 Introduction 
+4.1.1 To ensure interoperability, all EIRENE mobiles are specified with a common level of 
+basic services, facilities and features. This section of the specification gives details of 
+these core requirements, while sections 5-7 detail requirements specific to each of the 
+radio types. (I) 
+4.1.2 The logical architecture of an EIRENE mobile station (EIRENE MS) is shown in figure 
+4-1. The architecture consists of the following elements: (I) 
+a) GSM Mobile Termination (GSM-MT): comprising GSM mobile equipment and 
+SIM; 
+b)  Direct Mode Mobile Termination (DM-MT): for direct mode communications; 
+c)  EIRENE applications: standardised features outside GSM: dependent on radio 
+type; 
+d)  Man Machine Interface (MMI): dependent on radio type. 
+GSM-MT EIRENE Applications
+Dependent on radio type
+DM-MTMMI1
+23
+45EIRENE Mobile Station
+ 
+Figure 4-1: Logical mobile radio architecture and interfaces 
+4.1.3 The logical architecture comprises a number of interfaces between the different 
+EIRENE-MS elements. These are:  
+1) GSM-MT air interface: mandatory for interoperability and conformant to GSM 
+specifications; (M) 
+2) DM-MT air interface: Direct Mode is optional. However, where implemented, 
+the requirements concerning this interface are mandatory for interoperability; 
+(O) 
+3) GSM-MT - EIRENE Applications interface: specified to allow an option for 
+separate procurement of GSM-MT and EIRENE Application equipment for the 
+Cab radio (see [MORANE FFFIS MTI]); (O) 4 Mobile equipment core specification 
+Page 44  PSA167D006-15 
+  
+4) DM-MT - EIRENE Applications interface: specified to allow an option for 
+separate procurement of DM-MT and EIRENE Application equipment for the 
+Cab radio; (O) 
+5) EIRENE Applications - MMI interface: not specified. (O) 
+4.1.4 This specification defines three distinct mobile radio types according to the type of role 
+they will perform and the environment they will operate in, as follows: (I) 
+a) Cab radio - for use by the driver of a train and by ERTMS/ETCS; 
+b) General purpose radio - for general use by railway personnel; 
+c) Operational radio - for use by railway personnel involved in train operations such 
+as shunting and trackside maintenance. 
+Note: It is possible that the General purpose and Operational radios may have a 
+number of physical implementations to meet railway requirements (eg handheld and 
+vehicle mounted). 
+4.1.5 All SIM cards used in EIRENE mobiles shall comply with the requirements of the 
+MORANE FFFIS for GSM-R SIM Cards [MORANE SIM]. (M) 
+4.2 Radio interface aspects 
+4.2.1 All mobiles shall be capable of operation in the following frequency bands: (M) 
+ 
+Band Frequencies (MHz) 
+Railway GSM (R-GSM) 876-915/921-960 
+Table 4-1: Frequency bands 
+Note: the R-GSM band includes the Public GSM (P-GSM) and Extended GSM (E-GSM) 
+bands. 
+4.2.2 The mobile radio antenna installation on vehicles shall be designed so as to ensure that 
+mobiles operate correctly in networks which conform to the design criteria defined in 
+section 3. (M) 
+4.2.3 Mobile radios shall be of the following power classes: (M) 
+PSA167D006-15   Page 45 
+  
+4 Mobile equipment core specification 
+ 
+Radio type Power class Power (W)  
+Cab radio 2 8  
+General purpose radio 4* 2*  
+Operational radio 4* 2*  
+* Vehicle-based versions of the General purpose and Operational radios may be used to provide 8W 
+mobile radios. 
+Table 4-2: Definition of power classes for each radio type 
+4.3 Services and facilities 
+4.3.1 The following GSM teleservices, identified in section 2, are to be supported for each 
+type of mobile radio: 
+Page 46  PSA167D006-15 
+  
+ 
+Category Teleservice Cab radio General 
+purpose radio Operational 
+radio  
+1 Speech 
+transmission 11 Telephony M M M  
+ 12 Emergency calls M M M  
+2 Short message 
+service 21 Short message MT/PP M M M  
+ 22 Short message MO/PP M M M  
+ 23 Short message cell 
+broadcast M M M  
+6 Facsimile 
+transmission 61 Alternate speech and 
+fax group 3 O O O  
+ 62 Automatic fax group 3 O O O  
+9 Voice Group 
+service* 91 Voice Group Call 
+Service (VGCS) M M M  
+ 92 Voice Broadcast Service 
+(VBS) M M M  
+MT/PP - Mobile Terminated/Point-to-Point  
+MO/PP - Mobile Originated/Point-to-Point 
+* Voice Group service specifications contain implementation options. The options required for 
+interoperability are as stated in [MORANE ASCI OPTIONS] 
+ Table 4-3: GSM teleservices to be supported 
+PSA167D006-15   Page 47 
+  
+4 Mobile equipment core specification 
+4.3.2 The following bearer services, identified in section 2, are to be supported for each type 
+of mobile radio: 
+ 
+Bearer service Cab radio General purpose 
+radio Operational 
+radio  
+20. Asynchronous General Bearer Service O O O  
+21. Asynchronous 300 bps T 
+21. Asynchronous 300 bps NT O 
+O O 
+O O 
+O  
+22. Asynchronous 1.2 kbps T 
+22. Asynchronous 1.2 kbps NT O 
+O O 
+O O 
+O  
+23. Asynchronous 1200/75 bps T 
+23. Asynchronous 1200/75 bps NT O 
+O O 
+O O 
+O  
+24. Asynchronous 2.4 kbps T 
+24. Asynchronous 2.4 kbps NT M 
+M O 
+O O 
+O  
+25. Asynchronous 4.8 kbps T 
+25. Asynchronous 4.8 kbps NT M 
+M O 
+O O 
+O  
+26. Asynchronous 9.6 kbps T 
+26. Asynchronous 9.6 kbps NT M 
+M O 
+O O 
+O  
+30. Synchronous General Bearer Service O O O  
+31. Synchronous 1.2 kbps T 
+31. Synchronous 1.2 kbps NT O 
+O O 
+O O 
+O  
+32. Synchronous 2.4 kbps T 
+32. Synchronous 2.4 kbps NT O 
+O O 
+O O 
+O  
+33. Synchronous 4.8 kbps T 
+33. Synchronous 4.8 kbps NT O 
+O O 
+O O 
+O  
+34. Synchronous 9.6 kbps T 
+34. Synchronous 9.6 kbps NT O 
+O O 
+O O 
+O  
+40. General PAD Access Bearer Service O O O  
+41. PAD access 300 bps T 
+41. PAD access 300 bps NT O 
+O O 
+O O 
+O  
+42. PAD access 1.2 kbps T 
+42. PAD access 1.2 kbps NT O 
+O O 
+O O 
+O  
+43. PAD access 1200/75 bps T 
+43. PAD access 1200/75 bps NT O 
+O O 
+O O 
+O  
+44. PAD access 2.4 kbps T 
+44. PAD access 2.4 kbps NT O 
+O O 
+O O 
+O  
+45. PAD access 4.8 kbps T 
+45. PAD access 4.8 kbps NT O 
+O O 
+O O 
+O  
+46. PAD access 9.6 kbps T 
+46. PAD access 9.6 kbps NT O 
+O O 
+O O 
+O  
+61. Alternate speech/data O O O  
+70. GPRS O O O  
+81. Speech followed by data O O O  
+T - Transparent; NT - Non-transparent 
+Table 4-4: GSM bearer services to be supported 
+ 
+Page 48  PSA167D006-15 
+  
+4.3.3 The following supplementary services, identified in section 2, are to be supported for 
+each type of mobile radio: 
+ 
+Supplementary service Cab radio General 
+purpose radio Operational 
+radio  
+Calling Line Identification Presentation (CLIP) M M M  
+Calling Line Identification Restriction (CLIR) O O O  
+Connected Line Identification Presentation 
+(CoLP) M M M  
+Connected Line Identification Restriction (CoLR) O O O  
+Call Forwarding Unconditional (CFU) M O O  
+Call Forwarding on Mobile Subscriber Busy 
+(CFB) O O O  
+Call Forwarding on No Reply (CFNRy) O O O  
+Call forwarding on Mobile Subscriber Not 
+Reachable (CFNRc) O O O  
+Call waiting (CW) M M M  
+Call hold (HOLD) M O O  
+Multi Party Service (MPTY) M O O  
+Closed User Group (CUG) M O M  
+Advice of Charge (Information) (AoCI) O O O  
+Advice of Charge (Charging) (AoCC) O O O  
+Barring of All Outgoing Calls (BAOC) O O O  
+Barring of Outgoing International Calls (BOIC) O O O  
+BOIC except those to Home PLMN Country 
+(BOIC-exHC) M O M  
+Barring of All Incoming Calls (BAIC) O O O  
+Barring of Incoming Calls when Roaming 
+Outside the Home PLMN Country (BIC-Roam) M O M  
+Unstructured Supplementary Service Data 
+(USSD) M M M  
+Sub-addressing* M O O  
+Enhanced Multi-Level Precedence and Pre-
+emption (eMLPP) M M M  
+Explicit Call Transfer (ECT) O O O  
+Completion of Calls to Busy Subscribers (CCBS) O O O  
+User-to-User Signalling 1 (UUS1) M M M  
+* Sub-addressing is not a GSM supplementary service but for convenience is listed in the above table 
+Table 4-5: GSM supplementary services to be supported 
+PSA167D006-15   Page 49 
+  
+4 Mobile equipment core specification 
+4.3.4 The following EIRENE features are to be supported for each type of mobile radio: 
+ 
+ Cab radio    General purpose 
+radio   Operational  
+radio 
+Functional addressing (section 11) M M M 
+Direct mode (section 15) O N/A O 
+Shunting mode (section 14) M N/A O 
+Multiple driver communications  
+(section 5) M N/A N/A 
+Railway emergency calls 
+(section 13) M O M 
+ Table 4-6: EIRENE features to be supported 
+4.3.5 If a Railway emergency call set up from an EIRENE radio is unsuccessful, the radio 
+shall automatically re-attempt the call setup until the call setup is successful, a retry 
+timer expires (duration 30 seconds, as specified in the [EIRENE FRS]) or the user 
+abandons the call. (M) 
+Note: For this, the higher layers of an EIRENE radio shall automatically repeat setup 
+requests to the layer 3 GCC or BCC entity as soon as an indication is given from the 
+layer 3 GCC or BCC entity on an abort of the establishment procedure without the 
+service being explicitly rejected by the network. No change of the related layer 3 
+procedures of GSM is intended. (M) 
+4.4 Core MMI requirements 
+4.4.1 A service availability indication shall be provided to radio users, as defined in [EN 301 
+515, Index [26]]. (M) 
+4.4.2 The user shall be prevented from entering direct mode if the GSM service is available. 
+(M) 
+4.4.3 If the attempt to establish a Railway emergency call is not successful after 2 seconds, an 
+indication shall be provided to the user of the status of the establishment request 
+procedure. (M) 
+Page 50  PSA167D006-15 
+  
+4.5 Core environmental requirements 
+4.5.1 This subsection defines the core environmental and physical requirements for all 
+EIRENE mobile equipment. The requirements provided in this section are augmented 
+by those provided in later sections for each individual radio type, with each radio type 
+being specified by the superset of the core plus specific requirements. (I)  
+4.5.2 All EIRENE mobile equipment shall comply with all environmental, EMC and physical 
+specifications defined in the GSM standard, especially with reference to [GSM  05.90 and 
+EN 301 515, Index [2] & [35]]. (M) 
+4.5.3 All EIRENE mobile equipment shall conform to [EN 60950] (Safety of Information 
+Technology Equipment), including Electrical Business Equipment, 1993, plus 
+amendments A1 and A2. (M) 
+4.5.4 The categories of requirements defined in each section describing mobile equipment 
+are as follows: (I) 
+ 
+- climatic conditions (temperature, humidity, solar radiation, altitude, etc); 
+- physical conditions (flammability, contamination, physical protection, etc); 
+- mechanical conditions (shock and vibration); 
+- electrical conditions (power supply variation, battery life, overloading, etc); 
+- EMC (both emissions and immunity); 
+- tests required to validate compliance with EIRENE specification. 
+4.5.5 Any environmental and physical requirements stated may be superseded by national 
+requirements provided the national standards provide a higher level of environmental 
+and physical protection. Stricter national standards shall not prevent the use of other 
+EIRENE mobiles in that country. (M) 
+4.5.6 Many of the railway specific standards referenced are Pre-standards (eg [prEN 50155, 
+ENV 50121, prEN 50125]) and should be re-examined for their applicability to the EIRENE 
+system if any modifications are made to these standards in the future. (I) 
+4.5.7 All design, manufacturing, testing and installation of EIRENE mobile radio equipment 
+shall comply with the quality procedures defined in [ISO 9001]. (M) 
+Climatic conditions 
+4.5.8 EIRENE mobile equipment shall be capable of operating over a standard range of 
+temperatures from -20°C to +55°C. (M) 
+4.5.9 EIRENE mobile equipment shall be capable of being stored (ie without being 
+operational) at temperatures down to -40°C without any permanent damage. (M) 
+PSA167D006-15   Page 51 
+  
+4 Mobile equipment core specification 
+4.5.10 The equipment shall be capable of coping with temperature variations of up to +/-
+1°C/minute. (M) 
+4.5.11 EIRENE mobile equipment shall be capable of operating between altitudes of -100m 
+and 1800m, referenced to sea level. (M) 
+4.5.12 The equipment shall be able to cope with relative humidities of 100% for short periods, 
+although the yearly average is expected to be 75%. The equipment shall also cope with 
+95% humidity for 30 days in the year. (M) 
+4.5.13 Operationally caused infrequent and slight moisture condensation shall not lead to any 
+malfunction or failure. (M) 
+4.5.14 All equipment shall not degrade photochemically when exposed to solar radiation of 
+up to 1200 W/m2. (M) 
+4.5.15 In normal operation of a mobile radio unit, it shall be expected that a combination of 
+the above environmental conditions will be experienced. (M) 
+Mechanical conditions 
+4.5.16 All EIRENE mobile equipment shall be protected against shock and vibration in 
+compliance with standards defined in [prEN 50125] using tests defined in [prEN 50155]. 
+(M) 
+4.5.17 All handheld mobile equipment shall be capable of withstanding the following shocks: 
+(M) 
+ 
+- non-repetitive shocks of up to 3g for up to 100ms under normal conditions; 
+- free fall from 0.5m. 
+4.5.18 EIRENE mobile equipment shall be capable of being subjected to both sinusoidal and 
+random vibration. (M) 
+4.5.19 Handheld mobile equipment shall be capable of withstanding the following levels of 
+continuous sinusoidal vibration: (M) 
+ 
+- frequency range: 5-200 Hz; 
+- peak-to-peak amplitude: 7.5 mm; 
+- peak acceleration: 1.5g. 
+4.5.20 The random vibrations to be withstood by mobile equipment shall be 0.25g in all three 
+axes of freedom. (M) 
+Electrical 
+4.5.21 For determining battery requirements, the transmit/receive duty cycles used shall be 
+as shown in table 4-7 for each call type. (M) 
+Page 52  PSA167D006-15 
+  
+ 
+Call type Transmit Receive  
+Point-to-point call 100% 100%  
+Group call 30% 100%  
+Broadcast call (originated) 100% 100%*  
+Broadcast call (receive) 0% 100%  
+* Because it is necessary to receive a broadcast call while transmitting, the speaker’s link to the 
+network is via a standard point-to-point call 
+ Table 4-7: Transmit/receive duty cycles for different call types 
+4.5.22 Battery requirements shall be provided without the use of discontinuous reception or 
+transmission (DTX/DRX). (M) 
+4.5.23 Battery requirements shall be met based on full power during transmission and 
+assuming hourly periodic location updating. (M) 
+Electromagnetic Compatibility 
+4.5.24 All railway and generic EMC standards define a maximum level of radiated EMC for a 
+range of frequencies. However, the nature of radio equipment implies a certain level of 
+EM emission in the transmission band. (I) 
+4.5.25 Guidelines concerning the effects of GSM emissions on hearing aids, pace makers and 
+other sensitive electrical equipment are provided in [GSM 05.90]. (I) 
+4.5.26 All EIRENE mobile equipment shall be immune to external EMC as defined in [ENV 
+50121 part 4]. (M) 
+ NOTE: EIRENE mobile equipment cannot comply with the emission requirements defined in 
+this standard except outside the GSM transmission band. 
+4.5.27 The transmission of EM radiation from all EIRENE mobile equipment shall comply 
+with the radio frequency transmission masks defined in [EN 301 515, Index [35]] for the 
+range of GSM frequencies defined in section 1 of this document. (M) 
+4.5.28 Where the emission levels defined by [EN 301 515, Index [35]] exceed those stated in [ENV 
+50121 part 4], the GSM specification shall take precedence. (M) 
+4.5.29 Mobile equipment shall comply with the generic standard for EMC in the industrial 
+environment as defined in [ENV 50081 part 2], except for emissions at GSM frequencies as 
+noted above. (M) 
+PSA167D006-15   Page 53 
+  
+4 Mobile equipment core specification 
+4.5.30 The emission and immunity standards for the general railway environment and 
+ancillary services as defined in [ENV 50121 parts 1, 2, 3-1, 3-2 and 5] shall be considered. (M) 
+4.5.31 EIRENE mobiles will generate EM emissions in the GSM frequency band. It is the 
+responsibility of national railways operating EIRENE networks to ensure that EIRENE 
+equipment does not interfere with the normal operation of any on-train or ground 
+based systems. (I) 
+4.5.32 In particular, EIRENE equipment could interfere with: (I) 
+ 
+- signalling relays and contacts; 
+- speedometers; 
+- public address; 
+- power transformers; 
+- track circuits; 
+- axle counters; 
+- train describers; 
+- other radio equipment; 
+- radar speed measurement equipment; 
+- switched mode power supplies; 
+- telecommunications circuits; 
+- electronic locking systems. 
+Testing procedures 
+4.5.33 The environmental and physical tolerance of the EIRENE mobile radio units shall be 
+tested at a facility in accordance with [EN 45001]. (M) 
+4.5.34 All EMC emission and immunity tests shall be performed in accordance with 
+guidelines defined in the [EN 61000-4] series and in [EN 50140]. (M) 
+4.5.35 Environmental testing procedures shall follow guidelines defined in [IEC 68 part 1]. (M) 
+4.5.36 Specific environmental test procedures to be followed for EIRENE mobile equipment 
+shall include the following tests as defined in the [IEC 68] series: (M) 
+A Cold; 
+B Dry heat; 
+D Damp heat (cyclic); 
+E Impact; 
+F Vibration; 
+G Acceleration; 
+K Corrosive atmospheres; 
+M Air pressure; 
+N Change of temperature; 
+P Fire hazard. 
+Page 54  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 55
+  
+5.1 Introduction 
+5.1.1 This section identifies the system requirements for the EIRENE Cab radio. It defines 
+how the functionality is to be provided by the Cab radio system and the man-machine 
+interface. (I) 
+5.2 System components 
+5.2.1 Figure 5-1 shows the logical architecture of an EIRENE Cab radio. The architecture 
+comprises the following elements: (I) 
+- GSM Mobile Termination (GSM-MT): comprising GSM mobile equipment and 
+SIM; 
+- Direct Mode Mobile Termination (DM-MT): for direct mode communications; 
+- EIRENE Cab radio applications: standardised features outside GSM; 
+- Man Machine Interface (MMI). 
+ 
+Figure 5-1: Logical Cab radio architecture and interfaces 
+5.2.2 The architecture comprises a number of interfaces between the different EIRENE-MS 
+elements. These are:  
+1)  GSM-MT air interface: mandatory for interoperability and conformant to GSM 
+specifications. (M) 5 Cab radio 
+Page 56  PSA167D006-15 
+  
+2)  DM-MT air interface: Direct Mode is optional. However, where implemented, the 
+requirements concerning this interface are mandatory for interoperability. (O) 
+3)  GSM-MT - EIRENE Applications interface: specified to allow the option for 
+separate procurement of GSM-MT and EIRENE Application equipment for the Cab 
+radio. The Morane FFFIS [MORANE FFFIS MTI] specifies two types of interface based 
+on V.24 and TDMA, both supporting [EN 301 515, Index [19]]. (O) 
+[Note: this interface is not required where a Cab radio is implemented as an 
+integrated unit.] 
+4)  DM-MT - EIRENE Applications interface: specified to allow the option for 
+separate procurement of DM-MT and EIRENE Application equipment for Cab 
+radio. (O) 
+5)  Interfaces may be provided to a Train Interface Unit and an ERTMS data interface. 
+More requirements are given on these interfaces, where implemented, in 
+subsections 5.10 and 5.15. (I) 
+5.3 Driver call-related functions 
+Call controller 
+5.3.1 Upon an appropriate MMI action, the radio shall initiate a call to the appropriate 
+controller with ‘Railway operation’ priority (see section 10.2). (M) 
+5.3.2 The calling driver’s functional number shall be passed to the network using UUS1. (M) 
+Call other drivers in the area 
+5.3.3 On receipt of a ‘Call other drivers in area’ request, the radio shall initiate a group call 
+using the ‘all trains’ group identification (see section 9) with eMLPP priority level 2 
+(see section 10.2). (M) 
+5.3.4 The calling driver’s functional number shall be passed to the network using UUS1. (M) 
+Send Railway emergency call  
+5.3.5 Activation of the ‘Railway emergency call’ function shall cause the radio to initiate a 
+Railway emergency call as defined in section 13. (M) 
+5.3.6 The calling driver’s functional number shall be passed to the network using UUS1. (M) 
+Communicate with other drivers on same train 
+5.3.7 Many trains employ multiple active traction vehicles. Where these vehicles are not 
+connected by on-train wiring, it shall be possible for a permanent radio connection to 
+be established between each of the active cabs. (I) 
+PSA167D006-15   Page 57 
+  
+5 Cab radio 
+5.3.8 Where there is more than one active cab, the radio connection shall be provided using 
+the GSM Multi-Party service. (M) 
+5.3.9 The call will be established from the active cab of the lead traction vehicle. Each of the 
+other cabs on the train will be contacted using its functional number (registered by the 
+other drivers prior to the establishment of the call). The procedure for setting up a 
+multi-party call is outlined in figure 5-2. The multi-party call shall have ‘Railway 
+operation’ priority (see section 10.2) and whilst on-going a ‘multi-drivers’ indication 
+shall be displayed permanently at all Cab radios. (M) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5-2: Multi-party call initiation 
+Call train staff 
+5.3.10 Upon activation of the function ‘Call train staff’, the radio shall determine the 
+appropriate functional number based on the staff member selected and the train 
+number (see section 9). A GSM point-to-point voice call at ‘Railway operation’ priority 
+(see section 10.2) shall then be initiated. (M) Start 
+Lead driver 
+initiates one-to-
+one call to 
+assisting driver 
+Lead driver 
+places one-to-
+one call on hold 
+Lead driver 
+initiates next 
+one-to-one call 
+Lead driver 
+requests multi-
+party call Lead driver 
+places multi-
+party call on 
+hold 
+Add another 
+user Yes 
+No 
+End 
+Page 58  PSA167D006-15 
+  
+Call other authorised users 
+5.3.11 The Cab radio shall be capable of being used as a standard GSM telephone, such that 
+the driver is able to call any valid number subject to closed user group, call barring or 
+other restrictions. (M) 
+Receive short (SMS) text messages 
+5.3.12 The Cab radio shall be able to receive, display and store incoming short (SMS) text 
+messages (see section 12). (M) 
+Enter/leave shunting mode 
+5.3.13 The Cab radio shall support shunting mode communications as defined in section 14. 
+(M) 
+Enter/leave direct mode 
+5.3.14 The Cab radio should support direct mode communications as defined in section 15. 
+(O) 
+5.4 MMI functions 
+Switch radio on and off 
+5.4.1 When switched on, the radio shall initiate automatic self-testing using the GSM IMSI 
+attach procedure (including the automatic selection of the default loudspeaker volume 
+– see table 5-1). (M) 
+5.4.2 Upon switch on, the Cab radio shall be registered with a mobile network (see section 
+10.5). (M) 
+5.4.3 If registration is not successful an audible and visual indication shall be provided. (M) 
+5.4.4 Upon registration, the mobile shall be accessible by calling the MSISDN or the Engine 
+or Coach number with which it is associated. This shall require the home network 
+database to maintain this correlation. (M) 
+Adjust loudspeaker volume 
+5.4.5 The following table provides details of the three volume adjustment ranges to be 
+provided. (O) 
+ 
+PSA167D006-15   Page 59 
+  
+5 Cab radio 
+Levels of Driver adjustment  
+adjustment Quiet cab Normal cab Noisy cab  
+250 mW 24 dBm 1  1     
+355 mW 25.5 dBm 2       
+500 mW 27 dBm 3 Default 2  1   
+1 W 30 dBm 4  3 Default 2   
+2 W 33 dBm 5  4  3 Default  
+4 W 36 dBm   5  4   
+8.5 W 39 dBm     5   
+Table 5-1: Volume adjustment levels 
+5.4.6 The numbers 1 to 5 give the five levels of adjustment possible for each volume range 
+setting. The default setting is the pre-defined level automatically selected when the 
+MMI is switched on. (I) 
+Register and deregister train number 
+5.4.7 Upon activation of the registration function, a USSD message (see section 11) shall be 
+sent by the Cab radio. (M) 
+5.4.8 Upon activation of the deregistration function, a USSD message (see section 11) shall 
+be sent by the Cab radio. (M) 
+5.4.9 Upon detection (automatically or based on a list stored in the Cab radio) of the 
+additional on-train functions for equipment physically connected to the Cab radio, a 
+USSD message (see section 11) shall be sent by the Cab radio after activation of the 
+registration or deregistration function. (M) 
+Register and deregister stock number 
+5.4.10 This procedure shall take place at the installation of the Cab radio. It shall be initiated 
+by an external device or by a member of a maintenance team. (M) 
+5.4.11 On-train functions for equipment physically connected to the Cab radio shall be 
+registered or deregistered automatically based on a USSD message (see section 11) sent 
+by the Cab radio. (M) 
+5.5 Handling of calls 
+5.5.1 The sequence of actions required for a mobile originated call to another user shall be as 
+follows: (M) 
+Page 60  PSA167D006-15 
+  
+- Initiating a call:  System is provided with the necessary information to set up
+   call (eg number, bearer type, priority); 
+- Indication:  Provide an audible and visual indication; 
+- Call arbitration: Management of call requests on the basis of call priority; 
+- Conversation: Where the parties involved in the call can communicate; 
+- Call termination:  Where one of the parties involved in the call terminates the
+   call. 
+5.5.2 The sequence of actions for a mobile terminated call to a driver shall be as follows: (M) 
+- Call arbitration: Management of call requests on the basis of call priority; 
+- Indication:   Provide an audible and visual indication of incoming call; 
+- Answering the call: Acceptance of incoming call by user (not required for auto
+   answer); 
+- Indication:  Provide an audible and visual indication; 
+- Conversation: Where the parties involved in the call can communicate; 
+- Call termination: Where one of the parties involved in the call terminates the
+   call. 
+5.5.3 The Cab radio system shall provide a means for the driver to terminate established 
+calls which he is authorised to terminate. (M) 
+Initiating a call 
+5.5.4 It shall be possible to initiate outgoing voice calls in one of four ways depending on the 
+intended recipient(s) of the call: (M) 
+- Emergency access: Capable of rapid activation in an emergency with a 
+   minimum of action being required by the driver (ie single
+   red button); 
+- Priority access: Requiring the minimum of driver actions to initiate a call (eg
+   a single key stroke); 
+- Stored number: Through the selection of a stored number or name (eg menu
+   type access); 
+- Dial access:  Facility for the driver to enter or select telephone or 
+   functional numbers manually. 
+Emergency access 
+PSA167D006-15   Page 61 
+  
+5 Cab radio 
+5.5.5 Emergency access shall be provided to initiate the following call: (M) 
+ 
+Destination Call type eMLPP priority 
+designation Additional 
+information 
+Emergency call number Group call 0 Functional number   
+ Table 5-2: Call types requiring MMI emergency access 
+Priority access 
+5.5.6 Priority access shall be provided to initiate the following: (M) 
+ 
+Destination Call type eMLPP priority 
+designation Additional 
+information 
+Primary controller (*) Point-to-point 3 Functional number  
+Secondary controller (*) Point-to-point 3 Functional number  
+Power supply controller 
+(*) Point-to-point 3 Functional number  
+Other drivers in area Group call 2 Functional number  
+Other drivers on same 
+train Point-to-point 
+(Multi Party) 3 Functional number  
+Chief conductor Point-to-point 3 Functional number  
+   (*) For these destinations, see the requirement below. 
+ Table 5-3: Call types requiring MMI priority access 
+5.5.7 On activation of the “call other drivers on the same train” function, the MMI shall 
+provide additional guidance to the user in the establishment and management of a 
+Multi-Party call. (M) 
+5.5.8 (*) When there are several controllers of the same type associated with a cell, and no 
+external means of selecting the appropriate one, the choice may be given by the system 
+to the driver, or a VGCS call may be established to all of the relevant controllers after 
+initiating the ‘Call controller’ function. (I) 
+Stored numbers 
+5.5.9 The driver shall be able to initiate a call by selecting a name/number from stored 
+number information in the radio. (M) 
+5.5.10 Facilities shall be provided to support a list of stored names/numbers of up to a 
+minimum of 100 entries. (M) 
+Page 62  PSA167D006-15 
+  
+5.5.11 Stored number access shall be provided to initiate the following calls: (M) 
+ 
+Destination Call type eMLPP priority 
+designation Additional 
+information 
+Calls to stored numbers Point-to-point/ 
+VGCS/VBS 4 Functional number   
+ Table 5-4: Call types requiring MMI stored number access 
+5.5.12 Unless otherwise indicated at time of entry, calls from the stored numbers list shall be 
+initiated as voice calls. (M) 
+5.5.13 By default, calls will have a priority of railway information calls (eMLPP priority 
+designation 4). It shall be possible to store a priority in association with a stored 
+number. (M) 
+Dial access 
+5.5.14 The driver shall be able to initiate a call by dialling any valid telephone number or 
+functional number. (M) 
+5.5.15 Dial access shall be provided to initiate the following calls: (M) 
+ 
+Destination Call type eMLPP priority 
+designation Additional 
+information 
+Calls to other users Point-to-point/ 
+VGCS/VBS 4 Functional number   
+ Table 5-5: Call types requiring MMI dial access 
+5.5.16 Abbreviated dialling facilities shall be supported. (M) 
+5.5.17 Dialled calls from the MMI shall be point-to-point voice calls unless otherwise entered 
+from the MMI at the time of initiation. (M) 
+5.5.18 By default, dialled calls shall have a priority of railway information calls (eMLPP 
+priority designation 4). (M) 
+Receiving a call 
+5.5.19 It shall be possible to receive and manage the following incoming calls: (M) 
+- emergency calls; 
+- group calls; 
+- broadcast calls; 
+- point-to-point calls; 
+PSA167D006-15   Page 63 
+  
+5 Cab radio 
+- multi-party calls. 
+Call arbitration 
+5.5.20 The Cab radio shall arbitrate between calls when: 
+- an incoming call is received whilst the Cab radio is in an on-going call; (M) 
+- a Cab radio user attempts to initiate a call whilst the Cab radio is in an on-going 
+call. (M) 
+5.5.21 The Cab radio shall apply the arbitration rules outlined in Table 5A-1 in Appendix 5A. 
+(M) 
+Conversation 
+5.5.22 Once a call has been established the connected parties shall be able to communicate. 
+(M) 
+5.5.23 Replacing the handset shall result in the outcomes listed in Tables 5A-2 and 5A-3. (M) 
+Call termination 
+5.5.24 Calls shall be able to be terminated by either party subject to the requirements shown 
+in tables 5A-2 and 5A-3. (M) 
+a) Outgoing calls 
+5.5.25 Table 5A-2 in Appendix 5A shows the effect of replacing the handset or initiating the 
+‘Call clear’ procedure for the different types of outgoing calls. (M) 
+b) Incoming calls 
+5.5.26 Table 5A-3 in Appendix 5A shows the effect of putting down the handset or initiating 
+the ‘Call clear’ procedure for the different types of incoming calls. (M) 
+5.6 Other Cab radio functions 
+Handle incoming/outgoing calls to/from appropriate on-train users or devices 
+5.6.1 Incoming calls to the Cab radio shall be routed to the correct on-train user or device 
+using information contained in the sub-addressing field. (M) 
+Page 64  PSA167D006-15 
+  
+Manual network selection 
+5.6.1i Using the GSM “Manual” network selection procedure, the Cab radio application shall 
+allow the driver to access a prioritised list of authorised networks (to be displayed as 
+stated in section 10.5) and shall allow the driver to select a desired network from this 
+list. This function shall not be available if there is an ongoing voice call involving the 
+Cab radio. (M) 
+Directed network selection 
+5.6.2 As a train approaches the limits of the coverage of the PLMN it is registered with, it 
+will be necessary for it to register with the next PLMN providing coverage. (I) 
+5.6.3 A means of directed network selection should be provided to ensure that the MS 
+registers with the required network. (O) 
+5.6.4 If directed network selection is implemented, the directed network selection procedure 
+shall be initiated by an external trigger mechanism, which instructs the Cab radio 
+application to select the required network unless a voice call is ongoing. (M) 
+5.6.4i If directed network selection is implemented and voice calls are ongoing at the time 
+when the external device attempts to trigger a network change, an audible and visual 
+indication shall be given to the driver and network change shall be deferred until the 
+call is terminated or until coverage of the current network is lost. (M) 
+5.6.5 If directed network selection is implemented, the Cab radio application shall use the 
+GSM “Manual” network selection procedure (through the AT interface [EN 301 515, Index 
+[19]]) to instruct the MT to register with the required network. (M) 
+Automatic network selection 
+5.6.5i The Cab radio should be capable of selecting the most appropriate mobile radio 
+network automatically using the selection criteria stated in section 10.5. (O) 
+5.6.5ii If automatic network selection is implemented, the driver shall be capable of 
+deactivating and/or re-activating this function using simple MMI actions. (M) 
+5.6.5iii Whilst automatic network selection is enabled, the MMI shall display an indication. 
+(M) 
+Service availability 
+5.6.6 In idle mode, if the GSM Service Indicator (see [EN 301 515, Index [26]]) is lost, the mobile 
+shall give an audible and visual indication. (M) 
+PSA167D006-15   Page 65 
+  
+5 Cab radio 
+5.7 Environmental and physical 
+5.7.1 Train-mounted equipment including the Cab radio terminal equipment, MMI and 
+antenna shall comply with all specifications in section 4 and all of those defined in this 
+section, with those defined in this section taking priority. (M) 
+5.7.2 Two types of mobile radio equipment will be mounted in rolling stock: in-cab 
+equipment and external equipment. Each type of equipment has slightly different 
+requirements placed upon it in terms of EMC and climate. ([UIC 651] is a useful 
+reference concerning the layout of cab equipment.) (I) 
+Climatic conditions 
+5.7.3 The Cab radio shall be capable of operating within a temperature range of -20°C to 
++70°C. (M) 
+5.7.4 The aerial and any other equipment mounted external to the train shall be capable of 
+withstanding extremes of temperature from -40°C to +70°C. (M) 
+5.7.5 The aerial and any other equipment mounted external to the train shall function 
+correctly during rapid temperature fluctuations of up to 3°C/second. (M) 
+5.7.6 Any equipment mounted external to the train cab shall withstand the following 
+additional physical conditions: (M) 
+- in-tunnel pressure pulses of 6 kPa (peak to peak) for up to 3 seconds; 
+- pressure gradients of up to 100 kPa/s. 
+Physical conditions 
+5.7.7 Measures should be taken to reduce the risk of theft of radio equipment. Examples of 
+such measures include physical protection, alarms and access control measures. (O) 
+5.7.8 Ease of maintenance should be taken into account in the design and installation of 
+radio equipment. For example, maintenance access to antennas on vehicles should be 
+provided. (O) 
+5.7.9 The “Subscriber Identity Module” (SIM card) shall be physically integrated with the 
+radio set and shall not be able to be removed except by maintenance staff. (M) 
+5.7.10 The Cab radio should be mounted in the train cab in compliance with [prEN 50261]. (O) 
+Mechanical conditions 
+5.7.11 Any equipment mounted inside the train cab shall be capable of withstanding the 
+following maximum levels of sinusoidal vibration: (M) 
+- frequency range: 5-200 Hz; 
+Page 66  PSA167D006-15 
+  
+- peak-to-peak amplitude: 7mm; 
+- acceleration: 1.5g. 
+5.7.12 Any equipment mounted external to the train cab shall withstand the following 
+maximum levels of sinusoidal vibration: (M) 
+- frequency range: 5-1000 Hz; 
+- peak-to-peak amplitude: 5mm; 
+- acceleration: 2.5g. 
+Electrical 
+5.7.13 The Cab radio shall comply with draft European standard [prEN 50124 part 1] concerning 
+insulation co-ordination with reference to clearances and creepages. (M) 
+5.7.14 An emergency power supply should be provided for Cab radios which will enable the 
+driver’s radio to continue to operate for a period of 6 hours in the event of failure of the 
+train’s main power supply, based on the following cycle (see section 4.5.21): (O) 
+- point-to-point calls  20%; 
+- group calls   5%; 
+- standby   75%. 
+5.7.15 The Cab radio equipment shall be capable of withstanding the following changes to the 
+main and backup power supplies without interrupting normal operation: (M) 
+- voltage fluctuations up to ±15% of nominal supply voltage; 
+- 20% over voltage for up to 10s; 
+- other transient effects according to [IEC 571 parts 1-3]. 
+5.7.16 The Cab radio shall withstand the effects of power supply transients as defined in 
+[prEN 50155]. (M) 
+5.7.17 The driver and other in-cab equipment shall be protected against all electrical hazards 
+arising from EIRENE mobile equipment as defined in [EN 50153]. (M) 
+Electromagnetic Compatibility 
+5.7.18 Requirements on EMC emissions for the Cab radio are to be more stringent than those 
+defined for other radio types due to close proximity to other train mounted control and 
+protection equipment, and higher transmission power. (I) 
+5.7.19 EMC emission from the Cab radio shall comply with [ENV 50121 parts 1, 2, 3-2 and 4]. (M) 
+5.7.20 Emissions from the train mounted antenna associated with the Cab radio shall be 
+limited to those specified by [EN 301 515, Index [35]]. (M) 
+PSA167D006-15   Page 67 
+  
+5 Cab radio 
+5.7.21 Any emissions radiating into the driver’s cab and other on-board equipment from the 
+exterior aerial shall meet the requirements defined in [ENV 50121 parts 1, 2, 3-1, 3-2 and 4] to 
+the highest possible degree. (M) 
+Testing procedures 
+5.7.22 The Cab radio shall pass electrical tests as defined in [IEC 571 parts 1, 2 and 3]. (M) 
+5.7.23 Additional guidelines on testing procedures may be taken from [prEN 50129] and [IEC 
+1508 part 1]. (I) 
+5.8 Cab radio interfaces to on-train systems 
+5.8.1 The following list catalogues the interfaces that should be provided by the Cab Radio 
+to the on-train systems: 
+- Train borne recorder; (O) 
+- ERTMS/ETCS interface; (O) 
+- Public Address; (O) 
+- UIC Intercom; (O) 
+- Driver’s Safety Device; (O) 
+- Other interfaces. (O) 
+5.8.2 Where implemented, these interfaces are subject to the requirements stated in the 
+following sections. (I) 
+5.9 Train borne recorder 
+5.9.1 The Cab radio and the train borne recorder may be connected via the Train Interface 
+Unit (TIU) or may be connected directly by means of a nationally determined interface. 
+(I) 
+5.10 ERTMS/ETCS interface 
+5.10.1 Some Cab radios will be required to provide communications for ERTMS/ETCS. (I)  
+5.10.2 If ERTMS/ETCS communications are required, an interface as defined in the FFFIS for 
+EURORADIO [MORANE EURO FFFIS] shall be implemented. (M) 
+Page 68  PSA167D006-15 
+  
+5.11 Public Address interface 
+5.11.1 If implemented, the Public Address interface should comply with the specifications of 
+the UIC Fiche [UIC 568]. (O) 
+5.12 UIC Intercom 
+5.12.1 If implemented, the UIC interface should comply with the specifications of the UIC 
+Fiches [UIC 558, 568]. (O) 
+5.13 Driver’s Safety Device 
+5.13.1 The Cab radio and the Driver’s Safety Device may be connected via the Train Interface 
+Unit (TIU) or may be connected directly by means of a nationally determined interface. 
+(I) 
+5.14 Other interfaces 
+5.14.1 Other interfaces may take the form of additional audio and data inputs and outputs. (I) 
+5.14.2 Where other data interfaces are implemented, they should be of the RS422 standard. 
+(O) 
+5.15 Train Interface Unit (TIU) 
+5.15.1 Where necessary, a Train Interface Unit may be implemented to adapt on-train systems 
+to the standard interfaces provided by the Cab radio. (I) 
+5.15.2 The interfaces between the TIU and the on-train systems are outside of the scope of 
+EIRENE standardisation. (I) 
+5.15.3 Figure 5-3 shows an example of how the Train Interface Unit may be implemented: (I) 
+ 
+PSA167D006-15   Page 69 
+  
+5 Cab radio 
+ 
+Figure 5-3: Interfaces to the Cab radio 
+ 
+Page 70  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 71
+  
+5A.1 Call arbitration table 
+ 
+On-going call New call Result Comment 
+Emergency  
+(driver initiated) No change * 
+Intercom 
+(driver initiated) Intercom connected (2) 
+PA 
+(driver initiated) PA connected (2) 
+Call chief conductor 
+(driver initiated) Emergency call maintained, new call sent 
+by UIC Intercom link (3) Emergency 
+(Railway 
+emergency call) 
+Other incoming calls 
+(including other emergency 
+calls) Emergency is kept 
+Incoming call is indicated (*) At least displayed to 
+the controller 
+Emergency (driver initiated) On-going call is released and emergency 
+call established 
+Public Address (driver 
+initiated) PA connected (2) 
+Call chief conductor (driver 
+initiated) Call sent by UIC Intercom link (3) 
+Intercom (driver initiated) Intercom connected (2) 
+Emergency (controller 
+initiated) Call is released 
+Emergency call connected Other drivers  
+same area 
+(group call) 
+Other incoming calls On-going call is maintained and incoming 
+call is clearly indicated.  
+Controller (all 
+types) Emergency (driver initiated) On-going call is released and emergency 
+call established  
+ Public Address (driver 
+initiated) PA connected 
+Controller is released  
+ Call chief conductor  
+(driver initiated) Call sent by UIC Intercom link (3)  
+ Intercom (driver initiated) Intercom connected 
+Controller is released  
+ Other outgoing calls  
+(driver initiated) New call connected  
+On-going call put on hold  
+ Emergency (controller 
+initiated) On-going call is released and emergency 
+call established  5A Handling of calls 
+Page 72  PSA167D006-15 
+  
+On-going call New call Result Comment 
+ Other drivers in same area  On-going call is released and incoming call 
+established  
+ Other incoming calls On-going call is maintained and incoming 
+call is clearly indicated  
+Emergency (driver initiated) On-going call is released and emergency 
+call established 
+ 
+Public Address (driver 
+initiated) PA connected (2) 
+Call chief conductor (driver 
+initiated) Call sent by UIC Intercom link (3) 
+Emergency (controller 
+initiated) On-going call is released and emergency 
+call established 
+Intercom (driver initiated) Intercom connected (2) 
+Other outgoing calls 
+(driver initiated) New call connected 
+Multi-driver communication put on hold 
+Call to controller 
+(driver initiated) 
+ Call connected 
+Other drivers same area 
+(incoming) On-going call is released and incoming call 
+established 
+Other incoming calls from 
+controller On-going call is maintained and the 
+controller is added Other drivers 
+same train 
+(multiple driver 
+communications 
+by radio link) (7) 
+Other incoming calls On-going call is maintained and incoming 
+call is clearly indicated Leading driver may re-
+establish call to non 
+leading drivers at the 
+end of emergency call 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Multi-driver 
+communications placed 
+on hold or driver may 
+add controller to multi-
+driver communication 
+PSA167D006-15   Page 73 
+  
+5A Handling of calls 
+ 
+On-going call New call Result Comment 
+Emergency (driver initiated) PA call is released and emergency call 
+established 
+Public Address (driver 
+initiated) No change (6) 
+Call chief conductor (driver 
+initiated) Call sent (by PA) 
+Intercom (driver initiated) PA retained 
+Intercom connected 
+Call controller (all types) PA released 
+Call sent 
+Intercom (controller initiated) 
+Emergency (controller 
+initiated) 
+Other drivers in same area and 
+Controller (all types) PA released 
+Incoming call received 
+ Public Address 
+(over radio link) 
+Other calls PA call is maintained, incoming call is 
+indicated   
+Emergency (driver initiated) PA call is released and emergency call 
+established 
+Call controller (all types) PA released 
+Call sent 
+Public Address (driver 
+initiated) No change (6) 
+Call chief conductor (driver 
+initiated) Call sent (by PA or radio) 
+Intercom (driver initiated) PA released 
+Intercom connected PA (not radio link) 
+Other calls PA kept (4) 
+Incoming call received (5)  
+Page 74  PSA167D006-15 
+  
+On-going call New call Result Comment 
+Emergency (driver initiated) Intercom released 
+Emergency sent 
+Public Address (driver 
+initiated) Intercom released 
+PA connected 
+Call chief conductor (driver 
+initiated) Call sent (by PA or radio) 
+Intercom (driver initiated) No change 
+Call controller (all types) Intercom released 
+Call sent Intercom (over 
+radio link) 
+Other calls Intercom released 
+Call received  
+Emergency (driver initiated) Intercom released 
+Emergency sent 
+Public Address (driver 
+initiated) Intercom released 
+PA connected 
+Call chief conductor (driver 
+initiated) Call sent (by PA or radio) 
+Intercom (driver initiated) No change Intercom (not over 
+radio link) 
+Other calls Intercom kept (4) 
+Incoming call received (5)  
+ 
+Key: 
+1. Except broadcast 
+2. Radio call transferred to the loudspeaker 
+3. No change if no UIC Intercom link 
+4. On handset 
+5. On loudspeaker 
+6. No access if PA is busy by other 
+7. Lead driver only 
+ 
+Note: Change Network and Registration/Deregistration are not possible during a call. 
+Table 5A-1: Call arbitration rules 
+PSA167D006-15   Page 75 
+  
+5A Handling of calls 
+5A.2 Call termination of outgoing calls table 
+ 
+Type of call Replacing handset  Clearing call Notes 
+Point-to-point Call terminated Call terminated (1) 
+Multi-party call 
+(normal) Call terminated Call terminated (1) 
+Voice Broadcast call 
+(normal) Call terminated Call terminated (1) 
+Group call (normal) Call terminated Call terminated (1) 
+Multi-party call (other 
+drivers same train) Voice to loudspeaker Call terminated (2) 
+Voice Group call 
+(emergency) Voice to loudspeaker Call terminated (2) (3) 
+ 
+(1) Action by the driver on using the "Emergency", "Intercom" or "Public Address" functions has the same 
+effect as activating the ‘Call clear’ procedure 
+(2) If the driver activates the "Intercom" or "Public Address" procedures, the emergency call is 
+transferred to the loudspeaker. 
+(3) Call can also be cleared by the Controller. 
+Table 5A-2: Effect of handset replacement/call clearing - outgoing calls 
+Page 76  PSA167D006-15 
+  
+5A.3 Call termination of incoming calls table 
+ 
+Type of call Replacing handset Clearing call Notes 
+Point to point Call terminated Call terminated (1) 
+Multi-party call (normal) Leave the call (call still 
+remains ongoing 
+between other parties if 
+more than one user 
+remains in the call) Leave the call (call still 
+remains ongoing 
+between other parties if 
+more than one user 
+remains in the call) (1) 
+Voice Broadcast call 
+(normal) Voice to loudspeaker Leave call (1) 
+Voice Group call 
+(normal) Voice to loudspeaker Leave call (1) 
+Multi-party call (other 
+drivers same train) Voice to loudspeaker No change (*) (2) 
+Group call (emergency) Voice to loudspeaker No change (*) (2) 
+ 
+(*) Leave call is acceptable too, if easier to achieve. In the case of emergency calls, the information of 
+the action shall be reported by the confirmation message. 
+(1) Action by the driver on using the "Emergency", "Intercom" or "Public Address" functions has the same 
+effect as activating the ‘Call clear’ procedure 
+(2) If the driver activates the "Intercom" or "Public Address" procedures, the emergency call is 
+transferred to the loudspeaker. 
+Table 5A-3: Effect of handset replacement/call clearing - incoming calls 
+ 
+PSA167D006-15   Page 77
+  
+6.1 Introduction 
+6.1.1 This section identifies the EIRENE applications which may be used in the General 
+purpose radio and the functionality to be provided by the General purpose radio is 
+detailed. (I) 
+6.2 System components 
+6.2.1 The logical architecture of the General purpose radio is illustrated in figure 6-1. (I) 
+ 
+ 
+Note: this figure only shows mandatory applications – for a full list see table 4-6 
+Figure 6-1: Logical General purpose radio architecture and interfaces 
+6.2.2 A standard data interface shall be provided to allow a computer to be connected to the 
+radio. (M) 
+6.2.3 The General purpose radio shall operate as a standard GSM terminal, supplying 
+mobile services as defined in section 4. (M) 
+6.3 General purpose radio functions 
+Switch radio on 
+6.3.1 Automatic self-testing of the radio shall use the GSM IMSI attach procedure. (M) 
+6.3.2 Upon switch on, once the radio is connected to a mobile network, it shall be able to 
+receive all calls made using the MSISDN or appropriate group call number. (M) 6 General purpose radio 
+Page 78  PSA167D006-15 
+  
+Register and deregister functional number 
+6.3.3 It shall be possible to register and deregister a functional number by the user entering 
+his functional number, which is transmitted to the ground along with the subscriber’s 
+IMSI, using USSD (see section 11). (M) 
+6.4 Environmental and physical 
+6.4.1 The full environmental and physical specification of the General purpose shall be as 
+close as possible to that of a Commercial-Off-The-Shelf (COTS) GSM mobile whilst 
+adhering to the specifications provided in section 4. (M) 
+Climatic conditions 
+6.4.2 The General purpose radio shall comply with the core climatic conditions defined in 
+section 4. (M) 
+Physical conditions 
+6.4.3 SIM cards should be fixed into the radio to protect against accidental loss. (O) 
+Mechanical conditions 
+6.4.4 No specific mechanical requirements need to be placed upon the General purpose 
+radio over and above those defined in section 4. (I) 
+Electrical 
+6.4.5 General purpose radios shall be equipped with rechargeable batteries capable of 
+providing a minimum of eight hours operation over the temperature range +18°C to 
++25°C from a single charge, based on the following cycle (see section 4.5.21): (M) 
+- point-to-point calls  20%; 
+- group calls   5%; 
+- standby   75%. 
+6.4.6 Changing the battery shall not result in the loss of data stored in the radio. (M) 
+6.4.7 The General purpose radio shall be suitable for use with a car adapter kit. (M) 
+Electromagnetic Compatibility 
+6.4.8 The General purpose radio should comply with [EN 50081] (generic EMC for residential, 
+commercial and light industry). (O) 
+PSA167D006-15   Page 79 
+  
+6 General purpose radio 
+Testing procedures 
+6.4.9 No specific testing procedures need to be used on the General purpose radio over and 
+above those given in section 4. (I) 
+ 
+ 
+Page 80  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 81
+  
+7.1 Introduction 
+7.1.1 This section identifies the EIRENE applications which may be used in the Operational 
+radio and the functionality to be provided by the Operational radio is detailed. (I) 
+7.2 System components 
+7.2.1 The logical architecture of the Operational radio is illustrated in figure 7-1. (I) 
+ 
+   Note: the provision of direct mode is optional 
+Note: this figure only shows mandatory applications – for a full list see table 4-6 
+ Figure 7-1: Logical Operational radio architecture and interfaces 
+7.2.2 A standard data interface shall be provided to allow a computer to be connected to the 
+radio. (M) 
+7.2.3 The Operational radio shall operate as a standard GSM terminal, supplying mobile 
+services as defined in section 4. (M) 
+7.3 Operational radio functions 
+Switch radio on 
+7.3.1 Automatic self-testing of the radio shall use the GSM IMSI attach procedure. (M) 
+7.3.2 Upon switch on, once the radio is connected to a mobile network, it shall be able to 
+receive all calls made using the MSISDN or appropriate group call number. (M) 7 Operational radio 
+Page 82  PSA167D006-15 
+  
+Register and deregister functional number 
+7.3.3 It shall be possible to register and deregister a functional number by the user entering 
+his functional number, which is transmitted to the ground along with the subscriber’s 
+IMSI, using USSD (see section 11). (M) 
+Call controller 
+7.3.4 Upon receipt of the call establishment request, the radio shall retrieve the stored 
+number for the appropriate controller from the SIM or other storage location. (M) 
+7.3.5 Once an appropriate number has been obtained, the radio shall initiate a call to this 
+number with ‘Railway operation’ priority (see section 10.2). Any functional number 
+associated with the user shall be passed to the network using UUS1 (see section 11.5). 
+(M) 
+Send/receive Railway emergency call 
+7.3.6 Activation of the ‘Railway emergency call’ function shall cause the radio to initiate a 
+Railway emergency call as defined in section 13. (M) 
+7.3.7 The calling user’s functional number, if there is one, shall be passed to the network 
+using UUS1. (M) 
+Enter/leave direct mode 
+7.3.8 The Operational radio should support direct mode communications as defined in 
+section 15. (O) 
+Enter/leave shunting mode 
+7.3.9 The Operational radio should support shunting mode communications as defined in 
+section 14. (O) 
+7.4 Shunting radio requirements 
+7.4.1 The requirements for shunting operations are detailed in section 14. (I) 
+7.5 Environmental and physical 
+7.5.1 The Operational radio shall comply with the basic standards defined for all EIRENE 
+mobile equipment in section 4. In addition, the Operational radio is specified to allow 
+its use in the operating environment experienced on the operational railway (eg 
+shunting and maintenance), with the specifications in this section taking priority over 
+those in section 4 where any discrepancy is identified. (M) 
+PSA167D006-15   Page 83 
+  
+7 Operational radio 
+Climatic conditions 
+7.5.2 The Operational radio shall cope with rapid temperature fluctuations of up to 
+3°C/second. (M) 
+7.5.3 The Operational radio shall be capable of withstanding exposure to extreme 
+environmental conditions [IEC 721 part 1]. (M) 
+Physical conditions 
+7.5.4 The Operational radio shall conform to IP 54 [IEC 529/EN 60529] as a minimum. (M) 
+7.5.5 SIM cards shall be fixed into the radio such that they can only be removed by the use of 
+a tool. (M) 
+Mechanical conditions 
+7.5.6 The Operational radio shall be capable of withstanding the following shocks: (M) 
+- semi-sinusoidal shocks of up to 5g for up to 100ms under normal conditions; 
+- shocks of up to 10g for up to 5ms under exceptional conditions; 
+- free fall from 1.0m. 
+Electrical 
+7.5.7 The Operational radio user shall be protected against all electrical hazards arising from 
+the mobile equipment as defined in [EN 50153]. (M) 
+7.5.8 Operational radios shall be equipped with rechargeable batteries capable of providing 
+a minimum of eight hours operation over the temperature range -10°C to +55°C from a 
+single charge, based on the following cycle (see section 4.5.21): (M) 
+- point-to-point calls  20%; 
+- group calls   60%; 
+- standby   20%. 
+7.5.9 Changing the battery shall not result in the loss of data stored in the radio. (M) 
+7.5.10 The Operational radio shall be suitable for use with a car adapter kit. (M) 
+Electromagnetic compatibility 
+7.5.11 The Operational radio should comply with [EN 50081 part 2] (generic EMC for the 
+industrial environment). (O) 
+Testing procedures 
+7.5.12 No specific testing procedures need to be used on the Operational radio over and 
+above those given in section 4. (I) 
+Page 84  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK  
+PSA167D006-15   Page 85
+  
+8.1 General 
+8.1.1 Functional requirements relating to controller equipment specifications can be found in 
+the EIRENE Functional Requirements Specification [EIRENE FRS]. (I) 
+8.2 Termination of VGCS/VBS calls 
+8.2.1 An entitled controller may terminate a VGCS/VBS call based on DTMF signalling [EN 
+301 515, Index [4] & [5]]. (I) 
+8.2.2 To terminate a VGCS/VBS call by DTMF signalling, the 3-digit sequence “***” shall be 
+used. (M) 
+8.2.3 In order to minimise the discomfort caused by the DTMF tone added in the voice 
+channel, the duration of the tone generated by the fixed line dispatcher shall be 70ms ± 
+5ms, and there shall be a minimum gap of 65ms between each tone. (M) 
+8.3 Muting and unmuting for VGCS calls 
+8.3.1 Muting and unmuting shall be in line with [EN 301 515, Index [4]]. (M) 
+8.3.2 A group call controller who wishes to start talking (except in the case of an originator, 
+a joiner or a re-joiner speaking for the first time5) shall indicate his wish, for example 
+by pressing the PTT button, whereupon the 3-digit DTMF sequence “###” shall be 
+transferred. (M) 
+8.3.3 The terminal of the controller should receive a single DTMF grant tone “#” of duration 
+100ms ± 5ms sent by the network if it has detected the 3-digit DTMF sequence “###” 
+and if the controller was not previously talking. (O) 
+8.3.4 Any group call controller who wishes to stop talking shall indicate his wish, for 
+example by releasing the PTT button, whereupon the 3-digit DTMF sequence “#**” 
+shall be transferred. (M) 
+8.3.5 The duration of each tone (see 8.3.2 and 8.3.4) added in the voice channel, shall be 70ms 
+± 5ms, and there shall be a minimum gap of 65ms between each tone. (M) 
+                                                      
+5 A controller as a group call originator, joiner and re-joiner speaking for the first time can speak directly without any 
+indication of his wish. 8 Controller equipment specifications 
+Page 86  PSA167D006-15 
+  
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 87
+  
+9.1 General 
+9.1.1 International standardisation of the numbering plan is required to ensure interworking 
+between networks. Furthermore, standardised allocation of numbers to subscribers is 
+likely to facilitate schemes for identification, barring etc. (I) 
+9.1.2 This section addresses the following: (I) 
+- numbering plan requirements; 
+- numbering plan limitations; 
+- types of numbers; 
+- EIRENE numbering plan; 
+- short dialling codes; 
+- group addresses. 
+9.1.3 The precise details of the numbering plan to be chosen for particular railways will 
+depend upon the railway network configuration, its interconnection with other 
+railway networks and its interconnection with public telecommunication networks. 
+Equipment design must therefore be such as to give maximum flexibility in numbering 
+arrangements. However, it may be generally assumed that numbers (excluding access 
+prefixes) will not exceed 15 digits in length and will consist entirely of the digits 1 to 9 
+and 0. (I) 
+9.1.4 Characters * and # may be used locally to gain access to special facilities such as short 
+code dialling. However, these arrangements do not form part of the network 
+numbering plan. (I) 
+9.1.5 Procedures for handling the relationship between EIRENE Numbers and MSISDN 
+numbers (ie registration, deregistration and re-registration) are specified in section 11. 
+(I) 
+9.1.6 Each railway should have appropriate call-barring facilities to prevent unintended 
+access to the GSM-R network by non-authorised users. (O) 
+9.2 Numbering plan requirements 
+Use of Train Number 
+9.2.1 Within each GSM-R network, each Train Number shall be unique for the period of the 
+journey. (M) 
+9.2.2 Every On-Train Function shall be identified by a standard code and shall conform to 
+the list of functions given in Appendix 9A of this section. (M) 9 Numbering plan 
+Page 88  PSA167D006-15 
+  
+ 
+9.2.3 All Train Function Numbers and their associated MSISDN numbers shall be stored in 
+the same routing database, which is the database of the GSM-R network in which the 
+train is currently operating. (M) 
+Use of Engine Number 
+9.2.4 Every On-Engine Function shall be identified by a standard code and shall conform to 
+the list of functions given in Appendix 9A of this section. (M) 
+9.2.5 The Engine Function Number(s) and associated MSISDN numbers shall at any time be 
+stored as an entry in the routing database of the home GSM-R network6 of the engine. 
+(M) 
+Use of Coach Number 
+9.2.6 The Coach Function Number(s) and associated MSISDN number(s) shall at any time 
+be stored as an entry in the routing database of the home GSM-R network of the coach. 
+(M) 
+Use of Shunting Team, Maintenance Team or Train Controller Number 
+9.2.7 Every Function shall be identified by a standard code and shall conform to the list of 
+functions given in Appendix 9A of this section. (M) 
+9.2.8 The functional numbers of the Shunting Team Members, Maintenance Team Members 
+and Train Controller (and any associated MSISDN numbers) shall be stored as entries 
+in the routing database of the home GSM-R network. (M) 
+Use of MSISDN number 
+9.2.9 Implementation of the EIRENE numbering plan shall not prohibit any authorised 
+caller from using the MSISDN number where known, thus enabling mobiles to be 
+assigned to particular personnel where this is appropriate. (M) 
+Use of group call Service Areas 
+9.2.10 Service areas shall be defined within each railway network. (M) 
+9.2.11 The numbering of Service Areas for group calls and broadcast calls shall be made in 
+accordance with GSM Technical Specifications [EN 301 515, Index [21] & [4]] and [EN 301 515, 
+Index [22] & [5]] respectively. (M) 
+                                                      
+6  The home GSM-R network is the mobile network to which the mobile on the engine is subscribed. 
+PSA167D006-15   Page 89 
+  
+9 Numbering plan 
+9.3 Numbering plan limitations 
+9.3.1 The EIRENE network can not be considered as a fully private network, as some parts 
+of either the mobile or fixed networks may be provided by public operators. This leads 
+to certain restrictions on the implementation of a numbering plan. These restrictions 
+are given below. (I) 
+Number allocation 
+9.3.2 To achieve integration of the EIRENE numbering plan with the national public 
+numbering plan, telephone numbers have to be allocated by the various numbering 
+regulatory bodies on a national basis. If functional numbers are to be used outside the 
+EIRENE network, they will require either a public number allocation or, alternatively, 
+an EIRENE Network Access Number (ENAN) may be used as described in 9.11 (I) 
+9.3.3 Each national railway should obtain a public numbering allocation for MSISDN 
+numbers from the relevant regulatory bodies. (O) 
+9.3.4 The EIRENE numbering plan shall be standardised to allow interoperability and shall 
+be implemented as a private numbering plan within the GSM-R network. (M) 
+Use of alphanumerical numbers 
+9.3.5 In some countries Train Numbers are alphanumeric. These numbers do not comply 
+with a numbering plan that can be interpreted by telephone switches and are therefore 
+not supported by the call routing solution given in section 11. (I) 
+9.3.6 If alphanumerical numbering is required within a railway network, then these 
+numbers may either be translated at the user terminal into a subscriber number or 
+conveyed between the calling party and a routing database using a nationally 
+determined approach. (I) 
+9.4 Types of numbers 
+9.4.1 Within the GSM-R network, the user shall be able to dial the following types of 
+numbers: (M) 
+- National EIRENE Number (NEN): this number is used to route a call from the 
+calling party to a called party registered within the same GSM-R network; 
+- International EIRENE Number (IEN): this number is used to route a call from the 
+calling party to a called party registered within another GSM-R network; 
+- MSISDN numbers: the number used by a subscriber of a public fixed (or mobile) 
+network for calling a mobile station of a GSM PLMN; 
+- Short Dialling Code (SDC): this number is used to allow ’speed dialling’ 
+functionality. 
+Page 90  PSA167D006-15 
+  
+ 
+9.4.2 In addition, Breakout Codes (BCs) shall be used to allow users within the GSM-R 
+network to access external numbers. (M) 
+9.4.3 Access from the GSM-R network to external networks shall be as detailed in section 
+9.10. (M) 
+9.5 Use of National EIRENE Numbers 
+9.5.1 National EIRENE Numbers are used to set up calls within a single GSM-R network. (I) 
+9.5.2 Every railway network shall consider a number as a National EIRENE Number (NEN) 
+unless the number is preceded by an International Code, identifying another GSM-R 
+network. (M) 
+Structure of National EIRENE Number 
+9.5.3 The National EIRENE Number shall consist of three distinct parts, as shown in figure 
+9-1: (M) 
+ 
+ 
+Figure 9-1: National EIRENE Number structure 
+1) Call Type: 
+The Call Type (CT) prefix is used to distinguish between the different types of 
+User Numbers that are allowed within the national EIRENE numbering plan. It is 
+an indication to the network of how to interpret the number dialled. (I) 
+2) User Identifier Number: 
+The User Identifier Number (UIN) shall be one of the following numbers (as 
+identified by the CT): (M) 
+- Train Number (TN): a number given to a train by operational staff for a 
+particular journey. This number shall be unique for the duration of the journey. 
+PSA167D006-15   Page 91 
+  
+9 Numbering plan 
+- Note. For certain Train Numbers (e.g. 1234 and 123), a risk exists when dialling 
+a number by keying in individual digits e.g. by the dispatcher. In this 
+circumstance the risk of connecting to an un-intended train exists if there is a 
+delay between keyed-in digits.  There is no risk of ambiguity if block dialling is 
+employed. 
+- Engine Number (EN): a unique number given to a tractive unit to identify it 
+permanently. The UIC has introduced a uniform identification marking system 
+for tractive stock crossing frontiers [UIC 438-3]. In order to call a particular 
+locomotive, it shall be possible to call a number associated with the tractive 
+unit's stock number. The actual number of the unit, which shall be used as the 
+EN, is based on the complete identification number. 
+- Coach Number (CN): a unique number given to a coach (which is not a tractive 
+unit) to identify it permanently. The UIC has introduced a uniform 
+identification marking for passenger rolling stock [UIC 438-1]. In order to call a 
+particular coach it shall be possible to call a number associated with the vehicle 
+marking. The total vehicle marking consists of 12 digits. The actual number of 
+the coach is denoted by seven digits (positions 5 to 11 of the complete vehicle 
+marking), which shall be used as the CN7. 
+- Shunting Team Location Number (STLN) 
+- Maintenance Team Location Number (MTLN) 
+- Train Controller Location Number (TCLN) 
+- Group Location Number (GLN) 
+- Mobile Subscriber Number (MSN) 
+3) Function Code: 
+The Function Code (FC) is used as an identification of, for example, the person or 
+equipment on a particular train, or a particular team within a given area. 
+National EIRENE Numbering Plan 
+9.5.4 The contents of the fields of a National EIRENE Number shall be as defined below: (M) 
+1) Call Type (CT) 
+This prefix defines how to interpret the User Number that follows. It shall consist 
+of one or two digits as defined in table 9-1. 
+ 
+                                                      
+7 In order to prevent duplication of numbering, as each railway is free to allocate the coach number 
+leading to number uniqueness per country only, the Owning or registering Railway code should be 
+added as the first digits. 
+Page 92  PSA167D006-15 
+  
+ 
+Digit Use 
+1 Reserved for short codes (see section 9.8) 
+2 Train Function Number (ie TN + FC) 
+3 Engine Function Number (ie EN + FC) 
+4 Coach Number (ie CN + FC) 
+50 Group calls 
+51 Broadcast calls 
+52-55 Reserved for international use 
+56-59 Reserved for national use 
+6 Maintenance and shunting team members 
+7 Train controllers  
+8 Mobile Subscriber Number 
+9 Reserved for breakout codes (see section 9.10) and national use 
+0 Reserved for access to public or to other GSM-R networks (see 
+section 9.10)  
+Table 9-1: Call Type field format 
+2) User Number (UN) 
+The UN is variable in length and depends on the information on which it is 
+based. The following formats are defined: 
+- Train Function Numbers (TFN) shall take one of the forms as defined in 
+table 9-2. Leading zeros shall be used in those situations where the train 
+number is less than five digits. 
+PSA167D006-15   Page 93 
+  
+9 Numbering plan 
+ 
+Train Number Use 
+0000XFF train number with one significant digit 
+000YXFF train number with two significant digits 
+00YXXFF train number with three significant digits 
+0YXXXFF train number with four significant digits 
+YXXXXFF train number with five significant digits 
+XXXXXXFF train number with six significant digits 
+XXXXXXXFF train number with seven significant digits 
+XXXXXXXXFF train number with eight significant digits 
+  
+FF - Function Code as defined in Appendix A table 9A-1 
+Y not equal to 0 
+Table 9-2: UN - Train Function Number field format 
+- Engine Function Numbers (EFN) shall take the format as defined in table 
+9-3. 
+ 
+Engine Number Use 
+XXXXXXXXFF XXXXXXXX : number of powered unit allocated by each Railway 
+FF           : Function Code as defined in Appendix A table 9A-1 
+Table 9-3: UN - Engine Function Number field format 
+- Coach Function Numbers (CFN) shall take the format as defined in table 9-4. 
+ 
+Coach Number Use 
+RRXXXXXXXFF RR             : owning or registering railway code 
+XXXXXXX : vehicle number allocated by each Railway 
+FF              : Function Code as defined in Appendix A table 9A-1 
+Table 9-4: UN - Coach Function Number field format 
+- Maintenance and Shunting Team Members. The UIN field format for calls 
+to shunting teams and maintenance teams shall consist of a Location 
+Number (LN), which identifies the location where the called party is 
+registered, followed by a Function Code (FC). The Location Number shall 
+consist of 5 digits and shall be assigned on a national basis. The Function 
+Code shall consist of 4 digits. The first digit of the FC is related to the Team 
+Type (TT) and is specified by table 9-5. 
+Page 94  PSA167D006-15 
+  
+ 
+ 
+Team Type Description 
+1 – 3 Reserved for international use 
+4 Reserved for national use 
+5 Shunting Team 
+6 – 9 Reserved for national use 
+0 Reserved for international use 
+Table 9-5: UIN – Team Type field format 
+The composition of the Function Code field for calls to shunting teams and 
+maintenance teams shall be as defined in table 9-6. 
+ 
+FC Function description 
+TT,Y,XX Team type, team member function and team number 
+TT  : team type 
+Y    : team member function 
+XX  : team number 
+ 
+As defined in Appendix 9A table 9A-2 
+Table 9-6: Function Code field format for CT=6 
+ 
+- Train Controllers. The UIN field for calls to train controllers shall be a 
+Location Number (LN) which identifies the location where the called party is 
+registered. The Location Number shall consist of 5 digits and shall be 
+assigned on a national basis. 
+The FC field for calls to train controllers shall consist of two digits and be as 
+defined in table 9-7. 
+ 
+FC Function description 
+01 Primary controller 
+02 Secondary controller 
+03 Power supply controller 
+04 - 10 Reserved for international use 
+11-99 Reserved for national use 
+Table 9-7: Function Code field format for CT=7 
+PSA167D006-15   Page 95 
+  
+9 Numbering plan 
+- Mobile Subscriber Number (MSN). The UN of the MSN shall consist of the 
+Subscriber Number. 
+- Group and broadcast calls. The UIN field format for group calls shall be a 
+Service Area (SA) indicator, which identifies the area in which the group call 
+is to be active. Each Service Area shall be allocated on a national basis. In 
+network boundary areas, the Service Area shall be allocated on a bilateral 
+basis. (See also subsection 9.9.) 
+The FC field format for group calls shall consist of three digits and be as 
+defined in table 9-8. 
+ 
+Page 96  PSA167D006-15 
+  
+ 
+FC Function Description 
+1xx Reserved for national use 
+200 
+ 
+2xx 
+299 “All trains group” in the context of call other drivers in the same area 
+(section 5.3.3) 
+Reserved for national use 
+Train groups: Emergency call 
+3xx Reserved for national use 
+4xx Reserved for national use 
+500 
+501 – 529 
+530 
+53x 
+539 
+54x 
+55x 
+560 
+56x 
+569 
+570 
+57x 
+579 
+580 
+59x 
+599 Shunting groups: Default group 
+Shunting groups: Dedicated shunting groups 
+Station and security staff: Default group 
+Station and security staff: Reserved for international use 
+Station and security staff: Emergency call 
+Reserved for international use 
+Reserved for international use 
+Trackside maintenance groups: Default group 
+Trackside maintenance groups: Reserved for international use 
+Trackside maintenance groups: Emergency call 
+Controller groups: Default group 
+Controller groups: Reserved for international use 
+Controller groups: Emergency call 
+Reserved for international use 
+Reserved for international use 
+Shunting groups: Emergency call 
+6xx Reserved for national use 
+7xx Reserved for national use 
+8xx Reserved for national use 
+9xx Reserved for national use 
+0xx Reserved for national use 
+ 
+Table 9-8: Function Code field format for CT=5 
+ 
+ 
+PSA167D006-15   Page 97 
+  
+9 Numbering plan 
+9.6 Use of International EIRENE Numbers 
+9.6.1 International EIRENE Numbers are used for calls between GSM-R networks. 
+Additional fields are added to the National EIRENE Number as routing indicators. 
+The use of such indicators is discussed in subsection 9.10. (I) 
+9.6.2 GSM-R networks shall recognise International EIRENE Numbers starting with the IC 
+of the GSM-R network in which the calling party is currently operating as National 
+EIRENE Numbers. (M) 
+Structure of International EIRENE Number 
+9.6.3 The International EIRENE Number shall consist of three distinct parts, as shown in 
+figure 9-2: (M) 
+ 
+Figure 9-2: International EIRENE Number structure 
+- International Code (IC), which shall be used to route calls to the appropriate 
+GSM-R network; 
+- National EIRENE Number (NEN), which consists of the combination of Call Type 
+and User Number and which is used to identify the called party. 
+International EIRENE Numbering plan 
+9.6.4 The fields of an International Functional Number shall be defined as follows: (M) 
+1) International Code (IC) 
+The International Code field shall consist of three digits and shall be based on the 
+[ITU-T E.164] country code (XCC or CCC), allocated by the UIC on a network-
+by-network basis. 
+2) National EIRENE Number (NEN) 
+The format of the National EIRENE Number field shall be as defined in 
+subsection 9.5. 
+Page 98  PSA167D006-15 
+  
+ 
+9.7 Use of MSISDN numbers 
+9.7.1 At least one MSISDN number shall be allocated to each mobile station. (M) 
+9.7.2 The structure of the MSISDN numbers shall comply with GSM Technical Specification 
+[GSM 03.03]. (M) 
+ 
+ 
+Figure 9-3: Number structure of MSISDN number 
+9.7.3 Within each GSM-R network, the following relationships between the MSISDN 
+Subscriber Number and the National EIRENE Number can be identified: 
+- the MSISDN Subscriber Number shall be equal to the National EIRENE Number 
+for Call Type = 8; (M) 
+- the MSISDN number may be equal to the National EIRENE Number for any other 
+Call Type. (O) 
+9.7.4 It shall be possible for authorised subscribers of fixed and mobile networks to call 
+mobiles using the appropriate MSISDN number. (M) 
+9.8 Use of Short Dialling Codes 
+9.8.1 For certain functions, standardised short codes shall be implemented for mobile 
+originated calls. (M) 
+9.8.2 Each short dialling code shall consist of four digits. (M) 
+9.8.3 Short dialling codes shall start with the first digit equal to 1 (ie CT=1). (M) 
+9.8.4 The short dialling codes can be defined on a national basis, but it is essential that 
+certain codes be used on an international basis in order to achieve interoperability. 
+These codes shall be as given in table 9-10. (M) 
+ 
+PSA167D006-15   Page 99 
+  
+9 Numbering plan 
+Code Description 
+10(00-99) Reserved for national use 
+11(00-19) Reserved for national use 
+112X Not used (note: 112 reserved for public emergency) 
+11(30-99) Reserved for national use 
+12XX* Route to most appropriate primary controller  
+13XX* Route to most appropriate secondary controller  
+14XX* Route to most appropriate power supply controller 
+15XX* Route to most appropriate ERTMS/ETCS RBC 
+1612 High priority call confirmations including railway 
+emergency calls (see section 13) 
+16YY** Reserved for international use 
+1700 Driver Safety Device 
+17(01-99) Reserved for international use 
+18(00-99) Reserved for national use 
+19(00-99) Reserved for national use 
+* XX may be used to provide supplementary location information within a cell. Where 
+no additional information is available the default value shall be 00. 
+** YY is not 12. 
+Table 9-10: Internationally defined short codes 
+9.8.5 In addition, the network shall support the special short codes as defined in table 9-11. 
+(M) 
+ 
+Code Description 
+112 European emergency number 
+Table 9-11: Special short codes 
+9.9 Use of group addresses 
+9.9.1 Standardisation of UIC group addresses is required to provide interoperability 
+between the fixed railway networks within the GSM-R network. (M) 
+Page 100  PSA167D006-15 
+  
+ 
+9.9.2 The group address consists of a Service Area (5 digits) and a Function Code (3 digits) 
+and has a Call Type 5 (see table 9-1). (M) 
+9.9.3 The Service Area shall be defined on a national basis. (M) 
+9.9.4 In network boundary areas, the Service Area shall be allocated on a bilateral basis. (M) 
+9.9.5 Function Codes shall be defined within the framework given in table 9-8 on an 
+international basis. (M) 
+9.10 Access to external networks 
+9.10.1 Access to other GSM-R networks shall be possible by using a Breakout Code (BC) as 
+part of the dialled number. (M) 
+9.10.1i Access to other GSM-R networks may be possible by using an Access Code (AC) as 
+part of the dialled number if the NSN (National Significant Number) following the CC 
+(Country Code) is assigned by the national telecommunication regulator to the GSM-R 
+operator. (O) 
+Note: NSN=NDC (National Destination Code) + SN (Subscriber Number) 
+9.10.1ii The BC for access to other GSM-R networks is defined in table 9-12a, and is followed 
+by the full international EIRENE number of the called party. (M) 
+ 
+Breakout 
+Code Network 
+900 Other GSM-R network 
+(International EIRENE Numbering plan as defined in 
+subsection 9.6) 
+Table 9-12a: Breakout Code (other GSM-R Networks) 
+9.10.1iii The AC for access to other GSM-R networks is defined in table 9-12b, and is followed 
+by the CC + NDC + SN of the other GSM-R network. The number format complies 
+with [ITU-T 164]. (M) 
+ 
+Access Code Network 
+00 (or +) Other GSM-R network (designated by CC + NDC) 
+Table 9-12b: Access Code (other GSM-R networks) 
+PSA167D006-15   Page 101 
+  
+9 Numbering plan 
+9.10.1iv It is the responsibility of each individual GSM-R operator to acquire a public domain 
+NDC from their national telecommunications regulator. (I) 
+9.10.1v Access to private networks shall be performed by using a BC, defined in table 9-12c. 
+(M) 
+ 
+Breakout 
+Code Network 
+901 Gateway to private railway network 
+(private numbering plan) 
+902 – 909 Reserved for national breakout codes 
+Table 9-12c: Breakout Codes (private networks) 
+Note: All other CT9 numbers are reserved for railway national fixed networks and 
+systems. 
+9.10.2 The GSM-R network shall allow users direct access to public networks, subject to call 
+barring restrictions. (M) 
+9.10.3 Where access to public networks is allowed, this shall be performed by using an 
+Access Code (AC), defined in table 9-13, followed by the international or national 
+number of the called subscriber as defined in [ITU-T 164]. (M) 
+9.10.4 Deleted. 
+ 
+Access Code Network 
+00 (or +) Calls to international public networks 
+0 Calls to national public networks (note: “0” is followed by 
+a digit ¹ “0” 
+Table 9-13: Access Codes for calls to public networks 
+9.11 Calls from external networks to the GSM-R network 
+9.11.1 Access to the GSM-R network should be performed by dialling an EIRENE Network 
+Access Number (ENAN)8, followed by the relevant National or International 
+Functional Number as defined in subsections 9.5 and 9.6 respectively. (O) 
+                                                      
+8 The ENAN may be either an NDC in the case of direct dialling of EIRENE numbers, or a nationally 
+defined telephone number allowing indirect dialling through public networks. 
+Page 102  PSA167D006-15 
+  
+ 
+9.11.2 Provision should be made to prevent unauthorised calls to mobiles from outside the 
+GSM-R network. (O) 
+ 
+ 
+ 
+ 
+ 
+PSA167D006-15   Page 103
+  
+9A.1 Function Codes identify the actual user of a mobile. (I) 
+9A.2 The Function Codes used in association with the Train Function Number (CT=2), 
+Engine Function Number (CT=3) and Coach Function Number (CT=4) shall conform 
+to table 9A-1. (M) 
+ 
+Function Code Function description 
+00 Spare alarm 
+01 Leading driver 
+02 – 05 Other drivers 
+06 Fax  
+07 Intercom 
+08 Public address 
+09 Reserved for international use 
+10 Chief conductor 
+11 Second conductor 
+12 Third conductor 
+13 Fourth conductor 
+14 – 19 Reserved for international use (train crew) 
+20 Catering staff chief 
+21 – 29 Reserved for international use (catering staff) 
+30 Railway security services chief 
+31 – 39 Reserved for international use (security services) 
+40 ERTMS/ETCS 
+41-49 Reserved for international use (ERTMS/ETCS) 
+50 Train-borne recorder 
+51 Diagnostics 
+52 Train data bus 
+53 Train location system 
+54-59 Reserved for international applications for on train 
+equipment 
+60 Pre-recorded passenger info 
+61 Displayed passenger information unit 
+62 – 69 Reserved for international use (passenger services) 
+70 – 79 Reserved for international use 
+80 – 99 Reserved for national use 
+Note: Function Codes are reserved for international applications except when shown as “Reserved for national use”. 
+Table 9A-1: Function Code field for CT=2, 3 and 4 
+ 
+ 
+ 9A Function Codes 
+Page 104  PSA167D006-15 
+  
+ 
+9A.3 The Function Codes used in association with Maintenance Services Team Numbers 
+(CT=6) shall conform to table 9A-2. (M) 
+ 
+Function 
+Code Function description 
+TT,y,xx 
+TT=1-4 Reserved for international use 
+TT,y,xx 
+TT=5 y = 0 Shunting leader 
+      1 – 3 Shunting team member 
+      4 Train driver 
+      5 – 9 Reserved for national use 
+xx = 00 Reserved 
+        01 – 29 Dedicated shunting groups* 
+        30 – 99 Reserved 
+TT,y,xx 
+TT=6-9 Reserved for national use 
+TT,y,xx 
+TT=0 Reserved for international use 
+* As defined in table 9-8, FCs 501 – 529 provide dedicated shunting groups 01 – 29 
+Table 9A-2: Function Code field for CT=6 
+ 
+ 
+PSA167D006-15   Page 105
+  
+9B.1 This appendix provides an overview of the numbering plan as defined in this section 
+of the EIRENE SRS, detailing the allocation of numbers within the National and 
+International EIRENE Numbering plan. (I) 9B Numbering plan overview 
+Page 106  PSA167D006-15 
+  
+ 
+CT
+1 000 Reserved for national use
+: :         :
+1 099 Reserved for national use
+1 12X Not used
+1 2XX Route to most appropriate primary controller
+1 3XX Route to most appropriate secondary controller
+1 4XX Route to most appropriate power supply controller
+1 5XX Route to most appropriate ERTMS/ETCS RBC
+1 612 High priority call confirmations including railway emergency calls
+1 6YY Reserved for international use
+1 700 Driver Safety Device
+1 7YY Reserved for international use
+1 8YY Reserved for national use
+1 9YY Reserved for national use
+2 0000X FF Train Function Number; TN consists of one digit
+2 000YX FF Train Function Number; TN consists of two digits
+2 00YXX FF Train Function Number; TN consists of three digits
+2 0YXXX FF Train Function Number; TN consists of four digits
+2 YXXXX FF Train Function Number; TN consists of five digits
+2 XXXXXX FF Train Function Number; TN consists of six digits
+2 XXXXXXX FF Train Function Number; TN consists of seven digits
+2 XXXXXXXX FF Train Function Number; TN consists of eight digits
+3 XXXXXXXX FF Engine Function Number
+4 RRXXXXXXX FF Coach Function Number
+50SSSSS 1XX Group call - Reserved for national use
+50SSSSS 200 Group call - Train groups: Default group
+50SSSSS 2XX Group call - Reserved for national use
+50SSSSS 299 Group call - Train groups: Emergency call
+50SSSSS 3XX Group call - Reserved for national use
+50SSSSS 4XX Group call - Reserved for national use
+50SSSSS 500 Group call - Shunting groups: Default group
+50SSSSS 501 Group call - Shunting groups: Team number 01
+50SSSSS :         :
+50SSSSS 529 Group call - Shunting groups: Team number 29
+50SSSSS 530 Group call - Station and security staff: Default group
+50SSSSS 53X Group call - Station and security staff: Reserved for international use
+50SSSSS 539 Group call - Station and security staff: Emergency call
+50SSSSS 54X Group call - Reserved for international use
+50SSSSS 55X Group call - Reserved for international use
+50SSSSS 560 Group call - Trackside maintenance groups: Default group
+50SSSSS 56X Group call - Trackside maintenance groups: Reserved for international use
+50SSSSS 569 Group call - Trackside maintenance groups: Emergency call
+50SSSSS 570 Group call - Controller groups: Default group
+50SSSSS 57X Group call - Controller groups: Reserved for international use
+50SSSSS 579 Group call - Controller groups: Emergency call
+50SSSSS 580 Group call - Reserved for international use
+50SSSSS 59X Group call - Reserved for international use
+50SSSSS 599 Group call - Shunting groups: Emergency call
+50SSSSS 6XX Group call - Reserved for national use
+50SSSSS 7XX Group call - Reserved for national use
+50SSSSS 8XX Group call - Reserved for national use
+50SSSSS 9XX Group call - Reserved for national use
+50SSSSS 0XX Group call - Reserved for national use
+51SSSSS 1XX Broadcast call - Reserved for international use
+51SSSSS 2XX Broadcast call - Train groups
+51SSSSS 3XX Broadcast call - Station and security staff groups
+51SSSSS 4XX Broadcast call - Reserved for national use
+51SSSSS 5XX Broadcast call - Shunting groups
+51SSSSS 6XX Broadcast call - Trackside maintenance groups
+51SSSSS 7XX Broadcast call - Controller groups
+51SSSSS 8XX Broadcast call - Reserved for international use
+51SSSSS 9XX Broadcast call - Reserved for international use
+51SSSSS 0XX Broadcast call - Reserved for international use
+52 Reserved for international use
+        :
+55 Reserved for international use
+56 Reserved for national use
+      :
+59 Reserved for national use
+6 LLLLL 1YXX Reserved for international use
+6 LLLLL 2YXX Reserved for international use
+6 LLLLL 3YXX Reserved for international use
+6 LLLLL 4YXX Reserved for national use
+6 LLLLL 50XX Shunting team - Team leader
+1XX Shunting team - Team member #1
+2XX Shunting team - Team member #2
+3XX Shunting team - Team member #3
+4XX Shunting team - Train driver
+5XX Reserved for national use
+6XX Reserved for national use
+7XX Reserved for national use
+8XX Reserved for national use
+9XX Reserved for national use
+6 LLLLL 6YXX Reserved for national use
+6 LLLLL 7YXX Reserved for national use
+6 LLLLL 8YXX Reserved for national use
+6 LLLLL 9YXX Reserved for national use
+6 LLLLL 0YXX Reserved for international use
+7 LLLLL 01 Primary controller
+LLLLL 02 Secondary controller
+LLLLL 03 Power supply controller
+LLLLL 04 Reserved for international use
+LLLLL       :
+LLLLL 10 Reserved for international use
+LLLLL 11 Reserved for national use
+LLLLL       :
+LLLLL 99 Reserved for national use
+8 Mobile Subscriber Number
+9 00 Gateway to other GSM-R network
+01 Gateway to private railway network
+0X Reserved for national use
+0 Reserved for PSTN Access CodesComment UIN
+:
+:
+:
+:BC IC FC
+ 
+Table 9B-1: National Functional Numbering plan overview 
+PSA167D006-15   Page 107
+  
+10.1 Introduction 
+10.1.1 In order to provide a consistent level of service in each railway network and, in 
+particular, to ensure interoperability for train drivers and other users roaming between 
+networks, it is important to harmonise subscription details and other information 
+stored in the network. (I) 
+10.1.2 For the purposes of defining common subscription profiles, a number of subscription 
+types might be used, for example: (I) 
+- Cab radio; 
+- on-train radio; 
+- controller; 
+- trackside worker; 
+- general staff; 
+- data systems; 
+- administration/management. 
+10.2 Allocation of priorities  
+10.2.1 In order to provide a consistent international service, it is necessary to ensure that 
+priorities are allocated consistently across all railways. The following allocation of UIC 
+priority levels to eMLPP priority codes is mandatory: (M) 
+ 10 Subscriber management 
+Page 108  PSA167D006-15 
+  
+ 
+UIC Priority Automatic 
+answering* eMLPP priority 
+designation Pre-emption 
+(of) 
+Railway emergency Y 0 Control-command 
+(safety) and below 
+Control-command (safety) 
+ Y 1 Public emergency, 
+group calls 
+between drivers in 
+the same area and 
+below 
+Public emergency and group calls 
+between drivers in the same area 
+ Y 2 Railway operation. 
+Control-command 
+information and 
+below 
+Railway operation 
+(eg calls from or for drivers and 
+controllers) and Control-command 
+information Y** 3 Railway information 
+and all other calls 
+Railway information and all other 
+calls N 4 - 
+* Auto answer applies only to voice calls to mobile users as defined in [EN 301 515, Index [27]] 
+(eMLPP) 
+** Mandatory for cab radio, optional for other user equipment 
+Table 10-1: Allocation of priorities 
+10.2.2 Levels 0 – 4 are designed to interwork with the ISDN MLPP service. (I) 
+10.3 Access classes 
+10.3.1 User access classes are defined in GSM so that under critical conditions, part of the 
+user population can be barred from accessing the network in order to avoid 
+congestion. However, such barring can be overridden by a user being a member of one 
+or more of the following special access classes: (I) 
+11 open to network operator; 
+12 security services; 
+13 public utilities; 
+14 emergency services; 
+15 network operator staff. 
+10.3.2 Access classes should not be used under normal network operating conditions, where 
+the GSM eMLPP may be used to provide a better grade of service to certain users. (O) 
+PSA167D006-15   Page 109 
+  
+10 Subscriber management 
+10.3.3 For consistent working on public networks and in international roaming, the use of 
+access classes in a railway network shall comply with the GSM specification. (M) 
+10.3.4 If special access classes (eg 12 - 14) are assigned within a railway’s network to certain 
+high priority users, it ought to be noted that when roaming, this will only have an 
+effect on a national public network, subject to bilateral agreement. (I) 
+10.4 Closed user groups 
+10.4.1 Closed User Groups (CUGs) may be employed by railways as an additional security 
+measure. Such facilities may be particularly important if public network access to the 
+radio system is provided (eg to prevent members of the public calling drivers and 
+drivers calling members of the public). (I) 
+10.4.2 Any implementation of CUGs must take account of requirements for interoperability. 
+(M)  
+10.5 Network selection  
+10.5.1 SIM cards shall contain a list of authorised networks so that networks shall be 
+displayed (or automatically selected if automatic network selection has been enabled) 
+in the following order of priority (see [MORANE SIM] for more details): (M) 
+- home EIRENE network; 
+- ‘foreign’ EIRENE networks; 
+- non-EIRENE networks (with order of priority predetermined by virtue of 
+international subscriptions and roaming agreements). 
+10.5.1i In order to shorten the duration of the network selection procedure, Mobile Stations 
+designed for use in EIRENE networks shall give preference to the GSM frequency 
+band allocated for railway use (see 3.5.2). (M) 
+10.5.2 The use of “Over The Air” in conjunction with the SIM Application Toolkit [EN 301 515, 
+Index [36]] to update SIM cards in the home network is recommended (see [MORANE SIM] 
+for more details). (I)  
+10.6 Cell broadcast message identifiers 
+10.6.1 Railway mobiles shall be provided with cell broadcast message identifiers in order to 
+accept SMS-CB messages. (M) 
+Page 110  PSA167D006-15 
+  
+ 
+10.7 Encryption and authentication 
+10.7.1 Encryption. Licensing of A5/x encryption algorithms is managed by the GSM 
+Association. (I) 
+10.7.1i In case of encryption, standardised ciphering algorithms shall be used. (M) 
+10.7.2 Deleted. 
+10.7.3 Mobiles shall be capable of operation using algorithms for all countries in which they 
+need to roam. (M) 
+10.7.4 Authentication. Each railway is free to implement its own authentication algorithms 
+without any resulting loss in cross-border interoperability. (I)  
+PSA167D006-15   Page 111
+  
+11.1 Introduction 
+11.1.1 There is a requirement to be able to address communications to a ‘functional number’ 
+rather than a more permanent subscriber number. Such numbers are generally only 
+associated with a user for a limited period of time. (I) 
+11.1.2 This is an important issue which will affect interoperability and the ability to use 
+public network services. There are specific features of individual railways which make 
+it difficult to develop a concise and universally acceptable system within GSM. (I) 
+11.1.3 To accommodate the different requirements of the individual railways, the following 
+approach has been adopted: (I) 
+- all responsibility for handling addressing lies with the network infrastructure and 
+other ground based equipment, rather than additional functionality in the mobile; 
+- each railway will be responsible for implementing addressing schemes which best 
+meet its needs; 
+- national addressing schemes are to use the internationally standardised ground-
+train protocol, based on a single standardised GSM service, for exchanging 
+information between the ground and mobiles. 
+11.2 Ground-train addressing 
+11.2.1 The ground-train addressing can be divided into two areas: (I) 
+- functional addressing of mobile users; 
+- location dependent addressing of fixed network users. 
+11.2.2 The first is related to passing information to provide an association between a mobile’s 
+subscriber number and its functional number. The latter is concerned with ensuring 
+that calls from a mobile terminal (in particular, Cab radios) are routed to the correct 
+destination (ie primary controller, secondary controller), based on the current location 
+of the mobile. (I) 
+11.2.3 The numbering plan to be used with functional addressing shall be in accordance with 
+the numbering plan given in section 9. (M) 
+11.3 Functional numbering 
+General 
+11.3.1 Functional numbering provides the mechanism by which a mobile terminal, or an item 
+of equipment connected to a mobile terminal, can be addressed by a number 
+identifying the function for which it is being used. (I) 11 Functional numbering and location dependent addressing 
+Page 112  PSA167D006-15 
+  
+ 
+11.3.2 Mobile access to the functional numbering scheme for registration, deregistration and 
+re-registration shall apply the USSD messages and protocols over the air interface as 
+specified in the GSM Follow-me service. (M) 
+11.3.3 The implementation of functional numbering at a network level is left open for 
+national railways subject to the requirements for interconnecting EIRENE networks 
+identified in section 11.6. (I) 
+11.3.4 Further information may be obtained from [MORANE SSRS, MORANE FA FFFS, MORANE FA 
+FIS]. (I) 
+Functional number management 
+11.3.5 For communication over the (Um) air interface, the USSD messages and protocols as 
+specified in the GSM Follow-me service shall be used to manage the following types of 
+functional numbers: (M) 
+- Train number; 
+- Engine number; 
+- Coach number; 
+- Shunting team number; 
+- Maintenance team number. 
+11.3.6 It shall be possible to limit user access to functional number registration and 
+deregistration facilities based on each of the types of functional number identified in 
+11.3.5. (M) 
+11.3.7 Mobile stations shall use the following sequences for the control of the functional 
+number management: (M) 
+ 
+Procedure Sequence 
+Interrogation *#214*SI***# 
+Registration **214*SI***# 
+Deregistration ##214*SI***# 
+Re-registration  
+Definition in section 
+11.3.14 **214*SI***# followed by ##214*SI***# 
+Forced De-registration ##214*SI*88*MSISDN*# 
+Where SI Supplementary Information represents the  International Functional Number 
+(also called the International EIRENE Number), as defined in section 9.6.3. 
+Note: This table is for information only. The Follow Me service control sequences are 
+based on the USSD specified in [EN 301 515, Index [15]]. 
+ 
+PSA167D006-15   Page 113 
+  
+11 Functional numbering and location dependent addressing 
+11.3.8 The network operator shall implement the required functionality to validate the 
+information exchanged between the mobile and network on registration and 
+deregistration. (M) 
+11.3.8i Functionality shall be provided by the system for the operator management of 
+Functional Numbers, including the removal of the relationship between Functional 
+Numbers and MSISDN Numbers. (M) 
+11.3.8.ii The use of the forced de-registration mechanism (without notification) to achieve this 
+requirement is acceptable. (I) 
+11.3.8iii The system shall require manual confirmation prior to the removal of the relationship 
+between Engine Number and MSISDN Number. (M) 
+Registration 
+11.3.9 The result of the registration procedure shall be sent back to the mobile. In the event of 
+a failure, an indication of the cause shall be provided. Information on the outcome shall 
+be provided to the mobile according to [EN 301 515, Index [17]] and [EN 301 515, Index [34]]. 
+(M) 
+11.3.9i In the event of a registration procedure failing owing to the functional number already 
+being registered to another mobile, the Cab radio shall be capable of providing the user 
+with the ability to perform automatically the forced de-registration of the previously 
+registered mobile and the registration of this functional number to the user’s mobile. 
+This shall result in the following sequence of actions being performed by the user’s 
+Cab radio (see 11.3.7 for details of message structure): (M) 
+1. Send interrogation message (from mobile to network). 
+2. Receive MSISDN (from network to mobile). 
+3. Send a forced de-registration message (from mobile to network). 
+4. Receive the answer (from network to mobile). 
+5. Send a registration message (from mobile to network). 
+6. Receive the answer (from network to mobile). 
+7. Inform the user whether the registration of the functional number to the user’s 
+mobile was successful (performed by the mobile). 
+11.3.9ii The functionality described in 11.3.9i should also be available for other types of 
+mobiles. (O) 
+11.3.9iii In the cases described in 11.3.9i and 11.3.9ii, national rules may dictate that, prior to or 
+instead of performing the sequence described in 11.3.9i steps 1-7, the user shall 
+perform a specified action (e.g. call a dispatcher in the case of drivers). (I) 
+11.3.9iv The sequence described in 11.3.9i steps 1-7 may be interrupted or may require 
+additional user action such as a confirmation. (I) 
+Page 114  PSA167D006-15 
+  
+ 
+Deregistration 
+11.3.10 Deregistration shall only be performed by the subscription identified by the MSISDN 
+number which is associated with the functional number. (M) 
+11.3.11 Deleted. 
+11.3.12 The result of the deregistration procedure shall be sent back to the mobile. In the event 
+of a failure, an indication of the cause shall be provided. Information on the outcome 
+shall be provided to the mobile according to [EN 301 515, Index [17]] and [EN 301 515, Index 
+[34]]. (M) 
+Re-registration 
+11.3.13 Re-registration consists of a registration procedure followed by a deregistration 
+procedure. (I) 
+11.3.14 Re-registration of on-train functional numbers based on the train number shall be 
+performed every time a train leaves one EIRENE network and enters into another 
+EIRENE network. (M) 
+11.3.15 Deregistration of a functional number shall not be carried out until registration of the 
+functional number has been carried out and confirmed as being successful. (M) 
+11.3.16 Each railway should define a suitable time-out interval to be applied as part of the 
+deregistration procedure for on-train functional numbers. (O) 
+Functional numbering network interworking 
+11.3.17 The exchange of information between EIRENE networks is handled by the GMSCs and 
+shall use the standardised protocol as detailed in section 11.6. (M) 
+11.4 Re-establishment of functional number correlation 
+11.4.1 In the event of losing correlation between functional numbers and MSISDNs, provision 
+for recovery from such a situation shall be made. (M) 
+11.4.2 Each national railway is responsible for implementing a suitable recovery mechanism 
+and ensuring that the use of unverified functional numbers is prevented. (I) 
+11.4.3 Deleted. 
+11.4.4 Deleted. 
+11.4.5 Deleted. 
+PSA167D006-15   Page 115 
+  
+11 Functional numbering and location dependent addressing 
+11.5 Presentation of functional identities 
+11.5.1 The called party functional identity shall be presented to the user initiating a call and 
+the calling party functional identity shall be presented to the user receiving a call. (M) 
+11.5.2 The calling party functional number shall be passed to the receiving mobile using the 
+User to User Signalling supplementary service (UUS1) during call setup. (M) 
+11.5.3 If the calling party functional number is not available or if the calling party is not 
+registered then the CLI of the calling party shall be displayed on the receiving mobile's 
+display. (M) 
+11.5.4 The user-to-user information element in the SETUP, ALERT or CONNECT messages, 
+as defined in [EN 301 515, Index [16]], shall be used to transfer the functional number of the 
+calling party to the called party. (M) 
+11.5.5 The user-to-user information element shall use the following format: (M) 
+ 
+8 7 6 5 4 3 2 1 Octet  
+ User-User Information Element Identifier 1 
+Length of User-User contents 2 
+User-User protocol discriminator 
+0 0 0 0 0 0 0 0 3 
+Tag defines presentation of Functional Identity 
+0 0 0 0 0 1 0 1 4  
+ 
+Binary 
+Length of Numeric FN 5  
+Numeric FN 
+Digit 2 Digit 1 6 
+Digit m Digit m-1 n  
+BCD 
+11.5.6 If no valid functional number is available, a fixed length User-to-User Information 
+Element shall be used with the following format: (M) 
+ 
+Page 116  PSA167D006-15 
+  
+ 
+8 7 6 5 4 3 2 1 Octet  
+ User-User Information Element Identifier 1 
+Length of User-User contents 
+0 0 0 0 0 0 1 1 2 
+User-User protocol discriminator 
+0 0 0 0 0 0 0 0 3 
+Tag defines presentation of Functional Identity 
+0 0 0 0 0 1 0 1 4  
+ 
+Binary 
+Functional number 
+0 0 0 0 0 0 0 0 5 BCD 
+11.5.7 Further information may be obtained from [MORANE PFN FFFS, MORANE PFN FIS]. (I) 
+11.6 Inter EIRENE network interfacing 
+11.6.1 Interconnection of EIRENE networks is required to allow international call routing. It 
+is not envisaged that any routing database information is exchanged between EIRENE 
+networks. (I) 
+11.6.2 The interconnection of EIRENE networks should take place by interconnecting GMSCs. 
+(O) 
+11.6.3 The protocol used for routing of calls shall be Signalling System No 7 (SS7) as defined 
+by the ITU-T. The signalling system suite shall include the Mobile Application Part 
+(MAP). (M). 
+11.6.4 Call setup between EIRENE networks using international functional numbers shall be 
+based on the combination of the Breakout-Code (BC) and International Code (IC) as 
+specified in section 9. (M). 
+11.6.5 The Country Code (CC) followed by the National Significant Number NSN (as 
+specified in ITU-T E.164, Chapter 6.2) shall be used as the Global Title, which forms 
+part of the Signalling Connection Control Part (SCCP) protocol messages and is used 
+for inter-network routing of messages. (M) 
+11.7 Location dependent addressing 
+General 
+11.7.1 Location dependent addressing may be provided in the following ways: 
+a) cell dependent routing; (M) 
+b) using location information from external sources. (O)  
+PSA167D006-15   Page 117 
+  
+11 Functional numbering and location dependent addressing 
+Cell dependent routing 
+11.7.2 As a minimum, call routing using location dependent addressing shall be based on the 
+use of short codes in conjunction with cell dependent routing. (M) 
+11.7.3 Further information on cell dependent routing for location dependent addressing may 
+be obtained from [MORANE SSRS] [MORANE LDA FFFS] [MORANE LDA FIS]. (I) 
+Location information from external sources 
+11.7.4 Location information may be provided by systems external to the radio system, for 
+example ground-based systems such as track circuits. (I) 
+11.7.5 If a more accurate way of location determination is used, then position information 
+shall be provided to the radio system which shall be used to associate the short code 
+with the correct called party subscriber number. (M) 
+11.7.6 If implemented, the use of location information from train-based systems external to 
+the radio system shall comply with the requirements stated in the enhanced Location 
+Dependent Addressing FRS and IRS [eLDA FRS and eLDA IRS]. (M) 
+11.8 Calls from external networks to the EIRENE network 
+11.8.1 Facilities shall be provided to prevent unauthorised calls to mobiles either by 
+functional number or MSISDN number from outside the EIRENE network. (M) 
+ 
+Page 118  PSA167D006-15 
+  
+ 
+ 
+ 
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 119
+  
+12.1 Introduction 
+12.1.1 There is no requirement for an internationally standardised pre-defined messaging 
+application. However, it is anticipated that individual national railways may have a 
+requirement for pre-defined messages, in which case the application will be specified 
+as part of individual national procurements. (I) 
+12.2 System requirements 
+12.2.1 Where text messaging is implemented in the network, the Short Message Service (SMS) 
+shall be used. (M) 12 Text messaging 
+Page 120  PSA167D006-15 
+  
+ 
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 121
+  
+13.1 Introduction 
+13.1.1 This section covers the use of the EIRENE radio system for Railway emergency calls. 
+The section also discusses the facility for confirmation of such emergency calls and the 
+storage of confirmation for post-incident analysis. (I) 
+13.1.2 A Railway emergency call is a high priority call for informing drivers, controllers and 
+other concerned personnel of a level of danger requiring all Railway movements in a 
+pre-defined area to stop. Two types of Railway emergency calls are defined: (I) 
+- Train emergency calls (for Railway emergencies whilst not involved in Shunting 
+operations); 
+- Shunting emergency calls (for Railway emergencies whilst involved in Shunting 
+operations). 
+13.1.3 This section describes the handling of high priority voice calls for Railway operational 
+emergencies and does not cover public emergency calls (ie handling of ‘112’ calls). (I) 
+13.2 Provision of Railway emergency calls 
+13.2.1 Railway emergency calls are defined as those calls of ‘Railway emergency’ priority (see 
+section 10) which are routed to a pre-defined user or group of users due to a railway 
+operational emergency. (I) 
+13.2.2 All Railway emergency calls shall be implemented using GSM VGCS (Specifications 
+[EN 301 515, Index [21] & [4]]). (M) 
+13.2.3 It shall be possible to configure Railway emergency group call areas to contain 
+combinations of cells controlled by one or more MSC(s) within one or more network(s). 
+(M) 
+13.2.4 Where Railway emergency group call areas are controlled by more than one MSC 
+within one or more network(s), a unique anchor MSC is defined for each group call 
+area. (I) 
+13.2.5 For international Railway emergency calls, in order to minimise call set-up times, it is 
+recommended that the anchor MSC always directly controls the cell where the Railway 
+emergency call was originated. (I) 
+13.3 Initiation of Railway emergency calls 
+13.3.1 A Railway emergency call shall be initiated by using the appropriate function code for 
+the required type of Railway emergency call (see Table 9-8). (M) 13 Railway emergency calls 
+Page 122  PSA167D006-15 
+  
+ 
+13.3.2 The call area and list of train controllers for each emergency group call will be fixed in 
+the Group Call Register (GCR) of the anchor MSC. (I) 
+13.3.3 The Railway emergency group IDs required for interoperability are defined in section 
+9.5. The composition of each group is a matter for national implementation, although 
+all areas shall have a group defined for all mandated Group IDs. (M) 
+13.4 Receipt of Railway emergency calls 
+13.4.1 Each mobile shall store a list of emergency Group IDs in the SIM appropriate to its 
+function (the Cab radio will store Group ID 299 and 599 - see table 9-8). (M)  
+13.4.2 All Railway emergency group IDs required for interoperability and appropriate to the 
+operation of the mobile shall maintain active status whilst the mobile is powered up. 
+(M) 
+13.4.3 The fixed network user will only receive emergency voice calls if designated a 
+dispatcher or group member in any of the calls defined in the GSM GCR. (I) 
+13.4.4 On receipt of a Railway emergency call, the controller’s display should indicate the 
+location of the train. (O) 
+13.4.5 If the requirement in 13.4.4 is implemented, as a minimum the location information 
+shall be provided by the GSM network (eg current cell or base station serving the 
+mobile). (M) 
+13.4.6 The mechanism for transferring the functional number of the originating mobile to 
+controllers is defined in [EN 301 515, Index [6], Release 4] using the Information Element 
+“Compressed OTDI” in the Immediate Setup 2 message from the originating mobile. 
+(I) 
+13.4.7 If the GSM Release 99 capability and the Immediate Setup 2 feature defined in [EN 301 
+515, Index [6], Release 4] are supported by the network, the network shall set the MSC 
+Release bit in the “Control Channel Description” information element to “1”. 
+Otherwise, the MSC Release bit in the “Control Channel Description” information 
+element shall be set to “0” (zero) [EN 301 515, Index [41]]. (M) 
+13.5 Confirmation of Railway emergency calls 
+13.5.1 For post-incident analysis it is important that the initiation and receipt of Railway 
+emergency calls by mobiles is confirmed by a message sent to a ground-based location 
+(and also registered in the train borne recorder, in cases where a train borne recorder is 
+connected to the Cab radio). (I) 
+PSA167D006-15   Page 123 
+  
+13 Railway emergency calls 
+13.5.2 Not all calls require confirmation. The application must be able to deduce that a 
+confirmation is necessary from the call priority, as all calls of ‘Railway emergency’ 
+priority must be confirmed. (M) 
+13.5.3 Confirmation of Railway emergency calls shall be implemented using the User to User 
+Signalling supplementary service (UUS1). (M) 
+13.5.4 After clear down of the Railway Emergency call, the mobile application shall start the 
+confirmation process by automatically originating a call. In order to avoid network 
+congestion the call set up shall be delayed by a random offset. (M) 
+13.5.5 Railway Emergency call confirmation messages shall be of eMLPP priority 4 - 
+“Railway information and all other calls” (see section 10.2). (M) 
+13.5.6 The user information contained in the confirmation message shall be: (M) 
+- Cab radio: the engine number or train number (if registered); 
+- other mobiles: the user’s functional number (if registered). 
+13.5.7 Confirmation messages shall be sent to a confirmation centre using a defined short 
+code (see table 9-10), which shall be associated with the GSM network. (M) 
+13.5.8 In the case of Cab radio, details of the confirmation shall be passed to the train borne 
+recorder if a train borne recorder is connected to the Cab radio. (M) 
+13.5.9 The user-to-user information elements in the following messages, as defined in [EN 301 
+515, Index [16]], shall be used for the confirmation of high priority calls: (M) 
+- SETUP: transfer of confirmation message to confirmation centre; 
+- RELEASE COMPLETE: acknowledgement of the confirmation message. 
+13.5.10 The SETUP and RELEASE COMPLETE user-to-user information element shall be as 
+specified in the [MORANE UUIE]. (M) 
+13.5.10i Confirmation centres shall be capable of decoding messages in either format A or B. 
+(M) 
+13.5.11 Deleted. 
+13.5.12 Deleted. 
+ 
+Page 124  PSA167D006-15 
+  
+ 
+PAGE LEFT INTENTIONALLY BLANK 
+PSA167D006-15   Page 125
+  
+14.1 Introduction 
+14.1.1 The purpose of shunting mode is to provide an effective means of communication to a 
+group of personnel who are involved with a shunting operation. (I) 
+14.1.2 The shunting group may comprise a shunting leader, a shunting driver, a controller 
+and up to three additional personnel (the shunting members). (I) 
+14.1.3 Further information about shunting mode may be obtained from [MORANE SM FFFIS]. (I) 
+14.2 System requirements: Operational Radio 
+Enter shunting mode 
+14.2.1 On entering shunting mode, the operational radio shall determine if any shunting 
+group ID is already activated on the SIM. (M) 
+14.2.2 If a shunting group ID is activated, the operational radio shall proceed to re-establish 
+the group call. (M) 
+14.2.3 If no shunting group ID is activated, the operational radio shall initiate a “regular 
+shunting mode ON” procedure as detailed in table 14-1. (M) 
+ 
+User Action Application action 
+Select shunting mode. 
+Dial area ID (5 digits) Store area ID in non-volatile memory. 
+ Display selection list: 
+- leader; 
+- member; 
+- exit (leave shunting mode). 
+ 
+ Activate group ID 500 (Common Shunting Group)*. 
+Activate group ID 599 (Shunting Emergency)*. 
+De-activate train emergency. 
+Assign emergency button to shunting emergency 
+number. 
+ Join the Common Shunting Group call (ID 500). 
+* “Activate group ID” means to activate voice group call reception on the mobile for these groups. 
+Table 14-1: Operational radio “regular shunting mode ON” procedure 14 Shunting mode 
+Page 126  PSA167D006-15 
+  
+ 
+14.2.4 After the “regular shunting mode ON” procedure has been completed, the procedures 
+shown in table 14-2 and 14-3 shall be used to register the shunting leader and shunting 
+members to a dedicated group call. (M) 
+ 
+User Action Application action 
+Select <leader>. 
+Enter shunting group number (2 digits). 
+Enter number of shunting members. Register functional number of shunting leader for 
+the selected group number.  
+Store group number and leader function code in 
+non-volatile memory. 
+Register spare numbers. 
+Tell shunting members to dial the group 
+number and member number using the 
+Common Shunting Group (ID 500).  
+ Display selection list: 
+- ID 500; 
+- ID 5<Group number>; 
+- exit (leave shunting mode). 
+ 
+Enter the appropriate group ID. Activate the selected group ID and set up the 
+dedicated group call. 
+Table 14-2: Operational radio dedicated group call registration procedure for the shunting leader 
+ 
+ 
+User Action Application action 
+Select <member>. 
+ Wait for information (via the Common Shunting 
+Group) to determine which dedicated shunting 
+Group to switch to. 
+Enter member number (1 digit). 
+Enter shunting group number (2 digits). 
+ Register to the related functional number. 
+If unsuccessful, indicate this to the user and 
+remain in the Common Shunting Group. Allow 
+repetition. 
+ If successful, store the group number plus the 
+member number in non-volatile memory. 
+De-activate ID 500. 
+Activate dedicated group ID and join the group 
+call. 
+Table 14-3: Operational radio dedicated group call registration procedure for shunting members 
+ 
+PSA167D006-15   Page 127 
+  
+14 Shunting mode 
+Leave shunting mode 
+14.2.5 Two possibilities shall be available to the shunting leader when leaving shunting 
+mode: (M) 
+- Release group call: the shunting leader and all other shunting members leave the 
+dedicated group call and all members of the group are deregistered. The procedure 
+that shall be used to release the group call is shown in table 14-4. 
+  
+User Action Application action 
+Inform all members to deregister their 
+member functional numbers before 
+releasing the call. 
+Select <release>. Release dedicated group call. 
+ Deactivate all active shunting group IDs excluding 
+ID 599 (Shunting Emergency). 
+Deregister as leader. 
+Activate train emergency group ID. 
+Assign emergency button to train emergency 
+number. 
+Deactivate shunting group ID 599 (Shunting 
+Emergency). 
+Table 14-4: Operational radio shunting leader “Release group call” procedure 
+ 
+- Maintain group call: the shunting leader leaves the dedicated group call 
+momentarily for the purposes of conducting other communications. The leader 
+may then rejoin the group when ready. In the meantime, all other shunting team 
+members remain active within the dedicated group call. The operational radio 
+procedure that shall be used to maintain the group call is shown in table 14-5. 
+ 
+User Action Application action 
+Select <maintain>. Maintain dedicated group call. 
+ Deactivate all active shunting group IDs excluding 
+ID 599 (Shunting Emergency). 
+Activate train emergency group ID. 
+Assign emergency button to train emergency 
+number. 
+Deactivate shunting group ID 599 (Shunting 
+Emergency). 
+Table 14-5: Operational radio shunting leader “Maintain group call” procedure 
+14.2.6 On leaving shunting mode, the Operational radios of shunting members shall follow 
+the procedure shown in table 14-6. (M) 
+Page 128  PSA167D006-15 
+  
+ 
+User Action Application action 
+Leave shunting mode. Deactivate all active shunting group IDs excluding 
+ID 599 (Shunting Emergency). 
+Deregister as member. 
+Activate train emergency Group ID. 
+Assign emergency button to train emergency 
+number. 
+Deactivate shunting group ID 599 (Shunting 
+Emergency). 
+Table 14-6: Operational radio shunting member “Leave shunting mode” procedure 
+14.3 System requirements: Cab radio 
+Enter shunting mode 
+14.3.1 On entering shunting mode, the Cab radio shall determine if any shunting group ID is 
+already activated on the SIM. (M) 
+14.3.2 If a shunting group ID is activated, the Cab radio shall proceed to re-establish the 
+group call. (M) 
+14.3.3 If no shunting group ID is activated, the Cab radio shall initiate a “regular shunting 
+mode ON” procedure as shown in table 14-7. (M) 
+ 
+User Action Application action 
+Select shunting mode. 
+Dial area ID (5 digits). Store area ID in non-volatile memory. 
+ Activate group ID 500 (Common Shunting Group). 
+Activate group ID 599 (Shunting Emergency). 
+De-activate train emergency and assign emergency 
+button to shunting emergency number. 
+ Join the Common Shunting Group call (ID 500). 
+Wait for information (via Common 
+Shunting Group) regarding which 
+dedicated group call to switch to. 
+Dial shunting group number (2 digits). Register to the related Functional number. 
+If unsuccessful, indicate this to the user and remain in 
+the Common Shunting Group. Allow repetition. 
+ If successful, deactivate group ID 500. 
+Activate dedicated group ID and join the group call. 
+Table 14-7: Cab radio “regular shunting mode ON” procedure 
+PSA167D006-15   Page 129 
+  
+14 Shunting mode 
+Leave shunting mode 
+14.3.4 The Cab radio shall exit shunting mode by means of the “Leave shunting mode” 
+procedure as defined in table 14-8. (M) 
+ 
+User Action Application action 
+Leave shunting mode Deactivate all active shunting group IDs excluding 
+ID 599 (Shunting Emergency). 
+Deregister as driver. 
+Activate train emergency group ID. 
+Assign emergency button to train emergency 
+number. 
+Deactivate shunting group ID 599 (Shunting 
+Emergency). 
+Table 14-8: Cab radio “Leave shunting mode” procedure 
+14.4 System requirements: Operational radio and Cab radio 
+14.4.1 On entering shunting mode, the terminal shall initially select the common shunting 
+group. (M) 
+14.4.2 The common shunting group provides a point of contact for leaders and team 
+members to set up a dedicated shunting group call for their shunting operation. (I) 
+14.4.3 The terminal application shall prevent members of a dedicated shunting team from 
+initiating a new call (unless they are registered as shunting team leader and have left 
+shunting mode using the “maintain group call” function described in 14.2.4). (M) 
+14.4.4 Deleted. 
+14.5 Numbering plan 
+14.5.1 The full numbering plan for shunting mode group calls is defined in subsection 9.9. (I) 
+14.5.2 Valid group IDs shall be as defined in table 14-9. (M) 
+ 
+ 
+ 
+ 
+Page 130  PSA167D006-15 
+  
+ 
+ 
+Quantity Name Usage Group ID 
+1 Common Shunting Group Common initiation 500 
+20 Dedicated Shunting Group Normal shunting 501-520 
+1 Emergency Shunting Group Emergency (for the whole area) 599 
+Table 14-9: Valid Group IDs 
+14.6 Control of shunting group membership 
+14.6.1 Users shall be prevented from joining a dedicated shunting group by the EIRENE 
+terminal application unless a valid functional number for the group has been 
+successfully registered to the GSM-R network by their terminal. (M) 
+14.6.2 Deleted. 
+14.6.3 Deleted. 
+14.7 Link assurance signal 
+14.7.1 Deleted. 
+14.7.2 The link assurance tone shall be of the form specified in subsection 14.4.2 of the [EIRENE 
+FRS]. (M) 
+14.7.3 The mechanism for the generation of the link assurance signal shall be as specified in 
+[MORANE SM FFFIS]. (M) 
+14.7.4 Deleted. 
+14.7.5 The mechanism for the deactivation of the link assurance signal shall be as specified in 
+[MORANE SM FFFIS]. (M) 
+ 
+PSA167D006-15   Page 131
+  
+15.1 Introduction 
+15.1.1 The operational requirement for direct mode is to: (I) 
+1) provide short range fall-back communications between train drivers and 
+trackside personnel in the event of failure of all railway and/or public GSM 
+services normally available; 
+2) provide short range communications for railway personnel operating in remote 
+areas where no GSM facilities are available. 
+15.2 System requirements 
+15.2.1 Implementation of direct mode is optional. However, where implemented, the 
+following requirements shall be mandatory. (I) 
+15.2.2 Frequency modulated equipment conforming to [ETS 300 086] shall be used for direct 
+mode. (M) 
+15.2.3 Direct mode equipment shall have a maximum transmit power of 1 Watt. (M) 
+15.2.4 Direct mode equipment sensitivity shall be at least –107dBm. (M) 
+Frequency range and mode of operation 
+15.2.5 Direct mode equipment shall be capable of operation in the channels defined in table 
+15-1. (M)  
+ 
+Channel Frequency 
+1 876.0125 MHz 
+2 876.0250 MHz 
+3 876.0375 MHz 
+4 876.0500 MHz 
+5 876.0625 MHz 
+Table 15-1: Direct mode channel frequencies according to [ECC(02)05] 
+15.2.6 Direct mode shall operate in simplex mode, a radio link that uses a single frequency for 
+alternate transmission and reception. (M) 
+15.2.7 Voice transmission from direct mode equipment shall be possible only when the Push-
+To-Talk (PTT) button is pressed. (M) 15 Direct mode 
+Page 132  PSA167D006-15 
+  
+ 
+CTCSS 
+15.2.8 Continuous Tone Coded Squelch Systems (CTCSS) shall be implemented on all direct 
+mode equipment. (M) 
+15.2.9 The CTCSS tone shall be at a frequency of 203.5 Hz. (M) 
+15.2.10 The CTCSS modulation shall be within the limits defined in table 15-2. (M) 
+ 
+System 
+Channel Spacing kHz Angle 
+Peak Deviation ± Hz 
+12.5 200 to 400 
+Table 15-2: CTCSS modulation limits 
+Direct mode common access channel 
+15.2.11 The purpose of the common access channel is to provide a point of contact and 
+information for all direct mode users. For example, if one direct mode user wished to 
+initiate contact with another user, communication would begin with a request for the 
+desired partner on the access channel. After receiving a reply, both parties may transfer 
+to a free direct mode channel and continue. (I)  
+15.2.12 Direct mode channel 1 (876.0125 MHz) shall serve as the common access channel. (M) 
+15.2.13 Equipment should default to operation on the common access channel (direct mode 
+channel 1) on entry into direct mode. (O) 
+Direct mode interaction with GSM-R 
+15.2.14 Direct mode communications will only be used in the event of normal GSM-R services 
+being unavailable. (I) 
+15.2.15 The presence of the GSM-R network shall be indicated to direct mode users. (M) 
+15.2.16 All terminals shall ensure that when GSM-R services are available, the user is 
+prevented from entering direct mode. (M)  
+15.2.17 In the event of GSM-R causing disruption to ongoing direct mode communications, 
+each railway will define a protocol for re-establishing contact by means of GSM-R. (I) 
+Shunting link assurance signal 
+15.2.18 All direct mode equipment shall provide the facility to broadcast an in-band audio 
+shunting link assurance signal as defined in subsection 14.4.2 of the [EIRENE FRS]. (M) 
+PSA167D006-15   Page 133
+  
+A.1 List of normative references 
+ 
+Specification Title 
+EIRENE FRS ‘UIC Project EIRENE Functional Requirements Specification’, PSA167D005-7 
+MORANE 
+EURO FFFIS ‘Radio Transmission FFFIS for Euroradio’, MORANE A 11 T 6001 12 
+MORANE 
+ASCI OPTIONS ‘ASCI Options for Interoperability’, MORANE A 01 T 0004 1 
+MORANE 
+CHPC FFFS ‘FFFS for Confirmation of High Priority Calls’, MORANE F 10 T 6002 3 
+MORANE 
+CHPC FIS ‘FIS for Confirmation of High Priority Calls’, MORANE F 12 T 6002 3 
+MORANE FA 
+FFFS ‘FFFS for Functional Addressing’, MORANE E 10 T 6001 3 
+MORANE FA 
+FIS ‘FIS for Functional Addressing’, MORANE E 12 T 6001 4 
+MORANE LDA 
+FFFS ‘FFFS for Location Dependent Addressing’, MORANE F 10 T6001 3 
+MORANE LDA 
+FIS ‘FIS for Location Dependent Addressing’, MORANE F 12 T6001 2 
+MORANE PFN 
+FFFS FFFS for Presentation of Functional Numbers to Called and Calling Parties’, MORANE F 
+10 T 6003 3 
+MORANE PFN 
+FIS ‘FIS for Presentation of Functional Numbers to Called and Calling Parties’, MORANE F 
+12 T 6003 3 
+MORANE SIM ‘FFFIS for GSM-R SIM Cards’. MORANE P 38 T 9001 3  
+MORANE 
+UUIE ‘Specification on Usage of the UUIE in the GSM-R environment’, MORANE H 22 T 0001 
+2 
+ A References 
+Page 134  PSA167D006-15 
+  
+ 
+ 
+Specification Title 
+EN 301 515 ETSI EN 301 515 v2.3.0, “Global System for Mobile Communication (GSM); 
+Requirements for GSM operation on railways”, Indexes [1] to [36] inclusive plus all of 
+the changes identified in the ETSI TR 102 281, “Detailed requirements for GSM operation 
+on railways”. ETSI TR 102 281 v1.0.0 remains applicable until superseded by the formal 
+publication of the first subsequent version currently identified as version 1.2.0. 
+EN 45001 ‘General criteria for the operation of testing laboratories’ 
+EN 50081 ‘Electromagnetic compatibility – Generic emission standard’ 
+EN 50140 ‘Radiated radio frequency electromagnetic field immunity tests’ 
+EN 50153 ‘Railway applications – Rolling stock – Protective provisions relating to electrical 
+hazards’ 
+EN 60950 Safety of Information Technology equipment 
+EN 61000-4 ‘Electromagnetic compatibility (EMC) – testing and measurement techniques’ 
+ENV 50121 ‘Railway applications – Electromagnetic compatibility’ 
+ETS 300 086 ‘Radio Equipment and Systems, Land Mobile Service, Technical characteristics and test 
+conditions for radio equipment with an internal or external RF connector intended 
+primarily for analogue speech’ 
+IEC 1508 ‘Functional safety: Safety related systems’ 
+IEC 
+529/EN60529 ‘Specification for degrees of protection provided by enclosures (IP code)’ 
+IEC 571 ‘Electronic equipment used on rail vehicles’ 
+IEC 68 ‘Environmental testing’ 
+IEC 721 ‘Classification of environmental conditions’ 
+ISO 9001 ‘Quality systems – Model for quality assurance in design, development, production, 
+installation and servicing’ 
+prEN 50124 ‘Railway applications – Insulation co-ordination’ 
+prEN 50125 ‘Railway applications – Environmental conditions for equipment’ 
+prEN 50129 ‘Railway applications – Safety related electronic railway control and protection systems’ 
+prEN 50155 ‘Railway applications – Electronic equipment used on rolling stock’ 
+prEN 50261 ‘Railway applications – Mounting of electronic equipment’ 
+ 
+PSA167D006-15   Page 135 
+  
+A References 
+A.2 List of informative references 
+ 
+Specification Title 
+1999/569/EC European Commission Decision 1999/569/EC “Commission Decision of 
+28 July 1999 on the basic parameters for the command-and-control and 
+signalling subsystem relating to the trans-European high-speed rail 
+system.” 
+CEPT 25-09 CEPT Recommendation T/R 25-09 E (Chester 1990, revised at Budapest 
+1995), ‘Designation of frequencies in the 900 MHz band for railway 
+purposes’ 
+ECC(02)05 Electronic Communications Committee of the CEPT ECC(02)05 “ECC 
+Decision of 5 July 2002 on the designation and availability of frequency 
+bands for railway purposes in the 876-880 and 921-925 MHz bands”  
+eLDA FRS ‘enhanced Location Dependent Addressing Functional Requirements 
+Specification’, LDA_WG161, v4.0  
+eLDA IRS ‘enhanced Location Dependent Addressing Interface Requirements 
+Specification’, LDA_WG162, v4.0  
+ERTMS COMMS ‘Summary of ERTMS communications requirements’, EEIG document 
+number: 97E7377-v7, 31 July 1998 
+EN 301 515 ETSI EN 301 515 v2.3.0, “Global System for Mobile Communication 
+(GSM); Requirements for GSM operation on railways”, Indexes [37] to 
+[50] inclusive.  
+ITU-T E.164 ‘The international public telecommunication numbering plan’, May 1997 
+MORANE FFFIS MTI ‘FFFIS for Mobile Terminal interface of the EIRENE Mobile Station’, 
+MORANE F 12 T 7003 2 
+MORANE SM FFFIS ‘FFFIS for Shunting Mode’, MORANE I 13/2 T 7001 2 
+MORANE SSRS ‘Sub System Requirements Specification’, MORANE A 04/22 T 6002 3 
+UIC 438-1 ‘Standard numerical marking of hauled passenger stock’, UIC Fiche 438-
+1, 2nd edition, 1 January 1988, one amendment included. 
+UIC 438-3 ‘Identification marking for tractive stock’, UIC Fiche 438-3, 1st edition, 1 
+January 1971, three amendments included. 
+UIC 558-1 ‘Remote control and data cable – Standard technical features for the 
+equipping of RIC coaches’, UIC Fiche 558, 1st edition, 1 January 1996 
+UIC 568-3 ‘Loudspeaker and telephone systems in RIC coaches – Standard 
+technical characteristics’, UIC Fiche 568, 3rd edition, 1 January 1996 
+Page 136  PSA167D006-15 
+  
+ 
+Specification Title 
+UIC 651 ‘Layout of cabs in locomotives, railcars, multiple units and driving 
+trailers’, UIC Fiche 651 (1st Edition), January 1986 
+ 

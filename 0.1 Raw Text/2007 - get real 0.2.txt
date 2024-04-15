@@ -1,0 +1,294 @@
+
+Page i of 10  
+Software Requirements Specification 
+For 
+Get Real Website 
+Version 0.2 
+Prepared by Ken Cone 
+OUS Industry Affairs 
+<7/16/07> 
+Software  Requirements Specification for Get Real Website  
+ Page 1 
+Page 1 of 10 Table of Contents 
+Table of Contents ...................................................................................................................... 1  
+Revision History ......................................................................................................................... 3  
+1. Introduction .......................................................................................................................... 3  
+1.1 Purpose ............................................................................................................................... .......3  
+1.2 Document Conventions .......................................................................................................4  
+1.3 Intended Audience and Reading Suggestions ............................................................4  
+1.4 Project Scope ..........................................................................................................................5  
+1.5 References ............................................................................................................................... .6 
+2. Overall Description ............................................................................................................. 7  
+2.1 Product Perspective ..............................................................................................................7  
+2.2 Produce Features ...................................................................................................................8  
+2.3 User Classes and Characteristics .....................................................................................9  
+2.4 Operating Environment .....................................................................................................12  
+2.5 Design and Implementation Constraints ....................................................................12  
+2.6 User Documentation ...........................................................................................................13  
+2.7 Assumptions and Dependencies ....................................................................................13  
+3. Get Real Pages & Sections ............................................................................................ 13  
+3.1 Exploring College (existing) .............................................................................................13  
+3.2 Jobs & Money (existing) ....................................................................................................13  
+3.3 Real People (existing) ........................................................................................................14  
+3.3.1  Example video “real people” profiles .......................................................................14  
+3.4 Women in Computer Science (existing with new name) .....................................15  
+3.4.1  Other resources for women in computer science ...............................................15  
+3.5 Resources (existing) ...........................................................................................................16  
+3.6 I’m Looking For… (existing) .............................................................................................16  
+3.7 Articles (existing) ................................................................................................................16  
+3.8 High School Courses (new) .............................................................................................17  
+3.9 Search for additional information (new) .....................................................................17  
+3.10  Professional Organizations (new) .............................................................................18  
+3.11  RSS feeds of current CS information (new) ..........................................................18  
+3.12  Ask a Grad or Prof – FAQ (new) ................................................................................18  
+3.13  Consider a CS Minor (new) ..........................................................................................19  
+3.14 ............................................................................................................................... ........................19  
+4. External Interface Requirements ................................................................................ 19  
+4.1 User Interfaces .....................................................................................................................19  
+4.2 Hardware Interfaces ...........................................................................................................19  
+4.3 Software Interfaces ............................................................................................................20  
+4.4 Communications Interfaces .............................................................................................20  
+5. Other Nonfunctional Requirements ........................................................................... 20  
+5.1 Performance Requirements .............................................................................................20  
+5.2 Security Requirements ......................................................................................................21  
+5.3 Software Quality Attributes .............................................................................................21  
+6. Get Real Version 3 Suggestions .................................................................................. 22  
+6.1 Knowledge base ...................................................................................................................22  
+Appendix A: Glossary ............................................................................................................ 22  
+Appendix B: Analysis Models ............................................................................................. 22  
+ 
+ 
+Revision History 
+Name Date Reason For Changes Version 
+Software  Requirements Specification for Get Real Website  
+ Page 2 
+Page 2 of 10     
+    
+ 
+  
+1. Introduction 
+1.1 Purpose  
+The software described in this document is the http://getreal.ous.edu
+ website 
+and associated support pages. Rev1 of  the website was created on or about 
+summer of 2006.  This document describ es requirements for Rev2, summer of 
+2007.  There may be a need for fu ture updates of the website. 
+The scope of the Get Real website is limited to attracting and encouraging 
+Oregon high school students to take coursework leading toward a 
+baccalaureate degree in computer science  (CS) at one of the seven Oregon 
+University System campuses.  
+1.2 Document Conventions 
+There are no standard document requirements for this document.  
+1.3 Intended Audience and Reading Suggestions 
+Primary readers of this document are the web designers contributing to and 
+testing of the Get Real website.  Contributors to this document are me mbers of the Computer Science Task 
+Force subcommittee of ETIC.  The remaining sections of this SRS de scribe the functional requirements for 
+Get Real site. 
+1.4 Project Scope 
+The scope of the Get Real website is to provide a high school teen friendly set 
+of web pages that are easy to navigate and at the same time provides sufficient depth and information abou t careers in computer science.   
+Two potential groups of viewers (students)  exist: 1) students interested in CS 
+seeking more in-depth information abou t a CS career, and 2) college bound 
+students not necessarily interested in CS who might be attracted to a CS career with the right “push” from in formation on the Get Real site.   
+The goal of Get Real is to encour age more Oregon students to choose 
+computer science and related majors, eventually increasing the number of 
+computer science graduates from Oregon universities.   Maintaining a teen friendly site is deem ed of highest importance in order to 
+hold student attention and guide the view er to information that will lead to a 
+decision to pursue a career in CS.  
+Software  Requirements Specification for Get Real Website  
+ Page 3 
+Page 3 of 10 Benefits for using the site should include:  
+• Personal and Career information from a broad spectrum of CS 
+professionals  
+• CS course and other information from OUS campuses  
+• Timely and up to date information that encourages readers to return 
+to the site, may include Q & A  
+• Call to action, and plans for students to follow to prepare for a CS 
+career  
+ Related sites visited by students to ga in career information include: Google, 
+Yahoo, news.myspace.com, engineergirl .org, etc. (need more input from 
+students and from HS counselors) 
+1.5 References 
+For web page development at the Capita l Center, use the local site files for 
+Dreamweaver on ~cn-capctr/share/Get_Real_website/~ Be cautious of others modifying pages on the site.  Always use Dreamweaver check in/out feature. Adhere to CSS and other style conventions established in Get Real version 1.  <List any other documents or Web addresses to which this SRS refers. These may include user interface style guid es, contracts, standards, system 
+requirements specifications, use case  documents, or a vision and scope 
+document. Provide enough information so  that the reader could access a copy 
+of each reference, including title, auth or, version number, date, and source or 
+location.> 
+2. Overall Description 
+2.1 Product Perspective 
+This product is an update of the existing Get Real web site version 1.  The new 
+site will be version 2.  A future versio n 3 may be needed to incorporate ideas 
+learned from version 2. 
+2.2 Produce Features 
+Major features of the Get Real website include the following pages/subsections: 
+(existing pages/sections)  Exploring College Jobs & Money Real People Women in Computing Resources I’m Looking For… Articles  (proposed new pages/sections, need to prototype and prioritize list) 
+High School Courses 
+Software  Requirements Specification for Get Real Website  
+ Page 4 
+Page 4 of 10 Search for additional information 
+Professional Organizations RSS feeds of current CS information Ask an Engineer, Ask a Prof – FAQ Consider a CS minor in other professions Other ideas/page proposals    
+2.3 User Classes and Characteristics 
+Users are typical Oregon high school students, grades 9 to12 in ALL high 
+schools across Oregon.  Two potential groups of viewers (students) exist:  
+1) students interested in CS findin g more concise information about a CS 
+career, and  2) college bound students not necessarily interested in CS who might be attracted to a CS career with the ri ght “push” from information on the 
+Get Real site.  
+  A third group of students might be th ose interested careers as diverse as 
+protein research, weather prediction, neurobotics, medicine, law or other sciences where a CS minor could contribute to a better understanding of data and information.  A “Consider a CS minor” section could provide helpful information.  Oregon High school students from  several schools and classes were 
+interviewed to gain their feedback on version 1 of the Get Real site.  Common themes emerged in the need to change/u pdate overall site graphic design and 
+real people.    
+Students who are not generally interested in CS, suggested graphic design changes, more white space, pictures, and easier to navigate pages.  This group was much less tole rant of the site than the CS folks 
+had been.  They wanted a site that “s poke to them” and felt that if you 
+were not a computer science student,  it had very little to offer.  The 
+suggestion was very strong that the si te be broken into more readable 
+chunks of information.  The term “walls of text” appeared several times.  The need for more visually attracti ve information also was a central 
+theme.  They wanted color, photos, diagrams, charts, etc. to break up 
+the text and make the site attractive.  Many of them commented positively on the spinning globe and satellite menu.    Students who are interested in CS and engineering suggested changes in 
+the Real People, Resources, and Colleges sections.  Most of them spent their time in the college comparison ch art, and in the real people part of 
+the site.  It sounded like they were attracted by the pictures.  Several commented positively on the sections in  each person’s story.  The college 
+comparison chart again scored positive marks. 
+ Changes to version 2 should include desi gn changes to all existing pages to 
+shorten up paragraphs and add bulle ts and charts where possible to 
+Software  Requirements Specification for Get Real Website  
+ Page 5 
+Page 5 of 10 accommodate faster page reading and shorter reader attention span.  One 
+example used on the engineergirl.org si te uses an interactive table menu for 
+more detailed information, leaving the main pages short and to the point. 
+ <Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expert ise, security or privilege levels, 
+educational level, or experience. Describ e the pertinent characteristics of each 
+user class. Certain requirements may pertain only to certain user classes. Distinguish the favored user classes from those who are less important to 
+satisfy.> 
+2.4 Operating Environment 
+The Get Real site runs as an extension of the OUS site e.g. ~getreal.ous.edu~  
+Being part of the OUS domain will maximize Google and other search engine hits.  The site runs on OSU servers. 
+2.5 Design and Implementation Constraints 
+Constraints for the website include: 
+ Space  Bandwidth for video streaming  Limited availability of Chancellor’s Office resources 
+2.6 User Documentation 
+There are no user documents. 
+2.7 Assumptions and Dependencies 
+There are no development assumptions or dependencies. 
+3. Get Real Pages & Sections 
+This section provides more detaile d information about each web page. 
+3.1 Exploring College (existing) 
+A listing of the computer science offe rings from Oregon university System 
+campuses and other Oregon colleges. >Need to determine extent of communi ty and private colleges in Oregon 
+3.2 Jobs & Money (existing) 
+Offers answers to the questions: “how  can I contribute to society and how 
+much money can I make with a computer science degree?” 
+Software  Requirements Specification for Get Real Website  
+ Page 6 
+Page 6 of 10 3.3 Real People (existing) 
+A people section outlining recent CS graduates and more experienced 
+professionals in CS  and related careers.   A key point is to show real people 
+using their CS knowledge in diverse fiel ds, and not cooped up in a cubicle. 
+Students are interested in two groups of professionals, recent grads, and 
+experienced professionals.  The use of video or audio could help convey a personal message that could “push” some students to pursue a CS degree.  >see examples from UW CS videos   
+3.3.1  Example video “real people” profiles  
+Computer science students and young pr ofessionals are presented here: “a day 
+in the life of”  “power to change the wo rld” and Pathways in computer science” 
+http://www.cs.washington.edu/education /ugrad/prospective/download.html
+ 
+>reviewers of this document should revi ew these videos – click link above then 
+“Video Downloads Available”  These profiles convey clear messages of CS majors using their degrees in a variety of diverse careers. 
+3.4 Women in Computer Science (existing with new name)  
+The intent is to profile women comput er scientists and engineers as people 
+who work every day to solve problems and make the world a better, cleaner, safer place.    “These women are also actively involved  in their communities, raising families, 
+and enjoying all kinds of sports and hobbies.”   www.engineergirl.org
+ is an 
+example of youth oriented site that shows women in exciting engineering 
+careers and has good use of white space on the pages.   
+3.4.1  Other resources for women in computer science 
+WICS UO, www.cs.uoregon.edu/groups/wics/
+  
+ 
+www.cis.upenn.edu/acg/wicarch.html   this site lists a resource for those 
+wishing to contact women in computer architecture.  Get Real might use a 
+similar list for girls interested in contacting recent grads or women CS professionals. 
+3.5 Resources (existing)  
+Explore a wide range of pre-college tec hnology programs and courses for high 
+school students. 
+3.6 I’m Looking For… (existing) 
+A list of focused questions and answers wi th links inside the Get Real site.  
+topics include: money, people, and colleges. 
+Software  Requirements Specification for Get Real Website  
+ Page 7 
+Page 7 of 10 3.7 Articles (existing) 
+A list of articles outside the Get Real si te including “50 best jobs in America, 
+Dream Jobs 2007, etc. 
+3.8 High School Courses (new)   
+The intent of this section is to show  recommended curricula for high school 
+students interested in CS and related careers.  This page should provide 
+pointers to curricula recommendations from OUS campuses and other university sources. The ACM has recommended  curricula for HS CS students.    
+>UO is working on this area, no other campus has recommended HS courses 
+3.9 Search for additional information (new)  
+At least two kinds of searches are needed , 1) internal search of the Get Real 
+site, and 2) external search of CS rela ted outside sites such as OUS campuses, 
+articles on CS etc.  Google, for example provides tools for internal and external 
+searches.  The Get Real prototype index page ~getreal.ous.edu/protoindex.html has ex amples of various search engines. 
+3.10  Professional Organizations (new) 
+A listing with links to ACM, IEEE, and key sub groups such as SIGGRAPH, to 
+show students the national and internat ional strength of CS organizations.  
+Pointers should lead to student sections of these organizations. 
+3.11  RSS feeds of current CS information (new) 
+Selected articles from the chancellor’s office daily communications distribution, 
+fed to RSS subscribers on the Get Real site.  This feature requires X hours per week of web design resource for editing the URLs to the DSS feed. 
+3.12  Ask a Grad or Prof – FAQ (new) 
+Get fast feedback from the Oregon Univ ersity System on questions asked in a 
+Q and A format.  Answers are posted in an  FAQ section for all to read.  A Grad 
+or Prof BLOG on CS careers would also work here. 
+3.13  Consider a CS Minor (new) 
+Information for students in medicine, la w, business, and other professions to 
+provide students visibility of the high va lue of having a CS minor.  The video 
+“pathways in Computer Science” is a g ood example of CS majors in diverse 
+fields 
+3.14   
+Other new page ideas here… 
+Software  Requirements Specification for Get Real Website  
+ Page 8 
+Page 8 of 10 4. External Interface Requirements 
+4.1 User Interfaces 
+The Get Real site should work and be te sted against IE, Firefox and Netscape. 
+ 
+4.2 Hardware Interfaces 
+There are no special hardware interface requirements 
+ 
+4.3 Software Interfaces 
+There are no special software interface requirements 
+4.4 Communications Interfaces 
+There are no special communication interface requirements 
+ 
+5. Other Nonfunctional Requirements 
+5.1 Performance Requirements 
+The Get Real site should be hosted on a server that can provide adequate 
+response time.  High school students tend  to have short attentions spans, so a 
+slow server would not be satisfactory for this application.  The current OUS (www.ous.edu
+) site is a good example of rapid response time. 
+ 
+5.2 Security Requirements 
+Copyright and other security measures fo r Get Real should be the same as the 
+OUS site.  5.3 There is a need to track and evalua te the “hits” and time spent on the 
+student-focused website over time; and make content, design, and navigation changes as needed based on evaluation of hits. 
+5.3 Software Quality Attributes 
+Web design conventions should be consistent with the standards and 
+conventions used on the OUS site.  
+Software  Requirements Specification for Get Real Website  
+ Page 9 
+Page 9 of 10 <Specify any additional quality charac teristics for the product that will be 
+important to either the customers or th e developers. Some to consider are: 
+adaptability, availability, correctne ss, flexibility, interoperability, 
+maintainability, portability, reliability, reusability, robustness, testability, and 
+usability. Write these to be specific, quan titative, and verifiable when possible. 
+At the least, clarify the relative preferen ces for various attributes, such as ease 
+of use over ease of learning.> 
+6. Get Real Version 3 Suggestions 
+6.1 Knowledge base 
+ 
+Appendix A: Glossary 
+Appendix B: Analysis Models 
+<Optionally, include any pertinent analysis models, such as data flow 
+diagrams, class diagrams, state-transiti on diagrams, or entity-relationship 
+diagrams.>  Appendix C: Issues List  <This is a dynamic list of the open requ irements issues that remain to be 
+resolved, including TBDs, pending deci sions, information that is needed, 
+conflicts awaiting resolution, and the like.> 

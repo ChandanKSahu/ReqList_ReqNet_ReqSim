@@ -1,0 +1,12 @@
+D	VII Data Use Analysis and Processing SYSTEM REQUIREMENTS SPECIFICATION - Michigan Department of Transportation (MDOT)
+3	SPECIFIC REQUIREMENTS
+3.1	IS – Input Services 
+3.2	AS – Administrative Services
+3.3	DD – Dynamic Data Services
+3.4	CS – Computational Services
+3.5	PD – Persistent Data Services
+3.6	OS – Output Services
+3.7	PS – Presentation Services
+3.8	DC – Design Constraints
+3.9	QC – Quality Characteristics
+3.10	XR – External Requirements

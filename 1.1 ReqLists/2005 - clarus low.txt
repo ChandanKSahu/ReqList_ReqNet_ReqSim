@@ -1,0 +1,414 @@
+4.1.6.101	The Clarus  system shall implement quality checking processes as soon as data become available.
+4.1.6.101.1	The CAS shall be able to configure schedules for executing QChS.
+4.1.6.151	The Clarus  system shall record the methods applied when deriving quality checking information.
+4.1.6.151.1	The CAS shall record the quality checking methods used.
+4.1.6.155	The Clarus  system shall be able to implement quality checking rules for each environmental parameter.
+4.1.6.155.1	The CAS shall be able to configure the quality checking rules for each environmental parameter.
+4.1.6.155.2	The CAS shall enable administrators to manage quality checking rules.
+4.1.6.161	The Clarus  system shall be able to implement quality checking rules for specific environmental situations.
+4.1.6.161.1	The CAS shall be able to configure quality checking rules for specific environmental situations.
+4.1.6.163	The Clarus  system shall be able to implement quality checking rules specific to observation locations.
+4.1.6.163.1	The CAS shall be able to configure quality checking rules specific to observation locations.
+4.1.6.171	The Clarus  system shall be able to base its quality checking process on historical environmental data.
+4.1.6.171.1	The CAS shall be able to configure historical environmental data to be used by quality checking processes.
+4.1.6.175	The Clarus  system shall be able to use multiple algorithms for its quality checking process.
+4.1.6.175.1	The CAS shall be able to configure multiple algorithms to be used in the quality checking process.
+4.1.6.213	The Clarus  system shall allow access to new surface transportation-related environmental data.
+4.1.6.213.1	The CAS shall be configurable to allow new observation types to be implemented as they become available.
+4.1.6.806	The Clarus  system shall enable administrators to manage security groups.
+4.1.6.806.1	The CAS system shall enable administrators to manage security group members.
+4.1.6.806.2	The CAS shall have an administrator security group.
+4.1.6.806.3	The CAS shall have a quality manager security group.
+4.1.6.811	The Clarus system shall be able to restrict environmental data publication based on source.
+4.1.6.811.1	The CAS shall be able to record data sharing restrictions.
+4.1.6.901	The Clarus  system shall record statistics about its operation.
+4.1.6.901.1	The CAS shall record statistics about the system operation.
+4.1.6.905	The Clarus  system shall log data transactions.
+4.1.6.905.1	The CAS shall log data transactions.
+4.1.8.120	The Clarus  system shall acquire, process, and disseminate environmental metadata.
+4.1.8.120.1	The CAS shall manage contributor metadata.
+4.1.8.120.2	The CAS shall manage collector metadata.
+4.1.8.120.3	The CAS shall manage quality checking schedules.
+4.1.8.120.4	The CAS shall manage environmental data collection schedules.
+4.1.8.120.5	The CAS shall manage ESS metadata.
+4.1.9.32	The Clarus  system shall manage environmental data and metadata according to the Clarus  data sharing agreements.
+4.1.9.32.1	The CAS shall manage data sharing rules based on contributor data sharing agreements.
+4.2.6.100	The Clarus system shall collect, quality check, and disseminate environmental data.
+4.2.6.100.1	The CAUI shall be able to initiate CS on demand.
+4.2.6.111	The Clarus  system shall provide environmental data quality flags.
+4.2.6.111.1	The CAUI shall enable a quality manager to apply manual flags to a set of observations from an individual ESS.
+4.2.6.111.2	The CAUI shall enable a quality manager to apply manual flags to a set of observations.
+4.2.6.111.3	The CAUI shall enable a quality manager to apply manual flags to a set of observations over a fixed time range.
+4.2.6.111.4	The CAUI shall enable a quality manager to apply manual flags to a set of observations over a time range with an open ended future time.
+4.2.6.141	The Clarus  system shall allow human quality checks of environmental data.
+4.2.6.141.1	The CAUI shall allow a quality manager to apply a manual quality flag to environmental data.
+4.2.6.141.3	The CAUI shall allow manual quality flags to be entered.
+4.2.6.155	The Clarus system shall be able to implement quality checking rules specific to each environmental parameter.
+4.2.6.155.1	The CAUI shall enable quality checking rules to be configured specific to each environmental parameter.
+4.2.6.806	The Clarus  system shall enable administrators to manage security groups.
+4.2.6.806.1	The CAUI  shall enable administrators to manage security group members.
+4.2.8.120	The Clarus  system shall acquire, process, and disseminate environmental metadata.
+4.2.8.120.1	The CAUI shall enable administrators to acquire environmental metadata.
+4.2.8.120.2	The CAUI shall enable administrators to manage environmental metadata.
+4.2.9.31	The Clarus  system shall provide a user interface for administration.
+4.2.9.31.1	The CAUI shall enable administrators to manage contributor metadata.
+4.2.9.31.2	The CAUI shall enable administrators to manage collector metadata.
+4.2.9.31.3	The CAUI shall enable administrators to manage quality checking schedules.
+4.2.9.31.4	The CAUI shall enable administrators to manage environmental data collection schedules.
+4.2.9.32	The Clarus  system shall manage environmental data and metadata according to the Clarus  data sharing agreements.
+4.2.9.32.1	The CAUI shall enable administrators to manage contributor data sharing agreements.
+4.2.9.32.2	The CAUI shall enable administrators to assign system privileges.
+4.3.6.100	The Clarus  system shall collect, quality check, and disseminate environmental data.
+4.3.6.100.1	CS shall collect environmental data based on its configured schedule.
+4.3.6.100.2	CS shall be able to transform extracted environmental data into the internal storage format.
+4.3.6.100.3	CS shall be able to store transformed environmental data in the QEDC.
+4.3.6.100.4	CS shall be able to convert observation units into the Clarus  standard unit specification.
+4.3.6.100.5	CS shall be able to be initiated on a schedule.
+4.3.6.100.6	CS shall be able to be initiated on demand.
+4.3.6.200	The Clarus  system shall be able to detect data submission errors.
+4.3.6.200.1	CS shall log when a data submission error occurs.
+4.3.6.201	The Clarus  system shall be able to access in-situ environmental observations from data collectors.
+4.3.6.201.1	CS shall be able to collect in-situ environmental observations from data collectors.
+4.3.6.205	The Clarus system shall be able to access remotely sensed environmental observations from data collectors.
+4.3.6.205.1	CS shall be able to retrieve remotely sensed environmental observations from data collectors.
+4.3.6.211	The Clarus system shall be able to receive roadway weather measurements derived from VII data.
+4.3.6.211.1	CS shall be able to retrieve roadway weather measurements derived from VII data.
+4.3.6.213	The Clarus system shall allow access to new surface transportation-related observed environmental data.
+4.3.6.213.1	CS shall be able to be implemented to collect new observation types as they become available.
+4.3.6.214	The Clarus  system shall accept environmental data derived from images.
+4.3.6.214.1	CS shall accept surface condition data derived from surface images.
+4.3.6.214.2	CS shall accept atmospheric condition data derived from atmospheric images.
+4.3.6.221	The Clarus  system shall be able to retrieve environmental data directly from environmental sensor station collectors.
+4.3.6.221.1	CS shall be able to retrieve environmental data directly from environmental sensor station collectors.
+4.3.6.222	The Clarus system shall minimize the time for data acquisition.
+4.3.6.222.1	CS shall be able to dynamically adjust its retrieval schedules when environmental data is expected to be ready but is temporarily delayed.
+4.3.6.223	The Clarus  system shall process data as they are received.
+4.3.6.223.1	CS shall process environmental data as they are received.
+4.3.6.231	The Clarus  system shall collect pavement-related observations.
+4.3.6.231.1	CS shall be able to collect pavement-related observations.
+4.3.6.241	The Clarus  system shall accept environmental data from railway systems or in-situ ESS along tracks.
+4.3.6.241.1	CS shall be able to collect environmental data from railway systems from railway collectors.
+4.3.6.241.2	CS shall be able to collect environmental data from in-situ ESS along tracks from railway collectors.
+4.3.6.245	The Clarus  system shall accept environmental data from railroad vehicles.
+4.3.6.245.1	CS shall accept environmental data derived from railroad vehicle data.
+4.3.6.251	The Clarus  system shall accept environmental data from (roadway) vehicles.
+4.3.6.251.1	CS shall accept environmental data collected from (roadway) vehicles.
+4.3.6.255	The Clarus  system shall accept environmental data from maintenance and construction vehicles.
+4.3.6.255.1	CS shall accept environmental data collected from maintenance and construction vehicles.
+4.3.6.261	The Clarus  system shall accept environmental data from service patrol vehicles.
+4.3.6.261.1	CS shall accept environmental data collected from service patrol vehicles.
+4.3.6.271	The Clarus  system shall accept environmental data from transit vehicles.
+4.3.6.271.1	CS shall accept environmental data collected from transit vehicles.
+4.3.6.275	The Clarus  system shall accept environmental data from emergency vehicles.
+4.3.6.275.1	CS shall accept environmental data collected from emergency vehicles.
+4.3.6.281	The Clarus  system shall be able to receive weather data from weather service providers.
+4.3.281.1	CS shall be able to receive weather data from weather service providers.
+4.3.6.905	The Clarus  system shall log data transactions.
+4.3.6.905.1	CS shall create a log entry when a data set is invalid.
+4.3.8.11	The Clarus  system baseline data types shall be defined by the NTCIP ESS 1204 standard.
+4.3.8.11.1	CS shall accept data types defined by NTCIP 1204.
+4.3.8.12	The Clarus  system data definitions shall be consistent with the ITE TM 1.03 standard, Functional Level Traffic Management Data Dictionary (TMDD).
+4.3.8.12.1	CS shall accept environmental data described by definitions defined by the TMDD.
+4.3.8.12.2	CS shall accept environmental data described by definitions defined by CMML version 2.
+4.3.8.20	The Clarus  system shall acquire, process, and disseminate environmental data.
+4.3.8.151	The Clarus  system shall accept only observations that include location, timestamp, and source metadata.
+4.3.8.151.1	CS shall accept only observations that include location, timestamp, and source metadata.
+4.3.8.155	The Clarus  system shall accept only observations of identified measurement types and units.
+4.3.8.155.1	CS shall accept only observation of identified measurement types and units.
+4.3.8.301	The Clarus  system shall be able to acquire, process, and disseminate environmental data from across North America.
+4.3.8.301.1	CS shall be able to acquire environmental data from across North America.
+4.3.9.11	The Clarus  system shall accept data through a Clarus  standard interface.
+4.3.9.11.1	CS shall implement the Clarus  standard interface.
+4.3.9.12	The Clarus  system shall be able to communicate with environmental sensor stations through its collector using the NTCIP ESS 1204.
+4.3.9.12.1	CS shall be able to process NTCIP ESS 1204 data.
+4.3.9.13	The Clarus system shall be able to communicate with RWIS databases through their native interfaces.
+4.3.9.13.1	CS shall be able to accept data from an RWIS database in its native output format.
+4.3.9.14	The Clarus  system shall be able to communicate with an individual ESS through its native interface.
+4.3.9.16	The Clarus  system shall transfer data as efficiently as possible.
+4.3.9.16.1	CS shall transfer data concurrently.
+4.3.9.16.2	CS shall be able to request collector environmental data on demand.
+4.3.9.16.3	CS shall be able to accept environmental data pushed from collectors.
+4.3.9.17	The Clarus  system shall employ industry standards to minimize implementation impact to users and providers.
+4.3.9.17.1	CS shall be able to extract environmental data from an XML message that conforms to the Clarus  standard XML message specification.
+4.3.9.17.2	CS shall be able to extract environmental data from comma separated value messages.
+4.3.9.17.3	CS that process comma separated value ASCII text shall be able to dynamically parse environmental data that includes a descriptive header row conforming to the Clarus collector standard message specification.
+4.3.9.17.4	CS that process comma separated value ASCII text shall be able to dynamically parse environmental data described by a stored collector configuration.
+4.3.9.17.5	CS shall be able to extract environmental data from CMML version 2 messages.
+4.3.9.17.6	CS shall be able to extract environmental data from netCDF version 3.6 messages.
+4.4.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.4.6.213.1	The DOG shall be able to monitor new environmental data services as they are added.
+4.4.6.905	The Clarus  system shall log data transactions.
+4.4.6.905.1	The DOG shall be able to record its activities.
+4.4.17.12	The Clarus  system shall be able to automatically recover from an unexpected shutdown.
+4.4.17.12.1	The watchdog service shall monitor the overall Clarus  system state.
+4.4.17.12.2	The watchdog service shall be able to restart unresponsive Clarus  system services.
+4.5.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.5.6.213.1	The EMC shall be configurable to allow new observation types to be implemented as they become available.
+4.5.8.120	The Clarus  system shall acquire, process, and disseminate environmental metadata.
+4.5.8.120.1	The EMC shall be able to process environmental metadata.
+4.5.8.120.2	The EMC shall be able to uniquely identify each contributor, collector, and station sensor.
+4.5.8.120.3	The EMC shall be able to maintain contact info for each contributor, collector, and station sensor.
+4.5.8.120.4	The EMC shall be able to maintain backup contact info for each contributor, collector, and station sensor.
+4.5.8.120.5	The EMC shall be able to maintain owner names for each contributor, collector, and station sensor.
+4.5.8.120.6	The EMC shall be able to maintain an equipment list for each station.
+4.5.8.120.7	The EMC shall be able to maintain pavement types for stations with corresponding instrumentation.
+4.5.8.120.8	The EMC shall be able to maintain latitude, longitude, and elevation for stations.
+4.5.8.120.9	The EMC shall be able to maintain a reference to additional metadata.
+4.5.9.17	The Clarus  system shall employ industry standards to minimize implementation impact to users and providers.
+4.5.9.17.1	The EMC shall store collector metadata that consists of information based on TMDD & MS/ETMCC.
+4.6.4.62	The Clarus  system shall disseminate environmental metadata in response to polling. OCS EMS   H
+4.6.4.62.1	EMS shall disseminate metadata in response to polling.
+4.6.4.91	The Clarus  system shall disseminate data using standard Internet protocols.
+4.6.4.91.1	EMS shall disseminate metadata using standard Internet protocols.
+4.6.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.6.4.213.1	The Clarus  system shall allow new EMS to be implemented that disseminate new observation types to be implemented as they become available.
+4.6.6.401	The Clarus  system shall be able to provide sensor equipment metadata in response to a request.
+4.6.6.401.1	EMS shall be able to provide sensor equipment metadata in response to a request.
+4.6.6.501	The Clarus  system shall minimize the time for data dissemination.
+4.6.6.501.1	EMS shall respond to queries for metadata within five minutes.
+4.6.6.905.1	EMS shall log metadata transactions.
+4.6.8.120	The Clarus  system shall acquire, process, and disseminate environmental metadata.
+4.6.8.120.1	The EMS shall accept source queries that consist of a list of Clarus  contributors.
+4.6.8.120.2	The EMS shall accept source queries that consist of a list of Clarus  contributors including station identifier.
+4.6.8.120.3	The EMS shall accept location queries based on a bounding latitude/longitude coordinate pair.
+4.6.8.120.4	The EMS shall accept location queries based on latitude/longitude  location and radius. Task Force
+4.6.9.16	The Clarus  system shall transfer data as efficiently as possible.
+4.6.9.16.1	EMS shall transfer data concurrently.
+4.6.9.17	The Clarus  system shall employ industry standards to minimize implementation impact to users and providers.
+4.6.9.17.1	EMS shall be able to distribute metadata in a comma separated value ASCII format.
+4.6.9.23	The Clarus  system shall respond to queries for environmental metadata from the available metadata.
+4.6.9.23.1	EMS responses shall include metadata that meets the requested metadata query filtering specifications.
+4.6.9.23.2	EMS shall respond to queries returning no results with a message stating that no results matching that query are available.
+4.6.16.25	The Clarus  system shall respond to a request for information within five minutes.
+4.6.16.25.1	The EMS shall respond to a request for metadata within five minutes.
+4.7.6.111	The Clarus  system shall provide environmental data quality flags.
+4.7.6.111.1	The QEDC shall keep the results of each quality test for each observation for the life of the observation.
+4.7.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.7.6.213.1	The QEDC shall be configurable to allow new observation types to be implemented as they become available.
+4.7.6.521	The Clarus  system shall maintain a dynamic library of data for at least seven days.
+4.7.6.521.1	The QEDC shall maintain observations and their associated quality flags for seven days.
+4.7.8.11	The Clarus  system baseline data types shall be defined by the NTCIP ESS 1204 standard.
+4.7.8.11.1	The QEDC observation types shall be defined by NTCIP ESS 1204.
+4.7.9.21	The Clarus  system shall allow service providers to select specific desired data sets.
+4.7.9.21.1	The QEDC shall support queries for its observations.
+4.7.9.22	The Clarus  system shall respond to queries for environmental data from the available data.
+4.7.9.22.1	The QEDC shall support queries against all of its available observation datasets.
+4.7.16.13	The Clarus  system shall support 470 million current observations.
+4.7.16.13.1	The QEDC combined from all available Clarus  hosts shall support 470 million current observations.
+4.8.4.51	The Clarus  system shall disseminate data in response to a scheduled request.
+4.8.4.51.1	QEDS shall disseminate data in response to a scheduled environmental data request.
+4.8.4.61	The Clarus  system shall disseminate environmental data in response to polling.
+4.8.4.61.1	QEDS shall disseminate data in response to an immediate environmental data request.
+4.8.4.71	The Clarus  system shall disseminate data in response to a change notification request.
+4.8.4.71.1	QEDS shall disseminate data in response to a change notification request.
+4.8.4.81	The Clarus  system shall be able to notify subscribers when data sets become available.
+4.8.4.81.1	QEDS shall disseminate environmental data to subscribers when datasets fulfilling a subscription query become available.
+4.8.4.81.2	QEDS shall be able to disseminate environmental data to contributor subscribers when datasets fulfilling a subscription query applying threshold filters become available.
+4.8.4.91	The Clarus  system shall disseminate data using standard Internet protocols.
+4.8.4.91.1	QEDS system shall disseminate environmental data using standard Internet protocols.
+4.8.4.100	The Clarus  system shall collect, quality check, and disseminate environmental data.
+4.8.4.100.1	QEDS shall disseminate environmental data.
+4.8.4.100.2	QEDS shall be able to disseminate environmental data in English units.
+4.8.6.115	The Clarus  system shall provide notification of data quality conditions to data contributors.
+4.8.6.115.1	The observation quality flags shall be used to determine data quality condition notifications.
+4.8.6.115.2	QEDS shall provide quality checking statistics to data contributors. Task Force  Functionality may be similar to that provided by MADIS and MesoWest.
+4.8.6.140	The Clarus  system shall enable quality managers to review which quality checks passed or failed.
+4.8.6.140.1	QEDS shall enable quality managers to review which quality checks passed or failed.
+4.8.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.8.6.213.1	QEDS shall be able to disseminate new observation types as they become available.
+4.8.6.219	The Clarus  system shall disseminate NWS watches, warnings, and advisories.
+4.8.6.219.1	QEDS shall be able to disseminate NWS watches, warnings, and advisories.
+4.8.6.501	The Clarus  system shall minimize the time for data dissemination.
+4.8.6.501.1	QEDS shall respond to environmental data queries within one minute.
+4.8.6.505	The Clarus  system shall be able to disseminate data based on spatial queries.
+4.8.6.505.1	QEDS shall be able to disseminate data based on spatial queries.
+4.8.6.811	The Clarus  system shall be able to restrict environmental data publication based on source.
+4.8.6.811.1	QEDS shall be able to determine if an observation can be disseminated.
+4.8.6.905	The Clarus  system shall log data transactions.
+4.8.6.905.1	QEDS shall log their activities.
+4.8.8.11	The Clarus  system baseline data types shall be defined by the NTCIP ESS 1204 standard.
+4.8.8.11.1	QEDS shall disseminate environmental data types defined by NTCIP 1204.
+4.8.8.12	The Clarus system data definitions shall be consistent with the ITE TM 1.03 standard, Functional Level Traffic Management Data Dictionary (TMDD).
+4.8.8.20	The Clarus  system shall acquire, process, and disseminate environmental data.
+4.8.8.301	The Clarus  system shall be able to acquire, process, and disseminate environmental data from across North America.
+4.8.8.301.1	QEDS shall be able to disseminate environmental data collected from across North America.
+4.8.9.16	The Clarus  system shall transfer data as efficiently as possible.
+4.8.9.16.1	QEDS shall transfer data concurrently.
+4.8.9.17	The Clarus  system shall employ industry standards to minimize implementation impact to users and providers.
+4.8.9.17.1	QEDS shall be able to disseminate environmental data in netCDF version 3.6 format.
+4.8.9.17.2	QEDS shall be able to disseminate environmental data in HDF version 5 format.
+4.8.9.17.3	QEDS shall be able to disseminate environmental data in CMML version 2 format.
+4.8.9.17.4	QEDS shall be able to disseminate environmental data in comma separated value ASCII format.
+4.8.9.21	The Clarus  system shall allow service providers to select specific desired datasets.
+4.8.9.21.1	QEDS shall respond to environmental data queries selecting specific desired datasets.
+4.8.9.22	The Clarus  system shall respond to queries for environmental data from the available data.
+4.8.9.22.1	QEDS shall enable users to request environmental data from among the available output formats.
+4.8.9.22.2	QEDS shall respond to queries returning no results with a message stating that no results matching that query are available.
+4.8.9.25	The Clarus  system shall enable environmental data queries by timestamp.
+4.8.9.25.1	QEDS shall accept timestamp queries based on a single timestamp range.
+4.8.9.26	The Clarus  system shall enable environmental data queries by location reference.
+4.8.9.26.1	QEDS shall accept location queries based on a bounding latitude/longitude coordinate pair.
+4.8.9.26.2	QEDS shall accept location queries based on a latitude/longitude location and radius.
+4.8.9.27	The Clarus  system shall enable environmental data queries by quality.
+4.8.9.27.1	QEDS shall accept quality flag queries based on a range of quality flag values.
+4.8.9.28	The Clarus  system shall enable environmental data queries by source.
+4.8.9.28.1	QEDS shall accept source queries that consist of a list of Clarus  contributors.
+4.8.9.28.2	QEDS shall accept source queries that are a list of Clarus  contributors combined with a station identifier.
+4.8.9.33	The Clarus  system shall allow users to create a data subscription request.
+4.8.9.33.1	QEDS shall be able to accept a subscription request.
+4.8.9.33.2	QEDS shall accept data subscriptions that include an environmental data request and the publishing trigger.
+4.8.9.33.3	QEDS shall be able to accept subscription requests with triggers based on a schedule.
+4.8.9.33.4	QEDS shall be able to accept subscription requests with triggers based on quality flag state changes.
+4.8.9.33.5	QEDS shall disseminate subscription responses to the originating request address by default.
+4.8.9.33.6	QEDS shall disseminate subscription responses to a specified return address.
+4.8.9.33.7	QEDS shall uniquely identify environmental data subscriptions.
+4.8.9.33.8	QEDS shall automatically delete a subscription when the triggering event will not occur again and no more responses are possible.
+4.8.16.24	The Clarus  system shall be able to publish new data within twenty minutes of data receipt.
+4.8.16.24.1	QEDS shall disseminate subscription responses within twenty minutes of new data becoming available.
+4.8.16.25	The Clarus  system shall respond to a request for information within one minute.
+4.8.16.25.1	QEDS shall respond to an environmental data request within one minute.
+4.8.16.31	The Clarus  system shall be able to handle three hundred simultaneous requests for environmental data.
+4.8.16.31.1	QEDS shall be able to respond to three hundred simultaneous queries.
+4.9.6.100	The Clarus  system shall collect, quality check, and disseminate environmental data.
+4.9.6.100.1	The QChS shall quality check environmental data.
+4.9.6.101	The Clarus  system shall implement quality checking processes as soon as data become available.
+4.9.6.101.1	QChS shall be able to be configured individually.
+4.9.6.101.2	QChS processing order shall be able to be configured.
+4.9.6.101.3	QChS processing shall commence when new data arrives but no less frequently than the scheduled interval.
+4.9.6.111	The Clarus  system shall provide environmental data quality flags.
+4.9.6.111.1	Each QChS shall produce a unique quality flag value.
+4.9.6.111.2	The QChS shall be able to indicate a numeric confidence value.
+4.9.6.115	The Clarus  system shall provide notification of data quality conditions to data contributors.
+4.9.6.115.1	A QChS shall evaluate data quality conditions.
+4.9.6.121	The Clarus  system shall detect out of range values.
+4.9.6.121.1	QChS algorithms shall use sensor range metadata for range checking bounds.
+4.9.6.121.2	QChS algorithms shall use climate records for range checking bounds.
+4.9.6.121.3	QChS algorithms shall be able to use monthly climate extremes for range checking bounds.
+4.9.6.125	The Clarus  system shall not modify original observations.
+4.9.6.125.1	QChS shall apply separate, independent quality flags that do not modify the observation.
+4.9.6.141	The Clarus  system shall allow human quality checks of observations.
+4.9.6.141.1	QChS shall implement a manual override to set quality flags.
+4.9.6.151	The Clarus  system shall record the methods applied when deriving quality checking information.
+4.9.6.151.1	QChS shall indicate when a quality check has been performed.
+4.9.6.155	The Clarus  system shall be able to implement quality checking rules for each environmental parameter.
+4.9.6.155.1	QChS shall be able to implement quality checking rules for a specific environmental parameter.
+4.9.6.161	The Clarus  system shall be able to implement quality checking rules for specific environmental situations.
+4.9.6.161.1	QChS shall be able to implement quality checking rules for specific environmental situations.
+4.9.6.162	The Clarus  system shall be able to implement quality checking spatial tests using available data.
+4.9.6.162.1	QChS shall be able to implement quality checking spatial tests using available data.
+4.9.6.163	The Clarus  system shall be able to implement quality checking rules specific to observation locations.
+4.9.6.163.1	QChS shall be able to implement different quality checking rules specific to regional weather.
+4.9.6.165	The Clarus  system shall be able to base its quality checking process on values from multiple observations.
+4.9.6.165.1	QChS shall be able to flag observations based on more than one observation type.
+4.9.6.166	The Clarus  system shall be able to base its quality checking process on values distributed in time.
+4.9.6.166.1	QChS shall be able to base its quality checking process on values distributed in time.
+4.9.6.171	The Clarus  system shall be able to base its quality checking process on historical environmental data.
+4.9.6.171.1	QChS shall be able to use historical environmental data in their quality checking algorithms.
+4.9.6.175	The Clarus  system shall be able to use multiple algorithms for its quality checking process.
+4.9.6.175.1	QChS shall be implemented for each defined standard quality checking algorithm.
+4.9.6.213	The Clarus  system shall allow access to new surface transportation related observed environmental data.
+4.9.6.213.1	QChS shall be implemented to quality check new observation types as they become available.
+4.9.6.223	The Clarus  system shall process data as they are received.
+4.9.6.223.1	QChS shall apply quality flags to data as they are received.
+4.9.6.905	The Clarus  system shall log data transactions.
+4.9.6.905.1	QChS shall log quality checking activity.
+4.9.8.20	The Clarus  system shall acquire, process, and disseminate environmental data.
+4.9.8.301	The Clarus  system shall be able to acquire, process, and disseminate environmental data from across North America.
+4.9.8.301.1	QChS shall process environmental data from across North America.
+4.9.16.23	The Clarus  system shall be able to complete an automated quality checking check of environmental data within ten seconds of data receipt.
+4.9.16.23.1	A QChS shall be able to complete an automated quality check within ten seconds of when data is available for checking.
+4.9.16.24	The Clarus  system shall be able to publish new data within twenty minutes of data receipt.
+4.9.16.24.1	All QChS shall be completed within twenty minutes of data being available for checking.
+4.10.4.51	The Clarus  system shall disseminate data in response to a scheduled request.
+4.10.4.51.1	The SS shall be able to initiate a QEDS response.
+4.10.6.101	The Clarus  system shall implement quality checking processes as soon as data become available.
+4.10.6.101.1	The SS shall be able to initiate QChS.
+4.10.6.905	The Clarus  system shall log data transactions.
+4.10.4.905.1	The SS shall record when it initiates actions.
+4.10.9.16	The Clarus  system shall transfer data as efficiently as possible.
+4.10.9.16.1	The SS shall be able to store event schedules.
+4.10.9.16.2	The SS shall be able to initiate CS.
+4.11.4.11	The Clarus  system shall be able to be hosted at one or more physical locations.
+4.11.4.11.1	The Clarus  system shall track its constituent hosts.
+4.11.4.11.2	The Clarus  system shall allocate each collector to a specific host.
+4.11.4.11.3	The Clarus  system shall allocate each contributor to a specific host.
+4.11.4.11.4	Clarus  hosts shall be able to aggregate environmental data from other Clarus  hosts.
+4.11.4.11.5	Clarus  hosts shall be able to distribute queries to other Clarus  hosts.
+4.11.4.21	The Clarus  system shall use hardware that implements industry accepted standard interfaces.
+4.11.4.31	The Clarus  system shall use software that implements industry accepted standard interfaces.
+4.11.4.41	The Clarus  system shall be able to operate on redundant hardware.
+4.11.4.101	All HTML coding shall meet FHWA requirements for web sites.
+4.11.4.111	The Clarus  system shall support modular components.
+4.11.4.121	The Clarus  system shall be able to use latitude, longitude, and elevation coordinates to specify location to the nearest three feet.
+4.11.4.126	The Clarus  system shall use Coordinated Universal Time (UTC) for all timestamps.
+4.11.24.801	The Clarus  program shall alert users to system modifications.
+4.11.16.11	The Clarus  system shall be able to publish environmental data at three times the volume rate that it collects it.
+4.11.16.41	The Clarus  system shall be able to support six hundred concurrent users.
+4.11.16.42	The Clarus  system shall be able to support six thousand registered users.
+4.11.17.11	The Clarus  system shall be able to mitigate communication denial-of-service attacks.
+4.11.17.13	The Clarus  system shall be able to respond to 95% of all requests for environmental data 95% of the time.
+4.11.24.201	The Clarus  program shall establish data sharing agreements with all participating sources of environmental data.
+4.11.24.201.10	The Clarus  program shall identify categories of recipients for dissemination of data.
+4.11.24.201.11	The Clarus  program shall determine the need for bilateral Clarus  Data Sharing Agreements with countries, agencies, states, and regions.
+4.11.24.201.12	The authorized representative(s) of the contributors shall be identified.
+4.11.24.201.13	The contributors shall identify and define the types of data and information that will be included in the Clarus Data Sharing Agreement.
+4.11.24.201.14	The contributors shall identify the intended use of their shared data and information.
+4.11.24.201.15	The contributors shall identify the categories of recipients of their shared data and information.
+4.11.24.201.16	The contributors shall define the units of measurements of their shared data and information.
+4.11.24.201.18	The Clarus  program shall determine how it will provide data and information to contributors.
+4.11.24.201.19	The Clarus  program shall provide data and information statistics on its operation to contributors.
+4.11.24.201.20	The contributors shall inform the Clarus  program of changes in authorized personnel/offices.
+4.11.24.201.21	The Clarus  program shall inform contributors of the "acceptance and use" of their data and information.
+4.11.24.201.23	The Clarus  Initiative Management Team shall undertake joint communications activities and products that will enhance public understanding and dissemination of contributions of the Clarus program.
+4.11.24.201.24	The Clarus  Initiative Management Team shall agree upon the activities and products that will enhance public understanding/ communication of the contribution of the Clarus   program.
+4.11.24.201.26	The contributors shall inform the Clarus  program of known error(s) and modifications in its data and information.
+4.11.24.201.27	The Clarus  program shall determine its redistribution of shared data from contributors based upon Clarus  Data Sharing Agreements.
+4.11.24.201.28	The Clarus  program shall report successes and failures in data and information transmission to its contributors.
+4.11.24.201.29	The contributors shall report periods of data and information outages to the Clarus  program.
+4.11.24.201.31	The Clarus  program shall maintain information about requestors and their access to data and information.
+4.11.24.201.32	The Clarus  Initiative Management Team shall review and amend data and information sharing and use policies.
+4.11.24.201.33	The Clarus  Initiative Management Team shall specify the general frequency of policy meetings.
+4.11.24.201.34	The Clarus  Initiative Coordinating Committee shall nominate technical expert(s) to participate on technical working groups.
+4.11.24.201.35	The requestors shall adhere to the intellectual property requirements of the Clarus  User Agreement.
+4.11.24.201.36	The contributors shall adhere to the intellectual property requirements of the Clarus  Data Sharing Agreement.
+4.11.24.201.39	The contributors shall have the right to use the Clarus  system data and information for purposes delineated within the Clarus  Data Sharing Agreement.
+4.11.24.201.40	The requestors shall have the right to use the Clarus  system data and information for purposes delineated within the Clarus  User Agreement.
+4.11.24.201.41	The Clarus  program shall have the right to reject the use of data and information provided by the contributors when deemed appropriate.
+4.11.24.201.42	The Clarus  program shall inform contributors of the policies, processes and procedures employed to reject data and information provided by the contributors.
+4.11.24.201.49	The contributors shall provide the Clarus  program with a timely notice of their intent to change, alter, replace, or eliminate any shared data and information as specified within this Clarus  Data Sharing Agreement.
+4.11.24.201.52	Any reference in the Clarus  Data Sharing Agreement to statutes, regulations and rules shall be a reference to the amended, substituted, replaced or re-enacted statute, regulations and rules.
+4.11.24.201.65	The Clarus  program shall provide to contributors the limitation of liability for contributing environmental data and metadata.
+4.11.24.201.66	The Clarus  program shall provide to requesters the limitation of liability for using environmental data and metadata.
+4.11.24.205	The Clarus  program shall maintain continuous 24x7 operations.
+4.11.24.207	The Clarus  program shall provide an environment that has uninterruptible power for the Clarus  system.
+4.11.24.209	The Clarus  program shall provide an environment that has redundant communication for the Clarus  system.
+4.11.24.211	The Clarus  program shall provide network management tools.
+4.11.24.215	The Clarus  program shall provide setup support.
+4.11.24.221	The Clarus  program shall provide for customer service.
+4.11.24.225	The Clarus  program shall provide a trained support staff.
+4.11.24.232	The Clarus  program shall define quality checking rules for environmental observations.
+4.11.24.233	The Clarus  program shall define data retention standards.
+4.11.24.235	The Clarus  program shall provide documentation of  Clarus  standards.
+4.11.24.237	The Clarus  program standards shall accommodate contributions of new sensor technologies to the Clarus  system.
+4.11.24.239	The Clarus  program standards shall support multiple methods of data delivery to users.
+4.11.24.305	The Clarus  program shall maintain a comprehensive Clarus  system test environment.
+4.11.24.311	The Clarus  program shall test all software changes in the designated test environment before deployment to production.
+4.11.24.315	The Clarus  program shall test all hardware changes in the designated test environment before deployment to production.
+4.11.24.601	The Clarus  program shall operate the Clarus  system according to its published IT Security Plan.
+4.11.24.605	The Clarus  program shall operate according to Government IT security requirements as outlined in OMB Circular A-130, Management of Federal Information Resources, Appendix III, Security of Federal Automated Information Resources. Contract     H
+4.11.24.611	The Clarus  program shall operate according to Government IT security requirements as outlined in the National Institute of Standards and Technology (NIST) Guidelines, Departmental Information Resource Management Manual, and associated guidelines. Contract     H
+4.11.24.615	The Clarus  program shall operate according to Government IT security requirements as outlined in U.S. DOT Order 1630.2B, Personnel Security Management.
+4.11.24.805	Weather service providers shall be able to use Clarus  data to provide localized special weather products.
+4.11.24.811	Public agency maintenance and construction personnel shall be able to use the Clarus  system to obtain environmental conditions.
+4.11.24.815	Rail system personnel shall be able to use the Clarus  system to obtain environmental conditions.
+4.11.24.823	Transit personnel shall be able to use the Clarus  system to obtain environmental conditions.
+4.11.24.825	The freight community shall be able to use the Clarus  system to obtain environmental conditions.
+4.11.24.827	Emergency management and public safety personnel shall be able to use the Clarus  system to obtain environmental conditions.
+4.11.24.905	The Clarus  program shall maintain information about data providers.
+4.11.24.910	The Clarus  program shall maintain metadata about each data provider's network.
+4.11.24.915	The Clarus  program shall maintain information about data provider redistribution restrictions.
+4.11.24.921	The Clarus  program shall maintain information about service providers.
+4.11.24.925	The Clarus  program shall maintain information about service provider communications.
+4.11.24.931	The Clarus  program shall maintain information about service provider access to data.
+4.11.24.935	The Clarus  program shall allow potential weather element data providers to request permission to submit weather information.
+4.11.24.101	The Clarus  system shall accept data only from sources which data sharing agreements have been established.

@@ -1,0 +1,42 @@
+2.1.1	java version 1.4.0 is required to use the software.
+2.1.2	TCP/IP is used in order to send unicast message. Multicast protocol is used in order to send multicast message. UDP is used in order to send broadcast message.
+2.2.1	Enable agents to broadcast a message to all the agents within the same local network.
+2.2.2	Enable agents to multicast a message to all the agents within the same multicast address.
+2.2.3	Enable agents to unicast a message to other agents within organization.
+2.2.4	Allow agents to choose among unicast, multicast and broadcast communication.
+2.2.5	Allow agents to join and leave multicast group.
+2.2.6	Provide message encryption and decryption techniques for secured communication.
+2.2.7	Allow agents to choose to encrypt or not to encrypt message.
+2.4.1	multicast/broadcast packets are delivered with best effort. Thus, a packet may be delivered to all specified agents or none.
+2.4.2	we provide some basic mechanisms for security such as message encryption. However, there is no guarantee that the others cannot decrypt the encrypted messages
+2.4.3	in order to send multicast message, network environment such as router, network card and operating systems must support multicast protocol.
+2.4.4	in many network, only system administrator is allowed to send broadcast message.
+2.5.1	We assume that each agent knows the address of destinating agents in order to send unicast message.
+2.5.2	We assume that each agent has enough knowledge to decide the best way to communicate with the other agents.
+2.5.3	In the case of using secured multicast communication, we assume that there is an agent whom each agent can request for the same encryption and decryption key. This agent should maintain a list of agents who are allowed to get the keys.
+2.5.4	We assume that each agent knows the multicast address in order to send multicast message.
+3.2.1.1	agentMom shall support the ability to send unicast message.
+3.2.1.2	agentMom shall support the ability to receive unicast message.
+3.2.1.3	Unicast message shall only be received by the specified address.
+3.2.1.4	Unicast message shall arrive a t the specified address and in order.
+3.2.2.1	agentMom shall support the ability to send multicast message.
+3.2.2.2	agentMom shall support the ability to receive multicast message.
+3.2.2.3	agentMom shall support the ability  to send request to join multicast group.
+3.2.2.4	agentMom shall support the ability to send request to leave multicast group.
+3.2.2.5	agentMom shall not allow receiving multicast message from a group before joining that multicast group.
+3.2.2.6	agentMom shall not allow receiving multicast message from a group after leaving that multicast group.
+3.2.2.7	agentMom shall support the ability to set time -to-live for multicast message.
+3.2.2.8	agentMom shall support the ability to set multicast address and port for sending and receiving multicast message.
+3.2.2.9	agentMom shall support the ability to receive multicast message from multiple groups.
+3.2.3.1	agentMom shall support the ability to sent broadcast message.
+3.2.3.2	agentMom shall support the ability to receive broadcast message.
+3.3.3.3	Broadcast message shall be sent to all possible hosts under the same local network.
+3.2.4.1	agentMom shall support the ability to encrypt unicast message.
+3.2.4.2	agentMom shall support the ability to decrypt unicast message.
+3.2.4.3	agentMom shall allow an agent to decide whether or not to encrypt a message.
+3.2.4.4	agentMom shall automatically decrypt encrypted message.
+3.2.4.5	agentMom shall support the ability to encrypt multicast message.
+3.2.4.6	agentMom shall support the ability to decrypt multicast message.
+3.2.5.1	agentMom with shall support the use of the architecture that agent directly controls the conversations.
+3.2.5.2	agentMom shall support the use of the architecture that agent’s components control the conversations.
+3.2.6.1	The new built agentMom shall be compatible with the agentMom 1.2

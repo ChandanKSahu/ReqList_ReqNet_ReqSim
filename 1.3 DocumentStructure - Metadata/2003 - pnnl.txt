@@ -1,0 +1,16 @@
+D	Task Report for the Energy Efficient and Affordable Small Commercial and Residential Buildings Research Program, Project 2.5 - Pattern-Recognition Based Fault Detection and Diagnostics Automated Diagnostics Software
+2	Overall Description
+2.4	General Constraints
+3	Requirements
+3.2	Functionality
+3.2.1	General
+3.2.2	Preprocessing
+3.2.3	Diagnostic Process
+3.2.4	Output Processing
+3.3	Usability
+3.3.1	User Interface
+3.4	Supportability
+3.4.1	Error Reporting
+3.5	Interfaces
+3.5.1	User Interfaces
+3.7	Other Requirements

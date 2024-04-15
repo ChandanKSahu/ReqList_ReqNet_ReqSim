@@ -1,0 +1,23 @@
+D	Electronic Health Record (EHR) System Functional Requirements - Los Angeles County Department of Health Services (DHS)
+6.1	General Requirements
+6.2	Registration  Requirements
+6.3	Scheduling Requirements	
+6.4	Clinical Documentation Requirements
+6.5	Order Management Requirements	
+6.6	Clinical Decision Support Requirements
+6.7	Pharmacy  Requirements
+6.8	Medication Administration  Requirements
+6.9	Laboratory Requirements	
+6.10	Radiology Requirements	
+6.11	Operating Room Requirements	
+6.12	Intensive Care Unit Requirements	
+6.13	Rehabilitation Requirements	
+6.14	Enterprise Master Patient Index (EMPI) Requirements	
+6.15	Health Information Management (HIM) Requirements	
+6.16	Emergency Department Requirements	
+6.17	Cardiology Department Requirements	
+6.18	Managed Care Requirements	
+6.19	Anesthesiology  Requirements
+
+
+

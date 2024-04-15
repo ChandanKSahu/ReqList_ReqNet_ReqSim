@@ -1,0 +1,1191 @@
+
+ITEA 99002 BEYOND project 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture   February 2001  
+       ITEAITEA
+Information Technology for European Advancement 
+ 
+ 
+Functional Specification and 
+Architecture 
+ 
+Deliverable D8 
+Public version 
+ 
+ 
+ 
+User Centred Intelligence: 
+BEYOND (the GUI)  
+ 
+ 
+ 
+  
+ 
+Edited by K. Coninx (LUC-EDM)
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture i February 2001 
+  
+       
+ 
+  
+ 
+This document is part of the work of the EUREKA 2023 - ITEA 99002 project 
+BEYOND.Copyright © 1999-2001 BEYOND consortium 
+Published via the Beyond Website: 
+www.extra.research.philips.com/euprojects/beyond 
+ 
+No part of this publication may be reproduced, stored or transmitted in any form or by any 
+means, electronic, mechanical, photocopying, recording, scanning or otherwise, without 
+written permission of the BEYOND consortium. 
+Requests for publications can be send to: al_publicrequest@natlab.research.philips.com. 
+ 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture ii February 2001 
+ contents: 
+ 
+1. MANAGEMENT AN D SUMM ARY................................................................2  
+2. PURPOSE AND STRUCTURE OF THE DO CUMENT.................................5  
+3. FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR 
+DOMAIN PUBLIC (PUBLIC TE RMINALS AND KIOSKS)...........................8  
+3.1. Introduction.................................................................................................. 8  
+3.2. Project Status .............................................................................................. 8  
+3.3. Methods and results c oncerning us ability.................................................... 8  
+3.4. Functional Spec ifications............................................................................. 9  
+3.4.1.  General changing requirements and extensions................................................. 9  
+3.4.2.  Usability related specifications ............................................................................ 9  
+3.4.3.  Adaptivity related specifications ........................................................................ 10  
+3.4.4.  Multimodality related specifications................................................................... 10  
+3.4.5.  Simulation related specifications....................................................................... 10  
+3.4.6.  Architectural issues ........................................................................................... 11  
+4. FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR 
+DOMAIN HOME (1) (HOME EXPERIENCE AND MULTIMODAL JUKEBOX).................................................................................................12  
+4.1. Introducti on................................................................................................ 12  
+5. FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR 
+DOMAIN HOME (2) (UI EDITOR FOR THE CONSUMER DOMAIN) ........14  
+5.1. Introducti on................................................................................................ 14  
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture iii February 2001 
+ 5.2. Project st atus............................................................................................. 15  
+5.3. Methods and results c oncerning us ability.................................................. 15  
+5.4. Functional spec ificatio ns ........................................................................... 15  
+5.4.1.  General changing requirements and extensions............................................... 15  
+5.4.2.  Usability related specifications .......................................................................... 17  
+5.4.3.  Adaptivity related specifications ........................................................................ 17  
+5.4.4.  Multimodality related specifications................................................................... 17  
+5.4.5.  Simulation related specification......................................................................... 17  
+5.4.6.  Architectural issues ........................................................................................... 17  
+6. FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR 
+DOMAIN VETRONICS (VETRO NICS UI ED ITOR)....................................19  
+6.1. Introducti on................................................................................................ 19  
+6.1.1.  Requirements imposed by Vetronics Application Domain................................. 19  
+6.1.2.  High-level requirements .................................................................................... 19  
+6.1.3.  Flexibility versus Adaptivity ............................................................................... 20  
+6.2. Project st atus............................................................................................. 21  
+6.3. Methods and results c oncerning us ability.................................................. 24  
+6.4. Functional spec ificatio ns ........................................................................... 25  
+6.4.1.  General changing requirements and extensions............................................... 25  
+6.4.2.  Usability related specifications .......................................................................... 26  
+6.4.3.  Adaptivity related specifications ........................................................................ 27  
+6.4.4.  Multimodality related specifications................................................................... 28  
+6.4.5.  Simulation related specifications....................................................................... 28  
+6.4.6.  Architectural issues ........................................................................................... 28  
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture iv February 2001 
+ 7. FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR 
+DOMAIN AVIONICS (INTELLIGE NT ADAPTIVE FL IGHT DECK)............30  
+7.1. Introducti on................................................................................................ 30  
+7.1.1.  Purpose of the intelligent adaptive flight deck ................................................... 30  
+7.1.2.  Levels of the adaptation process....................................................................... 31  
+7.1.3.  Proposal for the first prototype .......................................................................... 31  
+7.2. Project st atus............................................................................................. 32  
+7.3. Methods and results c oncering us ability .................................................... 33  
+7.4. Functional spec ificatio ns ........................................................................... 34  
+7.4.1.  General changing requirements and extensions............................................... 34  
+7.4.2.  Usability related specifications .......................................................................... 35  
+7.4.3.  Adaptivity related specifications ........................................................................ 35  
+7.4.4.  Multimodality related specifications................................................................... 36  
+7.4.5.  Simulation related specifications....................................................................... 36  
+7.4.6.  Architectural issues ........................................................................................... 36  
+8. CONCLUSION S .........................................................................................38  
+ 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 1 February 2001 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 2 February 2001 1. Management and summary 
+This deliverable D8, entitled “Functional S pecification and Architecture”, has the 
+intention of summarizing the progress in  the BEYOND project and clarifying the 
+approach in the process of going from t he first to the second milestone.  
+As such D8 is a so-called common deliv erable, beyond workpackage borders. There 
+is no ambition to strive for complet eness in this document. All BEYOND project 
+members have been approached and partners themselves hav e made a selection of 
+appropriate projects that could suppor t the goal of this deliverable. 
+It was decided that a domain- oriented approach provides a comprehensive structure 
+for this deliverable. It supports the placem ent of the individual projects in their 
+context, and allows key aspects of the involved workpackages (multimodality, 
+adaptivity, simulation and us ability) to be emphasized. 
+The following contributions ar e integrated in this public version of deliverable D8 
+(there are two more contributions  in the internal version): 
+ 
+Domain Project Authors 
+Public Accesspoints; public 
+information kiosks Ferdinand Schinagl (APC 
+Interactive Solutions AG) 
+Home UI for future in-home 
+electronic systems (Home Experience, Multimodal Jukebox) Berry Eggen and  
+Boris De Ruyter (Philips 
+Research, USIT) 
+Home UI editor for consumer 
+domain Linde Loomans (Philips 
+Hasselt) 
+Vetronics Vetronics UI editor Johan Devos (BARCO 
+BarcoView) 
+Karin Coninx (LUC-EDM) 
+Avionics Intelligent Adaptive Flight 
+Deck Max Mulder (TUD) 
+ 
+It has to be explicitly stated that due to un certainties in the German funding situation, 
+the consortium lacked the experienced pa rtners for the usability workpackage. 
+Therefore, the other partner s had to find a way to overcome this problem. One 
+consequence is that most of the contribut ing partners devoted reso urces to usability 
+engineering activities, as repor ted in this deliverable. Al so, reconsidering the purpose 
+of this deliverable D8 and devoting some time to the usability issues has delayed this 
+deliverable. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 3 February 2001 The next chapter elaborates on the exact pu rpose of this document and its relation to 
+other deliverables. The contribut ions of the indivual proj ect are ordered according to 
+their application domain. Final ly, project-wide conclusions concerning the evolution 
+from the first to the sec ond milestone are formulated. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 4 February 2001 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 5 February 2001 2. Purpose and structure of the document 
+The purpose of this deliverable D8, entitled “Functional Specification and 
+Architecture”, is twofold: 
+• summarizing the progress in the BEYOND project  
+• clarifying the approach in the process of going from the first to the second 
+milestone. 
+The purpose and approach of D8  has been agreed upon duri ng the team meeting in 
+Delft (Nl), November 2000. Th e following arguments contri buted to the definition of 
+D8, as it is currently presented. 
+D8, “Functional Specification and  Architecture”, can to some extent be considered as 
+a second iteration on D2 "Requirement s and Usability Methodology". The rationale 
+behind this conclusion is as follows. A fter describing "key concepts" in deliverable 
+D1, the BEYOND partners have contributed to  D2, in which the requirements have 
+been detailed and the usabilit y methodology has been described. Most of the 
+BEYOND partners planned to have a first prototy pe at the time of the first milestone 
+(after one year of research in the consortiu m). This is in particular the case for the 
+partners that are directly active in one of the application domains (Public domain, 
+Home domain, Vetronics domain, Avionics domain). Consequently, the requirements 
+stated in D2 are considered as a kind of c hecklist for the first prototype. Based on 
+the lessons learnt from the first prototype, ideas for the second prototype have been 
+collected. So we can consi der the presented D8 as a de scription of the functional 
+specifications for the second prototype to be delivered at milest one two (at the end of 
+the BEYOND project, after two years of research in the consortium). It seems 
+acceptable that the relation D2-milestone 1/prototype 1 is the same as D8-milestone 
+2/prototype 2.  
+Also it is in accordance with Software En gineering terminology that D8 speaks about 
+Functional Specifications, whic h are usually closer to t he design/architecture than 
+the Requirements in D2 , which were most of the time  high-level requirements, not 
+very detailed.  
+Besides this, it turns out that most of t he BEYOND partners that are directly active in 
+one of the application domains (Public do main, Home domain, Vetronics domain, 
+Avionics domain) have a prototype/demonstr ator that evolves from a version at 
+milestone one to a final version (at least within the BEYOND proj ect context) at 
+milestone two. This as opposed to the r ealization of new prototypes during the 
+second half of the project period. 
+As a result it was decided that a domain-oriented approach provides a 
+comprehensive structure for this deliver able. It supports the placement of the 
+individual projects in their context, and allows key aspects of the involved 
+workpackages (multimodality, a daptivity, simulation and us ability) to be emphasized. 
+It is indeed important that all the key aspects of the workpackages (WP1: 
+multimodality, WP2: adaptivit y, WP3: simulation and WP 4: usability) are present, 
+because this document is a common deliver able for all consortium partners. 
+However, we opted to let the workpackages take part through projects in application 
+domains in order to obtain a coherent and comprehensive report. As several 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 6 February 2001 partners are active within several workpac kages this turned out to be a workable 
+solution. 
+The contributions that  are found in the fo llowing chapters are: 
+Public domain:  
+Accesspoints; public information kiosks 
+Home domain:  
+UI for future in-home electronic systems (Home Experience, Multimodal Jukebox) 
+UI editor for consumer domain  Vetronics domain: 
+ 
+Vetronics UI editor 
+Avionics domain:  
+Intelligent Adaptive Flight Deck 
+The order in which the domai ns and the individ ual projects within the domains are 
+organized is rather deliberat e: from the public domain  with UIs for everyone in 
+everyday circumstances, over the other ap plication domains to the avionics domain, 
+with UIs for very select users in a professional environment. 
+It should be emphasized (and it should be obvious  after reading this deliverable) that 
+the key aspects multimodality, adaptivit y, simulation and usability are independent 
+variables. They are different dimensions along which the UIs are investigated, but 
+they have nothing to do with the order in which the projects are listed. The level to 
+which these aspects have been addressed in  the projects differs considerably. 
+Therefore, for each of the pr ojects listed, there will be s eparate sections devoted to 
+the key aspects in order to (1) show the integrative level as an advantage of 
+cooperation in the consortium and (2) to  focuss on particular efforts concerning 
+multimodality, adaptivity, si mulation and usability. Also , there are sections on 
+architectural issues. 
+It has to be explicitly stated that due to un certainties in the German funding situation, 
+the consortium lacked the experienced  partners for a separate usability 
+workpackage. Therefore, t he other partners had to find a way to overcome this 
+problem. One consequence is that most of  the contributing partners devoted 
+resources to usability engineering activiti es, as reported in this deliverable.  
+The above mentioned relation between deliverables D1 (key concepts), D2 
+(requirements) and D8 (functional specific ations) is applicable for all the listed 
+projects. D1, D2 and D8 are all commo n deliverables. Besides this, there are 
+relations with other deliverab les that are the result of particular workpackages. For 
+instance, D3 “Common Adaptivity Reference Framework” from WP2 comes into play 
+in the adaptivity and/or architec tural sections of this docum ent. This illustrates that 
+the migration from the first to the second  prototype takes into account adaptivity 
+issues, possibly inspired by the cooperat ion in the context of the adaptivity 
+framework. Similar relations can be found with regard to multimodality and 
+simulation. It is likely that the relationshi p also extends to future deliverables, 
+intended to provide even more detail w hen we progress towards milestone 2. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 7 February 2001 The next chapters list the in dividual projects and are in tegrated by the information 
+provided by the project responsibles. Fina lly, project-wide conclusions concerning 
+the evolution from the first to the second milestone are formulated. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 8 February 2001 3. Functional specifications and architecture for domain 
+public (public terminals and kiosks) 
+3.1. Introduction 
+APC (apc interactive solutions AG) is wo rking on the development of information 
+networks, terminals and kiosk solutions to address people's needs for information in 
+public space. The core component in this pr oject is the information terminal which is 
+called accesspoint. It resembles the interf ace between users and the network which 
+transports and provides context sensitive information. The accesspoint is higly 
+multimodal and provides a good basis for adaptive services. 
+APC has devoted part of its development to user interface design. Many features 
+have been implemented in a first multim odal Accesspoint prototype. This is 
+considered to be crucial not only for the accesspoint services but the acceptance of 
+the whole system where essent ial functionalities are s peech controlled dialogs. The 
+second prototype will follow and offer adaptive features as well. It will enable 
+enhanced understanding of voice commands and beter dialog design will be an important step towards nat ural language understanding. 
+3.2. Project Status 
+During the first year, comprehensive analysi s and functional specifications have 
+culminated into the first multi-modal prot otype accesspoint. Its basic technological 
+implementation has been tested during operations in numerous public space 
+applications as a geographical informati on system and marketing support media 
+among many others. 
+By previous customer projects experienc e and internal evaluations we derived the 
+need for a new extended architecture and to re-implement most of the software 
+solutions in order to comply with orig inally defined functi onal specifications, 
+implement usability and new functional requirements, establish a control and 
+distribution network for the termi nals and tune overall performance. 
+During the second year, development of  modular component based modules will 
+address the lack of functional ity and interoperability that are currently missing. Goals 
+for the second prototype are guidelines fo r basic user interface design and the 
+simulation of a sample applicat ion. Another focus is to comply with open architecture 
+standards and maintain accessi bility of web-hosted data. 
+3.3. Methods and results concerning usability 
+As indicated in the proj ect status, usability data ha s been acquired by log file 
+analysis and video surveillance of user sessions. Furthermore, users have been asked to participate in opinion polls and fill in questionnaires. 
+Pre-evaluation of the user interfac e has been carried out together with design 
+experts by APC corporate par tners. Results were mostly focused on acceptance of 
+the system in public space, and address the design of the solid, speech and 
+graphical user interface. It  has been found that a major i ssue in the design of the 
+solid user interface is ergonomics. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 9 February 2001 The limiting factor is usability of the graphical user inte rface. It is followed by the 
+integration of speech c ontrol features into the user interface. 
+3.4. Functional Specifications 
+The most important requirement is the stabi lity of the system on a high-level user 
+application level, which is a consequence of the  availability of basic network and 
+terminal functionality. 
+System failures caused by user operati on or network malfunctions have to be 
+avoided. Dead ends in dialogs have to be addressed by a special help system and contextual understanding has to be prov ided. The system must guide users 
+throughout the interaction pr ocess quickly and effectively and it has to be designed 
+to avoid cognitive overloads caused by information overflow. 
+The accesspoint has to be controllable through different modalities. A switch 
+between modalities must not affect th e system operations, consequently there 
+should be no need to re-initiate the dialog st atus. Likewise, it should be possible to 
+switch the current context without loosing perspective in case the system does not 
+estimate the context properly. 
+3.4.1. General changing requirements and extensions 
+There is an urgent need for extensibility of the software system. The monolithic 
+implementation which is used at t he moment does not support modelling of 
+upcoming functionality requests and it is very difficult to maintain and extend. 
+Although the first prototype complies with the specified functionality we have decided 
+to re-implement it from scratch and carefu lly design all application interfaces for 
+process communications. 
+Better development tools to handle the speech system on an abstract level are 
+required to improve the process of extending its rule database. For better 
+extensibility, context engine s need to be implemented rat her than interfaces and the 
+method of choice are neural networks. As for training purposes new tools are 
+needed and should be able to derive input fr om rule databases which are used at the 
+moment. 
+3.4.2. Usability related specifications 
+There are two major aspects which are of vi tal importance for the acceptance of the 
+terminal in public space applications. Firstl y the solid user interface requires high 
+standards in ergonomics and robustness. Se condly the system needs to have a 
+``subtle notion'' of its services to  guide users quickly and effectively. 
+The terminal pro actively offers its servic es i.e. must be able to attract and help 
+people. It must be self explic able and understand users' needs. It must also be able 
+to handle context specific dialogs. Dialogs  which it doesn't understand clearly should 
+be handled properly to limit user  frustration. Context switc hes must be supported at 
+any state of the session and the system should offer alternatives and rank them by 
+guessing its likelyhood. 
+The graphical and speech user interface need to complement each other. They 
+represent input and output channels and provide access to the state of the context 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 10 February 2001 engine. The information flow must be compat ible with average user capabilities to 
+avoid cognitive overload. T he graphical user interface model presents information in 
+an abstract two dimensional way and supports virtual characters. 
+Further points address traini ng of the context engine of  which some have already 
+been mentioned above. 
+3.4.3. Adaptivity related specifications 
+The following adaptivity specif ications are limited to si ngle user sessions. It is 
+assumed that multiple user sessions are not  very likely to occur in public space 
+applications. They are treated elsewhere.  
+A general single user sessi on occurs when one person in front of the terminal 
+interacts with the system. An onlooker, or person inside the interaction area of the 
+terminal is already considered to be a user. 
+Some adaptivity related specifications ar e partly indicated in section ``Usability 
+related specifications'' abov e. Contextual understanding is an example and support 
+of context switches without explicit r equests are another. The interaction process 
+should be as natural as possible and th e development should ultimatly enable 
+natural language understanding. 
+``Technically'' speaking, the system should be able to detect people automatically 
+and doesn't need to be approached by a subject. It  should be able to initiate the first 
+step and react adaptively because it can re cognize people and distinguish humans 
+from other life, e.g. dogs. 
+Another requirement is speak er independent voice recognition  which is essential in 
+public space applications, i.e. every single user is underst ood instantly irrelevant of 
+age, gender or other distin ct characteristics. 
+3.4.4. Multimodality related specifications 
+The terminal is designed to support classi cal input-output channels like typing or 
+reading, and complement them wit h speech and visual capabilities. 
+Except for high level features, most of t he above mentioned adaptiv ity specifications 
+primarily rely on multimodalit y related features. Visual and audio surveillance enable 
+user detection and language understanding th rough face and speech recognition. At 
+the moment, higher level functions and more  powerful features for enhanced sensing 
+can be implemented by combining speech and visual information. 
+Mode switches which are not initiated by the system are only possible through input 
+channels. Output presentation is dete rmined by the system and the user has no 
+direct influence in this case. If desired th e user can override default settings, but 
+because of privacy issues, certai n output channels ar e preferred. 
+3.4.5. Simulation related specifications 
+Certain new usage scenarios require ex tended functionality which has not been 
+implemented yet. Simulation and testing wil l provide further insight into the 
+integration process and give more practica l hints on usability, before new features 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 11 February 2001 materialize. The system functionality should be extensible and able to be integrated 
+into the simulation environment to interfac e existing and new features at the same 
+time. 
+To describe the newly defined specificati on, the simulation en vironment should 
+provide an abstract high level scripting la nguage thus providing an interpreter. 
+3.4.6. Architectural issues 
+To ensure extensibility of the softwar e system, an open architecture has been 
+chosen. All functionalities will be implem ented using components or even distributed 
+components in a client-server oriented approach.  
+Because of multimedia capabili ties operating system selection is virtually  limited to 
+the MS Windows based platform. 
+The implementations of the context engine  with near natural language capabilities, 
+the multiple modality support functions and the speech and graphical interfaces are 
+heavily component based. 
+ 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 12 February 2001 4. Functional specifications and architecture for domain 
+Home (1) (Home Experience and Multimodal Jukebox) 
+4.1. Introduction 
+ 
+Deleted from public version 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 13 February 2001 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 14 February 2001 5. Functional specifications and architecture for domain 
+Home (2) (UI editor for the consumer domain) 
+5.1. Introduction 
+Home entertainment systems  are embedded-computer syst ems that deliver 
+entertainment content to consumers in their homes. The home environment places 
+special constraints on enter tainment systems, such as audio-video systems.  
+The expected evolution is that home syst ems can adapt to suit to individual 
+preferences, different contexts of use, and different types of content. 
+The user interfaces of adaptive home s ystems will have to communicate this 
+adaptivity to the user. 
+A first step towards adaptive user interf aces is to have an easy way to create 
+customisable or “flexible” user interfaces.  
+Flexibility means here:  adaptivity in the deve lopment phase. Howeve r, the process to 
+develop these flexible user interfaces ne eds to be improved and  supported by tools. 
+Currently, user interfaces are mostly s pecified on paper with sometimes-limited tool 
+support, and it takes many man-y ears to develop them. Prototypes or simulations, if 
+developed well, are far more comprehensiv e than lots of pages of description and 
+they allow early validation of the usability in a cost-effective way.  
+In the computer world, authoring tools or  Rapid Application De velopment tools are 
+used to prototype and build the graphical parts of an application. These parts are 
+compiled into executable code. 
+An authoring tool for the consumer world can use a similar approach as the user 
+interface development tools in the computer  world. However, the consumer world 
+has extra constraints that have to be tak en into account: in particular, these are 
+limited RAM, lack of hard disk and comparably slow processors. 
+Philips DVS aims at developin g a prototype of an authori ng tool for visualisation, 
+specification, design,  code generation of user interf aces for consumer products, with 
+particular emphasis on screen based user in terfaces and control, and taking into 
+account the constraints of the cons umer world as mentioned above.  
+The high level requirements for this authoring tool are:  
+• The authoring tool should a llow easy modification of the behaviour of  user 
+interfaces. 
+• The authoring tool should support easy dev elopment of adaptive user interfaces. 
+• The authoring tool should a llow the functional requirements specification of the 
+next generation of consumer pr oducts to be developed in a much  faster and 
+efficient manner. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 15 February 2001 The first prototype of the aut horing tool offers a basic f unctionality. This functionality 
+has been testing extensively by expert us ers in a pilot projec t. Their experiences 
+resulted in more knowledge, needed to specify new requirements. 
+In the mean time, a common referenc e model for adaptive systems has been 
+developed. 
+The second prototype should offer a more  extended functionalit y based on the new 
+requirements and it should take into account the common reference model. 
+The specific requirements are listed in section 5.4.1.  
+The aim of the two prototypes is to  gi ve us insight in the feasibility of the 
+development of an authoring tool for user  interface development of consumer 
+products. 
+5.2. Project status 
+In the first year of the project, we started with an early version of  the first prototype 
+and focussed on the specification of the re quirements for this prototype, by doing 
+usability tests.  This result ed in a list of requirements for the first prototype as 
+described in section 5.4.1.  
+Also our contribution to the reference m odel for adaptivity (document D3) gave us a 
+better insight in the domain of adaptivity. 
+In the first half  of the se cond project-year, the first pr ototype has been used in a pilot 
+project, where a user interface for a s pecific consumer system, a DVD (Digital 
+Versatile Disc) player was deve loped. This usability testing by expert users in a real 
+project was needed to gain better knowledge on what we expect from an authoring 
+tool. The requirements for a second prototy pe, specified in se ction 5.4.1 are based 
+on the knowledge gathered in these activities. 
+5.3. Methods and results concerning usability 
+The first prototype has been tested extensively by  expert users:  t he user interface of 
+a DVD player has been simulated, a pr ototype UI has been developed and tested by 
+UI developers. Although the firs t prototype offered a limited functionality, it gave us 
+the possibility to gain experience on the desired functionality of an authoring tool. 
+5.4. Functional specifications 
+5.4.1. General changing requirements and extensions 
+In general, an authoring tool is a software development tool which aims at the 
+construction of application programs in a user-friendly way, and which allows a 
+significant reduction in development lead-time. 
+Our authoring tool specifically targets sp ecification, design, simulation and code 
+generation, for the development  of on-screen-based user in terfaces and control of 
+consumer products.  
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 16 February 2001 The first prototype offers a basic functional ity: specification, design and simulation on 
+a PC are supported. Code generation for a ta rget platform is not yet supported. The 
+requirements of the first prototype are described by the requirements listed below: 
+• The authoring tool provides a set of standard widgets. A widget is a graphical 
+entity representing the interface between a user and the application software. The 
+set of standard widgets contains widgets of the following types:  
+• screen, to define properti es for a whole screen; 
+• dialog, to provide a container for other widgets, excluding screens; 
+• text, to provide a field to  display a text string; 
+• button, to trigger specific actions on a user request; 
+• slider, to show the current state of an analogue value, e.g. volume; 
+• picture, to display a bitmap, e.g. a logo. 
+• The authoring tool provides for each projec t a project repository containing a font 
+definition, a colour palette , bitmap images and strings. 
+• The authoring tool allows the user to manage a palette and its colours. Colours 
+are organised in a palette. 
+• The authoring tool allows the user to im port bitmaps from an external source.  
+• The authoring tool allows the user to  simulate a user interface on a PC. 
+An extensive evaluation of the first prot otype, by trying out the tool for the 
+development of the on-screen-based user inte rface of a DVD player resulted in new 
+requirements for a second prototype.  
+From the UI developer’s point of view, the main need was the additi on of  the ability 
+to create menus in an OSD UI. 
+Besides this important user requirement, the second prototype of the tool should 
+demonstrate code generation for a target platform, in th is case the DVD player. 
+The extension - requirements fo r the second pr ototype are: 
+• The authoring tool provides a complex wi dget containing a menu structure and a 
+navigation function. 
+• The authoring tool should pr ovide a menu editor. This  menu editor allows the 
+user to define items in a menu. 
+• The authoring tool allows t he user to generate C code for a target platform, e.g. a 
+DVD player. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 17 February 2001 5.4.2. Usability related specifications 
+The general requirements, listed in section 5. 1, all stress the usability aspects of the 
+tool. 
+A possible usability requirement that will be considered for fu ture extensions is: “the 
+authoring tool should be able to assist the us er in the authoring process by a wizard”. 
+5.4.3. Adaptivity related specifications 
+The first as well as the second prototype fo cus on off-line adaptivity: a user interface 
+developed with the tool is created, simulated and modi fied on a PC. Once the UI 
+satisfies, the authoring tool can generate C code for the ta rget platform, e.g. a DVD 
+player. The compiled C code can then be loaded in the target system.   
+Off-line adaptivity is a first step toward s the development of more adaptive user 
+interfaces. We called this flexibility inst ead of adaptivity. The tool offers the UI 
+developer a more flexible way of developing a UI.  
+5.4.4. Multimodality related specifications 
+The target  platforms for wh ich user interfaces are devel oped with this tool, e.g. a 
+DVD player, have several types of in- and out put interfaces. Thus the authoring tool 
+should be able to support specification, simu lation and code generation of UI aspects 
+related to these i/o peripheral s. A Multimodal user interfac e for the authoring tool is a 
+possible requirement fo r future versions. 
+5.4.5. Simulation related specification 
+As specified in the requirem ents of section 5.4.1, the first as well as the second 
+prototype allow to make simulations of a user interface on a PC .  Simulations are a 
+way to get early feedback on a UI that is being developed. 
+5.4.6. Architectural issues 
+Until now, Philips Hasselt concentrated for the Beyond project on usability testing 
+and on requirements specification. A lot of  effort will be done to design the second 
+prototype conform the requirements specif ied for the second prototype of the 
+authoring tool. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 18 February 2001 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 19 February 2001 6. Functional specifications and architecture for domain 
+Vetronics (Vetronics UI editor) 
+6.1. Introduction 
+6.1.1. Requirements imposed by  Vetronics Application Domain 
+BARCO and the LUC collaborat e to realize ruggedized displays for use in several 
+types of vehicles, for which the user inte rfaces can be defined in a flexible way. 
+Vetronics (vehicle-electronics) are com puter systems embedded in special-purpose 
+vehicles, e.g. ships, trains, trams, airplanes  or vehicles used in construction industry. 
+Examples are global positioning systems in cars, traj ectory guidance in busses and 
+metro, systems allowing the monitoring of a boat in its environment etc. 
+The environments in which t hey are used place special c onstraints on the displays of 
+the Vetronics systems. "Rugged" displays ar e needed, which satisfy specifications 
+such as being resistant to vibrations, extr emely high or low temperatures, shocks, 
+high degree of humidity, magnetic fields et c. These specifications must be satisfied 
+in addition to common image specifications wit h regard to resolution, colors etc.  
+Because conclusions are taken based on t he displayed image, a special demand is 
+to display the video in very  high quality without  artifacts, supporting several types of 
+video sources or graphics inputs with their specific timing paramet ers. In addition, 
+the possibility to add both textual and gr aphic overlay to the displayed video is 
+necessary to show navigation information, diagnostics etc. 
+On top of that hardware par t we desire to have an ‘intelligent’ software layer having 
+the most important feature that the User Interface is User Definable. BARCO 
+collaborates with the LUC fo r the Vetronics software.  
+The first prototype of the UI-Editor was meant to perform some research about the 
+general structure of the Edit or. This prototype gave us  an impression of how to 
+implement such kind of  program and enabled us  to learn about the do’s and don’ts in 
+this kind of application. 
+Another important target is to get so me feedback of the market about the new 
+concept we are introducing. 
+The second prototype should take into  account the rema rks and feedback we 
+received on the first prototype in order to finalize the conceptual phase of the 
+program so we can start the effective development and exploitation afterwards. 
+6.1.2. High-level requirements 
+The previous section emphasized the fa ct that the Vetr onics domain demands 
+ruggedized displays. In this section we will not mention general criteria for 
+ruggedized displays, as they are well-know n by BARCO from earlier developments. 
+We will rather focus on specific targets for BARCO and LUC in the second prototype 
+based on the requirements of t he first prototype. With the feedback on this first 
+prototype we can refine our requirements so  they actually reflect our needs. Knowing 
+that our first prototype was based on a pr ototype of the hardwar e, we can now say 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 20 February 2001 that the hardware is reaching its defin ite form, being comp liant with all the 
+requirements. However the software part (UI- Editor and firmware su pport) are still in 
+prototype phase because of the new  approach for the UI-Editor. 
+For the Vetronics hardware and firmware:  
+• Optimum Video performance 
+• Ruggedness : Environmental Sp ecification compliance. 
+• The software structure of the firmw are should be suitable for adding a ‘UI-
+interpreter’ (to inte rprete and visualize the UI code generated by the UI Editor; so 
+a very important component in this projec t). For this aspect we have chosen to 
+add/implement a kind of virtual machine which performs the interaction between 
+the UI-Code and the effectiv e hardware/firmware. For performance reasons this 
+VM is closely matched with the firmware. 
+• The software (firmware) should be able to  control all the available hardware and 
+the hardware state should be accessible to the firmwar e and be exposed to the 
+UI-Code.  
+• The software architecture of the fi rmware should allow the extension with 
+additional functionality.  
+For the User Interface Editor: 
+• The UI Editor should allow flexible creati on and modification of the user interface 
+of the Vetronics application. This must be done in an interactive and visual way. 
+• The UI Editor should be ab le to communicate with the Vetronics hardware, to 
+download the developed UI to the Vetr onics system for real use. This 
+communication is done using different kinds of interf acing (Serial port, USB, 
+FireWire, IrDa, CAN, …). This communi cation module is also needed to obtain 
+the system configuration from the Vector Unit. 
+• The UI Editor should not only allow t he management of the UI  of the Vetronics 
+application, but should also support def inition of the behavior of the Vetronics 
+system through the connection of r eal actions to UI elements. 
+• The UI Editor itself shoul d be a powerful and user fri endly tool. Because we are 
+focussing of Windows-users , the Windows guidelines are taken info account. 
+However, we do not want to obtain  the “Designed for Windows ….” Label. It 
+should be compatible with the common versions of Windows (98/ME/2000) and 
+near-future versions. 
+• The UI-Editor should be an open-applicatio n so we can add new functionality to 
+support new hardware configurations. To  obtain this we must create an open 
+framework on which we can Plug-In  all functionality we desire. 
+6.1.3. Flexibility versus Adaptivity 
+We define flexibility here as a level of adaptivity of the syst em, from the point of view 
+of the UI developer. This wa y of working assumes that we , in a first stage, only focus 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 21 February 2001 on ‘Off-Line Adaptivity’. This means that we  must develop/modify the User Interface 
+using a separate program (UI-Editor) and downl oad it into the system in order to use 
+the new User Interface. The adaptation ta kes place in between sessions with the 
+Vetronics system. Even this off-line adaptivity  is a step forward in the Vetronics 
+domain as in most cases, the UI is realized in firmware. 
+6.2. Project status 
+During the first year of the project, a lot of analysis and research have been 
+performed. All this research resulted in th e development of a first prototype. This 
+prototype was the first mile stone in the BEYOND program. 
+The prototype consists of a User Interf ace Editor, a Vetronics system and some 
+peripherals to try the co mplete system as such. 
+This prototype has been evaluated internally on the following basis: 
+• Functionality 
+• Compliance with requirements 
+• UI and ease of use 
+• Performance 
+• Major bugs/errors 
+This expert review resulted in some kind of score by which we could validate the 
+prototype (or reject it). 
+This is a summary of the remarks t hat have been made on this prototype: 
+• The user interface of the editor makes t he program quite easy to use, which is 
+very important before any defin ite product can be made and sold. 
+• The functionality of the prototype is  more or less what was required 
+• The graphical performance could be bette r. Some screen updates were not OK 
+• A list of bugs/malfunctions has been ma de. Most of these have already been 
+corrected. 
+In fact, all functional requirements were fu lfilled, but we noticed a major lack in the 
+approach of the software:  PlugIn-Capability. 
+All functional parts were statically lin ked to each other without any way to add 
+additional functionality; although not  without writing lots of code. 
+So, we have decided to start a new cycle wit h a well-analyzed fram ework so we will 
+be able to easily plug-in new functionality ont o the application. Every plug-in will then 
+represent a piece of functional hardware. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 22 February 2001 
+ 
+ 
+Picture 1: Attaching an event to a hotspot for a touchscreen 
+ 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 23 February 2001  
+  
+Picture 2: The Event  Handler Editor 
+
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 24 February 2001 6.3. Methods and results concerning usability 
+As already mentioned in the project stat us, there has been an expert review on the 
+first prototype. This review considered both functionality and usab ility aspects of the 
+program. 
+The expert team consisted of people fr om different divisions within BARCO: 
+• Software Quality Assurance 
+• Marketing 
+• Sales 
+• Software Developers 
+• Data Development Team 
+These members have been chosen for thei r different knowledge of software 
+engineering and their specific use of software in general. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 25 February 2001 6.4. Functional specifications 
+6.4.1. General changing requirements and extensions 
+The list of requirements of the first prot otype can be found in the D2-document. For 
+completeness, the most important re quirements are repeated below, with 
+extensions/changes towards the second demonstrator: 
+Hardware and firmware requirements: 
+• Optimal Video performance on most popular video signals. 
+• Environmental Specifications Compliance. 
+• Event Driven Approach 
+• The firmware should allow extens ions of the functionality.  
+• The software structure of the firmw are should be suitable for adding a ‘UI-
+interpreter’ (to interpret and visualize t he UI code generated by the UI Editor).  
+This UI-Interpreter has now a more c oncrete form by means of the dedicated 
+Virtual Machine. 
+• The UI interpreter (=VM) shoul d show a “start menu” (defi ned in the UI by the UI 
+Editor) when the system is powered up. This  start menu is the root item for the 
+complete UI-menu tree. 
+• The UI interpreter should interpret t he downloaded UI code to  navigate through 
+the menus and perform defined actions. Bec ause of the event driven firmware, 
+the UI is built on Event-Action associations 
+• The UI interpreter should control the in terference between the defined UI and the 
+environmental conditions, such as ove rruling user-defined UI elements and 
+actions by an “emergency” UI and behavior. This is  the decision-agent we need 
+for content prioritization. 
+User Interface Editor: 
+• System Configuration Wizard 
+• Font authoring modalities 
+• The UI Editor should allow the user to create/modi fy menus. Menus are in fact 
+the combination of Overlay (OSD and Symbol Generator), HotSpot zones and 
+Event-Action Associations. 
+• The UI Editor should enable the user to associate an event to an action as 
+defined in the previous point. An event-dri ven approach is envisioned in the first 
+prototype to evaluate its feasibility. Hereby the VM  must support this event-driven 
+approach and act as a transparent lin k between the generated UI-code and the 
+hardware. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 26 February 2001 • The UI Editor should also dispose of a fa cility to associate an event to more than 
+one action. This extension of the event-d riven approach raises design issues to 
+be tackled.  
+• The UI Editor should provide a co mpile step to generat e code on the 
+development platform. The Editor also a llows downloading the generated code in 
+the embedded Vetronics system (where it will be interp reted by the firmware). 
+This is the way the OffLine adaptivit y of the Vetronics syst em is based on. 
+• In general, the UI Editor should be a us er friendly and powerful development tool. 
+This requires: 
+• Attention for visualization and simula tion issues (WYSIWYG approach, e.g. 
+Visualization of the desi gned UI, menus, icons, Simulating navigation etc.). 
+The Windows guidelines should be followed. 
+• Attention for solutions that speed up the development of  the UI (e.g. 
+investigate the use of drag-and-drop tools such as in the context of action 
+definition). 
+• Attention for general usability i ssues and user interface design. 
+Our main extension of the requirements for the UI-Editor is the Plug-In- approach of 
+the program. In order to meet this extra requirement a lot of investigation on the 
+architecture of the UI-Editor has been done and seriously evaluated. This resulted in 
+a component-based approach wher e all functionality could easily be ‘Plugged’ into 
+the editor. As a result, we are able to add the Symbol Generator Functionality to the 
+Editor, even with expanded pos sibilities like macro defini tion, text capability and 
+bitmap operations. All these im portant features exposed by  the hardware will now be 
+fully supported in the UI-Editor, whic h gives us expanding possibilities. 
+6.4.2. Usability related specifications 
+The usability has been verified by the expert  review of the first prototype. Because of 
+the variety of SW-experience and interest  we covered a wide  range of usability 
+issues, from non-technical, co mmercial to pure technical. 
+Every member had his specific remarks on the software, as expected, some were 
+more about the Look-And-Feel, and others we re more technical about bugs and 
+inconsistencies. However, all remarks were ve ry useful for the evaluation of this first 
+prototype: 
+• Tree-Type overview looks very familiar to most users, might seem complicated at 
+first sight, it gives fast access to all modalities of the editor 
+• An important usability require ment with respect to the UI-Editor is the WYSIWYG 
+layout using the Windows Guidelines. The hardware layout is always visible 
+during development. But, this la yout is now very static, it does not provide the 
+ability to modify the layout (e.g. button la yout) towards the real  application. Also 
+derived Vetronics products, with different housing, LCD, … are not covered.  
+• Font creation/modification is really easy and performing well. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 27 February 2001 • Some artifacts are noted during screen updates. 
+• Communication ports are statically im plemented into the editor. When new 
+hardware is available, a lot of additiona l implementation work has to be done to 
+support the hardware (e.g. CAN-bus, USB, …). 
+• The complete UI-Editor has to be updated if  modifications are made. This is an 
+anomaly when we want to give support/updates via the Internet. 
+• Finally we concluded that t he prototype met its functional  requirements, but it was 
+too static. From our hardw are development and custom er requirements we had 
+learned that all have very specific needs concerning not only on User Interface 
+but also real Hardware Interfacing to se veral peripherals. So we must be able to 
+support this wide (and growing) range of interfacing capabilities of our Vetronics 
+hardware in our UI-Editor as kind of Plug-Ins. This will also solve our 
+maintainability issue. 
+6.4.3. Adaptivity related specifications 
+The generated User Interface is only off- line adaptive. Which means the UI is 
+modified on a separate computer and then reloaded into the Ve ctor System. The 
+Vector system has some agents inside to pr ioritize the information available (UI-
+information, system status, Environment data,  …). The most important data must be 
+shown at the topmost level! 
+Though using off-line adaptivit y, the running Vetronics application (based on code 
+realized by means of the UI Editor) can demonstrate “intelligent” behavior to some 
+extent. 
+The User Interface has access to its own da ta (directly UI-related), but also to data 
+provided by the firmware concerning the current system status and its environment. 
+As a consequence, there is a need for a kind of decision algorithm (=agent) in order 
+to decide whether the UI is more impor tant than the system/ environment data or 
+vice-versa, depending on the actual content. This will reflect in the information the 
+user gets to see. It is possible that in  dangerous conditions the environmental data 
+force the defined UI to be overruled by some  built-in UI elements (e.g. warnings and 
+error messages). 
+The UI-Editor itself enables us to create and modify the User Interface off-line and 
+then reload it. In the definit e program we can implement wizards in order to guide the 
+user through several tasks or warn him fo r contradictory situations. These self-
+learning wizards will recognize the user’s b ehavior and identify occasions to interfere 
+and help. In this case, we need a kind of user profile and a b ehavior database in 
+order to take the right  decisions/predictions. 
+In this context, we will use the referenc e model in which we collaborated with the 
+other members of WP2 for the Deliverable 3. This reference mo del will be used in 
+the agent approach of both the firmware and editor. Although extension will be rather 
+limited in first, we want to do some res earch about extending it s implementation in 
+both the Firmware and UI-Editor. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 28 February 2001 6.4.4. Multimodality related specifications 
+The relation of this project to multimodalit y is rather limited. However, our Vector 
+system should be able to communicate with  all kinds of peripherals. Thus, not only 
+the hardware should support these peripherals, but also the UI-Editor should contain 
+the possibility to define protocols, identif y several types of communication ports, … 
+The integration of additional  I/O possibilities like speech  output, sound generation, … 
+is still under consideration. In Vetr onics markets, probably due to the heavy 
+environmental conditions (temperature, vibr ations, noise, …) we cannot really use 
+fine multimodal devices. 
+However, auditive information is one of the most used feedback methods in train 
+applications. Also Touch I nput devices are rather fr equently used because they do 
+not require additional place. 
+Currently, support for a touch screen is provided in the UI-Editor. 
+6.4.5. Simulation related specifications 
+To make our UI-Editor complete, it must have a simulation module incorporated so 
+we can try the complete system off-line on our development computer before loading 
+the generated code into the Vector Syst em. As a consequence, the Vector system 
+does not have to be available while develop ing and testing the UI. This is a very 
+important demand because the syst ems are mostly built in into consoles where they 
+are not easily accessible for downloading etc.  
+An important result of the simulation may be the ability to certif y the generated UI for 
+use in life critical conditions. This c an be achieved when using an identical Virtual 
+Machine in both the simulato r and firmware. This is to be investigated after the 
+finalization of our application and is cert ainly beyond the context of this BEYOND 
+project. 
+6.4.6. Architectural issues 
+Because this new approach demands flexib le functionality by using Plug-Ins, we 
+needed to redesign the framework from a static one to a co mponent based one. 
+In order to be sure we can co ver all flexibility requirements a lot of effort is now being 
+done in the complete architectural redesign of the UI-Editor. This architecture is thus 
+considered as a very open framework (t he base application) wh ere we can easily 
+plug in all Plug-Ins we need. To acco mplish this, we have chosen to use an 
+component based approach by using the latest SW-tec hnologies that are usable 
+within this type of application/platform, namely COM & COM+. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 29 February 2001  
+An idea of the application structure and c ontents is illustrated by the figure below: 
+Figure 3  
+SimulationActions & Event  
+Relations  Menu-authoring
+UploadTiming  
+Configuration  Symbol Generator
+SetupDevice DriverFont System
+Configuration
+Peripheral  Help 
+DownloadOverview  
+Actions & Events  
+Commmunication  RS-232
+EIA-422/485OSDSymbol
+GeneratorTouchScreen
+HotSpotsEvent-Action  
+Association  
+CAN
+USB
+...Application  
+Framework  
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 30 February 2001 7. Functional specifications and architecture for domain 
+Avionics (Intelligent Adaptive Flight Deck) 
+7.1. Introduction 
+7.1.1. Purpose of the inte lligent adaptive flight deck 
+BARCO and TUDelft collaborate in this cont ext.It is expected that a well-designed 
+intelligent adaptive flight dec k can significantly increase the flight safety and 
+efficiency compared to the collection of static (but often adaptable is not adaptive) 
+and diverse displays in the cockpit of t oday. Accident analysis has shown that 65% 
+of all aircraft incidents are caused by human  error. Two kinds of human errors can 
+be distinguished: slips and mistakes [Reason, 1987]. A slip occurs when the 
+intention is right, but a devia tion of that intention occu rs. A mistake occurs when the 
+actions are according to the intended plan, but the plan is inadequ ate to achieve the 
+intended goal. It is expected that slips an d mistakes in aircraft operation can be 
+avoided by an intelligent adaptive flight deck t hat assists the flight  crew in performing 
+their tasks. An intelligent system that k nows the human intentions and the actual and 
+predicted flight status can det ect slips from the intended plan. If the system is aware 
+of the goals of the operat ion, the intelligent  system can even give a recommendation 
+to the pilot to correct for the error. 
+In most cases, mistakes are not simply due to a bad knowledge of the theory or 
+procedure, but are rather a l ogical consequence of a lack of situation awareness . 
+The flight deck communicates to the pilot information about the flight status (flight 
+plan, position, velocity, etc. ), the environment (weather, tr affic, airports, etc.), and 
+system status (aircraft system failures, etc. ). To form an internal representation of 
+the flight situation, t he crew has to integrat e all this information presented to them on 
+numerous head-down cockpit displays in differ ent formats. In addition, the auditory 
+channel is used to present advice, warnings and alerts to the crew. Especially during 
+critical situations, where t he situation awareness is of greatest importance, pilots 
+have difficulties building up a r epresentation of the flight situation. At the same time, 
+several buttons can lighten up, various al erts can be given, and information is 
+highlighted on the display. T he flight crew then has to determine the most critical 
+problem and the right proc edure to solve it, not an ea sy task for the human being 
+with only a limited view of t he situation and it is clear that situations like these 
+contribute considerably to pilot workload. Mistakes can be prevented by assisting the 
+pilot in building situation awareness. It is expected that an intelligent adaptive 
+interface that presents the right informa tion in the right format (integrated and 
+intuitive for that particular situation) at t he right time (with an appropriate alerting 
+strategy) can significantly increase flight safety. 
+Another contributor to the high workload during critical situat ions in the cockpit is the 
+task of decision making. Even if the flight crew is able to determine a good resolution 
+to solve the problem, they have too little over view to optimize it. An intelligent flight 
+deck can help the pilot by proposing optimized alternatives out of which the pilot can 
+choose one. In such a co-oper ation, the pilot and intellige nt flight deck share their 
+knowledge and capabilities to improve t he safety and efficiency of the overall 
+system.  
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 31 February 2001 7.1.2. Levels of the adaptation process 
+Four stages can be distingu ished in the adaptation proc ess: initiation, proposal, 
+decision, and execution [Die terich et al., 1993]. The a gents performing or controlling 
+these stages are the pilot of  the automation. The followin g levels of adaptation are 
+applicable to the intelligent adaptive f light deck [Abeloos et al., 2000]: 
+• Self-adaptation : the automation performs t he tasks on all stages of the 
+adaptation. This adaptati on is contradicting with  the human-centered design 
+philosophy and seems  therefore unacceptable. In ce rtain time-critical, high 
+workload situations, however, it ma y be necessary or even mandatory to 
+automatically adapt the interface to draw  the crew’s attention and to allow an 
+immediate  but sound response. Because the adaptation is une xpected and may 
+cause confusion, its occurrence must be well known and trained by the cockpit 
+crew.  
+• User-controlled self-adaptation : the decision to adapt is taken by the user, while 
+all other tasks are automated. If the au tomation thinks that for the current 
+situation a different pres entation may be more efficient, it may suggest an 
+adaptation that has to be agreed upon by the pilot. 
+• User-initiated self-adaptation : the user takes the initiative, the automation 
+proposes, decides and executes. This is in  fact self-adaptati on, but allowing the 
+pilot to take the initiative. 
+• Computer-aided adaptation : on a user’s initiative , the automation proposes an 
+adaptation, which it will execut e after the user’s approval.  
+• System-initiated adaptation : on a system’s initiative, th e user proposes, decides 
+and executes the adaptation. The pilot is then informed if it seems reasonable to 
+tailor the system. 
+• Adaptation : the user performs the tasks on al l stages of the adaptation. Simple 
+adaptation gives the opportunity  to users to tailor the system to their own needs 
+and preferences. This already exists in the cockpit of today, where the pilots can 
+control the brightness, contra st, etc. of the display directly. This type of adaptation 
+can better be described as flexibility . 
+For a full review of the applicability of adaptiv ity in a future intelligent flight deck, the 
+reader is referred to [Abeloos, 2000]. 
+7.1.3. Proposal for the first prototype 
+The first prototype of the intelligent adaptiv e flight deck has to assist the pilot in: 
+• Establishing and maintaining situati on awareness by presenting the right 
+information in the right fo rmat at the right time. 
+• Detecting and correcting errors by compar ing the overall system ’s goals, the pilot 
+intentions, and the actual and predicted flight state. 
+• Decision making by proposing optimized alternatives. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 32 February 2001 • Carrying out some simple actions by comparing the active procedures with the 
+pilot’s actions.  
+The first prototype should be able to solv e conflicting hazardous situations in an 
+optimized manner. It does so by supporting all levels of adaptation that have been 
+discussed above. In the case of self-adaptat ion, the pilot shall always be offered the 
+opportunity to overrule the adaptation. These issues have all been worked out in 
+more detail in the requirements document D2 . As will be descri bed below, the first 
+three levels of assistance have been im plemented in the first prototype. 
+7.2. Project status 
+Description of the first prototype 
+To observe the environment, the first protot ype of the intelligent adaptive flight deck 
+consisted of the implement ation of two aircraft warn ing systems, the Ground 
+Proximity Warning System (GPWS) and the Traffic aler t and Collision Avoidance 
+System (TCAS). The agent-orien ted system architecture that  is applied allows these 
+systems to be integrated on a system level. This means  that the two systems can 
+communicate on all levels of their fu nctioning. They can exchange rough 
+environmental information, the detection of  hazardous situatio ns, and resolution 
+advisories to solve for these critical si tuations. This data exchange allows the 
+system : 
+To form one integrated picture of the environment, 
+To present alerts in the right or der, to apply a good alerting strategy, and 
+To negotiate resolution advisories, so that the resolution of the one critical situation 
+does not induce another critical situation. 
+The intelligent interface itself has  been implemented as a group of agents 
+collaborating with the various system agents in a shared ontology (Figure 4). This 
+means that all functions on a ll levels of the interface c ould communicate with each 
+other. The first three levels of assistance (establishing situation awareness, detecting 
+and correcting errors, decision making) liste d above have been incorporated in the 
+first prototype. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 33 February 2001 Figure 4 : Warning system group communi cation organization (first prototype)  
+ 
+To help the pilot establishing and main taining situation awareness (assistance 
+level 1), the pilot interface consisted of  two advanced displays showing the pilot a 
+three-dimensional synthetic view of t he environment (the Prim ary Flight Display 
+(PFD)) accompanied by a two-dimensional bird ’s eye view of the environment (the 
+Navigation Display (ND)). To detect and co rrect for errors, and to help the pilot in 
+his/her decision making (assistance leve ls 2 and 3), the warning-system adaptation 
+was implemented in particula r on the Navigation Display , including the GPWS and 
+TCAS systems introduced above. The range in the ND was automatically adapted to 
+show the pilots the cause(s) for the warn ing signals. Furthermore, display features 
+that were not useful when a threat did not occur were ‘darkened’ automatically, i.e. 
+the dark cockpit concept, or removed aut omatically. A realistic scenario was 
+developed to test the functiona lity of the firs t prototype. 
+7.3. Methods and results concering usability 
+Testing the first prototype 
+The first prototype has been tested in a future airspace environment, consisting of 
+other traffic and terrain. Other environmental fa ctors, such as weather and Air Traffic 
+Control were not considered. The firs t prototype has been tested using a 
+questionnaire . A fixed demonstration has been devel oped that showed all features of 
+the adaptive display in a realistic scenario. No  user interaction was possible in this 
+stage. The demonstration has been shown to a group of 23 experts in the field of 
+avionics: 17 avionics and software engi neers, 3 flight te st engineers and 3 
+commercial pilots. The participants were fi rst briefed extensively to introduce the 
+intelligent flight deck and explain t he scenario. After the demonstration the 
+participants were asked to fill out an ex tensive questionnaire, addressing pilot 
+acceptability, workload, situation awarenes s, and many others. The results of the 
+questionnaire analysis have been described in a report [Steent jes & Mulder, 2000]. 
+Some of the main outco mes are described below. Facilitator
+Weather
+agentTCAS
+agent
+GPWS
+agent
+Resolution
+agentCollision,
+Terrain,
+Weather
+Avoidance
+Sensors
+‘Global’ communication busWarning
+System
+Group‘Local’ communication bus
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 34 February 2001 The questionnaire evaluation can be concl uded successful, and guides the future 
+development of the second pr ototype. For the near future (around february 2001) a 
+second group of experts, consisting of p ilot trainees, has been invited to see the 
+demonstration and fill out the questionnaire  addressing the first prototype. 
+7.4. Functional specifications 
+7.4.1. General changing requirements and extensions 
+General 
+The first prototype of the in telligent flight deck is able to build and maintain an 
+internal model of a relatively  small sub-set of the environ ment (objects, possibilities, 
+constraints) and of some of the interact ions within the human-machine system itself 
+(goals, capabilities, preferences, etc.). The second prototype will extend the first one 
+considerably. The questionnaire revealed t hat especially the way of communicating 
+this internal situation awareness (the ‘sys tem’ awareness) to the pilot should be 
+improved. Experts expressed a need of  ‘seeing through’ the automation and 
+adaptation, and the user interface should  have an option to provide them that 
+possibility. Furthermore, experts claim the o pportunity to overrule the system mental 
+model, and in this respect the user interf ace needs to be altered. But these findings 
+do not call for changing the requirements as  such. The findings from the pilot 
+questionnaire were in general in line with, or were envisaged in the requirements as 
+specified in Deliverable D2 of this project. Hence, t he number of changes in the 
+general requirements is small.  
+The existing multi-agent system  architecture of the first prototype (Figure 4) will not 
+be altered, but rather be upgraded and si gnificantly extended (Figure 5). The 
+extensions will be directed almost excl usively towards the automatic, adaptive 
+management of content information on the display (Display Group and Control 
+Group in Figure 5), as defined by the in tegrated warning system architecture. 
+Questions to be answered includ e the manner in which information that is not critical 
+but still valuable should be  handled (dark cockpit?). The multi-agent subsystem that 
+deals with managing content  and inferring user intent needs  to be extended, an effort 
+that will require considerable attention. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 35 February 2001 Figure 5 : Multi-agent system architecture of the second prototype (the warning 
+system architecture is included in th is figure as the Warning Systems group)  
+ 
+Changed requirements 
+One requirement from D2 is dropped: 
+The second prototype will incorporate the use of touch-screen technology. 
+This will not be feasible within the available time . 
+7.4.2. Usability related specifications 
+The use of a pilot/expert questionnaire in t he evaluation of the first prototype has 
+been successful. It has lead to a significant insight into how the user group perceives 
+the purpose and use of  the adaptive system. Therefore,  also the second prototype 
+will be evaluated using a questionnaire. The user group will again consist of a mixed 
+group consisting of pilots, flight te st engineers and avionics specialists.  
+7.4.3. Adaptivity related specifications 
+The adaptivity related specifications of D2 need not be changed at all. The adaptive 
+interface shall adapt to t he situation and the pilot’s state and task. The adapted 
+constituents are modality (see below), display configurati on, information presented, 
+level of detail, and timing strategy. 
+Special interest will be given to the af orementioned issue that the adaptation should 
+leave the pilot in command, and should  be non-intrusive. Furthermore, the 
+consequences of the adaptation on the user interface itself  should be intuitive, and Data and BDI information flow
+Signal flow
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 36 February 2001 support visual momentum. The usability anal ysis will put extra attention to these 
+aspects. 
+7.4.4. Multimodality related specifications 
+As indicated in the requirem ents, the second prototype shall incorporate an auditory 
+warning signal, augmenting the visual channel. The warning signal will be the result 
+of the integrated warning system. In other words, the auditory warning will present 
+the pilot a resolution that all participat ing warning systems (int elligent agents) agree 
+upon. 
+7.4.5. Simulation related specifications 
+The multi-agent adaptive inte lligent flight de ck system will be programmed in Java, 
+using JACK Intelligent Agents [tm], a produc t of Agent Oriented Software Pty. Ltd, 
+Victoria, Australia. Furthermore, all user  interfaces (displays, controls) are 
+programmed in OpenGL. The platform is a Windows NT workstati on. No efforts are 
+being conducted to generalize the  real-time simulation software for product 
+simulation purposes. 
+7.4.6. Architectural issues 
+These have been covered above. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 37 February 2001 References 
+[1] Abeloos, A.L.M. (2000). The Intelligent Adaptive Flight Deck. Technical Report, Delft University 
+of Technology in co-operation with Barco Display Systems. 
+[2] Abeloos, A..L.M., Mulder, M., and van Paassen,  M.M. (2000). The Applicability of an Adaptive 
+Human-Machine Interface in the Cockpit. 19th European Annual Conference on Human Decision 
+Making and Manual Control, Ispra, Italy, June, 26-28, 2000. 
+[3] Dieterich, H., Malinowski, U., Kühme, T., and Schneider-Hufschmidt, M. ( 1993). State of the Art 
+in Adaptive User Interfaces. In Schneider-Hufschmidt, M. et al. (E ds.), Adaptive User Interfaces, 
+Principles and Practices, North-Holland, pp. 13-48. 
+[4] Reason, J. (1987). Generic Error-Modelling System (GEMS): A Cognitive Framework for 
+Locating Common Human Error Forms. In Rasmussen,  J. et al. (Eds.), New Technology and Human 
+Error, John Wiley & Sons Ltd., pp. 63-83. 
+[5] Steentjes, A. and Mulder, M. (2000). Analysis of  a Questionnaire addressing Free Flight’s “Big 
+Picture” Displays. Report, Delft University of Tec hnology in co-operation with Barco Display Systems. 
+ 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 38 February 2001 8. Conclusions 
+In this document we have summarized t he progress in the BEYOND project and 
+clarified the approach in the process of goin g from the first to the second milestone. 
+In particular, functional requi rements and possibly their translation into architectural 
+issues have been listed. This has been illu strated through the i ndividual projects 
+within the targeted application domains. In the description the key aspects 
+multimodality, adaptivity, simulation and  usability have been considered as 
+independent variables, allowing to show the progress for all workpackages in the 
+project. 
+While all of the projects evolve in one wa y or another from the first to the second 
+prototype, there are big differences in that evoluti on. Between the alternatives we 
+find extremes such as performing a second iter ation with different points of attention, 
+or looking for alternative solutions for the same research questions as asked earlier 
+in the project. 
+ In correspondence with the allocation of resources in individual workpackages, 
+multimodality and/or adaptivit y and/or simulation and/or  usability are stressed 
+differently in the migration to the second prototype. It catches the eye that several 
+projects envisage architectural changes to accomodate the desired extensions. 
+Aspects of multimodality and simulation have only been focussed upon in this 
+document as far as this contributes to t he overall functional specifications of the 
+presented projects. Details  of these aspects will a ppear in deliverables per 
+workpackage. 
+With regard to adaptivity, the diversit y in feasibility and approach stated in 
+deliverables D2 (requirements) and D3 (adaptivity reference framework) are 
+confirmed in the functional specifications. 
+It has been mentioned already that in th e “emergency scenario” (no subsidy for 
+German partners and no replacem ent), most partners had to tackle the usability 
+issues by themselves. Wherever appropr iate, individual prototypes have been 
+subject to usability studies. This was not always possible: the li mited nature of the 
+first prototype and time constraints (BEYOND is a short term project) are mentioned 
+amongst other restrictions. However, even if  usability studies are carried out it is 
+remarked that more longitudinal studies are required in this context, e.g. with regard 
+to adaptivity issues. Questionnaires and expert reviews have been applied with 
+success within different projects and domains. 
+Depending on the project, archit ectural issues translate functional specifications to 
+(most of the time high-level) system design, or list additional specifications. Projects 
+involving adaptivity usually refer to D3, “adaptivity reference fr amework”, in their 
+section about architecture. 
+The presented projects also follow ge neral tendencies with regard to software 
+development. In particular, at least two projects emphasize t hat a component-based 
+(or plug-in) architecture is envisioned to enhance the flexibility of the final 
+demonstrator. 
+ITEA 99002 BEYOND 
+BEYOND  Public Deliverable 8 
+Functional Specifications and Architecture 39 February 2001 In conclusion, the presented pr ojects are subject to a smooth migration from the first 
+to the second prototype with vary ing points of attention. This  shows from the fact that 
+the functional specifications and architecture are based upon but more detailed than 
+the requirements listed in deliverable D2. 
+ 

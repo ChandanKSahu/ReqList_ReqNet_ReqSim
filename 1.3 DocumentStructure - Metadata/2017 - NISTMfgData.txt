@@ -1,0 +1,28 @@
+D	Software Requirements Specification to Distribute Manufacturing Data
+3	External Interface Requirements
+3.1	User Interfaces
+3.1.1	Volatile Data Stream
+3.1.2	Query-able Data Repository
+3.2	Hardware Interfaces
+3.3	Software Interfaces
+3.3.1	Description of Services
+3.4	Communication Interfaces
+4	System Features
+4.1	Component Functional Requirements
+4.1.1	Volatile Data Stream
+4.1.2	Query-able Data Repository
+4.2	Data Curation
+4.2.1	Description and Priority
+4.2.2	Functional Requirements
+4.3	Software System Administration
+4.3.1	Description and Priority
+4.3.2	Functional Requirements
+5	Non-functional Requirements
+5.1	Performance Requirements
+5.2	Reliability Requirements
+5.3	Availability Requirements
+5.4	Security Requirements
+5.5	Maintainability Requirements
+5.6	Business Rules
+5.6.1	Super-User Role Business Rules
+5.6.2	User Role Business Rules

@@ -1,0 +1,10 @@
+D	Software Requirements Specification for Mashbot - web service for managing a company’s presence on social networks.
+3	Specific Requirements
+3.1	External Interface Requirements
+3.1.1	Email System
+3.2	Functional Requirements
+3.2.1	User Accounts
+3.2.2	Marketing Campaigns
+3.2.3	External Service Accounts
+3.3	Security Requirements
+6	Use Cases

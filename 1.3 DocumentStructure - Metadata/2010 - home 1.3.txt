@@ -1,0 +1,25 @@
+D	DigitalHome Software Requirements Specification HomeOwner Inc. DigitalHomeOwner Division
+3	Overall description
+3.2	Users Description
+3.2.1	DigitalHome Users
+3.2.2	DigitalHome Technician
+3.3	Development Constraints
+3.4	Operational Environment
+3.4.2	DH Home Web Server
+3.4.3	Home DH Gateway Device
+3.4.4	Sensors and Controllers
+4	Functional Requirements
+4.1	General Requirements
+4.2	Thermostat Requirements
+4.3	Humidistat Requirements
+4.4	Security System Requirements
+4.5	Appliance Management Requirements
+4.6	DH Planning and Reporting Requirements
+5	Other Non-Functional Requirements
+5.1	Performance Requirements
+5.2	Reliability
+5.3	Safety Requirements
+5.4	Security Requirements
+5.5	Maintenance Requirements
+5.6	Business Rules
+5.7	User Documentation

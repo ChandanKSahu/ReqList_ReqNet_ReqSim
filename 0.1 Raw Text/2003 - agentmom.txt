@@ -1,0 +1,299 @@
+
+ 1Applying Broadcasting/Multicasting/Secured Communication to agentMom in 
+Multi -Agent Systems  
+ 
+Software Requirements Specification   
+ 
+Version 1.1  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This document conforms to IEEE Std 830 -1998 Software Requirements Specification.  
+This document is submitted in partial fulfillment of the requirements for the degree MSE.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Chairoj Mekprasertvit  
+CIS 895 – MSE Project  
+Kansas State University  
+Spring 2003  
+ 
+ 
+ 
+ 
+ 
+ 2Table of Contents  
+1 Introduction ................................ ................................ ................................ .................... 3 
+1.1 Purpose ................................ ................................ ................................ ..................... 3 
+1.2 Scope ................................ ................................ ................................ ......................... 3 
+1.3 Definitions, Acronym & Abbreviations ................................ ................................ 3 
+1.4 References ................................ ................................ ................................ ................ 3 
+1.5 Overview ................................ ................................ ................................ .................. 3 
+2 Overall Description ................................ ................................ ................................ ........ 4 
+2.1 Product Perspective ................................ ................................ ................................ 4 
+2.2 Product Functions ................................ ................................ ................................ ...4 
+2.3 User Characteristics ................................ ................................ ................................ 4 
+2.4 Constraints ................................ ................................ ................................ ............... 4 
+2.5 Assumptions and Dependencies ................................ ................................ ............. 5 
+3 Specific Requirements ................................ ................................ ................................ ...5 
+3.1 Use cases ................................ ................................ ................................ ................... 5 
+3.2 Specific Requirement ................................ ................................ .............................. 7 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 31 Introduction  
+      This section provides a n overview of this project.  
+ 
+1.1 Purpose  
+      The purpose of this document is to describe functionality and behavior of the new 
+agentMom framework. This document is intended to be viewed only by project advisor 
+and committee members.  
+ 
+1.2 Scope  
+      This  document covers the software requirements for the project “Applying 
+Broadcasting/Multicasting/Secured Communication to agentMom in Multi -Agent 
+Systems”.  
+ 
+1.3 Definitions, Acronym & Abbreviations  
+agentMom 1.2  refers to current implementation of agentMom  
+New agentMom  refers to this project, including agentMom with capability of 
+broadcasting, multicasting and secured communication  
+Unicast  refers to one -to-one communication in such a way that a packet originates from a 
+single Internet host, and it is destined to a unique location of another Internet host.  
+Multicast  refers to one -to-many communication in such a way that a packet originates 
+from a single Internet host, and it is destined to multiple receivers within the same 
+multicast address.  
+Broadcast  refers to  one-to-many communication in such a way that a packet originates 
+from a single Internet host, and it is destined to all receivers within the same local 
+network.  
+Organization  refers to a set of agents.  
+Reorganization  refers to a situation where the previou s organization structure is not 
+efficient to succeed the mission.  
+Group  refers to a set of agents who agree to use the same multicast address to subscribe 
+group message.  
+Time-To-Live (TTL) refers to the number of hops that multicast message is allowed to 
+remain in the network before it is discarded by the router.  
+ 
+1.4 References  
+• AgentMom User’s Manual, Air Force Institute of Technology, July 2000  
+• Multiagent Systems Engineering. The International Journal of Software 
+Engineering and Knowledge Engineering  
+• IEEE  Standard for Software Requirement Specification, IEEE 830 -1998  
+• Project Overview version 1.0, Kansas State University, March 2003, 
+(http://www.cis.ksu.edu/~cme6556/project_overview_1. 0.pdf ) 
+ 
+1.5 Overview  
+      The remainder of this document provides a greater detail functionality and 
+requirement of the software. Section 2 describes product perspective, overall 
+functionality, intended users, constraints and assumption of this software.  Section 3 
+provides general Use Cases and specific requirement of this software.  
+ 4 
+2 Overall Description  
+      This section provides an overview of the project functionality and factors that affect 
+this project and its requirements.  
+ 
+2.1 Product Perspective  
+      This project will be a framework that provides reusability of agent’s communication. 
+It is implemented in Java and provides the basic building blocks for building agents, 
+conversations between agents, and the message that are passed in the conversat ions. 
+2.1.1  Software Interface – java version 1.4.0 is required to use the software.  
+2.1.2  Communication Interface – TCP/IP is used in order to send unicast message. 
+Multicast protocol is used in order to send multicast message. UDP is used in 
+order to send broadcast message.  
+ 
+2.2 Product Functions  
+2.2.1  Enable agents to broadcast a message to all the agents within the same local 
+network.  
+2.2.2  Enable agents to multicast a message to all the agents within the same 
+multicast address.  
+2.2.3  Enable agents to unicast a message to other agen ts within organization.  
+2.2.4  Allow agents to choose among unicast, multicast and broadcast 
+communication.  
+2.2.5  Allow agents to join and leave multicast group.  
+2.2.6  Provide message encryption and decryption techniques for secured 
+communication.  
+2.2.7  Allow agents to choose to e ncrypt or not to encrypt message.  
+ 
+2.3 User Characteristics  
+      Users who want to implement multi -agent systems based on this framework are 
+expected to have general knowledge of Java programming, object -oriented programming 
+and Multi -Agent Systems Engine ering Methodology.  
+ 
+2.4 Constraints  
+2.4.1  Reliable message delivery – multicast/broadcast packets are delivered with 
+best effort. Thus, a packet may be delivered to all specified agents or none.  
+2.4.2  Security – we provide some basic mechanisms for security such as me ssage 
+encryption. However, there is no guarantee that the others cannot decrypt the 
+encrypted messages.  
+2.4.3  Multicast Protocol – in order to send multicast message, network environment 
+such as router, network card and operating systems must support multicast 
+protocol.  
+2.4.4  Broadcast Message – in many network, only system administrator is allowed 
+to send broadcast message.  
+ 
+ 52.5 Assumptions and Dependencies  
+2.5.1  We assume that each agent knows the address of destinating agents in order to 
+send unicast message.  
+2.5.2  We assume th at each agent has enough knowledge to decide the best way to 
+communicate with the other agents.  
+2.5.3  In the case of using secured multicast communication, we assume that there is 
+an agent whom each agent can request for the same encryption and decryption 
+key. T his agent should maintain a list of agents who are allowed to get the 
+keys.  
+2.5.4  We assume that each agent knows the multicast address in order to send 
+multicast message.  
+ 
+3 Specific Requirements  
+      This section provides all of the project requirements in de tail. 
+ 
+3.1 Use cases  
+Use Case 1 : Notify join/leave multicast group  
+ 
+Transmit_leave
+Agent_AAgent_B
+Agent_D
+Encrypt Mesg
+Transmit_joinDecrypt Mesg
+ 
+Figure 1. leave/join  
+ 
+1. Message is encrypted or Message is not encrypted.   
+2. An agent sends notify to join/leave multicast group.  
+3. Message is decrypted only if Message is encrypted.  
+      For  example, Agent_B and Agent_D belong to the same group, and then Agent_B 
+wants to leave the group and Agent_A wants to join the group. In this situation, when 
+reorganization occurs, Agent_A who is previously not part of the group may send notify 
+message to  join the group, and Agent_B who is previously part of the group, may send 
+notify message to leave the group. For instance, Agent_B suffers a failure in one of its 
+ 6capabilities and does not want to receive any further message from the group. Agent_A 
+who ma y have capability to substitute Agent_B is needed to be part of the group. This 
+involves sending notify of join and leave the group.  
+ 
+Use Case 2 : Send/Receive Unicast  
+ 
+Agent_AAgent_BDecrypt_Mesg
+Transmit_MessageEncrypt_Mesg
+ 
+Figure 2. unicast  
+ 
+1. Message is encrypted or Message is not encrypted.  
+2. An agent sends un icast message to another agent.  
+3. Another agent receives message.  
+4. Message is decrypted only if Message is encrypted.  
+In this situation, Agent_A wants to communicate with Agent_B. This direct 
+communication can happen between any two agents within organization . 
+ 
+Use Case 3 : Send/Receive Multicast  
+ 
+Agent_AEncrypt_Mesg Decrypt_Mesg
+Agent_C
+Agent_B
+Transmit_Multicast
+ 
+ 7Figure 3. multicast  
+ 
+1. Message is encrypted or Message is not encrypted.  
+2. An agent sends multicast message to the group (multicast address).  
+3. Other agents in the group receive message.  
+4. Message is decrypted only if Messa ge is encrypted  
+In this situation, Agent_A wants to send a message to everyone within the group, 
+assuming that Agent_A, Agent_B and Agent_C subscribe to the same multicast address. 
+This involves the multicast communication since other agents who do not bel ong to the 
+group cannot receive this message. For instance, an agent may want to inform everyone 
+in the group when the assigned tasks are completed. This is more effective than in unicast 
+communication since only one copy is sent. Also, using bidding/marke t-based protocols 
+fit well with this kind of communication. An agent may request a bid from other agents 
+for doing some tasks.  
+ 
+Use Case 4 : Send/Receive Broadcast  
+ 
+ 
+Agent_AAgent_C
+Agent_B
+Transmit_Broadcast
+ 
+Figure 4. broadcast  
+ 
+1. An agent sends message to everyone in the same local network  
+2. Other agent in the same local network receive message  
+In this situation, Agent_A wants to send a message to everyone within the same local 
+network that agent A belongs to. This involves the broadcast communication since any 
+agent in the same local network as Agent_A can receive this message. For instance, when 
+a new agent who does not previously exist in that local network wants to announce the 
+existence to other agents.  
+ 
+3.2 Specific Requirement  
+      3.2.1 Unicast Communication  
+            3.2.1.1 *agentMom shall support the ability to send unicast message.  
+3.2.1.2 *agentMom shall support the ability to receive unicast message.  
+3.2.1.3 Unicast message shall only be received by the specified address.  
+ 83.2.1.4 Unicast message shall arrive a t the specified address and in order.  
+3.2.2 Multicast Communication  
+3.2.2.1 *agentMom shall support the ability to send multicast message.  
+3.2.2.2 *agentMom shall support the ability to receive multicast message.  
+3.2.2.3 *agentMom shall support the ability  to send request to join multicast 
+group.  
+3.2.2.4  *agentMom shall support the ability to send request to leave multicast 
+group.  
+3.2.2.5  agentMom shall not allow receiving multicast message from a group 
+before joining that multicast group.  
+3.2.2.6  agentMom shall not allow receivin g multicast message from a group after  
+leaving that multicast group.  
+3.2.2.7  agentMom shall support the ability to set time -to-live for multicast 
+message.  
+3.2.2.8  agentMom shall support the ability to set multicast address and port for 
+sending and receiving multicast mes sage.  
+3.2.2.9  agentMom shall support the ability to receive multicast message from 
+multiple groups.  
+3.2.3 Broadcast Communication  
+3.2.3.1 *agentMom shall support the ability to sent broadcast message.  
+3.2.3.2 *agentMom shall support the ability to receive broadcas t message.  
+3.3.3.3 *Broadcast message shall be sent to all possible hosts under the same local 
+network.  
+3.2.4 Security  
+3.2.4.1 *agentMom shall support the ability to encrypt unicast message.  
+3.2.4.2 *agentMom shall support the ability to decrypt unicast me ssage.  
+3.2.4.3 agentMom shall allow an agent to decide whether or not to encrypt a 
+message.  
+3.2.4.4 agentMom shall automatically decrypt encrypted message.  
+3.2.4.5 agentMom shall support the ability to encrypt multicast message.  
+3.2.4.6 agentMom shall sup port the ability to decrypt multicast message.  
+ 3.2.5 Architecture  
+3.2.5.1 *agentMom with shall support the use of the architecture that agent 
+directly controls the conversations.  
+3.2.5.2 *agentMom shall support the use of the architecture that agent’s 
+components control the conversations.  
+ 3.2.6 Compatibility  
+ 3.2.6.1 The new built agentMom shall be compatible with the agentMom 1.2  
+Note: The “ * ” indicates Driving Requirements that need to be demonstrated by the end 
+of phase II.  
+ 
+ 

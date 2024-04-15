@@ -1,0 +1,184 @@
+Unique ID	Label	Requiremetn Statement	Solution Scope	Solution Approach
+6046	ISO AC-02	The solution should address the management of information solution accounts, including establishing, activating, modifying, reviewing, disabling, and removing accounts. The solution will also identify the appropriate organizational unit to review information solution accounts at least annually.	Unknown	Unknown
+6047	ISO AC-03	The solution should enforce assigned authorizations for controlling access to the solution in accordance with applicable policy.	Unknown	Unknown
+6048	ISO AC-04	The solution enforces assigned authorizations for controlling the flow of information within the solution and between interconnected solutions in accordance with applicable policy.	Unknown	Unknown
+6049	ISO AC-05	The solution should enforce separation of duties through assigned access authorizations.	Unknown	Unknown
+6050	ISO AC-06	The solution should enforce the most restrictive set of rights/privileges or accesses needed by users (or processes acting on behalf of users) for the performance of specified tasks.	Unknown	Unknown
+6051	ISO AC-07	The solution should enforce a limit of five (5) consecutive invalid access attempts by a user during a 60 second time period. The information solution automatically locks the account/node for a five (5) minute time period when the maximum number of unsuccessful attempts is exceeded.	Unknown	Unknown
+6052	ISO AC-08	The solution should display an approved, solution use notification message before granting solution access informing potential users: (i) that the user is accessing a CCHCS information solution; (ii) that solution usage may be monitored, recorded, and subject to audit; (iii) that unauthorized use of the solution is prohibited and subject to criminal and civil penalties; and (iv) that use of the solution indicates consent to monitoring and recording. The solution should use notification message provides appropriate privacy and security notices (based on associated privacy and security policies or summaries) and remains on the screen until the user takes explicit actions to log on to the information solution.	Unknown	Unknown
+6053	ISO AC-09	The solution should notify the user, upon successful logon, of the date and time of the last logon, and the number of unsuccessful logon attempts since the last successful logon.	Unknown	Unknown
+6054	ISO AC-10	The solution should limit the number of concurrent sessions for any user to three (3).	Unknown	Unknown
+6055	ISO AC-11	Thesolution should prevent further access to the solution by initiating a session lock after 15 minutes of inactivity, and the session lock remains in effect until the user reestablishes access using appropriate identification and authentication procedures.	Unknown	Unknown
+6056	ISO AC-12	The solution should automatically terminate a remote session after 30 minutes of inactivity.	Unknown	Unknown
+6057	ISO AC-13	The solution should assign responsibility to supervise and review the activities of users with respect to the enforcement and usage of information solution access controls.	Unknown	Unknown
+6058	ISO AC-14	The solution should identify and document specific user actions that can be performed on the information solution without identification or authentication.	Unknown	Unknown
+6059	ISO AC-15	The solution should mark any output using standard naming conventions to identify any special dissemination, handling, or distribution instructions.	Unknown	Unknown
+6060	ISO AC-16	The solution should appropriately label information in storage, in process, and in transmission.	Unknown	Unknown
+6061	ISO AC-17	The solution should provide mechanisms to ensure the authorization, monitoring, and control of all methods of remote access to the solution.	Unknown	Unknown
+6062	ISO AC-18	The solution architect should work with the appropriate CCHCS staff to (i) establish usage restrictions and implementation guidance for wireless technologies; and (ii) authorize, monitor, control wireless access to the solution.	Unknown	Unknown
+6063	ISO AU-02	"The solution should generate audit records for the following events: 
+* successful user logins
+* unsuccessful user logins
+* user logouts 
+* record activity in information solutions that contain or use electronic protected health information
+* use of privileges
+* use of solution utilities
+* changes to solution configurations
+* alarms raised by access control solution
+* files accessed 
+* file operations (PUT, GET, DELETE, MKDIR, etc.)"	Unknown	Unknown
+6064	ISO AU-03	"The solution should produce audit records that contain at a minimum: 
+* Date of event
+* Time of event
+* Type of event (solution, security, application)
+* Username or user ID
+* Source IP address, source terminal identity, or some type of unique source identifier"	Unknown	Unknown
+6065	ISO AU-04	The solution should allocate sufficient audit record storage capacity and configures auditing to reduce the likelihood of such capacity being exceeded.	Unknown	Unknown
+6066	ISO AU-05	The solution should alert appropriate organizational officials in the event of an audit processing failure and begins to overwrite oldest audit records or shuts down the solution.	Unknown	Unknown
+6067	ISO AU-06	The solution should assign responsiblity for regular reviews/analyzation of information solution audit records for indications of inappropriate or unusual activity, investigates suspicious activity or suspected violations, reports findings to appropriate officials, and takes necessary actions.	Unknown	Unknown
+6068	ISO AU-07	The solution should provide an audit reduction and report generation capability.	Unknown	Unknown
+6069	ISO AU-08	The solution should provide time stamps that are synchronized with the authoritative enterprise time server for use in audit record generation.	Unknown	Unknown
+6070	ISO AU-09	The solution should protect audit information and audit tools from unauthorized access, modification, and deletion.	Unknown	Unknown
+6071	ISO AU-10	The solution should provide the capability to determine whether a given individual took a particular action.	Unknown	Unknown
+6072	ISO AU-11	The solution should retain audit records for 180 days to provide support for after-the-fact investigations of security incidents and to meet regulatory and organizational information retention requirements.	Unknown	Unknown
+6073	ISO IA-02	The solution should uniquely identifiy and authenticate users (or processes acting on behalf of users).	Unknown	Unknown
+6074	ISO IA-03	The solution should identify and authenticate specific devices before establishing a connection.	Unknown	Unknown
+6075	ISO IA-04	The solution should manage user identifiers by: (i) uniquely identifying each user; (ii) verifying the identity of each user; (iii) receiving authorization to issue a user identifier from an appropriate organization official(s); (iv) issuing the user identifier to the intended party; (v) disabling the user identifier after 30 days of inactivity; and (vi) archiving user identifiers.	Unknown	Unknown
+6076	ISO IA-05	The solution should assign responsibility for managing information solution authenticators by: (i) defining initial authenticator content; (ii) establishing administrative procedures for initial authenticator distribution, for lost/compromised, or damaged authenticators, and for revoking authenticators; (iii) changing default authenticators upon information solution installation; and (iv) changing/refreshing authenticators periodically.	Unknown	Unknown
+6077	ISO IA-06	The solution should obscure feedback of authentication information during the authentication process to protect the information from possible exploitation/use by unauthorized individuals.	Unknown	Unknown
+6078	ISO IA-07	The solution should employ authentication methods that meet the requirements of applicable laws, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.	Unknown	Unknown
+6079	ISO SC-02	The solution should separate user functionality (including user interface services) from information solution management functionality.	Unknown	Unknown
+6080	ISO SC-03	The solution should isolate security functions from nonsecurity functions.	Unknown	Unknown
+6081	ISO SC-04	The solution should prevent unauthorized and unintended information transfer via shared solution resources.	Unknown	Unknown
+6082	ISO SC-05	The solution should protect against or limits the effects of denial of service attacks.	Unknown	Unknown
+6083	ISO SC-06	The solution should limit the use of resources by priority.	Unknown	Unknown
+6084	ISO SC-07	The solution should monitor and control communications at the external boundary of the information solution and at key internal boundaries within the solution.	Unknown	Unknown
+6085	ISO SC-08	The solution should protect the integrity of transmitted information.	Unknown	Unknown
+6086	ISO SC-09	The solution should protect the confidentiality of transmitted information.	Unknown	Unknown
+6087	ISO SC-10	The solution should terminate a network connection at the end of a session or after 30 minutes of inactivity.	Unknown	Unknown
+6088	ISO SC-11	The solution should establish a trusted communication path between the user and the following security functions of the solution: information solution authentication and reauthentication and confidential data transport.	Unknown	Unknown
+6089	ISO SC-12	When cryptography is required and employed within the information solution, the organization should establish and manage cryptographic keys using automated or manual mechanisms that have clearly defined and appropriately documented supporting procedures.	Unknown	Unknown
+6090	ISO SC-13	For information requiring cryptographic protection, the information solution should implement cryptographic mechanisms that comply with applicable laws, Executive Orders, directives, policies, regulations, standards, and guidance.	Unknown	Unknown
+6091	ISO SC-14	The solution should protect the integrity and availability of publicly available information and applications.	Unknown	Unknown
+6092	ISO SC-15	The solution should prohibit remote activation of collaborative computing mechanisms and provide an explicit indication of use to the local users.	Unknown	Unknown
+6093	ISO SC-16	The solution should reliably associate security parameters with information exchanged between information solutions.	Unknown	Unknown
+6094	ISO SC-17	The organization should issue public key certificates under an appropriate certificate policy or obtain public key certificates under an appropriate certificate policy from an approved service provider.	Unknown	Unknown
+6095	ISO SC-18	The organization should: (i) establish usage restrictions and implementation guidance for mobile code technologies based on the potential to cause damage to the information solution if used maliciously; and (ii) authorize, monitor, and control the use of mobile code within the information solution.	Unknown	Unknown
+6097	ISO SC-20	The information solution that provides name/address resolution service provides additional data origin and integrity artifacts along with the authoritative data it returns in response to resolution queries.	Unknown	Unknown
+6098	ISO SC-21	The information solution that provides name/address resolution service for local clients should perform data origin authentication and data integrity verification on the resolution responses it receives from authoritative sources when requested by client solutions.	Unknown	Unknown
+6099	ISO SC-22	The information solutions that collectively provide name/address resolution service for an organization should be fault tolerant and implement role separation.	Unknown	Unknown
+6100	ISO SC-23	The solution should provide mechanisms to protect the authenticity of communications sessions.	Unknown	Unknown
+	"Audit Reviews
+HIPAA 164.312(b)"	"Solution should provide procedures that demonstrate an approach for regular records’ reviews of information system activities for authorized access, such as audit logs, access reports, and security incident tracking reports.
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"Disaster Recovery
+HIPAA 164.308(a)(7)"	Solution should include the performance of a business impact analysis (BIA) that allows the maximum allowable outage, and whether the solution requires a Disaster Recovery Plan (DRP).  If included, the DRP must include strategies for recovery, and procedures for testing the DRP.	Unknown	Unknown
+	"Security Plan, NIST 800-18
+ISO-27002 10.7.4"	Solution should include a Security Plan in accordance to NIST 800-18 and subject to the approval of the agencies’ Information Security Officer.	Unknown	Unknown
+	"System Documentation
+ISO-27002 10.7.4"	"The solution should provide documentation that must be maintained for the system/application.  This should include the following:  
+o Security plan;
+o Detailed design;
+o Description of hardware, software, and network components;
+o Special system configurations;
+o External interfaces;
+o All layers of security controls;
+o Auditing interface."	Unknown	Unknown
+	"Information Classification
+ISO-27002 7.2"	"The solution should provide documentation on information classification matrix of all information elements accessed and/or processed by the solution.  The matrix shall identify at a minimum:
+o Information element;
+o Information classification/sensitivity;
+o Relevant function/process or where is it used;
+o System and database or where is it stored."	Unknown	Unknown
+	"Roles and Responsibilities
+HIPAA 164.308(a)(3)(ii)(B)
+ISO-27002 8.1.1"	"The solution must provide documentation that for the following example roles, with processes to ensure each person understands their role, and complies with all applicable regulations.  Documentation should include the organizational structure and relationships between these example roles:
+o The designated owner of the system;
+o The designated custodian(s) of the system;
+o The security administrator(s) for the system;
+o The users of the system;
+o Outside entities sending or receiving data to system."	Unknown	Unknown
+	"Incident Response Plan
+ISO27002 - 13"	"The solution should include an incident response plan.  This plan must be developed and maintained, which complies with all applicable requirements including business associate agreements, and state and federal breach reporting requirements.
+
+o The plan must ensure immediate notification to the appropriate security officials (e.g. Privacy Officer and ISO) for any suspected breach or compromise of system security.  Prompt corrective action must be taken, and provided to the security officials in a documented Corrective Action Plan.  The plan must address handling of both technical and non-technical privacy and security incidents, including initial response, corrective actions, documentation, and reporting. The plan must address responding to compromised account credentials, such as passwords stolen by a key logger.  The response should include disabling the account until corrective actions are complete and pulling audit logs for analysis of potential unauthorized access;
+
+o Depending on the nature of the breach or compromise, the security officials may require a security audit."	Unknown	Unknown
+	"Account Reconciliation
+164.308(a)(3)(ii)(A)
+164.308(a)(4)(i)
+164.308(a)(4)(ii)(B)
+164.308(a)(5)(ii)(C) "	"The solution should provide the ability for account reconciliations.  These account reconciliations should include the following:
+o Unused account review;
+o Active account review.
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"IDS/IPS
+ISO-27002 11.4.4"	"• Solution should meet the following additional and relevant technical controls:
+o Virus Protection;
+o Intrusion Detection and Prevention solution (IDS/IPS).
+o Patch Management.
+"	Unknown	Unknown
+	"Encryption
+164.308(a)(3)(ii)(A)
+164.308(a)(4)(ii)(B)
+164.308(a)(4)(ii)(C) 
+164.310(a)(2)(iii) 
+164.310(b)
+164.312(a)(1)
+164.312(a)(2)(i)
+164.312(a)(2)(ii)
+164.312(a)(2)(iv)"	All transmissions and data-links sending PHI or PI data between the application/system and the Database Management System (DBMS) should be encrypted using FIPS 140-2 validated software; refer to "Attachment 8 - EMR Technical Evaluation Criteria - Worksheet" as appropriate	Unknown	Unknown
+	"Isolation
+ISO-27002 11.6.1"	Solution shall be segmented into three layers, separating at a minimum the Presentation, Application/Business Logic, and Data Persistence/Database layers.  These layers shall be separated by an Open Systems Interconnection (OSI) Layer 3 or Layer 4 firewall, and configured with only the minimum necessary open ports and protocols.  A Layer 4 firewall with anomaly detection and/or heuristics capabilities is recommended.  The Presentation layer must only contain systems that provide services directly to the Internet. These protocols include DNS, SMTP, HTTP, HTTPS, and encrypted FTP servers. Any system that the web tier communicates with, but that does not provide a direct internet service (such as directory services, middleware, etc.) must be installed on the Application layer. Where unfeasible to separate the Presentation and Application/Business Logic layers, a proxy server may be used to isolate non-Presentation layer services.  This must be documented in the application’s approved security plan.	Unknown	Unknown
+	"Data Access
+ISO-27002 11.6.1"	"Direct access to the Data Persistence/Database layer is only permitted through a logical Data Access logic layer, using a trusted sub-system that utilizes a single database access account for all transactions. The Data Access Logic Layer shall take the form of stored procedures, database API, Data Access Objects/Components, Data Access Middleware, Shared Data Services, or Secure Web Service. 
+
+System requests made to the Business logic and Data Access logic layers shall be authenticated and authorized. Dynamic SQL shall not be permitted from the Presentation Layer.   Applications shall use an alias for every table and column, so that Database table names and column names shall not be exposed."	Unknown	Unknown
+	"Authentication
+HIPAA 164.308(a)(5)(ii)(D)
+ISO-27002 11.4.2"	"Solution shall enforce validation of user input before accepting it, and before being committed to the database or other application information repository.  Data queries from the Presentation or the Business Logic layers shall be validated for appropriate use of query language, and validated for appropriate quantity and quality of data input.  This includes In-line Structured Query Language (SQL) calls. The system shall validate client input on the server side to the extent possible.  
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"System Privilege
+HIPAA 164.308(a)(4)(ii)(B-C)"	"Administrative/Privileged accounts are any special User ID’s that are created for system administration or elevated privilege purposes by a single individual.  These requirements apply to any such type of account with administrative privileges or any other type of escalated privileges.  System administration shall be performed using a different username than the one used for daily non-administrative activities. Administrative accounts must be used only for administrative activity within the authorized role of that account and the individual using it. It must be logged out of immediately after administrative work is complete.  Generic accounts not linked to a specific person, such as service accounts, must not be used in accessing PHI or PI, or in making changes to IT systems which protect that data, unless there are logs in place that identify the actual individual who accessed the data or made the system change.
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"Role Based 
+HIPAA 164.308(a)(4)(ii)(B-C)"	"Solution should provide secure role-based access for authorization utilizing the principle of least privilege at all layers/tiers. Applications shall in all cases default to explicitly deny access where authentication and/or authorization mechanisms are required.  No application that requires a login shall offer to or be capable of remembering a user’s credentials. There shall be role separation between system/server administrators and application/database administrators, using the principle of least privilege.
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"Protection of PHI/PI
+ISO-27002 11.4.1 and 11.4.2"	"For any application which accesses PHI or PI, the following technical controls shall be present, unless an exception is granted by the agency's ISO:
+o The application shall use ‘least privileged accounts’ to execute code and to access SQL databases;
+o User access rights shall be authenticated on entry to each application tier;
+o All user input shall be validated, including parameters passed to public web service methods;
+o Information that is not required shall not be exposed; 
+o If a web application fails, it shall not leave sensitive data unprotected or expose any details in error messages presented to the user.  Any exceptions shall be logged or emailed to the appropriate team member;
+o Any sensitive data stored in session, cookies, disk files etc., shall be encrypted.  
+o Applications shall be protected from the Internet by a web application firewall/gateway/proxy, which shall be included in the documented system design;
+o Post back Universal Resource Locators (URLs) shall not contain unencrypted record identifiers or database keys;
+o Post back URLs shall not include query strings.
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown
+	"Vulnerability Management
+HIPAA 164.308(a)(5)
+ISO-27002 12.6"	The solution must be scanned for vulnerabilities and the high and medium vulnerabilities must be resolved and mitigated.	Unknown	Unknown
+	"Penetration Testing
+HIPAA 164.308(a)(5)
+ISO-27002 12.6"	The solution should undergo a penetration testing to ensure the solution has no flaws, and the high or medium vulnerabilities detected must be resolved and mitigated.	Unknown	Unknown
+	"Strong Authentication
+HIPAA 164.308(a)(5)(ii)(D)"	"The solution if providing access to PI or PHI from the Internet should assess the need for additional strong authentication, to prevent a significant data breach if a password is compromised. 
+
+Strong authentication is defined as additional mandatory authentication over and beyond the password, for each account which has direct access to PI/PHI, or which has administrative privileges. The following methods are approved for strong authentication:
+o Physical Token;
+o One Time Password (OTP);
+o X.509 Certificate;
+o Firewall Rules.
+
+• The following strong authentication method is approved for personal data access, where accounts have access to only the account holder’s personal data, or a single data record they are custodian over such as a family member or information about their company.  For example, an application where a client can submit or edit an enrollment form for themselves or someone else, but cannot access any other data records.
+o Personal Challenge Questions.
+
+
+Refer to  ""Attachment 8 - EMR Technical Evaluation Criteria - Worksheet"" as appropriate"	Unknown	Unknown

@@ -1,0 +1,139 @@
+2.4.1	The software application developed shall reside on the DFW desktop computers of the application’s primary users.
+2.4.2	The system input data shall reside in the DFW SQL (SQL Server) database environment and in a detached user (ACCESS) database environment.
+2.4.3	The system shall operate within and be compatible with the DFW network environment.
+2.5.1	The system shall be developed in ArcGIS 9.2 and available as an extension on the DFW network.
+2.5.2	The system shall be developed using VB.NET for .NET 2.0 framework with Windows user interfaces.
+2.5.3	Application development will adhere to the model-view-controller architectural pattern. This pattern serves to separate data (model) and user interface (view) concerns, so that changes to the user interface do not affect the data handling, and that the data can be reorganized without changing the user interface. Adhering to the model-view-controller pattern will decouple data access and busine ss logic from data presentation and user interaction, by introducing an intermediate component: the controller.
+2.5.4	Variables will be created using camel case (creating compound words or phrases in which the words are joined without spaces and are capitalized within the compound with the first letter of the variable lowercase).
+2.5.5	Variables referencing ArcObjects com classes, interfaces, or objects will not be abbreviated and will be dimensioned using a camelcase naming convention. Do not use pointers such as m_p or g_p as a prefix to ArcObjects classes/interfaces.
+2.5.6	Do not use prefixes to variables such as int, str, lng, etc.
+2.5.7	In-line documentation for coding, flow chart and/or diagram – what each module does, who did it and when it was done.
+2.5.8	Methods, procedures and functions will be sufficiently commented on to support maintenance programmers with easily understanding the logic and purpose of the routines.
+2.5.9	Once delivered, code will be managed through WDFW’s CVS repository.
+2.6.1	The user documentation (Help and Tutorial ) shall be available as a separate electronic document (PDF) which can be opened from within the system.
+2.6.2	The user documentation will use screen captures of application interfaces to illustrate methods and procedures.
+2.7.1	The Department of Fish and Wildlife shall provide leadership and support to successfully implement the HCP Activities Management Tool in the department.
+2.7.2	The users of the HCP Activities Management Tool shall have basic knowledge/training of ArcGIS and its editing functions (spatial and tabular edits).
+2.7.3	Administrative tools for managing lookup tables will be provided (Based on budget approval).
+2.7.4	The initial application will allow users to only archive (not delete) records.
+2.7.5	The application will be developed to accommodate 3 Event types (O&M, Recreation, and E&R) for 3 feature types resulting in 9 Activity feature classes.
+2.8.1	The application will directly work with SQL server for tabular data transactions.
+2.8.2	The application will directly work with ArcSDE for Spatial Data transactions.
+2.8.3	The application will work in any ArcSDE versioning environment.  Users will be required to use the appropriate SDE connection to be within the database’s configured transactional environment.
+3.1.1	The system shall use corporate data located on SQLUSR1 (database) as the default data source location, unless specified otherwise by the user.
+3.1.2	The user or system administrator shall be responsible for managing data in lookup tables in the Activities Record Database.
+3.1.3	The database shall be stored in an SQL Server environment.
+3.1.4	The application must work with the database model specified in Appendix A.
+4.1.2.1	The system will load a window form for data entry.  The form will auto fill dropdown tools with data stored in application lookup tables.
+4.1.2.2	The system will prompt the user to set the default values for confidence and methods sources.
+4.1.2.3	The system will navigate the user to the selected feature location.
+4.1.2.4	The system will set the edit environment based upon the type of activity edit.
+4.1.2.5	System creates a new activity feature and prompts the user if he/she wants to digitize another.
+4.1.2.6	The system will create and track the pending activity record in the database.
+4.1.2.7	The system creates a new activity record based on the activity event type, sets the default values in the form.
+4.1.2.8	The system will require the confidence source to be set when entering data.
+4.1.2.9	The tool will record and manage occurrence records connected to the activity record.
+4.1.2.10	The tool will create a new activity record without linked spatial data.
+4.1.2.11	The tool will set the Activity Record  Id in the selected spatial feature to the Activity Record Id creating a linked relationship.
+4.1.2.12	The tool will set the Activity Record  Id in the selected feature to NULL to unlink the spatial record with the activity record.
+4.1.2.13	The system will store the list of activity (ies) associated with the activity feature in a database table.  All currently selected features are unselected.
+4.1.2.14	The system saves the current editable record and starts a new edit session for the new activity.  For those associated activities that records are not created are displayed on the To Do list.
+4.1.2.15	The tool will record the association of activity records with the selected features on the map.  In the case of co incidental features in a selection, the user will be required to use existing tools in ArcGIS to deselect unwanted records.
+4.1.2.16	The tool will unassociate selected spatial activity records by archiving the spatial activity association records in the database.
+4.1.2.17	The tool overrides the default value in the current record.
+4.1.2.18	The system will create a new feature by duplicating spatial features and/or duplicate attribute records.
+4.1.2.19	The system will propagate the selected field attribute values to the next record created.
+4.1.2.20	The system will save all edits in the activity table, feature class, and related tables.
+4.1.3.1	The tool shall provide an easy-to-use form for the attribution of an activity feature.  This form should be used for querying (section 4.3) and editing (section 4.2) functionality as well.
+4.1.3.2	The tool shall allow the selection of Activity Event Type.
+4.1.3.3	The tool shall allow the creation of point, line, or polygon features.
+4.1.3.4	The user shall not be allowed to create multi-part feature classes, only discreet features.
+4.1.3.5	The tool shall use the existing editing tools provided by ArcGIS Desktop.
+4.1.3.6	The tool shall allow the user to create multiple feature types for an activity record.
+4.1.3.7	The tool shall provide the functionality to import existing spatial data features into the new activity feature.
+4.1.3.8	The tool shall provide a calendar control for the selection of date attribute information.
+4.1.3.9	The tool shall provide smart controls that only provide the appropriate metric denominator based upon a type.
+4.1.3.10	The tool shall provide the ability to duplicate spatial and attribute data from one feature/record to a new feature/record.
+4.1.3.11	The tool shall provide the user the ability to define the activity features based upon the assigned activity associations.
+4.1.3.12	The tool shall provide the user the ability to assign subordinate activities (sub-activities) wi th the newly created feature.
+4.1.3.13	The tool shall provide the user the ability to unassign subordinate activity relationships.
+4.1.3.14	The tool shall allow the user to assign multiple spatial features with a single activity.
+4.1.3.15	The tool shall allow the user to unassociate spatial activity records that are associated with a single activity record.
+4.1.3.16	The tool shall provide an interface for the user to assign occurrence information.
+4.1.3.17	The tool shall automate the creation of multiple records when dealing with frequency.
+4.1.3.18	The tool shall require the confidence source (and if necessary, names) be assigned anytime beginning and end dates, number of day, frequency and effort (e.g., lbs/acres) are entered.
+4.1.3.19	The tool shall automatically complete dropdown forms in the tool with values stored in an application lookup tables.
+4.1.3.20	The tool shall auto-populate the Creation Date field in the activity feature class.
+4.1.3.21	The tool shall auto-populate the Create By field in the activity.
+4.1.3.22	The name should be retrieved from the system user name.
+4.1.3.23	The tool shall auto-populate the Modification Date field in the activity feature class.  This should be the same as the Creation Date field value when a feature is created.
+4.1.3.24	The tool shall auto- populate the Modification By field in the activity feature class.  This should be the same as the Creation By field value when a feature is created.
+4.1.3.25	The tool shall auto- populate and/or provide functionality for the user to reference the confidence source for an activity record.
+4.1.3.26	The tool shall provide the user with the ability to identify records that do not have spatial features linked to an activity record.
+4.1.3.27	The tool shall provide the user with the ability to visually see in the map frame spatial features that do not have activity records associated with them.
+4.1.3.28	The tool shall provide an easy-to-use interface (checkboxes) for the user to select attributes to propagate to a new record.  When a new record is created with this option, the application will auto-fill the edit form.  The application will only store this propagated information for the next record created.
+4.1.3.29	The tool shall only allow the user to save and complete an activity record if all the Required attributes are completed.
+4.2.2.1	The tool shall set the edit environment to the appropriate Activity tabular record, display the form with the current record information. In the event when more than one feature or record is selected, the form must provide a mechanism to navigate between records.
+4.2.2.2	The tool should set the edit feature to the selected spatial Activity Feature.
+4.2.2.3	The tool should allow the editing of a selected activity feature attribute data in a standard form.
+4.2.2.4	The tool should activate the ArcGIS Editing tools for the user.
+4.2.2.5	The tool should provide tools fo r querying activity data and navigate to that query result.  (See section 4.3)
+4.2.3.1	The tool shall provide the same functionality found in the create feature functionality. (Section 4.1)
+4.2.3.2	The tool shall allow the user to perform edits in the same form as adding and querying data.
+4.2.3.3	The system shall provide the user with the ability to select activity features through a spatial enabled user interface.
+4.2.3.4	The tool shall provide the user with a method to select an activity feature based upon its attribute values.
+4.2.3.5	The tool shall auto-populate the Modification Date field in the activity feature class.
+4.2.3.6	The tool shall auto-populate the Modification By field in the activity feature class.
+4.3.2.1	The system will automatically filter the activity feature database with values selected by the user.
+4.3.2.2	The system will automatically filter the activity form with the selected features.
+4.3.2.3	The system will automatically filter the activity form with the selected features.
+4.3.2.4	The system will automatically filter the activity form with the selected features.
+4.3.2.5	The tool should provide basic VCR style record navigation.  (See section 4.3)
+4.3.3.1	The tool shall allow the user to perform edits in the same form as adding and querying data.
+4.3.3.2	The tool shall perform a query of the activity data when a user selects a value from a dropdown list and when a user enters a value in a text box.
+4.3.3.3	The tool shall provide controls that provide the easy navigation of a selected set of records.
+4.3.3.4	The tool shall zoom to and highlight the current activity record displayed in the query/edit form if linked to spatial data.
+4.4.2.1	The system shall set the archive flag for the Activity record, archive the associations, and archive the linked spatial features.  The result will be to prevent the record/feature from drawing or be captured by spatial and tabular queries.
+4.4.2.2	The system will set the archive flag fo r the spatial feature.  The result will be to prevent the feature from drawing or be captured by spatial and tabular queries.
+4.4.3.1	The tool shall change the archive field in the Activity Feature and other associated table records to TRUE.
+4.4.3.2	All Feature Layers shall have a Definition Query setup with the Archive set to FALSE.
+4.4.3.3	The tool shall allow the unarchiving of activity records that meet a specified criteria (i.e. not a mistake).
+4.5.2.1	The system will provide basic zoom and pan navigation.
+4.5.2.2	The system will query and navigate to the queried feature. (See section4.3).
+4.5.3.1	The tool shall provide access to basic navigation tools found in ArcGIS.
+4.5.3.2	The tool shall provide map navigation to select spatial features when a query is performed in the edit form.
+4.6.2.1	The system will prompt the user for the file directory location of the exported database.
+4.6.2.2	The system will create a folder in the selected file directory with the name specified by the user.
+4.6.2.3	The system will run processes that will generate a disconnected environment of the Activity Management tool based on the visual extent of the map displayed in ArcGIS.
+4.6.3.1	The tool shall prompt the user for the output directory.
+4.6.3.2	The tool shall create a new folder in the output directory.  The directory will have the name specified by the user as well as a date stamp.  (ex. MYPROJECT_041007)
+4.6.3.3	The tool shall create a copy of the Geodatabase data in a personal Geodatabase in the output folder location.
+4.6.3.4	The tool shall copy the primary and lookup tables in the activities database to the disconnected database.
+4.6.3.5	The tools will not clip or select out base data provided in the ArcGIS Map Document that is not part of the Activities Database. The user will be responsible for acquiring and copying base GIS data to the fieldwork machine.
+4.6.3.6	The user shall be responsible for acquiring and copying imagery (aerial photos) to the project directory.
+4.6.3.7	The tool shall make a copy of the ArcGIS Map Document to the folder.
+4.6.3.8	The user shall reconnect map layers to the appropriate location of the disconnected data.
+4.6.3.9	The tool shall track the checkout date when the database has been disconnected.
+4.7.2.1	The system will prompt the user for the location of the disconnect project.
+4.7.2.2	The system will start the import process and prompt the user when complete.
+4.7.2.3	The system will post the selected data by the user to the enterprise database.
+4.7.3.1	The tool should prompt the user for the location of the disconnect database.
+4.7.3.2	The tool shall import any record that has been modified in the disconnected database.
+4.7.3.3	The tool shall prom pt the user when a record id in the disconnected database and enterprise database has been modified.
+4.7.3.4	The tool should reconcile the IDs stored in the disconnected database with the IDs in the enterprise database.
+4.7.3.5	The tool will reconcile all table data from the disconnected database.  This includes lookup and relationship tables.
+4.7.3.6	The tool will reconcile data that has been flagged obsolete.
+4.7.3.7	The tool will import all modified spatial features into the enterprise Geodatabase.  Spatial data will be reconciled the same as tabular records.
+4.8.2.1	The system will load a lookup table editing form.
+4.8.2.2	The system will load the appropriate lookup table into an edit form.
+4.8.2.3	The system will modify the lookup table information.
+4.8.2.4	The system will query the database for instances of the lookup value in use.  If found, the obsolete request will not be allowed.
+4.8.3.1	The tool shall provide a form for the editing of lookup table records.
+4.8.3.2	The tool shall query the database for instances of the lookup value in use.  If found, the obsolete request will not be allowed.
+4.8.3.3	The tool shall provide a configuration file which will control the access of modification of lookup tables.
+5.1.1	The user interface design shall follow .NET Coding Standards and Windows User Interface Guidelines.
+5.1.2	Basic Windows Functions and Standards.
+5.1.3	The interface should be developed to work on a minimum screen resolution of 1280x1024.
+5.1.4	The interface must interact with the ArcGIS desktop as a dockable window.
+5.2.1	Must meet standard DFW application performance standards.
+5.2.2	Must work within the operating parameters of ArcGIS.

@@ -1,0 +1,27 @@
+D	California Correctional Health Care Services (CCHCS) Emergency Medical Response (EMR) System 
+1	Architecture Requirements
+1.1	Architecture Quality Attributes
+1.1.1	Scalability
+1.1.2	Reliability
+1.1.3	Recoverability
+1.1.4	Maintainability
+1.1.5	Extensbility
+1.1.6	Usability
+1.1.7	Availability
+1.1.8	Integrity
+1.2	Product architecture
+1.3	System Development Life Cycle
+2	Integration
+2.1	CCHCS Electronic Health Record (eUHR - Documentum)
+2.2	CCHCS PACS/RIS
+2.3	CCHCS Dictation & Translation
+2.4	CCHCS Third Party Administrator
+2.5	Quest 360
+2.6	CCHCS Central Fill Solution
+2.7	CCHCS Medical Classification
+2.8	CDCR Strategic Offender Management System (SOMS)
+2.9	CCHCS Technical  Infrastructure
+2.10	CCHCS EMR Data Access
+3	Support
+3.1	System Management
+3.2	Documentation

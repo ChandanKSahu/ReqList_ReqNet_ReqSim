@@ -1,0 +1,3189 @@
+
+ 
+ 
+ 
+ 
+ 
+Deliverable Reference  : D1.4 
+Title : System Requirements Document  
+Confidentiality Level  : PU 
+Lead Partner  : Space Applications Services  
+Abstract  : This document presents  the system requirements 
+for MOSAR that were derived f rom the application 
+and technology review, and the analysis of the 
+operational and demonstration scenarios .  
+EC Grant  N° : 821996  
+Project Officer EC  : Christos Ampatzis (REA)  
+ 
+MOSAR  is co-funded by the Horizon 2020  
+Framework Programme of the European Union  
+
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+1 
+ 
+DOCUMENT APPROVAL SHEET  
+ Name  Organization  Date  
+Prepared and 
+cross -review by:  Space Applications Services  
+Thales Alenia Space France  
+Thales Alenia Space UK  
+SITAEL  
+GMV  
+University of Strathclyde  
+German Aerospace Centre  (DLR)  
+MAG  SOAR  28/06/2019  
+ 
+ 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+2 
+ 
+DOCUMENT CHANGE RECORD  
+Version  Date  Author  Changed 
+Sections / Pages  Reason for Change / RID No  
+0.9.0  28/06/2019 Partners  All Initial delivery for SRR review  
+1.0.0  01/09/2019  Space 
+Applications  
+USTRAT  Section 2.2.1  
+Section 2.2.2 
+(FuncR_S118) 
+ 
+Section 2.2.3 
+(PerfR_S201/202 ) 
+Section 2.2.7  
+Section 3.3.1 
+(FuncR_A113-
+116, B103) Added section based on RID OG09-
+48 
+Comment removed based on RID 
+OG09-49 
+Edited based on RID OG09 -50 
+ 
+Edited based on RID OG09-51  
+Edited based on RID OG09-53 
+ 
+ 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+3 
+ 
+Contents  
+1 Intro duction  ................................ ................................ ................................ ................................ . 8 
+1.1 Purpose and Scope  ................................ ................................ ................................ ..........  8 
+1.2 Document Structure  ................................ ................................ ................................ .........  8 
+1.3 Applicable Documents  ................................ ................................ ................................ ...... 8 
+1.4 Reference Documents  ................................ ................................ ................................ ...... 8 
+1.5 Acronyms  ................................ ................................ ................................ ..........................  9 
+2 Modular Spacecraft Requirements  ................................ ................................ ..........................  10 
+2.1 Mission Overview  ................................ ................................ ................................ ...........  10 
+2.2 Space Scenarios Requirements  ................................ ................................ .....................  12 
+2.2.1  Formalism  ................................ ................................ ................................ ..........  12 
+2.2.2  S100: Functional requirements [FuncR]  ................................ ............................  13 
+2.2.3  S200: Performance requirements [PerfR]  ................................ .........................  20 
+2.2.4  S300: Interface requirements [IntRD]  ................................ ................................  21 
+2.2.5  S400: De sign requirements [DesR]  ................................ ................................ ... 22 
+2.2.6  S500: Physical and resource requirements [PhyR]  ................................ ...........  23 
+2.2.7  S600: Environmental and Operational requirements [OpR]  ..............................  23 
+2.2.8  S700: Safety requirements [SafR]  ................................ ................................ ..... 25 
+2.2.9  S800: Configuration and implementation requirements [ConfR]  .......................  29 
+3 MOSAR Demonstrator Requirements  ................................ ................................ .....................  31 
+3.1 Demonstrator Overview  ................................ ................................ ................................ .. 31 
+3.2 Formalism  ................................ ................................ ................................ .......................  32 
+3.3 System Requirements [Axxx]  ................................ ................................ .........................  33 
+3.3.1  A100: Functional requirements [FuncR]  ................................ ............................  33 
+3.3.2  A200: Performance requirements [PerfR]  ................................ .........................  37 
+3.3.3  A300: Interface requirements [IntR]  ................................ ................................ .. 39 
+3.3.4  A400: Desi gn requirements [DesR]  ................................ ................................ ... 40 
+3.3.5  A500: Physical and resource requirements [PhyR]  ................................ ...........  42 
+3.3.6  A600: Environmental and Operational requirements [OpR]  ..............................  42 
+3.3.7  A700: Safety requirements [SafR]  ................................ ................................ ..... 43 
+3.3.8  A800: Configuration and implementation requirements [ConfR]  .......................  43 
+3.4 Walking Manipulator Requirements [Bxxx]  ................................ ................................ .... 45 
+3.4.1  B100: Functional requirements [FuncR]  ................................ ............................  45 
+3.4.2  B200: Performance requirements [PerfR]  ................................ .........................  47 
+3.4.3  B300: Interface requirements [IntR]  ................................ ................................ .. 48 
+3.4.4  B400: Design requirements [DesR]  ................................ ................................ ... 50 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+4 
+ 
+3.4.5  B500: Physical and resource requirements [PhyR]  ................................ ...........  52 
+3.4.6  B600: Environmental and Operational requirements [OpR]  ..............................  52 
+3.4.7  B700: Safety requirements [SafR]  ................................ ................................ ..... 52 
+3.4.8  B800: Configuration and implementation requirements [ConfR]  .......................  52 
+3.5 Spacecraft Modules Requirements [Cxxx]  ................................ ................................ ..... 53 
+3.5.1  C100: Functional requirements [FuncR]  ................................ ............................  53 
+3.5.2  C200: Performance requirements [PerfR]  ................................ .........................  55 
+3.5.3  C300: Interface requirements [IntR]  ................................ ................................ .. 56 
+3.5.4  C400: Design requirements [DesR]  ................................ ................................ ... 57 
+3.5.5  C500: Physical and resource requirements [PhyR] ................................ ...........  60 
+3.5.6  C600: Environmental and Operational requirements [OpR]  ..............................  61 
+3.5.7  C700: Safety requirements [SafR]  ................................ ................................ ..... 61 
+3.5.8  C800: Configuration and implementation requirements [ConfR] .......................  61 
+3.6 Standard Interfaces Requirements [Dxxx]  ................................ ................................ ..... 62 
+3.6.1  D100: Functional requirements [FuncR]  ................................ ............................  62 
+3.6.2  D200: Pe rformance requirements [PerfR]  ................................ .........................  64 
+3.6.3  D300: Interface requirements [IntR]  ................................ ................................ .. 66 
+3.6.4  D400: Design requirements [DesR]  ................................ ................................ ... 67 
+3.6.5  D500: Physical requirements [PhyR]  ................................ ................................ . 68 
+3.6.6  D600: Envi ronmental and Operational requirements [OpR]  ..............................  69 
+3.6.7  D700: Safety requirements [SafR]  ................................ ................................ ..... 70 
+3.6.8  D800: Configuration and implementation requirements [ConfR] .......................  70 
+3.7 Planner and Simulator Requirements [Exxx]  ................................ ................................ . 71 
+3.7.1  E100: Functional requirements [FuncR]  ................................ ............................  71 
+3.7.2  D200: Pe rformance requirements [PerfR]  ................................ .........................  73 
+3.7.3  D300: Interface requirements [IntR]  ................................ ................................ .. 73 
+3.7.4  D400: Design requirements [DesR]  ................................ ................................ ... 74 
+3.7.5  D500: Physical and resource requirements [PhyR] ................................ ...........  75 
+3.7.6  D600: Environmental and Operational requirements [OpR]  ..............................  75 
+3.7.7  D700: Safety requirements [SafR]  ................................ ................................ ..... 75 
+3.7.8  D800: Configuration and implementation requirements [ConfR] .......................  75 
+3.8 Software Requirements [Fxxx]  ................................ ................................ .......................  76 
+3.8.1  F100: Functional r equirements [FuncR]  ................................ ............................  76 
+3.8.2  F200: Performance requirements [PerfR]  ................................ .........................  77 
+3.8.3  F300: Interface requirements [IntR]  ................................ ................................ ... 78 
+3.8.4  F400: Design requirements [DesR]  ................................ ................................ ... 78 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+5 
+ 
+3.8.5  F500: Physic al and resource requirements [PhyR]  ................................ ...........  78 
+3.8.6  F600: Environmental and Operational requirements [OpR]  ..............................  78 
+3.8.7  F700: Safety requirements [SafR]  ................................ ................................ ..... 78 
+3.8.8  F800: Configuration and implementation requirements [ConfR]  .......................  79 
+3.9 Validation Requirements [Gxxx]  ................................ ................................ .....................  80 
+4 Conclusions  ................................ ................................ ................................ ...............................  83 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+6 
+ 
+List of Figures  
+Figure 2 -1 - Schematic view of a MOSAR -like mission.  ................................ ................................ ........  11 
+Figure 3 -1: MOSAR Demonstrator Concept  ................................ ................................ ..........................  31 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+7 
+ 
+List of Tables  
+Table 1: Example o f requirement  ................................ ................................ ................................ ..........  12 
+Table 2: Example of requirement  ................................ ................................ ................................ ..........  32 
+ 
+ 
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+8 
+ 
+1 Introduction  
+1.1 Purpose and Scope  
+The purpose of this document is to provide the system requirements for MOSAR that are derived from 
+the from the SRC Compen dium document , the analysis of the modular spacecraft applications and 
+relevant technology review  (including previous OGs building blocks) , the MOSAR operational concept 
+and the demonstration scenarios.  
+The document is mainly divided in two parts. The first part addresses the extraction of requirements 
+associated with future space mission scenarios of modular spacecraft applications. They are mainly 
+derived from the analysis of the most promising use cases of On -orbit reconfiguration and the associated 
+technological needs  (RD2-D1.2) . These requirements are considered as  guidelines for the development  
+of the MOSAR demonstrator, to target a good representativeness  of future missions.  
+The second part addresses more specifically the technical requirements of the MOSAR demonstrator 
+that will be designed, developed and tested during this activity.  The requirements are described at 
+system level, for each of the main sub -systems and for the validation phase.      
+1.2 Document Structure  
+This document is structured as follows:  
+Section  1  Introduction  
+Section  2  Modular Spacecraft  Requirements  
+Section  3  MOSAR Demonstrator Requirements  
+1.3 Applicable Documents  
+AD1 SRC – Guidance Document for H2020 Work Programe 2018 -2020 (SPACE -12-TEC-2018)  
+AD2 MOSAR Consortium Agreement, version 1.0 (7th November 2018)  
+AD3 MOSAR Grant Agreement (821996) (18th January 2019)  
+AD4 MOSAR Proposal; H2020 -SPACE -2018 -2020 (SEP -210504862)  
+1.4 Reference Documents  
+RD1 MOSAR -WP1 -D1.1 -GMV OG1 -5 Building Block Update Documentation Package  
+RD2 MOSAR -WP1 -D1.2 -TASF Report on MOSAR Applicable Technologies Review  
+RD3 MOSAR -WP1 -D1.3 -DLR Operational Concept  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+9 
+ 
+1.5 Acronyms  
+APM   Active Payload Module  
+ASM   Active System Module  
+CAN   Controller Area Network  
+CLT  Client (spacecraft)  
+DDS   Data Distribution Service  
+ERGO   European Robotic Goal -Oriented Autonomous Controller  
+ESA  European Space Agency  
+ESROCOS  European Space Robotics Control and Operating System  
+FES  Functional Engineering Simulator  
+FM  Functional Module  
+GEO   Geostationary  Earth Orbit  
+GTO   Geostationary Transfer  Orbit  
+I3DS   Integrated 3D Sensors  
+InFuse   Infusing Data Fusion in Space Robotics  
+LEO  Low Earth Orbit  
+MCC   Monitoring and Control Center  
+MOSAR  Modular Spacecraft Assembly and Reconfiguration  
+OBC   On-Board Computer  
+OG  Operational Grant  
+PERASPERA  Plan the European Roadmap and its Activities for Space Exploitation of Robotics and 
+Autonomy  
+PUS Packet Utilization Standard  
+R-ICU  Reduced Instrument Control Unit  
+SI  Standard Interface  
+SIROM   Standard Interface for Robotic Manipulation of Payloads in Future Space Missions  
+SM  Spacecraft Modules  
+SpW   SpaceWire  
+SRC   Strategic Research Cluster  
+SVC  Servicer (spacecraft)  
+TASTE   The ASSERT Set of Tools for Engineering  
+TBC  To be Confirmed  
+TBD  To be  Defined  
+TC  Telecommand  
+TM  Telemetry  
+WM  Walking Manipulator  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+10 
+ 
+2 Modular Spacecraft  Requirements  
+2.1 Mission Overview  
+The selection of the MOSAR space mission application has to be done in perspective with the other 
+space mission applications selected for PULSAR  and for EROSS:  
+ PULSAR space mission will consist in assembling a large telescope at Earth -Sun L2 point 
+using a robotic manipulator, with all the telescope and platform elements packaged in a single 
+launch.  
+ 
+ EROSS space mission will consist in the in -space  servicing of a LEO satellite, with refueling  
+and units replacement, using state -of-the-art robotic arm and equipment.  
+Following the analysis of RD2, a mission conce pt is proposed that exploits at best the benefits of the 
+modular approach, that is realistically feasible in the short/mid -term and that is commercially oriented 
+towards the reduction of costs and the maximization of profit.  
+The proposed MOSAR space missi on application consists in upgrading, reconfiguring and repairing an 
+operational GEO telecommunication satellite.  
+The satellite, in its original configuration, will have an initial telecommunication payload capacity and will 
+be assembled and tested on -ground, but it will feature key design concepts to meet the mission 
+objective:  
+ Modular design:  
+The satellite original configuration will be based on the conventional all -integrated platform, 
+but will feature some specific modules, removable from the outside o f the satellite, dedicated 
+to power generation (solar array + power conditioning) and payloads.  
+ 
+ Scalable design:  
+The satellite original configuration will allow in -space connection of additional modules through 
+standard interfaces at the outside of the satellite.  
+ 
+The mission is divided into 3 different phases:  
+ Phase 1: launch of satellite with initial capacity  
+The satellite is assembled and tested on -ground and is launched fully integrated into a GTO. The 
+satellite then uses its own propulsion system to  raise its orbit to reach its GEO position slot.  
+After in -orbit tests and commissioning, the satellite is capable to deliver an initial capacity (e.g. high 
+throughput internet connection).  
+ 
+ Phase 2: capacity increase + upgrade of payload + addition of host ed payload  
+After several years in -orbit (approximately 5 years), there is a need coming from the market to upgrade 
+the payload (removal of obsolete technologies) and to add telecommunication capacity to the existing 
+satellite, while also adding an hosted p ayload for meteorology on the Earth pointing panel to increase 
+financial revenues and profitability.  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+11 
+ 
+Dedicated modules (power generation module, payload modules, hosted payload module) will be 
+manufactured, tested on -ground and launched into GTO (can be a co-passenger with another GEO 
+satellite). A servicer equipped with a robotic arm and positioned near the GTO injection point, will then 
+capture the modules, bring them to the satellite operational orbit (i.e. perform an orbit raising and 
+insertion into GEO  slot of its client) where it will assemble them with the following sequence:  
+o Addition of power generation module and in -orbit tests for verification of performances  
+o Removal and storage of obsolete payload modules  
+o Replacement of obsolete payload modules and in -orbit tests for verification of 
+performances  
+o Addition of telecommunication payload modules and in -orbit tests for verification of 
+performances  
+o Addition of hosted payload module and in -orbit tests for verification of performances  
+ 
+ Phase 3: replacemen t of failed battery + addition of deorbiting propulsion kit  
+After additional years of operations, failure of parts subjected to ageing (e.g. battery, thrusters) occurred 
+preventing the satellite from operating nominally and performing specific station keep ing maneuvers  
+(e.g. E/W or N/S).  
+Dedicated modules (battery module, propulsion kit) are manufactured, tested on -ground and launched 
+as co -passenger to another GTO mission. As for Phase 2, a servicer will capture and bring them to the 
+satellite operational orbit and perform the modules exchange.  
+ 
+Figure 2-1 - Schematic view of a MOSAR -like mission.  
+ 
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+12 
+ 
+This mission concept is proposed as an example, to guide the development of the demonstrator. 
+However it should not limit in any way the applicability of MOSAR to any other kind of mission.  
+MOSAR is a project aiming at demonstrating a set of key technologies that are considered essential for 
+the development of future applications of On -Orbit Servicing and On -Orbit A ssembly. The objectives of 
+MOSAR include ( AD3):  
+ Review, extension and integration of common robotic building blocks: ESROCOS, ERGO and 
+InFuse software building block s; I3DS perception suite and SIROM standard interface.  
+ Development of a repositionable walking manipulator, enabling a cost -effective solution for 
+actuation on a wide workspace without escalation of size and performance of the robot.  
+ Elaboration of a con cept for modular spacecraft: identifying key design choices and highlighting 
+recommendations for development of standards for design and operation of future modular 
+space vehicles.  
+The first two objectives should be generic and independent from any specifi c mission, as the final 
+purpose is to develop a standard that is unique and re -usable across different missions. As for the third 
+objective, the applicability of the modular approach to different missions is discussed in RD2, highlighting 
+the main advantages that modularity would bring to specific applications and the main design and 
+operation requirement that would need to be fulfilled.  
+2.2 Space Scenarios  Requirements  
+MOSAR does not target a specific mission in particular, but rather aims at demonstrating key 
+functionalities that are intended to be generic and applicable to very different scenarios. Therefore, it 
+has been preferred not to restrain MOSAR applicability to a given mission, but to presen t general 
+requirements that can be common to multiple missions. These requirements are not  expect ed to be fully 
+verified in the context of the current project. They should be considered as guidelines for the 
+developments in th e current activity to favor  compatibility with future mission goals and requirements.  
+2.2.1  Formalism  
+The following section details the space scenarios requirements following the structure exemplified in 
+this table:  
+Table 1: Example of requirement  
+YY_uniqueID  Title LEVEL  
+STATEMENT  Requirement Statement  
+COVERS  Origin  
+COMMENT  Additional comment and explanations  
+The top row of the table includes:  
+● Unique ID: identificator with the structure YY_uniqueID  
+○ YY: type of the requirement - Functional requirements (FuncR), Performance 
+requirements (PerfR), Interface requirements (IntR), …  
+○ uniqueID: unique reference with 4 characters:  
+■ The first character is a “S”, for Space Scenarios Requirements  
+■ The next number identifies the type of requirem ent inside the subsystem  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+13 
+ 
+■ The next two numbers identify a number assigned to each requirement in that 
+category  
+● Title: highlighting the topic of the requirement  
+● LEVEL: indicates the level of importance of the requirement (mandatory / desirable / optional)  
+The rest of the table includes the following fields:  
+● STATEMENT: clear and concise description of the requirement  
+● COVERS: gives indication about the origin/scope of the requirements (specific user requirement 
+or user case, partner expertise, project constraint, etc.)  
+● COMMENT: provides rationale or additional comments about the requirement  
+2.2.2  S100: Functional requirements [FuncR]  
+FuncR_ S101 Satellite repair  and u pdate  Mandatory  
+STATEMENT  The MOSAR technology shall allow repair and update of modular spacecraft  by 
+manipulation and repositioning of functional  modules with a  robotic manipulator  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R02 
+COMMENT   
+ 
+FuncR_S 102 Mission tasks u pdate  Mandatory  
+STATEMENT  The modular spacecraft shall be reconfigurable  and should be able to use new 
+functionalities brought by additional functional modules, in order to perform new mission 
+tasks  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R05 
+COMMENT   
+ 
+FuncR_S103  Functional modules r eplacement  Mandatory  
+STATEMENT  The robot ic manipulator  shall be able to add and replace whole functional modules 
+(ASM/APM) by using the interconnectors of these modules.  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R01 
+COMMENT   
+ 
+FuncR_S104  Robot r elocation  Mandatory  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+14 
+ 
+STATEMENT  The robot ic manipulator  shall be able to reposition itself by using the 
+interconnectors/structure of the functional modules or the spacecraft  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R03 
+COMMENT   
+ 
+FuncR_S10 5 Design s oftware  Mandatory  
+STATEMENT  A design software shall be able to create a robotic compatible servicing / reconfiguration 
+plan for the modular spacecraft  
+COVERS  Operational Concept RD3  
+Guidelines AD1-OG9 -R12 
+COMMENT   
+ 
+FuncR_S10 6 Simulation  software  Mandatory  
+STATEMENT  A simulation  software shall be able to simulate the system with all related robotics 
+elements following the execution plan  
+COVERS  Operational Concept RD3  
+Guidelines AD1-OG9 -R12 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+15 
+ 
+FuncR_S107  Robot high -level c ontrol  Mandatory  
+STATEMENT  The modular spacecraft  shall perform the high -level control of the robot, by the 
+execution and monitoring of the reconfiguration plan  (task level)  
+COVERS  Operational Concept RD3  
+Guidelines AD1-OG9 -R04 
+COMMENT  The high -level control of the robot can also be managed by the servicer satellite 
+(depending on the servicing or local reconfiguration scenario)  
+ 
+FuncR_S108  Robot low -level c ontrol  Mandatory  
+STATEMENT  The robotic manipulator  shall ensure its low -level control for the execution of the high -
+level tasks   
+COVERS  Operational Concept RD3  
+Guidelines AD1-OG9 -R04 
+COMMENT   
+ 
+FuncR_S10 9 Functional module m onitoring  Mandatory  
+STATEMENT  The modular spacecraft  shall be able to monitor the status of  essential parameters of 
+each connected functional  module  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R12 
+COMMENT   
+ 
+FuncR_S1 10 Resources r eallocation  Mandatory  
+STATEMENT  The system shall be able to reallocate resources (e.g. power, data, computational 
+power, etc.) and assign different path automatically in case of a defect (e.g. 
+interconnector of an APM)  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R07 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+16 
+ 
+FuncR_S11 1 Failure handling  Mandatory  
+STATEMENT  The system shall be able to handle the tasks  even during a connection failure or a 
+power interruption of defect modules/interconnectors.  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R08 
+COMMENT   
+ 
+FuncR_S112  Electrical power supply  Mandatory  
+STATEMENT  One or several modules options shall be available  to implement for  electrical power 
+supply enabling operation of the functional modules and the robot manipulator  
+COVERS  Mission analysis RD2 
+COMMENT  The power system could be integrated by one or more functional modules  
+ 
+FuncR_S113  Electrical power supply, power management  Mandatory  
+STATEMENT  The modular spacecraft shall be able to shut down or command a stand -by mode of any 
+non-critical module to reduce power consumption if needed.  
+Critical functions should not be affected by shutting down of non -critical modules.   
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+FuncR_S114  Data handling system  Mandatory  
+STATEMENT  One or several modules options shall be available  to implement a data handling system 
+(that can be composed of one or more modules) that enables operation of the different 
+modules and the manipulator.  
+COVERS  Mission analysis RD2 
+COMMENT  The data handling system could be integrated by one or more functional modules  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+17 
+ 
+FuncR_S115  Heat management and thermal considerations  Mandatory  
+STATEMENT  One or several modules options shall be available to implement heat management 
+functions that allow thermal regulation of the different modules within its specific range 
+of temperatures. The heat management system could be composed of one or more 
+modules.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+FuncR_S11 6 Propulsion subsystem  Mandatory  
+STATEMENT  One or several modules options shall be available to implement a propulsion subsystem 
+with capacity to perform at least:  
+ Station keeping manoeuvers.  
+ Orbit relocation.  
+ De-orbiting.  
+COVERS  Mission analysis RD2 
+COMMENT  The propulsion subsystem could be integrated by one or more functional modules.  
+ 
+FuncR_S11 7 Attitude control subsystem  Mandatory  
+STATEMENT  One or several modules options shall be available to implement an attitude control 
+subsystem, with capacity to perform at least:  
+ Spacecraft reorientation.  
+ Attitude control compatible with mission objectives.  
+ Autonomous search of the Sun and the Earth  
+COVERS  Mission analysis RD2 
+COMMENT  The attitude control subsystem is essential to ensure correct functioning of other 
+subsystems.  
+ 
+FuncR_S118  Module mechanical c onnections  Mandatory  
+STATEMENT  Modules shall be able to connect mechanically to other modules or to the spacecraft 
+through interconnectors.  
+COVERS  Mission analysis RD2 
+COMMENT  Not every module is directly linked to the OBC of the modular platform. Data relay 
+function is needed to dispatch telecommands and telemetries through a network of 
+modules.  
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+18 
+ 
+ 
+FuncR_S11 9 Module data relay  Mandatory  
+STATEMENT  Any module should be able to act as a data relay for other modules  or the robotic 
+manipulator  through their interconnector , also if the module is in safe mode  
+COVERS  Mission analysis RD2 
+COMMENT  Not every module is directly linked to the OBC of the modular platform. Data relay 
+function is needed to dispatch telecommands and telemetries through a network of 
+modules.  
+ 
+ 
+FM1 is in safe mode but still acts as data relay for FM2.  
+ 
+ 
+FuncR_S1 20 Data routing  Mandatory  
+STATEMENT  The OBC shall be able to redirect telecommands to specific modules, for the spacecraft 
+configuration or for instance upon detection of failure on any point of the network.  
+If an alternative path is not available, the OBC shall be able to isolate the faulty node 
+and all the others nodes connected downstream.  
+COVERS  Mission analysis RD2 
+COMMENT  FM5 has a nominal link to the OBC through FM3 and FM4. In case of failure of any of 
+these components, the OBC should redirect telecommands to FM5 through the alternative 
+path using FM1 and FM2.  
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+19 
+ 
+ 
+ 
+FM7 only has connection to the OBC through FM6. In case of failure of FM1 the OBC 
+should isolate both modules and stop sending TCs to them until FM6 is recovered. FM7 
+cannot be a critical module.  
+ 
+ 
+FuncR_S1 21 Module power relay  Mandatory  
+STATEMENT  Module should be able to act as a power relay for other modules  or the robotic 
+manipulator  through their interconnector s, also if the module is in safe mode  
+COVERS  Mission analysis RD2 
+FuncR_S112  
+COMMENT  To allow power distribution between the power supply (spacecraft or functional module) 
+and the other active modules  
+ 
+FuncR_S12 2 Power routing  Mandatory  
+STATEMENT  The OBC shall be able to redirect power to specific modules, for the spacecraft 
+configuration or for instance upon detection of power failure on any point of the network.  
+If an alternative path is not available, the OBC shall be able to isolate the faulty node 
+and all the others nodes connected downstream.  
+COVERS  Mission analysis RD2 
+COMMENT  To allow power distribution between the power supply (spacecraft or functional module) 
+and the other active modules  
+ 
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+20 
+ 
+FuncR_S12 3 Module thermal relay  Mandatory  
+STATEMENT  Module should be able to act as a thermal relay for other modules through their 
+interconnectors  
+COVERS  Mission analysis RD2 
+FuncR_S115  
+COMMENT  To allow thermal distribution and management between the modules  
+2.2.3  S200: Performance requirements [PerfR]  
+Performance requirements are specific to each application. Detailed  mission analysis is needed to adapt 
+the generic requirements presented hereafter to the specific need of the mission.  
+PerfR_S201 Mechanical interfaces  Mandatory  
+STATEMENT  The modular spacecraft shall be able to withstand the loads expected on orbit with 
+significant ( TBD) safety margins.  
+In any case, the mechanical integrity of the ensemble should not be compromised.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+PerfR_S202  Manipulator mechanical loads  Mandatory  
+STATEMENT  The robot manipulator and its connections to the modules or spacecraft shall be able to 
+withstand the loads expected during modules operations with significant ( TBC) safety 
+margins.  
+In any case, the mechanical integrity of the robotic arm and its connection with the 
+spacecraft or modules should not be compromised.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+PerfR_S203 Mechanical interfaces (alignment and stiffness)  Mandatory  
+STATEMENT  The mechanical interfaces of the modular spacecraft shall provide the required 
+alignment accuracy and stiffness required by the different modules to meet their 
+respective performance requirements and to not constitute a harm to the rest of the 
+spacecraft.  
+COVERS  Mission analysis RD2 
+COMMENT  The performance requirements of the different modules could be treated at system 
+level, showing adequacy to the mission objectives.  
+The minimum need in terms of alignment and stiffness of the mechanical interface 
+should at least guarantee that every module is safely integrated into the modular 
+platform.  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+21 
+ 
+2.2.4  S300: Interface requirements [IntR D] 
+IntR_S 301 Ground segment communication  Mandatory  
+STATEMENT  The modul ar spacecraft shall have a redundant  communication link with the ground 
+segment for telemetry and telecommands.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+IntR_S 302 Telemetry of different modules  Mandatory  
+STATEMENT  Every module shall have a communication link enabling to send telemetry to the 
+spacecraft monitoring unit (OBC) and ultimately to the ground station. The link with the 
+ground station could be done through a specific communication module implemented on 
+the modular spacecraft.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+IntR_S 303 Ground segment surveillance  Mandatory  
+STATEMENT  The ground segment shall know at any moment the status of the different modules of 
+the modular spacecraft. This information is passed through two  types of telemetries:  
+ Periodic telemetry with standardized packets.  
+ Asynchronous telemetry with error message.  
+COVERS  Mission analysis RD2 
+COMMENT  The ground segment is able to detect problems in case an anomaly message is 
+received (asynchronous telemetry). Even if the error message is never received (for 
+instance, sudden power loss), the ground segment is able to detect a problem if the 
+periodic telemetry is not received and investigate the problem by analyzing this data.  
+ 
+IntR_S304  Grounding (electrical power)  Mandatory  
+STATEMENT  Any module of the modular spacecraft provided with an electrical power interface should 
+have a connection to ground.  
+COVERS  Mission analysis RD2 
+COMMENT  Reduces the risk of introducing stray currents or ground loop currents.  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+22 
+ 
+2.2.5  S400: Design requirements [DesR]  
+DesR_ S401 Modular satellite r eliability  Desirable  
+STATEMENT  The modular spacecraft  shall be quantifiably more reliable by design than a monolithic 
+system over the mission lifetime of the satellite, including (and as a specific advantage) 
+under extensions of mission lifetime.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+DesR_S 402 Modular satellite f lexibility  Desirable  
+STATEMENT  The modular spacecraft  shall be quantifiably more flexible in operation and responsive 
+to mission changes than a traditional satellite with a similar mission.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+DesR_S 403 Modular satellite e conomy  Desirable  
+STATEMENT  The modular spacecraft shall have quantifiable advantages in cost -effectiveness and 
+economy of operation from a mission perspective over the projected lifetime of the 
+satellite.  
+Otherwise , it should be demonstrated that the benefits (in terms of enhanced 
+functionalities) compensate the additional costs.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+DesR_S 404 Available connection interface s Mandatory  
+STATEMENT  The modular spacecraft and modules assembly shall implement a minimum number of 
+connection interfaces such as at least two of these interfaces are available at any 
+moment and within the reach of the robotic manipulator.  
+COVERS  Mission analysis RD2 
+COMMENT  one spot for anchorage on the client spacecraft and a second one for placing a new 
+module.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+23 
+ 
+DesR_S 405 Compatibility between modules  Mandatory  
+STATEMENT  The assembly of modules on a modular spacecraft respond to a planning  and design  
+that has previously being verified on ground.  
+COVERS  Mission analysis RD2 
+COMMENT   
+2.2.6  S500: Physical and resource requirements [PhyR]  
+PhyR_S501  Components weight  Mandatory  
+STATEMENT  The weight of all components associated with the concept of modular spacecraft shall 
+be  minimized (interconnectors, functional module structure, robotic manipulator)   
+COVERS  Mission analysis RD2 
+COMMENT  The concept of modular spacecraft brings additional components that creates a penalty 
+on the system weight.  
+ 
+PhyR_S502  Interconnectors size and volume  Mandatory  
+STATEMENT  The size and volume of the interconnectors shall be minimized to offer more place 
+inside the functional modules    
+COVERS  Mission analysis RD2 
+COMMENT   
+2.2.7  S600: Environmental and Operational requirements [OpR]  
+OpR_S601  Servicer s atellite  Mandatory  
+STATEMENT  The functional modules shall be delivered to the modular spacecraft by a servicer 
+satellite equipped with a robotic manipulator  
+COVERS  Mission analysis RD2 
+Operational Concept RD3 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+24 
+ 
+OpR_S6 02 On-Orbit Rendez -vous, interfaces  Mandatory  
+STATEMENT  The modular spacecraft shall implement a physical interface for docking and/or berthing 
+of a servicer satellite.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+OpR_S6 03 On-Orbit Rendez -vous, coupled spacecraft  Mandatory  
+STATEMENT  The modular spacecraft shall be able to remain coupled to the servicer spacecraft 
+without time limitation.  
+COVERS  Mission analysis RD2 
+COMMENT  There should be no limitation coming from any of the subsystems of the modular 
+spacecraft (ADCS, power, thermal e tc.). 
+ 
+OpR_S6 04 On-Orbit Rendez -vous, communication to servicer  Mandatory  
+STATEMENT  The modular spacecraft should be able to communicate with the servicer and exchange 
+data during and after rendez -vous operation.  
+COVERS  Mission analysis RD2 
+COMMENT  Not essential during rendez -vous but highly desirable for enhanced autonomy during 
+operations without (or with minimum) ground support.  
+ 
+OpR_S6 05 On-Orbit Rendez -vous, ground communications  Mandatory  
+STATEMENT  The modular spacecraft shall be able to monitor operations during and after rendez -
+vous and send reports to the ground segment.  
+COVERS  Mission analysis RD2 
+COMMENT  Continuous link to ground stations is not essential for rendez -vous, however, different 
+phases are usually defined with specific mileston es that are controlled by ground 
+operators.  
+After rendez -vous, the communication supports transfer of the execution plan and the 
+monitoring and feedback of the operations to the ground.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+25 
+ 
+OpR_S60 6 Space environment  Mandatory  
+STATEMENT  The components of  the modular spacecraft: subsystems, interfaces and structures shall 
+be able to withstand the space environment for the whole duration of the mission.  
+COVERS  Mission analysis RD2 
+COMMENT  Generic requirement to be verified depending on the specific application.  
+ 
+OpR_S60 7 Launch l oads  Desirable  
+STATEMENT  The interconnectors design shall optimize launch load capabilities, to offer the wider 
+range of possibilities regarding pre -assembled functional modules (on the initial 
+spacecraft or the servicer) before launch  
+COVERS  Mission analysis RD2 
+COMMENT  Conditions are function of the launch conditions, configuration of the modules (inertia, 
+COG,…) and type of connection with the launcher  
+ 
+2.2.8  S700: Safety requirements [SafR]  
+SafR_ S701 Critical functionalities  Mandatory  
+STATEMENT  The failure of any functional module shall not yield to the loss of the spacecraft.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S7 02 Redundancy of critical functionalities  Mandatory  
+STATEMENT  Any functional module providing a critical functionality (one that is needed for the safe 
+mode of the functional platform) shall be red undant . 
+COVERS  Mission analysis RD2 
+ 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+26 
+ 
+SafR_S7 03 Propagation of failures  Mandatory  
+STATEMENT  Any module of the modular spacecraft shall be designed as to avoid failure propagation. 
+In particular, the module shall prevent itself or any of its components from degrading 
+performances of other modules or damaging the modular spacecraft.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S7 04 Substitution of critical modules  Mandatory  
+STATEMENT  Any module that is considered critical (without this module the spacecraft loss one of its 
+basic functionalities) can only be exchanged if:  
+1. Another module covering its functionality has already been added to the client 
+spacecraft.  
+2. This second module is already operational.  
+3. The module to be substituted has already been isolated and switched off.  
+4. No anomaly has been detected between steps 2 and 3.  
+COVERS  Mission analysis RD2 
+COMMENT  The design principle of “do not harm” should be applied for the modules of a modular 
+spacecraft.  
+ 
+SafR_S7 05 Robustness to power loss  Mandatory  
+STATEMENT  Any module shall be able to withstand a sudden power loss without any damage to itself 
+or to other modules. The module shall autonomously shut down or enter a standby 
+mode of minimum power consumption.  
+COVERS  Mission analysis RD2 
+COMMENT  The design principle of “do not harm” should be applied for the modules of a modular 
+spacecraft.  
+ 
+In case of major anomaly of FM1, FM2 may suddenly lose its power supply.  
+ 
+ 
+  
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+27 
+ 
+SafR_S7 06 Restart after power loss  Mandatory  
+STATEMENT  After a sudden power loss, any module of the modular spacecraft shall be able to restart 
+and resume normal operation when power supply is restored.   
+COVERS  Mission analysis RD2 
+COMMENT  The design principle of “do not harm” should be applied for the modules of a modular 
+spacecraft.  
+ 
+When functionality of FM1 is restored, the modules downstream (FM2) can restart and 
+resume normal operation.  
+ 
+ 
+SafR_ S707 Data handling system (redundancy)  Mandatory  
+STATEMENT  The modular spacecraft shall implement a redundant  on-board computer. The two (or 
+more) OBCs could be integrated in different modules or in the same module. If the 
+OBCs are integrated in the same module, two different interfaces should be provided, 
+ensuring that in any case a single failure does not yield  to the loss of the spacecraft.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S 708 Modular Satellite Failure Detection, Isolation and Recovery  Mandatory  
+STATEMENT  The modular satellite shall be able to detect failure of any module, isolate the faulty 
+equipment and perform recovery operations when possible.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S 709 Safe mode  Mandatory  
+STATEMENT  The modular spacecraft shall implement a safe mode that guarantees a stable condition 
+of the spacecraft without time limitation. This mode should be fully autonomous (without 
+any ground intervention).  
+COVERS  Mission analysis RD2 
+COMMENT   
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+28 
+ 
+ 
+SafR_S 710 Safe mode (modules)  Mandatory  
+STATEMENT  Any module of the modular spacecraft shall implement a safe mode. This mode 
+minimizes hardware and software functions as to make minimal use of the modular 
+spacecraft resources (power).  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S 711 Safe mode (command)  Mandatory  
+STATEMENT  The modular spacecraft should enter safe mode either by autonomous transition 
+triggered by the on -board computer or through ground command.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S 712 Safe mode (modules, command)  Mandatory  
+STATEMENT  Any module of the modular spacecraft should enter in safe mode when commanded by 
+the on -board computer of the modular spacecraft, by ground command or by 
+autonomous triggering of the module itself.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S7 13 Data relay for critical modules  Mandatory  
+STATEMENT  Any module considered as critical (needed for the safe mode of the modular platform, 
+ensuring no loss of the spacecraft) shall have either:  
+a) A direct connection to the OBC.  
+b) Two independent paths to reach the OBC through other modules.  
+COVERS  Mission analysis RD2 
+Guidelines AD1-OG9 -R07 
+COMMENT  FM1 and FM5 are critical modules. FM1 is directly connected to the OBC. FM5 is not 
+directly connected to the OBC, but has two alternative ways of communicating with the 
+OBC. The design is robust to a single failure of any of the non -critical modules.  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+29 
+ 
+ 
+ 
+SafR_S 714 Power  relay for critical modules  Mandatory  
+STATEMENT  Any module considered as critical (needed for the safe mode of the modular platform, 
+ensuring no loss of the spacecraft) shall have either:  
+a) A direct connection to the power supply.  
+b) Two independent paths to reach the power supply through other modules.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+SafR_S 715 Single points of failure  Mandatory  
+STATEMENT  The design of the modular spacecraft shall minimize the number of single point of 
+failures (failure that yields to loss of the spacecraft or its mission). Every single point of 
+failure should be fully described, analyzed, and justified why any other implementation is 
+not better than the selected one.  
+COVERS  Mission analysis RD2 
+COMMENT   
+ 
+2.2.9  S800: Configuration and implementation requirements [ConfR]  
+Conf R_S801 Configuration of the modular spacecraft  Mandatory  
+STATEMENT  A modular spacecraft implements identical modules in terms of structure shape and 
+materials. Singularly, different shapes could be accepted provided that compatibility with 
+the basic modules is ensured.  
+COVERS  Mission analysis RD2 
+COMMENT  The basic module is the rectangle. Singularly, other modules that are compatible could 
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+30 
+ 
+be added to the modular spacecraft.  
+ 
+ 
+ 
+ConfR_S8 02 Functional module orientation  Mandatory  
+STATEMENT  The functional module orientation shall be adjustable as function of its function and 
+position on the modular spacecraft  
+COVERS  Mission analysis RD2 
+COMMENT  The function of the module could require a specific orientation (e.g. camera orientation, 
+radiator)  
+  
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+31 
+ 
+3 MOSAR Demonstrator Requirements  
+3.1 Demonstrator Overview  
+The purpose of the MOSAR demonstrator is to illustrate scenarios of modular spacecraft assembly and 
+re-configuration operations. The baseline scenario is the one of a Servicer Spacecraft (SVC) 
+transporting a cargo of Spacecraft Modules (SM) and a dedicated  Walking Manipulator (WM), 
+performing a number of operations with the transfer of SM from and to the Client Spacecraft (CL T) by 
+the manipulator.  
+ 
+Figure 3-1: MOSAR Demonstrator Concept  
+Spacecraft Modules are  individual structures associated with a specific function of the spacecraft, that 
+once assembled, will ensure the spacecraft operations. They can cover system (ASM, Active System 
+Modules) or payload (APM, Active Payload Modules) functions. The SM are equi pped with Standard 
+Interfaces (SI) enabling Modules to Modules and Modules to spacecraft connections. Each SI provides 
+mechanical, data, power and thermal transfer capabilities, allowing a full configuration of the CLT 
+functions. That includes mechanical s tructural integrity, data transmission, power routing and thermal 
+management along the elements.  
+The main purpose of the manipulator is to transfer the SM between the servicer and the client satellite. 
+In order to answer the problem of reachability, the MO SAR concept is based on the implementation of 
+a walking manipulator that ensures a high mobility along the structure. Equipped with Standard 
+Interfaces at its both end -effectors, it can attach and manipulate the SM, but also move along the 
+structure by con nection to either the SM or the spacecraft SI. The connection is also used to power the 
+arm and transfer the control commands coming from the spacecraft computer.  
+The autonomous transfer and configuration of the SM follow an execution plan prepared and va lidated 
+off-line, in the Monitoring and Control Centre (MCC), on the ground segment. The MCC includes a 
+satellite design, modelling and validation tool, specifically targeting modular satellites applications. It 
+also allows the automatic planning of the as sembly or reconfiguration sequence that can be verified with 
+a multi -physics simulator. All these elements are working iteratively together to prepare a valid execution 
+plan that is finally uploaded to the spacecraft for execution. Based on the monitoring and feedback 
+information received from the spacecraft during the operations (e.g. detected failed module), the MCC 
+
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+32 
+ 
+can update the execution plan. The MCC finally includes visualisation front -end to support the design, 
+verification and monitoring activities  during sequence execution.  
+3.2 Formalism   
+The following section details the system requirements following the structure exemplified in this table:  
+Table 2: Example of requirement  
+YY_uniqueID  Title LEVEL  
+STATEMENT  Requirement Statement  
+VERIFICATION  Review of Design (ROD) / 
+Analysis / Inspection / Testing  COVERS  PSA_FuncR_A000  
+RESPONSIBLE  SPACEAPPS, DLR, GMV, TAS -F, TAS -UK, SITAEL, MAGSOAR, USTRAT, 
+ELLIDISS  
+COMMENT  Additional comment and explanations  
+ 
+The top row of the table includes:  
+● Unique ID: identificator with the structure YY_uniqueID  
+○ YY: type of the requirement - Functional requirements (FuncR), Performance 
+requirements (PerfR), Interface requirements (IntR), …  
+○ uniqueID: unique reference with 4 characters:  
+■ The first character is a letter identifying the  subsystem the requirement belongs 
+to 
+■ The next number identifies the type of requirement inside the subsystem  
+■ The next two numbers identify a number assigned to each requirement in that 
+category  
+● Title: highlighti ng the topic of the requirement  
+● LEVEL: indicates the level of importance of the requirement (mandatory / desirable / optional)  
+The rest of the table includes the following fields:  
+● STATEMENT: clear and concise description of the requirement  
+● VERIFICATION MET HOD: indicates how the requirement is going to be verified (simulation, 
+internal testing, lunar analog testing) with a short description of the validation process (1 to 3 
+lines)  
+● COVERS: gives indication about the origin/scope of the requirements (specific  user requirement 
+or user case, partner expertise, project constraint, etc.)  
+● RESPONSIBLE: indicates which partner is responsible for the verification and follow up of the 
+requirement  
+● COMMENT: provides rationale or additional comments about the requirement  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+33 
+ 
+3.3 System  Requirements [Axxx]  
+This section and following ones list the requirements for the physical demonstrator system and sub -
+systems developed in MOSAR.  
+3.3.1  A100: Functional requirements [FuncR]  
+FuncR_A101  Demonstrator purpose  Mandatory  
+STATEMENT  The MOSAR demonstrator  shall illustrate  the repair and update of modular spacecraft 
+by manipulation and repositioning of SM with the WM.  
+VERIFICATION  Testing  COVERS  FuncR_S101 , FuncR_S102  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+FuncR_A102  Demonstrator c omponents  Mandatory  
+STATEMENT  The MOSAR  demonstrator  shall include:  
+ A set o f spacecraft modules (ASM/APM) to illustrate the scenarios and 
+functionalities of modular spacecraft  
+ A robotic walking manipulator for the manipulation of the SM  
+ A servicer satellite  and client modular spacecraft mockup to support the 
+demonstration scenarios  
+ A monitoring and control center that includes a design and simulation tool to 
+create and simulate the  execution plan  and a monitoring interface   
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+FuncR_A103  Plan e xecution  Mandatory  
+STATEMENT  The SVC OBC  shall execute  autonomously  the assembly/ reconfiguration plan  prepared 
+by the design and simulation tool  
+VERIFICATION  Testing  COVERS  FuncR_S107  
+MOSAR Operational Concept  
+RESPONSIBLE  GMV  
+COMMENT  None  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+34 
+ 
+FuncR_A104  SVC high level c ontrol  Mandatory  
+STATEMENT  The SVC OBC shall perform the high -level control of the WM, SM and SI  for the 
+execution of the assembly/ reconfiguration plan  
+VERIFICATION  Review of Design / Testing  COVERS  FuncR_S107  
+MOSAR Operational Concept  
+RESPONSIBLE  GMV / DLR  
+COMMENT  None  
+ 
+FuncR_A10 5 Components l ow level c ontrol  Mandatory  
+STATEMENT  Low level control of the WM, SM and SI shall be performed locally by each component  
+VERIFICATION  Review of Design / Testing  COVERS  FuncR_S108  
+MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPSS, DLR, SITAEL, TAS -UK 
+COMMENT  This allow to relax constraints on the data bus requirements (e.g. high rate robotic 
+control) , the SVC OBC having to send only high level commands to the components  
+ 
+FuncR_A10 6 WM modules o perations  Mandatory  
+STATEMENT  The WM shall be able to add and replace SM (ASM/APM) by using SI.  
+VERIFICATION  Testing  COVERS  FuncR_S103  
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS / DLR  
+COMMENT  None  
+ 
+FuncR_A10 7 WM relocation  Mandatory  
+STATEMENT  The WM shall be able to reposition itself by using the SI  of the functional modules or the 
+platform  
+VERIFICATION  Testing  COVERS  FuncR_S104  
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS / DLR  
+COMMENT  None  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+35 
+ 
+FuncR_A10 8 Monitoring  Mandatory  
+STATEMENT  The SVC OBC shall be able to monitor the parameters of the SM, WM and SI  
+VERIFICATION  Testing  COVERS  FuncR_S109  
+RESPONSIBLE  GMV, SITAEL  
+COMMENT  None  
+ 
+FuncR_A109  Spacecraft reconfiguration    Mandatory  
+STATEMENT  The system shall be able to  re-configure the CLT  (e.g. SM exchange)  in case of a defect 
+(e.g. malfunction of a SM ) 
+VERIFICATION  Testing  COVERS  FuncR_S101  
+RESPONSIBLE  GMV, DLR, SPACEAPPS  
+COMMENT   
+ 
+FuncR_A110  System redundancy  Mandatory  
+STATEMENT  The system shall be able to  re-route and  reallocate resources (e.g. power, da ta, 
+computational power, etc.)  in case of a defect (e.g. interconnector of an APM)  
+VERIFICATION  Testing  COVERS  FuncR _S110 , FuncR_S120, 
+FuncR_S122 , SafR_S813 , 
+SafR_S814  
+RESPONSIBLE  GMV, DLR, SPACEAPPS  
+COMMENT  This should support connection failure or a power interruption of defect  modules  / 
+interconnectors.  Computational power can only be done in the simulator.  
+ 
+FuncR_A111  Modules Plug & Play detection   Mandatory  
+STATEMENT  The SVC  OBC shall be able to detect and use additional functional modules (plug & 
+play principle)  
+VERIFICATION  Testing  COVERS  FuncR_S102  
+RESPONSIBLE  GMV, ELLI, UBREST, TAS -UK 
+COMMENT   
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+36 
+ 
+FuncR_A112  Fault detection  Mandatory  
+STATEMENT  The SVC OBC shall be able to react to a faulty behavior  detected by the SM, WM or SI  
+VERIFICATION  Testing  COVERS  SafR_S808  
+RESPONSIBLE  GMV  
+COMMENT  The reaction could include local management on the spacecraft (e.g. SM isolation) or 
+feedback to the MCC  
+ 
+FuncR_A113  3D reconstruction through WM  Optional  
+STATEMENT  A 3D reconstruction of the satellite could be produced from the observation by a camera 
+mounted on the WM, with a maximum surface average error of 1cm  
+VERIFICATION  Testing  COVERS  Re-use of OG3  
+RESPONSIBLE  USTRATH  
+COMMENT  Supported after re -configuration process. The WM is used to obtain different view points  
+The 3D reconstruction should allow a human operator to assess the correctness of the 
+re-configuration, and 1cm maximum surface error should be enough to meet the target  
+ 
+FuncR_A114  3D reconstruction through SM  Optional  
+STATEMENT  A 3D reconstruction of the satellite could be produced from the observation by a camera 
+mounted in a SM, with a maximum surface average error of 1cm  
+VERIFICATION  Testing  COVERS  Re-use of OG3  
+RESPONSIBLE  USTRATH  
+COMMENT  Supported during re -configuration process, in real time (30 frames/sec)  
+The 3D reconstruction should allow a human operator to assess the correctness of the 
+re-configuration, and 1cm maximum surface error should be enough to meet the target.  
+ 
+FuncR_A115  Camera Localization  Optional  
+STATEMENT  The 3D pose estimation of the camera mounted on the WM could be computed based 
+on the image stream, with a mean error not larger than 1 cm translation and 5° rotation , 
+with a minimum of 30 frame/sec  
+VERIFICATION  Testing  COVERS  Re-use of OG3  
+RESPONSIBLE  USTRATH  
+COMMENT  The accuracy of the estimated pose should allow correct positioning and connection of 
+the hardware interfaces. It should also allow 3D reconstruction with errors defined in 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+37 
+ 
+FuncR_A113 and FuncR_A114. 1cm translation and 5° rotation errors is a reasonable 
+previously achieved target  that are compatible with the initiation of the connection 
+process of the interconnectors through the use of the form -fit guidance . Furthermore, 
+localization has to happen in real time, and 30 milli seconds / frame is an acceptable 
+value achieved by recent 3d localization and mapping algorithms as described in RD2.  
+ 
+ 
+FuncR_A116  SM Localization  Optional  
+STATEMENT  The 3D pose estimation of the SM could be computed based on the image stream 
+obtained by the camera mounted on the WM, with a mean error not larger than 1 cm 
+translation and 5° rotation , with  a minimum of 30 frame/sec  (first estimation of a new 
+module 10 sec after appearance)  
+VERIFICATION  Testing  COVERS  Re-use of OG3  
+RESPONSIBLE  USTRATH  
+COMMENT  The accuracy of the estimated pose should allow correct positioning and connection of 
+the hardware interfaces. It should also allow 3D reconstruction with errors defined in 
+FuncR_A113  and FuncR_A114. 1cm translation and 5° rotation errors is a reasonable 
+previously achieved target  that are compatible with the initiation of the connection 
+process of the interconnectors through the use of the form -fit guidance . Furthermore, 
+localization has to happen in real time, and 30 milliseconds / frame is an acceptable 
+value achieved by recent 3d localization and mapping algorithms as described in RD2.  
+Initial detection of a module does not require real -time capabilities, but needs to be 
+achieved in  useful operating time, 10 seconds is an acceptable operation delay.  
+3.3.2  A200: Performance requirements [PerfR]  
+PerfR_A20 1 Sub-systems TM/TC data r ate   Mandatory  
+STATEMENT  TM/TC control of the WM and SM, including their SI,  by the SVC OBC shall require a 
+network supporting a data rate of 1Mbps or greater  
+VERIFICATION  Review of Design  COVERS  Operational Concept  
+RESPONSIBLE  TAS-UK, SPACEAPPS, DLR  
+COMMENT  The TM/TC control of the platform should not rely on high data rate links with low 
+latency.  
+ 
+PerfR_A20 2  Sub-system s services data r ate   Mandatory  
+STATEMENT  SVC OBC shall require a network supporting a data rate of 50Mbps or greater for SM 
+service data.  
+VERIFICATION  Review of Design  COVERS  Operational Concept  
+RESPONSIBLE  TAS-UK, SPACEAPPS, SITAEL  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+38 
+ 
+COMMENT  For a camera APM, a t 50 Mbps, a 4Mpixel image will take several seconds to transfer 
+across the data network.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+39 
+ 
+3.3.3  A300: Interface requirements [IntR]  
+IntR_A301  SVC to CLT  mechanical interface    Mandatory  
+STATEMENT  The SVC shall provide a mechanical docking connection to the CLT  
+VERIFICATION  Review of Design  COVERS  OpR_S603  
+Operational Concept  
+RESPONSIBLE  SITAEL, TAS -UK 
+COMMENT  The docking procedure is not part of the In MOSAR demonstration scenarios. Both 
+spacecraft  will be rigidly connected all along the demonstrations with a representative 
+gap. 
+ 
+IntR_A302  SVC to CLT  data interface    Mandatory  
+STATEMENT  The SVC shall provide a data interface to the CLT to connect both internal networks  
+VERIFICATION  Review of Design  COVERS  OpR_S604  
+Operational Concept  
+RESPONSIBLE  SITAEL, TAS -UK 
+COMMENT  The data interface allows the SVC to take the control of all the components for the 
+execution of the re -configuration plan  
+ 
+IntR_A303  SVC to CLT  power interface    Optional  
+STATEMENT  The SVC shall provide a power interface to the CLT to be able to power CLT 
+components  
+VERIFICATION  Review of Design  COVERS  Operational Concept  
+RESPONSIBLE  SITAEL, TAS -UK 
+COMMENT  Not required as, in the demonstration, the CLT could have his own power sub -system  
+ 
+IntR_A304  MCC to SVC data link   Mandatory  
+STATEMENT  The MCC shall provide a data link for upload of the execution plan and TM/TC services 
+with the SVC  
+VERIFICATION  Review of Design  COVERS  OpR_S605  
+Operational Concept  
+RESPONSIBLE  GMV, DLR  
+COMMENT  Represent the satellite link communication, could implement space standard 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+40 
+ 
+communication protocols, e.g. the pa cket utilization standard (PUS) to give some level 
+of representativeness to the demonstrator.  
+ 
+IntR_A305  MCC to SVC debugging link    Mandatory  
+STATEMENT  The MCC shall provide a data link for monitoring and debugging  purpose during the 
+integration and testing of the demonstrator  
+VERIFICATION  Review of Design  COVERS  Partner expertise  
+RESPONSIBLE  GMV  
+COMMENT   
+ 
+IntR_A306  SVC and CTL SI    Mandatory  
+STATEMENT  The SVC and CTL shall provide SI to enable connection with the SM and the WM  
+VERIFICATION  Review of Design  COVERS  FuncR_S110 , FuncR_S11 8 
+RESPONSIBLE  SITAEL , SPACEAPPS  
+COMMENT   
+ 
+3.3.4  A400: Design requirements  [DesR]  
+DesR_A401  OG1 Reuse   Mandatory  
+STATEMENT  The platform shall implement ESROCOS from OG1 for the control of the system  
+VERIFICATION  Review of Design  COVERS  Guidelines  AD1 OG9 -R10  
+RESPONSIBLE  GMV  
+COMMENT  A number of adaptations and extensions are anticipate (see RD1) 
+ 
+DesR_A402  OG2 Reuse   Mandatory  
+STATEMENT  The platform shall implement autonomy functions using OG2 (ERGO)  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R10 
+RESPONSIBLE  GMV  
+COMMENT  A number of adaptations and extensions are anticipate (see RD1) 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+41 
+ 
+ 
+DesR_A40 3 OG3 Reuse   Optional  
+STATEMENT  The platform shall implement sensor data fusion techniques from OG3 (Infuse)  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R10 
+RESPONSIBLE  USTRATH  
+COMMENT  The WM operations would rely only on known geometry information, without the need of 
+data fusion techniques. To be discussed and decided at SRR if data fusion techniques 
+are illustrated in the scenario (e.g. SVC visual validation)  
+ 
+DesR_A40 4 OG4 Reuse   Mandatory  
+STATEMENT  The satellite shall be equipped with its own integrated R -ICU derived from the OG4 
+I3DS architecture  and illustrate operations of functional modules equipped with selected 
+sensors suite from I3DS  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R10 
+RESPONSIBLE  TAS-UK, TAS -F 
+COMMENT  A number of adaptations and extensions are anticipate (see RD1) 
+ 
+DesR_A40 5 OG5 Reuse   Mandatory  
+STATEMENT  The required H/W units in OG9 (platform, ASMs/APMs, robot) shall be equipped with 
+standard interfaces from OG5.  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R10 
+RESPONSIBLE  SPACEAP PS 
+COMMENT  A number of adaptations and extensions are anticipate (see RD1) 
+ 
+DesR_A40 6 SVC and CLT OBC    Mandatory  
+STATEMENT  The SVC and CLT spacecraft shall have on OBC for the management of the different 
+components associated with the spacecraft and the communications  
+VERIFICATION  Review of Design  COVERS  FuncR_S114  
+RESPONSIBLE  SITAEL  
+COMMENT  In the MOSAR demonstration, the SVC OBC should take the lead on all the 
+components of the system.  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+42 
+ 
+ 
+DesR_A40 7 Data Network    Mandatory  
+STATEMENT  The system shall implement a data technology network that support s data bus re -
+configuration and routing  
+VERIFICATION  Review of Design  / Testing  COVERS  FuncR_S110 , FuncR_S119  
+RESPONSIBLE  TAS-UK 
+COMMENT  In the MOSAR demonstration, the SVC OBC should take the lead on all the 
+components of the system.  
+The current selected technology is SpaceWire based on the developments and outputs 
+of OG4  
+ 
+DesR_A40 8 Relevance to flight hardware  Desirable  
+STATEMENT  The d emonstrator design should not be de -rated for demonstration use and be 
+representative of an actual space system in terms of capabilities (e.g. mass movement 
+capacity, speed of reconfiguration, processing capacity of on -board computing), while 
+still retaining feasibility of operation in Earth’s gravity (so as to be functional)  
+VERIFICATION  Review of Design  COVERS  PERASPERA final objectives  
+RESPONSIBLE  ALL 
+COMMENT   
+3.3.5  A500: Physical and resource requirements [PhyR]  
+N./A.  
+3.3.6  A600: Environmental and Operational requirements [OpR]  
+OpR_A601  Laboratory Environment  Mandatory  
+STATEMENT  The demonstrator shall be able to work under laboratory conditions in a temperature 
+range between 10  and 30 deg  
+VERIFICATION  Review of Design  COVERS  Demonstration Constraint  
+RESPONSIBLE  ALL 
+COMMENT   
+ 
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+43 
+ 
+OpR_A602  Gravity conditions  Mandatory  
+STATEMENT  The demonstrator shall be able to work under 1g  
+VERIFICATION  Review of Design  COVERS  Demonstration  Constraint  
+RESPONSIBLE  ALL 
+COMMENT   
+ 
+OpR_A60 3 Demonstrator Power supply  Mandatory  
+STATEMENT  The demonstrator shall be able to be powered  from standard power plugs  
+VERIFICATION  Review of Design  COVERS  Demonstration Constraint  
+RESPONSIBLE  ALL 
+COMMENT   
+3.3.7  A700: Safety requirements [SafR]  
+SafR_A7 01 Demonstrator Safety  Mandatory  
+STATEMENT  Demonstrator shall be inherently safe during operation, considering the implementation 
+in a laboratory environment with trained operators  
+VERIFICATION  Review of  Design  COVERS  Safety rules  
+RESPONSIBLE  ALL 
+COMMENT  Safety should consider mechanical and electrical potential issue. Safety can be 
+addressed by system design (limited speeds, compliance) and/or through 
+implementation of safety features (Emergency stops,  interlocks or sensors barriers)  
+3.3.8  A800: Configuration and implementation requirements [ConfR]  
+Conf R_A801  SVC and TGT test  bench  Mandatory  
+STATEMENT  A test  bench shall be designed and integrated to represent  the SVC satellite  to the CLT 
+spacecraft, considering the gap existing between both the platform during docking 
+condition  
+VERIFICATION  Review of Design , Inspection  COVERS  OpR_S603  
+Operational Concept  RD3 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+44 
+ 
+Conf R_A801  Test bench mechanical structure  Mandatory  
+STATEMENT  The structure of the test  bench shal l be stable and able to carry the own mass and  the 
+loads introduced by the SMs and WM  
+VERIFICATION  Review of Design , Analysis  COVERS  Preliminary MOSAR demonstrator  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+Conf R_A802  Test bench SI interfaces  Mandatory  
+STATEMENT  The SVC and CTL test benches shall provide the required number of SI to cover the 
+MOSAR scenario demonstration s 
+VERIFICATION  Review of Design  COVERS  IntR_A306  
+RESPONSIBLE  SITAEL, SPACEAPPS  
+COMMENT   
+Conf R_A803  Test bench harnessing  Mandatory  
+STATEMENT  The test bench shall include  the internal and external harnessing of the SVC and CTL 
+spacecraft  and the connected SI  
+VERIFICATION  Review of Design , Inspection  COVERS  Operational Concept  RD3 
+Preliminary MOSAR demonstrator  
+RESPONSIBLE  SITAEL, SPACEAPPS, TAS -UK 
+COMMENT   
+ 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+45 
+ 
+3.4 Walking Manipulator  Requirements [Bxxx]  
+3.4.1  B100: Functional requirements [FuncR]  
+FuncR_B101  SM connection  Mandatory  
+STATEMENT  The WM shall be able to connect to the SI of the  SM or the spacecraft mockup, 
+independently through one of its own SI  
+VERIFICATION  Testing  COVERS  FuncR_A106 , FuncR_A107  
+RESPONSIBLE  SPACEAPPS , DLR  
+COMMENT   
+ 
+FuncR_B102  SM manipulation  Mandatory  
+STATEMENT  The WM shall be able to move and assemble the functional modules in a 3 -dimensional 
+way 
+VERIFICATION  Testing  COVERS  FuncR_A106  
+RESPONSIBLE  SPACEAPPS , DLR  
+COMMENT   
+ 
+FuncR_B10 3 Joint position c ontrol  Mandatory  
+STATEMENT  The WM shall provide local joint position control at minimum 500 Hz  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+Partner Expertise  
+RESPONSIBLE  DLR, SPACEAPPS  
+COMMENT   
+ 
+FuncR_B10 4 Cartesian position c ontrol  Mandatory  
+STATEMENT  The WM shall provide local Cartesian position control  of the free end -effector  at 
+minimum 500 Hz  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+Partner Expertise  
+RESPONSIBLE  DLR, SPACEAPPS  
+COMMENT  To support manipulation of the SM along pre -defined trajectories and initial SI alignment  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+46 
+ 
+ 
+FuncR_B104  Impedance  c ontrol  Mandatory  
+STATEMENT  The WM shall provide impedance control at minimum 500 Hz  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+Partner Expertise  
+RESPONSIBLE  DLR, SPACEAPPS  
+COMMENT  To support SI alignment  or connection  process  
+ 
+FuncR_B10 5  Fault detection  Mandatory  
+STATEMENT  The WM shall be able to detect malfunction of its operations  
+VERIFICATION  Testing  COVERS  FuncR_ A112 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+FuncR_B10 6  Power -on/off  Desirable  
+STATEMENT  The WM shall be able to be powered on/off , keeping its current position  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  To reduce consumption when the WM is not in use. The power switch could be 
+managed at the SI level  
+ 
+FuncR_B10 7  WM start and initialization  Mandatory  
+STATEMENT  The WM shall be able to start and initialize  automatically after power -on, reaching a 
+state ready for communication and operations  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+47 
+ 
+FuncR_B10 6  WM p erception  Optional  
+STATEMENT  The WM could have the ability to perceive the location of SMs in three dimensions to an 
+error of 1cm using attached stereo vision sensors.  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  DLR, USTRATH  
+COMMENT  Not required with the current approach of WM SM approach and manipulation (based 
+on known geometry and SM localization). Would require additional sensors   
+3.4.2  B200: Performance requirements [PerfR]  
+PerfR_B201  WM payload c apability  Mandatory  
+STATEMENT  The WM shall be able to manipulate a payload of 7kg all around his workspace  
+VERIFICATION  Testing  COVERS  Demonstration Scenario  
+OpR_A602  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  The target is to not implement external gravity compensation on the SM, TBC 
+depending on the updated weight estimations during PDR  
+  
+PerfR_B202   WM r eachability  Mandatory  
+STATEMENT  The WM kinematic structure shall be compatible in size and joint configuration to 
+support all MOSAR scenarios demonstrations  
+VERIFICATION  Testing  COVERS  Demonstration Scenario  
+DesR_S404  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Kinematic configuration and reachability analyzed during PDR phase  
+ 
+PerfR_B203  WM data interface r ate for TM/TC  Mandatory  
+STATEMENT  The data interface of the WM shall support a data rate of 1Mbps or greater for TM/TC 
+control.  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+PerfR_A201  
+RESPONSIBLE  SPACEAPPS, DLR, TAS -UK 
+COMMENT  The TM/TC control of the platform should not rely on high data rate links with low 
+latency.  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+48 
+ 
+PerfR_B 204 WM data interface r ate for service d ata Mandatory  
+STATEMENT  The data interface of the WM shall support a data rate of 50 Mbps or greater for service 
+data.  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+PerfR_A20 2 
+RESPONSIBLE  SPACEAPPS, DLR, TAS -UK 
+COMMENT  E.g. to support data transfer from a connected SM  
+The services provided by the Spacecraft Module share the same data interface as 
+TM/TC and will have a higher bandwidth requirement. At 50 Mbps, a 4Mpixel image will 
+take seve ral seconds to transfer across the data network.  
+ 
+PerfR_B 205 WM power interface rate  Mandatory  
+STATEMENT  The power interface of the WM shall support 0.5kW [TBC] of power transfer  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+PerfR_A20 2 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  For the operation of the WM and one connected SM  (APM) . Value TBC for PDR  
+ 
+3.4.3  B300: Interface requirements [IntR]  
+IntR_B301  WM TM/TC  Mandatory  
+STATEMENT  The WM shall transmit  telemetry and receive  high-level tele -command  with the SVC 
+OBC, independently through  the data interface of one of  the connected SI 
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+49 
+ 
+IntR_B302  WM data t ransfer  Mandatory  
+STATEMENT  The WM shall be able to transmit TM/TC and data  from the SVC OBC  with the SM 
+connected at its SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+Guidelines AD1 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+IntR_B30 3 WM p ower  Mandatory  
+STATEMENT  The WM shall get p ower from the spacecraft/modules through the power interface of the 
+connected SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+IntR_B304  WM power transfer  Mandatory  
+STATEMENT  The WM shall be able to transmit power to the SM connected at its SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+IntR_B30 4 WM interface s witch  Mandatory  
+STATEMENT  The WM shall be able to switch power and data interface between the two SI extremities  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+50 
+ 
+IntR_B30 5 WM local CAN network  Mandatory  
+STATEMENT  The WM shall provide a local CAN network to interface and control the end -effectors SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  CAN network technology is currently selected  based on OG5 outputs  
+ 
+IntR_B30 6 WM local control network  Mandatory  
+STATEMENT  The WM shall be able to parse information from/to its data interface through the two SI 
+extremities and translate it in its own local bus for Real -Timer monitor and control of its 
+joins.  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+IntR_B30 7 WM mechanical interface to SI  Mandatory  
+STATEMENT  The WM shall provide a mechanical interface connection at each extremity to attach a 
+SI 
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+3.4.4  B400: Design requirements [DesR]  
+DesR_B401  SI as WM end-effectors  Mandatory  
+STATEMENT  The WM shall be equipped with a SI at each of its extremities  
+VERIFICATION  Review of  Design  COVERS  Operational Concept  RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+51 
+ 
+DesR_B402  Embedded c ontroller  Mandatory  
+STATEMENT  The WM shall have an embedded local controller  to convert high -level control 
+commands from the SVC OBC to low -level control of the joints   
+VERIFICATION  Review of Design  COVERS  FuncR_S108  
+MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+DesR_B40 3 Torque/force sensors  Mandatory  
+STATEMENT  The WM shall be equipped with Force/Torque sensors to support the implementation of 
+the impedance control   
+VERIFICATION  Review of Design  COVERS  Operational Concept  RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  End-tip of joint torque TBC  
+ 
+DesR_B40 4 Compatibility to environmental tests conditions  Mandatory  
+STATEMENT  The design of the WM shall be such that it is able to withstand the test environmental 
+conditions  
+VERIFICATION  Review of Design  COVERS  Demonstration constraints  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+DesR_B40 5 Compatibility to space design  Mandatory  
+STATEMENT  The design of the WM shall be such that the later product is able to withstand the harsh 
+conditions in space   
+VERIFICATION  Review of Design  COVERS  Guidelines RD3 OG9 -R09 
+OpR_S606  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+52 
+ 
+3.4.5  B500: Physical and resource requirements [PhyR]  
+PhyR_B501  WM weight  Mandatory  
+STATEMENT  The weight of the WM shall  minimized with a targeted  weight of 14kg [TBC] , including 
+the SI . 
+VERIFICATION  Testing  COVERS  PhyR_S501  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Based on the assumption of a 1 to half payload capability of 7kg  
+3.4.6  B600: Environmental and Operational requirements [OpR]  
+N./A.  
+3.4.7  B700: Safety requirements [SafR]  
+N./A.  
+3.4.8  B800: Configuration and implementation requirements [ConfR]  
+N./A.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+53 
+ 
+3.5 Spacecraft Modules Requirements [Cxxx]  
+3.5.1  C100: Functional requirements [FuncR]  
+FuncR_C101  SM functions  Mandatory  
+STATEMENT  The SMs shall provide all required support functions to any embarked unit and 
+guarantee the required operative profile during the lifetime  
+VERIFICATION  Review of Design, Testing  COVERS  Operational Concept RD3 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+FuncR_C102  SM c omponents  Mandatory  
+STATEMENT  Each SM shall be able to host all the components needed to fulfill its functions  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R11 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+FuncR_C10 3 SM data routing c onfiguration  Mandatory  
+STATEMENT  The baseline functionality of a Spacecraft Module shall include the ability to externally 
+configure the SM’s data routing function between the  Standard Interfaces and services 
+provided by SM  
+VERIFICATION  Review of Design / Testing  COVERS  FuncR_S120  
+MOSAR Operational Concept  
+RESPONSIBLE  TAS-UK 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+54 
+ 
+FuncR_C10 4 SM data t ransmission  Mandatory  
+STATEMENT  The baseline functionality of a Spacecraft Module shall include the ability to provide 
+external TM/TC control and service data of the Spacecraft Module via the SM data 
+interface once the routing function has been configured  
+VERIFICATION  Review of Design / Testing  COVERS  FuncR_S119 , FuncR_A108  
+MOSAR Operational Concept  
+RESPONSIBLE  TAS-UK 
+COMMENT   
+ 
+FuncR_C10 3 SM rower  routing c onfiguration  Mandatory  
+STATEMENT  The baseline functionality of a Spacecraft Module shall include the ability to externally 
+configure the SM’s power  routing function between the  Standard Inter faces  
+VERIFICATION  Review of Design / Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  TAS-UK 
+COMMENT  This can be envisaged by  an internal power distribution unit in the SM or at the SI level  
+ 
+FuncR_C10 5 SM redundancy  Mandatory  
+STATEMENT  The assembled modules shall be able to switch to redundant data and power paths  
+VERIFICATION  Testing  COVERS  FuncR_A110  
+RESPONSIBLE  TAS-UK, SPACEAPPS  
+COMMENT   
+ 
+FuncR_C 106  SM power -on/off  Desirable  
+STATEMENT  The SM shall be able to be powered on/off or put in stand -by mode, keeping its 
+capability to transmit data and power to other SM  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SITAEL  
+COMMENT  To reduce consumption when the SM is not in use . 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+55 
+ 
+FuncR_ C107 SM start and initialization  Mandatory  
+STATEMENT  The SM  shall be able to start and initialize automatically after power -on, reaching a state 
+ready for communication and operations  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SITAEL, TAS -UK 
+COMMENT   
+ 
+FuncR_ C108 Identification information  Mandatory  
+STATEMENT  The SM shall be able to provide identification information including unique identifier 
+number and list of capabilities  
+VERIFICATION  Testing  COVERS  FuncR_A111  
+RESPONSIBLE  SITAEL, TAS -UK 
+COMMENT  To support automatic detection and plug and play operations  
+ 
+FuncR_ C109   Fault detection  Mandatory  
+STATEMENT  The SM shall be able to detect malfunction of its operations  
+VERIFICATION  Testing  COVERS  FuncR_ A112 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+3.5.2  C200: Performance requirements [PerfR]  
+PerfR_C201  SM data interface r ate for TM/TC  Mandatory  
+STATEMENT  The data interface of the Spacecraft Module shall support a data rate of 1Mbps or 
+greater for TM/TC control.  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+PerfA_A202  
+RESPONSIBLE  SPACEAPPS, DLR, TAS -UK 
+COMMENT  The TM/TC control of the platform should not rely on high data rate links with low 
+latency.  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+56 
+ 
+PerfR_C202  SM data interface rate for service d ata Mandatory  
+STATEMENT  The data interface of the Spacecraft Module shall support a data rate of 50 Mbps or 
+greater for service data.  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+PerfA_A203  
+RESPONSIBLE  SPACEAPPS, DLR, TAS -UK 
+COMMENT  The services provided by the Spacecraft Module share the same data interface as 
+TM/TC and will have a higher bandwidth requirement. At 50 Mbps, a 4Mpixel image will 
+take several seconds to transfer across the data network.  
+ 
+PerfR_C 203 SM power interface rate  Mandatory  
+STATEMENT  The power interface of the SM shall support [1-2kW] [TBC] of power transfer  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RD3PerfR_A20 2 
+RESPONSIBLE  SITAEL, SPACEAPPS  
+COMMENT  The power APM should be able to deliver the required power for the  operations of the 
+other SM, WM and SI.  Value TBC for PDR  
+3.5.3  C300: Interface requirements [IntR]  
+IntR_C 301 SM p ower  Mandatory  
+STATEMENT  The SM shall get power from the power  interface of one of the connected SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+IntR_C30 2  SM R -ICU power Up  Mandatory  
+STATEMENT  The Spacecraft Module’s R -ICU shall be powered up whenever external power is 
+supplied to any of its Standard Interfaces.  
+VERIFICATION  Testing  COVERS  Operational Concept  RD3 
+RESPONSIBLE  SITAEL, SPACEAPPS  
+COMMENT  Enables plug and play of Spacecraft Modules.  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+57 
+ 
+IntR_C30 3  SM R -ICU to SI TM/TC  Mandatory  
+STATEMENT  The R -ICU shall provide TM/TC control of the Standard Interfaces using CANbus  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPPS, TAS -UK 
+COMMENT  The R -ICU is the CAN bus master and the Standard Interfaces are all slaves to the R -
+ICU. CAN network technology is currently selected based on OG5 outputs  
+ 
+IntR_C 304 SM mechanical interface to SI  Mandatory  
+STATEMENT  The SM shall provide a mechanical interface connection to attach a SI  
+VERIFICATION  Testing  COVERS  Operational Concept  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+3.5.4  C400: Design requirements [DesR]  
+DesR_C40 1  SM structure  Mandatory  
+STATEMENT  The SM structure shall be composed by the following units:  
+ 6 lateral panels  
+ 12 beams  
+ 4 corners  
+ Connection items (to connect all the units of the SMs with the structural 
+units of the SMs)  
+VERIFICATION  Review of Design  COVERS  Partner e xpertise  
+RESPONSIBLE  SITAEL  
+COMMENT  For improved cross -compatibility of launchers and internal systems, SMs should target 
+to the form factor for a cubic 27U CubeSat  (RD1).  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+58 
+ 
+DesR_C40 2  Number of SI  Mandatory  
+STATEMENT  All SM shall have a sufficient number of SI in order to manipulate them with the WM and 
+to couple them with each other and to the SVC or CLT  
+VERIFICATION  Review of Design  COVERS  Operational Concept RD3 
+Guidelines AD1 
+RESPONSIBLE  SITAEL, DLR  
+COMMENT  A maximum number of 3 SI are currently considered as optimization between 
+demonstration application and demonstration constraints (weight, costs)  
+ 
+DesR_C40 3  SM mechanical l oading  Mandatory  
+STATEMENT  The structure of the mo dules shall be able to carry its own mass under the gravity force 
+and the loads introduced by the “walking” robot -system during the manipulation of the 
+SMs.  
+VERIFICATION  Analysis , Testing  COVERS  Operational Concept RD3 
+Guidelines AD1 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_C40 4  SM mechanical l oading  data Mandatory  
+STATEMENT  The forces applied by the WM and the motion dynamics shall be provided for the design 
+of the SMs in the worst case.  
+VERIFICATION  Analysis  COVERS  Partner Expertise  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_C40 5  SM physical layout  Mandatory  
+STATEMENT  The SMs physical layout shall allow the accommodation of all the equipment, by 
+guaranteeing the proper mechanically assembly, the thermo -mechanical behavior, the 
+SM mechanical/electrical integration and testing, as required by the test requirements  
+VERIFICATION  Review of Design  COVERS  Partner expertise  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+59 
+ 
+DesR_C40 6  SM accommodation  Mandatory  
+STATEMENT  The accommodation of the units shall take into account the following criteria:  
+ Need of assembly and disassembly  
+ Easy access to the electrical connectors, fixation points, grounding studs  
+ Alignment requirements  
+ Mass distribution  
+ Envelope  
+ Harness routing  
+ FOV constraints (in the case of t he integration of optical sensors)  
+VERIFICATION  Review of Design, Inspection, 
+Testing  COVERS  Partner expertise  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_C40 7 SM accommodation flexibility  Mandatory  
+STATEMENT  The SMs structure shall be flexible in order to allow the accommod ation of different kind 
+of internal equipment  
+VERIFICATION  Inspection  COVERS  Mission analysis RD2 
+Guidelines AD1 
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_C40 8 SM face assignation  Mandatory  
+STATEMENT  Only the assigned faces of the SM shall host the standard interfaces.  
+While, only one customized face for each SM shall host all the other units needed to 
+fulfill the SM functions.  
+VERIFICATION  Review of Design  COVERS  Partner Expertise  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+60 
+ 
+DesR_C40 9 Thermal conditions  Mandatory  
+STATEMENT  The SMs shall be design in order to guarantee the required thermal conditions to all the 
+units mounted inside the SMs  
+VERIFICATION  Review of Design, Testing  COVERS  Partner Expertise  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_ C405  Compatibility to environmental tests conditions  Mandatory  
+STATEMENT  The design of the SM shall be such that it is able to withstand the test environmental 
+conditions  
+VERIFICATION  Review of Design  COVERS  Demonstration constraints  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+DesR_ C406  Compatibility to space design  Mandatory  
+STATEMENT  The design of the SM shall be such that the later product is able to withstand the harsh 
+conditions in space   
+VERIFICATION  Review of Design  COVERS  Guidelines RD3 OG9 -R09 
+OpR_S606  
+RESPONSIBLE  SITAEL  
+COMMENT   
+ 
+3.5.5  C500: Physical and resource requirements [PhyR]  
+PhyR_C501   SM Weight  Mandatory  
+STATEMENT  The weight of the SM shall be minimized with a target mass of 7kg [TBC]  
+VERIFICATION  Testing  COVERS  PhyR_S501  
+RESPONSIBLE  SITAEL  
+COMMENT  For improved cross -compatibility of launchers and internal systems, SMs should target 
+to the form factor for a cubic 27U CubeSat (RD1).  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+61 
+ 
+DesR_C502   SM size  Mandatory  
+STATEMENT  The SM shall be cubical in shape in size 300 to 400 mm (TBD) per side  
+VERIFICATION  Review of Design  COVERS  Mission analysis RD2 
+RESPONSIBLE  SITAEL  
+COMMENT  For improved cross -compatibility of launchers and internal systems, SMs should target 
+to the form factor for a cubic 27U CubeSat (RD1).  
+3.5.6  C600: Environmental and Operational requirements [OpR]  
+3.5.7  C700: Safety requirements [SafR]  
+SafR_C7 01  SM hand manipulation  Mandatory  
+STATEMENT  The SM shall be able to be safely manipulated by hand  
+VERIFICATION  Inspection  COVERS  Safety rules  
+RESPONSIBLE  SITAEL  
+COMMENT   
+3.5.8  C800: Configuration and implementation requirements [ConfR]  
+ConfR_C8 01  Demonstrator SM Configurations  Mandatory  
+STATEMENT  A set of 7 SMs shall be developed, with the following functions:  
+● 4 ASMs:  
+○ Data Management Subsystem module (DMS): this ASM hosts the 
+main Onboard Computer of the target spacecraft.  
+○ Power Subsystem (PWS): is managing the electrical power on the 
+TGT spacecraft.  
+○ Battery ORU module (BAT): is an SM that comprises a set of Lithium -
+ion batteries and t he electronic to manage them.  
+○ Thermal Subsystem module (THS): is responsible for the thermal 
+management of the TGT SMs  
+ 
+● 2 APMs Optical Sensor Payload module (OSP): is an SM that exposes an 
+optical lens on one of its faces.  
+ 
+● 1 back -up SM  
+VERIFICATION  Review of Design  COVERS  FuncR_S112, FuncR_S114 , 
+FuncR_S115  
+Scenarios Description  
+RESPONSIBLE  SITAEL  
+COMMENT  Selection of ASM and APM are illustrative to the possible missions scenario, final 
+selection and specifications of each developed module at PDR  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+62 
+ 
+3.6 Standard Interfaces Requirements  [Dxxx]  
+3.6.1  D100: Functional requirements [FuncR]  
+FuncR_D101   Mechanical , Data and Electrical  Interface  Mandatory  
+STATEMENT  The standard interface shall provide  
+ a mechanical interface to mechanically couple  two system components  
+ an electrical interface to transfer electrical energy (power) between two system 
+components  
+ a data interface to allow exchange of data between two system components  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAP PS 
+COMMENT  MOSAR system components include Spacecraft Modules, Spacecraft Bus and Walking 
+Manipulator  
+ 
+FuncR_D10 2  Thermal Interface  Mandatory  
+STATEMENT  The standard interface shall provide a thermal interface to allow active transfer of 
+thermal flow between two Spacecraft Modules  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAP PS 
+COMMENT  In MOSAR, active thermal transfer is only considered between SM (not with the 
+Spacecraft Bus or Walking Manipulator)  
+ 
+FuncR_D103   Passive Coupling  Mandatory  
+STATEMENT  The standard interface shall allow the mechanical, power, data and thermal coupling 
+with another interface that cannot provide actuation  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAP PS 
+COMMENT  Passive configurations of the SI is currently envisaged in the scenarios for costs 
+reductions ( could also have an interest for future exploitation ) 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+63 
+ 
+FuncR_D104   Passive Decoupling  Mandatory  
+STATEMENT  The standard interface shall allow the mechanical, power, data and thermal de -coupling 
+with another interface that cannot provide actuation  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAP PS 
+COMMENT   
+ 
+FuncR_D105   Electrical Interface Protection  Mandatory  
+STATEMENT  The electrical interface shall have an overcurrent and overvoltage protection  
+VERIFICATION  Review of Design / Testing  COVERS  OG5 Requirement  
+Internal Expertise  
+RESPONSIBLE  SPACEAP PS 
+COMMENT   
+ 
+FuncR_D106   Electrical Interface Switch  Mandatory  
+STATEMENT  The electrical interface shall incorporate a bidirectional power switch to control current 
+flow at the interface.  
+VERIFICATION  Review of Design / Testing  COVERS  FuncR_S122  
+RESPONSIBLE  SPACEAP PS 
+COMMENT  Required to support ( re)-routing of electrical power. Could also be managed by a central 
+power distribution unit in the SM  
+ 
+FuncR_D107   Electrical Interface Telemetry  Mandatory  
+STATEMENT  The electrical interface shall provide voltage and current telemetry  at the power bus  
+system  level, in both power transfer direction  
+VERIFICATION  Testing  COVERS  FuncR_S122  
+RESPONSIBLE  SPACEAP PS 
+COMMENT  Required to monitor (re) -routing of electrical power.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+64 
+ 
+FuncR_D108   Data Interface Support  Mandatory  
+STATEMENT  The data interface shall support at least one technology with capabilities of dynamic 
+data bus re-configuration and routing  
+VERIFICATION  Review of Design  COVERS  DesR_A407  
+RESPONSIBLE  SPACEAPPS  / TAS -UK 
+COMMENT  Current selected technology in MOSAR is SpaceWire, based on OG4 outputs  
+ 
+FuncR_D109  SI Telemetry  Mandatory  
+STATEMENT  The SI shall measure and store the following local SI parameters:  
+ Temperature (Power electronics if local, structure)  
+ Alignment / proximity status  
+ Locking status  
+ SI orientation (in relation with design symmetry)  
+ Data /Power  interface status  
+ Thermal interface status  
+ Motor position (incremental or absolute) / Mechanism position (absolute)  
+ Motor current  
+ Controller supply voltage  
+VERIFICATION  Review of Design / Testing  COVERS  OG1 -5 Review RD1 
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Needed to monitor the function of the SI and support autonomous operation  in MOSAR  
+3.6.2  D200: Performance requirements [PerfR]  
+PerfR_D201  Mechanical Loads  Mandatory  
+STATEMENT  The mechanical interface shall withstand, in connected mode, all mechanical loads 
+induced by the demonstration operations:  
+ Axial Force:  250 / 160 N  
+ Radial Force: 250 / 160 N  
+ Bending Moment: 204 / 84 Nm  
+ Torsion: TBD Nm  
+As function of the gravity compensation of the SM (TBC).  
+VERIFICATION  Analysis / Testing  COVERS  OG1 -5 Review RD1  
+OpR_A602  
+RESPONSIBLE  SPACEA PPS 
+COMMENT  Best current estimations  
+Required load transfer will depend on the configuration of the demonstrator setup and 
+the possible application of gravity mitigation technics. Due to the complexity of the 
+operations and motions, we currently target to not implement gravity compensation (left 
+number). We could however still envisage compensation of the SM (right number)  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+65 
+ 
+ 
+PerfR_D202  Positioning Tolerance  Mandatory  
+STATEMENT  The mechanical interface shall maximize positioning tolerance for guidance and mating  
+VERIFICATION  Analysis / Testing  COVERS  OG1 -5 Review RD1  
+RESPONSIBLE  SPACEA PPS 
+COMMENT   
+ 
+PerfR_D203  Power Transfer  Rating  Mandatory  
+STATEMENT  The electrical interface shall be capable of supporting  [1-2kW] (TBC)  of power transfer , 
+as required by the MOSAR demonstration  
+ 
+The power interface of the SM shall support [1 -2kW] [TBC] of power transfer  
+VERIFICATION  Analysis / Testing  COVERS  PerfR_C203  
+RESPONSIBLE  SPACEAP PS 
+COMMENT  Value TBC for PDR  
+ 
+PerfR_D204  Data Interface Rat ing Mandatory  
+STATEMENT  The data interface shall allow a data rate of minimum 50Mbit/s  
+VERIFICATION  Analysis / Testing  COVERS  PerfR_A20 2 
+RESPONSIBLE  SPACEA PPS 
+COMMENT  To support the recording and processing of large amounts of data between modules 
+and with the spacecraft, value TBC during PDR phase  
+ 
+PerfR_D205  Thermal Interface Rating  Mandatory  
+STATEMENT  The thermal interface shall allow a thermal flow rating of: TBD W  
+VERIFICATION  Analysis / Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  MAGSOAR / SPACEAPPS  
+COMMENT   
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+66 
+ 
+3.6.3  D300: Interface requirements [IntR]  
+IntR_D301  Mechanical Interface to Components  Mandatory  
+STATEMENT  The standard interface shall provide a mechanical connection to the modules, 
+spacecraft bus or robotic base/end -effector manipulator, compatible with the mechanical 
+loads transferred through the interface.   
+VERIFICATION  Review of Design / Analysis  COVERS  OG1 -5 Review RD1 
+IntR_B307 , IntR_C304  
+RESPONSIBLE  SPACEAPPS, SITAEL  
+COMMENT   
+ 
+IntR_D30 2 Harnessing to Components  Mandatory  
+STATEMENT  The standard interface shall provide internal harnessing to connect power, data and 
+control buses from the  module, spacecraft or robotic base/end -effector manipulator  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAPPS, SITAEL  
+COMMENT   
+ 
+IntR_D303  Interface to Module Thermal System  Mandatory  
+STATEMENT  The thermal interface shall enable thermal connection to the thermal module sub-
+system  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAPPS, SITAEL, MAGSOAR  
+COMMENT   
+ 
+IntR_D30 4 Power Distribution Unit  Mandatory  
+STATEMENT  The SI shall be interfaced with a Power Distribution Unit (PDU) to provide low -level 
+voltage power rails to supply the internal components of the SI (controller, sensors and 
+motor drives)  
+VERIFICATION  Review of Design  COVERS  Partner Expertise  
+RESPONSIBLE  SPACEA PPS 
+COMMENT  The PDU could be local to the SI or shared at module level  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+67 
+ 
+IntR_D30 5 Standard Interface TM/TC  Mandatory  
+STATEMENT  The SI shall be able to send/receive local TM/TC to/from the module or spacecraft OBC  
+ 
+TM: See FuncR_D109 list  
+TC:  
+ Coupling / de -coupling (TBC for intermediate states)  
+ Electrical power transfer on/off  
+ Low-level control (TBC)  
+VERIFICATION  Testing  COVERS  FuncR_A104  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Based on OG5 developments, CAN is the current selected technology for SI TM/TC  
+ 
+IntR_D30 6 Redundant Data/Power /Control  Interface  Mandatory  
+STATEMENT  The SI shall feature redundant data, power and control interface  
+VERIFICATION  Review of Design  COVERS  SafR_S7 02 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  In case of failure, the SI shall be able to switch to a redundant bus  
+3.6.4  D400: Design requirements [DesR]  
+DesR_D401  Androgynous Design  Mandatory  
+STATEMENT  The standard interface shall have an androgynous design, including mechanical, data, 
+power and thermal interface  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+DesR_D402  Design Symmetry  Mandatory  
+STATEMENT  The standard interface shall present a 90deg. rotational symmetry, including 
+mechanical, data, power and  thermal interface  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+ConfR_S902  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  The standard interface shall allow module connections without restriction on relative 
+module orientation  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+68 
+ 
+DesR_D40 3 Diagonal Engagement  Mandatory  
+STATEMENT  The standard interface shall allow diagonal engagement up to 55 deg  
+VERIFICATION  Review of Design / Testing  COVERS  OG1 -5 Review RD1 
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  To enable multiple simultaneous approach and connection (e.g. corner example)  
+ 
+DesR_D40 4 Form -Fit Guidance  Mandatory  
+STATEMENT  The standard interface shall provide guidance form -fit features  
+VERIFICATION  Review of Design / Testing  COVERS  OG1 -5 Review RD1 
+Operational Concept RD3 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  To support the alignment process between two interfaces, specifically when multiple 
+connections are considered, without requiring external guidance system  
+ 
+DesR_D405  SI Costs  Mandatory  
+STATEMENT  The design of the SI shall take into account optimization of the manufacturing and 
+integration costs  
+VERIFICATION  Analysis  COVERS  DesR_S403  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Cost should be a design driver considering the large quantity of interfaces in the 
+proposed operational concept.  
+ 
+3.6.5  D500: Physical requirements [PhyR]  
+PhyR_D501  Standard Interface Mass  Mandatory  
+STATEMENT  The standard interface shall be optimized regarding the mass  
+VERIFICATION  Testing  COVERS  PhyR_S501 , PhyR_B501 , 
+PhyR_C501  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+69 
+ 
+PhyR_D502  Standard Interface Volume  Mandatory  
+STATEMENT  The standard interface shall be optimized regarding size and volume  
+VERIFICATION  Testing  COVERS  PhyR_S502  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  To reduce constraints on the module design and integration  
+ 
+3.6.6  D600: Environmental and Operational requirements [OpR]  
+PhyR_D 601 Standard Interface ShutDown  Desirable  
+STATEMENT  The standard interface  (or a part of it)  shall be able to be switched off/on (behave as a 
+passive plug), while ensuring data and power transfer.  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  In regards to the total mission time, the operation time of the standard interface is very 
+small. For energy optimization, it could be interesting to be able to switch off the 
+component (and be able to revive it later).  
+ 
+PhyR_D 602 Standard Interface Power Consumption  Mandatory  
+STATEMENT  The power consumption of the standard interface shall be minimized  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+OG5 Expertise  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Values TBC during PDR phase  
+ 
+PhyR_D603  Coupling Time  Mandatory  
+STATEMENT  The coupling time between two standard interfaces shall be minimized  
+VERIFICATION  Testing  COVERS  MOSAR Operational Concept  
+ 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  MOSAR demonstration will require a lot of  successive mating/demating operations  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+70 
+ 
+3.6.7  D700: Safety requirements [ SafR] 
+SafR_D801  SI Safe Manipulation  Mandatory  
+STATEMENT  The SI shall be safe to be manipulated during integration within SM, WM or Spacecraft 
+Buses. If there exist  potential risks, the y shall be well documented  
+VERIFICATION  Inspection  COVERS  Safety Rules   
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+3.6.8  D800: Configuration and implementation requirements [ConfR]  
+PhyR_D 901 SI Design Configurations  Mandatory  
+STATEMENT  The standard interface shall be  declined in different configurations that are:  
+ Active  
+ Passive (not active behavior but can be couple and transmit data and power)  
+ Mechanical (not active and can only be coupled)  
+ Thermal (including thermal interface connectors, either active or passive)  
+VERIFICATION  Review of Design / Testing  COVERS  OGs costs and physical 
+characteristics constraints  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  This is mainly to support costs and volume/weight reduction in the ground 
+demonstrators. This could also be applicable in future mission depending on specific 
+mission characteristics.  
+ 
+ 
+ 
+ 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+71 
+ 
+3.7 Planner and Simulator  Requirements [ Exxx] 
+3.7.1  E100: Functional requirements [FuncR]  
+FuncR_E 101  Design and Simulation Tool Purpose  Mandatory  
+STATEMENT  The design and simulation software shall be able to simulate the system with all related 
+robotic elements and tasks (e.g. reconfiguration) as well as create a robotic compatible 
+servicing plan for the satellite platform  
+VERIFICATION  Testing  COVERS  FuncR_S105 , FuncR_S106  
+RESPONSIBLE  DLR/GMV  
+COMMENT   
+ 
+FuncR_ E102  Design Software  Mandatory  
+STATEMENT  The software shall support engineers developing new components and satellites and 
+shall give system integrators the chance to test the entire satellite including all relevant 
+aspects of on-orbit assembly and servicing operation.  
+VERIFICATION  Review of Design  COVERS  FuncR_S105  
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+FuncR_ E103  System Simulation  Mandatory  
+STATEMENT  The software shall allow users to simulation and test high -modular building 
+block space system architectures with regard to the requirements and 
+constraints of robotics, structure and the entire system  
+VERIFICATION  Review of Design  COVERS  FuncR_S106  
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+72 
+ 
+FuncR_E 104  Task Planning and Simulation  Mandatory  
+STATEMENT  The software shall be used to plan and to test the servicing task of the robot 
+system  
+VERIFICATION  Testing  COVERS  Guidelines AD1 
+RESPONSIBLE  GMV (Planner) and DLR (Test)  
+COMMENT   
+ 
+FuncR_E 105  Simulation Topics  Mandatory  
+STATEMENT  The software shall allow to test and simulate the demonstration scenario regarding 
+mechanical and thermal loads as well as distribution of resources.  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+FuncR_E 106  Simulation of Reconfiguration  Mandatory  
+STATEMENT  The software shall allow the addition of functional modules to the spacecraft, perform 
+reconfiguration process, and simulate  the servicing task considering dedicated robotic 
+specifications.  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+FuncR_ E108  Environmental Conditions Simulation  Optional  
+STATEMENT  The simulation software shall be able to simulate  the environmental conditions in LEO  
+VERIFICATION  Inspection  COVERS  Mission Analysis RD2 
+RESPONSIBLE  DLR 
+COMMENT  The effects of orbital disturbances and their respective relevance shall be verified based 
+on dedicated simulation output signals.  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+73 
+ 
+FuncR_E 109  Manipulator Dynamics Simulation  Mandatory  
+STATEMENT  The simulation software shall be able to represent manipulator dynamics like motor 
+dynamics and joint flexibilities, if relevant in the demonstrator scenario.  
+VERIFICATION  Inspection  COVERS  Operational Concept  RD3 
+ 
+RESPONSIBLE  DLR 
+COMMENT   
+3.7.2  D200: Performance requirements [PerfR]  
+PerfR_ E201  Simulation Real -Time Performance  Desirable  
+STATEMENT  The simulation software shall be able to compute the reconfiguration scenarios in real 
+time as far as possible.  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+ 
+RESPONSIBLE  DLR 
+COMMENT  The real -time performance is verified during reference simulation runs (TBD).  
+ 
+PerfR_ E202  Number of SM in Simulation  Mandatory  
+STATEMENT  The simulation software shall be able to process as many replaceable modules models 
+as required according to the demonstration scenarios.  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+ 
+RESPONSIBLE  DLR 
+COMMENT  The ability to handle a sufficient number of modules is verified during reference 
+simulation runs (TBD).  
+3.7.3  D300: Interface requirements [IntR]  
+IntR_E 301  Simulator Input Interfaces  Mandatory  
+STATEMENT  The simulation software of the FES shall be able to receive joint control inputs from 
+external joint controllers and planners..  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+ 
+RESPONSIBLE  DLR 
+COMMENT   
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+74 
+ 
+ 
+IntR_E 302  Simulator Output Interfaces  Mandatory  
+STATEMENT  The simulation software of the FES shall be able to feed  back sensor information from 
+sensor models and simulation states to external controllers or a control console  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+IntR_ E303  Simulator Communication Interface  Optional  
+STATEMENT  The simulation software shall be able to communicate with external entities via TCP/IP 
+or UDP  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+RESPONSIBLE  DLR 
+COMMENT   
+ 
+IntR_ E304  Generation of plan for onboard execution  Mandatory  
+STATEMENT  The ground instance of the ERGO Agent used to generate and validate the 
+reconfiguration plan shall generate a static plan that can be transferred to and executed 
+by the onboard ERGO Agent.  
+VERIFICATION  Testing  COVERS  Operational Concept RD3 
+RESPONSIBLE  GMV  
+COMMENT   
+3.7.4  D400: Design requirements [DesR]  
+N./A.  
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+75 
+ 
+3.7.5  D500: Physical and resource requirements [PhyR]  
+PhyR_E501  Simulator Computing Platform  Mandatory  
+STATEMENT  The FES shall run on an individual single -purpose PC  
+VERIFICATION  Inspection / Testing  COVERS   
+RESPONSIBLE  DLR 
+COMMENT   
+3.7.6  D600: Environmental and Operational requirements [OpR]  
+N./A.  
+3.7.7  D700: Safety requirements [SafR]  
+N./A.  
+3.7.8  D800: Configuration and implementation requirements [ConfR]  
+Conf R_E901  Scenario Simulation Models  Desirable  
+STATEMENT  For each scenario to be demonstrated, an individual simulation model shall be provided  
+VERIFICATION  Inspection  COVERS  Partner Expertise  
+ 
+RESPONSIBLE  DLR 
+COMMENT  In order to minimize re -configuration activities  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+76 
+ 
+3.8 Software Requirements [F xxx] 
+This section lists the requirements for on -board software that is run on the MOSAR demonstrator SVC 
+platform, SMs and WM for control and management of the system.  
+3.8.1  F100: Functional req uirements [FuncR]  
+FuncR_ F101  Extension of TASTE for reconfigurable systems  Mandatory  
+STATEMENT  The TASTE framework shall be extended to support modelling and code generation for 
+software systems that can switch between different configurations known at design time.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  ELLI, UBREST, GMV  
+COMMENT   
+ 
+FuncR_ F102  TASTE -DDS bridge  Desirable  
+STATEMENT  A middleware bridge generator that enables the communication between TASTE and 
+DDS in runtime should be developed in order to assess the capabilities of the software 
+and modelling environment needed to support the reconfiguration of an onboard system 
+with configurations not known at design time.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  ELLI, UBREST, GMV  
+COMMENT   
+ 
+FuncR_ F103  DDS over SpaceWire  Desirable  
+STATEMENT  An existing open DDS implementation should be adapted to run over SpaceWire links 
+so that it can be deployed in the MOSAR demonstrator.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV  
+COMMENT  Feasibility needs to be assessed  
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+77 
+ 
+FuncR_ F104 Large data transfer over SpaceWire  Optional  
+STATEMENT  The software should provide a common mechanism to transfer large data messages 
+(1KiB to 1MiB) over SpaceWire links, in order to transfer images from the camera 
+sensor to the OBC and the  ground system.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV, TAS -F, USTRAT, SPACEAPPS  
+COMMENT  Feasibility needs to be assessed  
+ 
+FuncR_ F105 ERGO robotic arm driver for WM  Mandatory  
+STATEMENT  A robotic arm driver component shall be developed to execute the robot plan actions on 
+the WM and return the observations needed by the Agent to manage the execution of 
+the plan.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV, DLR  
+COMMENT   
+ 
+FuncR_ F106 ERGO Agent for plan execution  Mandatory  
+STATEMENT  An instance of the ERGO Agent shall be deployed on the OBC to command and monitor 
+the execution of the robotic reconfiguration plan generated on ground.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV  
+COMMENT   
+3.8.2  F200: Performance requirements [PerfR]  
+N./A.  
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+78 
+ 
+3.8.3  F300: Interface requirements [IntR]  
+IntR_ F301 PUS services  Mandatory  
+STATEMENT  The monitoring and control from the ground system of the onboard system status and 
+the execution of the robotic reconfiguration plan shall be done using the ESROCOS 
+PUS services library, extended with mission -specific services.  
+VERIFICATION  Testing  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV  
+COMMENT   
+3.8.4  F400: Design requirements [DesR]  
+DesR_F40 1 Robotics data types  Mandatory  
+STATEMENT  The data types used for the interface between the ERGO Agent and the Functional 
+Layer shall be modelled in ASN.1. If a suitable data type is available from ESROCOS, it 
+should be reused rather than defining a new data type.  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV  
+COMMENT   
+3.8.5  F500: Physical and resource requirements [PhyR]  
+N./A.  
+3.8.6  F600: Environmental and Operational requirements [OpR]  
+OpR_F601  Plan execution monitoring  Mandatory  
+STATEMENT  A graphical tool shall allow the operator to command and monitor the execution of the 
+robotic reconfiguration plan, both simulated and onboard.  
+VERIFICATION  Review of Design  COVERS  Operational Concept  RD3 
+Demonstrator preliminary Concept  
+RESPONSIBLE  GMV  
+COMMENT   
+3.8.7  F700: Safety requirements [SafR]  
+N./A.  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+79 
+ 
+3.8.8  F800: Configuration and implementation requirements [ConfR]  
+ConfR_F8 01 TASTE modelling  Mandatory  
+STATEMENT  The TASTE framework shall be used to model the software components running on the 
+OBC. These components include:  
+- Functions related to robot autonomy (ERGO Agent and functional layer)  
+- Sample OBSW for the management of the reconfigurable system (monitoring 
+and c ontrol of the SM)  
+VERIFICATION  Review of Design  COVERS  OG1 -5 Review RD1 
+RESPONSIBLE  GMV  
+COMMENT   
+ 
+ConfR_F 802 Development platform  Mandatory  
+STATEMENT  The development platform for the OBSW shall be Ubuntu Linux 18.04 LTS (64 bit) on x86. 
+The ESROCOS framework, and in particular TASTE, shall be adapted to run on this 
+platform.  
+VERIFICATION  Review of Design  COVERS   
+RESPONSIBLE  GMV  
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+80 
+ 
+3.9 Validation  Requirements [ Gxxx] 
+VerR_G 101 Validation purpose  Mandatory  
+STATEMENT  The MOSAR demonstrator shall allow to verify and validate  the following functionalities  
+relevant for future modular spacecraft missions : 
+ Creation of a re -configuration execution plan ( FuncR_S105 ) 
+ Simulation of the execution plan  ( FuncR_S106 ) 
+ Manipulation and repositioning of SM ( FuncR_S101 ) 
+ Control and re -location of the WM ( FuncR_S104 , FuncR_S107 ) 
+ Update/upgrade of satellite functionalities ( FuncR_S102 ) 
+ Data and power transfer between SM  
+ Heat management between SM ( FuncR_S115 ) 
+ Failure detection and handli ng (FuncR_S111 ) 
+ Resources re -allocation, data and power routing ( FuncR_S110 ) 
+VERIFICATION  Testing  COVERS  Mission Analysis RD2 
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+VerR_G 102 Validation sequence  Mandatory  
+STATEMENT  The validation shall include the following sequence:  
+1. Calibrate/verify the simulation tool  
+2. Simulate the reconfiguration process and generate a valid robot execution plan  
+3. Execute the plan on the demonstrator setup  
+VERIFICATION  Review of Design  COVERS  Guidelines AD1 OG9 -R14 
+RESPONSIBLE  SPACEAPPS, DLR  
+COMMENT   
+ 
+VerR_G 103 SM modules  selection  Mandatory  
+STATEMENT  The SM implemented in the MOSAR demonstrator should be representative of relevant 
+modules for future modular spacecraft missions.  
+VERIFICATION  Review of Design  COVERS  Mission Analysis RD2 
+RESPONSIBLE  SITAEL, TAS -Fs 
+COMMENT   
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+81 
+ 
+VerR_G 104 Orbital Test Facility  Mandatory  
+STATEMENT  The demonstrator shall be integrated in an orbital simulation facility to validate the 
+MOSAR scenarios  
+VERIFICATION  Inspection  COVERS  Guidelines AD1 OG9 -R13 
+Guidelines AD1 OG9 -R14 
+RESPONSIBLE  SPACEAPPS  
+COMMENT  The orbital dynamics is not relevant in OG9 – e.g. docking is not part of the scenarios. 
+The provided facility (in SPACEAPPS’ lab) could however produce illumination 
+conditions that are relevant w.r.t. orbital applications (if relevant)  
+ 
+VerR_G 105 Test facility dimensions  Mandatory  
+STATEMENT  The test facility shall ensure a volume of 5 m (L)x 3.5 m (W)x 3 m (H) in order 
+to allow the integration of the test bench  and all required components for t he 
+regular performance of the demonstration  
+VERIFICATION  Inspection  COVERS  MOSAR Demonstrator  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  Values TBC by PDR  
+ 
+VerR_G 106 Test facility displays  Mandatory  
+STATEMENT  The test facility shall provide displays to support the design and monitoring of 
+the execution plan  
+VERIFICATION  Inspection  COVERS  MOSAR Demonstrator  
+RESPONSIBLE  SPACEAPPS  
+COMMENT   
+ 
+VerR_G 107 Test facility power  Mandatory  
+STATEMENT  The test facility shall provide the required power for the performance of the 
+demonstration  
+VERIFICATION  Inspection  COVERS  MOSAR Demonstrator  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  It can include barrier protections, flashing light during operations,  
+ 
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+82 
+ 
+VerR_G 108 Test facility safety features  Mandatory  
+STATEMENT  The test facility shall provide safety features to guarantee the safe operation of 
+the demonstrator  
+VERIFICATION  Inspection  COVERS  MOSAR Demonstrator  
+RESPONSIBLE  SPACEAPPS  
+COMMENT  It can include barrier protections, flashing light during operations,  
+ 
+ 
+ 
+ 
+ 
+  
+           
+        Reference  : MOSAR -WP1 -D1.4 -SA 
+Version  : 1.0.0  
+Date  : 01-Sept-2019  
+    
+   
+MOSAR  - System Requirements Document  
+ 
+83 
+ 
+4 Conclusions  
+The overall system requirements and associated verification methods are described in this document, 
+detailing the specific requirements for each of the high level subsystems. They reflect the consortium 
+analysis and vision of MOSAR system requirements to d evelop the demonstrator reflecting the proposed 
+concept of space modular spacecraft and operations.  This document will serve as a baseline for the 
+preliminary design analysis, including the detailed system architecture, interfaces definitions between 
+subsystems, the detailed technical requirements of the equipment  and their respective preliminary design 
+that shall be consolidated by the end of M9 (PDR milestone).  
+ 
+ 
+ 
+ 
+ 
+ 
+********************************           End of Document            ****************** **************  
+ 
+ 
+ 
+ 
+ 

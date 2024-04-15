@@ -1,0 +1,54 @@
+2.1.1.1.1	System shall display the hyperlinks and descriptions for the user to perform the desired functions as specified in the related UIS.
+2.1.1.1.2	The User shall be able to view the hyperlinks and descriptions listed.
+2.1.1.1.3	The User shall be able to choose a function by clicking the hyperlink.
+2.1.1.1.4	The system shall display the desired operational page for the user after clicking the hyperlink.
+2.1.1.2.1.1	A user with admin privileges shall be able to Add/Create a new user and associate the user with specified role(s) in the system.
+2.1.1.2.1.2	The system shall display an error message if the new user is found in the [system name] system.
+2.1.1.2.1.3	The system shall display an error message if the new user is not active in the Active Directory.
+2.1.1.2.1.4	The system shall display the xxx tab as the default tab.
+2.1.1.2.1.5	The user shall be able to create/add a new user manually or from a template.
+2.1.1.2.1.6	The user record shall inherit all specified role(s) settings in the template when the user record is created from the user template
+2.1.1.2.1.7	The user shall be able to add additional roles manually while creating/adding a new user from a user template.
+2.1.1.2.1.8	The system shall save the user info to the database with specified roles associated with divisions for the newly created/added user.
+2.1.1.2.1.9	The system shall perform a search on the [system name] user display name and user name columns in the user tables to find the user and verify the user’s existence.
+2.1.1.2.1.10	The system shall perform a search in the Active Directory to verify the status of the user — Active/Inactive within the company—when the user attempts to create/add a new user in the [system name] system.
+2.1.1.2.1.11	The system shall generate a standard confirmation message after saving data and warning/caution messages after the cancel or close button is clicked.
+2.1.1.2.1.12	The user must have the flexibility to click any tab to commence the adding process, although the xxx Tab shall display as the default tab.
+2.1.1.2.1.13	All required fields as specified in the UIS must be marked with a red asterisk alerting the user to fill the required fields in.
+2.1.1.2.1.14	The user shall be able to save data after creating/adding a new user or cancel data to abort the process.
+2.1.1.2.1.15	The system shall clear up data if the user chooses to click the Cancel button in the midst of creating/adding a new user.
+2.1.1.2.1.16	The system shall direct the user to the xxx Page if the user chooses to click the close button without entering any data.
+2.1.1.2.1.17	The user must associate at least one role, division, designator code, and lab location at the time of creating/adding a new user.
+2.1.1.2.1.18	The user must fill in the required fields—User Name and Display Name—in the User Information section at the time of creating/adding a new user.
+2.1.1.2.1.19	The system shall generate a standard error/warning message after the user attempts to save data without associating one of each of the following criteria—xxx—and/or without filling in the required fields in the User Information section.
+2.2.1.1	The Project Team must demonstrate mockups of UI changes to project stakeholders early in the development process.
+2.2.1.2	The Project Team must permit reasonable adjustment to the user interfaces of new functionality by project stakeholders when project schedule permits those adjustments.
+2.3.1.1	The Project Team shall schedule updates to the production environment only on Tuesdays between 7pm and 7am.
+2.4.1.1	The Project Team must perform applicable and appropriate testing against new functionality prior to releasing that functionality/build to the production environment.
+2.4.1.2	The project Team must allow a reasonable time to conduct User Acceptance Testing (UAT) against the built functionalities prior to deploying the product to the production environment.
+2.5.1.1	The Development Team shall define coding standards for the application and follow those standards consistently.
+2.5.1.2	The Development Team shall be required to adjust existing source code to follow accepted coding standards only if that source code must be modified.
+2.5.2.1	The system shall log errors, warnings, and informational messages to an external log file on the application server.
+2.5.2.2	The Development Team shall be required to adjust existing source code to use the external log file only if that source code must be modified to implement another requirement.
+2.5.2.3	The system shall log an error message to the external data file when the user is directed to the [SYSTEM NAME] error page.
+2.5.2.4	The system shall send a notification email to a Client Services email distribution list if the user is directed to the xxx error page.
+2.6.1.1	The Development Team shall develop functionalities using the xx language and on the supported .NET 3.5 Platform.
+2.6.1.2	The Development Team shall utilize established open source frameworks instead of proprietary custom components wherever appropriate.
+2.6.1.3	The system shall continue to depend upon and use a single SQL Server 2008 database.
+2.6.2.1	The Technical Owner/Lead shall provide signoff before any [SYSTEM NAME] build can be deployed to the production environment.
+2.6.3.1	The Development Team shall perform weekly integrations of the [SYSTEM NAME] system and deploy these system updates to the Staging environment.
+2.6.3.2	The Development Team shall label every scheduled [SYSTEM NAME] build in the source control system.
+2.6.3.3	The Development Team shall perform scheduled [SYSTEM NAME] builds using code checked out of source control using the label as defined and specified.
+2.6.3.4	The Development Team shall develop and then send out release notes via e-mail to all Project Team after each [SYSTEM NAME] build deployed to the Staging environment.
+2.6.3.5	The Technical Lead shall perform code reviews of every system change before those changes may be committed to source control.
+2.6.3.6	The QA/QC Team must perform regression testing against all scheduled builds.
+2.7.1.1	The system shall provide the capability to open a pop-up window displaying information about the specific page along with links to supporting help topics upon selecting each Help link.
+2.7.1.2	The system shall display “[system name] Overview” page located under the Getting Started section of Help as default help topic page that will load upon selecting Help hypertext link.
+2.7.1.3	The system must allow users to easily navigate through each of the help topics by selecting a corresponding hypertext link provided in the left frame of the pop-up Help window.
+2.7.1.4	The system shall display the [company name] logo in the top, right side of the screen on each of the help pages.
+2.7.1.5	The system must exhibit each of the help pages using the same color scheme and background as specified.
+2.7.1.6	The system shall provide searching ability to the users to quickly find specific topic material through the online help tool.
+2.7.1.7	The system shall provide an index to the users for a more in-depth search of topic contents through the online help tool.
+2.7.1.8	The system shall provide a Glossary for industry-related terms associated with [company name] and the [system name] system to the users through the online help tool.
+2.9.1.1	The system shall retain existing HIPAA compliance capabilities.
+2.9.1.2	The system shall follow HIPAA compliance capabilities in new functionality introduced to the system.

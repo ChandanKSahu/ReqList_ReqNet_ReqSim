@@ -1,0 +1,1029 @@
+
+SOFTWARE REQUIREMENTS SPECIFICATION (SRS)
+FOR THE DALLAS / FT. WORTH REGIONAL
+CENTER-TO-CENTER COMMUNICATIONS NETWORK
+Version 3.0
+December 5, 2001
+Prepared for:
+Software Task Force
+NORTH CENTRAL TEXAS COUNCIL OF GOVERNMENTS
+616 Six Flags Drive
+P.O. Box 5888
+Arlington, TX 76005-5888
+Prepared by:
+SOUTHWEST RESEARCH INSTITUTE
+Post Office Drawer 28510, 6220 Culebra Road
+San Antonio, Texas 78228-0510
+SOFTWARE REQUIREMENTS SPECIFICATION iiTABLE OF CONTENTS
+Page
+1.0 SCOPE ................................ ................................ ................................ ............................... 1
+1.1 Identificat ion................................ ................................ ................................ ....................... 1
+1.2 System Overview ................................ ................................ ................................ ................ 1
+1.3 Operational Concept ................................ ................................ ................................ ........... 1
+1.4 Goals and Objectives ................................ ................................ ................................ .......... 2
+1.5 Constraints ................................ ................................ ................................ .......................... 3
+1.6 Document Overview ................................ ................................ ................................ ........... 3
+1.7 Related Documents ................................ ................................ ................................ ............. 3
+2.0 REQUIREMENTS ................................ ................................ ................................ ........... 4
+2.1 Interfaces ................................ ................................ ................................ ............................ 4
+2.1.1 Roadway Network Interface Requirements ................................ ................................ ........ 5
+2.1.2 Traffic Conditions Interface Requirements ................................ ................................ ........ 5
+2.1.3 Incident Data Interface Requirements ................................ ................................ ................ 6
+2.1.4 Lane Closure Interface Requirements ................................ ................................ ................ 6
+2.1.5 Dynamic Message Sign Interface Requirements ................................ ................................ 7
+2.1.6 Lane Control Signal Interface Requirements ................................ ................................ .....8
+2.1.7 Closed Circuit Television Interface Requirements ................................ ............................. 9
+2.1.8 Ramp Mete r Requirements ................................ ................................ ............................... 10
+2.1.9 Highway Advisory Radio Requirements ................................ ................................ .......... 11
+2.1.10 Traffic Signals Requirements ................................ ................................ ........................... 12
+2.1.11 Environment Sensor Station Requirements ................................ ................................ ......13
+2.1.12 High Occupany Vehicle Requirements ................................ ................................ ............ 13
+2.1.13 Parking Lot Requirements ................................ ................................ ................................ 14
+2.1.14 School Zone Requirements ................................ ................................ ............................... 14
+2.1.15 Railroad Crossing Requiremen ts................................ ................................ ...................... 15
+2.1.16 Reversible Lanes Requirements ................................ ................................ ....................... 15
+2.1.17 Dynamic Lane Assignments Requirements ................................ ................................ ......16
+2.1.18 Transit Requirements ................................ ................................ ................................ ........ 17
+2.1.19 Netw ork Device Status Interface Requirments ................................ ................................ 19
+2.1.20 Command Timeframe Request / Response Interface Requirements ................................ 20
+2.2 Functional ................................ ................................ ................................ ......................... 21
+2.2.1 Data Collector Requirements ................................ ................................ ........................... 21
+2.2.2 Data Transmission Requirements ................................ ................................ ..................... 21
+2.2.3 Web Map Requirements ................................ ................................ ................................ ...22
+2.2.4 Incident GUI Requirements ................................ ................................ .............................. 23
+2.2.5 Remote Control GUI ................................ ................................ ................................ ........ 23
+2.3 Design and Construction Standards ................................ ................................ .................. 25
+2.4 Operational ................................ ................................ ................................ ....................... 26
+APPENDIX A – ACRONYMS
+SOFTWARE REQUIREMENTS SPECIFICATION iiiLIST OF TABLES
+Page
+Table 1.  Roadway Network Interface Requirements ................................ ................................ ......5
+Table 2.  Traffic Conditions Interface Requirements ................................ ................................ ......6
+Table 3.  Incident Data Interface Requirements ................................ ................................ .............. 6
+Table 4.  Lane Closure Interface Requirements ................................ ................................ ............... 7
+Table 5.  DMS Interface Requirements ................................ ................................ ........................... 8
+Table 6.  LCS Interface Requirements ................................ ................................ ............................. 9
+Table 7.  CCTV Interface Requirements ................................ ................................ ....................... 10
+Table 8.  Ramp Meter Interface Requirements ................................ ................................ .............. 11
+Table 9.  HAR Interface Requirements ................................ ................................ .......................... 12
+Table 10.  Traffic Signals Interface Requirements ................................ ................................ ........ 13
+Table 11.  ESS Interface Requirements ................................ ................................ ......................... 13
+Table 12.  HOV Interface Requirements ................................ ................................ ....................... 14
+Table 13.  Parking Lot Interface Requirements ................................ ................................ ............. 14
+Table 14.  School Zone Interface Requirements ................................ ................................ ............ 15
+Table 15.  Railroad Crossing Interface Requirements ................................ ................................ ...15
+Table 16.  Reversible Lanes Interface Requirements ................................ ................................ ....16
+Table 17.  Dynamic Lane Assignments Interface Requirements ................................ ................... 17
+Table 18.  Transit Interface Requirements ................................ ................................ ..................... 18
+Table 19.  Network Device Status Requirements ................................ ................................ .......... 20
+Table 20.  Command Timeframe Request / Response Interface Requirements ............................ 21
+Table 21.  Data Collector Requirements ................................ ................................ ........................ 21
+Table 22.  Data Transmission Requirements ................................ ................................ ................. 21
+Table 23.  WWW Map Requirements ................................ ................................ ............................ 22
+Table 24.  Incident GUI Requirements ................................ ................................ .......................... 23
+Table 25.  Remote Control GUI ................................ ................................ ................................ .....24
+Table 26.  Computer Resource Requirements ................................ ................................ ............... 25
+Table 27.  Design and Implementation Requirements ................................ ................................ ...26
+Table 28.  Required States and Modes Requirements ................................ ................................ ...26
+SOFTWARE REQUIREMENTS SPECIFICATION ivREVISION HISTORY
+Revision Date Changes
+1.0 September 4, 1999 Initial release
+2.0 February 24, 2000 • Significantly modified the structure of the SRS
+• Requirements from version 1.0 were reformatted to utilize
+the new structure
+• Expanded the requirements for device status
+• Added requirements for device command/control
+• Added requirements for remote control user interface
+3.0 December 5, 2001 Added EO-22 to identification table.
+Revised to reflect changes from SICD and CICD version 2.3.
+Incorporated input from DFW Regional Software Task Force
+into document. Major new additions included:
+• Ramp Meters
+• Highway Advisory Radio (HAR)
+• Traffic Signals
+• Environmental Sensor Stations (ESS)
+• High Occupancy Vehicle (HOV) Lanes
+• Parking Lots
+• School Zones
+• Railroad Crossings
+• Reversible Lanes
+• Dynamic Lanes
+• Transit
+SOFTWARE REQUIREMENTS SPECIFICATION 11.0 SCOPE
+This Software Requirements Specification (SRS) provides the requirements for the Center-to-
+Center Communications (C2C) Communications project.
+1.1 Identification
+Project Title: Center-To-Center Communications
+Project Number: 04594, EO 17
+04594, EO 22
+Abbreviation: C2C
+Version Number: 3.0
+Release Number: 1
+1.2 System Overview
+This document describes the requirements for the Dallas/Ft. Worth (DFW) Regional “Center-to-
+Center (C2C) Communications Network” that is based on a Texas Department of Transportation
+(TxDOT) C2C project.  The TxDOT C2c project initially connected the DFW TxDOT Traffic
+Management Centers (TMCs). This C2C infrastructure implements a repository for traffic data
+and provides a mechanism to exchange device control information between TMCs.
+The C2C project will be implemented using the evolving ITS Traffic Management Data
+Dictionary (TMDD) standard, the message sets associated with TMDD, other ITS Data Elements
+and Message Sets.  The use of ITS standards will create a system that is reusable for other ITS
+application areas and will provide the State of Texas with a baseline system that can be cost
+effectively extended in the future.
+1.3 Operational Concept
+The C2C infrastructure must interconnect several dissimilar traffic management systems.  In
+order to create the C2C infrastructure, interfaces to the existing systems will be created.  The
+data from these interfaces will communicate with the existing system in a “system specific”
+format.  The data being deposited into the C2C infrastructure will be converted to a standard
+format (based on the ITS standards).  The C2C infrastructure is being created using a series of
+building blocks.  These building blocks allow the software to be utilized in a number of
+configurations (by simply altering the configuration parameters of the software).
+In a region such as Dallas/Ft. Worth, multiple instances of the building blocks will be utilized.
+The software is being designed so that multiple instances of a building block can be deployed by
+simply “configuring” the building block of operation within a specific agency. Conceptually, the
+C2C infrastructure would be deployed as depicted in the following diagram:
+SOFTWARE REQUIREMENTS SPECIFICATION 2
+Any data that is passed into the “cloud” in the above figure will be based on the ITS standards.
+Systems will interface to the “cloud” using a project defined protocol. New systems that are
+deployed (based on the ITS standards) will not utilize the project defined protocol but will be
+moved “into” the cloud (because they themselves would be based on the ITS standards.
+1.4 Goals and Objectives
+The C2C project has the following goals:
+• To provide a common repository for traffic information for the DFW Metroplex.
+• To provide a World Wide Web based graphical map to display traffic conditions in the
+DFW Metroplex.
+• To provide a Microsoft Windows application that will allow agencies without a formal
+Traffic Management Center (TMC) to participate in the C2C infrastructure and
+information sharing.
+• To provide a system which supports ITS center-to-center communications for
+command/control/status of various ITS field devices including: Dynamic Message
+Signs, Lane Control Signals and Closed Circuit Television Cameras (CCTVs), Ramp
+Meters, and Highway Advisory Radios (HARs).
+• To utilize National ITS standards to implement the project.
+• To provide a software system that is extensible all local or regional partners. This
+would allow a “local” common repository to be created by “linking” individual
+partners, a “regional” common repository to be created by “linking” local common
+repositories and a “statewide” common repository to be created by “linking” regional
+common repositories.
+SOFTWARE REQUIREMENTS SPECIFICATION 31.5 Constraints
+None.
+1.6 Document Overview
+Section 2 defines the requirements of the system. Acronyms are defined in Appendix A.
+1.7 Related Documents
+• Concept Of Operations Framework For The Dallas/Ft. Worth Regional Center-to-Center
+Communications Network , Version 1.0, Southwest Research Institute, November 2001.
+SOFTWARE REQUIREMENTS SPECIFICATION 42.0 REQUIREMENTS
+The following sections define the requirements for the C2C project. Requirements are listed in
+separate sections and in table format for each functional area. The C2C project mnemonic
+uniquely identifies the C2C project to distinguish its requirements from the requirements of other
+ITS systems.  The mnemonic for the C2C project is C2C.  The Requirement Category Mnemonic
+is a two-letter mnemonic for each functional area.  The Requirement Numbers are a combination
+of target Advanced Traffic Management System (ATMS) and sequential within a given
+functional area.
+The columns of the tables are structured as follows:
+• The first column of the table contains the requirement identifier.  The requirement
+identifier is a three-part number that is used to uniquely identify each requirement.  The
+number consists of the following fields: <C2C Project Mnemonic>-<Requirement
+Category Mnemonic>-<Requirement Number>.
+• The second column of each table contains a description of the requirement.
+• The third column contains a rationale for the requirements.  If the rationale is left blank
+for a particular requirement, the requirement rationale is assumed obvious from the
+description.
+2.1 Interfaces
+The following tables list the interfaces that shall be developed.
+SOFTWARE REQUIREMENTS SPECIFICATION 52.1.1  Roadway Network Interface Requirements
+Table 1 lists the interface requirements for supporting the roadway network data transmission.
+Table 1.  Roadway Network Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS01For each roadway network it maintains, the
+Center shall provide the following information.
+1. Network identifier
+2. Network name
+3. Number of links in the network
+4. Number of nodes in the network
+5. List of link data
+6. List of node data
+C2C-IF-IS02The Center shall provide the following link information:
+1. Link identifier
+2. Link name
+3. Road number
+4. Link type
+5. Link type description
+6. Start node (see below for node information)
+7. End node (see below for node information)
+8. Direction
+9. Length
+10. Capacity
+11. Speed limit
+12. Speed limit truck
+13. Number of lanes
+C2C-IF-IS03The Center shall provide the following node information:
+1. Node identifier
+2. Node name
+3. Node jurisdiction
+4. Owner
+5. Latitude/longitude
+6. Type of node (i.e., intersection or bridge)
+7. Node type description
+8. Number of links
+2.1.2  Traffic Conditions Interface Requirements
+Table 2 lists the interface requirements for supporting the traffic conditions data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 6Table 2.  Traffic Conditions Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS04For each link defined within the Center:
+1. Network identifier
+2. Link identifier
+3. Data type
+4. Data type description
+5. Delay
+6. Travel time
+7. Volume
+8. Speed
+9. Density
+10. Occupancy
+2.1.3  Incident Data Interface Requirements
+Table 3 lists the interface requirements for supporting the incident data transmission.
+Table 3.  Incident Data Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS05The Center shall support the following information about
+each incident:
+1. Network identifier
+2. Incident ID
+3. Incident description
+4. Roadway
+5. Cross street
+6. Latitude/longitude
+7. Link identifier
+8. Direction
+9. Status
+10. Update Type
+11. Affected lanes
+12. Classification
+13. Severity
+14. Incident type
+15. Incident type description
+16. Road conditions
+17. Weather
+18. Confirmed date & time
+19. Cleared date & time
+2.1.4  Lane Closure Interface Requirements
+Table 4 lists the interface requirements for supporting the lane closure data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 7Table 4.  Lane Closure Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS06The Center shall support the following information about
+each lane closure:
+1. Network identifier
+2. Lane closure ID
+3. Closure description
+4. Starting roadway
+5. Starting cross street
+6. Latitude/longitude of starting location
+7. Ending roadway
+8. Ending cross street
+9. Latitude/longitude of ending location
+10. Direction of roadway
+11. Link identifier
+12. Current status
+13. Update type
+14. Affected lanes
+15. Lane closure source
+16. Contact
+17. Days closed
+18. Start time of day
+19. End time of day
+20. Start date of series
+21. End date of series
+2.1.5  Dynamic Message Sign Interface Requirements
+Table 5 lists the interface requirements for supporting the Dynamic Message Sign (DMS) data
+transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 8Table 5.  DMS Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS07The Center shall provide the following status information
+about each DMS:
+1. Network Identifier
+2. DMS Identifier
+3. DMS Name
+4. Location (latitude/longitude)
+5. Sign Geometry (row/column)
+6. Status (online/offline)
+7. Current message (MULTI string)
+8. Beacons (on/off)
+C2C-IF-IS08To support DMS control in other centers, the Center shall
+be able to support the following device control command
+for a DMS:
+1. Network identifier
+2. DMS Identifier
+3. Username
+4. Password
+5. Beacons (on/off)
+6. Immediate message (MULTI string)
+2.1.6  Lane Control Signal Interface Requirements
+Table 6 lists the interface requirements for supporting the Lane Control Signal (LCS) data
+transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 9Table 6.  LCS Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS09The Center shall support the following status information
+about each LCS:
+1. Network identifier
+2. LCS identifier
+3. LCS name
+4. Location (latitude/longitude)
+5. Geometry (number of heads)
+6. Head capabilities
+7. Status
+8. Current pattern
+C2C-IF-IS10To support LCS control in other centers, the Center shall
+be able to support the following device control command
+for a LCS:
+1. Network Identifier
+2. LCS Identifier
+3. Username
+4. Password
+5. Signal Pattern
+2.1.7  Closed Circuit Television Interface Requirements
+Table 7 lists the interface requirements for supporting the Closed Circuit Television (CCTV)
+data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 10Table 7.  CCTV Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS11The Center shall provide the following information status
+information about each CCTV:
+1. Network identifier
+2. CCTV identifier
+3. CCTV name
+4. Location (latitude/longitude)
+5. Status (online/offline)
+6. Locked/unlocked
+7. Lock holder (if locked)
+8. Supported directions
+9. Current direction
+10. Current preset position
+11. Current pan
+12. Current tilt
+13. Current zoom
+14. Current focus
+15. Current iris
+C2C-IF-IS12To support CCTV control in other centers, the Center
+shall be able to support the following CCTV control
+request:
+1. Network identifier
+2. CCTV Identifier
+3. Username
+4. Password
+5. CCTV request (one of the following):
+§ Lock camera
+§ Set direction
+§ Set preset
+§ Set absolute (pan/tilt/zoom/focus/iris)
+§ Stop offset (pan/tilt/zoom/focus/iris)Ft. Worth will not support
+Momentary
+Pan/Tilt/Zoom/Iris/Focus
+command
+C2C-IF-IS13To support video snapshots, the Center shall be able to
+support the following status information:
+1. Network identifier
+2. CCTV Identifier
+3. CCTV Name
+4. Status
+5. Current camera direction
+6. Size of snapshot
+7. Video snapshot (in JPEG format)
+C2C-IF-IS14To support CCTV switching in other centers, the Center
+shall be able to support the following CCTV switching
+command:
+1. Network identifier (owner of CCTV)
+2. Username
+3. Password
+4. Video channel input identifier
+5. Video channel output identifierDallas will not support the Tour
+video switch command
+2.1.8  Ramp Meter Requirements
+Table 8 lists the interface requirements for supporting the ramp meter data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 11Table 8.  Ramp Meter Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS15The Center shall support the following status information
+about each ramp meter:
+1. Network identifier (owner of ramp meter)
+2. Ramp Meter Identifier
+3. Ramp Meter Name
+4. Location (latitude/longitude)
+5. Status
+6. Status Source
+7. Plan
+8. Cycle Time
+C2C-IF-IS16To support Ramp Meter control in other centers, the
+Center shall be able to support the following device
+control command for a ramp meter:
+1. Network identifier (owner of ramp meter)
+2. Ramp Meter Identifier
+3. Username
+4. Password
+5. Plan
+6. Duration
+2.1.9  Highway Advisory Radio Requirements
+Table 9 lists the interface requirements for supporting the Highway Advisory Radio (HAR) data
+transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 12Table 9.  HAR Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS17The Center shall support the following status information
+about each HAR:
+1. Network identifier (owner of HAR)
+2. HAR Identifier
+3. HAR Name
+4. Location (latitude/longitude)
+5. Status
+6. Current Message
+7. Current Message Text
+C2C-IF-IS18To support HAR control in other centers, the Center shall
+be able to support the following device control command
+for a HAR:
+1. Network identifier (owner of HAR)
+2. HAR Identifier
+3. Username
+4. Password
+5. Message
+6. Message Text
+7. Duration
+2.1.10  Traffic Signals Requirements
+Table 10 lists the interface requirements for supporting the Traffic Signals data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 13Table 10.  Traffic Signals Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS19The Center shall support the following status information
+about each Traffic Signal:
+1. Network identifier (owner of traffic signal)
+2. Traffic Signal Identifier
+3. Traffic Signal Name
+4. Location (latitude/longitude)
+5. Status
+6. Status Source
+7. State
+8. Failure State
+9. Plan
+10. Plan Expiration
+11. Signal Preemption
+C2C-IF-IS20To support Traffic Signal control in other centers, the
+Center shall be able to support the following device
+control command for a Traffic Signal:
+1. Network identifier (owner of traffic signal)
+2. Traffic Signal Identifier
+3. Username
+4. Password
+5. Traffic Signal Plan Identifier
+6. Duration
+2.1.11  Environment Sensor Station Requirements
+Table 11 lists the interface requirements for supporting the Environmental Sensor Station (ESS)
+data transmission.
+Table 11.  ESS Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS21The Center shall support the following status information
+about each ESS:
+1. Network identifier (owner of sensor)
+2. Environmental Sensor  Identifier
+3. Environmental Sensor  Name
+4. Type
+5. Location (latitude/longitude)
+6. Status
+7. Type
+8. Reading
+9. Units
+10. Alarm status
+2.1.12  High Occupany Vehicle Requirements
+Table 12 lists the interface requirements for supporting the High Occupancy Vehicle (HOV) data
+transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 14Table 12.  HOV Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS22The Center shall support the following status information
+about each HOV:
+1. Network identifier (owner of HOV)
+2. HOV Identifier
+3. HOV Name
+4. Link Identifier
+5. Status
+6. Failure State
+7. Plan
+8. State
+9. Status Source
+10. Occupants
+11. Next Transition Time
+C2C-IF-IS22.1To support HOV Lane control in other centers, the
+Center shall be able to support the following device
+control command for a HOV Lane:
+1. Network identifier (owner of HOV)
+2. HOV Lane Identifier
+3. Username
+4. Password
+5. Lane Plan
+6. Duration
+2.1.13  Parking Lot Requirements
+Table 13 lists the interface requirements for supporting the Parking Lot data transmission.
+Table 13.  Parking Lot Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS23The Center shall support the following status information
+about each Parking Lot:
+1. Network identifier (owner of parking lot)
+2. Parking Lot Identifier
+3. Parking Lot Name
+4. Location (latitude/longitude)
+5. Status
+6. Capacity
+7. Utilization
+8. Entrance
+9. Restrictions
+10. Special Capabilities
+2.1.14  School Zone Requirements
+Table 14 lists the interface requirements for supporting the School Zone data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 15Table 14.  School Zone Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS24The Center shall support the following status information
+about each School Zone:
+1. Network identifier (owner of school zone)
+2. Link Identifier
+3. School Zone Identifier
+4. School Zone Name
+5. Location (latitude/longitude)
+6. Status
+7. Failure Status
+8. State Plan
+9. State Source
+C2C-IF-IS25To support School Zone control in other centers, the
+Center shall be able to support the following device
+control command for a School Zone:
+1. Network identifier (owner of school zone)
+2. School Zone Identifier
+3. Username
+4. Password
+5. Plan
+2.1.15  Railroad Crossing Requirements
+Table 15 lists the interface requirements for supporting the Railroad Crossing data transmission.
+Table 15.  Railroad Crossing Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS26The Center shall support the following status information
+about each Railroad Crossing:
+1. Network identifier (owner of railroad Crossing)
+2. Link Identifier
+3. Rail Crossing Identifier
+4. Rail Crossing Name
+5. Location (latitude/longitude)
+6. Status
+7. Rail Type
+8. Estimated Time for Train to Clear of Intersection
+9. Estimated Minutes to Train Arrival
+10. Rail closing signal type
+2.1.16  Reversible Lanes Requirements
+Table 16 lists the interface requirements for supporting the Reversible Lanes data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 16Table 16.  Reversible Lanes Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS27The Center shall support the following status information
+about each Reversible Lane:
+1. Network identifier (owner of reversible lane)
+2. Reversible Lane Identifier
+3. Reversible Lane Name
+4. Link Identifier
+5. Indicator Status
+6. Indicator Failure State
+7. Plan
+8. Direction
+9. Direction Transition Time
+10. Status Source
+C2C-IF-IS28To support Reversible Lane control in other centers, the
+Center shall be able to support the following device
+control command for a Reversible Lane:
+1. Network identifier (owner of reversible lane)
+2. Reversible Lane Identifier
+3. Username
+4. Password
+5. Plan
+6. Duration
+2.1.17  Dynamic Lane Assignments Requirements
+Table 17 lists the interface requirements for supporting the Dynamic Lane Assignment data
+transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 17Table 17.  Dynamic Lane Assignments Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS29The Center shall support the following status information
+about each Dynamic Lane:
+1. Network identifier  (owner of dynamic lane)
+2. Link Identifier
+3. Dynamic Lane Identifier
+4. Dynamic Lane Name
+5. Indicator Status
+6. Failure State
+7. Plan
+8. Type
+9. Transition Time
+C2C-IF-IS30To support Dynamic Lane control in other centers, the
+Center shall be able to support the following device
+control command for a Dynamic Lane:
+1. Network identifier (owner of dynamic lane)
+2. Dynamic Lane Identifier
+3. Username
+4. Password
+5. Lane Plan
+6. Duration
+2.1.18  Transit Requirements
+Table 18 lists the interface requirements for supporting the Transit data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 18Table 18.  Transit Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS30The Center shall support the following status information
+about each Bus Stop:
+1. Network identifier (owner of bus stop)
+2. Link Identifier1
+3. Relative Link Location
+4. Identifier
+5. Name
+6. Location (Node)
+7. Bus Routes
+8. Frequency
+C2C-IF-IS31The Center shall support the following status information
+about each Bus Location:
+1. Network identifier (owner of bus)
+2. Link Identifier
+3. Bus Identifier
+4. Bus Name
+5. Location (latitude/longitude)
+6. Schedule Adherence
+7. Vehicle Attributes
+8. Capacity
+C2C-IF-IS32The Center shall support the following status information
+about each Light/Commuter Stop:
+1. Network identifier (owner of stop)
+2. Link Identifier
+3. Commuter / Light Rail Stop Identifier
+4. Commuter / Light Rail Stop Name
+5. Location
+6. Routes
+7. Frequency
+C2C-IF-IS33The Center shall support the following status information
+about each Light/Commuter Location:
+1. Network identifier (owner of train)
+2. Link Identifier
+3. Commuter / Light Rail Identifier
+4. Commuter / Light Rail Name
+5. Location (latitude/location)
+6. Schedule Adherence
+7. Vehicle Attributes
+8. Capacity
+                                                
+1 Associating a bus stop, commuter / light rail stop, bus location, etc. with a link within a roadway network may be
+an inherently difficult problem from a configuration management perspective.  The roadway network and transit
+information may be managed by separate centers, i.e. City of Dallas vs. DART.  Updates to the roadway network,
+i.e. renaming links, may cause the associated link information within the transit data to become outdated and
+inconsistent with the location data.
+SOFTWARE REQUIREMENTS SPECIFICATION 19Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS34The Center shall support the following status information
+about each Park and Ride Lot:
+1. Network identifier (owner of lot)
+2. Park and Ride Lot Identifier
+3. Park and Ride Lot Name
+4. Location (latitude/location)
+5. Status
+6. Capacity
+7. Utilization
+8. Entrance
+9. Restrictions
+10. Special Capabilities
+C2C-IF-IS35The Center shall support the following status information
+about each Vehicle Priority:
+1. Vehicle Identifier
+2. Network identifier (owner of signal)
+3. Link Identifier
+4. Intersection Identifier
+5. Priority Request Status
+6. Departure Time
+7. Desired Arrival Time
+8. Priority
+9. Vehicle Classification
+10. Service Strategy
+2.1.19  Network Device Status Interface Requirments
+Table 19 lists the interface requirements for supporting network device status data transmission.
+SOFTWARE REQUIREMENTS SPECIFICATION 20Table 19.  Network Device Status Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS36The Center shall support the following information about
+network device status:
+1. Network identifier
+2. Number of DMSs
+3. Number of LCSs
+4. Number of CCTVs
+5. Number of CCTV video inputs
+6. Number of CCTV video outputs
+7. Number of Ramp Meters
+8. Number of HARs
+9. Number of Traffic Signals
+10. Number of ESSs
+11. Number of HOVs
+12. Number of Parking Lots
+13. Number of School Zones
+14. Number of Railroad Crossings
+15. Number of Reversible Lanes
+16. Number of Dynamic Lanes
+17. DMS status data
+18. LCS status data
+19. CCTV status data
+20. Video input channel identifiers
+21. Video output channel identifiers
+22. Ramp Meter status data
+23. HAR status data
+24. Traffic Signal status data
+25. ESS status data
+26. HOV status data
+27. Parking Lot status data
+28. School Zone status data
+29. Railroad Crossing status data
+30. Reversible Lane status data
+31. Dynamic Lane status data
+2.1.20  Command Timeframe Request / Response Interface Requirements
+Table 20 lists the interface requirements supporting command timeframe requests and responses.
+SOFTWARE REQUIREMENTS SPECIFICATION 21Table 20.  Command Timeframe Request / Response Interface Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-IF-IS37The device status requestor and Center shall support the
+following information for command timeframe request:
+1. Network identifier
+2. Device TypeThis is used to determine when a
+center will accept a command
+from a remote user.  These are
+device type dependent.
+C2C-IF-IS38The device status requestor and Center shall support the
+following information for command timeframe request:
+1. Network identifier
+2. Device Type
+3. Days Commands Accepted
+4. Times Commands AcceptedThis is the response to a
+command timeframe request.
+2.2 Functional
+The follow sections detail the functional requirements of the C2C project.
+2.2.1  Data Collector Requirements
+The Data Collector Requirements define what must be stored on the Data Collector.  The
+requirements are listed in Table 21.
+Table 21.  Data Collector Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-DS-01 The Data Collector shall be designed to support the
+storage of TMDD data elements and message set
+information.
+2.2.2  Data Transmission Requirements
+The Data Transmission Requirements define the messaging protocols and message sets to be
+used for C2C communications and are listed in Table 22.
+Table 22.  Data Transmission Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-DT-01 The C2C Project shall utilize the TMDD standard
+(including message sets) to transmit information.
+C2C-DT-02 DATEX/ASN shall be used to transmit the TMDD
+message sets.
+C2C-DT-03 TCP/IP shall be used to transmit the DATEX/ASN data. Derived from this requirement is
+the necessary TCP/IP connection
+management.
+SOFTWARE REQUIREMENTS SPECIFICATION 222.2.3  Web Map Requirements
+The Web Map application generates a map that can be displayed on an Internet WWW server.
+The map provides a graphical depiction of the traffic conditions.  The requirements for the
+WWW map are listed in Table 23.
+Table 23.  WWW Map Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-MP-01 The map shall display interstates and state highways on
+the graphical map.
+C2C-MP-03 The basemap data shall be derived from the North
+Central Texas Council of Governments (NCTCOG) Geo-
+Data warehouse.
+C2C-MP-03 The map user shall be able to alter the current
+magnification (zoom level) of the map.
+C2C-MP-04 The map user shall be able to pan the map in each of the
+following directions: North, South, East or West.
+C2C-MP-05 Each link displayed on the map shall be color coded to
+provide a graphical depiction of speeds.  A configuration
+file shall be provided to specify specific speed values.
+The color coding shall be as follows:
+• Green - speeds > TBD MPH
+• Yellow - speeds between TBD and TBD MPH
+• Red – speeds below TBD MPH
+C2C-MP-06 The map shall display the current incidents (as icons)
+known to the C2C Project.
+C2C-MP-07 The user shall be able to click on an incident icon to
+obtain further information about the incident.
+C2C-MP-08 All current incidents shall be displayed in tabular format
+with the following information contained in the table:
+• Location
+• Type of incident (e.g., accident, lane closure)
+• Severity of incident
+• Incident status
+• Travel direction
+• Effected lanes
+C2C-MP-09 The map shall be capable of displaying the following for
+a DMS:
+1. Location
+2. Current Message
+C2C-MP-10 The map shall be capable of displaying the following for
+a LCS:
+1. Location
+2. Current Signals
+C2C-MP-11 The map shall be capable of displaying the following for
+a CCTV:
+1. Location
+2. Status
+SOFTWARE REQUIREMENTS SPECIFICATION 232.2.4  Incident GUI Requirements
+The Incident GUI must provide data to the C2C Infrastructure.  The GUI requirements are listed
+in Table 24.
+Table 24.  Incident GUI Requirements
+Requirement
+NumberRequirement DescriptionRationale or
+Comments
+C2C-GI-01 The Incident GUI shall allow the user to enter incident or lane closure
+information without the use of an Center.
+C2C-GI-02 The Incident GUI shall allow the user to input the following
+information for each incident:
+• Location (latitude/longitude)
+• Description
+• Status
+• Effected lanes
+• Detection time
+• Response time
+• Estimated time to clear queue
+• Queue length
+C2C-GI-03 The Incident GUI shall allow the user to input the following
+information for each lane closure:
+• Location (latitude/longitude)
+• Description
+• Effected lanes
+• Date
+• Start time
+• End time
+C2C-GI-04 The GUI shall provide a list of previously entered incidents.
+C2C-GI-05 The GUI shall allow the data about an incident to be modified.
+C2C-GI-06 The GUI shall allow a user to delete a previously entered incident.
+C2C-GI-07 The GUI shall provide a list of previously entered lane closures.
+C2C-GI-08 The GUI shall allow a user to delete a previously entered lane closure.
+C2C-GI-09 The GUI shall allow a user to delete a previously entered lane closure.
+2.2.5  Remote Control GUI
+Table 25 contains the requirements for the Remote Control GUI.
+SOFTWARE REQUIREMENTS SPECIFICATION 24Table 25.  Remote Control GUI
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-CG-01The remote Center Control GUI shall be designed to
+execute on a public network (e.g., Internet) and transmit
+equipment requests to the C-2-C software system.The Remote Control GUI will
+execute as a local application on
+a PC.  The application will
+generate TMDD device control
+messages that will be sent to a
+Center for processing.
+Connectivity through the various
+firewalls and gateways is not
+addressed by this requirement.
+C2C-CG-02When the GUI application is initiated, the user shall be
+prompted for the following information:
+• User name
+• Password
+C2C-CG-03The user shall be provided with the capability to select a
+network identifier for a device command/control request.
+C2C-CG-04Once an Center is selected, the user shall be able to select
+a DMS from a list and provide the following information:
+• Target DMS
+• Message to be displayed
+• Beacons On/Off
+C2C-CG-05Once an Center is selected, the user shall be able to select
+a LCS from a list and provide the following information:
+• Target LCS
+• Assignment of lane arrows
+C2C-CG-06Once an Center is selected, the user shall be able to issue
+a CCTV switching command:
+• Source (input)
+• Destination port (output)
+C2C-CG-07Once an Center is selected, the user shall be able to select
+a CCTV from a list and provide the following
+information:
+• Target CCTV
+• Device control including:
+• Pan
+• Tilt
+• Zoom
+C2C-CG-08Once an Center is selected, the user shall be able to select
+a Ramp Meter from a list and provide the following
+information:
+• Target Ramp Meter
+• Plan
+C2C-CG-09Once an Center is selected, the user shall be able to select
+a HAR from a list and provide the following information:
+• Target HAR
+• Text to be sent to the HAR
+C2C-CG-10Once an Center is selected, the user shall be able to select
+a Traffic Signal from a list and provide the following
+information:
+• Target Traffic Signal
+• Plan
+C2C-CG-11 Once an Center is selected, the user shall be able to select
+SOFTWARE REQUIREMENTS SPECIFICATION 25Requirement
+NumberRequirement Description Rationale or Comments
+a HOV from a list and provide the following information:
+• Target HOV
+• Plan
+C2C-CG-12Once an Center is selected, the user shall be able to select
+a School Zone from a list and provide the following
+information:
+• Target School Zone
+• Plan
+C2C-CG-13Once an Center is selected, the user shall be able to select
+a Reversible Lane from a list and provide the following
+information:
+• Target Reversible Lane
+• Plan
+C2C-CG-14Once an Center is selected, the user shall be able to select
+a Dynamic Lane from a list and provide the following
+information:
+• Target Dynamic Lane
+• Plan
+C2C-CG-15For each device command/control status request sent by
+the Remote GUI, the status returned from the network
+identifier will be displayed in a scrollable list on the GUI.
+2.3 Design and Construction Standards
+The computer resource requirements are listed in Table 26.
+Table 26.  Computer Resource Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-DC-01 The C2C Server shall execute in a Microsoft Windows
+NT environment.
+C2C-DC-02 A DATEX/ASN runtime library shall be available on any
+computer communicating to the C2C project.
+C2C-DC-03 The web server application shall use ESRI's ARC
+Internet Map Server (ARC IMS) product for creating of
+map images.
+The Design and implementation requirements are listed in the in Table 27.
+SOFTWARE REQUIREMENTS SPECIFICATION 26Table 27.  Design and Implementation Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-DC-04 The C2C shall execute in a Microsoft Windows NT
+environment.
+C2C-DC-05 The C2C shall be implemented in the C/C++
+programming language.
+C2C-DC-06 The C2C web interface shall be implemented using
+C/C++ and ESRI ARC IMS.
+C2C-DC-07 The Incident GUI shall be implemented using C/C++ and
+ESRI Map Objects.
+C2C-DC-08 The Remote Control GUI shall be implemented using
+C/C++ and ESRI Map Objects.
+2.4 Operational
+The C2C Project shall be capable of operating in one of two modes: normal mode for normal
+operations or in test mode for development and testing.  The requirements for these modes are
+listed in Table 28.
+Table 28.  Required States and Modes Requirements
+Requirement
+NumberRequirement Description Rationale or Comments
+C2C-OP-01 The C2C shall be able to operate in normal mode. In this
+mode the C2C receives data from all connected systems,
+including the Incident GUI, and combines the data into a
+single data store (database).
+C2C-OP-02 The C2C shall be able to operate in test mode.   In this
+mode, the C2C performs normal mode operations and
+also logs activities.To provide additional
+information for development and
+testing.
+SOFTWARE REQUIREMENTS SPECIFICATIONAPPENDIX A
+ACRONYMS
+SOFTWARE REQUIREMENTS SPECIFICATION A-1ACRONYMS
+ASN.1 Abstract Syntax Notation One
+ATIS Advance Traveler Information System
+ATMS Advanced Traffic Management System
+CCTV Closed Circuit Television
+DATEX/ASN DATEX/Abstract Syntax Notation
+DFW Dallas/Ft. Worth
+DMS Dynamic Message Sign
+DT Data Transmission
+ESS Environmental Sensor Stations
+GI Incident GUI
+GUI Graphical User Interface
+HAR Highway Advisory Radio
+HOV High Occupancy Vehicle
+ICD Interface Control Document
+IMS Internet Map Server
+ISP Information System Provider
+ITS Intelligent Transportation Systems
+LCS Lane Control Signal
+MPH Miles Per Hour
+MULTI Mark-Up Language for Transportation Information
+NCTCOG North Central Texas Council of Governments
+NTCIP National Transportation Communications for ITS Protocol
+SRS Software Requirements Specification
+TBD To Be Determined
+TCP/IP Transmission Control Protocol/Internet Protocol
+TMC Traffic Management Center
+TMDD Traffic Management Data Dictionary
+TxDOT Texas Department of Transportation
+WWW World Wide Web

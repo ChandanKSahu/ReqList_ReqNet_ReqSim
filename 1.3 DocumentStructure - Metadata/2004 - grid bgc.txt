@@ -1,0 +1,104 @@
+D	Grid-BGC Application Version 1.0
+2	Overall Description
+2.1	Product Perspective
+2.1.1	Text Narrative
+2.2	User Classes and Characteristics
+2.2.2	Portal Administrator
+2.4	Operating Environment
+2.4.1	Web Portal
+2.4.2	Compute Nodes
+2.4.3	Client User Interface
+2.5	Design and Implementation Constraints
+2.5.1	The system shall use the Globus toolkit
+2.6	User Documentation
+2.6.2	Context sensitive online help manual
+2.7	Assumptions and Dependencies
+3	System Features
+3.1	User Accounts
+3.1.1	Gatekeeper Accounts
+3.1.2	User Account Information
+3.1.3	User Roles
+3.1.5	User Functionality
+3.1.6	Administrative Functions
+3.2	Data Organization
+3.2.1	Objects
+3.2.2	Projects
+3.2.4	Data Integrity
+3.3	Objects
+3.3.2	Sharing
+3.3.3	Merging Objects
+3.4	Projects
+3.4.1	Project Type
+3.4.2	Collaboration
+3.4.3	New Project Creation
+3.4.4	Referenced Objects
+3.5	Template Objects
+3.5.1	Object Types
+3.5.3	Access Control
+3.5.4	Submission
+3.5.5	Editing
+3.5.6	Deletion
+3.5.7	Display
+3.5.8	Template Use
+3.6	Projection Object
+3.6.2	Support Projection Types
+3.6.5	Update
+3.6.6	Delete
+3.6.7	Data Downloads
+3.7	Grid Registration Object
+3.7.4	Update
+3.7.5	Delete
+3.7.6	Data Downloads
+3.8	Surface Observation Object
+3.8.2	Collaboration
+3.8.4	Creation
+3.8.5	Read
+3.8.7	Delete
+3.9	Site Data Object
+3.9.3	Supported Object Types
+3.9.5	Read
+3.9.6	Update
+3.9.7	Delete
+3.10	Daymet Parameterization Object
+3.10.2	Creation
+3.10.3	Read
+3.11	DEM Object
+3.11.4	Read
+3.12	Analysis Mask Object
+3.12.4	Read
+3.13	Daymet Project
+3.13.8	Model Runs
+3.14	Daymet Output Object
+3.14.2	Creation
+3.14.6	Data Downloading
+3.15	Plant Functional Type Object
+3.15.7	Delete
+3.17	Output Specification Object
+3.17.2	User Interface
+3.17.4	Read
+3.17.5	Update
+3.17.6	Delete
+3.18	Nitrogen Deposition Object
+3.18.6	Delete
+3.18.7	Invalidated Objects
+3.19	Disturbance Objects
+3.19.2	Creation
+3.19.3	Read
+3.19.4	Update
+3.19.5  Delete
+3.20	BiomeBGC Project
+3.20.2	Simulation Topology
+3.20.3	Creation
+3.20.4	Read
+3.20.5	Update
+3.20.6	Delete
+3.20.7	Model Runs
+3.20.8	Invalidated Projects
+3.21	BiomeBGC Output Object
+3.21.3	Creation
+3.21.6	Data Downloading
+3.25	Portal Administration
+3.25.2	System Consistency Check
+5	The system shall require the users enable cookies to use the system
+5.1	Hardware Interfaces
+5.1.1	NCAR Mass Storage System (MSS)

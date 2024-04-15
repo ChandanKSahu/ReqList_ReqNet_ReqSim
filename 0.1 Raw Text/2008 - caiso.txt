@@ -1,0 +1,360 @@
+
+ 
+      
+ 
+ 
+  Page 1
+ Black Start Capability Plan 
+ 
+ 
+Version 2.1 
+ 
+ 
+  
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 2 of 11 
+ Table of Contents 
+1. OVERVIEW....................................................................................................................... ................................3  
+2. GRID PLANNING.............................................................................................................................................4  
+3. GENERATOR UNIT TESTING ......................................................................................................... .............5  
+4. RECORDKEEPING.................................................................................................................. ........................9  
+5. TRAINING .......................................................................................................................................................10  
+6. DEFINITIONS .................................................................................................................... .............................10  
+6. REFERENCES..................................................................................................................... ............................11  
+ 
+ 
+Revision History 
+ 
+Date Version Description Author 
+5/7/2007 1.0 New Draft M. Peterson 
+6/6/2008 2.0 Replaced attachments with references 
+Corrected e-mail address for mailing 
+test form M. Peterson 
+6/13/08 2.1 Minor clarification to page 5 M. Peterson 
+ 
+ 
+Revisions This Black Start Capability Plan (BCP) is reviewed and updated at least every 
+five years. Forward all revisions to: 
+Procedure Control Desk 
+procctrldesk@caiso.com
+ 
+ 
+ 
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 3 of 11 
+ 1. Overview 
+  Following the complete or major loss of system generation (blackout), it will be 
+necessary to establish initial generation that can supply a source of electric power to 
+other system generation and begin system restoration.  These initiating generators are 
+referred to as system Black Start generators.  They must be able to self-start without any source of off-site electric power and maintain adequate voltage and frequency 
+while energizing isolated transmission facilities and auxiliary loads of other generators. Generators that can safely rej ect load down to their auxiliary load are 
+another form of Black Start generator that  can aid system restoration, but are not 
+addressed with this Black Start Capability Plan (BCP). 
+ 
+From a planning perspective, a system Black Start Capability Plan (BCP) is necessary to ensure that the quantity and location of system Black Start generators are sufficient 
+and that they can perform their expected functions as specified in overall coordinated 
+WECC BCP.
+ 
+ 
+The CAISO may from time to time test Unit(s) designated to provide Black Start 
+service (through an RMR or Interim Black Start Contract) by requiring the Unit to deliver Black Start service pursuant to a T est Dispatch Notice provided to Owner’s 
+Scheduling Coordinator using th e procedures described in th e Tariff Sections 4.2 and 
+4.3.  Such Test Dispatch Notice shall be ma rked “Black Start Test Notice.”  The Black 
+Start Test shall be performed in accordan ce with the Ancillary Services Requirements 
+Protocol in the CAISO Tariff.  The CAISO shall not request a Black Start Test for a hydroelectric Unit during periods of constrained water availability. 
+ 
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 4 of 11 
+ 2. Grid Planning 
+ The following provides general guidan ce for CAISO Black Start planning: 
+ 
+Step Description 
+1 The CAISO determines the amount and location of Black Start Generation 
+it requires through contingency studies that are used as the basis of the 
+CAISO’s emergency plans. The studies specify: 
+• The initiating disturbance, 
+• The magnitude of the Outage, including  the extent of the Outage (local 
+area, CAISO Controlled Grid, or WECC), 
+• The assumed status of Generation after the initiating disturbance, 
+• The status of interconnections,  
+• The system Demand level at the time of the disturbance, 
+• The interconnection support, and assump tions regarding the availability 
+of support from other utilities to he lp restore Generation and Demand 
+• The generator performance including a percentage of Black Start units (to be determined by the CAISO) wh ich are expected to fail to start, 
+• Expected transmission system damage. 
+2 The CAISO annually verifies that th e number, size, availability, and 
+location of system Black Start generating units are sufficient to meet WECC restoration plan requirements for the CAISO Balancing Authority Area.
+ 
+3 The CAISO documents the Cranking Paths, including initial switching requirements, between each Black Star t generating unit and the units to be 
+started and provides this documentation for review to WECC upon request. Such documentation may include Cranking Path diagrams.
+ 
+4 The CAISO Black Start planning evaluation process includes the following: 
+• Diverse fuel resources for Black Start power for generating units,  
+• Available cranking and transmission paths,  
+• Communication adequacy,  
+• Unit capability of maintaining ade quate regulation of voltage and 
+frequency,  
+• Generator protection and control systems during the abnormal conditions that will exist during system restoration,
+ 
+• Limited energy resources (e.g., hydro, pumped storage hydro, 
+compressed air) are selected sparingly . 
+5 The planning evaluation process is c oordinated, as appropriate, with the 
+Black Start capability plans of tr ansmission owners  and neighboring 
+Balancing Authorities. 
+6 The CAISO annually enters into RMR and Interim Black Start Contracts 
+with generators that satisfy the r esults of the annual planning evaluation 
+process. 
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 5 of 11 
+ 3. Generator Unit Testing 
+Warning : Do NOT perform any actions while following this plan that could 
+endanger the safety of any person, damage equipment, harms the environment, 
+or violates any applicable la w, regulation, or operating limit. 
+Black Start Testing 
+Minimal Requirements The following requirements apply to: 
+• Voluntary Black Start units that  desire a CAISO Black-Start 
+status, 
+• Interim Black Start units, 
+• RMR Black Start Units: 
+ 
+Step Description 
+1 The owner or operator of any Voluntary Black Start unit that desires a Black Start generating unit status with th e CAISO Balancing Authority shall: 
+• Demonstrate at least every five years, through simulation or testing, that the unit can perform its intended functions as required by the WECC BCP (if any) and of this testing section.  
+• Submit documentation of the test results and analysis to the CAISO, WECC, or NERC upon any request. 
+• Submit any past reports for Black Start tests with the CAISO and WECC. 
+o Those Participants who do not currently test their Black Start capability, will be required to test their Black Start capability.  
+• Within 24 hours of conducting a Black Start test, all Participants will notify the CAISO RT Dispatcher by phone indicating the success or failure of the test.  
+• Within 14 days of performing a Black Start test, all Participants will file a letter with the CAISO regarding the success or failure of the test.   
+2 Testing records shall include the dates of the tests, the duration of the tests, and an indication of whether the tests met the requirements of this Black Start Testing section. 
+3 The Black Start unit must have the ability to maintain voltage within emergency voltage limits over a range of loading from no external load to full 
+external load in accordance w ith NERC reliability standards. 
+4 The Black Start unit must be equipped with governors that are capable of operating in an isochronous mode.
+ 
+5 Adequate transmission capacity shall be available to connect the Black Start facility to the source providing station services to other specified generating stations.
+ 
+6 The Black Start unit must be capable of starting and energizing the applicable transmission path without assistance from the electrical system. 
+7 The Black Start Test should include key operating aids used in Black Starts such as telephone communications and SCADA, if applicable.   
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 6 of 11 
+ 8 The following start-up/synchronizing time limits shall apply to the Black 
+Start testing units: 
+• Hydroelectric generating units or combustion gas turbines - within 30 minutes of the initiation of the Black Start process, 
+• Industrial gas turbines - within 60 minutes of the initiation of the Black Start process, 
+• Hot, steam-driven turbines, within 2. 5 hours of the initiation of the Black 
+Start process. 
+• If the certified Black Start facility is in another reliability coordinator area or is comprised of an unspecified technology then specific start time 
+limits are negotiated. 
+These times include ICU start-up, normal start-up of the unit, plus switching time for the actual synchronizing of the unit.   
+9 The minimum run time duration (the generation time after being 
+synchronized to the grid) of a Black Start test is 10 minutes . 
+10 Submit a CAISO market schedule for any test energy.  
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 7 of 11 
+  
+RMR & 
+Interim Black Start Testing Requirements The following requirements apply only to CAISO RMR Black Start Units as 
+well as to CAISO Interim Black Start Units: 
+ 
+Step Description 
+1 All Black Start Generating Units must satisfy technical requirements 
+specified by the CAISO. 
+2 The CAISO shall from time to time undertake performance tests, with or without prior notification. 
+3 The CAISO shall have the sole right to determine when the operation of 
+Black Start Generating Unit is require d to respond to conditions on the 
+CAISO Controlled Grid. 
+4 The CAISO annually requests Black Start tests from at least one third of all RMR and Interim Black Start units. 
+5 Black Start units may be tested a nd/or assessed for the ability to self-
+provide start-up power for the period of time it takes to complete the start-up process at the generating station and to switch to the applicable transmission path and synchronize to the grid. 
+6 Black Start units may be tested and/or assessed for the ability to  
+• Complete such number of successive starts within such period of time as may be specified in the Black Start section of the unit’s RMR or Interim Black Start contract. 
+• Its ability to produce the range of reactive power resources required by 
+its voltage support section of the unit’s RMR or Interim Black Start 
+contract.  
+ 
+Step RMR & Interim BS Unit Owner Actions 
+Note: Refer  to G-213I Black Start Test Process Flowchart  for more information on 
+the CAISO test dispatch process flow. 
+1 Request  an Availability Test at any time. 
+2 Submit a request for an Availability Test using G-213H Black Start Test 
+Report Form  and send it to the CAISO Operations Support Test 
+Administrator at ASNotifications@CAISO.com . This form is also used by 
+Interim BS Units. 
+3  
+If… Then… 
+It is needed to test the Unit to generate above its contract MNDC or stated Availability, Request  this in G-213H Black Start 
+Test Report Form . This form is also 
+used by Interim BS Units.   
+4   
+If… Then… 
+A unit retests and passes requested MW. Correct  the Unit’s Availability in SLIC, per 
+the RMR Contract (Article 7.3 [b].    
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 8 of 11 
+ Note: The Unit’s restated Availability Li mit will not become effective until 
+the Alhambra Generation Dispatcher has been notified.  
+Step Alhambra Generation Dispatcher Actions 
+5  
+Prior to… Then… 
+The start to the 1st 
+hour of the test, Notify the BS Unit SC via telephone providing 
+enough time to ramp the Unit to full capacity.   
+6  
+Prior to… Then… 
+The start of the test, Transmit (electronically) an Availability Test 
+Dispatch Notice for RMR units (or phone for Interim BS units) to the following: 
+• RMR Unit Owner 
+• PTO 
+• CAISO Operations Support Test Administrator   
+Step BS Generating Unit Operator Actions 
+7  
+Prior to… Then… 
+The start of the first hour, Ramp  to the requested MW of the test. 
+  
+8 Maintain the requested MW for four full hours. 
+9  
+After… Then… 
+The end of the fourth hour, Ramp  back down or continue  in Market Transaction. 
+  
+Note:  If ramping occurs during the f our-hour timeframe, it will have an 
+undesirable affect on outcome of the test. 
+Step RMR Generating Unit Operator Actions 
+(Optional for Interim BS Units) 
+10  
+After… And prior to… Then… 
+Completion of 
+the test, 11:00 the next business day, Submit Ambient Temperature 
+information relevant to the time 
+frame of the test.   
+11 Submit Ambient Temperature information to the CAISO Operations 
+Support Test Administrator from G-203G RMR Test Request Form 
+Availability Test Ambient Temperature Supplement . 
+• Submit four (4) Ambient Temperature Points, along with an average.  
+Each of he four points must reside in a different hour of the test.  
+Note:  Ambient Temperature information is vital to an accurate analysis of 
+the test outcome.  If information is no t provided within the state timeframe, 
+CAISO reserves the right to  pull its own information. 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 9 of 11 
+  
+Step CAISO Operations Support Te st Administrator Actions 
+12 Determine  the BS Unit’s Availability by  averaging the actual MWh (from 
+the Unit’s Revenue Meter) output during the four-hour test period, taking 
+into consideration the Unit’s Temperature correction factor.  
+13  
+If… Then… 
+The Unit’s output is at least 99% of the Requested MW, Declare  the BS Unit available at the 
+current Unit Availability Limit. 
+The Unit fails to satisfy the 99% Availability threshold, Set the Availability Limit of the BS Unit 
+to the Availability level achieved during the test.  
+  
+ 
+4. Recordkeeping 
+ The following describes the CAISO’ s commitment to Black Start 
+recordkeeping: 
+ 
+Step Description 
+1 • The CAISO maintains a Black Start database that contains all Black 
+Start generators designated for use during a system restoration.  ( E-501 
+System Restoration  - restricted distribution). 
+• The Black Start database is reviewed and updated on at least an annual basis.   
+• The Black Start database includes the name, location, megawatt capacity, type of unit, latest date of test, and starting method.
+ 
+2  
+If… Then… 
+The a Black Start unit did not successfully 
+pass the CAISO 
+Black Start criteria specified in this procedure, An explanation and a plan to address and correct the deficiency shall be provided to the 
+CAISO by the generator owner/operator.  The 
+results of the testing and the justification for the periodicity of the testing shall be provided to WECC or NERC on request (within 30 days). 
+  
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 10 of 11 
+ 5. Training  
+ The following describes the CAISO’s commitment to Black Start Operator 
+training: 
+ 
+Step Commitment 
+1 The Real-time Grid Operators are trained at least annually for system 
+restoration including the use of Black Start capable units. The training 
+encompasses the integrated coordination of the following: 
+• NERC requirements 
+• WECC requirements 
+• E-501  - System Restoration 
+• E-501A Black Start Capable Units 
+• Black Start Capability Plan 
+• Simulations of full or partial sy stem shutdowns and restoration 
+(including a critique report of the simulation).  
+2 As a system simulator becomes available the CAISO will conduct 
+operator training for system restoration and Black Start unit use. 
+ 
+6. Definitions 
+Term Definition 
+Availability 
+Test A test called by the CAISO or the RMR Unit Owner to establish 
+and verify the RMR Unit’s Availability Limit.  
+Black Start The ability of a generating unit or station to go from a shutdown condition to an operating condition and start delivering energy to the grid without initial assistance from the electric system . 
+Interim 
+Black Start Unit A generating unit with Black Start capability that enters into an 
+Interim Black Start Contract with the CAISO. This is not an RMR contract. 
+Participant Those generator owners or operators that desire to test their 
+generating units for Black Start capability.  
+RMR Black 
+Start Unit A generating unit with Black Start capability that enters into an 
+RMR Black Start Contract with the CAISO. 
+Voluntary 
+Black Start Unit A generating unit with out a CAISO Black Start contract that 
+desires, for whatever reason, to  be recognized as a CAISO Black 
+Start generating unit. 
+ 
+Version:  2.1 
+Date:   6/13/2008 
+ Black Start Capability Plan 
+ 
+ Page 11 of 11 
+ 6. References 
+ISO Tariff Section 8.3.3 Certification and Testing Requirements 
+CAISO 
+Operating Procedure G-203, Reliability Must Run Unit Commitment and 
+Dispatch
+CAISO Operating Procedure G-213 Generator Certification Testing
+CAISO Operating Procedure G-213H Black Start Test Report Form
+CAISO Operating Procedure G-213I Black Start Process Flowchart
+NERC Reliability Standard EOP-005 System Restoration Plans
+EOP-009 Documentation of Blackstart Generating Unit 
+Test Results
+ 
+ 
+ 

@@ -1,0 +1,13 @@
+3.1.3.1	The user can split only once document at a time.
+3.1.3.2	The compression of the output  files requires pdf version 1.5 or above .
+3.1.3.3	The number of digits that can be used for the unique [FILENUMBER] prefix must be 10 or less .
+3.2.3.1	pages number in the page selection must be comprehended.
+3.2.3.2	The compression of the output files requires pdf version 1.5 or above.
+3.3.3.1	The user can mix only 2 documents at a time (not more or less).
+3.4.3.1	The compression of the output files requires pdf version 1.5 or above.
+3.4.3.2	The number of digits that can be used for the unique [FILENUMBER] prefix must be 10 or less .
+3.5.3.1	The compression of the output files requires pdf version 1.5 or above.
+3.5.3.2	The user can manipulate only 1 document at a time (not more).
+3.7.3.1	Operation system on the computer system.
+3.8.3.1	Log level must not be OFF (in the Settings panel) in order to work this function
+3.9.3.1	Restart PDFsam application to be the changes applied.

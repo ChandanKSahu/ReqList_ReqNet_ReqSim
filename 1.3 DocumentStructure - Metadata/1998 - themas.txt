@@ -1,0 +1,30 @@
+D	THEMAS The Energy Management System
+3	Engineering Requirements
+3.1	Functional Requirements
+3.1.1	Initialize Operational Parameters
+3.1.1.1	Load H/C Unit Definitions
+3.1.1.2	Load Thermostat Definitions
+3.1.1.3	Load Utilization Parameters
+3.1.1.4	Set Trigger Values
+3.1.1.5	Set Overtemp Values
+3.1.1.6	Establish Valid Temperature Range
+3.1.2	Initialize System
+3.1.3	Validate Temperature
+3.1.3.3	Processing
+3.1.4	Monitor Temperature
+3.1.4.1	Determine Temperature Status
+3.1.4.2	Determine H/C Mode
+3.1.5	Determine Utilization
+3.1.5.1	Determine Status of All H/C Units
+3.1.5.1.3	Processing
+3.1.5.2	Generate Unit Unavailable Event
+3.1.5.3	Generate H/C Request
+3.1.6	Generate H/C Signal
+3.1.6.3	Processing
+3.1.7	Generate Alarm Data
+3.1.7.3	Processing
+3.1.8	Generate Event Data
+3.1.9	Change Thermostat Setting
+3.1.9.4	Processing
+3.1.10	Generate Reports
+3.1.10.3	Processing

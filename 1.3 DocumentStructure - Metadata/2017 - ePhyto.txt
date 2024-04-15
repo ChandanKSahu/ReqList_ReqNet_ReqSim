@@ -1,0 +1,18 @@
+D	Service Requirements Specifications IPPC ePhyto HUB - a transfer service that will facilitate the communication and exchanges of ePhyto certificates between countries
+4	SYSTEM FEATURES
+4.1	HUB Portal – NPPO Configuration & Admin Area
+4.2	TLS Services - Authentication
+4.3	HUB Web Service – Receive Envelope(s)
+4.4	HUB Web Service – Pull Envelope(s)
+4.5	HUB Web Service – Get Envelope Tracking status and Under Delivery Envelops
+4.6	HUB Orchestrator – Push Envelope(s)
+4.7	HUB Portal – Troubleshooting console
+5	OTHER NONFUNCTIONAL REQUIREMENTS
+5.1	Performance Requirements
+5.2	Availability Requirements
+5.3	Data Life-cycle Requirements
+5.4	Safety Requirements
+5.5	Security Requirements
+5.6	Software Quality Attributes
+5.7	Business Rules
+6	OTHER REQUIREMENTS

@@ -1,0 +1,347 @@
+
+Software Requirements Specication for Mashbot
+George D'Andrea Andrew Gall Josiah Kiehl Cody Ray Vito Salerno
+February 15, 2010
+1
+Revision History
+Name Date Reason for Changes Version
+George D'Andrea, Andrew Gall,
+Josiah Kiehl, Cody Ray, Vito
+Salerno16 February 2010 Revised from Reviews 1.1
+George D'Andrea, Andrew Gall,
+Josiah Kiehl, Cody Ray, Vito
+Salerno24 November 2009 Initial Version 1.0
+1
+Contents
+1 Introduction 3
+1.1 Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2 Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.3 Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.4 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2 Overall Description 3
+2.1 Product Perspective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.1.1 System Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.1.2 User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.1.3 Hardware Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.1.4 Software Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.1.5 Communications Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.1.6 Memory Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.2 Product Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.3 User Characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.4 Requirements Apportioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3 Specic Requirements 6
+3.1 External Interface Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.1.1 Email System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2 Functional Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2.1 User Accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2.2 Marketing Campaigns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.2.3 External Service Accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+3.3 Security Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4 User Interface 8
+4.1 Dashboard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.1 Create . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.2 Schedule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.3 Explore . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+5 Preliminary Analysis 13
+6 Use Cases 13
+2
+1 Introduction
+1.1 Purpose
+This document is the general overview of the software requirements for the Mashbot project. These require-
+ments are directly related to the functionality, performances, constraints, attributes, and interfaces of the
+system.
+Mashbot is a web service for managing a company's presence on social networks. One goal of Mashbot
+is to unify the interfaces of a multitude of social networks, allowing users to learn a standardized interface
+and more easily cope with the ood of new social network platforms. A second goal is to allow for a hands
+o approach to social network marketing by allowing the scheduling of campaign events to be distributed to
+social networks.
+1.2 Scope
+This document contains the criteria by which the initial Mashbot release will be judged. It is written for the
+developers, testers, and end-users of Mashbot.
+1.3 Glossary
+Campaign A collection of content that is scheduled to be published
+External Service Account An account on a social networking platform outside of Mashbot
+1.4 Overview
+Marketing, customer service, business overhead and development eorts compete for resources in many
+startups and small businesses. Furthermore, early stage startups often have small or non-existent marketing
+budgets, especially in resource-hungry product-based startups. Although the plethora of widely available
+and aordable communications technology (e.g., social media, VoIP, streaming video, etc.) theoretically
+reduces both capital and operating expenditures related to marketing, the quantity of such technologies and
+services eectively creates an "opportunity overload" which makes the process of maintaining a focused and
+eective marketing campaign more dicult. Furthermore, with the number of services, technologies, and
+"specialists" arriving each day, it is nearly impossible to keep up with all the trends, much less fully take
+advantage of each one, or even monitor them all adequately. The widespread adoption of communications
+technology is a double-edged sword; there are many more avenues for marketing and customer service, but
+it is much more dicult to eectively apply reputation management strategies or adequate customer service
+through all channels. This project proposes to build a tool to increase the eectiveness and eciency of
+marketing campaigns and customer service for small to medium businesses.
+2 Overall Description
+2.1 Product Perspective
+The initial focus will be on scheduled marketing campaigns utilizing social media. However, this may expand
+to include customer service functionality, management of more traditional campaigns such as direct mail,
+trade shows and other events, or user-created campaign classes.
+The rst objective is to develop and release a small open source platform to provide a service agnostic
+facade API bundling common operations in widely used services (e.g., Facebook, Flickr, Twitter, Wordpress,
+or YouTube). This platform will provide a plugin-based architecture for abstracting myriad services behind a
+single facade, based upon content types provided in common data models. This sub-project will not only be
+useful to the open source community but will also devalue much of the competition whose prime added value
+3
+comes from providing such a service. Furthermore, it opens the opportunity for the public to help maintain
+existing service plugins as well as contribute plugins for new services. Finally, it leads to the inclusion of both
+a dual licensing revenue model and a niche software development service-based revenue model for custom
+extensions and applications built upon this core, which is proven to be more sustainable over time.
+The rst application of this core platform will be the campaign manager referenced above. While the
+exact feature set is to be determined during the design process, expected features include a portal to existing
+services where messages can be "pushed", or broadcast, through existing service channels. This portal will
+also allow for the collection of responses from customers, fans, critics, and other audiences from these same
+channels. Users will be able to view social networking messages directed at them, as well as perform data
+mining tasks on the social networks to provide more intelligent heuristics regarding brands' strength amongst
+particular markets. They will also be allowed to schedule campaign events at certain times. For example,
+users will be able to prepare a press release far in advance of its distribution, or queue a number of updates
+to be spread out over a certain time period.
+2.1.1 System Interfaces
+Mashbot combines several components to provide required functionality.
+Authentication Mashbot will allow the use of external authentication modules for user login. Mashbot
+will also provide an internal authentication mechanism in case an external module is unavailable.
+Campaign Manager Web Client Mashbot has an interface for a web client which processes user
+commands to interact with campaigns.
+Publishing and Aggregation Platform Mashbot has an interface for publishing content to social
+networks, as well as for aggregating social network data.
+Database Mashbot has an interface to a database which allows for the storage and retrieval of data
+related to accounts and campaigns.
+2.1.2 User Interface
+The user interface consists of a web front end with tabs to separate the various workow areas. To create
+content, the user is provided with a calendar scheduling tool and a content editor. Additionally, there is
+a monitoring dashboard which gives the user a view on responses to the content in any given campaign.
+Finally, there is an explore view that gives the user a portal with which they can keep tabs on topics of
+interest in social media.
+2.1.3 Hardware Interfaces
+The Mashbot web client runs on any computer hardware meeting the following criteria:
+Capable of connecting to the Internet
+Capable of running a modern HTTP 1.1 web browser
+Includes a keyboard and a pointing device
+Includes writable volatile storage
+The Mashbot server runs on any computer hardware meeting the following criteria:
+Capable of connecting to the Internet as a server.
+Capable of interfacing with modern database software.
+Capable of running a modern suite of networking software.
+4
+2.1.4 Software Interfaces
+The Mashbot software integrates some external software to provide functionality.
+Authentication Mashbot authenticates users against it's internal user database.
+Campaign Manager Web Client Mashbot interfaces with the users web browser and expects that
+it is capable of HTTP 1.1 and HTML 4.0.
+Database Mashbot software interfaces with an existing database software.
+Publishing and Aggregation Platform
+Server The Mashbot server runs on an operating system that supports serving dynamic web pages
+using encryption and is capable of communicating with the Internet.
+2.1.5 Communications Interfaces
+Communication between the web client and the server software is facilitated by common network protocols.
+This allows compatibility with the majority of our user's machines. Data will be encrypted using TLS and
+HTTP/1.1. The use of these protocols requires the ability for the systems to communicate using TCP/IP
+network stacks. The Mashbot system sends emails using SMTP.
+2.1.6 Memory Constraints
+The Mashbot server requires no greater than 1 gigabyte of RAM memory. The web client requires no more
+than the minimum memory a modern desktop computer commonly has, approximately 256 megabytes of
+RAM.
+2.2 Product Functions
+Mashbot should be able to:
+1. Schedule content for various services to be published concurrently
+2. View and Compare historical metrics of campaigns
+3. View/Create replies to content
+4. Maintain users and approvers of content
+5. Set up keyword alerts for \watched" services
+2.3 User Characteristics
+The target user is a small to medium business employee who understands the basic capabilities of social
+media.
+5
+2.4 Requirements Apportioning
+Priority Description
+1 Mashbot can not be released unless it satises these requirements.
+2 Mashbot may be initially released without satisfying these require-
+ments. Having these requirements unfullled must not create dan-
+gers to the system. They should be implemented in the next minor
+release.
+3 These requirements are not expected to be fullled by the initial
+release of Mashbot, but should be implemented in the next major
+release.
+4 These requirements are outside the current scope of the project,
+but are included to exhibit how our software will improve in the
+future.
+3 Specic Requirements
+3.1 External Interface Requirements
+3.1.1 Email System
+0100 Purpose The external email system is to provide a messaging service from Mashbot to the Mashbot
+users. Priority 2
+0110 Input The input is generated automatically by the Mashbot system using settings congurable by
+the System Administrator. Priority 2
+0120 Output The output is in the form of an e-mail to an e-mail account, but it does not return any sort
+of message to Mashbot. Priority 2
+0130 Data Format The format uses SMTP protocol. The actual messages are provided by Mashbot.
+Priority 2
+3.2 Functional Requirements
+3.2.1 User Accounts
+0140 User Account Types and Permissions The system categorizes users on the basis of roles and
+privileges. Within these roles, the system also categorizes users based on the roles that they have
+within individual products. These are referred to as user account roles.
+Mashbot Campaigns supports the following account roles:
+0150 Contributor Priority 3
+0160 Approver Priority 3
+0170 Publisher Priority 3
+0180 A user may possess more than one role. Priority 3
+0190 Roles reect actions that can be performed by a user. Priority 3
+0200 Roles can be assigned to a user account for individual products. Priority 3
+0210 Contributors may create new content, import existing content into the system, edit content,
+and delete it. They may also submit these actions for approval. Priority 3
+0220 Approvers can approve actions performed by contributors Priority 3
+6
+0230 Publishers may schedule or immediately initiate actions put forth by contributors and those
+approved by approvers. Priority 4
+0240 User Account Creation - New user accounts can be created. Priority 1
+0250 The system may contain any number of user accounts. Priority 1
+0260 Certain pieces of information are required to create new accounts. Priority 1
+The following information is required for any new user account:
+0270 Username Priority 1
+0280 Password Priority 1
+0290 Name Priority 1
+0300 Email Address Priority 1
+0310 Group Membership Priority 1
+0320 User Account Type Priority 1
+0330 User Account Modication The system allows users to modify their accounts once created. Pri-
+ority 1
+0340 The system requires that a user have logged in before modications can be made. Priority 1
+The following user account information is modiable by all user types:
+0350 Password Priority 1
+0360 Email Address Priority 1
+0370 Name Priority 1
+0380 User Account Deactivation The system allows user accounts to be deactivated. Priority 3
+0390 The system denies user who have been deactivated from accessing the system. Priority 3
+0400 If an account has any history associated with it, it can only be deactivated and not deleted.
+Priority 3
+0410 If an account has no history associated with it, it can be deleted from the system. Priority 3
+0420 A disable account can be undisabled Priority 3
+0430 It is possible to disable all accounts except for the System Administrator account. Priority 4
+0440 Username and Passwords
+0450 The system gives users the ability to reset their password. Priority 2
+0460 Individual passwords can be reset. Priority 2
+0470 The system only allows users to change their own passwords. Priority 2
+3.2.2 Marketing Campaigns
+0480 A campaign has the following components:
+0490 Name Priority 1
+0500 Pieces of content Priority 1
+0510 Schedule Priority 1
+0520 User/Group Permissions Priority 2
+7
+0530 A schedule is a mapping of times to publishing actions. It may contain any actions a publisher can
+perform, and these actions are performed at the associated time. Priority 1
+0540 A piece of content may take the following forms:
+0550 TextPriority 1
+0560 Image Priority 1
+0570 Audio Priority 3
+0580 Video Priority 3
+3.2.3 External Service Accounts
+0590 Mashbot will allow for the association of Mashbot accounts with external service accounts.
+0600 Mashbot will provide an interface for authenticating a user account to an external service account
+Priority 1
+0610 Mashbot will provide a standardized method of interacting with external service accounts Priority 1
+3.3 Security Requirements
+0620 The system encrypts data over a direct connection between the web client and the server. Priority 1
+0630 The system allows for the backup of the data system to local or remote non-volatile storage systems.
+Incremental backups should not create outages and full backups do not interfere with user interaction
+for more than 10 minutes. Priority 1
+0640 The system is congurable to e-mail warnings about multiple failed login attempts from the same
+user. These warnings are sent to the System Administrator. Other security risks of this type are the
+responsibility of the System Administrator. Priority 3
+0650 The system allows only valid users to log into the system. A valid user is one which has not been
+disabled or deleted and exists on the system. Priority 1
+0660 To log onto the system, a user provides their valid username and password. Priority 1
+0670 The system uses the congured authentication module. The authentication method is congurable by
+the System Administrator. Priority 1
+0680 The system allows the System Administrator to congure a timeout after which a user is automatically
+logged out of Mashbot. Priority 1
+4 User Interface
+The user interface will consist of a tabbed navigation bar that unies the sitewide navigation, as well as
+module specic navigation as needed. Tabs:
+Dashboard
+Create
+Schedule
+Explore
+8
+4.1 Dashboard
+The dashboard consists of graphs and charts to give the user a quick view on how their campaigns are
+performing. Metrics include:
+Clickthrough rate
+Page Views
+Number of Comments
+Service plugins can dene additional specialized metrics to track, as well, for instance \retweets" for Twitter.
+A panel is available to give more information on each metric as it is selected. See Fig 1
+4.1.1 Create
+This view allows users to create campaigns and ll them with content. This view is also used when users
+need to edit an existing campaign. See Fig 2
+Add content A user can add content via the add content button near the top of the view. This will
+prompt the user to select the content type, which is populated by the services the user currently has access
+to via credentials stored in the system. This will create a section in the main part of the view that allows
+the user to add individual elements of that content type, each individually scheduled. Each row line item
+will allow the user to schedule, edit, or delete that content type.
+4.1.2 Schedule
+Scheduling content Users can drag items from the left hand bucket of content to the calendar to schedule
+content. The content will receive a default golive time of 12am on the day the content is dragged to. If the
+user desires a dierent time, he may click the content in the schedule and assign the proper time. See Fig 3
+Calendar The calendar allows the user to manage when content goes live, and gives a visual representation
+of the actions taken on content. It is clear when content goes live and when (if) it is deleted. The user can
+page from month to month to schedule content to any day desired.
+4.1.3 Explore
+This view allows users to get a pulse on what information social media contains. This includes the ability
+to set up monitored searches for services that support keyword search via api. This also will aggregate data
+gathered from comments on content that has been published as part of a given campaign
+9
+Figure 1: The dashboard interface
+10
+Figure 2: The content creation interface
+11
+Figure 3: The scheduling interface
+12
+Figure 4: The Data Flow
+5 Preliminary Analysis
+Mashbot is a data driven web application. It aggregates data from various web services. This gure shows
+the ow of data through the web application. There is a core that handles all requests for various data
+needed by the application. Authentication information is retrieved from the database and used to request
+content from services.
+6 Use Cases
+1. A user should be able to register a new account
+2. A user should be able to log in
+3. A member should be able to log out
+4. A member should have a prole
+5. A member should be able to modify their prole
+6. A user's email should be veried when registering a new account.
+7. An admin should be able to modify accounts
+8. An admin should be able to suspend accounts
+9. An admin should be able to delete accounts
+10. A member should be able to monitor trending topics regarding their campaign
+11. A member should be able to monitor facebook groups related to campaigns
+12. A member should be able to view @replies to tweets related to their campaigns
+13. A member should be able to see responses to blog posts related to the campaign.
+14. An admin should be able to perform user account actions in bulk
+15. An admin should be able to see all campaigns
+16. An admin should be able to delete any campaign
+13
+17. An admin should be able to edit all campaigns
+18. Mashbot campaigns! campaigns should allow multiple users to collaborate on a campaign
+19. Mashbot campaigns! should support multiple users
+20. A member should be able to store authentication for supported services
+21. A member should be able to add additional services to an existing campaign
+22. A member should be able to delete individual campaign elements
+23. Members should have hierarchical permissions
+24. A campaign should have workow approval process
+25. A member should be able to "unpublish" a campaign
+26. A member should be able to delete a campaign
+27. A member should be able to schedule events in bulk
+28. A member should be able to schedule "live dates" for individual events.
+29. A member should be able to delete existing content from supported services
+30. A member should be able to see the content they have published in all supported services
+31. A member should be able to push to Facebook in a campaign
+32. A member should be able to post to a blog in a campaign
+33. A member should be able to post to Twitter in a campaign
+34. A member should be able to create a new campaign
+35. A member should get notied when activity occurs in a campaign they're working on
+14

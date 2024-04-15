@@ -1,0 +1,26 @@
+3.1.0	The system must be able to capture and manage files where appropriate.
+3.1.1	The system must allow for multiple file upload to be configured on a per-page basis.
+3.2.0	The system must be able to capture and organize voice clips that can be used where appropriate.
+3.2.1	The system must allow actors to organize their voice clips into a portfolio.
+3.2.2	The system must allow actors to download their voice clips in a flexible format.
+3.2.3	The system must store audio clips in a format conducive to speech.
+3.2.4	The system must allow actors to delete recorded clips.
+3.3.0	The system must be able to display web feeds, such as RSS 2.0  feeds, for all pages of the course management system where elements such as forum posts, assignment postings, announcements, wiki alterations and other blocks of information that an actor may view are added.
+3.3.1	Actors in the role of course administrators should have the ability to determine which of these components have feeds and to whom these fee ds should pertain.
+3.3.2	The system must allow web feeds to be turned on or off on a per -page basis.
+3.4.0	The system must be able to use search functionality as a way to navigate Moodle pages instead of using hierarchical links.
+3.4.1	An actor must be able to search through pages in a course.
+3.4.2	The system must display a search box on every page after an actor has logged in.
+3.5.1	A course administrator must be able to grade an assignment.
+3.5.2	The system should display grade information to the appropriate actor.
+3.5.3	The system should maintain a grade history.
+3.6.1	The system must provide a wiki where actors can collaboratively create networks of documents.
+3.6.2	The system must provide a blog engine.
+3.7.1	The system must provide both e -mail and SMS notifications for pages.
+4.1.1	As far as possible, the system should provide a simple, responsive interface.
+4.2.1	The system must be backed up on a configurable schedule.
+4.2.2	The system should be available 24 hours a day, 7 days a week.
+4.3.1	The system should support at least 1000  concurrent users.
+4.4.1	The system must be maintainable without substantial modification.
+4.6.1	Relevant, online documentation for users should be available on each page.
+4.6.2	System administrators  must have access to comprehensive, searchable documentation.

@@ -1,0 +1,17 @@
+2.2.1.1	The product shall plot the data points in a scientifically correct manner.
+2.2.1.2	The grid axis should  be labelled correctly according to the input from the data file.
+2.2.1.3	Data points should be coloured in accordance to the cluster number (contained in the data file)
+2.2.1.4	The product should be able to handle up to 2000 data points.
+2.2.1.5	A single click of the mouse over a data point should bring up the name of the data point.
+2.2.1.6	A double-click of the mouse over the data point should cause the application to display all the data point's details.
+2.2.1.7	The product should allow multiple points to clicked so that multiple names can be displayed.
+2.2.1.8	The product should allow the grid to be oriented by the user. Rotation, zoom and move functions should be employed.
+2.2.2.1	The data file should contain: - A name for the data point - 3 parameters from which the data point is to be plotted - A single parameter to designate the colour of the point - A description for the data point
+3.1.1	The points should be large enough to see and select
+3.1.2	The points should not be too big, so as to distort the overall pattern of the point spread.
+3.1.3	The axis should be clearly labelled and easily recognised after the grid has been oriented into a different position.
+3.1.4	The application should be coloured so that the screen shots can be printed out clearly (i.e., black on white background).
+3.1.5	The application should be intuitive and not require any specialist training.
+3.2.1	The program should start within 30 seconds. This depends on the number of data points that are to be plotted.
+3.2.2	The interaction with the data points should have a delay of no longer than 2 seconds.
+3.2.3	The response to a change in the orientation should be fast enough to avoid interrupting the user's flow of thought.

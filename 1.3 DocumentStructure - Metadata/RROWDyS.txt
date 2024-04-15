@@ -1,0 +1,165 @@
+D	Department of Transportation and Public Facilities RROWDyS (Right Right Of Way Delivery System) Project Development System Requirements Specification
+3	SPECIFIC REQUIREMENTS 
+3.1	External Interfaces 
+3.2	Functional Requirements 
+3.2.1	Plan Preparation 
+3.2.1.1	Initiate ROW Plans 
+3.2.1.2	Assign Staff 
+3.2.1.3	Project Initiation 
+3.2.1.4	Review Design Plans 
+3.2.1.5	Assign Title 
+3.2.1.6	Scope, Schedule, and Budget 
+3.2.1.7	Contractor Determination 
+3.2.1.8	Verification of Contractor Work 
+3.2.1.9	Research 
+3.2.1.10	Progress Reports 
+3.2.1.11	ROW Corridor 
+3.2.1.12	Base Map and Survey Report  
+3.2.1.13	Base Mapping 
+3.2.1.14	Preliminary Parcel Design  
+3.2.1.15	Parcel Design 
+3.2.1.16	Finalize ROW Plans  
+3.2.1.17	Check for Changes 
+3.2.1.18	ROW Engineering Estimate 
+3.2.1.19	Obtain Funding 
+3.2.1.20	Draw Parcel Plats 
+3.2.1.21	Condemnation  
+3.2.1.22	Monumentation 
+3.2.1.23	Certify Project 
+3.2.1.24	ROW Plan Finalization 
+3.2.2	Survey
+3.2.2.1	Request for Survey 
+3.2.2.2	Record of Survey 
+3.2.2.3	Notification to Property Owners  
+3.2.3	Title
+3.2.3.1	Request for Preliminary Research  
+3.2.3.2	Database Entry  
+3.2.3.3	Develop Owner's List 
+3.2.3.4	Detailed Research 
+3.2.3.5	Procurement of Title Contractor 
+3.2.3.6	Title Performs Research 
+3.2.3.7	Obtain Title Reports 
+3.2.3.8	Record Base Maps 
+3.2.4	Appraisal Process 
+3.2.4.1	Review ROW Engineering Plans 
+3.2.4.2	Request Updated Design Plans 
+3.2.4.3	Assign Appraisal Staff 
+3.2.4.4	Prepare Appraisal Plans 
+3.2.4.5	Value Estimate Determination 
+3.2.4.6	Determine Authority to Appraise 
+3.2.4.7	Request Parcel Information 
+3.2.4.8	Perform Value Estimate  
+3.2.4.9	Determine Resources available 
+3.2.4.10	Request Professional Service Agreement (PSA) 
+3.2.4.11	Perform Appraisal 
+3.2.4.12	Perform Specialty Report 
+3.2.4.13	Integrate Specialty Report 
+3.2.4.14	Review Specialty Report 
+3.2.4.15	Desk Review by HQ 
+3.2.4.16	Field Review by HQ 
+3.2.4.17	Corrections by HQ 
+3.2.4.18	Approval by HQ 
+3.2.4.19	Approve Appraisal for Negotiations 
+3.2.4.20	FAA Appraisal Processing 
+3.2.5	Acquisitions Process 
+3.2.5.1	Receive Funding 
+3.2.5.2	Assign Staff 
+3.2.5.3	Review Data 
+3.2.5.4	Check for Variance 
+3.2.5.5	Resolve Issues 
+3.2.5.6	Receive Appraisal Data 
+3.2.5.7	Get Parcel Data 
+3.2.5.8	Current Title Check 
+3.2.5.9	Retention Decision 
+3.2.5.10	Retention 
+3.2.5.11	Prepare Acquisition Package 
+3.2.5.12	Make First Offer 
+3.2.5.13	Determine Relocation Requirement 
+3.2.5.14	Draft Response 
+3.2.5.15	Approve Response 
+3.2.5.16	Negotiation 
+3.2.5.17	Approve Counter Offer 
+3.2.5.18	Approve Settlement 
+3.2.5.19	Condemnation 
+3.2.5.20	FAA Processing 
+3.2.5.21	Process Acceptance 
+3.2.5.22	Make Title Clearing Determination 
+3.2.5.23	Clear Title 
+3.2.5.24	Prorate Taxes 
+3.2.6	Relocations 
+3.2.6.1	On-site Inspection 
+3.2.6.2	Scope, Schedule, and Budget 
+3.2.6.3	Receive Authority 
+3.2.6.4	Research Property 
+3.2.6.5	Interview Occupants 
+3.2.6.6	Determine Qualifications 
+3.2.6.7	Determine Benefits 
+3.2.6.8	Benefit Approval 
+3.2.6.9	Make Offer 
+3.2.6.10	Financing 
+3.2.6.11	Move Inspection 
+3.2.6.12	DS & S Inspection 
+3.2.6.13	Property Close Out 
+3.2.7	Property Management Process 
+3.2.7.1	Prepare Property Management Plan 
+3.2.7.2	Scope, Schedule, and Budget 
+3.2.7.3	Approve Property Management Plan 
+3.2.7.4	Determine Rentals 
+3.2.7.5	Calculate Retention Value 
+3.2.7.6	Approve Retention Value 
+3.2.7.7	Notify Acquisition 
+3.2.7.8	Prepare Agreement 
+3.2.7.9	Approve Agreement 
+3.2.7.10	Agreement Follow-up  
+3.2.7.11	Final Inspection 
+3.2.7.12	Update Inventory 
+3.2.7.13	Forward Inventory 
+3.2.7.14	Rental Agreement 
+3.2.7.15	Collect Fees 
+3.2.7.16	Default Processing 
+3.2.7.17	Prepare Maintenance Agreement 
+3.2.7.18	Prepare For Construction 
+3.2.7.19	Notify Construction 
+3.2.8 	Pre-Audit Process 
+3.2.8.1	Receive Notice of Request 
+3.2.8.2	Receive and Review ROW Plans 
+3.2.8.3	Prepare Cost Estimate (Scope, Schedule, and Budget) 
+3.2.8.4	Approval of Cost Estimate 
+3.2.8.5	Database Monitoring/Entry 
+3.2.8.6	Project Development Authorization (PDA) 
+3.2.8.7	Notification 
+3.2.8.8	Contractor Award Notification 
+3.2.8.9	Obligations with Encumbrances 
+3.2.8.10	Funding AKSAS Sufficient 
+3.2.8.11	Notification of Encumbered Funds 
+3.2.8.12	Request for Payment 
+3.2.8.13	Code Funds 
+3.2.8.14	Review Budget/Request Additional Funds 
+3.2.8.15	Data Entry 
+3.2.8.16	Purchase Voucher 
+3.2.8.17	Invoicing 
+3.2.8.18	Return Warrant 
+3.2.8.19	Return Receipt 
+3.2.8.20	Notification of Revenue Payment 
+3.2.8.21	Code Revenue 
+3.2.8.22	Project Closeout list 
+3.2.8.23	Remaining ROW Activities 
+3.2.8.24	Financial Reconciliation 
+3.2.8.25	Summary Spreadsheet 
+3.2.8.26	Project Closeout  
+3.3	Performance Requirements 
+3.4	Logical Database Requirements 
+3.4.1	Conversion Requirements 
+3.4.1.1	Sisyphus Parcel Management System (PMS) 
+3.5	Design Constraints 
+3.5.1	Database 
+3.5.2	Application Architecture 
+3.5.3	Development Language 
+3.5.4	Web Server 
+3.5.5	LDAP User Authentication 
+3.6	Software System Attributes 
+3.6.1	Reliability Requirements 
+3.6.2	Availability Requirements 
+3.6.3	Security Requirements 
+3.6.3.1	Browser Interface Security 
+3.6.4	Maintainability Attributes

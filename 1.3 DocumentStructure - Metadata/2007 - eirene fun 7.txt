@@ -1,0 +1,103 @@
+D	EUROPEAN INTEGRATED RAILWAY RADIO ENHANCED NETWORK (EIRENE) - UIC Project EIRENE Functional Requirements Specification
+2	Network requirements
+2.2	Voice services
+2.3	Data services
+2.4	Call related services
+2.5	Railway specific services
+3	Network configuration
+3.1	Introduction
+3.2	Coverage and performance
+3.3	Network interconnection
+3.4	Call set-up time requirement
+3.5	Broadcast and group call areas
+4	Mobile equipment core specification
+4.1	Introduction
+4.3	Environmental and physical requirements
+5	Cab radio
+5.1	Introduction
+5.2	Functional requirements
+5.2.1	Summary
+5.2.2	Driver call related functions
+5.2.3	Other driver-related functions
+5.2.4	Other Cab radio functions
+5.3	Environmental and physical requirements
+5.4	Driver man-machine interface
+5.7	Driver safety device interface
+5.8	Train-borne recorder
+5.9	Control/command interfaces
+5.10	Other interfaces
+6	General purpose radio
+6.2	Functional requirements
+6.2.1	Summary
+6.2.2	Call related functions
+6.2.3	Other functions
+6.3	Environmental and physical requirements
+6.4	Man-machine interface
+6.4.1	General
+6.4.2	Controls
+6.4.3	Indications
+7	Operational radio
+7.1	Introduction
+7.2	Operational radio functions
+7.2.1	Summary
+7.2.2	Call related functions
+7.2.3	Other functions
+7.3	Environmental and physical requirements
+7.4	Operational radio man-machine interface
+8	Controller equipment specifications
+8.1	General
+8.2	Primary controller’s MMI
+8.3	Other controllers’ MMIs
+8.4	Controller terminal interface
+8.5	Environmental specification
+9	Numbering plan
+9.2	Numbering plan requirements
+9.2.1	General
+9.2.2	Use of train number
+9.2.3	Use of engine/coach number
+9.2.4	Use of shunting team, maintenance team or controller number
+9.2.5	Use of group calls
+9.2.6	Use of alphanumerical numbers
+9.3	Telephone numbers
+9.4	Group numbers
+9.5	Calls from external networks to the EIRENE network
+10	Subscriber management
+10.1	Introduction
+10.2	Allocation of priorities
+10.3	Call restriction
+10.4	Group membership
+10.5	Network selection list
+10.6	Access matrix
+11	Functional numbering and location dependent addressing
+11.2	Functional addressing
+11.2.1	Principles
+11.2.2	Format of functional numbers
+11.2.3	Presentation of functional identity
+11.3	Functional addressing registration procedures principles
+11.3.2	Registration
+11.3.3	Deregistration
+11.3.4	Re-registration
+11.4	Location dependent addressing
+12	Text messaging
+12.1	Introduction
+12.2	Definition of the service
+12.3	Performance
+12.4	Interface
+13	Railway emergency calls
+13.1	Introduction
+13.2	Management of Railway emergency calls
+13.2.1	Summary
+13.2.2	Stage 1: Warning
+13.2.3	Stage 2: Information
+13.2.4	Stage 3: Terminate Railway emergency call
+13.3	Receipt of Railway emergency calls
+13.4	Confirmation of Railway emergency calls
+14	Shunting mode
+14.1	Introduction
+14.2	Functional requirements
+14.3	Group membership
+14.4	Link assurance signal
+14.5	Constraints
+15	Direct mode
+15.1	Introduction
+15.2	Functional requirements

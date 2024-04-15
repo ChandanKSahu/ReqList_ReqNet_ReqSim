@@ -1,0 +1,89 @@
+D	UIC Project EUROPEAN INTEGRATED RAILWAY RADIO ENHANCED NETWORK (EIRENE)
+3	Network configuration
+3.1	Introduction
+3.2	Coverage
+3.3	Handover and cell selection
+3.4	Call setup time requirement
+3.5	Frequency band and channel arrangements
+3.6	DTMF tones and signals
+3.7	Termination of VGCS/VBS calls
+3.8	Muting and unmuting for VGCS calls
+4	Mobile equipment core specification
+4.1	Introduction
+4.2	Radio interface aspects
+4.3	Services and facilities
+4.4	Core MMI requirements
+4.5	Core environmental requirements
+5	Cab radio
+5.3	Driver call-related functions
+5.4	MMI functions
+5.5	Handling of calls
+5.6	Other Cab radio functions
+5.7	Environmental and physical
+5.8	Cab radio interfaces to on-train systems
+5.9	Train borne recorder
+5.10	ERTMS/ETCS interface
+5.11	Public Address interface
+5.12	UIC Intercom
+5.13	Driver’s Safety Device
+5.14	Other interfaces
+5.15	Train Interface Unit (TIU)
+6	General purpose radio
+6.2	System components
+6.3	General purpose radio functions
+6.4	Environmental and physical
+7	Operational radio
+7.2	System components
+7.3	Operational radio functions
+7.4	Shunting radio requirements
+7.5	Environmental and physical
+8	Controller equipment specifications
+8.1	General
+8.2	Termination of VGCS/VBS calls
+8.3	Muting and unmuting for VGCS calls
+9	Numbering plan
+9.1	General
+9.2	Numbering plan requirements
+9.3	Numbering plan limitations
+9.4	Types of numbers
+9.5	Use of National EIRENE Numbers
+9.6	Use of International EIRENE Numbers
+9.7	Use of MSISDN numbers
+9.8	Use of Short Dialling Codes
+9.9	Use of group addresses
+9.10	Access to external networks
+9.11	Calls from external networks to the GSM-R network
+10	Subscriber management
+10.3	Access classes
+10.4	Closed user groups
+10.5	Network selection
+10.6	Cell broadcast message identifiers
+10.7	Encryption and authentication
+11	Functional numbering and location dependent addressing
+11.1	Introduction
+11.2	Ground-train addressing
+11.3	Functional numbering
+11.4	Re-establishment of functional number correlation
+11.5	Presentation of functional identities
+11.6	Inter EIRENE network interfacing
+11.7	Location dependent addressing
+11.8	Calls from external networks to the EIRENE network
+12	Text messaging
+12.1	Introduction
+12.2	System requirements
+13	Railway emergency calls
+13.1	Introduction
+13.2	Provision of Railway emergency calls
+13.3	Initiation of Railway emergency calls
+13.4	Receipt of Railway emergency calls
+13.5	Confirmation of Railway emergency calls
+14	Shunting mode
+14.1	Introduction
+14.2	System requirements: Operational Radio
+14.3	System requirements: Cab radio
+14.4	System requirements: Operational radio and Cab radio
+14.6	Control of shunting group membership
+14.7	Link assurance signal
+15	Direct mode
+15.1	Introduction
+15.2	System requirements

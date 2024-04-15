@@ -1,0 +1,31 @@
+D	California Correctional Health Care Services (CCHCS) - Emergency Medical Response System (EMR) Health Level Seven (HL7)
+1	Security
+1.1	Entity Authentication
+1.2	Entity Authorization
+1.3	Entity Access Control
+1.4	Patient Access Management
+1.5	Non-Repudiation
+1.6	Secure Data Exchange
+1.7	Secure Data Routing
+1.8	Information Attestation
+1.9	Patient Privacy and Confidentiality
+2	Health Record Information and Management
+2.1	Data Retention, Availability and Destruction
+2.2	Auditable Records
+2.3	Synchronization
+2.4	Extraction of Health Record Information
+2.5	Store and Manage Health Record Information
+2.5.1	Manage Unstructured Health Record Information
+2.5.2	Manage Structured Health Record Information
+3	Registry and Directory Service
+4	Standard Terminologies and Terminology Services
+4.1	Standard Terminologies and Terminology Models
+4.2	Maintenance and Versioning of Standard Terminologies
+4.3	Terminology Mapping
+5	Standards-based Interoperability
+5.1	Interchange Standards
+5.2	Interchange Standards Versioning and Maintenance
+5.3	Standards-based Application Integration
+5.4	Interchange Agreements
+6	Business Rules Management
+7	Workflow Management

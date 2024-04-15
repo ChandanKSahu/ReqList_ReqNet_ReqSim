@@ -1,0 +1,46 @@
+3.1	System has a graphical user interface
+3.1.3.1	The system uses a graphical user interface to display data to the user
+3.1.3.2	The system can be used fully with a keyboard
+3.1.3.3	The system can be used fully with a mouse
+3.2	Player can choose multiple game types
+3.2.1	The system supports multiple games, and new games can be added by the end user. By default, the system will implement three games.
+3.2.3	The system supports multiple games, and can load additional games from an external source
+3.3	Player can choose from multiple opening positions
+3.3.3.1	The system has support for multiple opening positions that can be applied to all the games.
+3.4	Players can be both a Human or a Computer
+3.4.3.1	The system shall support two player turn-based gaming.
+3.5	There must be a default random artificial intelligence
+3.5.1	A random artificial intelligence plays a game by choosing at random one of the legal movements at any moment in the game.
+3.5.1.1	Having a  random artificial intelligence is must for the system.
+3.5.2	The system must always provide the artificial intelligence that can play using random moves.
+3.5.3.1	The system shall support two player turn-based gaming
+3.6	The user can change the nature of players during a game
+3.6.1	While playing, the user can change the nature of the players in the game, without the need of a restart. The game continues with the new selection of players. This feature has a medium priority.
+3.6.3.1	The system has an embedded AI that takes over from a player when asked to do so.
+3.7	New Artificial Intelligence can be loaded from a file
+3.7.1	A third person must be able to develop and add new AI to the system. The user will then be able to select from them as players while playing a game. This feature is of a low priority
+3.7.3.1	The system has files containing implementation of different artificial intelligences that the system can load.
+3.7.3.2	The system prompts the user about implementing the new AI's
+3.8	The games are defined separately from the software code. This feature is essential and has a high priority.
+3.8.1.1	All the games in the system are separately defined in an external source.
+3.8.1.2	The definition for a game has to be simple and understandable by a non-programmer. This can be achieved for example with an XML file or a text document.
+3.8.1.3	The file has to contain certain attributes, such as the game  type, the ending conditions and the starting point or points.
+3.8.1.4	The games can be loaded from a predefined directory or runtime with a load file dialog.
+3.8.3.1	The system supports defining new games  without modifying the source code.
+3.8.3.2	The system searches an external source for games on startup and loads them.
+3.9	The games end on a predefined condition
+3.9.3.1	All the games end on a pre-defined condition
+3.10.3.1	The system saves the game in a file.
+3.10.3.2	The system loads the game from a file.
+3.11.3.1	The system has an embedded help file that contains basic solutions and hints for problematic situations
+4.1.1	All the user interfaces will be designed following common guidelines in the usability document.
+4.1.2	The user interface uses one main window for the actual game playing and dialog windows for changing the general settings of the system.
+4.2.1	The system functions on a computer that has a screen for output and keyboard or mouse or both for input.
+4.3.1	The system requires a working Java-environment [2] and a graphical user interface supported by the Java Swing library [4].
+5.1.1	The system should be executed without problems in a machine that fulfills the requirements of the Java runtime environment [2 ].
+5.1.2	The basic artificial intelligence must operate fast enough. The next move should be calculated within 10 seconds.
+5.2.1	The system does not use or receive network connections and is used locally. This means that no network safety requirements exist.
+5.2.2	Overwriting an existing file on the file system has to be confirmed from the user to prevent accidental loss of data.
+5.3	No personal information is stored by the system so no specific security requirements need to be defined.
+5.4.1	The system is playable with the minimum setup defined earlier in Hardware Requirements.
+5.4.2	The system shall run well on both Linux and Windows and should be playable with the mouse or the keyboard or both.

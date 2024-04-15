@@ -1,0 +1,68 @@
+D	Certification Commission for Health Information Technology (CCHIT) Certified 2011 Ambulatory EHR Certification Criteria
+1.1	Identify and maintain a patient record
+1.2	Manage patient demographics
+2.1	Manage Patient Demographics
+2.2	Manage Patient Demographics
+2.3	Manage Practitioner/Patient Relationships
+2.4	Manage problem list
+1.3	Manage problem list
+2.4	Manage problem list
+1.4	Manage medication list
+2.6	Manage medication list
+2.5	Manage allergy and adverse reaction list
+1.5	Manage allergy and adverse reaction list
+1.6	Manage patient history
+1.7	Summarize health record
+1.8	Manage clinical documents and notes
+1.9	Capture external clinical documents
+2.14	Generate and record patient-specific instructions
+1.10	Generate and record patient-specific instructions
+2.17	Generate and record patient-specific instructions
+1.11	Order medication
+2.9	General Ordering Requirements
+2.7	Order medication
+1.12	Order diagnostic tests
+2.9	Orders and Referral Management
+2.10	Order Set Templates
+2.11	Manage Order Sets
+1.14	Manage results
+1.15	Manage consents and authorizations
+1.16	Manage patient advance directives
+1.17	Support for standard care plans, guidelines, protocols
+2.12	Support for drug interaction
+1.19	Support for drug interaction
+2.13	Support for drug interaction
+2.15	Manage Medication Administration
+2.16	Manage Immunization Administration
+1.21	Support for non-medication ordering (referrals, care management)
+1.22	Present alerts for disease management, preventive services and wellness
+1.23	Notifications and reminders for disease management, preventive services and wellness
+1.24	Clinical task assignment and routing
+1.25	Inter-provider communication
+1.26	Pharmacy communication
+1.27	Provider demographics
+1.28	Scheduling
+1.29	Report generation
+1.30	Health record output
+1.31	Encounter management
+1.33	Eligibility verification and determination of coverage
+1.34	Manage Practitioner/Patient relationships
+1.35	Clinical decision support system guidelines updates
+2.18	Clinical decision support system guidelines updates
+1.36	Enforcement of confidentiality
+1.37	Data retention, availability and destruction
+1.39	Extraction of health record information
+1.40	Concurrent use
+3.1.07	Laboratory
+3.1.09	Medications / ePrescribing
+3.1.10	Clinical Documentation
+4.1	Amendments
+4.4	Data Integrity Auditability
+4.8	Manage Clinical Documentation
+5.1	Access Control
+5.2	Audit
+5.3	Authentication
+5.4	Documentation
+5.5	Technical Services
+5.6	Technical Services
+5.8	Backup/Recovery

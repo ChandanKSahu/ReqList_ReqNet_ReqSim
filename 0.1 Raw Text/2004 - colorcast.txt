@@ -1,0 +1,510 @@
+
+  
+Software Requirements 
+Specification 
+for 
+CS179G / ABC Paint Project 
+Version 1.0 
+Prepared by Benjamin Arai and Conley Read 
+	
+Friday, February 13, 2004
+Software Requirements Specification for CS179g / ABC Paint Project Page ii 
+ Table of Contents 
+Table of Contents..........................................................................................................................ii 
+Revision History............................................................................................................................ii 
+1. Introduction..............................................................................................................................1 
+1.1 Purpose........................................................................................................................................1 
+1.2 Document Conventions................................................................................................................1 
+1.3 Intended Audience and Reading Suggestions..............................................................................1 
+1.4 Product Scope..............................................................................................................................2 
+1.5 References....................................................................................................................................2 
+2. Overall Description..................................................................................................................3 
+2.1 Product Perspective.....................................................................................................................3 
+2.2 Product Functions........................................................................................................................3 
+2.3 User Classes and Characteristics.................................................................................................3 
+2.4 Operating Environment................................................................................................................4 
+2.5 Design and Implementation Constraints......................................................................................4 
+2.6 User Documentation....................................................................................................................4 
+2.7 Assumptions and Dependencies..................................................................................................4 
+3. External Interface Requirements...........................................................................................6 
+3.1 User Interfaces.............................................................................................................................6 
+3.2 Hardware Interfaces.....................................................................................................................6 
+3.3 Software Interfaces......................................................................................................................6 
+3.4 Communications Interfaces.........................................................................................................7 
+4. System Features........................................................................................................................8 
+4.1 Graphical Color Chooser.............................................................................................................8 
+4.2 Color Translator...........................................................................................................................8 
+4.3 Closest Colors..............................................................................................................................8 
+4.4 Color Search Engine....................................................................................................................8 
+4.5 User Color Palette........................................................................................................................9 
+4.6 Administrative Interface..............................................................................................................9 
+4.7 Color Sample Matcher.................................................................................................................9 
+5. Other Nonfunctional Requirements.....................................................................................10 
+5.1 Performance Requirements........................................................................................................10 
+5.2 Safety Requirements..................................................................................................................10 
+5.3 Security Requirements...............................................................................................................10 
+5.4 Software Quality Attributes.......................................................................................................11 
+5.5 Business Rules...........................................................................................................................11 
+Appendix A: Glossary..................................................................................................................12 
+Appendix B: Analysis Models.....................................................................................................14 
+Appendix C: To Be Determined List..........................................................................................15 
+Approval Signatures: Approve Version.....................................................................................16 
+ 
+ 
+Revision History 
+Name Date Reason For Changes Version 
+    
+    
+ 
+ 
+Software Requirements Specification for CS179g / ABC Paint Project Page 1 
+ 1. Introduction 
+1.1 Purpose  
+In third quarter 2004, ABC Paint will migrate to a new paint numbering scheme. This migration 
+comes at a time that ABC Paint will be adding and discontinuing a number of paints and 
+collections. Although the remaining customers who utilize these soon-to-be-discontinued products 
+are encouraged to begin using other paints in our product line, the initial transition is not occurring 
+as rapidly or as easily as ABC Paint would like.  
+ 
+For ABC Paint customers to remain loyal and happy, we will create an easy to use system, 
+allowing conversion to the new paints and collections. The new system must be in place by the 
+second quarter of 2004, allowing customers the time to adjust to the new scheme before they will 
+not be able to order the discontinued products. The use of the application will be long-term, used 
+for the immediate transition and in the future when previous customers may return for more paint 
+with old-scheme numbers. 
+ 
+This single application will be a version 1.0 product with no previous revisions in use. This stand-
+alone product includes features to enable ABC Paint to easily and seamlessly include the 
+application in their current website. 
+1.2 Document Conventions 
+Two primary typographical conventions were followed in the generation of this specification paper. 
+First, all acronyms are fully defined in their first use and then identified. They are also redundantly 
+defined in the glossary, Appendix A. Any bold italicized item in the specification is also briefly 
+defined in the Appendix A glossary. 
+ 
+You may find it helpful to review the list of documents related to the project as referenced in the 
+references section, section 1.5, of this specification. You can also review the exhaustive list of 
+documents and interviews related to the ABC Paint Project at:  
+ 
+HTTP://cs179g.conleyread.net/exec/project/docs.htm 
+1.3 Intended Audience and Reading Suggestions 
+This document is intended for reading by developers and project managers. These readers will 
+find that this document is a product specification only, not a design document. It is recommended 
+that all readers complete the introduction section before continuing onto the other sections. The 
+introduction section that you are now reading provides a broad overview of the entire project and 
+serves as a guide to the other sections. Developers will find sections two, four most useful to them 
+while sections three and five will most likely be paid the most attention by project managers. 
+ 
+Sections two and four provide both overall descriptions of the project and the product itself. 
+Sections three and five present an outline of the product interface requirements and other non-
+functional or performance requirements, which the final product must meet. The project manager 
+will find these requirements most enlightening to peruse, as they will help guide decisions and 
+performance choices throughout the entire product development process. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 2 
+ 1.4 Product Scope 
+Ensure that you have read section 1.1 before continuing to this section. 
+ 
+This system must enable a smooth transition to the new paint numbers and scheme. The system 
+will be designed for use as long as the hardware and operating systems specified in this document 
+remain available. The product will be highly accessible to ABC Paint clients and distributors. To 
+enable this wide access to the application, the new system will be integrated into the current ABC 
+Paint website.  
+ 
+Each main feature of the application will be modularized. Each module will fit on a single 
+webpage. The application will provide a theme and styling mechanism to allow ABC Paint web 
+designers to integrate the application. 
+ 
+ABC Paint has made it very clear that they will make trade-offs to retain the benefits of the 
+application being available on the web, retaining high accessibility. The product will also include 
+documentation available to website users, paint distributors, and full setup documentation for the 
+ABC Paint information technology department so that they may manage the application them 
+selves. 
+1.5 References 
+ABC Paint Project Disaster Recovery Plan 
+HTTP://cs179g.conleyread.net/docs/disaster_recovery.pdf  
+ 
+ABC Paint Design Problem Statement 
+HTTP://cs179g.conleyread.net/docs/ProblemStatement.pdf  
+ 
+Karl E. Wiegers, Software Requirements, Second Edition 
+HTTP://www.microsoft.com/mspress/books/index/6496.asp  
+Software Requirements Specification for CS179g / ABC Paint Project Page 3 
+ 2. Overall Description 
+2.1 Product Perspective 
+As defined in sections 1.1 and 1.4, the application for ABC Paint will be a first-of-type solution to 
+ensure that their business and their customer’s paint selecting experience maintains continuity and 
+consistency throughout their transition to an entirely new product line. 
+ 
+The product is a stand-alone web application with a theme mechanism to allow easy integration 
+of the application into the ABC Paint website. The ColorKast solution is a server based 
+application with a web-based client for consumer and enterprise access. 
+ 
+In some respects, the application is the next generation of the old mechanical, hand-select, 
+palette board system located in paint stores everywhere. 
+ 
+Primarily, the application will include a old to new product-line “translator,” a graphical color 
+chooser, a color search-engine, a user color palette, possibly, an easy to use color matching 
+system, and an administrative interface. All of these will be defined and described later in this 
+same document. The actual user interface will be described in a separate user interface 
+specification whitepaper. 
+ 
+All references to performance or specification apply to the application client. Specifications and 
+performance estimates apply to the application server only if explicitly stated. 
+2.2 Product Functions 
+These functions are modularized sub-components of the client application. Each of the functions 
+has a single purpose and can accomplish its mission without the other components. Together, the 
+components function as a stand-alone application. 
+ 
+• Color Chooser (Pointing device driven color selection utility) 
+• Color number translator (old scheme -> new scheme) 
+• Find a particular number of colors near a given color 
+• Session persistent user color palette (colors picked, images uploaded) 
+• Color search engine (all collections, specific collection) 
+ 
+• Color matching (uploaded image, see section 4) 
+ 
+• Administrative interface (update, add, delete colors, add users) 
+2.3 User Classes and Characteristics 
+ColorKast has identified two user classes for access to the new application. The first user class is 
+default for all users and allows no administrative functionality whatsoever. The second class, the 
+administrative user, is composed of several subclasses for the secure management of access to 
+data and permissions throughout the organization. 
+ 
+Software Requirements Specification for CS179g / ABC Paint Project Page 4 
+ Default: This user has access to all functionality of the application except the administrative 
+function. The user data stored by this user is not password protected but is session 
+persistent. 
+ 
+Administrative: This user is composed of three subclasses. Level 3, the highest level 
+administrative user has all access, update, add, delete permissions, and can 
+create other administrative users at any level. Level 2, has update, add 
+permissions, and can create administrative users up to Level 2. Level 1, has 
+add permissions and can add administrative users at Level 1 only. 
+2.4 Operating Environment 
+The proposed ColorKast Solution will be implemented in a client/server model. All processing of 
+searches and storing of information will be local to the server.  
+ 
+Server: The server requires at least a 1GHz processor and 512 MB of system memory for 
+each group of 50 employee or consumer users. 
+ 
+Client: The web-based client is compatible with most operating systems and requires a 
+working installation of Internet Explorer 4.01, Netscape 6.0, or Mozilla 1.0 or later. 
+The client computer should match or exceed the system requirements specified for 
+the web browser intended for use with the client application. 
+2.5 Design and Implementation Constraints 
+A few issues limit our choices when implementing a suitable solution for the ABC Paint Project. 
+ 
+It is very important that the application be web-based. We understand that in any design choice, 
+precedence should be given to the implementation of a completely web-based client. 
+ 
+Wherever possible, the application should retain full usability with a keyboard input device only. 
+This allows an easy transition for employees who are primarily used to keyboard input in current 
+ABC Paint business applications. 
+ 
+Finally, a utility should be available to report errors. In all instances, the application should 
+attempt full recovery and report errors automatically to ColorKast without encroaching on the user 
+experience. 
+2.6 User Documentation 
+Documentation for users will be made available in the form of on-line help within the client 
+application itself. An online tutorial will also be made available. 
+2.7 Assumptions and Dependencies 
+ColorKast assumes that any use of the application will occur in an environment with full 
+compliance to this specification. 
+ 
+The application will be used on a client computer that matches or exceeds the requirements laid 
+out in section 2.4. The server component of the application will run on a computer system that 
+matches or exceeds the requirements laid out for the server in section 2.4. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 5 
+  
+We assume that the application will only be in use for duration of the wide-installation of the 
+software and hardware, as defined in this document, that is required for installation of the server 
+component and use of the client application. 
+ 
+We assume that finding the nearest colors in the red-green-blue color space will always give 
+acceptably similar colors to the given color for the purpose of color search. 
+ 
+The application will be dependant on third-party databases for storage of paint information and 
+implementation of the color search engine. The databases will give responses to Queries in sub-
+second time. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 6 
+ 3. External Interface Requirements 
+3.1 User Interfaces 
+The application will have a task-based screen interface for increased usability and workflow pace. 
+The interface will use accelerator keys heavily to allow limited “keyboard-only” application use. 
+ 
+A task-pane will be available in all workflow scenarios to allow easy access to on-line help and 
+next-step options. The navigation options in every screen will be similar to lower or eliminate the 
+application learning curve. 
+ 
+Input confirmation and error notification will be consistent throughout the application. 
+ 
+Themeing of the application allows consumers to use the application in the context of the ABC 
+Paint website, while ABC Paint employees may use the new system in the familiar environment of 
+a enterprise LAN. 
+ 
+A Pointing device will be required for color selection, for example, when matching colors or using 
+the graphical color chooser. 
+3.2 Hardware Interfaces 
+The application is dependent on existing hardware for a display device and for data-entry via a 
+keyboard and Pointing device. The new system does not support legacy monochrome displays. 
+The application provides minimal support for client computers without a Pointing device. 
+ 
+Display dependency: The client computer must have a display device capable of display of 16.7 
+million colors or greater. Colors displayed on the target client computer will 
+only be accurate when the device is properly calibrated. 
+ 
+Keyboard: The keyboard is used to enter and place Paint name and paint number 
+searches. The keyboard also provides “keyboard-only” application 
+functionality when a Pointing device is not available. 
+ 
+Pointing device: The Pointing device provides intuitive, fluid control of the application for 
+less sophisticated consumer users, and ease-of-use for the graphical color 
+chooser interface. 
+3.3 Software Interfaces 
+The ColorKast software will interface with other software for storage of paint information, paint 
+collection data, and the matching and translation of paint color values. 
+ 
+Interface 1: Connection to database for storage of information for paint number, name, 
+collection, and company. 
+ 
+Interface 2: Database connection for color search, matching, and paint number scheme 
+translation. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 7 
+  
+These connections are implemented on the server. The interface protocol is not specified, but will 
+meet the requirements of the intended interaction 
+3.4 Communications Interfaces 
+This product will require communication via the Hyper Text Transfer Protocol (HTTP) to complete 
+transaction based services with client computers. As identified in the Assumptions and 
+Dependencies section 2.7, this product requires a web browser to function. The Web Browser 
+must comply with standards for HTTP version 1.0 or 1.1. HTTP version 1.0 is a well founded and 
+highly supported protocol. Now considered legacy by some organizations, we believe this is a safe 
+foundation for the product. 
+ 
+The product also indirectly requires some network connection to the internet, over which it may 
+communicate in HTTP. This network connection assumes a physical or wireless connection from 
+the client computer to a consumer Internet Service Provider (ISP) or enterprise environment Local 
+Area Network (LAN). 
+Software Requirements Specification for CS179g / ABC Paint Project Page 8 
+ 4. System Features 
+Each feature has a single mission it can complete independently. This feature set is a modularized 
+representation of the stand-alone application. The modularization approach allows for a more 
+robust application with fault tolerance and easy module replacement for security and 
+upgradeability. 
+4.1 Graphical Color Chooser 
+The graphical color chooser will be a pointing device driven intuitive color selection tool. 
+4.1.1 Priority 
+ High priority. 
+4.1.2 Functional Requirements 
+ The color chooser requires the presence of a hardware pointing device. 
+4.2 Color Translator  
+The color translator is a special case of the color search engine. The color translator allows old 
+scheme to new scheme paint number translation, given a paint number, collection and a target 
+collection. 
+4.1.1 Priority 
+ High priority. 
+4.1.2 Functional Requirements 
+ The color translator requires the presence of the software color search module. 
+4.3 Closest Colors  
+The closest color tool is a special case of the color search engine. The closest color tool allows the 
+user to locate an arbitrary number of close colors to given a paint number, collection in a target 
+collection. 
+4.1.1 Priority  
+ High priority 
+4.1.2 Functional Requirements 
+ The closest colors tool requires the presence of the software color search module. 
+4.4 Color Search Engine  
+The color search engine tool will allow locating an arbitrary number of colors in any or all 
+collections based on initial input of a paint name, number, or color value in a industry standard 
+common format. 
+4.1.1 Priority 
+Software Requirements Specification for CS179g / ABC Paint Project Page 9 
+  High priority 
+4.1.2 Functional Requirements 
+ The color search engine requires the color space and paint information databases 
+to be present. These two databases store paint and collection information. 
+4.5 User Color Palette 
+This is a user experience tool. The user color palette tool will store a list of the user’s recent color 
+searches. If the color sample matcher is loaded, the user color palette tool will also store recent 
+uploaded images for matching. The user color matcher only associates this information with a 
+single client based on a persistent client session. This user data will be removed from the server 
+after 30 days. This information is private but not secure.  
+4.1.1 Priority 
+ High priority 
+4.1.2 Functional Requirements 
+ The User Color Palette requires the color search engine for color requests and the 
+color sample matcher to enable the storing of uploaded images for matching. 
+4.6 Administrative Interface  
+The administrative interface allows administrative users to update, add, and delete paint 
+information. Administrative users are also able to add users. Refer to section 2.3 for development 
+and implementation of user classes and access permissions. 
+4.1.1 Priority 
+ High priority 
+4.1.2 Functional Requirements 
+ The application administrative interface requires the color space and paint 
+information databases to be present. 
+4.7 Color Sample Matcher 
+The color sample matcher allows the client user to upload images in a common format for 
+matching. The color sample matcher will allow the user to graphically select with a hardware 
+pointing device the color or blended color group they wish to use in a color search. 
+4.1.1 Priority 
+ Low priority. This module is not a requirement of the project. It is included for 
+specification purposes only. 
+4.1.2 Functional Requirements 
+ The color sample matcher requires the color search engine module to function. The 
+color chooser requires the presence of a hardware pointing device. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 10 
+ 5. Other Nonfunctional Requirements 
+5.1 Performance Requirements 
+Color searches among the various collections defined by ABC Paint will be processed in sub-
+second time on the server. 
+ 
+Changes to Paint and collection information will occur in Real-time, although the actual 
+processing time will vary with respect to the amount of information to be updated, added, or 
+deleted on the server. 
+ 
+While performance requirements are transparently defined at the server, ColorKast makes no 
+guarantees as to the speed, completeness, or timeliness of service over the greater internet. 
+Performance of the application will vary on the speed and type of internet access to which the 
+client computer has access. 
+ 
+To verify the performance of the application, ColorKast will show the amount of time the server 
+takes to process a request. The time shown will not take into account the transit time of the 
+information over various computer networks. 
+5.2 Safety Requirements 
+Analysis of the proposed product requirements and features has not brought any safety concerns 
+to light. ColorKast recommends that a full legal review of the final product be undertaken prior to 
+any public use of the product or business-wide rollout. This will ensure that ABC Paint is allowed 
+full indemnification of liability. 
+ 
+Refer to current state and federal regulations regarding workplace use of keyboard-based 
+products. Experts have concluded that the continued, repetitive use of data-entry and Pointing 
+devices leads to injury in almost all circumstances. ColorKast takes no responsibility for injury or 
+resulting damages from the use of these devices. 
+5.3 Security Requirements 
+Due to the nature of the product, the data stored in repositories of the product is generally public 
+information consisting of paint names and color values not easily secured or obfuscated and 
+always recoverable by a sophisticated end user. No attempts will be made to secure this 
+information. 
+ 
+Information that the product will collect or store, which need access protections include user 
+specified color palettes and their store of access permissions. Access to this information must be 
+private. Most important, the store of access permissions to administrative features and access 
+permissions must be secure. 
+ 
+Implementations of Privacy and security must be on par with industry standards. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 11 
+ 5.4 Software Quality Attributes 
+The proposed modular specification of the application lends itself to adaptability, robustness, and 
+reusability. 
+ 
+Questions of application correctness come to light with respect to the accurate display of color 
+samples on the target client computer. In the enterprise environment, we can assume that the 
+kiosk or employee computer will have a correctly calibrated display device. In the consumer 
+market, we cannot make this same assumption. To allow calibration of the client display device is 
+a possible extension of this application, but is not currently included in the specification. 
+5.5 Business Rules 
+ColorKast recommends that ABC Paint apply their conventional business processes and security 
+regimen to granting administrative access to the new system. ColorKast believes that a typical 
+employee or consumer should be granted default privileges only. A limited number of 
+administrative users should be created to manage the paint data updates. Administrative users 
+can give other users administrative access up to their own access level only. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 12 
+ Appendix A: Glossary 
+Terms: 
+ 
+Application: The software product being developed by ColorKast for ABC Paint. 
+ 
+Client: A computer or program that can run applications or request 
+application-based services from a server. 
+ 
+Color collection: A group of colors made by the same company, designed by a 
+specific designer, or provided in a separate group from other paints. 
+For example, the Ralph Lauren Collection. 
+ 
+Color palette: A card, list, or other utility for displaying available or selected colors. 
+ 
+Color value: Logical color numbers used to represent physical colors normally 
+represented as RGB triplets. 
+ 
+Data-entry device: Hardware, a keyboard or mouse used to interact with an 
+application. 
+ 
+Paint name: A distinctive title given a paint. Not a paint’s product number. 
+ 
+Pointing device: An input device, such as a mouse, joystick, or trackball, with which 
+one can move or manipulate a cursor or pointer to interact with an 
+application. 
+ 
+Privacy: Limited security through indirect verification of identity. For example, 
+in the ColorKast application, persistent user data is linked to a 
+specific client session on a client computer, not a single individual. 
+No security is implemented. 
+ 
+Query, Queries: A client’s request for information, generally as a formal request to a 
+database or search engine. 
+ 
+Real-time: Not what you might think. This relates to computer systems that 
+update information at the same rate as they receive data. For 
+example, if the time required to update information on the server is 
+five minutes, then a Real-time update will take five minutes. 
+ 
+Security: Similar to Privacy, but much more secure. A individual is linked 
+directly to their persistent user data using a username and 
+associated pass phrase. This is required for all administrative level 
+access. 
+ 
+Server: A computer that processes requests for data and Queries that are 
+elements of the application. 
+ 
+Server side: Processing for the client or server that occurs only on the server. 
+ 
+ 
+Software Requirements Specification for CS179g / ABC Paint Project Page 13 
+ Acronyms: 
+ 
+HTTP:  Hyper Text Transfer Protocol. 
+ 
+ISP:  Internet Service Provider.  
+ 
+LAN:  Local Area Network. 
+ 
+RGB:  Red Green Blue. 
+ 
+TBD:  To Be Determined. 
+ 
+Software Requirements Specification for CS179g / ABC Paint Project Page 14 
+ 
+Appendix B: Analysis Models 
+The project requirements elicitation interview conducted by 
+ColorKast helped to define the proposed architecture of the 
+product. 
+ 
+The proposed system breaks the problem into two distinct parts, 
+both separated by a connection to the internet. 
+ 
+In this proposed scenario, the client computers access the 
+product application over the internet on a server, which hosts the 
+application. The application stores all related paint, client data 
+and authorization information in a local data cloud. 
+ 
+Software Requirements Specification for CS179g / ABC Paint Project Page 15 
+ Appendix C: To Be Determined List 
+This To Be Determined (TBD) list serves to collect all currently outstanding decisions, choices, and 
+unresolved requirements, including questions the development team may need to ask of the ABC 
+Project Liaison. 
+ 
+Presently there are no remaining TBDs. All TBDs have been tracked to their closure. 
+Software Requirements Specification for CS179g / ABC Paint Project Page 16 
+ Approval Signatures: Approve Version 
+ 
+I hereby approve the attached Software Requirements Specification (SRS). The SRS satisfies all 
+design requirements. I acknowledge that my approval of the attached SRS is binding and that I 
+may no longer add or change any of the design requirements without the agreement of ColorKast. 
+ 
+ 
+ 
+Sign         Date     
+ 
+Sign         Date     
+  

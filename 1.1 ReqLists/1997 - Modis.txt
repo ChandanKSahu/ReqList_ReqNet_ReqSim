@@ -1,0 +1,29 @@
+3.2.1	The MODIS SDP S/W shall produce the standard data products shown in Table B-1.
+3.2.2	Each MODIS standard data product shall be produced within the data volume and processing load allocation shown in Table B-1.
+3.2.3	Each software developer shall provide an HDF file description for the standard MODIS data product(s) produced by his/her software describing the structure and format of the HDF data objects in the files.
+3.3.1	Each CSCI in the MODIS SDP S/W shall run in the ECS production environment.
+3.3.2	Each CSCI within the MODIS SDP S/W system shall employ the Earth Science Data and Information System (ESDIS)-supplied SDPTK mandatory functions to access the DAAC production environment and services.
+3.3.3	The numbering scheme for the logical numbers used by the CSCI to obtain data from the SDPTK shall follow the convention defined in the SCF Software Delivery Guide, and shall not conflict with the range of logical numbers reserved for use by the Toolkit routines (10,000 - 10,999).
+3.3.4	Each CSCI shall be coded according to the standards specified in the MODIS Software Development Standards and Guidelines, SDST-022 .
+4.1.1	The definition of the level of a given product shall adhere to Table 4-1, MODIS Data Level Definitions.
+4.1.2	The MODIS standard products defined in Table B-1 shall be stored in HDF file structures appropriate for the data product level and type.
+4.1.3	Each HDF file description for a product shall be consistent with the format and content of the corresponding MODIS Standard Product.
+4.2.1	Each MODIS Standard Product shall contain ECS core metadata with the content and format specified in DID 311.
+4.2.2	All searchable product-specific metadata in MODIS standard products shall be formatted as specified in DID 311.
+4.2.3	Each MODIS standard product shall contain the MODIS product file name for all input product files as ECS archive metadata.
+4.3.1.1	The allowed grid resolutions for Climate Modeling Grid (CMG) products shall use an equal angle grid at 1.0 degree (111 km), 0.5 degree (57 km), and/or 0.25 degree (28.5 km) resolution.
+4.3.1.2	The spatial starting points for all CMG grids shall be defined such that vertically (latitudinal) the bottom of the first row of cells in the Northern hemisphere will touch the equator and horizontally (meridional) the left edge of the first cell on the left at the equator will be at 180 degrees West longitude.
+5.1.1	The numbering scheme for the Status Message Facility (SMF) seed numbering assignments used by the software processes to log error messages using the SDPTK shall follow the convention defined in the SCF Software Delivery Guide within the range of values assigned by ECS to MODIS (35,000 - 39,999).
+5.1.2	Each software developer shall provide the information required to define an Earth Science Data Type  (ESDT) for each non-temporary file required by his/her software.
+5.1.3	Each software process shall close all product output files prior to termination.
+5.1.4	Each software process shall use the SDPTK function to designate files which are required by the SCF for diagnostic purposes.
+5.2.1	Each software process shall trap and properly process all exceptions that may produce an abnormal termination and report all such events using the SDPTK error message functions.
+5.2.2	Upon detection of a non-recoverable error condition each software process shall report the fatal error condition using the SDPTK error message functions, and return a defined exit code.
+5.2.3	Each software process shall be able to process input data sets with the following nominal attributes: Time transitions, including Greenwich Meridian crossing, leap year, beginning of the year, beginning of the millennium, and/or start of data collection not on a granule boundary; Terminator crossing , International Date Line crossing, and/or Earth pole within a granule; Day, Night, or mixed  mode data.
+5.2.4	Each software process shall handle input data sets with the following error attributes: Fill data, including filled pixels, filled bands, and/or filled scans; Redundant data, consisting of repeated packets at Level 0 or duplicate input files at all product levels; Corrupted data as indicated by Quality Assurance (QA) flags also located within the file; Missing input MODIS product files, ancillary files, and look-up tables; Wrong format input files; Noisy or dead detectors, as indicated by QA flags located within the Level 1B file.
+5.3.1	Each software process shall perform quality checks on the input and output data and report on the degree to which the product conforms to instrument specification or science data accuracy specifications.
+6.1.1	The SDST shall integrate all software processes available to the SDST software integration team into a set of PGEs that execute all processes in the MODIS TLCF.
+6.1.2	The SDST shall integrate subsets of these processes into sets of PGEs that execute in the GSFC DAAC, EDC DAAC, and the NSIDC DAAC as specified in Table B-1.
+6.1.3	Each PGE shall return exit codes as defined by the developer according to the ECS standards.
+6.1.4	A PGE shall not set or redefine environmental variables.
+6.1.5	Each PGE shall be provided with one or more sets of production rules, which specify the inputs, outputs, and activation conditions for the PGE.

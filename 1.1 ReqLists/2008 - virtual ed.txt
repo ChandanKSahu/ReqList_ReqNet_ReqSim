@@ -1,0 +1,104 @@
+3.1.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.1.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.1.3.3	Users must have pop-up windows enabled on their systems
+3.1.3.4	Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+3.1.3.5	Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.2.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.2.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.2.3.3	Users must have pop-up windows enabled on their systems
+3.2.3.4	Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+3.2.3.5	Users must be connected on a high speed internet (DSL, Cable)
+3.2.3.6	Users must have their computers equipped with microphone and web camera.
+3.3.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.3.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.3.3.3	Users must have pop-up windows enabled on their systems
+3.3.3.4	Users must have web cam and microphone if they want to be able to create an introducing video of themselves on their profile page
+3.3.3.5.1	Users need Windows XP, Vista, or Mac OS
+3.3.3.5.3	Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+3.3.3.5.4	Users must enable pop-up windows.
+3.5.3.1	FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+3.5.3.2	For the first release, each student needs a quota space of 2GB.  Files causing the quota to be exceeded should not be allowed to upload.
+3.5.3.3	The students overall login should allow them access to the appropriate folder, and their account should only have Read, Write, and Delete privileges
+3.5.3.4	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+3.5.3.5.3	Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+3.5.3.5.4	Users must enable pop-up windows.
+3.6.3.1	FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+3.6.3.2	For the first release, each class needs a private folder with Write permissions only for student logins.
+3.6.3.3	The professor’s username should allow them access to the class exam folder and have Read, Write, and Delete privileges.
+3.6.3.4	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+3.6.3.5	Students need Excel installed and/or a PDF reader.  Professors need Excel and a PDF creator.
+3.6.3.6.2	Users need Windows XP, Vista, or Mac OSX
+3.6.3.6.3	Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+3.6.3.6.4	Users must enable pop-up windows.
+3.6.3.6.5	Users need Microsoft Office or the related Mac program set.
+3.7.3.1	FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+3.7.3.1.1	For the first release, each class needs a private folder with Write permissions only for student logins.
+3.7.3.1.2	The professor’s username should allow them access to the class exam folder and have Read, Write, and Delete privileges.
+3.7.3.1.3	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+3.7.3.1.4	Students need Excel installed and/or a PDF reader.  Professors need Excel and a PDF creator.
+3.7.3.2.2	Users need Windows XP, Vista, or Mac OSX
+3.7.3.2.3	Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+3.7.3.2.4	Users must enable pop-up windows.
+3.7.3.2.5	Users need Microsoft Office or the related Mac program set.
+3.8.3.1	Users are limited to Windows XP, Vista or Mac- OS.
+3.8.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers.
+3.8.3.3	Users must have pop-up windows enabled on their systems.
+3.9.3.1	Users are limited to Windows XP, Vista or Mac- OS.
+3.9.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers.
+3.9.3.3	Users must have pop-up windows enabled on their systems.
+3.10.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.10.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.10.3.3	Users must have pop-up windows enabled on their systems
+3.10.3.4	Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+3.10.3.5	Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.11.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.11.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.11.3.3	Users must have pop-up windows enabled on their systems
+3.11.3.4	Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+3.11.3.5	Users must have Real Player installed on their systems
+3.12.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.11.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.11.3.3	Users must have pop-up windows enabled on their systems
+3.11.3.4	Users must enable java scripts on their systems to be able to install Whiteboard-Edu software
+3.11.3.5	Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.11.3.6	Users must accept the privacy statement prior to using the application sharing
+3.12.3.1	Users are limited to Windows XP, Vista or Mac- OS
+3.12.3.2	Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+3.12.3.3	Users must have pop-up windows enabled on their systems
+3.12.3.4	Users must enable java scripts on their systems to be able to install Whiteboard-Edu software
+3.12.3.5	Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.12.3.6	Users must accept the privacy statement prior to using the application sharing
+4.2.1	It is recommended that a high resolution LCD or CRT monitor be used for best results.
+4.2.2	All hardware interfaces will be provided by the operating system, the system will require a keyboard and a mouse. In addition a properly configured sound card and a voice input device will be needed to utilize the conferencing feature.
+4.2.3	The conferencing feature requires a high resolution video input device.  The device needs to be configured in accordance to manufacturer recommended settings and should be in operation before enabling the conferencing feature.
+4.3.1	The Virtual-ED software has a seamless integration with the local operating/hardware system. Once the user logs on to the Virtual-ED system (screen.1), the interface will seamlessly manage the local input/output/operating system, devices as needed
+4.3.2	When using “Test administering” feature (applicable to Administrators only), XL and PDF must be installed in the native machine to view the downloadable reports. By default the reports will be saved to the “C: Program files/Virtual-ED/Bin/My reports folder”, (Requires XL-2002 or higher and Adobe Acrobat Reader 8 or higher)
+4.4.1	The system requires the use of IE or Fire fox, Safari as the native web browser. It is recommended that current system performs optimally with the suggested browsers.
+4.4.2	The users must have pop-up windows enabled on their systems and must enable java scripts on their systems to be able to install Instant-Edu messaging software.
+4.4.3	SSH client, FTP client, VPN client are used for connection between two computing endpoints.
+4.4.5	Data Transfer Rates:  Recommended 1.5 MBPS Download speed (for any download activities) and upload speed of minimum 128 Kbps.
+4.4.6	Users must have antivirus software installed so they can scan the incoming files from other users of the system, any commercially available Antivirus is can be used scanning files.
+5.1.1	The web conferencing feature of the system requires the workstation utilized have at least the following minimum requirements:  o	A minimum of 500 MHz o	256 MB of available memory o	Mac-compatible Webcam and headset (preferred) or separate webcam, microphone, and speakers o	Broadband internet access (cable, DSL, etc.)
+5.1.2	The system requires the use of Internet Explorer, Safari, or Firefox as the native web browser. It is recommended the current system performs optimally with the suggested two browsers. The use of other than the recommended browsers may cause performance issues that have not been addressed by the software vendor.
+5.1.3	The reporting functionality utilizes the Microsoft Excel (.XLS) and Adobe Portable Document Format (.PDF) for report outputs. The following recommended software must be installed in the local machine to fully utilize the reporting functionality. o	Microsoft Excel Viewer or Microsoft Excel o	A PDF Reader such as Adobe Reader
+5.1.4	System must be accessible on and off campus via broadband internet connection and using required ID/Password combination.
+5.1.5	System may require users to download program updates to become compatible and compliant with system.
+5.2.1	All users are responsible for securing a backup of any uploaded data/content to the system in the event of an outage.
+5.2.2	The user is responsible for content uploaded. NJIT policy prohibits the use NJIT facilities/assets for personal use.
+5.2.3	Users may not use the system to upload or post data which is discriminatory in regards to race, color, creed, religion, sex, age, handicap, marital status, or national origin.  Users may not upload or post data which is inflammatory or derogatory.
+5.2.4	In the event, inflammatory/derogatory content has been identified, the content will be immediately removed and the appropriate authorities with be notified resulting in possible disciplinary action.
+5.3.1	User must comply with all local, state, and federal laws when using available resources.  Any infringements or violations including but not limited to:  unauthorized use, harassment, exploitation of any gaps in the portal, inflammatory/derogatory content, or defacing the system will result in the appropriate authorities being notified.
+5.3.2	The user is responsible for maintaining the user account. Action must be taken by the user to prevent the user account from being compromised.
+5.3.3	The user ID and the password should not be shared with anyone (students/staff/or anyone else).
+5.3.4	User passwords should be between 8 and 12 characters including letters and numbers but excluding spaces.
+5.3.5	The user should periodically change the password; currently the user policy requires a mandatory password change every three months.
+5.3.6	The information within the system is regarded private, however in the event of an investigation by a legal authority, including by not limited to a subpoena or audit, the information will be released to the proper authorities for the purpose intended.
+5.3.7	All archived chats, e-mail, file share, and IM Messages are governed by the NJIT E-mail use policy.  The user is encouraged to view the content at the NJIT homepage for detailed use of the policy and restrictions and limitations of the policy.
+5.3.8	In the event your account has been compromised, notify the NJIT help desk immediately. Refrain from using the infected account to communicate with anyone else.
+5.3.9	The systems should adhere to the privacy policy set forth by NJIT and its administration and also state and federal guidelines.
+5.4.1	The system has an estimated 99% up time, though in an event of an outage data loss can occur.
+5.4.2	The Web-Conferencing features’ performance depends on the availability of the bandwidth. The minimum of a broadband connection is recommended to fully utilize Web-Conferencing feature.
+5.4.3	The content is the responsibility of the users of the system; NJIT is neither responsible nor liable for the accuracy or the correctness of the content.
+5.4.4	The portal will be periodically unavailable due to necessary maintenance upgrades. In the event of scheduled maintenance, the students/staff will be notified at least 24 hours in-advance.
+6.1	The system must be completed within the timeframe allotted for development.
+6.2	Appropriate funding must be acquired to make required upgrades to existing systems, buy additional hardware and software, and acquire skilled personnel to develop project.

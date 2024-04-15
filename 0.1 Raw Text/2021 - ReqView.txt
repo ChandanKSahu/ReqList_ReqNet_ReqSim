@@ -1,0 +1,428 @@
+
+ 
+  
+ReqView Software 
+Requirements Specification  
+Example  
+ 
+ 
+ 
+ 
+ 
+Project: DEMO  
+Document: SRS 
+Author: Libor Bus,  Eccam  
+Published on: 2021 -09-03
+ReqView Software Requirements Specification Example  
+ 
+2 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+  
+ 
+ 
+ 
+ 
+ 
+   
+ReqView  
+Requirements Management Tool for Software and Systems Development  
+ 
+This document is an example of SRS exported from ReqView. Download ReqView  for 
+free and browse the complete example project . You will see how you can easily manage 
+end-to-end requirements traceability from user stories to SRS, tests, and architecture.  
+ 
+Then, reuse templates based on ISO/IEC/IEEE 29148 standar d and start capturing 
+requirements for your product within few minutes . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Download ReqView
+ReqView Software Requirements Specification Example  
+ 
+3 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+  
+Table of Contents  
+1. Introduction  ................................ ................................ ................................ .............................. 4 
+1.1 Purpose  ................................ ................................ ................................ ................................ .........  4 
+1.2 Scope  ................................ ................................ ................................ ................................ ............  4 
+1.3 Product perspective  ................................ ................................ ................................ ......................  4 
+1.4 Product functions ................................ ................................ ................................ ..........................  5 
+1.5 User characteristics  ................................ ................................ ................................ ......................  5 
+1.6 Limitations  ................................ ................................ ................................ ................................ ... 5 
+1.7 Assumptions and dependencies  ................................ ................................ ................................ .... 5 
+1.8 Definitions  ................................ ................................ ................................ ................................ .... 5 
+1.9 Acronyms and abbreviations  ................................ ................................ ................................ ........  5 
+2. Requirements ................................ ................................ ................................ ............................ 6 
+2.1 External interfaces  ................................ ................................ ................................ ........................  6 
+2.2 Functions  ................................ ................................ ................................ ................................ ...... 6 
+2.3 Usability requirements  ................................ ................................ ................................ ...............  12 
+2.4 Performance requirements  ................................ ................................ ................................ ..........  12 
+2.5 Logical database requirements  ................................ ................................ ................................ ... 12 
+2.6 Design constraints  ................................ ................................ ................................ ......................  12 
+2.7 Standards compliance  ................................ ................................ ................................ .................  12 
+2.8 Software system attributes  ................................ ................................ ................................ .........  12 
+3. Verification  ................................ ................................ ................................ ............................. 13 
+4. Supporting information  ................................ ................................ ................................ ......... 13 
+5. References  ................................ ................................ ................................ ............................... 13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Revision History  
+ 
+Name  Date  Reason For Changes  Version  
+Libor Buš  June 10, 2016  Export of Demo Software Requirements 
+Specification from ReqView 2.1.0  1 
+Libor Buš  June 12, 2019  Export of Demo Software Requirements 
+Specification from ReqView 2.6.2  2 
+Tomas Novacek  June 23, 2020  Update of Scope section  3 
+ 
+ 
+  
+ReqView Software Requirements Specification Example  
+ 
+4 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ 1. Introduction  
+1.1 Purpose  
+The main purpose of this document is to provide a working example of a Software Requirements 
+Specification  (SRS) based on ISO/IEC/IEEE 29148:2018 standard.  
+Note:  This is an example document, which is not complete.  
+1.2 Scope  
+This document specifies requirements for a simple application for requirements management of 
+software and system products . 
+The application allows users to:  
+• Capture requirements specifications  
+• Manage requirements using custom attributes  
+• Set up requirements traceability  
+• Browse the requirements traceability matrix  
+• Comment and review  requirements  
+• Filter  and search requirements  
+• Import  requirements from MS Word  or Excel  
+• Export requirements to DOCX , XLSX ,  PDF, HTML , or CSV  
+• Analyze requirements coverage and impact of changes  
+• Print requirements specifications  
+The application stores documents as human readable files with open file format.  
+The application runs offline without connection to any server.  
+Note:  The application functionality corresponds to ReqView  v1.0 released in 2015. Check all 
+advanced requirements management features it offers now.  
+1.3 Product perspective  
+1.3.1 System interfaces  
+The application runs in the latest version of Chrome or Firefox browser on Windows, Linux and 
+Mac.  
+1.3.2 User interfaces  
+The applicat ion GUI provides menus, toolbars, buttons, panes, containers, grids allowing for 
+easy control by a keyboard and a mouse.  
+ReqView Software Requirements Specification Example  
+ 
+5 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ 1.3.3 Hardware interfaces  
+1.3.4 Software interfaces  
+The application allows import a structured MS Word document via HTML data format.  
+The application allows populating a MS Word document with project data via HTML data 
+format.  
+The application allows import / export a list of requirements from / to MS Excel sheet via CSV 
+data format.  
+The application stores project data in JSON format to enabl e easy integration with 3rd party 
+applications.  
+1.3.5 Communications interfaces  
+1.3.6 Memory constraints  
+1.3.7 Operations  
+1.3.8 Site adaptation requirements  
+1.3.9 Interfaces with services  
+1.4 Product functions  
+Product functions are summarized in Section 2. User Stories of NEEDS  document.  
+1.5 User characteristics  
+1.6 Limitations  
+1.7 Assumptions and dependencies  
+1.8 Definitions  
+Custom Attribute:  Additional requirement property capturing additional requirements 
+properties such as requirements source, status, priority, verification method, fit criterion, ...,  
+Document:  A structured requirements specification capturing textual requirements for a given 
+product or service.  
+Link:  A directed association between related requirements allowing to analyze requirements 
+coverage, gaps and impact of changes.  
+Link Type : Pro perty of traceability links allowing to analyze links with different semantic 
+independently, e.g., satisfaction and verification links.  
+1.9 Acronyms and abbreviations  
+CSV:  Comma Separated Values  
+DNF:  Disjunctive Normal Form  
+ReqView Software Requirements Specification Example  
+ 
+6 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ ID: Identifier  
+GUI:  Graphical User I nterface  
+HTML:  Hypertext Markup Language  
+SRS:  Software Requirements Specification  
+ 
+2. Requirements  
+2.1 External interfaces  
+2.2 Functions  
+2.2.1 File Operations  
+2.2.1.1  Create Document  
+[DEMO -SRS-53] The application shall allow users to create a new empty document.  
+[DEMO -SRS-54] If the current document contains unsaved changes then the application shall 
+allow users to save the changes before closing the document.  
+2.2.1.2  Open File  
+[DEMO -SRS-56] The applicatio n shall allow users to open a document from a chosen file.  
+2.2.1.3  Save Local File  
+[DEMO -SRS-59] The application shall allow users to save the opened document into a file.  
+2.2.1.4  Document Template  
+[DEMO -SRS-61] The application shall allow users to create a document templ ate file from the 
+opened document.  
+[DEMO -SRS-62] Document templates shall store structure of document sections and definition 
+and values of requirement attributes.  
+[DEMO -SRS-63] The application shall allow users to create a new document from a chosen 
+docum ent template file preserving the structure of document sections and the definition and 
+values of requirement attributes.  
+2.2.1.5  Import  
+[DEMO -SRS-72] The application shall allow users to import a MS Word document preserving 
+structure of document sections and parag raphs, rich text description of requirements and images.  
+ReqView Software Requirements Specification Example  
+ 
+7 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ [DEMO -SRS-73] The application shall allow users to import a MS Excel table of requirements 
+preserving section headings, levels, unformatted text description of requirements and values of 
+custom attri butes.  
+2.2.1.6  Export  
+[DEMO -SRS-76] The application shall allow users to export the displayed document view to 
+HTML.  
+[DEMO -SRS-77] The application shall allow users to export requirements to CSV.  
+2.2.2 Document View  
+2.2.2.1  Table of Contents  
+[DEMO -SRS-80] The application shall display the table of contents containing section headings 
+organized according to their document tree hierarchy.  
+[DEMO -SRS-81] When user clicks on a document section in the table of contents then the 
+application shall focus the section in the requirements t able.  
+2.2.2.2  Requirements Table  
+[DEMO -SRS-83] The application shall display the document in a requirements table containing 
+the following columns: ID, Description , Discussion , Links  and a column for each custom 
+requirement attribute.  
+[DEMO -SRS-84] The ID column of the requirements table shall display unique requirement 
+identifiers.  
+[DEMO -SRS-85] The Description  column of the requirements table shall display the section 
+numbers, headings, requirement text descriptions and attachments.  
+[DEMO -SRS-86] The Discussion  column of the requirements table shall display requirement 
+comments with information about comment au thor, date and text ordered by date and time.  
+[DEMO -SRS-87] The Links  column of the requirements table shall display requirement 
+traceability links grouped by link types.  
+[DEMO -SRS-88] The application shall allow users to change width of each requirements table 
+column.  
+[DEMO -SRS-190] The application shall allow users to reorder requirements table columns.  
+[DEMO -SRS-89] The application shall allow users to show and hide requirements table 
+columns except the ID column.  
+ReqView Software Requirements Specification Example  
+ 
+8 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ [DEMO -SRS-90] The application shall allo w users to sort all requirements table columns except 
+the Discussion  and Links  columns by ascending or descending order.  
+2.2.2.3  Detailed Information  
+[DEMO -SRS-92] The application shall allow users to show and hide a pane displaying detailed 
+information about cust om attributes, discussion, traceability links or history of changes of the 
+selected requirement.  
+[DEMO -SRS-93] While the custom attributes pane is shown, the application shall display values 
+of all assigned custom attributes for the selected requirement.  
+[DEMO -SRS-94] While the discussion pane is shown, the application shall display all 
+comments for the selected requirement ordered by date and time.  
+[DEMO -SRS-96] While the discussion pane is shown, the application shall allow users to 
+expand or collapse a s elected comment or all displayed comments.  
+[DEMO -SRS-97] While a displayed discussion comment is expanded, then the application shall 
+display the date, time, author and description of the comment.  
+[DEMO -SRS-98] While a displayed discussion comment is colla psed, then the application shall 
+display the date, time and author of the comment.  
+[DEMO -SRS-99] While the links pane is shown, the application shall display all traceability 
+links starting in or leading to the selected requirement grouped by link types an d ordered by ID 
+of the linked object.  
+[DEMO -SRS-142] When user clicks on a traceability link then the application shall focus the 
+linked requirement.  
+2.2.3 Edit Document  
+2.2.3.1  Document Structure  
+[DEMO -SRS-106] The application shall allow users to create a new requirem ent and place it in 
+any document section.  
+[DEMO -SRS-107] When users creates a new requirement the application shall assign it a unique 
+ID which cannot be changed.  
+[DEMO -SRS-108] The application shall allow users to copy selected requirements or document 
+sections within the document.  
+[DEMO -SRS-109] The application shall allow users to move selected requirements or document 
+sections within the document.  
+ReqView Software Requirements Specification Example  
+ 
+9 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ [DEMO -SRS-110] The application shall allow users to mark selected requirements or document 
+sections as dele ted. 
+[DEMO -SRS-111] The application shall allow users to undelete selected deleted requirements 
+or document sections.  
+[DEMO -SRS-112] The application shall allow users to permanently remove selected deleted 
+requirements or document sections from the documen t. 
+2.2.3.2  Requirement Attributes  
+[DEMO -SRS-114] The application shall allow users to edit the heading of the selected section.  
+[DEMO -SRS-115] The application shall allow users to edit the text description of the selected 
+requirement.  
+[DEMO -SRS-116] The application shall allow users to paste an HTML content copied from MS 
+Word, Excel or other application into the text description of the selected  requirement.  
+2.2.3.3  Custom Attributes  
+[DEMO -SRS-119] The application shall allow users to define custom requirement attributes and 
+assign them a unique ID which cannot be changed.  
+[DEMO -SRS-121] The application shall allow users to set a type of each custom attr ibute as 
+follows: boolean, integer number, real number, string, date, enum or XHTML.  
+[DEMO -SRS-191] The application shall allow users to set one or more values for custom 
+attributes of enumeration type.  
+[DEMO -SRS-122] When a user changes the type of a cust om attribute then the application shall 
+automatically convert all values of the attribute to the new type.  
+[DEMO -SRS-157] If the automatic conversion fails for any attribute value, then the application 
+shall prevent the change of custom attribute type.  
+[DEMO-SRS-120] The application shall allow users to set an optional name of each custom 
+attribute.  
+[DEMO -SRS-192] The application shall allow users to remove custom attributes.  
+[DEMO -SRS-193] When a user removes a custom attribute then the application shall u nset 
+values of the attribute in all requirements.  
+[DEMO -SRS-165] The application shall allow users to edit custom attributes of the selected 
+requirement.  
+ReqView Software Requirements Specification Example  
+ 
+10 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ 2.2.3.4  Attachments  
+[DEMO -SRS-124] The application shall allow users to attach one or more images or documents  
+(PDF, Word, Excel, Powerpoint, Visio, …) to the selected requirement.  
+[DEMO -SRS-126] When a new attachment is added to the document then the application shall 
+generate its unique attachment ID as a combination of the requirement ID and the original 
+attach ment file name.  
+[DEMO -SRS-127] The application shall allow users to save attachment files to the local file 
+system.  
+[DEMO -SRS-128] The application shall allow users to update content of requirement 
+attachments from a selected file.  
+[DEMO -SRS-129] The appli cation shall allow users to permanently remove attachments from 
+the document.  
+2.2.3.5  Comments  
+[DEMO -SRS-132] The application shall allow users to comment the selected requirement.  
+[DEMO -SRS-133] When a user creates a new comment then the application shall record the 
+current date and time and the author of the comment.  
+2.2.3.6  Traceability Links Configuration  
+[DEMO -SRS-135] The application shall allow users to define link types and assign them a 
+unique ID which cannot be changed.  
+[DEMO -SRS-156] The application shall allow users to set for each link type its name and role 
+name of the source and target requirements.  
+[DEMO -SRS-138] The application shall allow users to remove link types.  
+[DEMO -SRS-161] When a user removes a link type then the application shall remove all 
+tracea bility links of the link type from the document.  
+2.2.3.7  Traceability Links  
+[DEMO -SRS-137] The application shall allow users to create directed traceability links of a 
+chosen link type between selections of requirements or document sections.  
+[DEMO -SRS-139] The application shall allow users to change the link type of a selected link 
+traceability . 
+ReqView Software Requirements Specification Example  
+ 
+11 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ [DEMO -SRS-140] The application shall allow users to revert direction of a selected traceability 
+link. 
+[DEMO -SRS-141] The application shall allow users to permanently remove a selected 
+traceability link from the document.  
+2.2.3.8  Auto Save  
+[DEMO -SRS-144] The application shall automatically persist all document changes and restore 
+them when it is restarted.  
+[DEMO -SRS-160] When user closes the document the application shall clear all persisted 
+document data.  
+2.2.4 Filtering  
+2.2.4.1  Requirements Filter  
+[DEMO -SRS-147] The application shall allow users to filter requirements according to a 
+condition in disjunctive normal form (DNF).  
+[DEMO -SRS-148] The application shall allow users to enter a filtering condition matching 
+document sections by their number or heading.  
+[DEMO -SRS-149] The application shall allow users to enter a filtering condition matching 
+requirements by their text description or a custom attribute.  
+[DEMO -SRS-150] The application shall allow users to filter requirements with missing 
+traceability links of a given  type.  
+2.2.4.2  Full Text Search  
+[DEMO -SRS-152] The application shall allow users to search requirements matching one or 
+more given keywords in an string or xhtml attribute.  
+[DEMO -SRS-153] While the search mode is active the application shall highlight the matched 
+requirements and allow user to select the next or previous matched requirement in the document.  
+2.2.5 History of Changes  
+[DEMO -SRS-159] When a user changes a requirement the application shall record the current 
+date and time and the author of the change.  
+[DEMO -SRS-101] The application shall display all changes of the selected requirement ordered 
+by date and time.  
+[DEMO -SRS-102] Each displayed requirement change shall contain author, date & time and 
+description of the change.  
+ReqView Software Requirements Specification Example  
+ 
+12 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ [DEMO -SRS-103] The application shall a llow users to expand and collapse all changes in the 
+History  pane.  
+2.2.6 Reporting  
+[DEMO -SRS-163] The application shall allow users to print the displayed requirements table.  
+[DEMO -SRS-164] The application shall allow users to create a PDF containing the display ed 
+requirements table.  
+2.3 Usability requirements  
+2.4 Performance requirements  
+2.4.1 Startup Time  
+[DEMO -SRS-174] The application should display the opened document within 10s after it is 
+started.  
+2.4.2 Edit Response Time  
+[DEMO -SRS-171] The application should display updated values within 1s after user triggers 
+the edit operation.  
+2.4.3 Smooth Scrolling  
+[DEMO -SRS-173] While a us er scrolls the requirements table, the application should not 
+display scrolling jerks longer than 200ms.  
+2.4.4 Document Size  
+[DEMO -SRS-170] The application shall allow users to open documents up to 10000 objects and 
+100 file attachments with total size up to 100 MB. 
+2.5 Logical database requirements  
+[DEMO -SRS-194] The application shall encrypt the persistent application data.  
+2.6 Design constraints  
+2.7 Standards compliance  
+2.8 Software system attributes  
+[DEMO -SRS-195] The application shall run in the latest version of Chrome or Firefox browsers.  
+[DEMO -SRS-176] The application shall not send any project data to the Internet.  
+[DEMO -SRS-199] The application shall sanitize any data input or imported by users.  
+ReqView Software Requirements Specification Example  
+ 
+13 
+© Copyright 20 21 by Eccam s.r.o. All rights reserved.  
+ 3. Verification  
+Verification tests are specified in [DEMO -TESTS]  document.  
+4. Supporting information  
+ 
+ 
+5. References  
+[DEMO -NEEDS]:  ReqView User Needs  
+[DEMO -TESTS]:  ReqView Verification Tests  

@@ -1,0 +1,1987 @@
+
+Functional Requirements on 
+Communication system for Wind Turbine Applications 
+ 
+  Elforsk rapport 01:25 
+Claus Bjerge, Peter Christiansen, Arne Hedevang Anders Johnsson, Niels Raben, Jörgen Svensson Juni 2001  
+ 
+  
+ 
+ 
+ 
+  Functional Requirements on 
+Communication system for Wind Turbine Applications
+  
+ 
+  Elforsk rapport 01:25
+ 
+Claus Bjerge, Peter Christiansen, Arne Hedevang Anders Johnsson, Niels Raben, Jörgen Svensson Jun1 2001  
+ 
+ 
+ 
+ 
+  
+ 
+   
+ 
+     
+ 
+  
+  
+ 
+        
+  
+     
+  Functional Requirements on 
+Communication system for Wind Turbine Applications
+  
+ 
+ Elforsk rapport 01:25
+ 
+Authors: 
+Claus Bjerge 
+Peter Christiansen Arne Hedevang Anders Johnsson  Niels Raben Jörgen Svensson SEAS Distribution A.m.b.A 
+Tech-wise A/S Tech-wise A/S Vattenfall Utveckling AB SEAS Distribution A.m.b.A. SYCON Energikonsult 
+  
+ 
+ 
+ELFORSK  
+   
+ 
+i Förord  
+Utvecklingen av kommunikationslösningar för styrning och övervakning av vindkraft-
+verk präglas av speciallösningar. Varje leve rantör har sin lösning, vilken ej är kompati-
+bel med någon annan leverantörs lösning. Av saknaden av öppna standarder ställer till 
+problem, framförallt då vindkraftverk av flera olika fabrikat ska övervakas. Som första 
+steg har en  föreliggande specifikation av funktionella krav på kommunikationslösning-
+ar för styrning och övervakning av vindkraftverk utarbetats.   Syftet med denna specifikation av funktionella krav är att definiera villkor för etablering 
+och drift av ett system för datakommuni kation mellan kontrollsystemet i ett vindkraft-
+verk och datorer för fjärrövervakning (SC ADA). Specifikationen är avsett som en guide 
+vid upphandling av kommunikationslösningar för vindkraftverk.   Arbetet har genomförts av  en dansk-svensk arbetsgrupp med representanter från följan-de företag: Vattenfall Utveckling AB och Sycon Energikonsult som representanter för 
+Elforsk AB, Sydkraft Vind AB, Tech-wise A/ S som representanter för Elsam A/S, 
+SEAS Distribution A.m.b.A som representanter för Energi E2 A/S.   Stockholm juni 2001    Ulf Arvidsson Elforsk AB Programområde El- och värmeproduktion 
+
+ELFORSK  
+   
+ 
+iii Sammanfattning  
+Utvecklingen av kommunikationslösningar för styrning och övervakning av vindkraft-
+verk präglas av speciallösningar. Varje leve rantör har sin lösning, vilken ej är kompati-
+bel med någon annan leverantörs lösning. Av saknaden av öppna standarder ställer till 
+problem, framförallt då vindkraftverk av flera olika fabrikat ska övervakas. Det finns ett 
+behov hos användaren att kunna hantera flera olika vindkraftverk, oberoende av fabri-
+kat. Därför etablerades en dansk-svensk  arbetsgrupp för styrning och övervakning av 
+vindkraftverk. Från svensk sida finansieras detta arbete av Elforsk AB och dess ägare. Arbetsgruppen består av representanter från  följande företag: Vattenfall Utveckling AB 
+och Sycon Energikonsult som representanter  för Elforsk AB, Sydkraft Vind AB, Tech-
+wise A/S som representanter för Elsam A/S,  SEAS Distribution A.m.b.A som represen-
+tanter för Energi E2 A/S.  Arbetsgruppens övergripande mål var att verka för ett standardiserat kommunikations-koncept som fritt kan användas av valfri leverantör för implementering av leverantörs-oberoende lösningar. Detta mål förvekligas i flera steg. Som första steg utarbetas en specifikation av funktionella krav på ko mmunikationslösningar för styrning och över-
+vakning av vindkraftverk (denna rapport). I de nna rapport beskrivs även ett antal poten-
+tiella lämpliga kommunikationsprotokoll. I syfte att verifiera denna specifikation och testa ett par av de identifierade protokollen genomförs under 2001 ett antal skarpa tester i vindkraftverk såväl i Sverige som Danmark. Parallellt med detta har standardiserings-
+arbete initierats inom IEC TC88 Wind Turbin e Systems. Standardiseringsgruppen skall 
+med utgångspunkt från denna rapport utarbeta en internationell kommunikationsstan-dard för styrning och övervakning av vindkraftverk.  Syftet med denna specifikation av funktionella krav är att definiera villkor för etablering 
+och drift av ett system för datakommuni kation mellan kontrollsystemet i ett vindkraft-
+verk och datorer för fjärrövervakning (SC ADA). Specifikationen är avsett som en guide 
+vid upphandling av kommunikationslösninga r för vindkraftverk. Denna specifikation 
+skall kunna tillämpas för vindkraftanläggningar med endast en turbin såväl som för 
+vindkraftparker. Detta dokument innehåller kr av på dataöverföring och hantering, dvs 
+vilka data behöver överföras och hur skall de t gå till, men inte hur data skall användas 
+av SCADA-system. Syftet med denna specifika tion är ej att beskriva och specificera 
+egenskaper hos SCADA-system, Människa/maskin-gränssnitt, regleralgoritmer etc.  I appendix återfinns beskrivningar av några av de tekniska lösningar som skulle kunna 
+uppfylla de krav som finns i specifikationen. Det är dock inte inom ramen för detta do-
+kument att rekommendera en särskild lösning eller ett visst kommunikationsprotokoll.   
+
+ELFORSK  
+   
+ 
+v Innehållsförteckning  
+GLOSSARY ................................................................................................................. 1 
+1 INTRODUCTION .................................................................................................. 6 
+1.1 B ACKGROUND ...................................................................................................... 6 
+1.2 I NTENTION ........................................................................................................... 6 
+1.3 P ARTICIPANTS ...................................................................................................... 6 
+2 SCOPE AND OUTLINE OF THE DOCUMENT......................................................... 7 
+2.1 S YSTEM DESCRIPTION ............................................................................................ 7 
+2.2 C OMMUNICATION SYSTEM ....................................................................................... 7 
+2.3 W IND POWER PLANT DATA ..................................................................................... 8 
+3 DEFINITIONS AND ASSUMPTIONS ...................................................................... 9 
+3.1 W IND FARMS ........................................................................................................ 9 
+3.2 S INGLE WIND TURBINE INSTALLATIONS AND WIND TURBINE CLUSTERS .......................... 9 
+3.3 P ARTIES ............................................................................................................ 10 
+4 SYSTEM ............................................................................................................ 11 
+4.1 G ENERAL ........................................................................................................... 11 
+4.2 F UNCTIONS ........................................................................................................ 11 
+4.3 O THER FUNCTIONS , OUT OF SCOPE ......................................................................... 13 
+5 COMMUNICATION............................................................................................. 14 
+5.1 B ASIC SERVICES ................................................................................................. 14 
+5.2 D ATA TRANSFER PRINCIPLES ................................................................................ 14 
+5.3 D IFFERENT KINDS OF DATA .................................................................................... 15 
+5.4 M APPING BETWEEN FUNCTIONS AND WAYS OF COMMUNICATION ................................... 15 
+5.5 G ENERAL REQUIREMENTS FOR ALL DATA KINDS ....................................................... 16 
+5.6 S ECURITY .......................................................................................................... 16 
+5.7 P ERFORMANCE ................................................................................................... 17 
+5.8 C OMPATIBILITY WITH EXISTING SYSTEMS ................................................................. 18 
+6 PLANT DATA..................................................................................................... 19 
+6.1 I NFORMATION STRUCTURE .................................................................................... 19 
+6.2 N AMING CONVENTION .......................................................................................... 20 
+6.3 A NALOGUE SIGNALS ............................................................................................ 23 
+6.4 S ET POINT COMMANDS ......................................................................................... 23 
+6.5 B INARY SIGNALS ................................................................................................. 23 
+6.6 B INARY CONTROL COMMANDS ................................................................................ 23 
+6.7 A LARMS ............................................................................................................ 23 
+6.8 E VENTS ............................................................................................................. 23 
+6.9 C OUNTERS ......................................................................................................... 23 
+6.10 T IMERS ............................................................................................................. 24 
+6.11 G ROUPED DATA .................................................................................................. 24 
+6.12 L OCAL DATA STORAGE AND HANDLING .................................................................... 24 
+7 REFERENCES ................................................................................................... 26 
+8 APPENDICES .................................................................................................... 27 
+A: TECHNICAL SOLUTIONS ............................................................................................ 27 
+B: PROTOCOLS ........................................................................................................... 27 
+C: DATA LISTS ............................................................................................................ 27
+
+ELFORSK  
+   
+ 
+ 
+Page 1 Glossary 
+The definitions of words below are limited to th e scope of this document, unless there is a 
+reference indicated. Three dots (…) in the defin ition text indicate that the original definition 
+text has been shortened. The exact definition can be found in the reference.  
+Accuracy 
+(for wind turbines)  Specified value of a parameter that represents the uncertainty in the 
+measurement. [1] 
+Address  Field, or Fields, in a message identifying both the source and / or 
+destination of the message. [3] 
+Alarm  Information for attracting attention to some abnormal state. [2] 
+Analogue signal  Signal in the form of a continuously variable value. [2] 
+Application layer  The top layer, Layer 7, in the IS O Reference Model comprising the 
+interface between the ISO environm ent and the IED’s / user’s ap-
+plications. [3] 
+Availability  The availability of a unit or system characterises its ability to per-
+form its required function at any given moment. [2] 
+Availability 
+(for wind turbines)  Ratio of the total number of hours during a certain period, exclud-
+ing the number of hours that the wi nd turbine could not be operated 
+due to maintenance or fault situations, to the total number of hours in the period, expressed as a percentage. [1] 
+Binary state informa-
+tion Monitored information of the stat us of operational equipment that 
+is characterised by one of two states, for example on/off. [2] 
+Check sequence;  
+check sum  Part of a message used for erro r checking or error correcting pur-
+pose. [2] 
+Client  An IED, or user, that requests data or services from another IED, or 
+user, which thus responds as a server. [3] 
+Command  Information used to cause a change of state of operational equip-
+ment. [2] 
+Communication stack  A 7 Layer stack, ISO Reference Model, each layer performing a 
+specific functional role in Open Systems Interconnection commu-nication. [3] 
+Configuration 
+(of a system or device)  A step in system design e.g. sel ecting of functional units, assigning 
+their locations and defining their interconnections. Configuration is 
+the process setting up the required parameters for a specific appli-cation. [3] 
+Connection  An association established between functional units for conveying 
+information. A connection is established between two IEDs prior to any data exchange. A connection may be of short duration or long term. [3] 
+ELFORSK  
+   
+ 
+   
+Page 2  
+Control  Purposeful action on or in a system to meet specified objectives. 
+[2] Note – Control may include monitoring and safeguarding in addition to the control action itself. 
+Control centre  A control centre is a location where a master station is located. [2] 
+Control system  
+(for wind turbines)  Sub-system that receives inform ation about the condition of the 
+wind turbine and/or its environment and adjusts the turbine in order 
+to maintain it within its operating limits. [1] 
+CRC  Cyclic Redundancy Check. A CRC is  performed for each frame 
+and the value is included in that frame when it is transmitted. The CRC check calculation may be si mple or complex depending on 
+the protocol being used. The CRC value is used by the recipient communication interface to check and if possible correct errors incurred during transmission of that frame. [3] 
+Data consistency  Measure of conformity of informa tion on variables at different lo-
+cations in different instants. [2] 
+Data integrity  The ability of a communication system to deliver data from its 
+originator to its destination with  an acceptable residual error rate. 
+[2] 
+Data Link Layer  Layer 2 of the ISO Reference Mode l, responsible for the transmis-
+sion of data over a physical medium. After establishing the link, layer 2 performs data rate control, error detection, contention / col-lision detection and recovery. [3] 
+Data object  A reference structure comprised of one or more data items. Used to 
+represent the specific elements of functionality of the device. These data objects may be hierarchical and may be nested to any number 
+of levels. [3] 
+Data security  Procedures and actions designed to prevent the unauthorised dis-
+closure, transfer, modification or destruction, whether accidental or 
+intentional, of data. [2] 
+Data type  A defined method of data presentation, for example data type 
+INTEGER for whole numbers or data type OCTET STRING for an assembly of octets. [2] 
+Device  A mechanism or piece of equipmen t designed to serve a purpose or 
+perform a function, e.g. Circuit Breaker, Relay or Substation Com-puter. [3] 
+Digital measured value  Digital representation of a measured value. [2] 
+Encryption  The cryptographic transformation of data to produce ciphertext. [2] 
+Event information  Monitored information on the change of state of operational 
+equipment. [2] 
+ELFORSK  
+   
+ 
+ 
+Page 3  
+Function  Functions are tasks that are perfor med in the control centre or the 
+wind power plant by the system. Ge nerally, a function consists of 
+subfunctions that exchange data which each other. Depending on the function definition functions its elf exchange data with other 
+functions. There is no unique allo cation of functions or subfunc-
+tions to devices. One ore more functions may reside in a single device or be distributed among seve ral devices at the same or at 
+different control levels. In minimum, the most functions consist of three subfunctions, i.e. the subfunctions with the core functionality itself, the process interface func tion and the HMI (human-machine 
+interface) function meaning human access to the function. [No ref.]
+Flow control (in the 
+communication sense)  Control of the data transfer rate. [2] 
+HMI  Human Machine Interface - A Display screen, either part of an IED 
+or as a standalone device, presenti ng relevant data in a logical for-
+mat with which the user interact s. An HMI will typically present 
+windows, icons, menus, and pointers, and may include a keypad to enable user access and interaction. [3] 
+IED Intelligent Electronic Device - e .g. numeric Protection relay, or 
+Bay controller, or multi-function electronic Meter. An IED may have connections as a client, or as a server, or both, with other IEDs. An IED is, therefore, any device incorporating one or more 
+processors, with the capability to receive, or send, data / control from, or to, an external s ource. An IED may provide multi-
+Function capability ... [3] 
+Interface  A shared boundary between two f unctional units, defined by func-
+tional characteristics, e.g. common physical interconnection char-acteristics, signal characteristics or other characteristics as appro-priate, and the provision of a declared collection of services. [3] 
+Interoperability  The ability of two, or more, IEDs, from the same or different ven-
+dors, to communicate, exchange da ta and use that information for 
+correct operation. [3] 
+IP Internet Protocol - the TCP/IP st andard protocol. IP defines the 
+datagram that provides the basis of connectionless packet delivery. 
+It includes control and error message protocol providing the 
+equivalent functions to Network services, Layer 3, of the OSI Ref-
+erence Model. [3] 
+Maintenance  The combination of all technical and corresponding administrative 
+actions intended to retain an item in  or restore it to a state in which 
+it can perform its required function. [2] 
+MMS  Manufacturing Message Specification - standard ISO 9506. [3] 
+Meter reading  A value representing the integrated total of a measurable variable 
+(such as energy flow) taken of a specified point in time. [2] 
+Overall response time  The time interval between the in itiation of an event in a sending 
+station and the output, in the same  station, of the associated re-
+sponse coming from the receiving station. [2] 
+Overall transfer time  The time duration by which information is delayed after the actual 
+event in the sending station and until presentation at the receiving 
+ELFORSK  
+   
+ 
+   
+Page 4 station. [2] Note – The overall tran sfer time includes the delays due 
+to the input peripheral device in the sending station and the corre-sponding peripheral output device at the receiving station. 
+Periodic data transmis-
+sion Transmission of sets of data that is  repeated in equal time intervals. 
+[2] 
+PICOM  Piece of information for COMmunication. As defined in the ap-
+proach of CIGRE Working Group 34.03 into data flows within 
+Substations. [3] 
+Protocol  The rules for communication system  operation that must be fol-
+lowed if communication is to be effected. [2] 
+Quality of Service 
+(QoS)  A set of characteristics of a conn ection described in terms of qual-
+ity of service (QoS) parameters, normally negotiated between peer 
+entities. [2] 
+Reliability  The ability of a functi onal unit to perform a required function under 
+stated conditions for a stated period of time. [2] 
+Remote control  Control of an operation from a distance. This involves a link be-
+tween the control device and the apparatus to be operated. [2] 
+RTU  Remote Terminal Unit - ..., an RTU acts as an interface between 
+the communication network and the substation equipment. [3] 
+Server  On a communication network, a server .. provides data, or allows 
+access to its resources.... [3] 
+Set point command  A command in which the value for the required state of operational 
+equipment is transmitted to a controlled station where it is stored. [2] 
+Signal  A visual, audible or other indica tion used to convey information. 
+[2] 
+Single point informa-
+tion Monitored information represented by only one bit characterising 
+two determined states of operational equipment. [2] 
+Spontaneous data 
+transfer  Data transfer initiated by an application process upon events or 
+change of data. [2] 
+Supervisory Control 
+and Data Acquisition (SCADA)  A system that supervises and controls a geographically distributed 
+process. [2] 
+Switching command  A command used to change the state of two-state operational 
+equipment from one state to the other state. [2] 
+TCP/IP  Transmission Control Protocol/Inter net Protocol. A suite of proto-
+cols which together provide the functionality up to layer 4, of the ISO OSI Reference Model, without exact layer for layer corre-spondence. .. [3] 
+Telecontrol application 
+service element (TASE)  A specific application service element for telecontrol purpose. [2] 
+Time resolution, limit 
+of accuracy of chronol-ogy The minimum time by which two events must be separated in order 
+that the corresponding time tags be different. [2] 
+Time tagging  Method of transmission of change-o f-state so that transmitted in-
+formation is accompanied by data giving the registered time at which the change occurred, within the time resolution. [2] 
+Transmission on de-
+mand  A transmission method in which messages are transmitted only as 
+result of a request such as an interrogation command from a control 
+ELFORSK  
+   
+ 
+ 
+Page 5 centre or master station. [2] 
+Transmission quality  A term specifying some quality description of a communication 
+network, e.g. bit error rate, availa bility of a dedicated channel, 
+probability of bit error bursts, signal to noise ratio, amplitude and phase distortion, non-linearities, inter-channel interference. [2] 
+Transport Layer  Layer 4 of the ISO OSI Reference Model, acts as an intermediary 
+between the Network and the User application. [3] 
+Wind farm  A Wind farm is characterised by the size and the location of the 
+wind power plant, i.e. the eff ects on the power network. Further-
+more, the properties and functions of the wind farm are more ad-
+vanced than of a smaller wind power plant. A wind farm generally has a main controller for co-ordin ated control of the individual 
+wind turbines. The wind farm will typically have its own high volt-
+age feeder network with a number of small substations. The electri-
+cal properties and behaviour of the wind farm is of such a nature, that it typically will be met with specific requirements regarding power quality and reactive power compensation. In some locations, the wind farm must participate actively in the regulation of the net-work stability. [No ref.] 
+Wind power plant  Wind power plant is the general name for one or more wind tur-
+bines that converts kinetic energy in  the wind into electrical energy 
+within a geographically confined area. [No ref.] 
+Wind turbine  System that converts kinetic energy in the wind into electrical en-
+ergy. [1] 
+ELFORSK  
+   
+ 
+   
+Page 6 1 Introduction 
+1.1 Background 
+There are currently many problems with communication systems for wind power plants due 
+to lack of standards and methods. Suppliers usually have their own control system solutions and they are not compatible with others. This is a problem for the users, who obviously want 
+the possibility to manage different wind power systems independently of the supplier. The 
+need for a specification applied to a wind power pl ant, that shall be supervised and controlled 
+by a SCADA-system, is apparent. 
+1.2 Intention 
+The purpose of the specification on functional re quirements (“Specification”) is to specify 
+terms for establishment and operation of a system  for transfer of data between the controller 
+system in a wind turbine and remote computer s. The Specification is intended as guidance 
+during procurement of communication solutions  for wind power plants. The Specification 
+may be applied for single wind turbine installati ons as well as for wind farms. The Specifica-
+tion includes requirements for data transfer and handling, i.e. which data needs to be ex-changed and how it shall be done, but not how the data shall be used by the SCADA-system. 
+It is not within the scope of this Specification to describe and specify characteristics of SCADA-systems, HMI, control algorithms etc. When using specifications on tendering or purchas e, it is the responsibility of an employer or 
+user to specify in addition, supplementary or more detailed specifications and whether all or 
+only parts of the Specification shall be applied. In the appendices of the Specification some of  the potential technical solutions that might 
+fulfil the requirements stated in the document ar e described. However it is not within the pur-
+pose of the Specification to make a recommenda tion on a particular solution or communica-
+tion protocol. 
+1.3 Participants 
+This draft Specification has been prepared by a working group with representatives from the 
+companies: Vattenfall Utveckling AB and Sycon Energikonsult as representatives of Elforsk 
+AB, Sydkraft Vind AB, Tech-wise A/S as repres entative of Elsam A/S, SEAS Distribution 
+A.m.b.A as representative of Energi E2 A/S. 
+ELFORSK  
+   
+ 
+ 
+Page 7 2 Scope and Outline of the Document 
+The scope of this specification is communication systems supporting functions mainly for 
+remote operation and supervision of wind power plants. Apart from the functions needed by 
+the operator the system shall support also functi ons needed by other parties. The functions are 
+further described in Section 4 System. This chapter explains the different parts of the operational system and how they are defined. 
+The structure of the document is described by Figure 1, where the different subsections corre-
+spond with the disposition of the document.  
+Users
+SCADASYSTEM (operational functions)
+Wind farm
+WFMC
+WFMC: Wind Farm Main Controller
+CU:       Control Unit
+SWPU:  Single Wind Power UnitSWPUCU
+SWPUCU
+SWPUCU
+SWPUCUCOMMUNICATION
+DATADATACOMMUNICATION(services,functions )
+ 
+Figure 1 : System overview for wind power communication 
+2.1 System description 
+On the highest level the system is described fr om an operational point of view, i.e. the func-
+tions needed for remote operation and supervision of wind power plants. The functions are described from a communication point of view . The affected actors and functions are de-
+scribed in Section 4 System. As depicted in Figure 1, there are both wind fa rms and single wind turbines. In the case of 
+bigger plants there is usually a wind farm main controller (WFMC) and an internal communi-cation system, which connects all the turbines to the WFMC for further external communica-
+tion. 
+2.2 Communication System 
+In this Specification “communication system” shall be understood as a system for:  
+• Transfer of data from a process/plant level to  a level, where data are accessible for an ap-
+plication in a standardised format  
+• Transfer of data to a process/plant level for distribution of commands, operational settings 
+etc. 
+The requirements on the communication system are specified in Section 5 Communication. 
+ELFORSK  
+   
+ 
+   
+Page 8 Data may also be understood as verbal co mmunication, as in telephone communication, as 
+well as visual communication, as in video communication. The different kinds of data com-munication need to be able to coexist on the same transmission network. 
+2.3 Wind Power Plant Data 
+The different operational functions need access to data in the power plant and the sending and 
+receiving parts must be able to interpret and handle the data. Therefore, the data structure must be defined together with the data types and other characteristics. This is done in Sec-tion 6 Plant Data. 
+ELFORSK  
+   
+ 
+ 
+Page 9 3 Definitions and Assumptions 
+This chapter includes definitions and descri ptions on wind power related terms and equip-
+ment. A Wind Turbine is in this context a wind driven  generating unit feeding electric power into a 
+grid. The wind turbine is autonomously contro lled, which means that all-necessary control 
+and safety systems for proper operation are se lf-contained. It does not depend on external 
+control devices to perform its basic operations . The wind turbine may however be supervised 
+and controlled by a central system (e.g. a SC ADA-system) for co-ordination of more wind 
+turbines and for co-ordination with the electric network. In order to conduct operation and maintenance, a system for supervision and contro l of the wind turbine(s) is essential, as the 
+wind turbines typically are located remotely and at far distance from the operator. 
+3.1 Wind Farms 
+A Wind Farm is characterised by: 
+• The size and location of the power producing pl ant, i.e. the effects on the power network. 
+Typically the total installed capacity is of more than 10 MW in one location. The limit is 
+slowly rising with the trend towards larger and larger wind turbines. 
+• The properties and functions of the wind farm , being more advanced than of a smaller 
+wind power plant. A wind farm generally has a main controller for co-ordinated control of the individual wind turbines. 
+The wind farm will typically have its own hi gh voltage feeder network with a number of 
+small substations. The electrical properties and beha viour of the wind farm is of such a nature, 
+that it typically will be met with specific re quirements regarding power quality and reactive 
+power compensation. In some locations, the wind farm must participate actively in the regula-tion of the network stability. The wind farm is typically owned and operated by one or more companies specialised in elec-
+trical power production. The approach to opera tion and maintenance is based on remote su-
+pervision and monitoring of the plant with on- line functions and frequent updating of several 
+operational data. The needs for advanced functions  will typically increase with the installed 
+capacity of the wind farm. In very large wind farms of 100 MW or more, several parties will be involved in the operation, as the wind farm w ill have a significant impact on the electrical 
+network. 
+3.2 Single Wind Turbine Installations and Wind Turbine Clusters 
+A single wind turbine or a wind turbine cluster is among others characterised by: 
+• The small size of the power producing plant. A single wind turbine or a wind turbine clus-
+ter has minor impact on the power network 
+• The properties and functions of the wind turbin e(s), being rather simple compared to a 
+wind farm. 
+Typically a single wind turbine or a wind turbine cluster is connected to the grid at medium 
+voltage level. The installation is not of majo r importance to the grid. The installation will 
+typically have a very simple high voltage feed er to the network. The electrical properties and 
+behaviour of the installation is of such a nature, that it will only be met with moderate re-quirements regarding power quality and reactive power compensation. Private individuals, private corporations or electrical power companies often only own a sin-
+gle wind turbine or a wind turbine cluster. Th e approach to operation and maintenance is 
+based on remote supervision and monitoring of the wind turbine(s) but the amount of opera-
+ELFORSK  
+   
+ 
+   
+Page 10 tional data needed and the need for update of da ta is very moderate. The services will typi-
+cally be based on a requesting system (dial- up) connected to the public telephone network. 
+The need for advanced functions is very modest, as the primary role of the wind turbine(s) is 
+to produce as much electricity as possible. Normally only one or two parties are engaged in operation and maintenance of the wind turbine( s), typically the owner and the operation and 
+maintenance organisation, which in some cases is one and the same. 
+3.3 Parties 
+The operators, users and other interested partie s requiring services and functions of a commu-
+nication system will typically be as indicated in the table below.  
+Party Wind Farms Single Wind Turbines and Clusters 
+Electrical System Operator 
+(Transmission networks of 100 kV or more) Applicable Not applicable. 
+Might be relevant in the future if wind turbines will be dir ectly connected to 
+the transmission network. 
+Electrical Network Operator 
+(Operator of the network at the point of common connection) Applicable Not applicable 
+Wind Turbine Operator (opera-
+tion & maintenance) Applicable Applicable 
+Owner Applicable Applicable 
+External e.g. Vendors, and “third 
+parties” Applicable Applicable 
+ 
+Table 1 : Parties and their scope of interest. 
+ELFORSK  
+   
+ 
+ 
+Page 11 4 System 
+This section describes the parties’ functional requirements. 
+4.1 General 
+Basically the communication system must assist the operators, users and other interested par-
+ties in performing their tasks by provision of serv ices. The system must be flexible in support-
+ing future requirements and future developments . The system must be open in the sense that 
+“anyone shall be able to get information on a nything from anywhere”, once they have au-
+thorisation to the system. The system thus sha ll be adapted to individual users and services 
+provided accordingly by means of configurations, set-ups etc. The communication system shall be based on open and widely accepted methods with a high degree of interface possibilities. The system shall be robust and reliable, but the system shall 
+not be used for the safe and secure operation of  the plant. Faults in the communication system 
+shall not cause malfunction of an individual wind turbine. The system shall be designed in a 
+way that faults of a sub-system interferes as  little as possible with functions of the communi-
+cation system as a whole.  In designing the system it shall be taken into  account, that the physical environment at the 
+plant typically has a wide span of temperature, moisture, salinity and vibration levels. 
+4.1.1  Data interchange for secondary systems 
+Secondary systems may be for example Beacons  (sea and air), Fire protection, Emergency 
+alarm, Intruder alarm, Power supplies and em ergency power systems, Meteorological sta-
+tions, Safety systems for personnel, Data logger systems and Condition monitoring. Condition monitoring will be very important for offshore wind farms and it will be a standard function in all larger wind turbines. The condition monitoring system provides status  and analysis reports for components. The 
+analysis may be in the form of spectres, trends, statistic figures, time tracking etc.  The values shall be available for display on ope rator HMI as well as for storage (databases). 
+Updating of values shall be selectable down to an interval of 1 sec. All data must be stored in 
+the plant controller for transmission on demand. Tr ansfer of data from the buffers may be 
+carried out off-line without synchronism with real-time. 
+4.2 Functions 
+The basic functions of the system can be groupe d in two main categories, Operational or con-
+trol functions and System management functions. A third group is Process automation functions, wh ich involve functions that operate with pro-
+cess data directly without the involvement of an operator. However this group is not within 
+the scope of this specification and is not further treated. 
+4.2.1  Operational functions 
+The operational functions are needed for the normal daily operation of the wind power plant. In these functions an HMI, either local or remote, is included. The operational functions are  used to present process or system information to  an operator or to provide him the control e.g. 
+by commands. The operational functions include the following: 
+• Access security management 
+Access to operational functions has to be controlled by a set of rules. Access control is to 
+ELFORSK  
+   
+ 
+   
+Page 12 allow the capability to restrict an authenticated client to a pre-determined set of services 
+and objects. 
+• Supervision (Wind power plant operation and Network operation) 
+Local or remote monitoring of the status and changes of states (indications) for opera-tional devices. 
+• Control 
+Control function allows an operator or an automatic function to operate equipment like switchgear or transformer, a protection, etc. Cont rol is subject to miscellaneous filters that 
+check that there will be no damage if the control is issued. 
+• Parameter changes (parameter set switching, subset of setting, or single parameter) 
+In addition to single parameters, an application may have several possible pre-defined pa-rameter sets (but only one active set). 
+• Alarm management 
+Alarm is generated when a data of the system takes a value that shall be specially consid-ered by the operator, i.e. there is a need for attracting attention to some abnormal state. Alarm management functions allow an operator to visualise, acknowledge and clear alarms. 
+• Event and Log management 
+Functions for continuous scanning of devices for alarms, operator control actions and changes in state, and for recording the events chronologically with date and time informa-tion. 
+• Data retrieval of configuration data and settings 
+Functions for a follow-up of parameter settings should include services to retrieve all pa-rameters (names, values and units for all setpoints) or to retrieve only those that differ from the default values. 
+• Disturbance / fault record retrieval 
+Data retrieval for the purpose if display and bulk data storage of fault data. 
+4.2.2  System management functions 
+System management functions include both func tions for system support and for system con-
+figuration and maintenance. System support func tions are used to manage the system itself 
+(e.g. Network management, Time synchronisa tion, and Self-checking of communication 
+equipment). The functions support the total system and have no direct impact on the process. System configuration or maintenance functions are used to set-up or evolve (maintain) the 
+system. The system configuration and maintenance functions include the setting and changing  of configuration data and the re trieval of configuration information from the system. The most 
+important examples of System Management functions are: System Support
+ 
+• Network management 
+Functions needed to configure and maintain the communication network. The basic task is the identification of communication objects/devices. 
+• Time synchronisation 
+Synchronisation of devices within a communication system. 
+• Self-checking  
+The self-check detects if an object or device is fully operational, partially operational or not operational. 
+   
+ELFORSK  
+   
+ 
+ 
+Page 13 System Configuration and Maintenance  
+• Software management 
+The software management include version control, download, activation and retrieval of software. 
+• Configuration management 
+The function is used to download, activate and retrieve configuration data 
+• Operative mode control 
+Allows an authorised operator to start and stop functions or objects within the system, in-cluding manual activation or reset of subsystems. 
+• Setting (parameter set) 
+The setting function allows an operator read and to change on or more parameters affect-ing the behaviour of the object/device. 
+• Test mode 
+Possibility to check a function but avoiding impact on the process (blocking of process outputs).  
+• System security management 
+Function to allow control and supervision of the security of the system against unauthor-ised access or loss of activity. 
+4.3 Other functions, out of scope 
+The functions here described are not within th e scope of this Specification, that is communi-
+cation for remote operation. However, from an overall communication system point of view, it can be desired that all communication have to be able to coexist on the same transmission media. 
+4.3.1  Local functionality 
+Local system functionality for hook-up for tempor ary data transmission is not within the 
+scope of this specification. Thus the communica tion system for remote operation do not need 
+to support functions such as hook-up of portabl e PC at the plant for Internet access, WEB-
+cam connection, E-mail service, Program execution, Plant information and Service instruc-tions. 
+4.3.2  Voice and visual communication 
+A verbal dialogue system (e.g. telephone) is essential for contacts between operation and 
+maintenance personnel in the wind power plant and the control centre operator. Video com-munication may also facilitate the co-operati on between field personnel and control centre 
+personnel. Video may also be used for supervis ion of equipment. However these function is 
+not within the scope of this specification. 
+4.3.3  Actor specific functions 
+Functions that are of no relevance to the wind power plant or wind turbine operators, the most 
+important actors, are considered to be out of scope. Energy accounting for the network opera-
+tor is one example. 
+ELFORSK  
+   
+ 
+   
+Page 14 5 Communication 
+In this section the requirements on the communi cation between the different units in the sys-
+tem are specified.    
+SCADA WFMC
+SWPUCU
+SWPUCU
+SWPUCU
+SWPUCUCOMMUNICATION
+DATADATACOMMUNICATION(services,functions )
+WFMC: Wind Farm Main Controller
+CU:       Control Unit
+SWPU:  Single Wind Power Unit 
+ 
+ Figure 2 : Communication between control units and SCADA 
+  In wind farms a local communication system might be the link between overall control units
+ 
+and the individual wind turbine controller. An overall control unit may be a “wind farm main 
+controller” conducting an overall governing of the plant output and the grid compatibility. 
+5.1 Basic Services 
+As stated in Section 2.2 the main objective for th e communication system is to transfer data to 
+and from the process/plant level. The overall pur pose is to support the functions described in 
+Section 4. In order to accomplish this the basi c services of the communication system shall 
+include the following: 
+• Connection establishment and release 
+• Authentication 
+• Identification of functional object and devices 
+• Data access and transfer 
+• Reliable communication over a network 
+ 
+5.2 Data Transfer Principles 
+Data can be transferred according to one of the following principles: 
+A. Periodic data transfer (all data or only data that has changed since last transfer) 
+B. Data transfer on demand 
+C. Event driven (spontaneuos) data transfer 
+D. Command transfer 
+E. Set point transfer 
+ELFORSK  
+   
+ 
+ 
+Page 15 5.3 Different kinds of data 
+The following kinds of data need to be supported: 
+I. Measurements/analogue data (signals) from the wind power plant 
+II. Set points sent to the wind power plant 
+III. Binary Signals/Status data from the wind power plant. 
+IV. Binary control commands to the wind power plant 
+V. Alarms 
+VI. Events 
+VII. Counters 
+VIII. Timers 
+IX. Data structures 
+X. Time series data 
+XI. Short text messages 
+XII. Flat files 
+A specific kind of data put sp ecific requirements on the communication system. Alarms, for 
+example, need to reach the remote control centr e much faster than events. And the latter is 
+often grouped with other events before tr ansmission. The mapping between the different 
+kinds of data, the data transfer principles a nd the operational functions are described in sec-
+tion 5.4. The different kinds of data can be grouped and named real time/on-line data, historical data or 
+forecasts/schedules. On-line data include measurements/analogue data, binary signals/status data (but might also include counters). Histori cal data include measurement data (calculated 
+values), counters and timers. Schedules could be start/stop schedules for individual wind tur-
+bines. The different kinds of data for wind power applica tions is further described, in more detail, in 
+Section 6 Plant Data. 
+5.4 Mapping between functions and ways of communication 
+Data are either polled at the node (the wind turb ine) or periodic and automatic sent out from 
+the node (periodic broadcast and event driven transfer). The important requirement is the 
+‘scanning rate’ (maximum delay). Historical data, counter’s and log’s are transf erred on demand (a request is sent to the wind 
+turbine and the information is send back). Alarm data shall be sent from the wind turbine on occurrence.  Setting data in the wind turbine and giving orde rs to the wind turbine are sent to the wind 
+turbine when needed.  
+ELFORSK  
+   
+ 
+   
+Page 16  
+ 
+Functions 
+ 
+(see Section 4.2)  Data kinds 
+ 
+(see Section 5.3)  Transfer prin-
+ciples 
+(see Section 5.2)  Comments 
+Operational Functions     
+Access security management XI B, D Encrypted? 
+Supervision I, III A, B, C  
+Control II, IV D, E  
+Parameter changes II B, D, E  
+Alarm management V, XI, XII C  
+Event and Log management VI, XI, XII A, B, C  
+Data retrieval of configuration data and 
+settings VII, VIII, IX, 
+X, XII A, B E.g. historical data 
+Disturbance / 
+fault record retrieval IX, X, XII B  
+System Management Functions     
+System support Most Most Network mgmt, time synch.. 
+System Configuration and Maintenance IX, XII B, E Mgmt, settings.. 
+ 
+Table 2 : Possible mapping between functions and ways of communication 
+5.5 General Requirements for All Data Kinds 
+1. It should be possible to time stamp all data. Ti me stamped data shall be stamped with ‘last 
+updated date + time’ (UTC time). The accuracy and resolution of the timestamp should be 
+at least 10 ms. 
+2. All analogue measured values should have readable properties like ‘signal quality’ and 
+‘scanning rate’. This information does not have  to be included with every data transfer. 
+The averaging time and the measuring and averaging method should be documented for all data.  
+3. It should be possible to group both analogue and binary values so they can be read in a 
+single transaction 
+5.6 Security 
+Remote monitoring and operation of devices requires strict security measures for several rea-
+sons. To protect the data from being stolen, co rrupted, and intentionally falsified, to protect 
+the device from unauthorised use or to preserve the privacy of monitoring data. To enforce these security requirements the fo llowing functionality is needed: Authentication, 
+Data Integrity and Data Confidentiality. 
+5.6.1  Authentication 
+Server authentication shall ensure the client application that it is truly operating on the in-
+tended site. Client authentication ensures that an authorised client/operator is operating the 
+equipment. The rights for each user to operate functions and to see data on different levels in the object 
+hierarchy might be necessary to set. In that way all users can have relevant access to the sys-tem and get updated information from the wind power plants. 
+ELFORSK  
+   
+ 
+ 
+Page 17 5.6.2  Data Integrity 
+Non-corruption of data transferred is necessar y, i.e. the ability of a communication system to 
+deliver data from its originator to its destination with an acceptable residual error rate. This prevents both malicious and false operation. 
+5.6.3  Data confidentiality 
+Data items transferred might need to be encr ypted to prevent both malicious and false opera-
+tion, as well as eavesdropping. 
+5.7 Performance 
+The response times of most operational functions  and, therefore, of the related communication 
+does not need to be much faster than one second (human time scale). System management 
+functions, which shall be available for the opera tors and control systems, are of low time criti-
+cal nature. Delay in execution of these functions however should not be more than 2 seconds. Regarding safety of persons, plant and electri c network, the communication system shall not 
+be of critical nature. No functions regarding sa fety of persons shall be based on the communi-
+cation system. No functions regarding safety of  plant and electrical network shall be based on 
+the communication system – all safety functions must be self-contained in the process or in 
+the devices where systems interface and will trip  automatically. In situations where the com-
+munication system is completely inaccessible, the plant may be forced to a shutdown by al-ternative means. 
+5.7.1  Time Critical Functions 
+Regarding optimisation of the operation, the communication system has a major role. The 
+time critical functions include both control a nd supervision functions. Set points for power 
+control and Start and Stop commands are the most  time critical functions, but also a prompt 
+response (Acknowledge-on-receive) is important . Periodic on-line operational data is essen-
+tial for the optimisation of the operation. Finally the operator need to know the status of the 
+communication system to be able to rely on the presented data. The time critical functions shall use short messa ges with a high priority. Data-wise the mes-
+sages shall be small and shall be transmitted with a minimum of delay. Delays may occur due to transmission errors, low capacity or low ba ndwidth of the transport media or network 
+faults. It is essential for the proper design of the communication system to select methods that 
+minimise such properties. Time critical functions must be based on fast  and reliable transmission of a number of se-
+lected data types. An example of a typical requirement regarding delays for these data is as 
+follows: “The overall transfer time for services in time critical functions shall not be more than 0,5 
+seconds.” 
+5.7.2  Reliability 
+Reliability in the sense that data can be retran smitted, reconstructed, or reprocessed if lost or 
+inaccessible of some reason is essential. Data ma y be inaccessible e.g. because of faults in the 
+process (plant), faults in data transport or fau lts in data processing units. For most data it must 
+be possible to restore information, including th e sequence of events. Local procedures for 
+recovery may incorporate redundancy of selected functions and backup of data. The commu-nication system shall include functionality to transfer stored data to central storage and proc-essing after restoration of the communication. 
+ELFORSK  
+   
+ 
+   
+Page 18 To prevent interruptions in the data transfer , the communication system shall allow for redun-
+dant communication channels. Processing of data  may be carried out simultaneously on more 
+units. Automatic procedures for detection of  communication faults and for managing redun-
+dancy of system components shall be establis hed. The physical transport media should possi-
+bly be redundant to a certain degree depending on the conditions at the specific plant.  
+5.8 Compatibility with Existing Systems 
+There must be a way for existing plants to  interface to a new communication system. The 
+expected solution to interface systems usi ng proprietary methods for communication, e.g. 
+manufacturer-specified protocols or custome r-specified protocols, to new communication 
+systems is to use gateways. The interface to existing plants will provide a subset  of the functions and data specified in this 
+Specification. It should however as far as possibl e be able to present data on the same HMI 
+and provide as many data as possible for the system databases. 
+ELFORSK  
+   
+ 
+ 
+Page 19 6 Plant data  
+The following section is a description of principl es for representation and storage of data. The 
+description is not specific and thorough, as it does not specify in detail all signals or data that must be available. It is the intention of this description to establish rules and principles for 
+what data and what services shall be available from each wind turbine.    
+DATA
+ 
+ 
+ Figure 3 : Wind power plant data 
+ The protocol shall have such flexibility that new data can be define d without disturbing old 
+versions of equipment’s that comply to a specific version of the specification. A ‘naming con-vention’ is described in this specification. 
+6.1 Information structure 
+Data is represented by a number of attributes. Th e number of attributes for a specific data may 
+vary. The number and formats of the attributes se nt at configuration time is different than the 
+number and formats of the attributes that is transmitted in any message (data transmission). Each wind power plant shall have defined the to tal set of data, the naming, the type and de-
+fault value of the data according to this speci fication. The information should be standardised 
+according to the following principles: 
+• Each device or object shall be self-descriptive (generic part) and the system has to have a 
+function to extract the information contained in  the wind power plants objects. It shall be 
+possible to issue an identify request and get a list of all objects in a wind power plant, 
+their names and possibly a short description for each object. It should be possible to get 
+the attributes and services for each object . The list should at minimum include, Name, 
+Type/Kind, Unit, Time requirements, and possibly a short Description. 
+• For the HMI such information shall be contained in the device using standard readable 
+text, such as ASCII or Unicode (UTF16) (at least optional in the language of the opera-
+tor). The presentation of the information itself is out of the scope of this specification. 
+• At least for default naming a hierarchical na me structure and an object data dictionary 
+specialised for wind power plants should be used. 
+• During data transmission the message should at  least include the following parts; Name, 
+Value(s), Scan frequency, Time tag and Quality. 
+6.1.1  Example: PICOM 
+This section presents one example of an information structure. To describe the data being exchanged w ithin a substation the CIGRE WG34.03 has intro-
+duced the concept of PICOM (Piece of information for Communication). By definition, it is a given data element on a given logical path w ith given communication attributes. The PICOM 
+ELFORSK  
+   
+ 
+   
+Page 20 can be compared to a "soft wiring". It is used  for defining essential features of communicated 
+data from the application point of view. Th e main components of a PICOM are summarised 
+mainly by the term’s data, type, performance, and path. Data
+ means the content of the information and its identification as needed by the functions 
+Type  describes the structure of the data, i.e. if it’s an analogue or a binary value, if it’s a sin-
+gle value or a set of data, etc. Performance
+ means the permissible transmission time,  the data integrity and the method or 
+cause of transmission (e.g. periodic, event driven, on demand). Path
+ contains the logical source and the logical destination 
+These PICOMs can been used for data type identification.  PICOM attributes to be transmitted at configuration time only (subscription, negotiation, etc.)
+ 
+Value for transmission (see above): test or default value if applicable Attributes for transmission (see above)  Format:  data format of the signal : I, UI, R, B, BS, BCD, etc.  Length: the length: i bit, j byte, k word Accuracy: classes of values Tag information:  if time tagged or not (most data will be time tagged for validation) Type: analogue, binary, file, etc. Kind: alarm, event, status, command, etc. Importance: high, normal, low Data integrity:  the importance of the transmitted information for checks and re-
+transmissions 
+ PICOM and related attributes to be transmitted in any message (data transmission)
+ 
+Value: value of the information itself if applicable Name:  for identification of the data Source:  where the signal comes from Sink:  where the signal goes Time tag: absolute time (7 bytes) to identify the age of the data if applicable Priority of transmission: to be used for input queues or relaying of messages Time requirements: cycle time or response times  to check the validity with help of the 
+time tag 
+6.2 Naming convention 
+Communication and objects in the wind power plant shall be object based. Gear and generator 
+could, for instance, be separate objects. Each including measurements, calculated data, and control services. The system shall be able to  manage naming of objects and variables (meas-
+urements, etc) in a hierarchical naming system in several levels.  
+6.2.1  Naming system example 
+In the following example a naming system with 18 characters is illustrated. The number of characters may, in other naming systems, be extended, e.g. to handle more than 100 wind tur-
+bines.   
+AN NN BBBNN CCNNN DDNN (here 18 characters used) 
+First group of letters A followed by a number N Wind power plant, e.g. H1 
+ELFORSK  
+   
+ 
+ 
+Page 21 Second group of numbers with two digits NN Number within the wind power plant, e.g. 11 
+Third group of letters BBB followed by two dig its NN Object or system, e.g. gear MCD01 
+Fourth group of letters CC followed by three digits NNN Component, e.g. temperature sensor CT003 Fifth group of letters DD followed by two digits NN Calculated value, e.g. mean value ZA01, or 
+signal, e.g. Input XQ01 
+ 
+  
+Number within farm: 12
+Object/system: Gear MCD02
+Object/system: Generator MKD01
+Component: Temp.sensor CTD004
+Component: Temp.sensor CTD003
+Variable: Input XQ02
+Variable: Input XQ01
+Variable: Mean value ZA02
+Variable: Mean value ZA01Object/system: Gear MCD02
+Object/system: Gear MCD01
+Component: Temp.sensor CTD004
+Component: Temp.sensor CTD003
+Variable: Input XQ02
+Variable: Input XQ01
+Variable: Mean value ZA02
+Variable: Mean value ZA01Number within farm: 11
+Variable: Mean value ZA02
+Variable: Status [InOperation]
+ 
+ 
+Figure 4 : Object model example 
+ 
+6.2.2  Gearbox signal naming example. 
+The following is a list over the signals availabl e from a gearbox with 3 bearing temperatures, 
+1 lube oil sump temperature and 3 vibration sensors. The signal list further comprises the 
+gearbox lube oil pump, a sensor for differential pr essure over the filter, an oil cooler fan and, 
+finally, an oil temperature sensor after the cooler.  
+ 
+Wind turbine number: 11 Gearbox designation: MCD01  
+Sensors:
+ 
+Temperature sensors: CTnnn Vibration sensors: CYnnn Pressure sensor: CPnnn  Signals:
+ 
+Instantaneous value: XA01 Average value:  ZA01  (10 minutes based) Maximum value: ZA02  (10 minutes based)  Minimum value: ZA03  (10 minutes based) 
+ELFORSK  
+   
+ 
+   
+Page 22 Standard deviation: ZA04  (10 minutes based)  
+RMS value:  ZA21 FFT spectrum: ZA22 FFT-enveloped spectrum ZA23 Binary information: XB01   Signal list example: 
+ 
+11 MCD01 CT001 XA01 LSS main bearing temperature.  Instantaneous value  11 MCD01 CT001 ZA01 LSS main bearing temperature. 10 minute average value 11 MCD01 CT001 ZA02 LSS main bearing temperature. 10 minute maximum value 11 MCD01 CT001 ZA03 LSS main bearing temperature. 10 minute minimum value 11 MCD01 CT001 ZA04 LSS main bearing temperature. 10 minute standard deviation    11 MCD01 CT002 XA01 HSS bearing 1 temperature.  Instantaneous value  11 MCD01 CT002 ZA01 HSS bearing 1 temperature. 10 minute average value 11 MCD01 CT002 ZA02 HSS bearing 1 temperature. 10 minute maximum value 11 MCD01 CT002 ZA03 HSS bearing 1 temperature. 10 minute minimum value 11 MCD01 CT002 ZA04 HSS bearing 1 temperature. 10 minute standard deviation    11 MCD01 CT003 XA01 HSS bearing 2 temperature.  Instantaneous value  11 MCD01 CT003 ZA01 HSS bearing 2 temperature. 10 minute average value 11 MCD01 CT003 ZA02 HSS bearing 2 temperature. 10 minute maximum value 11 MCD01 CT003 ZA03 HSS bearing 2 temperature. 10 minute minimum value 11 MCD01 CT003 ZA04 HSS bearing 2 temperature. 10 minute standard deviation    11 MCD01 CT004 XA01 Oil sump temperature.  Instantaneous value  11 MCD01 CT004 ZA01 Oil sump temperature. 10 minute average value 11 MCD01 CT004 ZA02 Oil sump temperature. 10 minute maximum value 11 MCD01 CT004 ZA03 Oil sump temperature. 10 minute minimum value 11 MCD01 CT004 ZA04 Oil sump temperature. 10 minute standard deviation    11 MCD01 CY001 ZA21 LSS main bearing vibration RMS total level 11 MCD01 CY001 ZA22 LSS main bearing vibration. FFT spectrum 11 MCD01 CY001 ZA23 LSS main bearing vibration. FFT-enveloped spectrum    11 MCD01 CY001 ZA21 HSS bearing 1 vibration RMS total level 11 MCD01 CY001 ZA22 HSS bearing 1 vibration. FFT spectrum 11 MCD01 CY001 ZA23 HSS bearing 1 vibration. FFT-enveloped spectrum    11 MCD01 CY001 ZA21 HSS bearing 2 vibration RMS total level 11 MCD01 CY001 ZA22 HSS bearing 2 vibration. FFT spectrum 11 MCD01 CY001 ZA23 HSS bearing 2 vibration. FFT-enveloped spectrum    11 MCD01 AP001 XB01 Gear lube oil pump. Operating    11 MCD01 AN001 XB01 Gear oil cooler fan. Operating    11 MCD01 CP001 XB01 Lube oil f ilter, diff. pressure. High 
+   11 MCD01 CT005 XA01 Lube oil temperature after cooler.  Instantaneous value  11 MCD01 CT005 ZA01 Lube oil temperature after cooler. 10 minute average value 11 MCD01 CT005 ZA02 Lube oil temperature after cooler. 10 minute maximum value 11 MCD01 CT005 ZA03 Lube oil temperature after cooler. 10 minute minimum value 11 MCD01 CT005 ZA04 Lube oil temperature after cooler. 10 minute standard deviation 
+   
+ELFORSK  
+   
+ 
+ 
+Page 23 6.3 Analogue Signals 
+All analogue process values shall be accessible in  standard SI-units or other physical units. 
+Analogue values “at the source” shall be availabl e as real-time on-line instant data as well as 
+time averaged values. The values shall be ava ilable for display on operator HMI as well as for 
+storage (databases). Updating of analogue on-line values shall be selectable down to an inter-
+val of 1 sec. All averaged values must be st ored in the plant controller for retransmission on 
+demand. For averaged values the accuracy of the start time of the period shall be better than 
+10 ms. Some process values are not required as measurem ents directly at the source. The values shall 
+be accessible as processed data in a condensed and analysed format. This for instance is the 
+case for condition monitoring of components such as gearbox bearings. 
+6.4 Set point commands 
+Values for local functions could be sent as set points. A confirmation of the set point update is 
+required. 
+6.5 Binary Signals 
+All binary process values shall be accessible. Binary values shall be available as real-time on-
+line instant data. The values shall be available for display on operator HMI as well as for stor-
+age (databases). The values shall be stored a nd displayed at level shift with the corresponding 
+date and time tag. Updating of binary on-line values  shall be selectable down to an interval of 
+1 sec.  
+6.6 Binary control commands 
+A handshake procedure is required for all comma nds that start or stop a mechanical compo-
+nent, influence the status or operation mode of  the wind turbine or change the software. All 
+other control commands shall give a response with the result of the command. The binary commands may also include activa tion and deactivation of programs and parame-
+ter changes. 
+6.7 Alarms 
+Operational alarms must be transmitted immedi ately after a triggering. A triggering is typi-
+cally initiated at any event that results in an au tomatic stop of the wind turbine, any event that 
+causes an emergency stop or any other alarm-causi ng event. The alarms shall be available for 
+display on operator HMI as well as for storage (databases).  
+6.8 Events 
+Operational events must be stored in an even t log in the plant controller for transmission on 
+demand. 
+6.9 Counters 
+Counters shall be understood as any value accumula ted in time originating in the process such 
+as hour counters, production counters, counters for operational modes, timer’s etc. Counters 
+shall be available for display on operator HMI as  well as for storage (databases). The values 
+shall be stored with a corresponding date and time tag. Updating of counters shall be select-
+able down to an interval of 1 sec. All values must be stored in the plant controller for trans-
+mission on demand. 
+ELFORSK  
+   
+ 
+   
+Page 24 6.10  Timers 
+The timers make it possible to determine the time for the important states in the wind turbine, 
+e.g. Generator on-time, Yawing time and Free to operate time. It should be possible to reset all the timers and the ‘Reset date’ shall be stored as a separate item. 
+6.11  Grouped data 
+Data values can be grouped based on logical re lationships between the data, as chronologi-
+cally ordered data, as text etc. This section in cludes a description of different ways to put to-
+gether sets of data. 
+6.11.1  Data structures 
+Data structures typically include several kinds of related data, for example the description of 
+an object. 
+6.11.2  Time series data 
+Time series data are time based data values for a specific object attribute, for example sam-
+pled data, metering data, etc. 
+6.11.3  Short text messages 
+It should be possible to exchange text message s between the wind power plant and the control 
+centre using standard readable text, such as ASCII or Unicode (UTF16). 
+6.11.4  Files 
+Typically files will be used for upload and download of programs etc. 
+6.12  Local data storage and handling 
+The examples in this section are included for informative purpose. Requirements on local data 
+storage and handling do not effect the communication solution. 
+6.12.1  Analogue values 
+Selected analogue values shall be stored in FIFO-buffers. The sampling rate of analogue val-
+ues shall be high enough to characterise events a nd to determine the cause of faults. A typical 
+sampling rate could be 25 Hz. The size of the buffers for analogue values sha ll correspond to a time span starting at 1 minute 
+before a triggering and ending at  1 minute after a triggering. A triggering is initiated at any 
+event that results in an automatic stop of th e wind turbine, any event that causes an emer-
+gency stop, or any manual stop command (local or remote request). Additionally it shall be possible to start a sca nning of selected analogue values at a sampling 
+rate up to 25 Hz and a selectable duration. Th e entire mentioned high rate scanning must be 
+stored in the plant controller. Transfer of data  in the buffers shall be carried out without syn-
+chronism with real-time. 
+6.12.2  Binary values 
+All binary values must be stored in the plant controller for retransmission on demand. Additionally it shall be possible to start a scanni ng of selected binary values at a selectable 
+duration. All the mentioned scanning must be stored in the plant controller. Transfer of data in 
+the buffers shall be carried out without synchronism with real-time. 
+ELFORSK  
+   
+ 
+ 
+Page 25 6.12.3  Alarm logging 
+Alarms must be stored in an alarm log. All alarms must be stored in the plant controller for 
+transmission on demand. The buffer depth shall be at  least one year. Transfer of data in the 
+buffer shall be carried out without synchronism with real-time.  
+6.12.4  Event log 
+The buffer depth of the event log shall be at leas t one year. Transfer of data in the buffer shall 
+be carried out without synchronism with real-time. 
+6.12.5  Counters 
+The buffer size for every counter shall be at least 20 years of operation with 5000 full load 
+hours per year. 
+ELFORSK  
+   
+ 
+   
+Page 26 7 References 
+ 
+1. IEC 50(415), International Electrotechnical  Vocabulary – Chapter 415: Wind Turbine 
+Systems, Terminology 
+2. IEC 870-1-3, Power System Control and Associated Communications, Glossary 
+3. IEC61850-02, Communication Networks and Systems in Substations, Glossary 
+ELFORSK  
+   
+ 
+ 
+Page 27 8 Appendices 
+A: Technical Solutions 
+Appendix A describes some proposed solutions  that should correspond to the specification. 
+The intention is to have these concrete solutions as a guideline for the suppliers affected. It is therefore important that the solutions have been validated against the requirements. 
+B: Protocols 
+Some of the suggested protocols, proposed in  Appendix A, have been summarised and inves-
+tigated in this appendix. 
+C: Data lists 
+The data from the wind power plant as well as the data sent to the wind power plant are pre-
+sented as grouped data lists in this appendix. 
+ELFORSK  
+   
+ 
+   
+Page 28  
+ELFORSK  
+   
+ 
+ 
+Page A- 1  
+A Appendix A, Technical solutions 
+A.1 Introduction 
+This appendix present some examples on technical  solutions to fulfil the requirements stated 
+in the main document. 
+A.2 Network structure and interfaces 
+The communication network on which data transac tions shall take place may be organised as 
+one of the following systems: - Network system with interface at the individual nodes 
+- Network system with interface at the Wind Farm Server 
+- Network system with interface to existing older control system/RTU 
+Network System 1 (interface level at the individual nodes) 
+The basics of this structure are illustrated in  Figure A1. The network structure can be summa-
+rised as follow: 1. The network consists of interconnected LAN’ s. A Wind Farm LAN is established at the 
+wind farm and is connected to an operator LAN. The wind farm LAN is a logical LAN. 
+Any topology is possible. 
+2. The specifications for data transmission in this specification apply to the individual nodes 
+in the Wind Farm LAN 
+3. At the individual nodes, the methods for ac quisition and compilation of data are con-
+ducted on basis of individual, proprietary me thods not subject to this specification. 
+4. Connection to ”other” parties (e.g. vendor) is  established through gateways to the com-
+munication protocol and media of their choice. 
+5.  
+ 
+ LAN at Wind farmWAN/LAN at operator
+Interface levelWind Farm
+ServerHMI’s for supervisonand maintenanceCommunication
+server Application
+serverMaintenance
+server
+Control
+unit
+ 
+ 
+  Figure A1 : Network System 1. Interface level at the individual nodes. 
+ 
+ELFORSK  
+   
+ 
+   
+Page A-2 Network System 2 (interface level at the Wind Farm Server) 
+The basics of this structure are illustrated in  Figure A2. The network structure can be summa-
+rised as follow:  
+1. The network consists of interconnected LAN’ s. A Wind Farm LAN is established at the 
+wind farm and is connected to an operator LAN 
+2. A Wind Farm Server is gateway between th e Wind Farm LAN and the operator LAN. The 
+server should be transparent for all data necessary for operational or control functions. 
+3. The specifications for data transmission in this specification apply to the Wind Farm 
+Server but not to the individual nodes in the Wind Farm LAN 
+4. Methods for acquisition and compilation of da ta in the Wind Farm are conducted on basis 
+of individual, proprietary methods not subject  to this specification, except for functional 
+specifications and requirements due to data properties. 
+6. Connection to ”other” parties (e.g. vendor) 
+  
+LAN at Wind farmWAN/LAN at operatorInterface level
+Wind Farm
+ServerHMI’s for supervisonand maintenanceCommunication
+server Application
+serverMaintenance
+server
+Control
+unit
+ 
+ 
+Figure A2 . Network System 2. Interface level at the Wind Farm Server. 
+ 
+Network System 3 (interface to legacy control systems) 
+The basics of this structure are illustrated in  Figure A3. The network structure can be summa-
+rised as follow: 
+ 
+1. The network consists of dial-up RTUs. 
+  
+ELFORSK  
+   
+ 
+ 
+Page A- 3 Wind farm LANWAN/LAN at operator
+Interface level
+Wind Farm
+Server
+Wind Farm
+Single Wind Turbine or
+Wind Turbine ClusterHMI’s for supervison
+and maintenanceCommunication
+serverApplication
+serverMaintenance
+server
+Control
+unitControl
+unit
+ 
+ 
+ Figure A3 . Network System 3. Interface to legacy control system/RTU 
+  
+A.3 Communication protocol stack functionality 
+Communication reference model 
+The layered architectural guidelines of the In ternational Standardisation Organisation (ISO) 
+Open Systems Interconnect (OSI) reference model is here used. The model includes 7 layers as described in Figure A4.  
+ OSI Layer Purpose Services Provided 
+7 Application Application Compatibility Data object s and types, Network services, File transfer. 
+6 Presentation Data Interpretation Encoding of message data 
+5 Session Control Request-Response, Authentication 
+4 Transport End-to End Reliability End-to End acknowledgement, Packet Sequencing, Priority 
+3 Network Message Delivery Unicast and Multicast Addressing, Packet routing 
+2 Link Media Access and Framing Framing, Data Encoding, CRC Error Checking, Media 
+Access, Collision Avoidance & Detection, Priority 
+1 Physical Electrical Interc onnect Media-specific Interfaces  and Modulation Schemes. 
+ 
+Figure A4 : The Open Systems Interconnect (OSI) reference model 
+ Layer 4 provides (together with layer 1, 2 and 3) the transport service for the messages de-
+fined in layer 7, the Application layer. The tr ansmission protocols could be any one of the 
+standards defined by ISO, such as OSI TP4, the In ternet protocol TCP, or any other protocol. 
+ELFORSK  
+   
+ 
+   
+Page A-4  
+Basic requirements and assumptions 
+The following requirements and assumptions are basis for the network systems: 
+• The physical transmission media could be a ny media, such as direct phone connection 
+(e.g. ISDN or analogue), Internet, GSM, or radio link 
+• The network is based on Ethernet standards and procedures 
+• The network shall operate on TCP/IP- standards and procedures 
+• The system shall allow for several protocol s and procedures simultaneously on the same 
+network, e.g. file-transfer shall be possible on the same network simultaneously with data 
+transfer to/from wind turbines 
+• At each physical location in the network a num ber of nodes shall be defined. E.g. at a sin-
+gle wind turbine, more than one individual addr ess may be needed to connect to different 
+subsystems. 
+• Establishment, maintenance and release of c onnections/associations are to be handled by 
+the communication system. 
+• The communication system should guarantee with a specified availability that messages 
+are received in the same order as they are sent. 
+• Message priority may be needed in case of limited capacity. 
+• Flow control and error control may be provided. 
+ 
+Protocol stacks 
+ 
+ OSI Layer OPC IEC60870-5-101 IEC60870-5-104 IEC 60870-6  IEC 61850 
+7 Application OPC IEC 60870-5-101 IEC 60870-5-104
+User/TCP Inter-face IEC 60870-6-
+503/702/802  MMS et al. 
+6 Presentation DCOM - - ISO 8822/8823   
+5 Session  - - ISO 8326/8327   
+4 Transport TCP/IP - TCP/IP OSI TP4 TCP/IP OSI TP4 or 
+TCP/IP 
+3 Network  -     
+2 Link  IEC 60870-5-2 
+IEC 60870-5-1     
+1 Physical  Selected ITU-T 
+Recommend.     
+ 
+Figure A5 : Alternative protocol stacks for different network solutions 
+ 
+OPC 
+The OPC Specification is a non-proprietary techni cal specification that de fines a set of stan-
+dard interfaces based upon Microsoft's OLE/ COM technology. The application of the OPC 
+standard interface makes possible interoperab ility between automation/control applications, 
+field systems/devices and business/office appli cations. OPC (originally OLE for Process Con-
+trol) defines a common interface that can be used by HMI, SCADA, Control and custom ap-plications to exchange data with hardware field devices. The specifi cation defines a method 
+for exchanging real time automation data among PC-based clients using Microsoft operating 
+systems. The organisation that manages this standard is the OPC Foundation. 
+ELFORSK  
+   
+ 
+ 
+Page A- 5 Companion standard profiles IEC 60870-5-101 and -104 
+IEC 60870-5-101 and -104 are companion standard profiles, particularly aimed at "telecon-
+trol, teleprotection, and associated telecommuni cations for electric power systems", specifi-
+cally for RTUs and IED (Intelligent Electronic Devices). The companion standards are com-
+posed of a selection of the different reco mmendations and alternatives provided by IEC 
+60870-5-1,...,-5. Functionality for IEC 60870-5-101 is re lated to layers 1,2, and 7 in the OSI 
+model. IEC 60870-5-104 also includes functionality on layer 3 and 4, in order to provide net-
+work transport functionality. 
+The MMS Companion standard TASE.2 (ICCP) 
+TASE stands for Telecontrol Application Servi ce Element. The name ICCP, which stands for 
+Inter-control Center Communication Protocol  is also often used. IEC 60870-6-503 TASE.2 
+Services and Protocol definitions and –802 Obj ect models for TASE.2 include exchange of 
+telecontrol data, such as real time indications , event notifications and control operations but 
+also other control centre data such as time series, scheduling and accounting information. TASE-2 (ICCP) resides on layer 7 in the OSI-mode l and is an MMS companion standard, that 
+is, the general MMS services have been partic ularised for telecontrol applications. The ob-
+jects to be manipulated have also been defi ned. As a transport profile TASE.2 can use both 
+OSI-transport protocols for connection-orient ed transport, defined in IEC 60870-6-602, and 
+TCP/IP, in accordance with the Internet RFC 1006. 
+IEC 61850-X 
+The standard IEC 61850 is being develope d by IEC TC 57 Working Groups 10, 11, and 12. 
+The objective is to improve substation device data integration. The standards applied in IEC 61850 (e.g., Ethernet, TCP/IP, XML for system configuration, and MMS) define and ex-
+change real-time data and metadata. IEC 61850 use object models of device functions and 
+device components (logical devices composed of  logical nodes and data objects). These mod-
+els define common data formats, identifiers, a nd controls, e.g., for substation and feeder de-
+vices such as measurement unit, switches, voltage regulators, and protection relays. The Abstract communication service interface (ACSI, 61850-7-2) provides a common set of 
+communication services for data access, reporti ng, logging, control applications and related 
+support. The ACSI services are abstract a nd are mapped to existing communication applica-
+tion layer standards. MMS (ISO 9506) is the service specification applied in 61850-8-1. IEC 
+61850 includes two primary 7 layer profiles (OSI standards and TCP/IP). 
+A.4 XML 
+XML stands for eXtensible Markup Language. XM L is a set of rules for defining semantic 
+tags that breaks a document into parts and identify the different parts of the document. It is a meta-markeup language that defines a syntax used  to define other domain-specific, semantic, 
+structured markup languages. Since XML is non-pr oprietary and easy to read and write, it's an 
+excellent format for the interchange of data among different applications. The XML data can 
+be transmitted over TCP/IP or other layers  like simple RS232. OFX (Open Financial Ex-
+change Format) is an example for an XML defi nition of data interchange between financial 
+applications. A format for exchanging data be tween wind power plants and a control system, 
+named for example Open Windmill Exchange Format (OWX), can be defined. The organiza-tion that manages the XML standard is W3C. 
+ELFORSK  
+   
+ 
+   
+Page A-6  
+  ELFORSK  
+   
+ 
+ 
+ Page B- 1 B Appendix B, Protocols 
+This appendix is included for informative purpos e. The list is by no mean exhaustive. There 
+are several protocols missing. For instance the IEC 61850 suite is not described. On several places a question mark indicate that the authors of this document do not have any 
+information on whether the protocol support that  particular requirement. Furthermore, for 
+many of the requirements where there is a yes, no or any other comment, the analysis done is 
+not very extensive. For instance, the comments in this section are not based on results from 
+any practical tests.  
+ Name of the proto-
+col OPC IEC 60870-6/TASE.2 
+(ICCP) IEC 60870-5, -101 to -104 
+A. Background/ 
+area of use Process industry Power system control Power system control 
+B. Applicability Between client applications 
+and OPC servers on busi-ness and process level. Between control centres 
+(CC) or from CC to sta-tions. Real-time commu-nication. Between stations and CC. 
+101 for basic telecontrol, 102 for transmission of integrated totals (metering),103 for protection equip. 104 for telecontrol over network connection. 
+C. Functionality Data Access, Alarm and 
+Event Handling, Historical Data Access  101/104: status, position, 
+measurements, totals, events, parameter, com-mands, set point, file trans-fer 
+1. Basic services    
+2. Functional require-
+ments, wind turbine data    
+2.1 Function support    
+ Operational and 
+Control Yes Yes Yes 
+ System management ? Yes ? 
+2.2 Data transfer princi-
+ples    
+ Periodic data trans-
+fer Yes Yes Yes 
+ Data transfer on 
+demand Yes Yes Yes 
+ Event driven data 
+transfer Yes Yes Yes 
+ Command transfer Yes Yes Yes 
+ Set point transfer ? ? ? 
+2.3 Transfer of informa-
+tion/data    
+ Measure-
+ments/analogue values Yes Yes Yes 
+ Set points Yes Yes Yes 
+ Binary signals/Status 
+data Yes Yes Yes 
+ Binary control-
+commands Yes Yes Yes 
+ Alarms Yes Yes Yes 
+ELFORSK  
+   
+ 
+   
+Page B- 2  Name of the proto-
+col OPC IEC 60870-6/TASE.2 
+(ICCP) IEC 60870-5, -101 to -104 
+ Events Yes Yes Yes 
+ Counters ? ? ? 
+ Timers ? ? ? 
+ Data structures Yes Yes Yes 
+ Time series data ? Yes Yes 
+ Short text messages ? Yes No 
+ Files ? Yes No 
+2.4 General require-
+ments for all data types    
+ Data stamped with 
+‘last updated date + time’. ? ? ? 
+ Reading of grouped 
+analogue and digital values in a single transaction ? Yes Yes 
+3 Technical require-
+ments    
+3.1 Network structure    
+ Can operate on 
+TCP/IP Yes Yes No 
+ Several protocols 
+simultaneously on the same network. Yes Yes Yes, with 104 
+ Several number of 
+nodes at one physi-cal location in the network. Yes Yes ? 
+3.2 Interface levels    
+ At the individual 
+nodes ? ? Not likely 
+ At the Wind Farm 
+Server ? ? ? 
+ To legacy control 
+systems Only by using protocol 
+gateways Only by using protocol 
+gateways Only by using protocol 
+gateways 
+3.3 Security    
+ Authentication ? Yes No 
+ Data integrity ? Yes Yes 
+ Data confidentiality ? ? No 
+3.4 Reliability ? ? ? 
+D. Protocols and ser-
+vices    
+ Application/message 
+protocol OPC ICCP mapped on MMS. 
+Data access by name. According to IEC 60870-5-
+101. No data access by name. 
+ Transmission proto-
+col TCP/IP on Ethernet Transport protocol could 
+be TCP or TP4. No network protocol for 
+101-103 (point to point). 
+ Message priority ? Yes ? 
+ Flow control and 
+error control ? Yes Yes 
+E. Performance ? ? ? 
+F. Realisations Thousands of installations 
+all over the world. Over 100. 
+Chosen for URTICA. Expected to be THE pro-? 
+Based on old solution for remote communication. 
+  ELFORSK  
+   
+ 
+ 
+ Page B- 3  Name of the proto-
+col OPC IEC 60870-6/TASE.2 
+(ICCP) IEC 60870-5, -101 to -104 
+tocol for inter-control 
+centre communication. Newer alternative to IEC 60870-5 for telecontrol. MMS is EPRIs recom-mended protocol for all real-time communication.  Heavily supported by Ger-
+man organisations. 
+G. Standardisation De veloped and supported 
+by OPC Foundation, a non-profit organisation. Not possible as a de jure standard because it is based on Microsoft’s OLE/COM technology which will not be accepted by IEC. It can be considered a de facto standard in Windows envi-ronment. Developed and supported 
+by IEC as an international standard. Developed and supported 
+by IEC as an international standard. 
+H. Products and ser-
+vices Multiple number of prod-
+ucts and good technical support. Limited number of prod-
+ucts and knowledge. Limited number of prod-
+ucts. 
+ 
+ELFORSK  
+   
+ 
+   
+Page B- 4  
+ELFORSK  
+   
+ 
+  
+Page C-
+1 C Appendix C, Data list 
+C.1 Purpose 
+This data list is an example included for info rmative purpose. It is a Danish example and 
+therefore the data descriptions are in Danis h. However the authors of this Specification hope 
+that the name of each data is suffiecient for understanding the definition of the data. 
+C.2 Properties of the data 
+The data can be described by the following properties: 
+- Name (SignalID) 
+- Description 
+- Unit 
+- Kind (ANalogue SIGnal, SET Point, BINary SIGnal, BINary control COMmand, ALarm, 
+EVent, COUnter, TIMer, data STRUCTure, Time SERie, short TEXT message, FILE) 
+- Accuracy 
+- Priority (HIgh, LOw) 
+- Time tag 
+- Remark 
+C.3 Data groups (accordance Section 6.3-6.11) 
+Analogue signals (ANSIG) 
+- Analogue signals 
+Set point commands (SETP) - Low priority signals - set points 
+- High priority signals - set points 
+Binary signals (BINSIG) - Status (binary) 
+- Binary signals 
+Binary control commands (BINCOM) - Low priority signals – instructions 
+- High priority signals - binary commands 
+Alarms and alarm logging (AL) - Alarms and alarm log 
+Event and event logging (EV) - Event log 
+Counters (COU) - Counters - number of activations 
+- Production counters 
+Timers (TIM) - Timers (accumulated time) 
+Data structures (STRUCT) Time series (SER) Short text message (TEXT) File (FILE) 
+ELFORSK  
+   
+ 
+   
+Page C-2 C.4 Data list example 
+ 
+Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+Analogue signals          
+ActivePower Aktuelle aktive effekt kW  ANSIG 1%    
+ActivePowerPot Aktuelle potentielle aktive effekt kW  ANSIG 1%    
+AmbTemp Omgivelsestemperatur °C  ANSIG 1%    
+BladeAngle Bladvinkel °  ANSIG 1%    
+BrakeTemp Temp. skivebremse/klodser °C  ANSIG 1%    
+BrakeWear Bremseslid-måling %  ANSIG 1%    
+CosFi Cos φ -værdi -  ANSIG 1%    
+Frequency Netfrekvens (lokalt) Hz  ANSIG 1%    
+GearOilHotSpot Temp. gear hotspot °C  ANSIG 1%    
+GearOilInTemp Temp. køleolie-ind °C  ANSIG 1%    
+GearOilOutTemp Temp. køleolie-ind °C  ANSIG 1%    
+Gen1InTemp Kølemedietemp. Gen1 ind °C  ANSIG 1%    
+Gen1OutTemp Kølemedietemp. Gen1 ud °C  ANSIG 1%    
+Gen2InTemp Kølemedietemp. Gen2 ind °C  ANSIG 1%    
+Gen2OutTemp Kølemedietemp. Gen2 ud °C  ANSIG 1%    
+Generator1RPM Generator1 omdrejninger RPM  ANSIG 1%    
+Generator1Temp1 Viklingstemp. Gen1 måling1 °C  ANSIG 1%    
+Generator1Temp2 Viklingstemp. Gen1 måling2 °C  ANSIG 1%    
+Generator1Temp3 Viklingstemp. Gen1 måling3 °C  ANSIG 1%    
+Generator2RPM Generator2 omdrejninger RPM  ANSIG 1%    
+Generator2Temp1 Viklingstemp. Gen2 måling1 °C  ANSIG 1%    
+Generator2Temp2 Viklingstemp. Gen2 måling2 °C  ANSIG 1%    
+Generator2Temp3 Viklingstemp. Gen2 måling3 °C  ANSIG 1%    
+HSBearingTemp Geartemp.  HS-leje °C  ANSIG 1%    
+HSGen1Temp Temp.  HS-leje gen1 °C  ANSIG 1%    
+HSGen2Temp Temp.  HS-leje gen2 °C  ANSIG 1%    
+HydraulicPres Hydrauliktryk Bar  ANSIG 1%    
+ELFORSK  
+   
+ 
+  
+Page C-
+3 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+HydraulicTemp Hydrauliktemperatur °C  ANSIG 1%    
+L1Current Strøm fase1 LV A  ANSIG 1%    
+L1Voltage Spænding fase1 LV V  ANSIG 1%    
+L2Current Strøm fase2 LV A  ANSIG 1%    
+L2Voltage Spænding fase2 LV V  ANSIG 1%    
+L3Current Strøm fase3 LV A  ANSIG 1%    
+L3Voltage Spænding fase3 LV V  ANSIG 1%    
+LSBearingTemp Geartemp.  LS-leje °C  ANSIG 1%    
+MainBearingTemp Hovedlejetemperatur °C  ANSIG 1%    
+MSBearingTemp Geartemp.  MS-leje °C  ANSIG 1%    
+NacelleHumid Kabine luftfugtighed %RH  ANSIG 1%    
+NacelleTemp Kabinetemperatur °C  ANSIG 1%    
+ReactivePower Reaktiv effekt kVAr  ANSIG 1%    
+RotorPosition Rotorpos. refererende til blad1 °  ANSIG 1%    
+RotorRPM Rotoromdrejninger RPM  ANSIG 1%    
+TanFi Tg φ -værdi   ANSIG 1%    
+WindSpeed Vindhastighed (lokalt) m/s  ANSIG 1%    
+YawAngle Krøjevinkel °  ANSIG 1%    
+YawError Krøjefejl °  ANSIG 1%    
+YawMotor1Temp Viklingstemp. Krøjedrev1 °C  ANSIG 1%    
+YawMotor2Temp Viklingstemp. Krøjedrev2 °C  ANSIG 1%    
+Low priority signals - set points          
+SetWTReactivePower Setpunkt absolut kVAr kVAr  SETP 1% LO   
+SetWTRotorPosition Rotorpos. refererende til blad1 °  SETP 1% LO   
+SetWTFlicker Setpunkt for flicker-regulering -  SETP 1% LO   
+SetWTTanFi Setpunkt tg φ -  SETP 1% LO   
+SetWTCosFi Setpunkt cos φ -  SETP 1% LO   
+High priority signals - set points          
+SetWTPower Setpunkt absolut aktiv effekt kW  SETP 1% HI   
+SetWTPctPower Setpunkt relativ aktiv effekt %  SETP 1% HI  Relative to potential (kW) 
+ELFORSK  
+   
+ 
+   
+Page C-4 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+Status (binary)          
+AutoRewind Undertilstand: Udsnoning pågår "True"  BINSIG   Date+time Counter +1 on shift to true 
+AutoRewind Undertilstand: Udsnoning inaktiv "False"  BINSIG   Date+time  
+AwaitingAutoReset Undertilstand: Afventer auto-reset "True"  BINSIG   Date+time Counter +1 on shift to true 
+AwaitingAutoReset Undertilstand: Afventer ikke auto-reset "False"  BINSIG   Date+time  
+AwaitingAutoRewind Undertilstand: Udsnoning afventes "True"  BINSIG   Date+time Counter +1 on shift to true 
+AwaitingAutoRewind Undertilstand: Udsnoni ng ikke påkrævet "False"  BINSIG   Date+time  
+AwaitingManualReset Undertilstand: Afventer manuelt reset "True"  BINSIG   Date+time Counter +1 on shift to true 
+AwaitingManualReset Undertilstand: Afventer ikke manuelt reset "False"  BINSIG   Date+time  
+AwaitingRemoteReset Undertilstand: Afventer fjernreset "True"  BINSIG   Date+time Counter +1 on shift to true 
+AwaitingRemoteReset Undertilstand: Afventer ikke fjernreset "False"  BINSIG   Date+time  
+AwaitingTimeDelay Undertilstand: Afventer udløb af tidsforsinkelse "True"  BINSIG   Date+time Counter +1 on shift to true 
+AwaitingTimeDelay Undertilstand: Afventer ikke tidsforsinkelse "False"  BINSIG   Date+time  
+ExternalFault Undertilstand: Ekstern fejl "True"  BINSIG   Date+time Counter +1 on shift to true 
+ExternalFault Undertilstand: Ingen eksterne fejl "False"  BINSIG   Date+time  
+HighWind Undertilstand: Vindhastighed for høj "True"  BINSIG   Date+time Counter +1 on shift to true 
+HighWind Undertilstand: Vindhas tighed ikke for høj "False"  BINSIG   Date+time  
+Idling Hovedtilstand: Friløb "True"  BINSIG   Date+time Counter +1 on shift to true 
+Idling Hovedtilstand: Ikke i Friløb  "False"  BINSIG   Date+time  
+InternalFault Undertilstand: Vindmøllefejl "True"  BINSIG   Date+time Counter +1 on shift to true 
+InternalFault Undertilstand: Ingen vindmøllefejl "False"  BINSIG   Date+time  
+IsolatedOperation Undertilstand: Autonom drift aktiv "True"  BINSIG   Date+time Counter +1 on shift to true 
+IsolatedOperation Undertilstand: Koordineret drift aktiv "False"  BINSIG   Date+time  
+ManualMode Undertilstand: Manuel betjening aktiv "True"  BINSIG   Date+time Counter +1 on shift to true 
+ManualMode Undertilstand: Manuel betjening inaktiv "False"  BINSIG   Date+time  
+NacelleOutOfWind Undertilstand: Kabine ikke krøjet op i vinden "True"  BINSIG   Date+time Counter +1 on shift to true 
+NacelleOutOfWind Undertilstand: Kabine krøjet op i vinden "False"  BINSIG   Date+time  
+Operation Hovedtilstand: Drift "True"  BINSIG   Date+time Counter +1 on shift to true 
+Operation Hovedtilstand: Ikke i Drift  "False"  BINSIG   Date+time  
+OperationAccepted Undertilstand: Frigivet til at producere "True"  BINSIG   Date+time Counter +1 on shift to true 
+OperationAccepted Undertilstand: Ikke frigivet til at producere "False"  BINSIG   Date+time  
+ShutDown Hovedtilstand: Afbrudt "True"  BINSIG   Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+  
+Page C-
+5 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+ShutDown Hovedtilstand: Ikke Afbrudt "False"  BINSIG   Date+time  
+Stopped Hovedtilstand: Parkeret "True"  BINSIG   Date+time Counter +1 on shift to true 
+Stopped Hovedtilstand: Ikke Parkeret "False"  BINSIG   Date+time  
+SystemFault Undertilstand: Systemfejl "True"  BINSIG   Date+time Counter +1 on shift to true 
+SystemFault Undertilstand: Ingen systemfejl "False"  BINSIG   Date+time  
+YawingAccepted Undertilstand: Frigivet til at krøje "True"  BINSIG   Date+time Counter +1 on shift to true 
+YawingAccepted Undertilstand: Ikke frigivet til at krøje "False"  BINSIG   Date+time  
+Binary signals          
+BalanceRegOn Balanceregulering aktiveret centralt "True" 1 BINSIG     
+BalanceRegOn Balanceregulering d eaktiveret centralt "False" 0 BINSIG     
+BladeBrakeOn Vingebremse aktiveret "True" 1 BINSIG     
+BladeBrakeOn Vingebremse deaktiveret "False" 0 BINSIG     
+Compensation1On Reaktivkompensering trin1aktiv "True" 1 BINSIG     
+Compensation1On Reaktivkompensering trin1inaktiv "False" 0 BINSIG     
+Compensation2On Reaktivkompensering trin2aktiv "True" 1 BINSIG     
+Compensation2On Reaktivkompensering trin2inaktiv "False" 0 BINSIG     
+CompensationOn Reaktivkompensering aktiv "True" 1 BINSIG     
+CompensationOn Reaktivkompensering inaktiv "False" 0 BINSIG     
+CosFiRegOn Regulering efter cos φ –reference aktiv "True" 1 BINSIG     
+CosFiRegOn Regulering efter cos φ –reference inaktiv "False" 0 BINSIG     
+DiscBrakeOn Skivebremse aktiveret "True" 1 BINSIG     
+DiscBrakeOn Skivebremse deaktiveret "False" 0 BINSIG     
+EmergencyStopOn Manuelt nødstoptryk aktiveret "True" 1 BINSIG     
+EmergencyStopOn Manuelt nødstoptryk deaktiveret "False" 0 BINSIG     
+FlickerRegOn Flicker-regulering aktiv  "True" 1 BINSIG     
+FlickerRegOn Flicker-regulering inaktiv "False" 0 BINSIG     
+FreqRegOn Frekvensregulering aktiv "True" 1 BINSIG     
+FreqRegOn Frekvensregulering inaktiv "False" 0 BINSIG     
+GearOilFilterOn Gearoliefiltervagt aktiv "True" 1 BINSIG     
+GearOilFilterOn Gearoliefiltervagt inaktiv "False" 0 BINSIG     
+GearOilFlowOn Gearolieflowvagt aktiv "True" 1 BINSIG     
+ELFORSK  
+   
+ 
+   
+Page C-6 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+GearOilFlowOn Gearolieflowvagt inaktiv "False" 0 BINSIG     
+GearOilMagnetOn Gearoliemagnetvagt aktiv "True" 1 BINSIG     
+GearOilMagnetOn Gearoliemagnetvagt inaktiv "False" 0 BINSIG     
+GearOilPumpOn Gearoliepumpe aktiv "True" 1 BINSIG     
+GearOilPumpOn Gearoliepumpe inaktiv "False" 0 BINSIG     
+GearOilPumpThermalOut Gearoliepumpe termisk inde "True" 1 BINSIG     
+GearOilPumpThermalOut Gearoliepumpe termisk ude  "False" 0 BINSIG     
+Gen1MagneticOut Generator1 magnetisk inde (maks-afbr.) "True" 1 BINSIG     
+Gen1MagneticOut Generator1 magnetisk ude (maks-afbr.) "False" 0 BINSIG     
+Gen1ThermalOut Generator1 termisk inde (maks-afbr.) "True" 1 BINSIG     
+Gen1ThermalOut Generator1 termisk ude (maks-afbr.) "False" 0 BINSIG     
+Gen2MagneticOut Generator2 magnetisk inde (maks-afbr.) "True" 1 BINSIG     
+Gen2MagneticOut Generator2 magnetisk ude (maks-afbr.) "False" 0 BINSIG     
+Gen2ThermalOut Generator2 termisk inde (maks-afbr.) "True" 1 BINSIG     
+Gen2ThermalOut Generator2 termisk ude (maks-afbr.) "False" 0 BINSIG     
+GenCoolingFlowOn Generatorkøleflowvagt aktiv "True" 1 BINSIG     
+GenCoolingFlowOn Generatorkøleflowvagt inaktiv "False" 0 BINSIG     
+Generator1On Generator1 indkoblet "True" 1 BINSIG     
+Generator1On Generator1 udkoblet "False" 0 BINSIG     
+Generator2On Generator2 indkoblet "True" 1 BINSIG     
+Generator2On Generator2 udkoblet "False" 0 BINSIG     
+GeneratorCoolingOn Generatorblæser el. kølepumpe aktiv "True" 1 BINSIG     
+GeneratorCoolingOn Generatorblæser el. kølepumpe inaktiv "False" 0 BINSIG     
+GradientRegOn Gradientbegrænsning aktiv "True" 1 BINSIG     
+GradientRegOn Gradientbegrænsning inaktiv "False" 0 BINSIG     
+HubArrestOn Navarretering aktiveret "True" 1 BINSIG     
+HubArrestOn Navarretering deaktiveret "False" 0 BINSIG     
+HydraulicPumpOn Hydraulikpumpe aktiv "True" 1 BINSIG     
+HydraulicPumpOn Hydraulikpumpe inaktiv "False" 0 BINSIG     
+KVArRegOn Regulering efter kVAr-reference aktiv "True" 1 BINSIG     
+KVArRegOn Regulering efter kVAr-reference inaktiv "False" 0 BINSIG     
+LocalReactivePowerRefOn Lokal reaktiv effektreference aktiv  "True" 1 BINSIG     
+ELFORSK  
+   
+ 
+  
+Page C-
+7 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+LocalReactivePowerRefOn Lokal reaktiv effektreference inaktiv "False" 0 BINSIG     
+LVCircuitBreakerOn Lavspændingsmaksimalafbryder inde "True" 1 BINSIG     
+LVCircuitBreakerOn Lavspændingsmaksimalafbryder ude "False" 0 BINSIG     
+MVCircuitBreakerOn Effektafbryder i trafofelt inde "True" 1 BINSIG     
+MVCircuitBreakerOn Effektafbryder i trafofelt ude "False" 0 BINSIG     
+ProductionLimitOn Produktionsbegrænsning aktiv "True" 1 BINSIG     
+ProductionLimitOn Produktionsbegrænsning inaktiv "False" 0 BINSIG     
+RemoteControlOn Fjernkommandoer afbrudt "True" 1 BINSIG     
+RemoteControlOn Fjernkommandoer tilladt "False" 0 BINSIG     
+RemotePowerRefOn Aktiv effektreferen ce aktiveret centralt "True" 1 BINSIG     
+RemotePowerRefOn Aktiv effektreference deaktiveret centralt "False" 0 BINSIG     
+RemoteReactivePowerRefOn Central reaktiv effektreference aktiveret  "True" 1 BINSIG     
+RemoteReactivePowerRefOn Central reaktiv effektre ference deaktiveret  "False" 0 BINSIG     
+TanFiRegOn Regulering efter tg φ-reference aktiv "True" 1 BINSIG     
+TanFiRegOn Regulering efter tg φ-reference inaktiv "False" 0 BINSIG     
+VibrationSensorOn Vibrationssensor aktiveret "True" 1 BINSIG     
+VibrationSensorOn Vibrationssensor deaktiveret "False" 0 BINSIG     
+YawArrestOn Krøjearretering aktiveret "True" 1 BINSIG     
+YawArrestOn Krøjearretering deaktiveret "False" 0 BINSIG     
+YawCCWRequestOn Krøjegrænse CCW aktiveret "True" 1 BINSIG     
+YawCCWRequestOn Krøjegrænse CCW deaktiveret "False" 0 BINSIG     
+YawCWRequestOn Krøjegrænse CW aktiveret "True" 1 BINSIG     
+YawCWRequestOn Krøjegrænse CW deaktiveret "False" 0 BINSIG     
+YawDriveCCWOn Krøjedrev CCW-retning aktiv "True" 1 BINSIG     
+YawiDriveCCWOn Krøjedrev CCW-retning inaktiv "False" 0 BINSIG     
+YawiDriveCWOn Krøjedrev CW-retning aktiv "True" 1 BINSIG     
+YawiDriveCWOn Krøjedrev CW-retning inaktiv "False" 0 BINSIG     
+Low priority signals – instruc-
+tions          
+WTBalanceRegOff Balanceregulering d eaktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTBalanceRegOn Balanceregulering aktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+   
+Page C-8 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTCompOff Afbrydelse af reaktiv kompensering "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTCompOn Aktivering af reaktiv kompensering "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTCosFiRegOff Regulering efter cos φ –reference fra "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTCosFiRegOn Regulering efter cos φ –reference til "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTErrorReset Kvittering af vindmøllefejl "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTFlickerRegOff Flicker-regulering deaktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTFlickerRegOn Flicker-regulering aktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTFreqRegOff Frekvensregulering deaktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTFreqRegOn Frekvensregulering aktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTGradientRegOff Gradientbegrænsning deaktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTGradientRegOn Gradientbegrænsning aktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTIdle Vindmøllen frigives/tvinges til ”friløb” "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTKVArRegOff Regulering efter kVAr-reference fra "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTKVArRegOn Regulering efter kVAr-reference "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTProductionLimitOff Produktionsbegrænsning deaktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTProductionLimitOn Produktionsbegrænsning aktiveret centralt "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTTanFiRegOff Regulering efter tg φ-reference fra "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTTanFiRegOn Regulering efter tg φ-reference "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTYawDriveCCWOn Krøjedrev CCW-retning aktiv "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTYawiDriveCCWOn Krøjedrev CCW-retning inaktiv "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTYawiDriveCWOn Krøjedrev CW-retning inaktiv "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+WTYawiDriveCWOn Krøjedrev CW-retning aktiv "True"  BINCOM  LO Date+time Counter +1 on shift to true 
+High priority signals -   
+binary commands          
+WTLVCircuitBreakerOff Udkobling af lavspændingsmaksimalafbryder "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTLVCircuitBreakerOn Indkobling af lavspændingsmaksimalafbryder "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTMVCircuitBreakerOff Udkobling af effektafbryder i trafofelt "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTMVCircuitBreakerOn Indkobling af effektafbryder i trafofelt "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTRemotePowerRefOff Aktiv central effektre ference deaktiveret  "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTRemotePowerRefOn Aktiv central effektreference aktiveret  "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTStart Vindmøllen frigives/tillades skift til ”drift” "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+WTStop Vindmøllen tvinges til ”parkeret” tilstand "True"  BINCOM  HI Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+  
+Page C-
+9 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+Alarms and alarm log          
+WTErrorXXXX Aktiv effekt større end reference "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Aktiv effekt større end reference "Reset"  AL   Date+time  
+WTErrorXXXX Aktiv effektregul ering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Aktiv effektregul ering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Balanceregulering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Balanceregulering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Bladvinkel udenfor reference "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Bladvinkel udenfor reference "Reset"  AL   Date+time  
+WTErrorXXXX Bremseslid "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Bremseslid "Reset"  AL   Date+time  
+WTErrorXXXX Cos φ –regulering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Cos φ –regulering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Cos φ –værdi udenfor reference "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Cos φ –værdi udenfor reference "Reset"  AL   Date+time  
+WTErrorXXXX Effektafbryder i trafofelt ude "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Effektafbryder i trafofelt ude "Reset"  AL   Date+time  
+WTErrorXXXX Eksternt system fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Eksternt system fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Flicker-regulering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Flicker-regulering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Frekvensregulering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Frekvensregulering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Gearoliefiltervagt aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Gearoliefiltervagt aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Gearolieflowvagt aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Gearolieflowvagt aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Gearoliemagnetv agt aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Gearoliemagnetv agt aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Gearoliepumpe termisk ude "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Gearoliepumpe termisk ude  "Reset"  AL   Date+time  
+ELFORSK  
+   
+ 
+   
+Page C-10 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTErrorXXXX Geartemp.  HS-leje høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Geartemp.  HS-leje høj "Reset"  AL   Date+time  
+WTErrorXXXX Geartemp.  LS-leje høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Geartemp.  LS-leje høj "Reset"  AL   Date+time  
+WTErrorXXXX Geartemp.  MS-leje høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Geartemp.  MS-leje høj "Reset"  AL   Date+time  
+WTErrorXXXX Generator1 magnetisk ude (maks-afbr.) "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator1 magnetisk ude (maks-afbr.) "Reset"  AL   Date+time  
+WTErrorXXXX Generator1 overomdrejninger  "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator1 overomdrejninger "Reset"  AL   Date+time  
+WTErrorXXXX Generator1 termisk ude (maks-afbr.) "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator1 termisk ude (maks-afbr.) "Reset"  AL   Date+time  
+WTErrorXXXX Generator2 magnetisk ude (maks-afbr.) "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator2 magnetisk ude (maks-afbr.) "Reset"  AL   Date+time  
+WTErrorXXXX Generator2 overomdrejninger "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator2 overomdrejninger "Reset"  AL   Date+time  
+WTErrorXXXX Generator2 termisk ude (maks-afbr.) "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generator2 termisk ude (maks-afbr.) "Reset"  AL   Date+time  
+WTErrorXXXX Generatorkøleflo wvagt aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Generatorkøleflo wvagt aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Hovedlejetemperatur høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Hovedlejetemperatur høj "Reset"  AL   Date+time  
+WTErrorXXXX Hydraulikpumpe termisk ude "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Hydraulikpumpe termisk ude "Reset"  AL   Date+time  
+WTErrorXXXX Hydrauliktemperatur høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Hydrauliktemperatur høj "Reset"  AL   Date+time  
+WTErrorXXXX Hydrauliktryk lavt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Hydrauliktryk lavt "Reset"  AL   Date+time  
+WTErrorXXXX Kabine luftfugtighed høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kabine luftfugtighed høj "Reset"  AL   Date+time  
+WTErrorXXXX Kabinetemperatur høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kabinetemperatur høj "Reset"  AL   Date+time  
+ELFORSK  
+   
+ 
+  
+Page C-
+11 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTErrorXXXX Kommunikationsfejl eksternt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kommunikationsfejl eksternt "Reset"  AL   Date+time  
+WTErrorXXXX Kommunikationsfejl internt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kommunikationsfejl internt "Reset"  AL   Date+time  
+WTErrorXXXX Krøjedrev termisk ude "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Krøjedrev termisk ude "Reset"  AL   Date+time  
+WTErrorXXXX Krøjefejl stor "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Krøjefejl stor "Reset"  AL   Date+time  
+WTErrorXXXX Kølemediepumpe termisk ude "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kølemediepumpe termisk ude "Reset"  AL   Date+time  
+WTErrorXXXX Kølemedietemp. Gen1 ind høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kølemedietemp. Gen1 ind høj "Reset"  AL   Date+time  
+WTErrorXXXX Kølemedietemp. Gen1 ud høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kølemedietemp. Gen1 ud høj "Reset"  AL   Date+time  
+WTErrorXXXX Kølemedietemp. Gen2 ind høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kølemedietemp. Gen2 ind høj "Reset"  AL   Date+time  
+WTErrorXXXX Kølemedietemp. Gen2 ud høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Kølemedietemp. Gen2 ud høj "Reset"  AL   Date+time  
+WTErrorXXXX Luftafmærkningssystem fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Luftafmærkningssystem fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX LV-afbryder ude  "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX LV-afbryder ude "Reset"  AL   Date+time  
+WTErrorXXXX Maksimalafbryder udløst af Styresystem "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Maksimalafbryder udløst af Styresystem "Reset"  AL   Date+time  
+WTErrorXXXX Manuelt nødstoptryk aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Manuelt nødstoptryk aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Måling udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Måling udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Netfrekvens (lokalt) udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Netfrekvens (lokalt) udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Nødforsyningssystem fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+   
+Page C-12 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTErrorXXXX Nødforsyningssystem fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Reaktiv effekt udenfor reference "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Reaktiv effekt udenfor reference "Reset"  AL   Date+time  
+WTErrorXXXX Reaktiv effektreguleri ng fejlramt (kVAr-ref.) "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Reaktiv effektreguleri ng fejlramt (kVAr-ref.) "Reset"  AL   Date+time  
+WTErrorXXXX Reset af Styresystem eller dele heraf "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Reset af Styresystem eller dele heraf "Reset"  AL   Date+time  
+WTErrorXXXX Rotoromdrejninger høje "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Rotoromdrejninger høje "Reset"  AL   Date+time  
+WTErrorXXXX Rotorpos. refererende til blad1udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Rotorpos. refererende til blad1udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Sikkerhedsstop udløst af Styresystem "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Sikkerhedsstop udløst af Styresystem "Reset"  AL   Date+time  
+WTErrorXXXX Spænding fase1 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Spænding fase1 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Spænding fase2 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Spænding fase2 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Spænding fase3 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Spænding fase3 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Strøm fase1 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Strøm fase1 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Strøm fase2 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Strøm fase2 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Strøm fase3 LV udenfor område "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Strøm fase3 LV udenfor område "Reset"  AL   Date+time  
+WTErrorXXXX Søafmærkningssystem fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Søafmærkningssystem fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Temp.  HS-leje gen1 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Temp.  HS-leje gen1 høj "Reset"  AL   Date+time  
+WTErrorXXXX Temp.  HS-leje gen2 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Temp.  HS-leje gen2 høj "Reset"  AL   Date+time  
+WTErrorXXXX Temp. gear hotspot høj "True"  AL   Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+  
+Page C-
+13 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTErrorXXXX Temp. gear hotspot høj "Reset"  AL   Date+time  
+WTErrorXXXX Temp. køleolie-ind høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Temp. køleolie-ind høj "True"  AL   Date+time  
+WTErrorXXXX Temp. køleolie-ind høj "Reset"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Temp. køleolie-ind høj "Reset"  AL   Date+time  
+WTErrorXXXX Temp. skivebremse/klodser høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Temp. skivebremse/klodser høj "Reset"  AL   Date+time  
+WTErrorXXXX Tg φ -værdi udenfor reference "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Tg φ -værdi udenfor reference "Reset"  AL   Date+time  
+WTErrorXXXX Tg φ –regulering fejlramt "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Tg φ –regulering fejlramt "Reset"  AL   Date+time  
+WTErrorXXXX Vibrationssensor aktiveret "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Vibrationssensor aktiveret "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen1 måling1 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen1 måling1 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen1 måling2 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen1 måling2 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen1 måling3 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen1 måling3 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen2 måling1 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen2 måling1 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen2 måling2 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen2 måling2 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Gen2 måling3 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Gen2 måling3 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Krøjedrev1 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Krøjedrev1 høj "Reset"  AL   Date+time  
+WTErrorXXXX Viklingstemp. Krøjedrev2 høj "True"  AL   Date+time Counter +1 on shift to true 
+WTErrorXXXX Viklingstemp. Krøjedrev2 høj "Reset"  AL   Date+time  
+Event log          
+ELFORSK  
+   
+ 
+   
+Page C-14 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+WTLogXXXX Fjernkvittering foretaget "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Fjernpause udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Fjernstart udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Fjernstop udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Manuel kvittering foretaget "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Manuel pause udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Manuel start udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Manuel stop udført "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Parameterændring foretage t (”Nr.”, ”Ny værdi”) "True"  EV   Date+time Counter +1 on shift to true 
+WTLogXXXX Servicemode "True"  EV   Date+time Counter +1 on shift to true 
+Counters - number of activations          
+CountBalanceRegOn Balanceregulering aktiveret centralt   COU   Date+time Counter +1 on shift to true 
+CountBladeBrakeOn Vingebremse aktiveret   COU   Date+time Counter +1 on shift to true 
+CountCompensation1On Reaktivkompensering trin1aktiv   COU   Date+time Counter +1 on shift to true 
+CountCompensation2On Reaktivkompensering trin2aktiv   COU   Date+time Counter +1 on shift to true 
+CountCompensationOn Reaktivkompensering aktiv   COU   Date+time Counter +1 on shift to true 
+CountCosFiRegOn Regulering efter cos φ –reference aktiv   COU   Date+time Counter +1 on shift to true 
+CountDiscBrakeOn Skivebremse aktiveret   COU   Date+time Counter +1 on shift to true 
+CountEmergencyStopOn Manuelt nødstoptryk aktiveret   COU   Date+time Counter +1 on shift to true 
+CountFlickerRegOn Flicker-regulering aktiv    COU   Date+time Counter +1 on shift to true 
+CountFreqRegOn Frekvensregulering aktiv   COU   Date+time Counter +1 on shift to true 
+CountGearOilFilterOn Gearoliefiltervagt aktiv   COU   Date+time Counter +1 on shift to true 
+CountGearOilFlowOn Gearolieflowvagt aktiv   COU   Date+time Counter +1 on shift to true 
+CountGearOilMagnetOn Gearoliemagnetvagt aktiv   COU   Date+time Counter +1 on shift to true 
+CountGearOilPumpOn Gearoliepumpe aktiv   COU   Date+time Counter +1 on shift to true 
+CountGearOilPumpThermalOut Gearoliepumpe termisk inde   COU   Date+time Counter +1 on shift to true 
+CountGen1MagneticOut Generator1 magnetisk inde (maks-afbr.)   COU   Date+time Counter +1 on shift to true 
+CountGen1ThermalOut Generator1 termisk inde (maks-afbr.)   COU   Date+time Counter +1 on shift to true 
+CountGen2MagneticOut Generator2 magnetisk inde (maks-afbr.)   COU   Date+time Counter +1 on shift to true 
+CountGen2ThermalOut Generator2 termisk inde (maks-afbr.)   COU   Date+time Counter +1 on shift to true 
+CountGenCoolingFlowOn Generatorkøleflowvagt aktiv   COU   Date+time Counter +1 on shift to true 
+CountGenerator1On Generator1 indkoblet   COU   Date+time Counter +1 on shift to true 
+ELFORSK  
+   
+ 
+  
+Page C-
+15 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+CountGenerator2On Generator2 indkoblet   COU   Date+time Counter +1 on shift to true 
+CountGeneratorCoolingOn Generatorblæser el. kølepumpe aktiv   COU   Date+time Counter +1 on shift to true 
+CountGradientRegOn Gradientbegrænsning aktiv   COU   Date+time Counter +1 on shift to true 
+CountHubArrestOn Navarretering aktiveret   COU   Date+time Counter +1 on shift to true 
+CountHydraulicPumpOn Hydraulikpumpe aktiv   COU   Date+time Counter +1 on shift to true 
+CountKVArRegOn Regulering efter kVAr-reference aktiv   COU   Date+time Counter +1 on shift to true 
+CountLocalReactivePowerRefOn Lokal reaktiv effektreference aktiv    COU   Date+time Counter +1 on shift to true 
+CountLVCircuitBreaker On Lavspændingsmaksimalafbryder inde   COU   Date+time Counter +1 on shift to true 
+CountMVCircuitBreakerOn Effektafbryder i trafofelt inde   COU   Date+time Counter +1 on shift to true 
+CountProductionLimitOn Produktionsbegrænsning aktiv   COU   Date+time Counter +1 on shift to true 
+CountRemoteControlOn Fjernkommandoer afbrudt   COU   Date+time Counter +1 on shift to true 
+CountRemotePowerRefOn Aktiv effektreferen ce aktiveret centralt   COU   Date+time Counter +1 on shift to true 
+CountRemoteReactivePowerRefOn Central reaktiv effektreference aktiveret    COU   Date+time Counter +1 on shift to true 
+CountTanFiRegOn Regulering efter tg φ-reference aktiv   COU   Date+time Counter +1 on shift to true 
+CountVibrationSensorOn Vibrationssensor aktiveret   COU   Date+time Counter +1 on shift to true 
+CountYawArrestOn Krøjearretering aktiveret   COU   Date+time Counter +1 on shift to true 
+CountYawCCWRequestOn Krøjegrænse CCW aktiveret   COU   Date+time Counter +1 on shift to true 
+CountYawCWRequestOn Krøjegrænse CW aktiveret   COU   Date+time Counter +1 on shift to true 
+CountYawDriveCCWOn Krøjedrev CCW-retning aktiv   COU   Date+time Counter +1 on shift to true 
+CountYawiDriveCWOn Krøjedrev CW-retning aktiv   COU   Date+time Counter +1 on shift to true 
+Production counters          
+ProdGen1Total Totalproduktion generator1 MWh  COU 1  Reset time  
+ProdGen2Total Totalproduktion generator2 MWh  COU 1  Reset time  
+ProdPotentialTotal Potentielle produktion MWh  COU 1  Reset time  
+ProdPotentialSubtotal Potentielle subtotale produktion MWh  COU 1  Reset time  
+ProdGen1Subtotal Subtotalproduktion generator1 MWh  COU 1  Reset time  
+ProdGen2Subtotal Subtotalproduktion generator2 MWh  COU 1  Reset time  
+Timers (accumulated time)          
+TimeAutoRewind Undertilstand: Udsnoning pågår Sek  TIM 1  Reset time  
+TimeAwaitingAutoReset Undertilstand: Afventer auto-reset Sek  TIM 1  Reset time  
+TimeAwaitingAutoRewind Undertilstand: Udsnoning afventes Sek  TIM 1  Reset time  
+ELFORSK  
+   
+ 
+   
+Page C-16 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+TimeAwaitingManualReset Undertilstand: Afventer manuelt reset Sek  TIM 1  Reset time  
+TimeAwaitingRemoteReset Undertilstand: Afventer fjernreset Sek  TIM 1  Reset time  
+TimeBalanceRegOn Balanceregulering aktiveret centralt Sek  TIM 1  Reset time  
+TimeBladeBrakeOn Vingebremse aktiveret Sek  TIM 1  Reset time  
+TimeCompensation1On Reaktivkompensering trin1aktiv Sek  TIM 1  Reset time  
+TimeCompensation2On Reaktivkompensering trin2aktiv Sek  TIM 1  Reset time  
+TimeCompensationOn Reaktivkompensering aktiv Sek  TIM 1  Reset time  
+TimeCosFiRegOn Regulering efter cos φ –reference aktiv Sek  TIM 1  Reset time  
+TimeDiscBrakeOn Skivebremse aktiveret Sek  TIM 1  Reset time  
+TimeEmergencyStopOn Manuelt nødstoptryk aktiveret Sek  TIM 1  Reset time  
+TimeExternalFault Undertilstand: Ekstern fejl Sek  TIM 1  Reset time  
+TimeFlickerRegOn Flicker-regulering aktiv  Sek  TIM 1  Reset time  
+TimeFreqRegOn Frekvensregulering aktiv Sek  TIM 1  Reset time  
+TimeGearOilFilterOn Gearoliefiltervagt aktiv Sek  TIM 1  Reset time  
+TimeGearOilFlowOn Gearolieflowvagt aktiv Sek  TIM 1  Reset time  
+TimeGearOilMagnetOn Gearoliemagnetvagt aktiv Sek  TIM 1  Reset time  
+TimeGearOilPumpOn Gearoliepumpe aktiv Sek  TIM 1  Reset time  
+TimeGearOilPumpThermalOut Gearoliepumpe termisk inde Sek  TIM 1  Reset time  
+TimeGen1MagneticOut Generator1 magnetisk inde (maks-afbr.) Sek  TIM 1  Reset time  
+TimeGen1Subtotal Subtotaltid generator1 Sek  TIM 1  Reset time  
+TimeGen1ThermalOut Generator1 termisk inde (maks-afbr.) Sek  TIM 1  Reset time  
+TimeGen2MagneticOut Generator2 magnetisk inde (maks-afbr.) Sek  TIM 1  Reset time  
+TimeGen2Subtotal Subtotaltid gene rator2 indkoblet Sek  TIM 1  Reset time  
+TimeGen2ThermalOut Generator2 termisk inde (maks-afbr.) Sek  TIM 1  Reset time  
+TimeGenCoolingFlowOn Generatorkøleflowvagt aktiv Sek  TIM 1  Reset time  
+TimeGenerator1On Generator1 indkoblet Sek  TIM 1  Reset time  
+TimeGenerator2On Generator2 indkoblet Sek  TIM 1  Reset time  
+TimeGeneratorCoolingOn Generatorblæser el. kølepumpe aktiv Sek  TIM 1  Reset time  
+TimeGradientRegOn Gradientbegrænsning aktiv Sek  TIM 1  Reset time  
+TimeHighWind Undertilstand: Vindhastighed for høj Sek  TIM 1  Reset time  
+TimeHubArrestOn Navarretering aktiveret Sek  TIM 1  Reset time  
+TimeHydraulicPumpOn Hydraulikpumpe aktiv Sek  TIM 1  Reset time  
+ELFORSK  
+   
+ 
+  
+Page C-
+17 Name (SignalID) Description Unit Value Kind Accuracy Priority Time tag Remark. 
+TimeIdling Hovedtilstand: Friløb  Sek  TIM 1  Reset time  
+TimeInternalFault Undertilstand: Vindmøllefejl Sek  TIM 1  Reset time  
+TimeIsolatedOperation Undertilstand: Autonom drift aktiv Sek  TIM 1  Reset time  
+TimeKVArRegOn Regulering efter kVAr-reference aktiv Sek  TIM 1  Reset time  
+TimeLocalReactivePowerRefOn Lokal reaktiv effektreference aktiv  Sek  TIM 1  Reset time  
+TimeLVCircuitBreaker On Lavspændingsmaksimalafbryder inde Sek  TIM 1  Reset time  
+TimeManualMode Undertilstand: Manuel betjening aktiv Sek  TIM 1  Reset time  
+TimeMVCircuitBreakerOn Effektafbryder i trafofelt inde Sek  TIM 1  Reset time  
+TimeOperation Hovedtilstand: Drift Sek  TIM 1  Reset time  
+TimeOperationAccepted Undertilstand: Frigivet til at producere Sek  TIM 1  Reset time  
+TimeProductionLimitOn Produktionsbegrænsning aktiv Sek  TIM 1  Reset time  
+TimeRemoteControlOn Fjernkommandoer afbrudt Sek  TIM 1  Reset time  
+TimeRemotePowerRefOn Aktiv effektreferen ce aktiveret centralt Sek  TIM 1  Reset time  
+TimeRemoteReactivePowerRefOn Central reaktiv effektreference aktiveret  Sek  TIM 1  Reset time  
+TimeShutDown Hovedtilstand: Afbrudt Sek  TIM 1  Reset time  
+TimeStopped Hovedtilstand: Parkeret Sek  TIM 1  Reset time  
+TimeSystemFault Undertilstand: Systemfejl Sek  TIM 1  Reset time  
+TimeTanFiRegOn Regulering efter tg φ-reference aktiv Sek  TIM 1  Reset time  
+TimeTotal Totaltid siden reset Sek  TIM 1  Reset time  
+TimeVibrationSensorOn Vibrationssensor aktiveret Sek  TIM 1  Reset time  
+TimeWindOK Tid med tilladt vindhast. Sek  TIM 1  Reset time  
+TimeYawArrestOn Krøjearretering aktiveret Sek  TIM 1  Reset time  
+TimeYawCCWRequestOn Krøjegrænse CCW aktiveret Sek  TIM 1  Reset time  
+TimeYawCWRequestOn Krøjegrænse CW aktiveret Sek  TIM 1  Reset time  
+TimeYawDriveCCWOn Krøjedrev CCW-retning aktiv Sek  TIM 1  Reset time  
+TimeYawiDriveCWOn Krøjedrev CW-retning aktiv Sek  TIM 1  Reset time  
+TimeYawingAccepted Undertilstand: Frigivet til at krøje Sek  TIM 1  Reset time  
+ 
+  
+
+    
+ 
+ 
+SVENSKA ELFÖRETAGENS FORSKNINGS- OCH UTVECKLINGS – ELFORSK – AB 
+Elforsk AB, 101 53 Stockholm. Besöksadress: Olof Palmes Gata 31 
+Telefon: 08-677 25 30. Telefax 08-677 25 35 
+www.elforsk.se  
+ 

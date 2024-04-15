@@ -1,0 +1,8 @@
+D	Grid 3D - visualisation of biological data
+2	FUNCTIONAL REQUIREMENTS
+2.2	Functional and Data Requirements
+2.2.1	Functional Requirements
+2.2.2	Data Requirements
+3	NON-FUNCTIONAL REQUIREMENTS
+3.1	Look and Feel Requirements
+3.2	Performance Requirements

@@ -1,0 +1,1198 @@
+
+  
+System Requirements 
+Specification 
+for 
+STEWARDS 
+Version 1.0 approved 
+Prepared by Conservation Effects Assessment Project (CEAP)  
+Data System Team 
+USDA-Agricultural Research Service 
+ 
+System  Requirements Specification for STEWARDS  Page ii 
+ Table of Contents  
+Table of Contents .............................................................................................................. ............ ii  
+Revision History............................................................................................................... ............ iii  
+1. Introduction................................................................................................................... ...........1  
+1.1 Purpose ........................................................................................................................ ................ 1  
+1.2 About this Document and its Readers ......................................................................................... 1  
+1.3 Project Scope.................................................................................................................. ............. 1  
+1.4 Refere nces ..................................................................................................................... .............. 2  
+2. Overall Description............................................................................................................ ......3  
+2.1 Product Perspective ............................................................................................................ ......... 3  
+2.2 Product Features ............................................................................................................... ........... 3  
+2.3 User Classes and Characteristics ............................................................................................... .. 4 
+2.4 Operating Environment .......................................................................................................... ..... 4 
+2.5 Design and Implementation Constraints...................................................................................... 5  
+2.6 User Documentation............................................................................................................. ....... 5  
+2.7 Assumptions and Dependencies .................................................................................................. 6  
+3. System Features ................................................................................................................ .......6  
+3.1 Database Management System.................................................................................................... 6  
+3.1.1 Description and Priority ....................................................................................................... ... 6 
+3.1.2 Use Case Scenarios ............................................................................................................. .... 6 
+3.1.3 Functional Requirements........................................................................................................ .6 
+3.2 Metadata Av ailability .......................................................................................................... ........ 8  
+3.3 Data Dissemination ............................................................................................................. ........ 9  
+3.4 Hardware requirements.......................................................................................................... ...... 9  
+3.5 Software requirements.......................................................................................................... ....... 9  
+3.6 Data migration to and retrieval from STEWARDS................................................................... 10  
+3.6.1 Quality A ssurance .............................................................................................................. ... 10 
+3.6.2 Populating data................................................................................................................ ...... 10  
+3.6.3 Updating Data .................................................................................................................. ..... 11  
+3.6.4 Data derivation/ aggregation .................................................................................................. 11  
+4. External Interface Requirements .........................................................................................11  
+4.1 User Interfaces................................................................................................................ ........... 11  
+4.2 Hardware Interfaces............................................................................................................ ....... 11  
+4.3 Software Interfaces............................................................................................................ ........ 12  
+4.4 Communications  Interfaces ...................................................................................................... .1 2 
+5. Other Nonfunctional Requirements.....................................................................................12  
+5.1 Performance Requirements....................................................................................................... .1 2 
+5.2 Safety Requirements............................................................................................................ ...... 12  
+5.3 Security Requirements.......................................................................................................... ..... 12  
+5.4 Software Quality Attributes.................................................................................................... ... 13 
+Appendix A: Acronyms and Glossary........................................................................................13  
+Appendix B: Analysis Models.................................................................................................... .16 
+Appendix C: Issues List........................................................................................................ .......16  
+Appendix D: Database team members.......................................................................................16  
+Appendix E: System Detailed Specifications.............................................................................17 
+Appendix  F: System  Design……………………………………………………………………18  
+Appendix G: Linkage of S TEWARDS to Other USDA/ARS Data/Modeling Systems.……39 
+Appendix H: Task Fl ow of STEWARDS……………………………………………………...40 
+Appendix I: Data Structure for Two Type s of Time Series Data in STEWARDS…………41 
+System  Requirements Specification for STEWARDS  Page iii 
+ Revision History 
+Name Date Reason For Changes Version 
+Sadler 11/10/04 First draft of assigned sections 0.1 
+Sadler 12/08/04 Third draft of assigned sections 0.3 
+James 2/8/05 Contributions 0.3b 
+CEAP team 3/3/05 Discussions  at Irving CEAP meeting d0.5 
+Sadler 3/8/05 Continued from Irv ing and other observations 0.6 
+James 3/10/05 Ongoing edits 0.61 
+Sadler 3/11/05 Added Jin-S ong’s sections and Pruitt’s 
+comments, accepted some of Dave’s to make it easier to see the material changes. 0.62 
+OCIO 3/22/05 OCIO inputs 0.63 
+Sadler 3/29/05 Address upload responsibilities, MP comments 
+except those OCIO will handle, clean out template instructions except for those sections still blank. 0.64 
+Lombardo 4/5/05 Fleshed out  OCIO input areas 0.65 
+Sadler 4/5/05 Added user class for non-ARS researchers, fixed 
+typos in section 2.7 and wherever ‘thee’ was, 
+and rearranged section 3.6-3.9 into sections 
+3.6.1-3.6.4, although it is not a little hard to group the data retrieval w ith the data uploading. 0.66 
+Wilson 4/7/05 Modified 3.1.2, 4.1, 4.2, 4.3, 4.4 and added 
+appendix E (Sadler accepted some changes and 
+updated Table of contents and this table) 0.67 
+James 4/11/05 Add to References (section 1.5). Add to Analysis 
+Models (Appendix B) 0.68 
+Sadler 4/13/05 Performed over view edit for internal 
+consistency, grammar, typos, and some aspects of 12 vs more watersheds. 0.69 
+Lombardo 4/19/05 Security Requi rements Section rewritten 0.70 
+Philpot 4/21/05 Formatting changes 0.80 
+Lombardo 4/25/05 Added clarifi cation regarding scope of 1.0 
+version to Document Conventions section. 0.90 
+Philpot 5/4/05 Formatting and JLS edit inclusion 0.91 
+Greg Willson/Jin-
+Song Chen 2/7/06 Added System Design (database design and User 
+Interface Design),  Appendix F, G, H, I  1.00 
+Chen and Steiner 2/15/06 Added text in system design Appendix F, G, H, I 1.1 
+ 
+ 
+System  Requirements Specification for STEWARDS  Page 1 
+ 1. Introduction 
+1.1 Purpose  
+The USDA and Agricultural Research Service (ARS ) have supported hydrologi c research since the 
+1930's and many of the research watersheds are s till operational.  However, data have been 
+managed and made available independently at  each research location, greatly reducing the 
+accessibility and utility of these data for polic y-relevant, multi-site analyses.  The ARS is 
+developing and implementing a data system to or ganize, document, manipulate and compile water, 
+soil, management, and economic data for assessm ent of conservation practices. While primary 
+responsibility for data will continue to reside at  individual watersheds, the new data system will 
+provide one-point access to data from the sites in well-documented, and standardized formats.  The 
+purpose of this document is to describe the techni cal and operation requirements that meet the needs 
+of the CEAP Watershed Assessment Studies, as we ll as additional needs of researchers at the 
+watershed sites and diverse outside users, in adeq uate detail to provide the basis for the system 
+design.  The system will be called STEWARDS: Sust aining the Earth's Watersheds – Agricultural 
+Research Data System.  
+1.2 About this Document and its Readers 
+The system requirements specification document desc ribes what the system is to do, and how the 
+system will perform each function. The audiences for this document include the system developers 
+and the users.  The system developer uses this document as the authority on designing and building 
+system capabilities.  The users review the documen t to ensure the documentation completely and 
+accurately describes the intended functionality.   
+This version – version 1.0 - provi des general descripti ons of the system.  The system developer 
+should review the document to ensure there is adequa te information for defining an initial design of 
+the system.  The users should review the document to  affirm the features described are needed, to 
+clarify features, and to identify additional features needed within the system.   
+ The next version – version 2.0 – will be the result of more detailed requirements analysis.  When 
+version 2.0 is written, the system developer and users will be as ked to review this document. 
+The document is structured to follow IEEE 830-1998 st andards for recording system requirements.   
+1.3 Project Scope 
+As part of the Conservation Effects Assessm ent Project (CEAP), twelve ARS Benchmark 
+Watersheds will support watershed-scale asse ssment of environmental effects of USDA 
+conservation program implementation. The ARS Benchmark Watersheds represent primarily 
+rainfed cropland, although some of the watershe ds also contain irriga ted cropland, grazingland, 
+wetlands, and confined animal feeding operations. Three additional ARS watersheds may be added 
+in the future to represent additional land uses. C onservation practices to be emphasized will include 
+NRCS CORE 4 practices for croplands (cons ervation buffers, nutrient management, pest 
+management, and tillage management), drainage  management systems, and manure management 
+practices. Environmental effects and benefits wi ll be estimated primarily for water and soil 
+resources, with some assessment of wildlife habita t and air quality benefits in some watersheds. 
+System  Requirements Specification for STEWARDS  Page 2 
+  
+The goal for the watershed-scale research is to  provide detailed assessments of conservation 
+practices and programs in a selected wate rshed, provide a framework for improving the 
+performance of the national asse ssment models, and support coordina ted research on the effects of 
+conservation practices across a range  of resource characteristics (suc h as climate, terrain, land use, 
+and soils).  The basic requirement for STEWARDS is to deliver  consistent high quality data in support of the 
+CEAP 
+watershed-scale assessment from a one-stop data portal to the CEAP clients and, in time, the 
+public at large. The data system consists two ma in parts -- a central database management system 
+for the storage and management of data, and a clie nt application to allow users access and interact 
+with the data. The data stored in the database can be viewed and downloa ded using graphical and 
+tabular interface tools.   The data system will serve as a repository where diverse end-users can access, search, analyze, visualize, and report various types of integrated watershed data contributed from the multiple locations.  Types of data will be diverse, including  biophysical data (i.e., point-based in time and/or 
+space, spatially variable data, ti me series), data about land use, management, and conservation 
+practices; and economic data .    Where applicable, data from  the NRCS, Economics Research 
+Service (ERS) Agricultural Resources and Environm ental Indicators database, other ERS sources of 
+data on costs of conservation practices, and la nd use and management data of NASS or other 
+agencies will be utilized.  The intention of the team is that ARS researchers at watershed locations retain primary responsibility for data collection and management.  Sites ma y chose to retain existing data 
+management protocols or change location pr otocols to those of STEWARDS.  However, 
+STEWARDS must have the capability to translate data from location-specific formats into the standardized STEWARDS formats.  Data on STEWAR DS will not be available to the public in real 
+time.  Access to real-time data will remain at the discretion of each location research team.  Instead, 
+annual or more frequent updates from location databases to STEWARDS will be made by the 
+watersheds’ staffs after the locations have completed their quality assurance procedures.   
+1.4 References 
+Conservation Effects Assessment Project: 
+http://www.nrcs.usda.gov/technical/nri/ceap/   
+ Content Standard for Digital Ge ospatial Metadata (version 2.0),
+ FGDC-STD-001-1998: 
+http://www.fgdc.gov/metadata/contstan.html  
+ USDA Metadata Tool for creating SCI minimum compliance metadata: 
+http://www.gis.sc.egov.usda.gov/software /tools/arcgis/metadata-tool.html
+ 
+ Soil and Water Assessment (SWAT) Model: http://www.brc.tamus.edu/swat/edu.html
+ 
+ AnnAGNPS Pollutant Loading Model: http://www.ars.usda.gov/Res earch/docs.htm?docid=5222
+   
+ USDA Web Style Guide http://sharedservices.usda.gov/
+ 
+ IEEE 830-1998  
+System  Requirements Specification for STEWARDS  Page 3 
+ 
+Institute of Electrical & Electronics Engineers  Recommended Practice for Software Requirements 
+Specifications 
+2. Overall Description 
+2.1 Product Perspective 
+This product is a new, centralized data system.  Source data for this system are the long-term ARS 
+watersheds, with those participating in the CEAP project expected to participate in this data system 
+first. 
+2.2 Product Features 
+The data system consists two main parts -- a centr al database management system for the uploading, 
+storage, and management of data, and a client application to allow users access and interact with the 
+data. Diverse end-users can access, search, analyze,  visualize, download, and report various types of 
+integrated watershed data contributed from the multiple locations.  Types of data will include biophysical data (i.e., point-based in time and/or sp ace, spatially variable da ta, time series), data 
+about land use, management, and conservation practices; and economic data. See figure 1. 
+  
+System  Requirements Specification for STEWARDS  Page 4 
+ 2.3 User Classes and Characteristics 
+The user classes of this database system will be  
+ 
+UCC-1: System operator: Staff at OCIO responsib le for maintaining executable code, requiring full 
+access to all aspects of the system. 
+ UCC-2: Data operations manager: Staff, probabl y at OCIO, responsible for data archiving and 
+maintenance, requiring read/write/modify privil eges to all data in the system.  This 
+includes the role commonly thought of as a Database Administrator (DBA). 
+ UCC-3: Watershed uploaders: Staff in the watersheds  who have responsibility to upload local data 
+requiring write access to space alloca ted to their specific watershed. 
+ UCC-4: ARS users: ARS scientists, engineers, a nd support staff who requi re ARS watershed data 
+for research purposes. These would likely be co nversant with the gene ral characteristics of 
+the data content, and to a lesser extent have abilities manipulating vi ews of the data using 
+database tools such as envisioned for this  database system. These users will need 
+user/password authentication to enable user settings management and to have access to 
+data protected through the confidentiality ag reements among agencies participating in 
+CEAP. 
+ UCC-5: Research users: Non-ARS scientists, engineers, and support staff who require ARS 
+watershed data for research purposes. These w ould have similar characteristics and needs 
+as ARS users, but because of the agency-lev el confidentiality issues, could not access the 
+password-protected sensitive data.  
+ UCC-6: Public users: Eventual release of the database system to the general public will add 
+university and agency research ers who would appear similar in training to the primary 
+users, but also would add clients with the enti re range of training and interests. These users 
+would have access to the public data  without need for authentication. 
+2.4 Operating Environment  
+The rule for selecting hardware and software is that the components/application must be 
+functionally efficient, capable of interfacing with other soft ware, and easy to maintain. 
+ OE-1: The System shall operate with the follow ing Web browsers: Micros oft Internet Explorer 
+versions 5.0 and 6.0, Netscape Communicator ve rsion 4.7, Netscape versions 6 and 7, and 
+FireFox. 
+ OE-2: The System shall operate on Certified and Accredited servers running the current 
+corporate approved versions of operating systems as appropriate. 
+ OE-3: The Data Management portion of the system shall permit user access from the corporate 
+Intranet and, if a user is au thorized for outside access thr ough the corporate firewall, from 
+an Internet connection at the user’s home. 
+ OE-4: The Data Research and Re porting portion of the system sh all provide public access to 
+reviewed and approved data sets. 
+System  Requirements Specification for STEWARDS  Page 5 
+ 2.5 Design and Implementation Constraints 
+The goal of the web application is to be platform independent on the client side wherever possible.  
+Therefore, the web applications will be implemented to run on the server side as much as possible. 
+Also, it is required to test the application usin g different platforms, connection speeds, screen 
+settings, colors/graphics, and browsers.   CO-1: Portability: The application codes gene rated during prototypi ng may not run properly 
+when re-hosting the data system to a non-Windo ws OS or transferring the data system to 
+another location.  
+ CO-2: Database Design: The database structure should be as complete as possible during the 
+design stage but there should be a room for modification without a large overhaul during 
+later phases. 
+ CO-3: Data uploading and management will likely be done as infrequently as once a year.  This 
+fact greatly limits the complexity of the us er interface and the learning curve needed for 
+completing this task. 
+ CO-4: The system shall use the current corpor ate standard Microsoft SQL Server database 
+engine. 
+ CO-5: The system shall be in compliance with  all Accessibility, Web Design, and Security 
+policies applicable .  
+ CO-6: As part of standard operating procedures , a testing plan will be documented during the 
+Design phase . The testing plan will be based on user  roles, modules or use cases, required 
+tasks and expected outcomes. 
+2.6 User Documentation 
+User documentation will consist of the several com ponents usually expected of a modern web-based 
+software application, incl uding a tutorial, help pages, FAQ’s with an online request form, and a 
+complete user’s manual.  UD-1: A tutorial will provide a quick start, a wa lk-thru of major system features, and further 
+reference source for the complete system features. 
+ UD-2: An online hierarchical and cross-linked help  system in HTML will describe and illustrate 
+all system functions. 
+ UD-3:  An online form will enable users to re quest help. Frequently asked questions will be 
+screened for the FAQ pages. 
+ UD-4: The user's guide (or user manual) will contain sufficient information and instructions 
+required to access and use the da ta system.  It will include: 
+UD-4.1. Overview of the system f eatures and architecture. 
+UD-4.2. Instructions for accessing the system. 
+UD-4.3 . Samples of screens, where appropriate. 
+System  Requirements Specification for STEWARDS  Page 6 
+ 2.7 Assumptions and Dependencies 
+It is anticipated that each watershed location wi ll provide human and fiscal resources required to 
+prepare metadata files, data files, work with the data team on initial import of data, perform 
+subsequent data uploads, and provide site-specific support to users of the sy stem.  If a location has 
+inadequate resources, the minimal data required for CEAP analyses will be id entified and the data 
+team will provide additional support to that locati on.  This may result in a location’s data coming 
+into the system later than scheduled.  Team leaders anticipate availabil ity of the operational platform at the ARS OCIO level.  Pilot and, 
+as a contingency, operational data systems may be developed and maintained at El Reno or other 
+research locations.  It is anticipated that funding from NRCS will par tially support this activity through FY07.  If that 
+funding were not available or insu fficient in future years, base funds at the locations and/or 
+discretionary funds from the Area and Headqua rters funds would support the activity but the 
+timelines would be adjusted.    Help desk funding will be determined from sta ffing needs identified during the design phase and a 
+proposal will then be made to NPS. 
+3. System Features 
+3.1 Database Management System 
+The standardized data structure wi ll facilitate database developm ent, storage, and maintenance; 
+metadata development, storage, and maintenan ce; and support database functionality, including 
+tabular and spatial data queries,  evaluation, visualization, and tran sfer (downloading) to off-site 
+locations. 
+3.1.1 Description and Priority The database management system should be stable and secured, have high pe rformance (in terms of 
+speed and efficiency/effectiveness), and be easy to ma intain. This component is central to the effort 
+and is thus of highest priority. 
+3.1.2 Use Case Scenarios 
+The team will elicit user requirements from a cross- section of user class me mbers (see section 2.3) 
+to accurately and completely describe the expected uses and functionality of the system.  To elicit 
+requirements, the user class members will be as ked via conferencing, interviews, and email, to 
+provide a detailed description of  the user actions and system re sponses that will take place during 
+execution of the use case under normal, expected conditions. The summation of responses will lead 
+to an accurate and complete inventory of user requirements.  
+3.1.3 Functional Requirements FR-1:  DATABASE 
+ 
+FR-1.1: Database design 
+System  Requirements Specification for STEWARDS  Page 7 
+ Establish a database in support of CE AP that will house the collective data 
+assembled or generated during research ac tivities.  The database will support a 
+variety of data types and formats, includi ng but not limited to: sp atial data - vector, 
+raster, imagery, and tabular; tabular data  – static and time-series; spreadsheets; 
+documents; reports; photographs; and URL links. 
+FR-1.2: Modeling support 
+The use of agricultural models (SWAT, AnnAGNPS) is a core element of the 
+CEAP effort.  Several modeling-related data base topics will need  to be addressed: 
+1. Maintenance and reporting of uncertainty or error in measured data, in spatial 
+components of GIS data, and in modeli ng output. Reporting of uncertainty may 
+take place on an individual sample basis, on a method or procedural basis, or on an entire database. 
+2. Models will require specific input data and will generate output data during the 
+calibration and validation phases, sensitivity analyses, and exploratory scenarios.  The current scope of the STEWARDS system is to provide measured data for input 
+to the model and for comparison to output. 
+FR-2:  DATA ACCESS 
+FR-2.1:  View entire universe of watershe ds from top-level screen for selection 
+Design tools to navigate the individu al watershed sites and their data. 
+FR-2.2:  View waters hed descriptive data 
+Summary descriptions of research waters heds, stations, and in struments that are 
+useful in describing the research activities  should be accessible.  This information 
+would not be considered ‘formal’ metadata. 
+FR-2.3:  Browse, query, and download individual sampling st ation data and metadata 
+Provide access to the data via browsing of sites, stations, and instruments; allow 
+for simple queries to individual datasets; provide a metadata s earch tool to query 
+dataset parameters; and allow for downloa ding of datasets (full or partial). 
+FR-2.4:  Visualize time-series data 
+Users may wish to examine time-series data, e.g. stream discharge data, over a 
+user-specified time frame in order to sele ct only those data desired for download.  
+Charting tools in association with the query engine are desirable. 
+FR-2.5:  Generate tabular reports of selected data 
+Provide access to CEAP-related report s, tables, and project documents. 
+FR-2.6:  Visualize, query, and download spatial data 
+Agricultural research data are inheren tly spatial in nature.  STEWARDS will 
+provide web-based geographic information tools to allow site-specific data to be 
+viewed within their spatial context.  These tools will provide browse and query 
+functionality and support links to downloa d spatial data and their associated 
+tabular data. 
+FR-2.7:  Browse, visualize, and downloa d agricultural modeling data and results 
+Much of the initial effort in CEAP wi ll focus on the use of agricultural models 
+(e.g. SWAT, AnnAGNPS) in the CEAP wa tersheds.  Users will be able to 
+examine the data used in the modeling effo rt, visualize the results in their spatial 
+context, and download the mode l input data and results. 
+System  Requirements Specification for STEWARDS  Page 8 
+ FR-3:  METADATA 
+FR-3.1:  Maintain metadata database 
+Develop and maintain a metadata database that provides browse and query access 
+to formal descriptions of the database  elements.  Provide tools for database 
+contributors to create and upload meta data compatible with the STEWARDS 
+metadata database. 
+FR-3.2:  Browse and query watershe d metadata by theme or location 
+Develop search tools that query waters hed, station, and inst rument metadata 
+across the STEWARDS database.  Meta data query tools will support query by 
+location, theme, and keyword. 
+FR-4:  SYSTEM SUPPORT 
+FR-4.1:  Administrative metrics – user access lists, data download estimates 
+FR-4.2:  User feedback, user support tools FR-4.3:  Conform to USDA web site style guide 
+3.2 Metadata Availability  
+Metadata are data about data. Th e STEWARDS database will main tain a metadata report for each 
+database in STEWARDS. The meta data of individual datasets s hould be created at the local 
+watershed sites for local use and for populating a CEAP metadata database. Elements of the 
+STEWARDS Metadata system will include:  MA-1:    Metadata standard 
+Adopt a metadata standard that is compliant with Federal regulations .  The current Federal 
+standards for spatial data are the Content Standard for Digital Geospatial Metadata 
+(version 2.0), (http://www.fgdc.gov/metadata/contstan.html
+), FGDC-STD-001-1998.  
+There are some indications that the Fe deral government may implement the ISO 19115 
+geographic information/metadata standard in th e future. If this occurs, the CEAP database 
+team will evaluate conversion of metadata.  
+MA-2:    Metadata input tool 
+Implement a metadata input tool that suppor ts creating and editing of metadata in the 
+chosen format.  The metadata tool will allo w for local and web-based input and editing. A 
+likely scenario involves a web-ba sed wizard which allows users to specify particulars of a 
+data set, and then save those an swers and relate them to a part icular project, so that these 
+selections can be re-used in  future uploading operations. 
+ 
+MA-3:    Metadata query system 
+Implement a web-based browse-and-query to ol for searching STEWARDS metadata.  
+Queries by location, theme, and keyword will be supported. A likely scenario involves a 
+web-based wizard which allows users to specif y particular querying parameters and then 
+save them for reference later such that time-based comparisons are facilitated with minimal user training.  
+MA-4:    Metadata database 
+Implement a database of STEWARDS metadata elements.  The database will provide browse and query functionality. 
+System  Requirements Specification for STEWARDS  Page 9 
+ 3.3 Data Dissemination 
+To make data electronically available any place and any time through a web server-client service, 
+the web service will be platform independent as much as possible. Where there is an exception, the 
+software/hardware requirement should be specified  for a particular appl ication.  Users whose 
+computing environment precludes downloading the da ta via the internet will have the opportunity to 
+acquire data, reports, model results and other STEWARDS information via alternative media. 
+3.4 Hardware requirements 
+HR-1:     Data Storage 
+HR-1.1: Online Storage - The system needs to be able to store hundr eds of megabytes of 
+data on demand.  The potential for needing Giga bytes of data storage capacity is also in 
+the realm of possibilitie s.  Further requirements gatheri ng is needed to get real-world 
+estimates of such data storage needs. 
+ 
+HR-1.2: Near-line Storage – All User and Application data as well as software installation 
+and configuration files must be fully backed up week-nightly.  Further, secure, off-site 
+storage will be performed on a weekly basis with 24-hour retrieval times.  
+ HR-2:    Networking 
+HR-2.1: Load Balancing -  Application Serv ers and Database servers must be load 
+balanced at the application level to ensure maximum stability and availability.  Specific 
+scenarios, such as fail-over versus session-ma naged load balancing need to be addressed in 
+the functional requirem ents specification. 
+ 
+HR-2.3: Private Network - The system require s a “back-end” private network environment 
+in order to ensure that end-user operations (on the front-end) are not  impeded by database 
+backups, index propagations, or othe r large back-end data transfers. 
+ 
+HR-2.4: The system will use, where appropr iate, the standard hardware and data 
+communications resources provided by the AR S OCIO at the ARS George Washington 
+Carver Center in Beltsville, MD. This includ es, but is not limited to, the general Ethernet 
+network/T1 connection at the server/hos ting site, network servers, and network 
+management tools. 
+3.5 Software requirements  
+SR-1:  Backup Software – Data and application backups will be managed through fully supported 
+backup software solutions. 
+ 
+SR-2:  HTTP and GIS Server Applications – As  the Web will be the primary delivery protocol 
+for the application, HTTP and related GIS server  applications will be required to support 
+system functionality. 
+ SR-3:  Web Browsers and Browser Plug-ins – In support of External Interface requirements, 
+commonly supported web browsers will be used to implement a thin-client architecture.  
+The use of Browser plug-ins will be judici ously restricted on an as-needed basis. 
+ SR-4:  Email Services– As a secondary delivery protocol for alerts, data, and other information 
+from the system, email server applications wi ll be required to support system functionality. 
+ 
+System  Requirements Specification for STEWARDS  Page 10 
+ SR-5:  Relational Database Management System  - As the primary data storage mechanism for 
+the corporate standard relational database management system, Microsoft SQL Server will be required to support system functionality. 
+ SR-6:   The system will use, where appropriate, the standard software resources provided by the 
+ARS OCIO.   This includes, but is not limite d to, MS ASP/Java Scripts, C
+++/C#, MS SQL 
+server and IIS, or the use of PHP/Perl, JB scripts, C++/C#, MySQL server, and Apache 
+server. 
+ SR-7:   The system will make data available in standardized data formats such as tab-delimited 
+text for use on users’ client systems including local installa tions of ARC GIS software or 
+other off-line software applications.   
+3.6 Data migration to and retrieval from STEWARDS 
+Data will be subject to quality assurance prio r to either initial or recurring uploading to 
+STEWARDS. Initial population of STEWARDS will require that transition filters be developed 
+jointly between the STEWARDS team and the individual watersheds. These filters will provide the same function for recurring, probably annual, uploads.  
+3.6.1 Quality Assurance  
+Local watershed staff will be responsible for perf orming necessary quality assurance/quality control 
+(QA/QC) procedures prior to data being uploa ded to the STEWARDS database.  Measurement 
+methods and QA/QC procedures es tablished by the CEAP Quality A ssurance Team will be used by 
+local data producers and recorded in  the data provided to STEWARDS. 
+ The purpose of quality assurance is intended to provide added assurance of data integrity. Quality assurance checking will be carried ou t at two different levels – local site level and central site level. 
+First, the guidelines for quality assurance, incl uding parameter-specific ranges, threshold values, 
+quality flags etc., will be determined. Quality assurance checking at the local sites may be performed before or during the standard exch ange file conversion phase. A general quality 
+assurance checking, not as specific as  at the local sites, will be carr ied out during the data uploading 
+stage. Note that a) the primary responsibility fo r data quality assurance re sts with the individual 
+sites and b) the quality assurance ranges, criteria, etc., used here  should be consistent with the 
+quality assurance information specified in meta data (and may be a component of  the data 
+dictionary). 
+3.6.2 Populating data   
+Basic information regarding individual watersheds will be made available to STEWARDS by local 
+watershed sites.  Basic information may include spatial data in a GIS-compatible format; descriptive data about stations, instruments, methods, or procedures; reports; m odeling results; and other data.  
+Data will be reformatted to be compatible with  the STEWARDS data schema and CEAP modeling 
+requirements.  Watershed data to be used in mo deling that does not conform to model requirements 
+will be processed in STEWARDS for in clusion in the STEWARDS databases. 
+ As part of the initial population of the database, time-series data (measurement data, annual land use 
+information, weather/climate data) that has been co llected by local watershed staff will be processed 
+through local and CEAP QA/QC procedures a nd uploaded to the STEWARDS database by 
+watershed staff per obligations to CEAP Objective 1.    
+System  Requirements Specification for STEWARDS  Page 11 
+ Protocols for data imports from local sites via in put files with different formats will be developed 
+and implemented jointly between the STEWARDS team and the local watersheds. The standard 
+exchange file format will have b een jointly determined first. A singl e import filter will be written to 
+parse the standard formatted (e.g. ta b-delimited) files from the local watershed sites. In this manner, 
+all the data files from the local sites will have cons istent formats when they are stored in the central 
+site. The filter developed for the intial population of the database will  be available for use in later 
+periodic uploads. 
+3.6.3 Updating Data  
+Time-series data (measurement data, annual land use information, weather/climate data) and other 
+data (spatial data, metadata) will be collected by local watershed staff, pr ocessed through local and 
+CEAP QA/QC procedures, and uploaded to the STEW ARDS database on an annual basis using the 
+filter developed during the initial population of the database. Requests will initiate from the central 
+system per schedule negotiated with individual watersheds. Compliance by watershed staff is 
+understood to be expected per obligations unde r CEAP watershed project plans revised to 
+accommodate the CEAP project plan objective 1. 
+3.6.4 Data derivation/aggregation   
+The central database will allow users to access the data of individual watersheds, sub-watersheds on 
+a station-by-station basis, or a coll ection of stations if the entire data set is desired. Multiple levels of 
+data aggregation of time-series data (daily, monthly, or yearly) will be supported. A great flexibility of export data should be also available in terms of data volume (the number of data entity and time 
+coverage) and output format [for example, for ta bular data – comma separated values (csv) or 
+database format (dbf); for spatial data – shape file s (shp) or ascii grid file s (grd);  for reports – 
+Adobe page definition format (pdf)]. 
+4. External Interface Requirements 
+4.1 User Interfaces 
+The user interface will be simple and consiste nt, using terminology commonly understood by the 
+intended users of the system.  The system will have  a simple interface, consistent with industry 
+standard interfaces, to eliminate the need for user  training of infrequent users.  The STEWARDS 
+team will evaluate the user interface of simila r systems and apply appropriately.  For additional 
+details see Appendix E. User testing will be used to ensure the user interface is clear (simple, 
+commonly understood vocabulary, intuitive to use w ithout training), complete (users can perform 
+all functions from the interface), and consistent  (buttons and wording are the same throughout the 
+system).   
+4.2 Hardware Interfaces 
+No extra hardware interfaces are needed.  The system will use the standard hardware and data 
+communications resources provided by the ARS OC IO at the ARS George Washington Carver 
+Center in Beltsville, MD. This includes, but is  not limited to, the general Ethernet network/T1 
+connection at the server/hosting site, network server s, and network management tools.  This system 
+will include a warning message when a low tran smission speed is detected, and a non-graphical 
+interface option will be available. 
+System  Requirements Specification for STEWARDS  Page 12 
+ 4.3 Software Interfaces 
+The system will use the standard softwa re resources provided by the ARS OCIO.   This includes, but 
+is not limited to, MS ASP/Java Scripts, C++/C#, MS SQL server and IIS, or the use of PHP/Perl, JB 
+scripts, C++/C#, MySQL server, and Apache server. 
+4.4 Communications Interfaces 
+The system will use the communications resources provided by the ARS OCIO.  This includes, but 
+is not limited to, HTTP protocol for communicati on with the web browser and the web server and 
+TCP/IP network protocol with HTTP protocol.  
+5. Other Nonfunctional Requirements 
+5.1 Performance Requirements 
+PR-1: Response time: The data system shall show no visible deterioration in response time as the 
+number of persons increases. Response tim es seen by end users for querying metadata 
+should be on the order of a few seconds or  less. Response times seen by end users for 
+retrieving the actual images may take much long er, anywhere from a few minutes to several 
+hours. If the user requests a la rge image with a short response time, it is acceptable for the 
+ARS data system to advise the user that the ta rget response time cannot be met. In that case, 
+the person would be referred to an alternate method of getting the data.   
+ 
+PR-2: Loading speed: The data system shall load  as quickly as comparable productivity tools on 
+whatever environment it is running in.  
+5.2 Safety Requirements 
+Data on the server should be protec ted from power loss but data in tr ansit from server to requester 
+could be lost. Given that these data will also re main on the watershed site system, rather than 
+expend resources to prevent this loss, such failures will be monitored and the uploading process will be repeated.  
+5.3 Security Requirements 
+STEWARDS will have reasonable controls consis tent with ARS OCIO pr actices, in compliance 
+with agency, Dept and Govt regulations.  STEWARDS security requirements will have four primary components.  They are authentication, confidentiality, integrity, and availability. 
+ SCR-1: Authentication 
+STEWARDS will follow industry best practices  for authentication, using single-sign-on 
+systems like Microsoft Active Directory to pe rform authentication. Au thentication addresses 
+security requirements to ensure those using syst em are who they say they  are.  This is of 
+greatest concern when data are being changed or updated.  This is primarily done through 
+userids and passwords. 
+ SCR-2: Confidentiality 
+System  Requirements Specification for STEWARDS  Page 13 
+ Confidentiality security requirements describe the need to protect the data appropriately.  
+STEWARDS will use the user classes described in section 2.3 above to define boundaries of 
+information sharing to ensure confidentiality as a ppropriate.   Any data that should be 
+viewed by a restricted audience must be prot ected with appropriate security features. 
+ SCR-3: Data Integrity 
+The integrity of STEWARDS data will be critical to its success as a product.  Scientific 
+research and publications will be based on the data obtained through the system.  Therefore, extensive data validation and review will be performed both before data are uploaded to the system and as part of the upload process.  The system will need policy and procedures protecting the data from intent ional or unintentional modificati ons, and to ensure accurate 
+data are made available. 
+ SCR-4: Availability 
+The fourth consideration for security requireme nts is availability.  The system must be 
+available to the intended audience 24 hours per day, 7 days a week w ith, 99% availability 
+and a tolerance of -5% (not le ss than 50% of working hours in any week).  For this system, 
+availability will be concerned with the reliabil ity of the software and network components.  
+Intentional “denial of service attacks” is  not foreseen as a significant concern.
+  
+5.4 Software Quality Attributes 
+SQ-1:  Portability 
+This database will be built for a particular system and may not be portable but results to queries will be portable between many environments.  
+ SQ-2:  Adaptability 
+Implementation of the application software/code and design of database structure should be 
+flexible enough for the necessary change in the later phase.  
+ SQ-3:  Availability 
+Availability is defined here to mean the abil ity to use the system during its intended period 
+of operation as defined in SCR-4 above.  
+Appendix A: Acronyms and Glossary 
+Acronyms: 
+ AnnAGNPS - Annualized Agri cultural Non-Point Source 
+ARS - Agricultural Research Service CEAP - Conservation Effects Assessment Project DBA - Database Administrator ERS - Economics Research Service GIS - Geographical Information System HTML - Hyper Text Markup Language HTTP - HyperText Transfer Protocol IIS - Internet Information Service ISO Standards - Standards established by Inte rnational Organization for Standardization 
+MS ASP - Microsoft Active Server Page MS SQL server- Microsoft Stru ctured Query Language Server 
+NRCS - Natural Resources Conservation Service OCIO - Office of Chief Information Officer Perl - Practical Extraction and Report Language 
+System  Requirements Specification for STEWARDS  Page 14 
+ QA/QC - Quality Assurance/Quality Control 
+STEWARDS - Sustaining the Earth's Watershe ds – Agricultural Research Data System 
+SQL - Structured Query Language SWAT - Soil and Water Assessment URL - Uniform Resource Identifier USDA - US Department of Agriculture  Glossary:  AnnAgNPS -- see Appendix B  Apache - An open-source web server pr ovided by the Apache Software Foundation 
+ ArcGIS - ArcGIS is an integrat ed collection of GIS software pr oducts for building a complete GIS 
+developed by ESRI.  Authentication - The procedure (esse ntially approval) used by the a pproval authority in verifying 
+that specification content is acceptable. Authenti cation does not imply acceptance or responsibility 
+for the specified item to perform successfully.  Benchmark watersheds - is used to  differentiate the larger scale ARS watersheds from field scale 
+ARS research activity or from other non-ARS watersheds.  C++ - "C plus plus" is a programming language that was built off the C language. 
+ C# - A modern object-oriented  programming language designed  and developed by Microsoft 
+ Client – (1) A computer process that requests a service from a nother computer and accepts the 
+server's responses; (2) the individual computers in a network computing system 
+ Core 4 - NRCS's Core 4 is a  common-sense approach to improving farm profitability while 
+addressing environmental concerns . The approach is easily adapta ble to virtually any farming 
+situation and can be fine tuned to meet your uni que needs. The net result is better soil, cleaner 
+water, greater on-farm profits, and a brighter future for all of us. 
+ Data aggregation - Any process in  which information is gathered and expressed in a summary form, 
+for purposes such as statistical analysis  Database - A collection of related data stored in one or more computerized files in a manner that 
+can be accessed by users or computer progr ams via a database management system. 
+ Database management system - An integrated set of computer programs that  provide the capabilities 
+needed to establish, modify, make available,  and maintain the integrity of a database. 
+ Data dictionary - A collection of data definitio ns, each identified by the name of a piece of data, 
+describing the meaning and purpose of  that piece of data in the system, the type of the data, its 
+components and any other releva nt attributes (range, precis ion, storage size and so on). 
+ Data Migration - The process of tr anslating data from one format to another or from one storage 
+device to another  Data Schema - A data schema is a grammar that de scribes elements and their types, attributes and 
+possible relations.  
+System  Requirements Specification for STEWARDS  Page 15 
+ Functional requirement: A statement of a piece of requi red functionality or a be havior that a system 
+will exhibit under specific condi tions. These include inputs, out puts, calculations, external 
+interfaces, communications, and special management  information needs. Functional requirements 
+are also called behavioral requirements because they address what the system does.  Intranet - An intranet is an internal or private Internet used strictly w ithin the confines of a 
+company, university, or organization.   JavaScript - A programming language designed by Sun Microsystems, in conjunction with 
+Netscape, that can be integrated  into standard HTML pages. 
+ Metadata -- "data about data" describe the cont ent, quality, condition, and other characteristics of 
+data.  Module – (1) In software, a module is a part of  a program. A single modul e can contain one or 
+several routines. (2) In hardware, a m odule is a self-contained component.   
+ MySQL - A public domain, open-source database system using SQL  Performance - A quantitative measure characterizing a physical or functional at tribute relating to the 
+execution of a mission/operation or function.  Performance requirement -- A system/software system requirement specifying a performance 
+characteristic that a system/software system or system/software component must possess; for 
+example, speed, accuracy, and frequency.  PHP - An HTML-embedded Web scripting language  Populating Data – initial uploading of data into the database  
+ Portability - (1) A term used to describe an objec t that can be easily moved, such as a portable 
+computer; (2) When referring to computer softwa re, portability refers to how easy a software 
+program can be moved between computer Operating Systems.  Requirement -A statement of need for some asp ect of a system, often e licited directly from a 
+stakeholder or captured from a source document  Server – A central computer (server) which provide s services such as file  storage, printing, and 
+communications in a network computing system       Software requirement – (1) A software capability n eeded by a user to solve a problem to achieve an 
+objective; (2) A software capability that must be met or possessed by a system or system component 
+to satisfy a contract, standa rd, specification, or other formally imposed document. 
+ SWAT - see Appendix B  System - A composite of equipment, skills, and techniques capable of pe rforming or supporting an 
+operational role or both. A comple te system includes all equipmen t, related facilities, material, 
+software, services and personnel requ ired for its operation and support to the degree that it can be 
+considered a self-sufficient item in its intended operational environment. 
+ System Requirement - A condition or capability th at must be met or possessed by a system or 
+system component to satisfy a condition or capab ility needed by a user to solve a problem. 
+ 
+System  Requirements Specification for STEWARDS  Page 16 
+ Use cases - A task analysis technique often used  in software engineeri ng. For each module of a 
+system, common tasks are written up with the prerequisites for each ta sk, the steps to take for the 
+user and the system, and the cha nges that will be true after the task is completed. Use cases are 
+especially useful for making sure that common ta sks are supported by the system, that they are 
+relatively straightforward, and that the system  architecture reflects the task structure. 
+ User class - A group of users for a system who have  similar characteristics and requirements for the 
+system  User interface – A user interface is  what you have to learn to operate a machine. For examples, the 
+graphical user interfaces (GUIs) -- windows, icon s, and pop-up menus have become standard on 
+personal computers.  User requirements - address what the users n eed to do their jobs.  These requirements are 
+implementation independent and are sometimes cal led "business requirements." Read about the 
+important of user requirements.  
+Appendix B: Analysis Models 
+SWAT - Soil and Water Assessment Tool, a river basin, or watershed, scale model developed by Dr. Jeff Arnold for the USDA Agricultural Res earch Service (ARS). SW AT was developed to 
+predict the impact of land manage ment practices on water, sedime nt and agricultural chemical 
+yields in large complex watersheds with varyin g soils, land use, and management conditions over 
+long periods of time.
+ 
+ AnnAgNPS - AGNPS is a tool to help evaluate the eff ect of management decisions impacting a 
+watershed system.  The AGNPS system is a di rect update of the AGNPS 98 & 2001 system of 
+modules containing many enhancements. The term "AGNPS" now refers to the system of modeling 
+components instead of the single-event AGNPS, wh ich was discontinued in the mid-1990's. These 
+enhancements have been included to improve the capability of the program and to automate many 
+of the input data preparation steps needed for use with large watershed systems.  New to 
+AnnAGNPS Version 3.42 are many minor enhancem ents to algorithms and more output options. 
+The AGNPS Arcview interface has been better integrated with the components needed to develop AnnAGNPS datasets. The capabilities of RUSLE
+, used by USDA-NRCS to evaluate the degree of 
+erosion on agricultural fields and to guide develo pment of conservation plans to control erosion, 
+have been incorporated into AnnAGNPS.  This provides a watershed scale aspect to conservation 
+planning. 
+Appendix C: Issues List 
+This section is reserved for open requirements issu es that remain to be resolved, including TBDs, 
+pending decisions, information that is needed, conflicts awaiting resolution, and the like. 
+Appendix D: Database team members 
+Steiner, Jean El Reno, OK 405-262-5291 jean.steiner@ars.usda.gov   
+Sadler, John Columbia, MO 573-884-1971 sadlerj@missouri.edu   
+Anderson, Dave Ft. Collins, CO 970-295-5539 danderson@itc.nrcs.usda.gov   
+Batten, H. L. Tifton, GA 229-386-3297 hlb@tifton.usda.gov   
+Chen, Jin-Song El Reno, OK 405-262-5291 jin-song.chen@ars.usda.gov   
+System  Requirements Specification for STEWARDS  Page 17 
+ Herring, Rob Beltsville, MD 301-504-1050 rherring@ars.usda.gov   
+James, David Ames, IA 515-294-6858 james@nstl.gov   
+Lombardo, Pete Beltsville, MD 301-504-1073 pvl@ars.usda.gov   
+Philpot, Jill Beltsville, MD 301-504-5683 jphilpot@ars.usda.gov   
+Ross, John El Reno, OK 405-262-5291 john.ross@ars.usda.gov   
+Wilson, Greg Beltsville, MD 301-504-1058 gwilson@ars.usda.gov  
+ 
+Appendix E: System Detailed Specifications 
+DS-1: General  
+ GUI and dynamic web applications will be used  as much as possible in the ARS data 
+ System.  Project-specific standards will be used to ensure consistency across the tools. The pages can 
+ be viewed with Microsoft Internet Expl orer versions 5.0 and 6.0, Netscape Communicator 
+ version 4.7, Netscape versions 6 and 7, and FireFox.1.0.  The pages will be designed for screen reso lution of 800 x 600 pixels as a minimum. 
+ Proper functionality of the application will requi re that cookies be enabled in the browser 
+ settings.  Arial font will be used across the tools. 
+ DS-2: Readability  
+ Terminology used in the tools should be easily understandable by the user. 
+ DS-3: Page design 
+ All pages performing similar functionality  should have consistent Look & Feel. 
+ Appropriate titles should be given to each page . The titles should spec ify the functionality of 
+the page.  
+ Appropriate alternate text shoul d be provided for all the images , to help in navigation and 
+better readability.  
+ The title tag and the Meta description tag in the web pages will be carefully constructed to 
+include the focused keywords so these keywords will be highly visible in the search engine 
+results pages, making the STEWARDS product mo re useful to the general users after the 
+public rollout.  
+ DS-4: Navigation: 
+ Navigation facilities will be pr ovided to navigate from one page to another page with 
+minimum number of clicks. 
+ DS-5: Messages:  
+ Descriptive and user friendly messa ges for invalid input should be  provided in all the pages. 
+Completion/Confirmation messages should be disp layed when the application processes the 
+data successfully. Messages generated sha ll be clear, succinct, and free of jargon. 
+System  Requirements Specification for STEWARDS  Page 18 
+ Appendix F: System Design 
+ 
+System Design Goals : 
+ The purpose of system design is to translate the system requirements into more technical 
+specifications. Through a user case su rvey and a logical analysis of user’s expectations and system 
+functionalities, the system components for STEWAR DS are identified (Fig. F1). System design 
+provides a detailed description for each identified  component and produces a physical data system 
+design (with documentation) that allow the system developers to construct each component (layer) 
+accordingly.  At the end of the system desi gn phase, hardware, software tools and skill 
+requirements, and other resources will be identi fied and a system developer team/plan will be 
+drawn. After that, the cons truction phase will begins (Task flow of can be seen in  Fig. H1 in 
+Appendix H). 
+ 
+System Design Methodology : 
+ The system design process can be divided into thr ee main phases: conceptual system design, logical 
+system design, and physical system design. In this  appendix, only conceptual system design and 
+logical system design for STEWARDS are documen ted. Physical system design (how the logical 
+structure of  STEWARDS will be implemented) is  still in a planning stag e and will be described 
+later. Physical design, which involves producing a description of the im plementation of logical 
+system design, will be tailored to STEWARDS and all physical considerations (including 
+tools/software such as Microsoft SQL server, Oracle SQL server etc.) will be specific to 
+STEWARDS.  Conceptual System Design: Build a co nceptual data system for STEWARDS 
+ 
+As depicted in the conceptual model of STEWARDS  (Fig. F12), the task underway in this phase is 
+to define/identify system components such as:  
+1. hardware infrastructure component, 2. data/database component (metadata standards, measurement data),  3. interface/application component (metadata sear ch, measurement data search, data access, 
+visualization, data downloads, and their relationships), and  
+4. data uploading tool component.  
+ The database design and interface/application design parallel each othe r within the system 
+development process. The total number of system  components will depend on the level of detail. 
+For example, the data component of STEWARDS can  be further identified as watershed climate, 
+image, soils, management, pollutant source,  hydrology, socio-economic, water quality data,  data 
+search, data downloads etc (Fig. F2). Descript ion for hardware infrastructure design will be 
+provided separately. 
+ 
+Logical System Design: Build and validat e the logical data system for STEWARDS 
+ 
+During the logical system design phase, a logical data system (a ll system components and their 
+relationships) will be constructed and validated. In other words, the Entity-Relationship (ER) 
+diagrams for measurement data and user graphic interfaces (UGIs) to co nnect all components will 
+be developed.  For example,  an entity-relationship diagram for measured climate data at South Fork 
+watershed, Iowa, is given in Fig. F3. Climate is  an entity (subject) and it becomes a table 
+(Topic(Variable)_Table which holds  variables such as min_tempera ture, max_temperature, etc.) in 
+the database. The actual (bas ic) climate data is also an entity and has its own table (a table with 
+System  Requirements Specification for STEWARDS  Page 19 
+ yellow background in Fig. F3). Fig. F3 also shows th e relationships between tables.  The tables – 
+STEWARDS_Units_lookup_Table, [WS]_Topic_Table, and [WS] _Site_ID_Table are supporting 
+data tables to the [WS]_Climate_Daily table. The latt er is the basic data tabl e where climate data are 
+stored. Note that the characteristics  (topic) of  a theme (e.g. climate)  in Fig. F3 become the fields 
+(min_temperature, max_temperature, etc.). The data descriptors for the basic data table and 
+supporting tables are shown in Tables F1 and  F2 respectively.   A generalized data flow and table 
+relationship is given in Fig. F4. 
+ 
+Fig. F5. is a diagram in which the data flow and relationship of system co mponents were identified. 
+It provides a skeleton of system interface desi gn. Three major system application components are 
+identified: overview/summary, system search, and data access/visualizati on/downloads.  For next 
+level of detail, the system component diagram fo r access login component, system/summary system 
+component, metadata search component, site summary search, component, watershed specific 
+search component, topic search component, site specific search component, pre-existing search 
+component, characterizing watershe d GIS component,  and data acces s/visualization component are 
+given in Figs. F6 to F15. The descriptions for these higher level system components are given in 
+another document (Software module design documentation_v2-2.doc at The USDA-ARS ARSNET 
+Team 1 Sharepoint site). 
+ 
+Data Importing/Translation : 
+ The tasks for importing data from the local sites into the centralized site required the following 
+considerations. 
+ 
+1. Assumptions: 
+a. Metadata will be compliant at time of pr oduction in the local sites – no translation 
+required, just the upload. 
+b. Therefore, translating empiri cal data is the only need. 
+c. Translation will be local site specific and done there. 
+d. A thesaurus of columns and allowed parameter ids (identification ID s) will be developed 
+either internal or external to the tran slation team before acting on the below. 
+2. There are three types of empirical data we will need to address. 
+a. Time series data (Type 1 data) with columns fo r different data collected at the same time. 
+Example is flat table of weather data.  A generalized data struct ure for this type of data is 
+given in Fig. I1 in Appendix I. 
+b. Time series data (Type 2 data), usually more sparse than the above, with an id field that 
+explains what the parameter field contains. Ex ample is water quality data.   A generalized 
+data structure for this type of data is given in Fig. I2 in Appendix I. 
+c. GIS layers. 
+3. There are two types of operations we need to consider 
+a. Initial population 
+i. Build cross-map (mapping method) of  columns and/or parameter ids 
+ii. Build units conversions 
+iii. Choose QA procedures 
+iv. Build translate/upload procedure 
+v. Perform initial upload 
+vi. Perform check of comple teness in central store 
+b. Annual population 
+i. Add new columns if needed 
+ii. Upload into existing (perhaps  only recently) columns/fields 
+System  Requirements Specification for STEWARDS  Page 20 
+ iii. Overwrite old data after error identification and correction locally 
+iv. Perform check of comple teness in central store 
+ 
+ 
+The mapping method allows a great fl exibility in terms of data hete rogeneity, table si ze, data type, 
+etc.   Physical System Design: Build the specific data  system for STEWARDS in terms of softwares 
+and tools. 
+  
+This phase is under planning.  Fo r software requirements, the p
+rogramming skills in developing 
+Windows and Web applications us ing Microsoft Visual Studio .N ET (BASICS,  ASP.NET, C++, 
+C#),  XHTML, XML programming languages/scripts, Microsoft VISIO 2003  under MS Internet 
+Information Services (IIS) and  Micros oft SQL 2000/2005 servers will be pursued. 
+  
+System  Requirements Specification for STEWARDS  Page 21 
+  
+ 
+STEWARDS,
+Centralized SiteMetadata 
+DBMS :
+Web-based DatabaseManagement System
+(Web/SQL/ArcIMS
+ severs)Database
+Construction
+Data Access,
+Visualization,
+DownloadApplications &
+InterfacesData Uploading
+Tools
+DatabasesServer-Client Interaction
+1. Metadata Search
+2. Meas. Data Search
+3. Watershed Summary
+4. Data Visualization 
+5. Data  Download6. ApplicationsConceptual Model of STEWARDS
+Data Uploading
+Measurement 
+Data 
+GIS LayerData Sources, 
+Research Watershed
+Data Files: ASCII ,
+Spreadsheet, etc.
+System Infrastructure
+Fig. F1 Logical model of STEWARDS Data Syst em with four system components – System 
+infracture, databases, applications/interfaces, and data uploading. 
+System  Requirements Specification for STEWARDS  Page 22 
+  
+Fig. F2. Data components of STEWARDS. Each bloc k represents a data entity (a topic object). 
+System  Requirements Specification for STEWARDS  Page 23 
+  
+     
+ 
+         
+ 
+   
+Fig. F3.  An example Entity-Relationship (ER)  diagram of climate data at South Fork 
+Watershed, Iowa. The basic data table is the one  in yellow color. Other tables are supporting 
+tables  The definition text at th e top of the table with  gray color represents the context of an 
+entity  (e.g. [WS]_Climate_Daily ) while the texts under the top gray area represent the field 
+names.  PK represents primary key of a table and FK(x) is foreign key. The line with an arrow 
+shows the relationship between two tables. A forei gn key is the field in a relational table that 
+matches the primary key column of another ta ble. The primary key of a relational table 
+uniquely identifies each record in the table. 
+System  Requirements Specification for STEWARDS  Page 24 
+  
+ 
+                                  
+Table F1. Data descriptors of measurement data table. 
+System  Requirements Specification for STEWARDS  Page 25 
+ 
+Table F2. Data descriptors of supporting data tables. 
+System  Requirements Specification for STEWARDS  Page 26 
+ 
+Table F3. Excel style tables and thei r relationship for a basic data table 
+(Table F1)  and a supporting (topic/clim ate definition) table (Table F2). 
+System  Requirements Specification for STEWARDS  Page 27 
+ 
+Fig. F4. Generalized data relationships in  STEWARDS.  The indexes, j,k,m, and n 
+represent the number of topics , sites, variables, and ta bles, respectively. The lines 
+with arrows show the relationships between tables. 
+System  Requirements Specification for STEWARDS  Page 28 
+  
+Fig. F5 The application system component s of STEWARDS. The numbers represent 
+different a pplication /interface s ystem com ponent at different levels.2.0 System Menu1.0 System Access
+3.1  Metadata Search3.0  System Searches2.2  Watershed Summaries2.1  CEAP Overview
+2.3  Modelling Summaries
+2.3.1  Calibration files
+-- Rectangle shapes are used for processes
+-- Oval shapes are used for termination/beginning 
+      and connections
+-- Diamond shapes are used for decision points-- Italic font is used for identifying data variables3.3.1  Topic-specific Search
+3.3.4  Characterize watershed
+GIS interface3.3.2 Site-specific Search
+4.3 Download data4.2 Data Examination3.3 Watershed-specific Search2.2.1  Site descriptionsSTEWARDS
+Watershed-specific
+ARS Research databaseOMS
+ Model info
+Model support
+3.3.3  Pre-existing data search
+4.1.1  Data extraction tabular
+4.1.2  Data extraction GIS3.2 Search Site Summaries Table 
+4.0 Data Access
+4.1 Data Extraction
+System  Requirements Specification for STEWARDS  Page 29 
+   
+ 
+  
+Fig. F6. The 2nd level of access login component of STEWARDS. The first digit of the 
+leading number of each subcomponent repres ents the first level of the system 
+components and the second number repres ents the second level and so forth. 1.0 System Access
+Login Routine
+2.0 System Menu
+1.2 System provides
+persistent login accessProceed with
+'Public' access
+Yes No Has
+User Account1.2.1 Select enhanced access
+1.3 Create User-ID and passwordUser enters
+STEWARDS
+1.3.1  Enter user information
+1.3.2  Requests ARS 
+authentication
+Validate User-ID
+and passwordEvaluate User
+Information
+Proceed with
+'Download' access
+Invalid
+Login
+Authenticate
+user
+Proceed with
+'ARS' access1.6 Set access level
+to 'ARS' Fails ARS
+Authentication
+ARS
+User
+ARS
+User
+1.3.2.1  Send email with
+authentication1.4 Enter User-ID and password
+Download
+UserDownload
+User1.5 Set access level
+to 'Download'
+System  Requirements Specification for STEWARDS  Page 30 
+ Fig. F7.  System/Summary system component of STEWARDS. 2.0 System Menu
+Choice 3.0  System Searches
+2.1  CEAP Overview
+  - Many pages of project information
+    + Objectives    + Personnel    + Accomplishments
+2.2  Watershed Summaries
+ - Summary information by watershed
+    + Watershed research goals    + Personnel    + Accomplishments
+2.2.1  Site descriptions
+ - Descriptive information by
+   sampling location (site)    + Parameters sampled
+    + Instruments used
+    + Sample methodology described3.1  Metadata search results
+Metadata record
+3.3.2 Site-specific Search3.3.1 Topic-specific Search
+3.3.4 Site characterization3.2 Search Site Summaries
+2.3  Modelling Summaries
+ - Summary information by Model
+    + Model research goals    + Personnel    + Accomplishments
+3.3.3 Pre-existing data search2.3.1  Calibration & Validation files
+- Model & watershed specific
+- Direct download
+System  Requirements Specification for STEWARDS  Page 31 
+ Fig. F8.  Metadata search component of STEWARDS. External to STEWARDS
+GOS  Metadata Clearning
+House Search Engine
+GOS Display Metadata searach 
+results w/links to GOS metadatarecord adn STEWARDS Site Descriptions3.1 Metadata Search
+3.1.4  Display Search Summary/Links
+      - Data set title       - Link to formal metadata (FGDC)
+      - Linjk to Site Description
+      - Abstract
+2.2.1  Site descriptions3.1.3 . Use ArcMIS to create list
+with links to Site Description
+and formal metadata record3.1.1  Search on STEWARDS
+Metadata Search Engine
+3.1.2  Enter search criteria:
+  3.1.2.1 Select search field
+  3.1.2.2 Enter search key words
+FGDC metadata or
+Site Description or
+New Search
+Search Home or
+New search3.1.5  Select and display 
+FGDC-compliant metadata report3.0 System Queries
+System  Requirements Specification for STEWARDS  Page 32 
+ Fig. F9.  Site summary search component of STEWARDS. Link to 3.3 Watershed SearchLink to 3.1 Metadata Search3.0 System Searches
+3.2 Site Summary Search
+Accept/Modify
+based on resultsNew
+System Search3.2.1  Display Site Summary 
+Site Search pageNew 
+Summary Table Search
+3.2.2  Search Site Summary Database 
+3.2.3  Generate summary List 
+of Sites
+Link to 2.2.1  Site DescriptionLink to metadata recordSelect Search Field(s)
+          - State
+          - Watershed
+          - Station ID
+          - Begin Date          - End Date
+          - Duration
+          - Time-step (native)          - Theme (list)
+          - Topic (list)
+System  Requirements Specification for STEWARDS  Page 33 
+ 3.3 Watershed-specific Search
+Select characterization
+Select spatial field
+4.1.2 System builds query
+and extracts GIS dataSelect one site
+Select one time
+Select one or many topic(s)3.3.2 Search by Site
+Display list of existing
+search criteriaSelect one topic
+Select one time
+Select one or many site(s)3.3.4  Characterize watershed
+GIS interface3.3.0.1  Display CEAP watersheds
+3.3.0.2 User selects watershed** Note:
+Because measurement (empirical) data is maintinaed
+seperately from spatial data, there is no direct access
+to the empirical data using the spatial data viewer. The
+spatial data viewer will allow the user to view data in it's 
+spatial setting that will assist the user in making database 
+selections. 3.3.0.3  Display selected watershed 
+map and list of spatial information
+Search or
+Characterize
+Select Search method
+3.3.1  Search by Topic 3.3.3  Search Pre-existing Data
+User selects to view data
+4.1.1 System builds query
+and extracts tabular data3.3 Watershed-specific Search 3.0 System Searches
+Fig. F10. Watershed specific se arch component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 34 
+ 2.2.1 Site Description3.3.1.1  Display list of topics
+for Watershed(s)3.0 System Searches
+3.3 Watershed-specific Search
+3.3.1 Search by Topic
+3.3.1.2  User selects one
+and only one topic
+3.3.1.3  User selects data time step
+3.3.1.4  System displays topic related
+sites with period of record
+3.3.1.5  User selects sites to be
+included in search
+3.3.1.6  User selects time range
+3.3.1.7  Displays list of Sites 
+within time range
+Accept/Modify
+based on resultsAccept User selects to view table, view 
+chart, or download data
+4.0 Data AccessNew
+Topic
+New
+Search
+Fig. F 11. Topic search component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 35 
+ 2.2.1  Site descriptions
+3.3.2.4  User selects Topic(s) to be
+included in search3.3.2.3  System displays 
+site-related Topics
+with period of record 
+Accept/Modify
+based on results3.0 System Searches
+3.3 Watershed-specific Search
+3.3.2 Search by Site
+3.3.2.1  Display list of Sites
+for Watershed
+New
+Site
+New
+SearchUser selects to view table, view 
+chart, or download dataAccept
+4.0 Data Access3.3.2.2 User selects one
+and only one Site
+3.3.2.5  User selects time range
+3.3.1.6  Generate list of Topics
+Fig. F 12. Site specific sear ch component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 36 
+ 3.0 System Searches
+3.3 Watershed-specific Search
+3.3.3.3  System performs data extraction
+4.0 Data Access, Login decision box3.3.3.1 Display list of existing data
+3.3.3.2 User selects data package3.3.3 Pre-existing Data Search
+Fig. F 13. Pre-existing search  component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 37 
+ 3.3.4  Characterize watershed
+GIS interface3.0  System Searches
+3.3 Watershed-specific Search
+3.3.0.2 User selects watershed
+3.3.4.1 Initialize ArcIMS
+for seleted watershed
+4.1.2 System builds query
+and extracts GIS dataMetadata record
+2.2.1  Site descriptionsArcIMS Mapping Engine
+Image rendering  - Create an interactive map.
+Data query  - Create queries to derive specific information. 
+Data extraction  - Download geographic data sets from the server.  
+Metadata  - Access metadata stored in ArcSDE. 
+Fig. F14. Characterizing watershe d GIS component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 38 
+ 4.1. Data Extraction 
+Search Criteria4.0 Data Access
+Download
+Change view
+ Modify searchTable or Chart
+Viewing methodDirect Download 
+or Examination 
+4.2. Data Examination 3.0 System Searches
+Search Criteria
+Download method
+Viewing method
+4.3 Download1.0 System Access
+Login?   2.3.1 Model calibration/validation
+   3.3.3 Pre-existing data package
+Download Change
+View
+Modify
+Search4.2.1  Table:
+display single/multiple
+sites/topics
+4.3.1 Formatted Tabular Data 4.3.2  Direct downloadable
+tables, GIS layers, data packagesDownload data
+Download method
+4.3.3.1   Data copied 
+to FTP - email sent4.3.3
+Direct Download
+or FTP4.3.3.2   Data copied 4.2.2  Chart:
+display single/multiple
+sites/topics
+Fig. F15. Data access/visualiza tion component of STEWARDS. 
+System  Requirements Specification for STEWARDS  Page 39 
+ Appendix G:  Linkage of STEWARDS to Other USDA/ARS 
+Data/Modeling Systems 
+ 
+As an ARS watershed data system to s upport SWAT and AnnAGN PS modeling in CEAP, 
+ultimately the STEWARDS data system could be integrated with other similar ARS data/modeling 
+systems such as OMS (Object Modeling Syst em), iFARM (Integrated Farm And Ranch 
+Management), and other general models (Fig. G1).   
+The OMS  is a Java-based modeling framework that facilita tes simulation model development, evaluation, and 
+deployment. In general, the OMS  consists of: 1) a library of science, control and database modules; 2) a means to 
+assemble selected modules into a modeling package customized to the problem; and 3) automatic generation of a user-friendly interface. The framework employs the latest Java-based software technology for all the components, and is supported by data dictionary, data retrieval, GIS, graphi cal visualization, and statis tical analysis utility modules.
+ 
+  
+                            
+       
+Fig. G1 Linkage of STEWARDS to Ot her USDA/ARS Data/Modeling Systems. 
+
+System  Requirements Specification for STEWARDS  Page 40 
+ Appendix H:  Task Flow of STEWARDS 
+ 
+The task flow diagram (Fig. H1) of STEWAR DS shows that the ta sk components in the 
+development process.  The prototype has been im plemented but is still under tuning. It should be 
+completed by this summer.   
+Task Flow of ARS Watershed
+ Data System (STEWARDS)
+STEWARDS System Requirements
+1. Data storage and maintenance:
+     GIS, Measurement Data, and     Metadata 
+2.  Data Search: 
+     Key words & Metadata Search3.  Data Access and Examination: 
+     Tabular Display and Data Visulization
+4. Data Download
+System Construction
+System Testing
+System DeploymentPrototype Development
+1. Database: Data from El Reno, OK
+2. Metadata (FGDC) 
+3. Data Access and Examination: 
+     Tabular Display and Data Visulization4. Data Download
+System Design
+1. Hardware Infrastructure
+2. Database Design:
+  Metadata Standards (FDGC)
+    Measurement Data Model (Data Structure)
+3. Interface Design    a. Matadata Search  (3.1)
+    b. Measurement Data Search (3.2, 3.3)
+    c. Data Access (4.1) , Display/Visualization (4.2)    d. Data Download (4.3)
+Fig. H1.  Task flow of STEWARDS Data System.  The number in parentheses 
+represent the system com ponent number as shown in Fig. F15 in Appendix F. 
+System  Requirements Specification for STEWARDS  Page 41 
+ Appendix I.  Data Structure for Two Type s of Time Series Data in STEWARDS 
+ 
+ 
+Type 1: Time series data with columns for different data collected at the same time. 
+Example is flat table of weathe r data.  Fig. I1 shows a genera lized data structure for this 
+type of data. Type 2: Time series data, usually more spar se than the above, with an id field that 
+explains what the parameter field contains. Ex ample is water quality data. Fig. I2 show a 
+generalized data structure for this type of data. 
+Fig. I1 Data structure for time series  data (Type 1 data) with columns fo r different data collected at the 
+same time.  
+System  Requirements Specification for STEWARDS  Page 42 
+  
+Fig. I2.  Data structure for time series data (Typ e 2 data), usually more sparse than those shown 
+in Fig. I1. 

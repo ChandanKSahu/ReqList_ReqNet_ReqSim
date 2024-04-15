@@ -1,0 +1,82 @@
+4.1.0.1	Basically the communication system must assist the operators, users and other interested parties in performing their tasks by provision of services.
+4.1.0.2	The system must be flexible in supporting future requirements and future developments.
+4.1.0.3	The system must be open in the sense that “anyone shall be able to get information on anything from anywhere”, once they have authorisation to the system.
+4.1.0.4	The system thus shall be adapted to individual users and services provided accordingly by means of configurations, set-ups etc.
+4.1.0.5	The communication system shall be based on open and widely accepted methods with a high degree of interface possibilities.
+4.1.0.6	The system shall be robust and reliable, but the system shall not be used for the safe and secure operation of the plant.
+4.1.0.7	Faults in the communication system shall not cause malfunction of an individual wind turbine.
+4.1.0.8	The system shall be designed in a way that faults of a sub-system interferes as little as possible with functions of the communication system as a whole.
+4.1.0.9	In designing the system it shall be taken into account, that the physical environment at the plant typically has a wide span of temperature, moisture, salinity and vibration levels.
+4.1.1.1	The values shall be available for display on operator HMI as well as for storage (databases).
+4.1.1.2	Updating of values shall be selectable down to an interval of 1 sec.
+4.1.1.3	All data must be stored in the plant controller for transmission on demand.
+4.1.1.4	Transfer of data from the buffers may be carried out off-line without synchronism with real-time.
+5.1.1	In order to accomplish this the basic services of the communication system shall include the following: • Connection establishment and release • Authentication • Identification of functional object and devices • Data access and transfer • Reliable communication over a network
+5.4.1	Alarm data shall be sent from the wind turbine on occurrence. Setting data in the wind turbine and giving orders to the wind turbine are sent to the wind turbine when needed.
+5.5.1	It should be possible to time stamp all data. Time stamped data shall be stamped with ‘last updated date + time’ (UTC time). The accuracy and resolution of the timestamp should be at least 10 ms.
+5.5.2	All analogue measured values should have readable properties like ‘signal quality’ and ‘scanning rate’. This information does not have to be included with every data transfer. The averaging time and the measuring and averaging method should be documented for all data.
+5.5.3	It should be possible to group both analogue and binary values so they can be read in a single transaction
+5.6.1.1	Server authentication shall ensure the client application that it is truly operating on the intended site. Client authentication ensures that an authorised client/operator is operating the equipment.
+5.6.2.1	Non-corruption of data transferred is necessary, i.e. the ability of a communication system to deliver data from its originator to its destination with an acceptable residual error rate. This prevents both malicious and false operation.
+5.6.3.1	Data items transferred might need to be encrypted to prevent both malicious and false operation, as well as eavesdropping.
+5.7.1.1	The time critical functions include both control and supervision functions. Set points for power control and Start and Stop commands are the most time critical functions, but also a prompt response (Acknowledge-on-receive) is important. Periodic on-line operational data is essential for the optimisation of the operation. Finally the operator need to know the status of the communication system to be able to rely on the presented data. The time critical functions shall use short messages with a high priority.
+5.7.1.2	Data-wise the messages shall be small and shall be transmitted with a minimum of delay. Delays may occur due to transmission errors, low capacity or low bandwidth of the transport media or network faults. It is essential for the proper design of the communication system to select methods that minimise such properties.
+5.7.1.3	Time critical functions must be based on fast and reliable transmission of a number of selected data types.
+5.7.2.1	For most data it must be possible to restore information, including the sequence of events. Local procedures for recovery may incorporate redundancy of selected functions and backup of data.
+5.7.2.2	The communication system shall include functionality to transfer stored data to central storage and processing after restoration of the communication.
+5.7.2.3	To prevent interruptions in the data transfer, the communication system shall allow for redundant communication channels.
+5.7.2.4	Automatic procedures for detection of  communication faults and for managing redundancy of system components shall be established.
+5.7.2.5	The physical transport media should possibly be redundant to a certain degree depending on the conditions at the specific plant.
+5.8.1	There must be a way for existing plants to  interface to a new communication system. The expected solution to interface systems using proprietary methods for communication, e.g. manufacturer-specified protocols or customer-specified protocols, to new communication systems is to use gateways.
+5.8.2	The interface to existing plants will provide a subset of the functions and data specified in this Specification. It should however as far as possible be able to present data on the same HMI and provide as many data as possible for the system databases.
+6.0.1	The protocol shall have such flexibility that new data can be defined without disturbing old versions of equipment’s that comply to a specific version of the specification. A ‘naming convention’ is described in this specification.
+6.1.0.1	Each wind power plant shall have defined the total set of data, the naming, the type and default value of the data according to this specification. The information should be standardised according to the following principles:
+6.1.0.2	Each device or object shall be self-descriptive (generic part) and the system has to have a function to extract the information contained in the wind power plants objects.
+6.1.0.3	It shall be possible to issue an identify request and get a list of all objects in a wind power plant, their names and possibly a short description for each object.
+6.1.0.4	It should be possible to get the attributes and services for each object. The list should at minimum include, Name, Type/Kind, Unit, Time requirements, and possibly a short Description.
+6.1.0.5	For the HMI such information shall be contained in the device using standard readable text, such as ASCII or Unicode (UTF16) (at least optional in the language of the operator).
+6.1.0.6	At least for default naming a hierarchical name structure and an object data dictionary specialised for wind power plants should be used.
+6.1.0.7	During data transmission the message should at least include the following parts; Name, Value(s), Scan frequency, Time tag and Quality.
+6.2.0.1	Communication and objects in the wind power plant shall be object based. Gear and generator could, for instance, be separate objects.
+6.2.1	The system shall be able to manage naming of objects and variables (measurements, etc) in a hierarchical naming system in several levels.
+6.3.1	All analogue process values shall be accessible in standard SI-units or other physical units.
+6.3.2	Analogue values “at the source” shall be available as real-time on-line instant data as well as time averaged values.
+6.3.3	The values shall be available for display on operator HMI as well as for storage (databases).
+6.3.4	Updating of analogue on-line values shall be selectable down to an interval of 1 sec.
+6.3.5	All averaged values must be stored in the plant controller for retransmission on demand.
+6.3.6	For averaged values the accuracy of the start time of the period shall be better than 10 ms.
+6.3.7	The values shall be accessible as processed data in a condensed and analysed format.
+6.5.1	All binary process values shall be accessible.
+6.5.2	Binary values shall be available as real-time online instant data.
+6.5.3	The values shall be available for display on operator HMI as well as for storage (databases).
+6.5.4	The values shall be stored and displayed at level shift with the corresponding date and time tag.
+6.5.5	Updating of binary on-line values shall be selectable down to an interval of 1 sec.
+6.6.1	A handshake procedure is required for all commands that start or stop a mechanical component, influence the status or operation mode of the wind turbine or change the software.
+6.6.2	All other control commands shall give a response with the result of the command.
+6.7.1	Operational alarms must be transmitted immediately after a triggering.
+6.7.2	The alarms shall be available for display on operator HMI as well as for storage (databases).
+6.8.1	Operational events must be stored in an event log in the plant controller for transmission on demand.
+6.9.1	Counters shall be understood as any value accumulated in time originating in the process such as hour counters, production counters, counters for operational modes, timer’s etc.
+6.9.2	Counters shall be available for display on operator HMI as well as for storage (databases).
+6.9.3	The values shall be stored with a corresponding date and time tag.
+6.9.4	Updating of counters shall be selectable down to an interval of 1 sec.
+6.9.5	All values must be stored in the plant controller for transmission on demand.
+6.10.1	It should be possible to reset all the timers and the ‘Reset date’ shall be stored as a separate item.
+6.11.3	It should be possible to exchange text messages between the wind power plant and the control centre using standard readable text, such as ASCII or Unicode (UTF16).
+6.12.1.1	Selected analogue values shall be stored in FIFO-buffers.
+6.12.1.2	The sampling rate of analogue values shall be high enough to characterise events and to determine the cause of faults. A typical sampling rate could be 25 Hz.
+6.12.1.3	The size of the buffers for analogue values shall correspond to a time span starting at 1 minute before a triggering and ending at 1 minute after a triggering.
+6.12.1.4	It shall be possible to start a scanning of selected analogue values at a sampling rate up to 25 Hz and a selectable duration.
+6.12.1.5	Th e entire mentioned high rate scanning must be stored in the plant controller.
+6.12.1.6	Transfer of data in the buffers shall be carried out without synchronism with real-time.
+6.12.2.1	All binary values must be stored in the plant controller for retransmission on demand.
+6.12.2.2	Additionally it shall be possible to start a scanning of selected binary values at a selectable duration.
+6.12.2.3	All the mentioned scanning must be stored in the plant controller.
+6.12.2.4	Transfer of data in the buffers shall be carried out without synchronism with real-time.
+6.12.3.1	Alarms must be stored in an alarm log.
+6.12.3.2	All alarms must be stored in the plant controller for transmission on demand.
+6.12.3.3	The buffer depth shall be at  least one year.
+6.12.3.4	Transfer of data in the buffer shall be carried out without synchronism with real-time.
+6.12.4.1	The buffer depth of the event log shall be at least one year.
+6.12.4.2	Transfer of data in the buffer shall be carried out without synchronism with real-time.
+6.12.5.1	The buffer size for every counter shall be at least 20 years of operation with 5000 full load hours per year.

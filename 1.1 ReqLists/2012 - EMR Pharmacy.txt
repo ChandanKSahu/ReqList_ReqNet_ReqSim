@@ -1,0 +1,359 @@
+0.1	The solution should provide the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate facilities including  housing units.
+0.2	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate and acute care facilities e.g.  licensed hospitals and licensed psychiatric hospital.
+0.3	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including an emergency department.
+0.4	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including long term care/rehabilitation/skilled nursing facilities e.g. licensed elderly care unit, in-patient psychiatric facilities, a hospice unit for AIDS/HIV or terminally ill inmates.
+0.5	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient medical clinics.
+0.6	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient dental clinics.
+0.7	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including Reception Centers.
+0.8	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate care mental health.
+0.9	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including correctional treatment center (CTC).
+0.10	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate care mental health.
+0.11	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including inpatient surgery facilities.
+0.12	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient surgery facilities.
+1.1	The solution should support the entering and verification of medication orders.
+1.2	The solution should provide and interface download from an Offender Management System.
+1.3	The solution should provide and bi-direction interface to Interface to the EMR using HL7 messaging standard.
+1.4	The solution should provide an interface to the Central Fill Automation system.
+1.5	The solution should accept the transmission of prescription data from the EMR's ePrescribing solution.
+1.6	The solution should accept the transmission of prescription data from CPOE systems.
+1.7	The solution should accept the transmission of prescription data from EMR systems.
+1.8	The solution should interface with CPOE systems.
+1.9	The solution should interface with EHR/EMR systems.
+1.10	The solution should have a robust CPOE functionality.
+1.11	The solution should provide the use of a third party database (e.g., American Druggist Bluebook, "DPIF" Drug Product Information File, Medispan, Micromedex).
+1.12	The solution should provide prescription imaging to capture  prescription orders as electronic images and to link images to the inmate record.
+1.13	The solution should utilize a rules-based engine that automatically sends scanned order images to the appropriate work list/queue for processing.
+1.14	If faxing is utilized, then the scanned image should go directly into the pharmacy system and into the appropriate order entry work queue.
+1.15	The solution should provide separate fields for 3rd party approval codes (such as is needed for non-formulary approval), allowing for days supply and quantity limitations.
+1.16	The solution should provide imaging to capture non-formulary approvals as electronic images and to link images to the prescription order within the inmate record.
+1.17	The  imaging function should utilize a rules based engine and workflow queues to support prescription & order entry.
+1.18	The solution should allow allergies, weight, and body surface area be entered during order entry.
+1.19	The solution should display allergies during the order entry and refill process. The information includes all reactions and dates of reaction including those that are classifiable as a true allergy, intolerance, side effect or other adverse reaction to drug, dietary or environmental triggers. Notations indicating whether item is inmate reported and/or provider verified are maintained.
+1.20	The solution should support the medication reconciliation process by providing on-line and paper-based access to an inmate profile  that allows the staff to see all active, inactive medications for the inmate, as well as any documented allergies. The physician and nursing staff can use these reports to renew, discontinue,  or change existing prescription orders, or to write new prescriptions.
+1.21	The solution should display additional inmate information during the order entry process.
+1.22	The solution should display clinical information (medical/dental) during the order entry process.
+1.23	The solution should show available laboratory test data during order processing.
+1.24	The solution should provide access to laboratory data for re-evaluating lab data each time medication is dispensed.
+1.25	The solution should provide mechanisms for incorporating external clinical data and documentation (including identification of source) as image documents attached to the inmate record.
+1.26	The solution should allow the rejection of medication ordering and/or dispensing based upon out-of-range lab data.
+1.27	The solution should provide real time multi-level clinical decision support (for all routes) on the front end of order entry.
+1.28	The solution should automatically check for drug-fluid compatibility during the order entry process.
+1.29	The solution should automatically check for drug-drug interaction (for all routes) during the order entry process.
+1.30	The solution should automatically check for drug-lab interaction (for all routes) during the order entry process.
+1.31	The solution should automatically check for drug-food interaction (for all routes) during the order entry process.
+1.32	The solution should automatically check for drug-procedure interaction (for all routes)  during the order entry process.
+1.33	The solution should automatically check for drug-lactation precaution (for all routes)  during the order entry process.
+1.34	The solution should automatically check for drug-pregnancy precaution (for all routes)  during the order entry process.
+1.35	The solution should provide dose range checking by age (for all routes)  during the order entry process.
+1.36	The solution should provide dose range checking by weight  (for all routes)  during the order entry process.
+1.37	The solution should provide dose range checking by disease state  (for all routes)  during the order entry process.
+1.38	The solution should provide interaction screening for drug duplicates  (for all routes)  during the order entry process.
+1.39	The solution should provide interaction screening for therapeutic duplicates  (for all routes)  during the order entry process.
+1.40	The solution should provide alerts that indicate the medication is not vegetarian  (for all routes)  during the order entry process.
+1.41	The solution should provide alerts for short man/tall man (for all routes) during the order entry process.
+1.42	The solution should provide alerts for sound alike and look alike drugs (for all routes)  during the order entry process.
+1.43	The solution should provide alerts for user-configured business rules (for all routes)  during the order entry process.
+1.44	The solution should help prevent medication errors by using current JCAHO, ISP, and other widely accepted standards.
+1.45	The solution should allow CCHCS to prioritize / rank the importance of the interaction and/or warning.
+1.46	The solution should support the on-line acknowledgement of alerts with override control by authorized users.
+1.47	The solution should provide an audit trail whenever an interaction is overridden.
+1.48	The solution should support a reason for an alert override based on CCHCS criteria and/or alert level e.g. allows alerts to be customized according to the level of severity.
+1.49	The solution should allow alerts to be customized according to CCHCS criteria.
+1.50	The solution should provide documentation of medication errors and adverse drug reactions.
+1.51	The solution should automatically suspend order processing and provide on-line notification if any interaction occurs.
+1.52	The solution should allow interactions to be overridden depending on user's security level.
+1.53	The solution should provide checking for levels of interaction severity.
+1.54	The solution should provide on-line pharmacokinetic dosing/assessment.
+1.55	The solution should automatically check for max/min doses per body weight or body surface area during the order entry process.
+1.56	The solution should automatically check for maximum fluid rate during the order entry process.
+1.57	The solution should automatically check for inappropriate administration schedule (e.g., TID for extend release) during the order entry process.
+1.58	The solution should automatically display side effects during the order entry process.
+1.59	The solution should display termination date and time of current orders during the order entry process.
+1.60	The solution should support dose calculations for "odd doses".
+1.61	The solution should provide on-line programs for vasopressor calculations and flow sheets.
+1.62	The solution should provide entry of parole/release orders.
+1.63	The solution should provide on-line entry of tapered orders.
+1.64	The solution should provide on-line entry of alternating orders.
+1.65	The solution should provide on-line entry of non-formulary orders.
+1.66	The solution should provide on-line entry of floor stock orders.
+1.67	The solution should provide on-line entry of physician standing order sets.
+1.68	The solution should provide standing order functionality with unlimited number of Meds, IV/LVP, IVPB, etc.
+1.69	The solution should provide standing order functionality with separate pre-defined fields for all orders.
+1.70	The solution should provide standing order functionality with compound orders such as a profile composed of separate formulary items.
+1.71	The solution should provide standing order functionality defined by user mnemonics.
+1.72	The solution should provide standing order functionality with fractional/multiple dose profiling.
+1.73	The solution should provide entry of IV/LVP orders including alternating orders.
+1.74	The solution should provide entry of IV/LVP orders including chemotherapeutic agents.
+1.75	The solution should provide entry of IV/LVP orders including syringes.
+1.76	The solution should provide entry of IV/LVP orders including irrigation solutions.
+1.77	The solution should automatically test for maximum/minimum doses per body weight or body surface area during the order entry process.
+1.78	The solution should support automatic calculations for total volume of order during the order entry process.
+1.79	The solution should support automatic calculations infusion rate of order during the order entry process.
+1.80	The solution should support automatic calculations of total bags/bottles to be administered per time period during the order entry process.
+1.81	The solution should support nutritional assessment of IV/LVP orders.
+1.82	The solution should allow for dosage by the hour or bottle IV entry method.
+1.83	The solution should allow for frequency by hour or bottle IV entry method.
+1.84	The solution should allow for alternating IV entry method.
+1.85	The solution should allow for labels set to drip rate IV entry method.
+1.86	The solution should allow for automatic profiling IV entry method.
+1.87	The solution should provide the ability to schedule IV/LVP for extended time periods.
+1.88	The solution should provide the ability to accurately calculate IV/LVP hang times when revising dates.
+1.89	The solution should provide the ability to add IV/LVP according to alternating solutions.
+1.90	The solution should provide the ability to add IV/LVP according to SIG.
+1.91	The solution should provide the ability to add IV/LVP according to route.
+1.92	The solution should provide the ability to add IV/LVP according to note.
+1.93	The solution should provide the ability to add IV/LVP according to rate.
+1.94	The solution should provide the ability to add IV/LVP according to volume.
+1.95	The solution should provide the ability to add IV/LVP according to solution and additives.
+1.96	The solution should allow on-line entry of, and updates to, inmate medication profiles from non-pharmacy locations (for example; in the ED, Psychiatric Ward, etc).
+1.97	The solution should automatically assign prescription control numbers and maintain a prescription number list.
+1.98	The solution should provide long  and short term skilled nursing facility needs such as flexible physician's orders
+1.99	The solution should maintain list of all staff physicians and include their DEA number.
+1.100	The solution should maintain list of all staff physicians and include their Medical license number.
+1.101	The solution should maintain list of all staff physicians and include their state certificate.
+1.102	The solution should provide physician order entry of prescriptions.
+1.103	The solution should display clinical protocols and on-demand printing of protocols.
+1.104	The solution should provide a TPN/hyperalimentation program (calculation of doses, interactions, pre-set criteria, labels nutritional summary).
+1.105	The solution should provide piggyback of orders/order explosion.
+1.106	The solution should provide chemotherapy orders.
+1.107	The solution should provide ordering of investigational medications.
+1.108	The solution should provide chemotherapy orders entered by open volume of fluids based on additives.
+1.109	The solution should provide chemotherapy orders entered by calculation checks body surface area.
+1.110	The solution should provide chemotherapy orders entered by calculation checks body surface area.
+1.111	The solution should handle differing dosage of same medication at different times of the day both from an issue and medication administration.
+1.112	The solution should handle alternating IV's and the appropriate shifting of these IV's for rate adjustment.
+1.113	The solution should handle TPN's (hyperals) with 18 additives and 24 hour days.
+1.114	The solution should display medications that have been modified based on inmate's preferences e.g. will only take small blue tablet.
+1.115	The solution should allow order entry of orders from a centralized location for a single location (institution).
+1.116	The solution should allow order entry of orders from multiple decentralized locations for a single location (institution).
+1.117	The solution should allow order entry of orders from a centralized location for multiple locations (institutions).
+1.118	The solution should provide alerts/reminders when departing from inmate-specific formulary.
+1.119	The solution should calculate pharmacokinetic parameters for designated drugs.
+1.120	The solution should support tracking of inmate preferences related to diet, language, religion, spiritual practices and  culture are available  at the point of prescribing and ordering
+1.121	The solution should provide rules and alerts related to diet, language, religion, spiritual practices and  culture during the order entry process.
+1.122	The solution should support order sets based on provider, or other preferences.
+1.123	The solution should capture and display the preferences of the inmate (e.g. reluctance to use an antibiotic or specific brand of medication).
+1.124	The solution should support the ability to indicate prescription status as pill line, nurse observed, medication cart, keep on person,  or other CCHCSspecified status.
+1.125	The solution should support entering a medication order for a future start date.
+1.126	The solution should support entering a medication order or a future stop date.
+1.127	The solution should support putting an order "On Hold" by the pharmacist and tracks the "On Hold" medication based on CCHCScriteria.
+1.128	The solution should have the ability to interact with clinical problem list when the problem list is codified.
+2.1	The solution should support medication lists including capturing all pertinent dates, including medication start, modification, and end dates are stored.
+2.2	The solution should provide view of the entire medication history for any medication, including alternative supplements and herbal medications for authorized users.
+2.3	The solution should provide HIPAA secure two-way on-line communication capability between the pharmacy and physicians, nurses and other clinicians.
+2.4	The solution should provide the documentation of such secure two-way on-line communication exchanges and provide ability to associate the communication with a specific inmate's record.
+2.5	The solution should allow the user to defer verification or modification of orders and facilitate secured two-way online communication with the physician or nurse regarding the verification status.
+2.6	The solution should allow standard and free form pharmacy notes to be entered.
+2.7	The solution should provide automated workflow in the distribution process with sequenced orders that guide staff through emergency, high-priority, routine, and batch order fulfillment.
+2.8	The solution should provide messaging capability notification for instant alert of interventions.
+2.9	The solution should provide messaging capability notification for instant alert of adverse drug reactions.
+2.10	The solution should provide messaging capability notification for instant alert of medication errors.
+2.11	The solution should provide medication reconciliation via the communicating of information to the next provider(s) of care at each transition (e.g., change of location, setting, service, level of care, provider).
+2.12	The solution should provide the automated discontinue of medications when an inmate is released or deceased.
+3.1	This solution should allow dispensing to be performed by a variety of methods e.g. by NDC, patient, facility, building, administration method, etc.
+3.2	The solution should use bar code readers for dispensing functions and ensures prescriptions are filled accurately by comparing the NDC on the prescription label against the product being dispensed.
+3.3	The solution's barcode checking functionality should allow the pharmacy technician or pharmacist  to select another NDC with the same GSN classification from the available inventory (brand-swap).  The brand-swap occurs in the background, the patient record is updated and a new prescription label is printed.
+3.4	The solution should require that the new prescription label be barcode-checked before the product can be dispensed.
+3.5	The solution should maintain and display inmate medication profiles on-line for a CCHCS specified number of days after release
+3.6	The solution should support unit dose distribution method.
+3.7	The solution should support traditional distribution method.
+3.8	The solution should support floor stock distribution method.
+3.9	The solution should support refilling of medication orders, including deducting from and tracking of number of refills.
+3.10	The solution should allow nurses to request prescription refills and the solution validates refill availability and queues refill for filling.
+3.11	The solution should allow the pharmacist to "push" a refill when there are no more refills.  The system captures the reason for the "refill push" and the pharmacist requesting the refill.
+3.12	The solution should provide requesting a refill for a medication that can't be refilled until some date in the future.
+3.13	The solution should update cart "fill lists" with all types of orders entered (e.g., new, refill, PRN's, suspends, etc.).
+3.14	The solution should reprint medication and IV "fill lists" and/or labels without recharging a inmate.
+3.15	The solution provides on-line generation of dose user-defined labels.
+3.16	The solution should generate batch labels for batch medication dispensing by medication and inventory on demand by authorized user.
+3.17	The solution should automatically determine location of label printing (e.g., satellite vs. main pharmacy) based on inmate classification and/or location.
+3.18	The solution should provide immediate printing of all STAT IV admixture requisitions.
+3.19	The solution should provide immediate printing of all stop/discontinue IV Admixture requisitions.
+3.20	The solution should provide the ability to set IV label batch prints at pre-defined time periods.
+3.21	The solution should store prescription refill information on-line and support automatic refill processing.
+3.22	The solution should provide appropriate "cautionary" information for auxiliary labeling.
+3.23	The solution should print labels automatically or on demand for prescription orders.
+3.24	The solution should provide the ability to refill multiple prescriptions from a single profile.
+3.25	The solution should provide the ability to refill multiple prescriptions from multiple profiles.
+3.26	The solution should provide long  and short term skilled nursing facility needs including flexible distribution methods.
+3.27	The solution should provide automatic prescription price comparisons.
+3.28	The solution should print labels for controlled drug floor stock issues that include serial number.
+3.29	The solution should print labels for controlled drug floor stock issues that include nursing location.
+3.30	The solution should print labels for controlled drug floor stock issues that include drug, strength, form.
+3.31	The solution should print labels for controlled drug floor stock issues that include location (e.g., to be placed on drug box, floor stock sheets, and receipt forms).
+3.32	The solution should print labels for multi-dose controlled drugs.
+3.33	The solution should print medication cart filling list that support daily fill e.g. for hospital, SNF setting.
+3.34	The solution should print stock labels on demand or at a specified time.
+3.35	The solution should print stock labels with pertinent item data including lot number and expiration date or preparation time.
+3.36	The solution should provide order prioritization (STAT orders print first).
+3.37	The solution should support batch order filling at user-defined time periods.
+3.38	The solution should have a standard bi-directional  interfaces with administration systems e.g. smart pumps, etc.
+3.39	The solution should provide instrument interfaces to unit dose packaging equipment.
+3.40	The solution should have a standard bi-directional  interfaces with  automated  preparation and dispensing technologies such as automated dispensing cabinets, robotic IV automation devices, and automated packaging systems.
+3.41	The solution should have a standard interface to a send required medication data to a variety of EHR's or CDR for access by clinicians involved in the inmate’s care. Information could include medication lot number, expiration date, and quantity dispensed.
+3.42	The interfaced solutions should send notifications to the Pharmacy system regarding medication dispensed.
+3.43	The  interfaced solutions should send notifications to the Pharmacy system regarding medication returned.
+3.44	The  interfaced solutions should send notifications to the Pharmacy system regarding machine load/unload.
+3.45	The  interfaced solutions should send notifications to the Pharmacy system regarding inventory count.
+3.46	The solution must should notifications to the dispensing machine regarding medications ordered for the inmate, and new/deleted drug dictionary entries.
+3.47	The solution should provide a link between medication administration and dispensing to manage inventories on the location level.
+3.48	The solution should provide a link between medication administration and dispensing to manage inventories on the site level.
+3.49	The solution should provide a link between medication administration and dispensing to manage inventories on the facility level.
+3.50	The solution should provide a link between medication administration and dispensing to manage inventories on the enterprise level.
+3.51	The solution should record withdrawal of medication from automated dispensing technology to inmate profile  and make available for drug interaction checking.
+3.52	The solution should provide on-line generation of dose volume labels at order entry.
+3.53	The solution should provide the ability to print labels in other languages besides English
+3.54	The solution should provide dual language sigs; with ability to automatically print both languages based on languages entered into The solutions.
+3.55	The  solution should support providing specific medication instructions for a parole which can be scanned and attached to inmate's record/profile.
+3.56	The solution should support manifests to track prescriptions to a particular yard, pod, or cell within a prison and generates the manifest reports used in the distribution of prescriptions throughout the facility.
+3.57	The solution should support the pharmacist verification of all  medications prior to their being dispensed.
+3.58	The solution should provide a Receipt of Medications document for parole medications which can be scanned and attached to inmate's record/profile.
+3.59	The solution should provide an override function (that requires a reason and the pharmacist's user ID) to dispense a non-authorized/non-formulary medication in special circumstances.
+3.60	The solution should permit the partial dispensing of medication for an order and will prompt the pharmacy at the appropriate time of the need to send more medication to complete the order.
+3.61	The  solution should support a replacement function for lost or stolen meds that doesn't reduce the number of remaining refills.
+3.62	The solution should provide a report of medications which are due to expire for provider review and renewal.
+4.1	The solution should use bar code readers for the manifest function.
+4.2	The solution should perform edit checks during the manifesting process to confirm that the medication has been verified, barcode checked, validates that the patient is in the building being manifested, and to ensure that Rx has not be associated with a different manifest.
+4.3	The solution should provide the option to use bar code readers for medication administration functions.
+4.4	The solution should support medication administration records (MARs) and allow updates.
+4.5	The solution should provide the ability to view MARs in ancillary or interfaced systems.
+4.6	The solution should display and/or print inmate MARs.
+4.7	The solution should print an inmate's MAR on demand or at a specified time.
+4.8	The solution should provide status of orders on-line.
+4.9	The solution should provide a method of updating and distributing MARs that limits and/or reduces the amount of paperwork received by the nurses.
+4.10	The solution should provide flexibility in printing and distributing MARs to the nurses e.g. All insulin MARs are printed and distributed by location of where the insulin in dispensed - not the location of the inmate.
+4.11	The solution should allow an authorized user to set up and maintain rules for that automate the printing and distribution of MARs based on CCHCS criteria.
+4.12	The solution should allow an authorized user  to design and change the format and information contain on the MARs on a CCHCS as-needed basis.
+4.13	The solution should have a robust electronic Medication Administration (eMAR) functionality with the ability to bar code scan a medication against what was ordered and at the same time bar code verify that it is being administered to the correct patient.
+4.14	The solution should provide automatic assignment of scheduled dosing times (based on CCHCS specifications).
+4.15	The solution should automatically adjust dosage times when inmate transfers nursing units/facility/etc. based on the CCHCS defined parameters for the locations.
+4.16	The solution should track and display order status e.g. order completed, order not found, order on hold, order in process, etc.
+4.17	The solution should provide drug order status of hard/soft stop.
+4.18	The solution should provide drug order status of active.
+4.19	The solution should provide drug order status of suspend.
+4.20	The solution should provide drug order status of hold.
+4.21	The solution should provide drug order status of cancelled.
+4.22	The solution should provide drug order status of conditional.
+4.23	The solution should provide drug order status of reinstated.
+4.24	The solution should allow routine or one-time orders.
+4.25	The solution should provide special order scheduling.
+4.26	The solution should provide default SIGs.
+4.27	The solution should include a message function for communication with doctors, nurses, etc.
+4.28	The solution should automatically provide a prescription received signature form, according to inmate type as specified by CPHCS.
+4.29	The solution should provide long and short term skilled nursing facility  needs such as customized MARs.
+4.30	The solution should list available outstanding proof-of-use forms sorted by use and/or drug.
+4.31	The solution should provide QA (drug utilization evaluation, adverse drug reaction, concurrent reporting) functionality and maintains data for a CPHCS-defined period of time.
+4.32	The solution should generate inmate release medication summary.
+4.33	The solution should have the capabilities to link NDC's for generically equivalent drugs for the purpose of scanning at inmate administration.
+4.34	The solution should allow interdepartmental charges by par levels, requesting areas, and usage patterns.
+4.35	The solution should maintain records of medication instructions for inmates.
+4.36	The solution should support documentation and update of inmate specific immunization lists with the ability to capture details of immunizations administered including date, type, manufacturer and lot number.
+5.1	The solution should display medication and doses since initial orders including suspended and discontinued orders during the order entry process.
+5.2	The solution should support Medication Error Reporting to create and track incident reports whenever an error occurs related to the fulfillment of a prescription.
+5.3	The solution should provide STAT medication daily report.
+5.4	The solution should provide medication on hold or discontinued in a daily report.
+5.5	The solution should provide automatic stop order in a daily report.
+5.6	The solution should provide list of all interactions occurring and the action taken (e.g. overrides) to including pharmacist identification in a daily report.
+5.7	The solution should track controlled substance usage.
+5.8	The solution should provide controlled substances report by nursing station, inmate and/or physician in a daily report.
+5.9	The solution should provide alphabetical listing of all controlled substances sorted by DEA classification and their usage levels.
+5.10	The solution should provide list of all requests for missing doses in a daily report.
+5.11	The solution should generate and print an inmate's medication/charge summaries during discharge processing.
+5.12	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by medication.
+5.13	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by diagnosis.
+5.14	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by drug class.
+5.15	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by physician.
+5.16	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by medical specialty of physician.
+5.17	The solution should provide the ability to chart medication and IV administration on-line.
+5.18	The solution should maintain and display inmate/inmate medication profiles.
+5.19	The solution should provide daily log of vault activity.
+5.20	The solution should provide drug utilization tracking by drug, dose, diagnosis, age/weight, and physician.
+5.21	The solution should maintain records of inspections by pharmacy personnel of nursing, stock and other locations.
+5.22	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by area/location.
+5.23	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by pharmacist.
+5.24	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by shift.
+5.25	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by other attributes.
+5.26	The solution should track adverse drug reactions.
+5.27	The solution should provide the ability to track clinical interventions.
+5.28	"The solution should support the recording of an intervention by the pharmacist, what drugs were involved, steps of action taken by the pharmacist, and possible effects."
+5.29	The solution should provide the ability to chart medication and IV administration on-line.
+5.30	The solution should maintain and display inmate/inmate medication profiles.
+5.31	The solution should allow a user to report on clinical interventions by intervention category.
+5.32	The solution should track errors and drug reactions using audit trails, reporting, and documentation.
+5.33	The solution should restrict validation of orders to authorized personnel only.
+5.34	The solution should provide a log of all unverified orders in a daily report.
+5.35	The solution should provide a log of all verified orders by verifier in a daily report.
+5.36	The solution should maintain inmate specific interactions for the pharmacy and will automatically generate reports for follow up on day scheduled for intervention follow up.
+5.37	The solution should provide the ability to document clinical interventions, adverse reactions, and progress notes all within the single order processing area.
+6.1	The solution should allow electronic and manual updating of the formulary.
+6.2	The solution should provide the ability to maintain/display the formulary with pertinent data by authorized personnel.
+6.3	The solution should maintain pharmacy formulary that includes dosage form (e.g., tablet, oral, liquid, injection) for each medication.
+6.4	The solution should maintain pharmacy formulary that includes dispensing form (e.g., ampoule, vial, syringe) for each medication.
+6.5	The solution should maintain pharmacy formulary that includes generic drug name (or trade name for combination products) for each medication.
+6.6	The solution should maintain pharmacy formulary that includes trade name(s) or synonyms for each medication.
+6.7	The solution should maintain pharmacy formulary that includes American Hospital Formulary Service Number for each medication.
+6.8	The solution should maintain pharmacy formulary that includes therapeutic class name for each medication.
+6.9	The solution should maintain pharmacy formulary that includes CCHCS-defined attributes for each medication  (i.e., formulary code, generic name, trade name, NDC, and AHFS number, etc.).
+6.10	The solution should allow user-defined formulary items to be added by authorized personnel.
+6.11	The solution should accept electronic updates of therapeutics, dosing, interaction and financial data for the drugs in the formulary.
+6.12	The solution should provide frequent on-line updates of the vendor-provided formulary.
+6.13	The solution should allow multiple concurrent formularies.
+6.14	The solution should provide on-line formulary lookup using Soundex search method.
+6.15	The solution should provide formulary building and maintenance with ease of use.
+6.16	The solution provides a pre-populated formulary using First Data Bank or  other vendor.
+6.17	The solution should not require system downtime for formulary maintenance.
+6.18	The solution should not limit system functionality during formulary maintenance.
+6.19	The solution should provide designation of vitamins, minerals, etc. on the formulary.
+6.20	The solution should allow automatic substitution of drugs by authorized users.
+6.21	The solution should provide alerts whenever a substitution of drugs has occurred.
+6.22	The solution should allow an authorized user to flag a medication as "Do not substitute"  e.g. substitution never allowed for  the no sugar/no alcohol mouthwash.
+6.23	The solution should provide display of compound medications within the formulary.
+6.24	The solution should provide designation of natural/homeopathic on the formulary.
+6.25	The solution should provide designation of clinical trails on the formulary.
+7.1	The solution should provide inventory control for multiple facilities, with each having their own inventory database.
+7.2	The solution should provide inventory control for multiple locations within a facility.
+7.3	The solution should provide the option to use bar code readers for inventory management functions.
+7.4	The solution should support perpetual inventory.
+7.5	The solution should have a standard bi-directional interface to a variety of  storage and retrieval systems that automate and manage inventory throughout the receiving, storage, retrieval, and distribution process.
+7.6	The solution should maintain and display vendor file.
+7.7	The solution should provide on-line entry of stock received, adjusted, and transferred.
+7.8	The solution should provide a direct interface with drug wholesaler information systems.
+7.9	The solution should allow a manual correction to a count of an item in inventory by increasing or decreasing the item’s on hand quantity.
+7.10	The solution should offer a Return to Stock function.
+7.11	The solution should track and maintain minimum and maximum inventory levels.
+7.12	The solution should identify the primary vendor or manufacturer of inventory items.
+7.13	The solution should flag drugs when their user-defined critical order levels are reached.
+7.14	The solution should allow electronic ordering from prime vendors using an X.12 interface.
+7.15	The solution should prepare purchase orders based on inventory levels, usage and other reorder criteria.
+7.16	The solution should provide automatic or on demand generation of purchase orders.
+7.17	The solution should provide purchase order reconciliation electronically and manually.
+7.18	The solution should alert the user of discontinued, back ordered, non-formulary, etc drug orders at the point of ordering from the vendor.
+7.19	The solution should provide a process to quickly order back-ordered, discontinued drugs, etc.  from another vendor or manufacturer.
+7.20	These solution should allow inventory updates electronically and manually from sources determined by CCHCS.
+7.21	The solution should allow automatic updates for inventory data via multiple sources as determined by CCHCS.
+7.22	The solution should provide flexibility in how items are deducted from inventory and supports concurrent multiple methodologies within the same facility.
+7.23	The solution should maintain pricing data for all formulary and non-formulary items.
+7.24	The solution should support electronic and manual pricing updates.
+7.25	The solution should provide user-definable pricing formulas to copy existing pricing formulas to create new ones.
+7.26	The solution should track prices based on AWP, Bid, or MAC price.
+7.27	The solution should provide a price modeling function to analyze the impact of price structure changes before implementation.
+7.28	The solution should support entry of pricing information and choice of a "charge" algorithm e.g. minimum charge, handling fees, percent markups, etc.
+7.29	The solution should assign lot numbers for prepared medication packages.
+7.30	The solution should support and track controlled medication inventory levels.
+7.31	The solution should maintain "vault" records for controlled medications.
+7.32	The solution should support fractional inventory calculation, user definable at time of order entry.
+7.33	The solution should provide inventory valuation based on CCHCS criteria.
+7.34	The solution should support on demand inventory valuation.
+7.35	The solution should print pharmacy inventory audit/cycle count  worksheet listing drug data, quantity-on-hand and last audit/verification date.
+7.36	The solution should track departmental (or other types) requisitions with printed monthly transaction statements.
+7.37	The solution should support floor stock medication or bulk stock inventory control.
+7.38	The solution should support daily floor stock or bulk stock medication lists on demand or at a user-defined time.
+7.39	The solution should support complete floor stock usage tracking, charging, and statistical reporting.
+7.40	The solution should print prepackaging log and inventory transfers.
+7.41	The solution should support the ability to check in inventory received from another store and to automatically update the inventory levels.
+7.42	The solution should support the ability to transfer inventory received to another store and to automatically update the inventory levels.
+7.43	The solution should track drugs returned to manufacturer or wholesalers.
+7.44	The solution should track physician-prescribing patterns.
+7.45	The solution should generate spoilage report for outdated inventory.
+7.46	The solution should track wholesaler performance.
+7.47	The solution should maintain data on drugs borrowed from and loaned to other institutions.

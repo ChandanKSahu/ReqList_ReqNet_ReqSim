@@ -1,0 +1,113 @@
+6.1.1	All or most of the KMS will be based in an approved cloud environment.
+6.1.2	Software as a service hosted delivery model that is interoperable with other modules/applications.
+6.1.3	System shall be web- based, conform to OPM’s IT Enterprise Architecture Vision, use OPM’s standards for the shared databases and web servers, support distributed processing, reside on an Intel platform, operate in a MS Windows environment, support OPM’s approved applications, support VPN, server-based fax pool, data encryption/PKI, Assistive Technology, interface with MS Outlook/Exchange, and common file formats.
+6.1.4	System shall integrate with different functional applications such as document management, correspondence tracking, reporting tools, documenting imaging, knowledge management, IVR systems, executive dashboard, OCPL’s web publishing platform, and electronic forms.
+6.1.5	System shall support e-authentication/e-signature technology according to Federal security regulations.
+6.1.6	System shall support automated notifications regarding unavailability and availability.
+6.1.7	System can be easily upgraded.
+6.1.8	System will follow OPM Business Continuity Policies.
+6.1.9	System can support expected increase in annual growth and a TBD number of users in different geographic locations.
+6.1.10	System shall have a correspondence tracking system including logging, tracking, time-stamping, notification, reporting, close-out, and routing based on business rules, workflow, and prioritizing.
+6.1.11	System shall have an answering request system that is secure, provides tracking, supports e-authorization/e-signature, and workflow management.
+6.1.12	Twenty-four hour help desk support such as a wiki.
+6.1.13	Feeds into HRIS/ERP systems.
+6.1.14	ADA Section 508 compliant.
+6.1.15	System is modular with ability to deploy and activate/deactivate functionality.
+6.1.16	Plug-In Installation Center.
+6.1.17	Fully integrated live web casting, live chat, and virtual meeting capabilities along with WebEx events.
+6.1.18	All system actions shall be date/time stamped and tracked.
+6.1.19	System actions are to be stored in a secured database, searchable, and can trigger alerts.
+6.1.20	Records of system actions cannot be deleted.
+6.1.21	Whenever appropriate, system will use look-up lists to streamline routine operations.
+6.1.22	Dashboard reporting and analytics.
+6.1.23	Automated reminder system by email.
+6.1.24	Integration with Outlook.
+6.1.25	System can prioritize requests, projects, documents, and electronic communications.
+6.1.26	System can deliver alerts and documents through email clients including OPM standard handhelds.
+6.1.27	System shall support inquiry management with integration to an OPM Customer Relationship Management tool.
+6.2.1	User-configurable home page.
+6.2.2	Role-based login capabilities that provides encryption and lost password recovery.
+6.2.3	Single sign-on to all parts of the KMS.
+6.2.4	Authorized users can create, edit, and delete email or in-system alerts that are automatically triggered by an event or date.
+6.2.5	Only authorized users can view system actions. OPM Knowledge Management System Requirements
+6.2.6	The system shall have a new user’s tutorial.
+6.2.7	System shall provide standard navigation aids with the ability for users to skip through repetitive or unnecessary navigation.
+6.2.8	The system will have interactive on-line help that tells the user how to use the program and knowledge-management related information with access to constantly updated online user manuals.
+6.2.9	On-demand ability to fax requested documents to an authorized user’s workstation.
+6.2.10	The system will allow for collaboration with external users.
+6.3.1	Built-in Administrative Task wizards.
+6.3.2	Ability to manage look-and-feel of entire site along with branding. Ability can be automated via business rules.
+6.3.3	User administrator can create new user(s), configure permissions/roles, edit profiles, enroll users in courses, create user groups/domains, and search for users.
+6.3.4	Real-time reporting on demand that appear in application and can be printed without having to be exported.
+6.3.5	Standard reports and wizard-driven ability to create custom reports that can be exported to xls, csv, doc, rtf, pdf, etc.).
+6.3.6	Report is filterable by domain and user groups with the ability to drill down.
+6.3.7	New reports can be created, saved, and shared.
+6.3.8	Administrator can mass-distribute notifications, edit content of notifications, notify specific users, manage notification events, and determine who receives what notifications.
+6.3.9	Alerts can be customized by user or group level and can be sent to multiple users.
+6.3.10	Variety of alert messages depending on urgency.
+6.3.11	Alerts can be saved for re-use and can be stratified or sent as digests to avoid email box clutter.
+6.3.12	Alerts can be protected from user modification.
+6.3.13	Administrator can customize error messages.
+6.4.1	Searches can be saved, modified, deleted, and shared.
+6.4.2	Ability to search within a search.
+6.4.3	Searches can be by full-text, keywords, and metatags.
+6.4.4	The ability to search different file types (.doc, .xls, .mdb, etc.), scanned files (PDFs), and text within graphics.
+6.4.5	Searches can be by index, Boolean (simple and multiple), wild card, near spell, proximity, synonyms, exact phrase, and exclusion of terms.
+6.4.6	Search terms will be highlighted in the document or web page.
+6.4.7	Search can be canceled at any time.
+6.4.8	Search results can provide a list of hits along document object histories, progress through workflow routes, summaries of documents, or profile data of documents.
+6.4.9	Searches can be limited by time frame.
+6.4.10	List of most often requested results for a specified search term.
+6.4.11	Searches can be exported into common document formats (.doc, .xls, .pdf, etc.).
+6.5.1	Document management is available for documents in different file formats and scanned documents.
+6.5.2	The system shall have a library of standard documents and templates, version control, document storage, and ability to create customized documents or sort documents based on a FOIA request.
+6.5.3	The system shall use agency naming conventions, can link documents, support meta-tagging/profiling of documents, annotation of documents, package documents of different file-types together, and previewing of files in HTML format.
+6.5.4	System shal l allow protection of documents as “permanent” and allow for auto -population of document/profile fields from correspondence system.
+6.5.5	Documents will have their own audit trail system with alerts and notifications when actions are taken with the documents.
+6.5.6	System shall be able to capture documents in various sizes and thicknesses and convert these captured documents to PDFs while also allowing for Optical Character Recognition (OCR).
+6.5.7	System shall be able to modify and redact sections of scanned documents.
+6.5.8	The system shall offer an ability to manage and respond to Freedom of Information Act requests.
+6.5.9	The ability to freeze destruction automation for emails and documents relevant to an impending e-Discovery request.
+6.5.10	The ability to forward documents to the National Archives and Records Administration electronically.
+6.5.11	The ability to track retention periods for documents
+6.5.12	Ability to route documents through workflow for approvals/electronic signatures
+6.6.1	Able to assign learning activities to an entire domain and have LCMS functionality.
+6.6.2	Integrated analytics tools, Product Library, performance/talent management tools, virtual meeting/classroom tools, and link to other training sites and resources.
+6.6.3	Calendar for instructor led courses.
+6.6.4	Integrate EHRI and provide support for Certifying Official Approver.
+6.6.5	Develop a workflow that automates the approval process for the learner and provides ability for administrators to handle approval proposal.
+6.6.6	Learners can create account without approval, change user name, access eHelp, toggle between role types, create/edit individual learning plan, modify calendar view, and view dashboard data.
+6.6.7	Filter views based on learning plan.
+6.6.8	SCORM and AICC compliant.
+6.6.9	Ability to upload thousands of SCORM, AICC, or non-compliant courses without vendor assistance.
+6.6.10	Administrator can mark course complete for learner, manage course properties, set course access by date, manage gradebook, assign instructors to courses/sessions, disable a course, assign resources, manage waitlist, set/waive course prerequisites, request/reserve rooms and equipment, edit/manage learning plans, certification/CEU tracking and test administration.
+6.6.11	Learners can self-register and unregister for courses.
+6.6.12	E-commerce support (with Verisign) for purchase of course(s).
+6.6.13	Online access to supplemental materials.
+6.6.14	Leadership and Development Program Tracking, Competency Management, Performance Management, and Informal Learning.
+6.6.15	Individual portfolio storage in LMS
+6.6.16	Reporting of mandatory courses attendance.
+6.7.1	The CMS shall allow user creation of online groups to support communities of practice.
+6.7.2	The CMS will support asynchronous discussion boards, synchronous chat sessions, document repository, RSS feeds, Twitter feeds, and notification of new system activities.
+6.7.3	Users can be a member of multiple CMS groups.
+6.7.4	Groups can install and activate OPM-approved modules to extend their specific online groups.
+6.8.1	Consistent data entry formats (including pop-up calendar for dates), data validation, ability to cut and paste into data fields.
+6.8.2	System shall allow definition of custom fields including calculated fields with customizable error messages.
+6.8.3	Validating messages for deletion.
+6.8.4	Fields can be locked for read-only views.
+6.8.5	All electronic data shall be kept under conditions to prevent degradation, periodically spot- checked for data integrity, comply with OPM’s Record Management policies, and have a back-up in an off-site facility.
+6.8.6	Personal retirement documentation must be available in hard copy up to 100 years after person is deceased.
+6.8.7	Ability to exempt specific documents from regular scheduled destruction date. OPM Knowledge Management System Requirements
+6.8.8	All electronic documents shall be immediately available and metatags shall be updated at least yearly by document owners.
+6.8.9	Data security shall comply with all OPM and Federal security regulations.
+6.8.10	Data access will be by group or user-based roles and follow OPM guidance on passwords.
+6.8.11	Security access can be customized by metadata, document, database column, and/or database row to allow read, edit, or delete functions.
+6.8.12	Data can be accessed securely from off-site and will apply to any information exchanged between systems and based on workflow.
+6.8.13	The KMS will provide an interface for data sharing with other government agencies.
+6.9.1	System shall store explicit knowledge and allow for self-service searches of a knowledge repository.
+6.9.2	System shall support a cross-agency lessons learned repository.
+6.8.3	System shall support a cross-agency process mapping tool and repository.
+6.8.4	System shall have a searchable audio and video library devoted to capturing tacit knowledge.
+6.8.5	System will record and display who posted what content and on what date/time.
+6.8.6	Ability to track versions of content submissions.
+6.8.7	Ability to roll-back to previous content submissions.

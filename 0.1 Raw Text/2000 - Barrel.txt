@@ -1,0 +1,346 @@
+
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+1Barrel LVL1 Muon Trigger Coincidence
+Matrix ASIC: User Requirement Document
+Authors:, E. Petrolo, A. Salamon, R. Vari, S. Veneziano
+Keywords:ATLAS, Level-1, Barrel, ASIC
+Abstract
+TheCoincidenceMatrixASICisthebuildingblockoftheATLASbarrelLVL1MuonTrigger
+system and of the RPC readout. This documents describes its requirements and will be usedduring the design and implementation phase of both the device and the LVL1 Trigger highlevel simulation.
+NoteNumber:
+Version: 0.7
+Date:May 18
+th 2000
+Reference:
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+2Table of contents
+• Capability requirements (PE)
+• General requirements (GE)• Requirements on the readout blocks (RE)• Requirements on the trigger blocks (TB)• requirements on external systems connected to the CM (EX)• requirements on the design process (DE)
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+3Document History
+Notes on things to be added
+Is it required to check for BCID number coming from TTCRx? Currently CMA has its own
+internal counter. All BCR and general reset policy has to be understood.Reference to RD27 Demonstrator.Document Change Record.
+1. Document Title:
+2. Document Reference Number CMA URD4. Issue 5. Revision 6. Date 7. Reason for change0 1 18 Nov
+97Birth.
+0 2 22 May
+98New introduction and chapter organization
+0 3 31 Aug
+98Minor modiﬁcations to take into account the 100MeV
+background.
+0 4 25 Nov
+98Main revision after freezing of the RPC chambers lay-
+out
+0 5 11 Jan 99 Minor modiﬁcations0 6 31 Mar
+00Major modiﬁcations to preparte for the PDR
+0 7 18 May
+00document draft submission
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+41Introduction
+This document contains a very brief introduction of the functionality of the Coincidence
+Matrix(CM),atriggerandreadout ASICusedintheATLASMuonspectrometer.Maintop-ics are general requirements and constraints on the whole design and speciﬁcally on thereadout and trigger blocks of the CM asic.
+1.1Purpouse of the document
+This document will be used to produce the speciﬁcations and during the design of the Coin-
+cidence Matrix. It shall be used also to produce the high level simulation code of the AtlasLVL1 Muon trigger system. It should be read by all people working in the simulation anddesign of the LVL1, LVL2 Barrel µ trigger and Resistive Plate Chambers Readout System.
+1.2Scope of the hard ware
+The ﬁnal product of the design process, of which this document is part, is the production,
+test and installation of about 4000 CMAs, from readout and LVL1 triggering of the ATLASmuon barrel RPC chambers on dedicated boards (CM boards), mounted on the PAD boardsof Resistive Plate Chamber detector of the ATLAS experiment.
+1.3Deﬁnitions and acr onyms
+BC
+Bunch crossing
+BCID
+Bunch crossing Identiﬁer. Number that deﬁnes the bunch crossing at which an eventoccurred. "Potential" bunch crossings are numbered 0 to 3563 per LHC orbit, starting withthe ﬁrst following the LHC extractor gap. A 12-bit BCID is provided by the TTCRx.
+BCR
+Binch crossing counter reset signal.
+CMA
+Coincidence Matrix ASIC
+DAQ
+Data Acquisition system
+Derandomizer
+place where the data corresponding to a Level 1 trigger accept are stored before being read-out
+ECR
+Event Counter Reset signal. Signal broadcast by the TTC system to reset the event counter(L1ID).
+FE
+Front End
+Level-1 Buffer
+Buffer included in the FE electronics which retains the data until the L1A is received
+L1ID
+LVL1triggeracceptIdentiﬁer,A24bitL1IDisprovidedfromtheTTCrxwitheachLVL1Asignal. In conjunction to the BCID, it uniquely deﬁnes an event.
+L1MT
+level-1 Muon Trigger System.
+LVL1, LVL2
+Abbreviations for level-1 level-2 and for associated trigger systems.
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+5L1A
+LVL1triggerAcceptsignalproducedbytheCentralTriggerProcessor(CTP)whenanevent
+has met the design criteria.
+PAD
+part of the LVL1 Barrel Muon trigger, which resides on the trigger chambers, whose func-tion is to collect trigger and readout data from 4 or 8 CMAs.
+Raw Data
+Data provided by the FE electronics to the CMA
+SEE
+Single Event Effects, induced by ionizing radiation.
+TTC
+Standard system which allows the distribution of timing, trigger and Control signals, usingthetechnologydeveloppedinRD12anddescribedintheTTCdoc.Thesystemdeliversstan-dard signals such as the LHC clock, LVL1_A and Fast Controls, and provides for the distri-bution of another detector-speciﬁc commands and data.
+TTCrx
+TTC receiver ASIC
+TTCdoc
+Documentation available in http://www .cern.ch/TTC/intro.html
+1.4References
+Changes on any of these documents could imply a complete revision of this URD:
+[1] The LVL1 Muon Trigger URD v 1.4[2] Trigger and DAQ Interfaces with front-end systems: requirement document, version 2.0,
+DAQ-NO-103, 9 june 1998.
+[3] ATLAS Level-1 Trigger TDR[4] Improvements to the Level-1 Muon Trigger giving increased robustness against back-
+ground, ATL-COM-DAQ-99-011.
+[5] ATLAS policy on radiation tolerance electonics, draft 2.[6] Radiation hardness evaluation of the ATLAS RPC coincidence matrix submicron tech-
+nology. draft.
+1.5Document o verview
+The document contains the CMA requirements organized as follows:
+• Capability requirements (PE)
+• General requirements (GE)• Requirements on the readout blocks (RE)• Requirements on the trigger blocks (TB)• requirements on external systems connected to the CM (EX)• requirements on the design process (DE)
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+62General description
+A complete description of the trigger chamber layout and partitioning (layer, doublet, sta-
+tion, PAD, sector) and a description of the L1MT (functionality of CM boards, PAD boards,Sector boards, readout and trigger links, Muon Interface to CTP) can be found in the LVL1TDR [2], and an updated version is shown in Figure 1
+2.1Perspective
+The CMA is part of the LVL1 trigger and of the RPC readout systems. It interacts with vari-
+ous other trigger components and detector sub-systems, as indicated in Figure 2.
+Figure 2 CMA context diagramFigure 1 LVL1 Muon Barrel trigger architectureSplitter Sector MUCTPI RX PAD
+ROD ROBCMA PAD
+CMA
+SplitterHigh Pt
+11Low Pt
+FE
+FE
+FERPC3RPC2
+RPC1
+11
+n111..31
+n1n1 41
+41..3
+41 4 1 42 1 64 1
+32LVL1
+DAQ
+Initialization
+FE signalsTrigger
+Readout (serial)TTC signalsTest (boundary scan)
+CMAand control (I2C)
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+72.2 General capabilities
+TheCMAhastoperformthelocalreadoutandLow-PtandHigh-PtLVL1triggeralgorithms
+for the RPC trigger chambers. The trigger algorithm is explained in the LVL1 TDR andshown in Figure 3:
+2.3General constraints
+The CMA shall be mounted on the PAD boards, on-detector.The serial conﬁguration bus shall be I2C or JTAG, derived from the CAN node output.These two control bus standards are used also by other devices which will be used in thePAD boards.The CMA is required to do bunch crossing identiﬁcation.The CMA is required to time tag incoming hits with a time resolution greater the the bunchcrossing,necessaryforthereadoutandmonitoringoftheRPCchambers.Thereadoutproto-col has to be agreed with PAD designers and it is not yet deﬁned.Main voltage on the PAD board shall be 3.3 V and signal levels are assumed 3.3V CMOS.Radiation tolerance tests revealed that redundancy to Single Event Upsets (SEU) is required[5].
+2.4 User characteristics
+Characteristics of users and maintenance personnel.
+2.5Operational en vironment
+Radiation dose expectedis less than 1 krad and 1010n/cm2(1MeV equivalent), in ten years
+of operation, with a safety factor of 5. Limitation on power consumption is no longer strict,Figure 3 Trigger algorithm and connections between Low-Pt and High-Pt CMAs.low pT
+5 10 15 m 0RPC 3
+RPC 2 (pivot)
+RPC 1high pTMDT
+MDT
+MDTM
+D
+TM
+D
+T
+SV-LL01V01
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+8since water cooling is planned, bu t 1 W per chip with an input activity of 0.5% per channel
+per BC period is advisable. Accessibility in the experimental hall is required for changingthe piggy board where the device will be mounted.
+2.6Assumptions and dependencies
+List of assumptions that the speciﬁc requirements are based upon.
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+93Speciﬁc r equirements
+The speciﬁc requirements are labelled as follows:
+Need: Essential, Non-Essential:1,2,3
+Priority: 1, 2, 3, Suspended
+Stability: Stable, Unstable
+(Source: Reference, Person, Group)
+3.1Capability r equirements
+CMA_PE_1 Essential, 1, Stable
+The CMA shall be able to process digital signals from RPC chambers FE or from aCMA trigger output.
+CMA_PE_2 Essential, 1, Stable
+The CMA shall be programmable and able to perform the low-pt or the high-pt algo-rithms. The low-pt algorithm shall use information from two doublets, while thehigh-pt will use one doublet plus one CMA trigger output.
+CMA_PE_3 Essential, 1, Stable
+The CMA shall perform one trigger algorithm (low-pt or high-pt), for three indepen-dent programmable Pt thresholds.
+CMA_PE_4  Essential, 1, Stable
+The latency of the CMA trigger pipeline shall be as short as possible and shall notexceed 2 BC periods, measured from signal input to trigger output buffers.
+CMA_PE_5 Essential, 1, Stable
+The trigger latency of the CMA shall be ﬁxed, not depending on the amount of incom-ing data.
+CMA_PE_6 Essential, 1, Stable
+The CMA shall be able to perform the data readout of RPC chambers
+CMA_PE_7 Essential, 1, Stable
+The CMA shall contain LVL1 latency and derandomizer buffers.
+CMA_PE_8 Essential, 1, Stable
+The CMA shall be able to time tag incoming hits with a precision of 1/8 of the BCperiod.
+CMA_PE_9 Essential, 1, Stable
+The CMA shall contain the following external communication links:- A serial conﬁguration link- A dedicated link to transmit the readout data.- Dedicated signal lines to interface to the TTC system (L1A, BCR, ECR, 40.08 MHzmachine clock).
+CMA_PE_10 Essential, 1, Stable
+TheCMAshallbeabletoﬂaginternalmalfunction,dueforexampletoSEUs,ondedi-
+cated output lines.
+Note 1: a PLL unlock signal is a tipical example.
+3.2 Constraints r equirements
+CMA_GE_1 Essential, 2, Unstable
+the maximum power dissipation of the CMA per input channel shall not exceed 5 mW(1W total).Note 1: max power value has to be checked against cooling system tests.
+CMA_GE_2 Essential, 1, Stable
+the CMA initialization control path shall be independent from the readout path.
+CMA_GE_3 Essential, 1, Stable
+It shall be possible to test the logic in the CMA by comparing the output data with the
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+10expected values while test data are being fed into the system at full speed.
+CMA_GE_4 Non-essential, 1, Stable
+it shall be possible to operate the CMA in step mode, generating clock cycles one at atime, under control of diagnostic inputs.
+CMA_GE_5 Essential, 1, Unstable
+The use of JTAG in the CMA shall be implemented for boundary scan tests only.
+CMA_GE_6 Essential, 1, Unstable
+The I2C protocol shall be used as the initialization data path.Note 1: also the use of JTAG as initialization data path should be considered.
+CMA_GE_7 Essential, 2, Unstable
+TheCMAhastobeimplementedinaradtoleranttechnology,allowingforasafetyfac-tor of 5 compared to the expected radiation levels, and assuming 10 years of operation,for the total dose values shown in chapter 2.5, according to [6].
+CMA_GE_9 Essential, 2, Unstable
+Redundancyorspecialcodingonthemaincontrolregistersshallbeappliedtoimprovehardness to SEE.
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+113.1.1Requirements on the Readout Blocks
+CMA_RO_1Essential, 1, Unstable
+The CMA shall retain in “pipeline” memories, during the latency of the LVL1 trigger,information required to monitor the device during standard operation.Information to be readout from the CMA includes:-the data coming from the front-end electronics (pattern of hit strips),-acoarsetimemeasurementsofthetimeofarrivalofthehitwithintheBC,with(1/8ofthe BC period LSB),-the output pattern of the coincidence matrix algorithm,-ﬂags that indicate if the muon candidate is in a region which may be in overlap withanother CMA, separate ﬂags must identify each overlap to the nearby CMA.
+Note 1: it has to be decided which output pattern to send, two options are available:
+• output pattern of the highest programmed threshold (it will be empty if no candidates pass this
+threshold)
+• output pattern of the threshold passed by the muon candidate.
+CMA_RO_2Essential, 2, Unstable
+The size of the pipeline memory shall be ﬁxed, at the maximum latency of 2.5 µs.
+Note 1: The TTC signals shall be used to adjust the timing of the L1A signal, to match
+the LVL1 buffer lenght (to cope with different effective latencies i.e. TOF, detectorresponse, cables, FE signal preprocessing).Note 2: it could be convenient to perform zero suppression or data compression beforethe derandomizing stage. The pipeline memory could be implemented with FIFOs,given the low occupancy of the detector.Note 3: a discussion on the exact pipeline latency to be implemented has to be done, aconservative assumption is 2.5 µs.
+CMA_RO_3Essential, 2, Unstable
+For LVL1 selected events, the information discussed in CMA_RO_1 shall be retainedin derandomizing buffer memoriesNote 1: the size of the buffer memories has to be discussed.
+CMA_RO_4Essential, 2, Unstable
+The CMA will be designed as to be able to transfer readout data serially, onpoint-to-point links.Note 1; readout protocol, is deﬁned in Ref xx.Note 2: the readout protocol should allow for empty frames to be sent even if no inputhits are recorded for a LVL1 trigger, for synchronization.
+CMA_RO_5Essential, 1, Stable
+Zero suppression shall be applied to the data prior to transmission to the PAD.Note 2: current data bandwidth requirements assume some level of zero suppression.
+CMA_RO_6Essential, 1, Unstable
+In the operation described in CMA_RO_1, it must be possible to send information forseveral consecutive bunch crossings around the triggered one, the extent of the timeframe shall be programmable up to a maximum time frame lenght of 5 BCs.Note1:theallowedrangeofoffsetshastobediscussed(offsetdeﬁnedasBCIDofﬁrstrecorded BC in frame minus BCID of BC that gave rise to a trigger).Note 2: to be discussed where the range extends from the triggered bunch crossing n:examples n-2, n-1, n, n+1, n+2 or n, n+1, n+2, n+3, n+4, n+5.
+CMA_RO_7Essential, 1, Stable
+the CMA shall be able to accept two different LVL1_A which are separated by a mini-
+mumintervalof3BCs,i.e.twoconsecutiveLVL1_Awillbeseparatedbyatimeinter-
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+12val of at least 2 BC periods.
+CMA_RO_8Essential, 1, Unstable
+The bandwidth requirement of the readout system is evaluated allowing for the follow-ing: standard time frame lenght, 100 kHz LVL1 rate, occupancy of 0.5 % per BC(safety factor of 5 at the highest expected luminosiy)Note 1: occupancy to be checked.Note2:itisacceptabletoallowforamaximumLVL1rateof75kHzprovidedthesys-tem can be upgraded to work at 100 kHz.Note 3: the global LVL1 trigger system will guarantee that no more than 16 LVL1_Awill occur in any given 16 µs period.
+CME_RO_9Essential, 1, Unstable
+thesizeofthederandomizingmemoriesshallbesufﬁcientlylargetoallowforlessthan0.01% loss of data under standard operating conditions.Note 1: value of data loss to be conﬁrmed
+CMA_RO_10Essential, 2, Unstable
+Data in the derandomizing buffers shall be tagged with the FE_L1ID and FE_BCIDvalues reconstructed by the TTC system signals.Note 1: the FE_BCID number is a 12 bit number, output of a BC_counter incrementedby the BC signal and reset by the BCR signal. The BCR signal shall be adjusted by theTTC in time to get the correct FE_BCID.Note2:FE_L1IDnumber,outputofaL1ID_Counter,incrementedbytheLVL1_Asig-nal. This FE_L1ID must have a minimum of 9 bit width.
+CMA_RO_11Essential, 2, Unstable
+forLVL1selectedevents,theinformationdiscussedinCMA_RO_1hastotrasferredtothe PAD board; the latency in trasferring the data shall not exceed 1 ms.Note 1; upper limit on the latency to be discussed.
+CMA_RO_12Essential, 1, Stable
+the CMA derandomizing memory shall not change the order of events transferred toPAD boards. The events transferred to the PAD board shall be ordered by L1ID.
+CMA_RO_13Non-essential, 3, Unstable
+the CMA shall generate a CMA_BUSY signal if a derandomizing buffer is nearly full.Note 1: this ﬂag will be used to monitor the CMA buffer occupancy only and added tothe rest of the data words and as a separate output signal.Note 2: speciﬁcation of busy to be deﬁned.
+CMA_RO_14Non-essential, 3, Unstable
+during the initialization phase, CMA_BUSY signal shall be asserted until initializationis completed.Note 1: Is it useful to assert a ROD_BUSY during initialization?
+CMA_RO_15Essential, 1, Stable
+it shall be possible to read back the parameters used to deﬁne the conﬁguration andoperation of the CMA.Note 1: to be deﬁned how they will be read.
+CMA_RO_16Essential, 1, Stable
+it shall be possible to buffer up to 16 L1IDs and relative BCIDs, while serializing datafor a speciﬁc event.
+CMA_RO_17Essential, 1, Unstable
+the CMA will be able to receive an external transmit off signal (XOFF), to control thereadout data ﬂow.
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+133.1.3Requirements on the T rigger Blocks
+CMA_TB_1
+The CMA coincidence logic shall be composed of a set of identical cells arranged in aCoincidence Matrix. The details of the basic cell, similar to the demonstrator ASIC areshown in Figure 4.
+Figure 4 Coincidence Matrix cell
+CMA_TB_2 Essential, 1, Unstable
+The CMA shall be able to capture signals from the FE discriminators of 12 ns widthNote 1: voltage levels shall be 3.3V CMOS
+CMA_TB_3 Essential, 1, Unstable
+TheCMAshallprovideasystemforaligningintimethedatafromdifferentFEboards(octects of FE signals)Note 1: the time alignment system shall be able to sample the front-end ouputs every1/8 of the BC periodNote2:thealignmentsystemshallbeprogrammabletoallowforadelayofupto3BCperiods indipendently per octect of FE signals.Note 3: worst case expected time differences have to be rechecked including cosmicsruns
+CMA_TB_4 Essential, 1, Unstable
+The CMA shall be programmable to be able to stretch groups of signals at the input ofthe Coincidence blocks in the 6 ns - 25 ns range, in steps of 1/8 of the BC period.Note1:tobedeﬁnedsizeofgroupswhichhaveacommonshapingtime,maybeoctets.Note 2: in order to cope with 100 MeV background, it should be possible to extend thesignal shaping to 2 BCs, to make broader coincidences (needs better explanation).
+CMA_TB_5 Essential, 2, Unstable
+The CMA shall be able to decluster hit patterns before applying the Low-Pt and HighPt algorithms, as shown in Figure 4Note 1: it still needs to be understood if really necessary.Note 2: efﬁciency in declustering groups of and odd number of strips to one and evencluster sizes to two strips has to be evaluated.
+CMA_TB_6 Essential, 1, Unstable
+The CMA shall be contain local coincidence logic (Preprocessing) within a doublet.The Preprocessing will take into account local bending and misalignement betweenDFF
+DFFDFFMAJ
+3/41/4
+4/4
+MAJ_TYPEI0
+I1J0J1IJ_THR_0
+IJ_THR_1
+IJ_THR_2
+Coincidence
+window2/4*
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+14layers(see Figure 5 ).
+CMA_TB_7 Essential, 1, Unstable
+the CMA shall provide the Pt value of the muon candidate, if any, passing the highestPt threshold.
+CMA_TB_8 Essential, 1, UnstableFigure 5 The preporocessing implements a declustering algorithm able to ﬁnd cluster centers up to 5 strips
+wide.
+Figure 6 Preprocessing algorithm on the I and J doublets1/2 2/2 I/J 1/2 2/2 I/J 2/21/2 I/J 2/21/2 I/J
+2/21/2 I/J 2/21/2 I/J 2/21/2 I/J 2/21/2 I/J
+2/21/2 I/J 2/21/2 I/J 2/21/2 I/J 2/21/2 I/J
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+15The CMA shall be programmable and able to ﬂag muons found in regions of overlap-
+ping chambers.Note1: extent in number of strips to be decided
+CMA_TB_9 Essential, 1, Stable
+The CMA shall provide signals described in CMA_TB_6 and CMA_TB_7, on a dedi-cated parallel output port at the BC frequency of 40 MHz.
+CMA_TB_10 Essential, 1, Stable
+The individual Pt thresholds coincidence windows shall be programmable with thegranularity of one strip.
+CMA_TB_11 Essential, 1, Stable
+the CMA shall permit individual strips to be disabledNote 1: this will remove the contribution of these strips to all the pt thresholds.
+CMA_TB_12 Essential, 1, Stable
+the CMA shall permit individual inputs to be enabled, in order to allow for missingstrips or layers in the trigger chambers, to be able to raise the geometric acceptance ofthe L1MT in regions of poor acceptance.
+CMA_TB_13 Essential, 1, Stable
+The CMA matrix size will be sufﬁciently large as to contain trigger losses due to itsﬁnite size below 1% at the nominal low-Pt and high-Pt cutoffs.Note 1: the proposed size of 32X64 has been reviewed and accepted.
+CMA_TB_14 Non-Essential, 1, Unstable
+The CMA shall be able to mask signals arriving in a programmable time windowwithin the BC, in steps of 1/8 of BC period.Note 1: this option would further lower the fake trigger rate, it should be studied bywhich extent.
+CMA_TB_15 Essential, 1, Stable
+TheCMAshallcontainaprogrammablemajoritylogicrequiring3/4layersinthecoin-cidence logic.Note1:Incasetherateofnoisehitsisunacceptablyhighforthestandardlow-ptcondi-tion (requiring layers in the Middle RPC station), it shall be possible to make a tighterrequirement (requiring 4/4 layers).Note 2: In case the rate of noise hits is unacceptably high for the standard high-pt con-dition, requiring layers in RPC Outer station, it shall be possible to make a tighterrequirement, requiring 2/2 layers.Note 3: in η-φregions of poor acceptance, it shall be possible for the standard low-pt
+condition, to make looser requirements, requiring 2/4 layers (1 layer per doublet).
+Note 4: the request of 1/2 or 2/2 layers per doublet shall be independently programma-ble for each of the three thresholds.
+CMA_TB_16 Essential, 1, Stable
+The CMA shall output the trigger pattern of the most signiﬁcant threshold keeping thetiming information of the coincidence, of 1/8th of a BC.Note 1: The output signal shall have to be reshaped at some width bigger that 1/8 ofBC, (due to CMA_TB_1, shall be greater than 12 ns).
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 1 March 2000
+163.5 Requirements on Exter nal Systems Connected to the CMA
+CMA_EX_1 Essential, 2, Stable
+the width of input FE signals will be larger that 12 ns, at the input of the CMA(CMA_TB_1).
+CMA_EX_2 Essential, 1, Stable
+Octects of FE signals arriving at the CMA shall come aligned in time within a maxi-mum time spread of 1 ns.
+CMA_EX_3 Essential, 2, Unstable
+The TTC system shall provide the standard signals to the CMA: 40 MHz clock,LVL1A, BC, BCR.Note 1: to be evaluated whether these signals could be sent serially.
+CMA_EX_4 Essential, 2, Stable
+The PAD system shall be organised such that it will be possible to synchronise theCMA outputs in respect to each other.
+CMA_EX_5 Non-essential, 1, Stable
+The global LVL1 trigger system will guarantee that no more than 16 LVL1_A willoccur in a given 16 µs period
+Note 1: algorithm to be understood and used as an input to the CMA simulation
+CMA_EX_6 Non-essential, 1, Unstable
+atimewindowwillbeprovidedbytheCTPatperiodicintervals,throughtheTTC,dur-ing which there will be no L1A signals, this will allow for emptying the derandomizerbuffers and reset the BCID counter with the BCR signal.Note 1: lenght to be given as an input for the CMA simulation.
+CMA_EX_7 Non-essential, 1, Stable
+the layout of the RPC chambers shall avoid that two CMA share the same gas volume,in order to minimize double counting of muons due to effects of cluster sizes.
+CMA URD ATL-COM-DAQ-2000-050
+ATLAS Trigger/DAQ 15 June 2000
+173.6 Requirements to the design pr ocess and tools used
+CMA_DE_1 Essential, 1, Stable
+TheVerylargescaleIntegrationHardwareDescriptionLanguage(VHDL)willbeusedfor simulation and synthesis.Note 1: this requirement should be adopted by the rest of the LVL1 Muon Barrel sys-tem.Note2:thisrequirementwillpermittomakethedesignasmuchaspossibletechnologyindependent .
+CMA_DE_2 Essential, 2, Unstable
+The design shall be parametrized.Note 1: relevant parameters to be discussed (matrix dimension, BCID, L1ID counterssizes, pipeline lenght for example).
+CMA_DE_3 Essential, 1, Unstable
+The VHDL code shall be RTL-level, encapsulating in speciﬁc design libraries theTechnology-dependent components.Note 1: Designware Foundation libraries can be used.
+CMA_DE_4 Non-essential, 2, Unstable
+An high level programming language with details of the CMA (or more generally forall the component parts of the LVL1 Barrel Muon trigger system), shall be made avail-ablefromtheCMAdevelopersfortestvectorgeneratorandforthephysicstriggersim-ulation.

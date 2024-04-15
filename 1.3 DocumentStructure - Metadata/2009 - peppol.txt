@@ -1,0 +1,93 @@
+D	Pan-European Public Procurement OnLine (PEPPOL) Deliverable D2.1 Functional and non-functional requirements specification for the VCD
+2	Vision and Scope of the VCD
+2.3	VCD simple package (Stage 2)
+2.3.3	Major Features, Requirements and Quality Attributes
+2.3.3.1	Identity and access management
+2.3.3.1.1	Application for VCD account
+2.3.3.1.2	VCD account management 
+2.3.3.1.3	Quality attributes of Identity and access management 
+2.3.3.2	VCD system
+2.3.3.2.1	Initialization of VCD Request
+2.3.3.2.2	Arrangement of VCD instance
+2.3.3.2.3	Collection of Evidence
+2.3.3.2.4	Compilation of VCD instance
+2.3.3.2.5	Quality attributes of VCD system
+2.3.3.3	VCD transportation system
+2.3.3.3.1	Authentication to VCD transportation system
+2.3.3.3.2	Exchange of VCD packages
+2.3.3.3.3	Quality attributes of VCD transportation system
+2.3.3.4	VCD viewing system
+2.3.3.4.1	Authentication to VCD viewing system
+2.3.3.4.2	View VCD
+2.3.3.4.3	Quality attributes of viewing system
+2.4	VCD advanced package (Stage 3)
+2.4.3	Major Features, Requirements and Qua lity Attri butes
+2.4.3.1	Context specific data
+2.4.3.1.1	Requirements: context specific data
+2.4.3.1.2	Quality attributes: context specific data
+2.4.3.2	Advanced VCD creation service
+2.4.3.2.1	Requirements: Advanced VCD creation service
+2.4.3.2.2	Quality Attributes: Advanced VCD creation service
+2.4.3.3	VCD re-compilation service
+2.4.3.3.1	Requirements: VCD re-compilation service
+2.4.3.3.2	Quality attributes: VCD re-compilation service
+2.5	VCD network packa ge (St age 4)
+2.5.3	Major Features, Re quirements and Qua lity Attributes
+2.5.3.1	Feature: Mandate contracting authority
+2.5.3.2	Feature: Storing attestations and referencing to it 
+2.5.3.3	Feature: Retrieving attestations on demand
+2.5.3.4	Feature: Conflict resolution
+2.5.3.5	Feature: Implementing Article 52 of directive 2004/18/EC and EFTA EEA Committee decision 68/2006
+2.5.3.6	Quality attributes of VCD networked package
+3	Legal, organisational and semantic framework and r equirements
+3.1	Organisational  Framework
+3.1.2	Organisational requirements
+3.2	Semantic framework
+3.2.4	Semantic Requirements
+3.2.4.1	Semantic interoperability
+3.2.4.2	Correspondence between national and European criteria
+3.2.4.3	VCD specific characteristics 
+3.2.4.4	Method for ensuring “Level of completeness” 
+3.2.4.5	Placeholders in VCD packages
+3.2.4.6	Semantics of evidence
+3.2.4.7	Visualization of the VCD package
+3.2.4.8	Implementation approach with regard to stages of maturity
+3.2.4.9	Principle for including attestations in stage 3 and 4
+3.2.4.10	Classification schemes awareness
+3.3	Legal framework
+3.3.2	Legal Requirements
+3.3.2.1	Equal treatment of foreign economic operators
+3.3.2.2	Minimum period of validity of VCD package 
+3.3.2.3	Equivalence between automated transformation and official translation of attestations
+3.3.2.4	Legal effect of subset criteria and evidences specified by the contracting authority
+3.3.2.5	Scope of mutual recognition
+3.3.2.5.1	Mutual recognition and candidate statements
+3.3.2.5.2	Equivalence of missing attestations
+3.3.2.6	Correct implementation of directives into national procurement law
+3.3.2.7	Legal basis for exchanging validation data
+3.3.2.8	Legal requirements regarding service providers
+3.3.2.8.1	European Service Provider
+3.3.2.8.2	National Service Providers
+3.3.2.9	Legal requirements regarding the collection of evidences
+3.3.2.10	Legal requirements regarding data protection
+3.3.2.11	Separation of VCD package and tender
+3.3.2.12	Trust model between the entities involved
+3.3.2.13	Legal Validity
+3.4	Technical Framework (Infra structure specific)
+3.4.2	Technical Requirements
+3.4.2.1	Interrelation of governance models of WP2 and WP8
+3.4.2.2	Authentication of PEPPOL Actors
+3.4.2.3	Allocation of identifiers
+3.4.2.4	Identity
+3.4.2.5	Addressability 
+3.4.2.6	Discovery
+3.4.2.7	Access Points to the PEPPOL infrastructure
+3.4.2.8	Use of PEPPOL infrastructure to submit a VCD
+3.4.2.9	Confidentiality
+3.4.2.10	Usage of validation service provided by WP1
+3.4.2.11	Reliability
+3.4.2.12	Security
+3.4.2.13	Data Integrity
+3.4.2.14	Non-repudiation of origin
+3.4.2.15	Time stamping
+3.4.2.16	Audit trail

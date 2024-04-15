@@ -1,0 +1,213 @@
+4.1.1.1	The user shall be able to view the data stored in the Physical Inventory tables through the Pontis graphical user interface (GUI).
+4.1.1.2	The user shall be able to switch between predefined structure lists.
+4.1.1.3	The user shall be able to select structures by structure ID, district, county, administrative area (geographic group), ownership, custodianship, functional class, NHS status, o n/off system , inspector, bridge group, inspection due dates, and all or some environment and elements.
+4.1.1.3.1	The query shall be restricted depending on the user privilege.
+4.1.1.4	The user shall be able to find structures based on the structure ID, structure name, feature intersected, facility carried, route number, LRS Inventory Route,  KM/mile posts, structure types, design types and materials, and by searching the notes fields.
+4.1.1.4.1	The query shall be restricted depending on the user privilege.
+4.1.1.5	The user shall be able to enter a WHERE clause of the SQL query in the Find and the Filter window and run a query against the  bridges in the database. The query will be verified by the application and SQL errors will be reported to the user for correction.  This capability shall  be an application privilege.
+4.1.1.5.1	Bridge-level security of the user shall be applied automatically.
+4.1.1.6	The user shall be able to select a structure by directly typing in the structure  ID in GUI, with the display scrolling to that structure.  Bridge-level security of the user shall be applied  automatically.
+4.1.1.7	The system shall display the data in the appropriate unit of measurement as configured for the application.  This will be a permanent modal setting for the application. This setting shall be configurable (as stipulated in Requirement 22.1).
+4.1.1.8	The user shall be able to select bridges on a supported map display and generate a bridge list for use within  Pontis,  for example, to perform a  simulation analysis or to gene rate an inspection roster.
+4.1.2.1	The user shall be able to view the data  stored in the Project Planning tables  through the GUI.
+4.1.2.2	The user shall be able to switch between predefined project lists.
+4.1.2.3	The user shall be able to filter and select projects by structure ID, project ID, program, action type, project status, review status, treatment, program year,  and project end date .
+4.1.2.4	The user shall be able to find projects by project ID, project name,  project status, structure ID, and program.
+4.1.2.5	The user shall be able to filter and select work candidates by structure ID, project ID, program, action type, project status, review status, treatment, program year, and project end date.
+4.1.2.6	The user shall be able to enter a WHERE clause of the SQL query in the Find  and the Filter window and run a  query against the projects in the database. The query will be verified by the application and SQL errors will be reported to the user for correction.
+4.1.2.6.1	This capability shall be an application privilege.
+4.1.2.6.2	Bridge-level security of the user shall  be applied automatically.
+4.1.2.7	The user shall be ab le to select a project by directly typing in the project ID in  the GUI, with the display scrolling  to that structure.
+4.1.2.7.1	Bridge or project level security of the user shall be applied automatically.
+4.1.2.8	The user shall be able to select projects (work) on a supported map display and generate a project/bridge list for use within Pontis,  for example, to display results of a simulation analysis or to generate a STIP display.
+4.1.3.1	The user shall be able to select and execute predefined reports to view bridge data, project data, preservation model data, program simulation results, and configuration data.
+4.1.3.1.1	The existing Pontis reports shall form the  basis for the predefined reports to be provided in Pontis 5.0.
+4.1.3.2	The user shall be able to create reports in a .NET compliant report generator other than InfoMaker and review these reports from within the Pontis GUI.
+4.1.3.3	The system shall provide the ability to integrate current selections with a  .NET compliant report generator other than InfoMaker.  AASHTO may provide users with a list of suggested report generators to replace PowerBuilder/InfoMaker.
+4.1.3.4	The system shall provide the ability to incorporate PDF files into standard Pontis reports.
+4.1.3.5	The system shall provide the ability to save reports in PDF, HTML, and XML formats.
+4.1.4.1	The system shall provide the ability to create any report that is bridge or project based by selecting the relevant “driver” records from a map display.
+4.1.4.2	The system shall provide the ability to create or refresh a map display from a set of bridge or project records selected within the Pontis desktop.
+4.2.5.1	The user shall be able to create a ne w structure with a user-defined bridge key.
+4.2.5.2	The user shall be able to create a new structure by copying all data of an existing structure.
+4.2.5.3	The user shall be able to create new structure(s) by importing from a supported file type.  The supported file types are to be determined, but will include at least PDI, NBI, and XML.
+4.2.5.4	The user shall be able to edit and remove existing structures.
+4.2.5.5	The system shall provide the ability to mark a bridge with any of several  status values (e.g. inactive/closed) and automatically filter displays to  recognize the status value (e.g. to automatically suppress inactive/closed structures).
+4.2.5.6	The system shall support storage and management of information for bridges  in a design or preconstruction state  (functional requirement is related  to 4.5 above)
+4.2.5.7	The user shall be able to renumber the bridge key identifier and have the change made globally.  This functionality shall be restricted depending on the user privilege.
+4.2.6.1	The user shall be able to create a new  inspection.
+4.2.6.2	The users hall be able to create a new inspection by copying a previous inspection.
+4.2.6.3	The user shall be able to identify and select any previous inspection as the source for the copy action.  The  selection can be made by combination of date, inspection type, inspector, or inspection control group.
+4.2.6.4	The system shall have a short-form interface (display only NBI and element  data, similar to SI&A sheet) for inspection data entry with specifics of design and functionality to be determined as part of the technical design.
+4.2.6.5	The user shall have the option to copy  the notes from previous inspection when creating a new inspection.
+4.2.6.6	The user shall be able to create new inspection(s) by importing an PDI file.
+4.2.6.7	The user shall be able to add new elements to the structure.
+4.2.6.8	The user shall be able to edit all the NBI data.
+4.2.6.9	Changes  to calculated results such as Sufficiency Rating or NBI Appraisal Ratings will be prohibited except for secured, privileged user s.
+4.2.6.10	The user shall be able to edit element inspection data.
+4.2.6.11	The user shall be able to edit the bridge inventory items excluding the dependent/ derived values (i.e., the appraisal ratings that are calculated  automatically).
+4.2.6.12	The user shall be able to edit inspection and structure notes.
+4.2.6.13	The system shall be capable of storing notes  in plain text and XML, and shall maximize the notes field  size.  The user shall be capable of setting the size of the notes field.
+4.2.6.14	The user shall be able to create and  edit work recommendations.  The system shall be capable of estimating quantity for bridge type work recommendations.
+4.2.6.15	The user shall be able to enter and up date inspection planning information (i.e., frequency of regular and special inspections and estimated resource requirements).
+4.2.6.16	The user shall be able to link and manage multimedia files.
+4.2.6.17	The system shall provide an inspection scheduling tool.
+4.2.6.18	The system shall provide the capability to “lock down” an inspection record once signed and sealed to prevent deletion or modification.
+4.2.6.19	Privileged users shall be able to delete an existing inspection unless it is “locked down”.
+4.2.6.20	The user shall be able to sort the element data by unit number, environment, and quantity.
+4.2.6.21	The user shall be able to view all data from any two inspections, for a single  bridge, in a tiled presentation for easy comparison.  The presentation (view/report) shall clearly highlight the difference between two inspections.
+4.2.6.22	The system shall provide a configurable tracking mechanism to ensure that a  set of screens and data fields have been reviewed and approved during the course of an inspection
+4.2.7.1	The system shall be capable of calculating NBI condition ratings using the FHWA NBI Translator.
+4.2.7.2	The system shall be capable of calculating and storing bridge Sufficiency Rating.
+4.2.7.3	The system shall be capable of calculating appraisal ratings.
+4.2.7.4	The system shall be capable of calculating Structurally Deficient/Functionally Obsolete (SD/FO) status.
+4.2.7.5	The ability of the user to update the calculated ratings and status in the database shall be a controlled  privilege. Agencies may optionally exclude/prohibit direct edits to the calculated inspection results such as the NBI translator output. The agency shall therefore be able to enforce strict use of calculated translator results for calculating NBI condition ratings.
+4.2.7.6	The system shall be capable of prompting users when the dependent fields for ratings are changed and offer the user option to recalculate the ratings.
+4.2.7.7	The system administrator shall be able to configure the recalculation behavior of the derived data. The options shall include 1) do nothing, 2) alert user that recalculation is required and give option to recalculate before update/save, and 3) recalculate silently with no confirmation prompt when user saves the inspection.
+4.2.7.8	The system shall eliminate any and all dependencies on workstation (user) control/parameter files for program operation.  For example, parameter information required by the NBI Translator (including information currently stored in ELEMENTS.P RN and ERRORS.LS T) will be store d strictly within the Pontis database rather than on individual user workstations.
+4.3.7.1	The system  shall be capable of creating cost and deterioration elicitation records for Pontis users.
+4.3.7.2	The system  shall be capable of updating the transition probabilities for preservation actions based on expert elicitation s.
+4.3.7.3	The system shall be cap able of updating preservation action costs based on expert elicitations.
+4.3.7.4	The system shall be capable of updating transition probabilities for do nothing actions based on historical inspection data.
+4.3.7.5	The user shall be able to edit the cost and deterioration models through the GUI and immediately see the impact on model recommendations.
+4.3.7.6	The system shall be capable of using the transition probabilities and preservation action costs to develop an optimal preservation policy as detailed in the Pontis Technical Manual.
+4.3.7.7	The system shall be capable of recovering the model if the elicitation process fails.
+4.3.7.8	The system shall be capable of restoring the previous action costs, transition probabilities, and preservation policy.
+4.3.7.9	The system shall be capable of supporting multiple cost and deterioration models.
+4.3.7.10	The system shall be capable of incorporating Health Index targets in a preservation (short-term) model.
+4.3.7.11	The system shall streamline the model generation process (i.e. remove any unnecessary prompts as currently implemented in version 4.x).
+4.3.8.1	The system shall be capable of determining the long-term cost of achieving an average health index target for one or more structure(s), broken down by elements,  element categories, for the entire structure.
+4.3.9.1	The system shall provide a preservation model dashboard integrating the capabilities described above. The exact functionality of the dashboard will be informed by review of the results of  NCHRP Project 12-67, Multiple-Objective  Optimization for Bridge Management Systems .
+4.4.10.1	The user shall be able to specify the characteristics of the simulation, including the simulation timeframe, various thresholds for the simulation, the project types included in the simulation, the needs addressed, and the annual budget for the simulation.
+4.4.10.2	The user shall be able to update the unit costs and the policy standards governing the improvement model.
+4.4.10.3	The user shall be able to modify the technical parameters governing the simulation, including the parameters of the improvement model and the simulation rules.
+4.4.10.4	The user shall be able to select the structural elements to be included in the simulation.
+4.4.10.5	The user shall be able to dynamically determine bridge subsets as part of the scenario settings.
+4.4.11.1	The system shall be capable of running a program simulation for a selected set of structures and storing the simulation results in the Pontis database.
+4.4.12.1	The user shall be able to choose from Pontis-generated work recommendations, inspector work candidates, and user-defined work items to include in the bridge simulation for a structure.
+4.4.12.2	The system shall be capable of running bridge analysis for a single structure and storing the simulation results in the Pontis database.
+4.4.12.3	The system shall provide a Bridge Analysis Dashboard that will allow the user to choose work items for a structure and the timing of the work, view the  impact of the work on the condition of the structure, assign the work candidates to a project, and perform life-cycle cost analysis for the structure.  The exact functionality of the dashboard will be informed by review of the results of N CHRP Project 12-67, Multiple-Objective Optimization for Bridge Management Systems.
+4.5.13.1	The user shall be able to create new programs by manually entering program information.
+4.5.13.2	The user shall be able to edit or delete existing programs.
+4.5.14.1	The user shall be able to create new projects by manually entering the project information.
+4.5.14.2	The user shall be able to edit or delete existing projects.
+4.5.14.3	The user shall be able assign Pontis-generated work recommendations, inspector work candidates, and user-specified work items to a project, or remove work items from a project.
+4.5.14.4	The user shall be able to split a project into multiple projects and combine multiple projects into a master project.
+4.5.14.5	The user shall be able to edit the characteristics of multiple projects simultaneously (batch update).
+4.5.14.6	The user shall be able to edit the data stored in the Project Planning tables through the GUI.
+4.5.14.7	The system shall be capable of tracking and linking funding levels and project budgets.
+4.5.14.7.1	The system shall warn users if the project budget exceeds funding.
+4.5.14.8	The system shall be capable of grouping  work candidates by different action types – bridge-level, element-level, and flexible- level actions.
+4.6.15.1	The system shall be capable of performing single-field and cross-field validation on NBI data items in batch mode.
+4.6.15.2	The system shall be capable of performing configurable input range checks using the D ATADICT table upon entering data.
+4.6.15.3	The system shall be capable of performing data validation tasks including cross field validation upon saving data.
+4.6.15.4	The system shall allow users to configure data validation rules. This shall be a privileged operation.
+4.6.15.5	The system shall provide data review wizard for comparing incoming bridge data with existing data.  The errors will be highlighted for easy review.
+4.6.15.6	The system shall guarantee atomic database transactions to ensure maximum data integrity, using standard .NET  transaction management capabilities .
+4.6.15.7	The system shall maximize multi-user concurrency and conflict resolution in the application using standard .NET session and transaction management capabilities.
+4.6.16.1	The user shall be able to exchange data in NBI format.
+4.6.16.2	The user shall be able to exchange data  in PDI format as specified in the Pontis Technical Manual.
+4.6.16.3	The user shall be able to exchange data in XML format.  The emerging TransXML schema specification shall be utilized once established and accepted.
+4.6.16.4	The user shall be able to exchange bridge inspection data in PDI format.
+4.6.16.5	The user shall be able to designate a recipient for checked-out bridges.
+4.6.16.6	The system shall store all export/import control information within the database for central administration, eliminating any dependency on  workstation control files to manage export/import behavior.
+4.6.16.7	The system shall strictly separate transient or volatile batch operation control records – e.g. bridge records to be included in a report – from more static control record – e.g. currently checked-out bridges.
+4.6.17.1	The user shall be able to archive data for existing and removed structures.
+4.6.17.2	A selection/ filter capability shall be provided to restrict operations on active, inactive, or all structures during any data archiving activity.
+4.6.17.3	The system shall provide reporting mechanism for viewing archived data.
+4.6.17.4	The user shall be able to restore the archived data.
+4.6.17.5	The system shall use timestamps in the database to log when rows were last  changed.
+4.6.18.1	The system shall continue to provide existing application integration capabilities with BRIDGEWare products.
+4.6.18.2	The system  shall support concurrent storage  in the database of planned, active, and inactive structures, and potentially other status/lifecycle phase indicators, to facilitate BRIDGEWare integration.
+4.7.19.1	The administrator shall be able to create and edit new application roles.
+4.7.19.2	The administrator shall be able to as sign users to application roles.
+4.7.19.3	The system shall provide user interface for managing application roles.
+4.7.19.4	The administrator shall be able to assign  application permissions to each user  roles.
+4.7.20.1	The administrator shall be able to add new users to the  system.
+4.7.20.2	The user shall be able to modify his or her basic account profile.
+4.7.20.3	The administrator shall be able to create bridge-level access filters.
+4.7.20.4	The administrator shall be able to as sign bridge-level filters for each user.
+4.7.20.5	The administrator shall be able to remove users from the system or disable access as appropriate.
+4.7.21.1	The system  shall be capable of validating user name and password during log-in process.
+4.7.21.2	The system shall be capable of authorizing access to Pontis functionalities depending on the user’ s privileges during log-in process.
+4.7.21.3	The system shall be capable of tracking login and logout activity.
+4.7.21.4	The system shall be capable of running concurrent sessions for a user.
+4.7.21.5	The system shall be capable of supporting Windows Authentication mechanism for database  access.
+4.7.21.6	The system shall be capable of initiating a session without a login prompt. This capability will provide support for an independent  launch shell for Pontis and will be configured by the system administrator.
+4.7.21.7	The system shall be capable of integrating authentication and permissions  with BRIDGEWare22.
+4.7.21.8	The system shall be capable of operating with a single-sign-on authentication mechanism based on Active Directory Services or the LDAP standard.
+4.7.22.1	The administrator shall be able to configure the system units of measure in  either English or metric mode.  This will be a permanent setting for the application and database.24
+4.7.22.2	The system shall be capable of storing the INI file configuration information in the database or workstation registry as appropriate, eliminating dependency on INI files f or program operation.
+4.7.22.3	The system will accommodate XP directory security and file permissions when storing any configuration or session para meters.
+4.7.22.4	The administrator shall be able to edit the DATADICT table or its successor(s) through a GUI window.
+4.7.22.5	The administrator shall be able to add and configure pre-populated new structure templates.
+4.7.22.6	The administrator shall be able to configure field-level security.
+4.7.22.7	The administrator shall be able to configure some fields as mandatory for user input.
+4.7.22.8	The administrator shall be able to configure different levels of permission to control editing of checked-out bridges.
+4.7.22.9	The system shall adhere to a .NET logging standard.
+4.7.22.10	The system shall adhere to a .NET exception handling standard.
+4.7.22.11	The administrator shall be able to configure the values in the dropdown lists in the system.
+4.7.22.12	The administrator shall be able to create agency-specific elements, including element definitions, condition states, actions, models and other related information.
+4.7.22.13	The administrator shall  be able to configure definitions of element types, environments, materials, and categories.
+4.7.22.14	The administrator shall be able to add custom structure lists.
+4.7.22.15	The administrator shall be able to add custom project lists.
+4.7.22.16	The administrator shall be able to configure default values for various  scenario parameters.
+4.7.22.17	The administrator shall be able to configure customizable options that affect system operations.
+4.7.22.18	The system shall validate all configuration options to verify proper program operation, including explicit identification of any potentially conflicting  program options.
+4.7.22.19	Configuration option validation shall be supported by a built-in diagnostic report.
+4.7.23.1	The administrator shall be able to configure the labels of user interface items  and screen displays.
+4.7.23.2	The system shall be capable of supporting internationalization using the standard Wi ndows/.NET internationalization support.
+4.7.23.3	The system shall be capable of showing all screens, men us, user interface controls, prompts, error messages and information notices in native language, with some of these elements customizable.
+4.7.24.1	The system shall provide an interface to communicate with an external service or third-party software.   A set of standard interfaces25 will be defined for this capability.
+4.7.24.2	The system shall provide application administrators with a secured tool for overriding bridge/project check-out  status.
+4.7.24.3	The system shall provide application administrators with a secured tool for clearing batch processing tables used by the system  for deadlock/lockout resolution.
+4.7.24.4	The system shall provide a fixed set of  predefined, secured, administration reports to document users, user  roles, application privileges, user login sessions,  checked-out bridges, and other key in formation necessary to manage  application operation.
+5.2.1	The application should look and feel consistent in the web and standalone operating environments, therefore it will conform to standard .NET standalone  and web application conventions with necessary accommodations for the deployment environment only where these prove necessary  and appropriate.
+5.2.2	As a general goal, Pontis users should be comfortable operating and using the software aft er two full days of training.
+5.2.2.1	User s who only  wish to access and display bridge information should be comfortable operating and using the software after two hours of training.
+5.2.2.2	System administrators should be comfortable  operating and maintaining the software after user training and one full day of system administration training.
+5.2.3	The system developer shall consider supporting existing custom forms and reports developed in PowerBuilder 9.  It shall decide on a development tool for users so that they can continue to customize Pontis and extend its capability.  For example, custom forms and reports created with PowerBuilder 9 may be migrated to a .NET application  by using the Sybase DataWindow .NET technology which is available in PowerBuilder 10.
+5.2.4	Integrating DataWindow .NET is likely a short-term strategy to ease migration of user forms and reports to Pontis  5.0.   A stated objective for Pont is 5.0  is eliminating dependency on PowerBuilder.  Ideally, the application should not require any particular vendor technology for report or form generation, such as InfoMaker/PowerBuilder, so a sunset plan must be developed to outline a strategy to meet this objective.   However, the application shall continue to provide a plug-in cap ability to integrate third-party .NET data displays and reports in the user workspace.
+5.3.0.1	The capacity and speed  of the commercial RDBMS product used for the data repository;
+5.3.0.2	The speed of the servers on which Pontis, the  RDBMS, the analytical and other processing engines , and other information resources are installed;
+5.3.0.3	The effective speed and  congestion levels on the network that connects the servers and client machines running the application; and
+5.3.0.4	A standalone database engine will continue to be necessary.  Performance objectives for the standalone database should be comparable.
+5.3.1	The Pontis 5.0 repository must be able to store the following quantities of bridges, work recommendations, scenario s, projects, and users at a minimum: 50,000 Bridges, 30 Inspections per bridge,  50 per bridge average Work Recommendations, 20 Scenarios, 50000 Projects, 150000 Project details, 500 Registered  Users, 25 (web) or 10 simultaneous transactional read -write users, 150 simultaneous View-only Users, 2 Batch (offline processing)
+5.3.2.1	Pontis 5.0 is not strictly a transactional application or mission-critical for most capabilities.
+5.3.2.1.1	In light of this, the application shall be available for use 18 hours per day, 353 days per year, reserving 6 hours per day and one day per month for routine agency network and infrastructure  maintenance.
+5.3.2.1.2	During  normal times of operation, Pontis shall achieve 98 percent up time.
+5.3.2.2.1	Because Pontis 5.0 is not a mission-critical application, there will be no attempt to design or construct the system for uninterrupted operation.
+5.3.2.2.2	Agencies may choose to implement database  transaction logging, mirroring, or switchover to backup servers in the event of a hardware or network failure, but support for these decisions or implementation are be yond the scope of Pontis 5. 0 effort.
+5.3.2.2.3	Procedures and equipment for backups (database and software) and disaster recovery are also outside the scope of this effort.
+5.4.0.1	The requirements for both thin-client and thick-client applications are discussed.  Specific items are to be determined.
+5.4.1.1	The Pontis application server ( ASP.NET) software will  run  on a server  located within a (presumably) secure facility at each agency.  Because it is an ASP.NET application, the end users can vary in location depending on the network accessibility of the server.
+5.4.1.2	The Pontis database, and any other databases to be accessed from Pontis may be co-located on the same server machine, but at a minimum must be accessible from the Pontis application server via standard database communication and connection protocols.
+5.4.1.3	The server machine will run Windows Server 2003 or, given technology evolution, a descendant target  server environment identified in the implementation plan.
+5.4.1.4	The server machine must have all necessary software to run an ASP.NET application.  This specifically includes, but may not be limited to, IIS30, the .NET Frame work and ASP.NET.
+5.4.1.5	Other web servers, appliances, and add-in technologies may also be necessary depending on the final application design.
+5.4.4.1	Given the predominance of IE in  the browser market, it  does not appear to be necessary to consider support for other browsers, although this may ne ed to be reconsidered if ex ternal customers are running the application(s) and nee d to employ different browser technology such as Net scape or Mozilla FireFox.
+5.5.1.1	For a thick-client portion of Pontis, an installer program  will be provided to install Pontis on the user’s compute r.
+5.5.1.2	The user shall be able to remove Pontis by using the Windows Add/Remove Programs capability.
+5.5.1.3	When necessary, the SQL scripts will be provided to upgrade a previous version of Pontis database to a new version and apply any patches. The system may be capable of supporting automatic upgrades and  maintenance fixes using the push technology.
+5.5.2	Pontis 5.0 shall be able to coexist with earlier  versions of  Pontis on the same computer.
+5.6.1	Pontis 5.0 shall comply with AASHTO application development standards based on the published recommendations of the AASHTO Technical Applications and Architecture (TA& A) subcommittee.
+5.6.2	The latest released versions of Microsoft tool s including Visual  Studio .NET, ASP.NET, .NET Framework, and databases such as Microsoft SQL Server will be used.  The actual versions, the database  release version in particular, will be determined as part of the implementation plan and put under configuration management.
+5.6.3	All source code written by the contractor will be provided to AASHTO, and reasonable effort will be made to develop clearly documented source  code  which can be maintained after contract by other than the original developers.
+5.6.4	All modules developed in Pontis 5.0 will support automatic testing except as explicitly distinguished in the technical design.  Every module will be delivered with a testing driver module.
+5.6.5	No commitment regarding the portability of the code is made other  than that implied by the use of standard Microsoft .NET tools and well-documented third - party application libraries or frameworks.
+5.6.7	Pontis 5.0 in production is intended to be supported through complete and sufficient on-line help and documentation and  equivalent printed documentation, with occasional additional assistance  provided through the Pontis Support Center.
+5.6.7.1	Pontis 5.0 will also continue to provide field-level help where applicable.
+5.6.7.2	As with the existing Pontis  4.x product, it is assumed that support will be provide d by telephone, via e-m ail, and through an on-line issues tracking system.
+5.7.1	Pontis 5.0 security is a mix of database security and application security. Overall security is provided by the database and the Pontis 5.0 user authentication mechanisms with more refined security over program capabilities - e.g. create a bridge - being addressed by the application.
+5.7.2	It is assumed that authentication will utilize a single sign-on (SSO) approach and application security will be declaratively managed through database or directory entries, rather than hard-wired into the application.
+5.7.2.1	This mechanism may have implications for BRIDGEWare/AASHTO Ware generally and will need to be coordinated with the other AASHTO products.
+5.7.3	Database security will need to be insured for the Pontis data stored in the RDBMS; most likely this will be done by using a specific username/password combination and running as particular database roles for each database connection.
+5.7.3.1	This security structure should be similar to the existing security approach in Pontis 4.x.
+5.7.3.2	For web clients, care will be taken to insure that connection information is not accessible from application pages (e.g.,  userid/password embedded in HTML form variables).
+5.7.4	The application level security controls will be consistent with current Pontis 4.x procedures, except more comprehensive; no exceptional controls are required.
+5.7.4.1	A specific requirement addresses field-level data security.
+5.7.5	For normal users, the configurability of  the system via the interface will be limited to changing the parameters used to perform the various analyses and modeling functions.
+5.7.5.1	Access to all other configuration  parameters, such as module access, will be restricted to  Pontis super users or application administrators.
+5.7.6	There are no specific privacy or immunity (anti virus) requirements for Pontis 5. 0 identified at  this time.
+5.9.1	The system shall be capable of exporting the NBI data in the specified NBI format as outlined in the  NBI guideline.
+5.9.2	The system shall be capable supporting the future NBI coding guide changes.

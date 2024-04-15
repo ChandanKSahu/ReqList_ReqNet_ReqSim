@@ -1,0 +1,45 @@
+D	Marvel Electronics and Home Entertainment E-Store
+3.	Specific Requirements
+3.1	Functionality
+3.1.1	Sell Configured to Ordered Products
+3.1.2	Provide comprehensive product details
+3.1.3	Detailed product Categorizations
+3.1.4	Provide Search facility
+3.1.5	Maintain customer profile
+3.1.6	Provide personalized profile
+3.1.7	Provide Customer Support
+3.1.8	Email confirmation
+3.1.9	Detailed invoice for customer
+3.1.10	Provide shopping cart facility
+3.1.11	Provide multiple shipping methods
+3.1.12	Online tracking of shipments
+3.1.13	Provide online Tax Calculations
+3.1.14	Allow multiple payment methods
+3.1.15	Allow online change or cancellation of order
+3.1.16	Allow Online Product reviews and ratings
+3.1.17	Offer financing options
+3.1.18	Provide detailed sitemap
+3.1.19	Offer online promotions and rewards
+3.1.20	Online Purchase of products
+3.2	Usability
+3.2.1	Graphical User Interface
+3.2.2	Accessibility
+3.3	Reliability & Availability
+3.3.1	Back-end Internal Computers
+3.3.2	Internet Service Provider
+3.4	Performance
+3.5	Security
+3.5.1	Data Transfer
+3.5.2	Data Storage
+3.6	Supportability
+3.6.1	Configuration Management Tool
+3.7	Design Constraints
+3.7.1	Standard Development Tools
+3.7.2	Web Based Product
+3.8	On-line User Documentation and Help System Requirements
+3.10	Interfaces
+3.10.1	User Interfaces
+3.10.2	Hardware Interfaces
+3.10.3	Software Interfaces
+3.10.4	Communications Interfaces
+3.12	Legal, Copyright, and Other Notices

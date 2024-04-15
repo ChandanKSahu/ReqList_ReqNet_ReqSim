@@ -1,0 +1,49 @@
+3.1.1.0.1	The Framework MUST be capable of capturing information form the software tools specified in Table 3.9.3-A.
+3.1.1.0.2	The data captured SHOULD be stored in a centralized data store.
+3.1.1.0.3	The Framework MAY decide whether the information should be stored as Entities or Associates.
+3.1.1.1.1	The Address Book is used to create Entities under the category “People” (Category names  are user definable. However, a certain set of categories like People, Email etc. MAY need to always be present).
+3.1.1.1.2	User SHOULD be able to modify, add, delete or group these Entities by navigating to  a virtual folder (e.g. /People/).
+3.1.1.2.1	The email is intercepted before it is dispatched to the SMTP server.
+3.1.1.2.2	An Associate is created to contain the message body.
+3.1.1.2.3	The recipient name(s)  are used to create (if required) Entities under the “People” category. The Associate is then linked to each Entity.
+3.1.1.3.1	The email is fetched from the POP 3 server.
+3.1.1.3.2	An Associate is created to contain the message body.
+3.1.1.3.3	The sender’s name is used to create Entities, under the category “People”. The Associate is then linked to this Entity.
+3.1.1.4.1	User SHOULD be able to specify when he is to start a research  project; i.e. when the web sites he visits subsequently are to be permanently stored.
+3.1.1.4.2	The project name specified by the user spawns a new Entity in the Framework.
+3.1.1.4.3	An associate is created as an archive and is linked to this Entity.
+3.1.1.5.1	The user after editing a document in a word-processor invokes  a special GUI supplied by the Framework.
+3.1.1.5.2	The GUI allows him to draw arrows to and from (a symbol representing) the current document to any Entity creating relationships between the document and the relevant Entities.
+3.1.1.5.3	The user may optionally specify a descriptive name for the document.
+3.1.1.5.4	The document is automatically saved to disk in a manner that reflects the relationships it has to other Entities. The user may in the future fetch this document by following the relationship paths that he had  created.
+3.1.2.0	The user MUST be able to view the information in the central store in a hierarchical manner that makes sense  to him. Section  3.1.1 describes how this hierarchy is built up.
+3.1.2.1	The Framework SHOUL D include a browser that is capable of dis playing  this hierarchy in a  UI similar to that of the Windows Explorer.
+3.1.2.2	The browser  MAY OPTIONALLY  be integrated directly in to Windows Explorer, rather than being a standalone application.
+3.1.3	Often, the user ma y want to archive portions of the information-store to removable storage media (the term storage  media covers only CD-ROMs and USB Pen Drives at this point).  However, this SHOULD not mean that such portions would be “forgotten” by  the Framework.
+3.1.3.1	Therefore, some residue MUS T be left on  the data store to indicate that a portion of data has been archived. F or example, assume all information relating to a “Person” Entity named John is archived to a CD-ROM. When the user subsequently looks for John, the Framework SHOULD NOT  declare that such an Entity was not found. Rather, it SHOULD info rm the user that the Entity has been archived (and OPT IONALLY, if he wishes to proceed, to remount the relevant storage device).
+3.1.4.0	The Framework API should expose at least the following functionality to client processes. • Create, delete and modify Entities and Entity groups • Create, delete and modify relationships between Entities • List and access Entities with an API similar to that  of a  standard file system API. • Execute queries for the retrieval of Entities using different criteria.
+3.2.1.1	GUIs associated with the Frame work S HOULD be designed such that an user with basic  understanding of  the Window s 2000/X P operating systems would instinctively be able t o interact with them. Therefore,  most GUI s MAY need to closely mi mic popular Windows applications.
+3.3.1.1	The mean time between failures (MT BF) SHALL exceed 3  months.
+3.4.1.1	At this stage o f the development, the Framework MAY only  operate in  single user mode, with no networking capabilities.
+3.4.2.1	The Framework Shell SHOULD NOT utilize more than 40 megabytes of RAM.
+3.5.1.1	Any coding conventions to be used during implementation MUST be documented before the beginning of the phase, and strictly adhered to during the phase.
+3.5.2.0	Project ZNIX SHOUL D be available to its potential users in source and binary from, and free of charge.
+3.5.2.1	The project MAY be hosted on a popular Open Source distribution website such that the Open Source community is aware of (and contribute to) its existence.
+3.5.2.2	The website for distributing the project SHALL include provisions for the users to make comments on the product as well as to compile a wish-list of features.
+3.6.1	The Framework MUS T guard against malicious scripts on re mote websites from accessing its information.
+3.6.2	The Framework MUST guard against unintended corruption of information by the user himself.
+3.7.1	No design constraint has been imposed at this stage.
+3.8.0	The online help system should be compiled utilizing as much of non-technical terms as possible.
+3.8.1	Care SHOULD be taken not to produce an exhaustive user documentation as that would defeat the main purpose of the system as expressed in the introduction to section 2.
+3.8.2	A comprehensive Developer’s Guide MAY be compiled to facilitate 3rd party ZNIX-aware applications.
+3.10.1.1	A GUI capable of browsing the information managed by the Framework, similar to that of the Windows Explorer SHOULD be available to the user.
+3.10.2.1	The GUI MUST also be capable of allowing the user to specify relationships between disparate Entities as he see fit.
+3.10.2.1	The system does not require special hardware interfacing.
+3.10.3.1	Provisions SHOULD be made so that at least the following 3rd party applications can take advantage of the Framework for the specified types of information.
+3.10.4.1	At this stage of development Project ZNIX requires no communication interfaces.
+3.11.0	ZNIX Framework will be licensed under GNU Library General Public License (LGPL).
+3.11.1	The browser and an y other tool released alongside the Framework will be licensed under GNU Public License (GPL).
+3.12.1	All proprietary trademarks, product names and/or logos used on this document are trademarks of  their respective owners.
+3.13.0	All components associated with  Project ZNIX should conform to the following standards: • Windows 2000 Logo Requirement s
+3.13.1	The system SHALL conform to ISO 10 646 (Unico de UTF- 8) and OPTIONALLY ISO 1 0646-1 (Unico de UT F-16) standards for character set encoding.
+3.13.2	Addition ally, design of the system MAY yield a new set of standards that ZNIX-aware client processes MAY need to conform to.

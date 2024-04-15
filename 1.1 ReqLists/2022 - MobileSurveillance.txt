@@ -1,0 +1,311 @@
+3.1.1	The candidate has to declare that the vehicles supplied will be purchased from official importer or other legal entity explicitly authorized by the manufacturer to supply and maintain the vehicles offered and which has a service base in the country for the specific model.
+3.1.2	Vehicles should meet technical standards in EU or equivalent, confirmed by certificate of conformity with type approval or declaration upon delivery. If the vehicles require additional post -manufacturing equipment, a declaration that required transformations have taken place should be submitted with the quotation.
+3.1.3	Year of manufacturing of the vehicle should be not older than 6 months.
+3.1.4	During the warranty period, the contractor will provide at their own expense the mandatory warranty technical maintenance of the vehicle covering the labor costs and all spare parts, oils and consumables.
+3.1.5	Warranty against corrosion – no less than standard warranty period given by manufacturer.
+3.1.6	Manufacturer’s recommended service interval not less than 10.000km.
+3.1.7	Total acceptable weight of vehicle may not exceed 3,5t
+3.1.8	Total weight of the vehicle integrated with an electro –optical system and a crew (2 people, 100 kg each), ready to go, may not exceed 90% of the total acceptable weight of vehicle.
+3.1.9	The axes of the vehicle shall be loaded in a balanced way (approx. 50:50) so that the roadworthiness of the vehicle is not worsened.
+3.2.1	The vehicle shall have a pickup body with the hard top cover technical compartment.
+3.2.2	The hard top cover shall be not higher than 300 mm above the cabin roof lever.
+3.2.3	The vehicle shall have a frame construction.
+3.2.4	Length of the vehicle may not exceed 5500 mm.
+3.2.5	Height of the vehicle may not exceed 2000 mm when antennas are folded.
+3.2.6	Axle base may not be narrower than 3000 mm.
+3.2.7	The vehicle shall have power –assisted left–hand steering.
+3.2.8	Steering column shall have height and length adjustable.
+3.2.9	In the cabin vehicle shall have 2 rotatable (180°) comfort seats with armrests.
+3.2.10	Seats shall be ergonomically designed. They shall be firmly fixed in the vehicle floor.
+3.2.11	The seats shall provide:  a. Smooth adjustment in height,  b. Smooth adjustment of the distance from the operator’s console,  c. Smooth adjustment of the angle of which the backrest can be leant,  d. Smooth rotation,  e. Smooth regulation of the shape of the backrest in its lumbar part,  f. Electric regulation is allowed,  g. Heating of the seats is allowed.
+3.2.12	The operators shall be able to adjust their seats while sitting on it.
+3.2.13	The body shall have separate compartments i.e. driver’s/operator’s and technical one/ones.
+3.2.14	The operators compartment shall guarantee sufficient space for the necessary operating and observing elements and an ergonomic working conditions for two operators for at most 12 hours
+3.2.15	The operator’s compartment and the technical compartment, where the technical equipment is located shall be separated from each other with a rigid, sound –isolated partition.
+3.2.16	Flooring in the operator compartment shall be made with dark rubber;
+3.2.17	The body shall have a separate door leading into the technical compartment/compartments.
+3.2.18	Admissible level of noise in the operator compartments, while observation is in progress, may not be higher than 60 dBA.
+3.2.19	The design of the body shall prevent emitting the operator’s/technical compartment lighting outside i.e. tinted windows.
+3.2.20	The body shall be designed in a way that prevents identification of the vehicle as a carrier of the sensors.
+3.2.21	There shall be some drawers or other kind of soft lockers for documentation.
+3.2.22	The device installed in MSS, being in operation, cannot be heard from a distance longer than 50m.
+3.3.1	The vehicle shall have a water–cooled, four–stroke diesel engine.
+3.3.2	Engine power not less than 1 25 kW.
+3.3.3	Max. engine torque not less than 3 50 Nm.
+3.3.4	Engine swept capacity not less than 2000 cm3.
+3.3.5	Capacity of the fuel tank shall be not less than 80 dm3.
+3.3.6	Mileage with the full of fuel tank shall allow to overcome distance minimum 500 km.
+3.3.7	The vehicle shall have a manual 5 or 6 synchromesh gearbox with reverse gear. The automatic gearbox is allowed. The continuously variable transmission gearbox is not allowed.
+3.4.1	The vehicle must have a four –wheel drive system (permanent or switchable).
+3.4.2	Power transmission system should consist of a reduction box allowing to change power for field drive.
+3.4.3	The vehicle shall have limited slip differential (LSD) on front and rear axle.
+3.4.4	The vehicle shall have a between –axle interlock of the differential gear or an interlock of the differential gear of the rear driving axle.
+3.5.1	Ground clearance of the vehicle under full loading may not be less than 200 mm.
+3.5.2	It is allowed to adjust (pneumatic or hydraulic) the height of clearance from the cabin of the vehicle.
+3.5.3	Rear axle shall be automatically horizontally leveled.
+3.5.4	Stabilization system shall prevent random vibration of the vehicle for example moving crew inside the vehicle,
+3.5.5	Stabilization system shall be fully operated from operator’s compartment.
+3.6.1	The vehicle shall have a double –circuit power –assisted antilock braking system.
+3.6.2	The vehicle shall have equipped with advance traction control systems i.e. ASR, ESP.
+3.6.3	The antilock braking system and traction control system shall be switchable from the driving seat.
+3.6.4	The vehicle shall have equipped with hill holder system or equivalent.
+3.7.1	The vehicle shall be equipped with set of s teel wheels with tubeless tires with an off-road thread (50% road, 50% off-road) and non–skid chains.
+3.7.2	The vehicle shall be equipped with engine, gear box, rear differential  and fuel tank protection plate, protection bars for front and rear lamps, a spare w heel (of parameters identical to those of regular wheels), a lifting jack, wheel nut wrench, a portable lamp supplied from the board power supply system and a winch allowing for self -evacuation of the vehicle.
+3.7.3	The vehicle shall be equipped with at least two airbags – one for a driver and one for a passenger.
+3.7.4	The vehicle shall have a heater for the water cooling the engine independent from external power supply, heating the cooling water will help to start up the engine at low temperatures.
+3.7.5	The vehicle shall be equipped at programmable and remotely controlled heater system for the cab.
+3.7.6	The vehicle shall have an air –conditioning system allowing to maintain temperature adjusted by an operator. The temperature will be adjusted, in the operator’s or driver’s compartments, fluently or step by step (one step 1°C or less) within the range from +18°C to +26°C at the outside of the temperature from –30°C to +45°C in full sunlight.
+3.7.7	Maximum deviation from the set temperature, in any point of the operator’s compartment, may not exceed 3°C.
+3.7.8	The body shall have a ventilation system allowing the crew to work continuously inside, with the door closed (the air in the operator’s compartment shall be exchanged at least six times during one hour).
+3.7.9	The vehicle shall be equipped with central lock system with remote control.
+3.7.10	It is allowed to use in the vehicle – keyless system.
+3.7.11	The vehicle shall be equipped with electronically adjustable, heated exterior mirrors.
+3.7.12	Front windscreen should be heated.
+3.7.13	Front and rear windows shall be power operated and automatically closing after locking the doors.
+3.7.14	The vehicle shall be equipped with FM radio with RDS and USB.
+3.7.15	The vehicle shall be equipped with front and rear park distance control system with reversing camera.
+3.7.16	In the operator’s compartment shall install an audible alarm:  a. when the stabilization system of the vehicle is switched on, b. preventing driving when the mast is in working position.
+4.1.1.1	The unit shall ensure observation in azimuth plane within an angular range n x 360°
+4.1.1.2	The unit shall ensure observation in elevation plane within an angular range less than ±35° from the horizontal plane.
+4.1.1.3	The unit shall ensure angle measurement in azimuth and elevation planes with accuracy not worse than 0,5°
+4.1.1.4	Divergence of optical axes of a laser rangefinder and both cameras shall be less than 0,2°
+4.1.1.5	The unit shall allow to be manually adjusted in a position for emergency hiding.
+4.1.1.6	The unit shall provide adjustable rotation speed from 0,2°/s to 30°/s in the azimuth and from 0,2°/s to 15°/s in the vertical
+4.1.2.1	The EO head drive system shall provide elevating the head to the height of 1 m ± 10% above the vehicle’s roof level.
+4.1.2.2	After reaching the lower and upper end position of the EO head drive system the operator shall be informed by visual signal.
+4.1.2.3	The EO head drive system shall perform independently the removal and insertion of the insertion of the all sensors (thermovision  camera, daylight camera, laser rangefinder, radar)
+4.1.2.4	The EO head drive system shall provide conducting observation in all directions at any height above the roof of the vehicle
+4.1.2.5	The EO head drive system shall have an emergency system for manual elevating and hiding the head
+4.1.2.6	The opening of the head shaft shall have to be protected against precipitation and dirt
+4.1.2.7	There shall be signaling installed in the driver’s compartment. When the head is elevated and the vehicle is connected to the external power supply, the driver shall be warned by a visual and acoustic signal whenever he tries to start the engine
+4.1.2.8	The EO head drive system shall include a roof heating circuit, which will allow to elevate and hide the head even the roof is covered with an ice layer of up to 10 mm
+4.1.2.9	The EO head drive system shall include an overload protection module
+4.1.2.10	The EO head drive system capacity shall be at least cover the weight of the components.
+4.1.2.11	During the drive operation the EO head drive system shall be parked in predefined positions without parts of it sticking out of the vehicle.
+4.1.2.12	These components will be installed on a mechanically controlled platform that provides movement of the sensors both in heading and elevation. Angels of sensor optical axes in both planes will be automatically measured.
+4.1.2.13	During the driving operation the entire outside of the observation operating system components must be supplied in the vehicle.
+4.1.3.1	The thermovision camera shall have an unattended cooled detector (min. III generation)
+4.1.3.2	The thermovision camera shall have the range of spectral band: LWIR (7÷14 µm) or MWIR (3÷5 µm)
+4.1.3.3	The thermovision camera shall have minimum number of actual pixels: 640 (Horizontal) x 480 (Vertical)
+4.1.3.4	The thermovision camera shall have the minimum range of continuous horizontal field of view: from 0,8°±0,1° to9°±0,5°
+4.1.3.5	The thermovision camera shall ensure the minimum ranges (according to the Johnson criteria):  • detection 15 km  • recognition 6 km  • identification 3,5 km  for the following assumptions:  • target: man 1,8m x 0,5m  • probability: 50%  • temperature difference: 2̊C  • atmospheric attenuation factor: 0,85/km
+4.1.3.6	The initialization time of the thermovision camera shall be less than 6 minutes at ambient temperature of 30°C
+4.1.3.7	The thermovision camera shall have a minimum 4x electronic zoom
+4.1.3.8	The thermovision camera shall have an analog video output interface for monitors and recording an image
+4.1.3.9	The thermovision camera shall provide a picture in the whole of the range of field of view without any defects (Narcissus, halo effects etc.)
+4.1.3.10	The thermovision camera shall keep automatically the focus of picture during changing field of view
+4.1.3.11	The thermovision camera shall attenuate high amplitude signals, making more of the total dynamic range available to display weak objects and details
+4.1.3.12	The thermovision camera shall provide changing of polarity of an image by operator selectable between white and black for heat sources. The possibility of using additional colors is acceptable.
+4.1.3.13	The thermovision camera shall have a counter of work time available (visible) for the operator
+4.1.3.14	The thermovision camera shall work independently (when other sensors are disabled)
+4.1.3.15	The MTBF of thermovision camera shall be not less than 10000 h
+4.1.3.16	The average usage of each thermovision camera will be at most 12 hours per day.
+4.1.4.1	The daylight camera shall have an automatic and remote controlled shutter
+4.1.4.2	The daylight camera shall have an automatic/remote (manual) controlled zoom system
+4.1.4.3	The daylight camera shall have the capability to display an image of a scenery at 0,1 lux light level (or less) at maximum shutter 1/40 sec.
+4.1.4.4	The daylight camera shall have the signal to noise ratio minimum 49 dB (measured on the video output)
+4.1.4.5	The daylight camera shall have an analog video output interface for monitors and recording an image
+4.1.4.6	The daylight camera shall have a continues zoom; the narrowest FOV of the daylight camera shall be the same or narrower than the narrow FOV of the thermovision camera and the widest FOV of the daylight camera shall be the same or wider than the wide FOV of the thermovision camera
+4.1.4.7	The daylight camera shall keep automatically the focus of picture during changing field of view
+4.1.4.8	The daylight camera shall work independently (when other sensors are disabled)
+4.1.4.9	The resolution of daylight camera shall be not less than 1920 x 1080
+4.1.4.10	Using of additional illumination is not acceptable
+4.1.4.11	The daylight camera shall have the Backlight Compensation
+4.1.4.12	The daylight camera shall have the Automatic Gain Control
+4.1.4.13	The daylight camera shall have minimum 4x digital zoom
+4.1.4.14	The MTBF of daylight camera shall be not less than 10000 h.
+4.1.5.1	The laser rangefinder shall provide range finding within the range: 100m -10 000m under good visibility conditions (atmospheric visibility range of 20 km)
+4.1.5.2	The laser rangefinder shall provide the minimum measurement accuracy of ± 10m
+4.1.5.3	The laser rangefinder shall provide the measurement of the distance to the first target
+4.1.5.4	The laser rangefinder shall provide the indication of number of returns from multiple target – up to 3
+4.1.5.5	The laser rangefinder shall have the capability of a variable range zoning for target elimination with a readout of a range zone selected
+4.1.5.6	The laser rangefinder shall provide the measurement repeating frequency not lower than 10/minute
+4.1.5.7	The laser rangefinder shall provide the measurement resolution of 5m (this is the minimum spacing between two objects in the laser beam that provide two returns)
+4.1.5.8	The wavelength of the laser rangefinder’s radiation must be safe for human eye (eyesafe)
+4.1.5.9	The sight (cross) shall be displayed on any monitor selected by an operator (with switch off option)
+4.1.5.10	The measured distance to the object shall be integrated into observed image from the cameras without it changing and displayed on any monitor
+4.1.5.11	The position of the measured object shall be displayed on the map and any monitor (until next measure and permanent save or delete on the request of an operator)
+4.1.5.12	The MTBF shall be no fewer than 100000 measurements.
+5.1.1.1	The monitors shall display the image from both cameras
+5.1.1.2	The monitors shall have color LED display between 21 – 23
+5.1.1.3	The resolution of the monitors shall be minimum 1920 x 1080 pixels
+5.1.1.4	The brightness of the monitors shall be not less than 25 0 cd / m2
+5.1.1.5	The contrast of the monitors shall be not less than 1000:1
+5.1.1.6	The angular field of view of the monitors shall be not less than 170°x170°
+5.1.1.7	The monitors shall have matte displays
+5.1.1.8	If the monitors have touch screens the displays (screen) of the monitors should be made of Gorilla Glass
+5.1.2.1	The consoles shall provide the control all the functions of sensors included in the EO head
+5.1.2.2	The consoles shall provide the control of the EO head (included the management of the dire ction of the rotation of the EO head)
+5.1.2.3	The console manipulators shall provide fluent regulators of the EO head speed  d. The consoles shall base on PC class computers or an separate device
+5.1.3	The electronic unit shall ensure displaying (at the same time) of stabilized, analogic image from any camera on any monitor.
+5.1.4	The electronic unit shall display the key system operation control commands in English and native languages on the monitor; the commands are selected by means of keyboard and joystick; touch screen are acceptable
+5.1.5	The electronic unit shall allow to switch on both cameras independently and to conduct observation by means of any combination of sensors
+5.1.6	The electronic unit shall provide an automatic change of FOV of any camera (thermovision or daylight) adequately to changes of FOV of the second camera (daylight and thermovision). Both cameras shall keep automatically the focus of picture during changing field of view.
+5.1.7	All signals from all sensors shall be converted to digital signals (min MPEG4, MJPEG,  H264) for Data Recording System and Data Transfer System
+5.2.1	The electronic unit shall enable to calibrate and add new scanned maps
+5.2.2	On the both monitors (together and separately) the electronic unit shall provide a terrain display by means of maps which shows at least:  a. Own position of the vehicle (from GPS)  b. Position detected target (from LRF)  c. Actual angle of FOV of the active camera (thermovision or daylight) and direction of observation
+5.2.3	The electronic unit shall be equipped with the digital terrain model (vector, georeferenced raster or satellite and aerial photo images)
+5.2.4	The electronic unit shall have a separate the digital terrain model for each Member State of the European Union. The digital terrain model of selected country (or countries) should be chosen and loaded by operator.
+5.2.5	The range of the digital terrain model shall cover at least 15 km radius from any points of the European Union external border
+5.2.6	For the proposal of the vector mode, the vectorization shall be carried out by materials with precision not less than 1:50000 for the territory of the non -European Union country and not less than 1:25000 for the territory of the Member State of the European Union.
+5.2.7	For the proposal of raster and other models the pixel size shall be better than 2m
+5.2.8	The digital terrain model shall consist of following layers:  a. Hydrography  b. Relief – horizontal  c. Road system  d. Buildings and facilities  e. Plantation  f. Labels – residential areas, territories, rivers, etc.  g. Locations and state border line
+5.2.9	All layers shall have details corresponding to a scale of 1:50000 for the territory of the non-European Union country and 1:25000 for the territory of the Member State of the European Union.
+5.2.10	The digital terrain model shall be provided by the Contractor with license for update for at least 5 years after the delivery.
+5.3.1	The electronic unit based on PC class computer which the specifications shall be adequate in every aspect for the normal functioning of the electronic unit
+5.3.2	The electronic unit shall prov ide control, observation and visualization (all sensors) for both operators (independently)
+5.3.3	Software required for system (and all sensors) functioning and operating shall be installed on the computer and shall be available for operators
+5.3.4	The electronic unit  shall provide control of the system equipment operation in both manual and automatic mode (scanning)
+5.3.5	The electronic unit shall provide automatic observation (both cameras) in selected sectors (not fewer than 10  position ) with possibility to change the sequence and speed
+5.3.6	The electronic unit shall provide automatic tracking (using all sensors) of a single target of a target group marked by the operator
+5.3.7	The electronic unit shall provide to take and save panoramic photos using both cameras (separately) and the n use them as a schematic base map for the observation
+5.4.1.1	The data shall be recorded on a digital video recorder (DVR)
+5.4.1.2	The recorded information shall be protected against being era sed by an unauthorized person
+5.4.1.3	The system shall allow to record and play an image displayed on either monitor selected by the operator, together with all its elements: minimum an image given by one of the sensors, object’s coordinates, real time.
+5.4.1.4	The system shall provide at least 30 days continuous, stabilized image (with the framerate min 25pic/sec)  recording
+5.4.1.5	The system shall have fast forward/reverse search function by time and date criteria
+5.4.1.6	The system shall have still frame function
+5.4.1.7	The system shall have frame by frame function
+5.4.1.8	The system shall have minimum one USB 3.0  interface to export (archive) recorded information from the video recording system
+5.4.1.9	The system shall ensure parallel record and playback of recorded information
+5.4.2.1	The data transfer system shall ensure the transmission data from MSS to the local coordination centre
+5.4.2.2	The data transfer system shall let the operator choose his preferred kind of transmission type (network) LTE or 3G
+5.4.2.3	The data transfer system shall ensure the transmission of the completed image of any monitor selected by operator
+5.5.1.1	The stabilization system shall stabilize, correct and optimize an image in real time
+5.5.1.2	The stabilization system shall have an analog video input and output
+5.5.1.3	The stabilization system shall correct shaking in two dimensions including vertical, horizontal, diagonal and rotational
+5.5.1.4	The stabilization system shall achieve sub -pixel level correction precision
+5.5.2.1	The GPS vehicle tracking set and North sensor shall allow to position on the installed maps
+5.5.2.2	The GPS vehicle tracking set shall have not fewer than 16 channels
+5.5.2.3	The GPS vehicle tracking set shall provide precision of localization better than 2 m
+5.5.2.4	The GPS vehicle tracking set shall provide precision in azimuth of localization better than 0,5°
+5.5.2.5	The North sensor shall provide precision in azimuth better than   0,5 deg
+5.5.2.6	The North sensor shall provide tilt accuracy   0,2 deg ( from -35 deg  to  +35 deg)
+5.5.3.1	The power supply system shall consist of three independent power sources – an internal batteries, a vehicle’s alternator and an external power 230V 50Hz.
+5.5.3.2	The main source of power shall be the internal batteries
+5.5.3.3	The sources of power shall be switchable automatically
+5.5.3.4	Charging the batteries must not affect the ongoing operation of system
+5.5.3.5	The power supply system shall be resistant to:  • The short circuit  • The reverse polarity of power supply voltage  • The power supply voltage drop down to 0V  • The overcharging, the overheating and the deep discharge internal batteries
+5.5.3.6	The power supply system shall provide an audible alarm:  • 30 minutes before reaching the maximum permissible discharge internal  batteries level  • when the range of the vehicle drop down to 100 km
+5.5.3.7	The power supply system shall provide information about:  • Current selected power source  • Current state of power sources i.e. voltage, current charge/discharge, power consumption, estimated capacity of internal batteries, estimated working time of internal batteries
+5.5.3.8.1	The Internal batteries must be made in maintenance - free gel technology.
+5.5.3.8.2	The Internal batteries shall be independent from battery of the vehicle.
+5.5.3.8.3	The capacity of internal batteries shall be 25% higher than the maximum connected load during 12-hours continuous observation at 20 degrees.
+5.5.3.9.1	There shall be a possibility to power the equipment set from vehicle’s alternator.
+5.5.3.9.2	The Vehicle ’s alternator shall be also used as a source of power for charger of internal batteries.
+5.5.3.10.1	There shall be optional possibility to power the equipment set from an external 230V 50Hz source.
+5.5.3.10.2	The length of time for a full charge of the batteries must not exceed 12 hours.
+5.5.3.10.3	The length of the external cable shall be not less than 20 m.
+6.1.1	The vehicle -mounted TETRA mobile radio shall be operated from the vehicle battery.
+6.1.2	Power supply: +13,8 V DC nominal (from 10,8 V DC to 15,6 V DC), negative ground.
+6.1.3	Circuit -breaker and protection against reverse connection of power circuits.
+6.1.4	RF Power Class 3, compliant with EN300392 -2. RF power control, 5 steps of 5 dB.
+6.1.5	The mobile radio must provide separate control unit and transceiver unit.
+6.1.6	The radio terminal shall operate using combined voice and data services.
+6.1.7	The radio terminal must provide individual and group phone calls in TETRA network.
+6.1.8	The radio terminal must provide phone calls to the public network via the existing TETRA/PABX interface provided.
+6.1.9	The radio terminal must provide TETRA individual and group emergency calls.
+6.1.10	The radio terminal must provide pre-emptive priority calls.
+6.1.11	The radio terminal must provide talk group scanning with priorities.
+6.1.12	Radio terminals delivered must offer mutual authentication of the terminal by the infrastructure.
+6.1.13	The radio terminals must provide ETSI TETRA Class 1, 2 and 3 - Air Interface Encryption (AIE).
+6.1.14	The radio terminals must operate with TEA2 Class 3 AIE.
+6.1.15	The radio terminals must support smart card based End -To-End Encryption.
+6.1.16	The radio terminal must support temporary or permanent disable/ enable of the unit by the TETRA infrastructure.
+6.1.17	The radio terminal must provide programming of displayed talk group name (min.  8 characters).
+6.1.18	The radio terminal offered must implement a user interface that includes Latin and Macedonian Cyrillic (ISO 8859 -5 or equivalent) Character sets.
+6.1.19	The radio terminal must provide Volume Control - by potentiometer, rotary, slider, rocker switch or functional equivalent, using dedicated keys.
+6.1.20	Volume control and group selection must be separated functions, accessed by separate controls (or combination thereof).
+6.1.21	Operating frequency band for radio terminals offered shall be: 380 - 385 /390 - 395 MHz.
+6.1.22	Carrier spacing for radio terminals offered shall be: 25 kHz.
+6.1.23	The radio terminal must have Receiver Static Sensitivity: -112 dBm minimum.
+6.1.24	The radio terminal must have Receiver Dynamic Sensitivity: -103 dBm minimum.
+6.1.25	Operation modes for radio terminals offered shall include: TMO / DMO.
+6.1.26	The minimum operating temperature range for all equipment and radio terminals offered shall be -20°C to +55°C.
+6.1.27	The minimum storage temperature range for all equipment and radio terminals offered shall be -25°C to  +70°C.
+6.1.28	Radio terminals offered must implement half and full duplex individual speech calls.
+6.1.29	Radio terminals offered must implement half duplex group speech calls.
+6.1.30	Radio terminals offered must feature a dedicated on/off key.
+6.1.31	Radio terminals offered must feature a dedicated emergency key.
+6.1.32	Radio terminals offered must feature a dedicated key to activate the scanning function.
+6.1.33	The radio terminal must provide a connection for audio and data accessories.
+6.1.34	The radio terminal must have High Resolution Colour display (over 65.000 colours).
+6.1.35	The display simultaneously must present text and icons to show the status of the radio.
+6.1.36	The radio terminal must provide alphanumeric keypad with Latin and Macedonian Cyrillic characters.
+6.1.37	The radio terminal must provide alphanumeric keypad with large back -lighted keys.
+6.1.38	The radio terminal must provide configurable function keys.
+6.1.40	The radio terminal must provide generating and receiving the status messages and generating and receiving of the SDS messages type 1, 2, 3 and 4.
+6.1.41	Radio terminals offered must feature visual indicators (icons, LED’s, or messages on the display) that highlight service requests to be served or responses made to service invocations.
+6.1.42	During ambience listening, the TETRA terminal shall behave as a terminal not in use i.e. it shall not indicate in any visible or audible way that it is transmitting.
+6.1.43	The radio terminal must provide PEI, which enables data communication using the data terminal feature.
+6.1.44	Each radio terminal must allow the user to manually switch between DMO and TMO modes through a dedicated key.
+6.1.45	The radio terminal must provide TMO/DMO Gateway functionality.
+6.1.46	The radio terminal must provide DMO Repeater functionality.
+6.1.47	All mobile terminals must have built-in GPS module.
+6.1.48	The radio terminal must support GPS protocol: ETSI Location Information Protocol (LIP).
+6.1.49	The radio terminal must support GPS protocol: NMEA.
+6.1.50	The radio terminal must provide IP packet data transmission.
+6.1.51	The radio terminal must have minimum IP54 protection class.
+6.1.52	External microphone with a PTT button and catch.
+6.1.53	External loudspeaker must be provided (minimum 3W).
+6.1.54	Suitable Car antennas must be provided.
+6.1.55	The mobile radios shall comply with the following standards:  OPERATION ETSI EN 300 019  TRANSPORTATION    ETSI EN 300 019  MECHANICAL CONDITIONS   ETSI EN 300 019  WATER AND DUST PROTECTION  IEC 529 IP54
+6.1.56	Accessory connector allowing for the control of external equipment (buzzers, lights) started by the selective calling signal; possibility to connect an extra speaker, microphone, PTT, alarm switch-key.
+6.1.57	Complete installation into vehicles provided by the Beneficiary and the necessary vehicle installation kits for the vehicle -installed radios, necessary cables, connectors  and elements for safe fastening of the set in the car (feeder cable, min. 5 m long, with a fuse on the battery side) must be included.
+6.2.1	The tool for radio terminal configuration and customization shall be provided with the following functionalities:
+6.2.2	Portable device for programming the radios must be provided, including parameterisation software and the necessary data cable for all types of terminals.
+6.2.3	Database support with reporting features.
+6.2.4	Multi terminal programming shall be possible.
+6.2.5	The programming tool shall be provided for all types of delivered terminals.
+6.2.6	The Bidder shall clearly describe the licensing conditions of the proposed programming tools.
+6.2.7	Unlimited time license for key encryption.
+6.3.1	LTE/3G Integrated Services Router (2pcs per vehicle)
+6.3.2	Embedded LTE modem for LTE bands 1, 3, 7, 8, 20  (800 MHz (band 20), 900 MHz (band 8), 1800 MHz (band 3), 2100 MHz (band 1), and 2600 MHz (band 7))
+6.3.2	Allows connectivity for multiple Ethernet dev ices over 2 LAN 10/100 ports
+6.3.3	VLANs for secure segmentation of network resources
+6.3.4	Minimum 1 SIM slot to support LTE and HSPA -based networks
+6.3.5	3DES and AES encryption for highly secure VPNs when transmitting and receiving data over public networks as integrated module or separate device
+6.3.6	Operational Temperature  Rating: 0° to 40°C
+6.3.7	Power Supply with all necessary cables
+7.1.1	The Supplier shall deliver all appropriate manuals to provide full maintenance operations, including:  a. Functional description of the equipment  b. Detailed technical parameters  c. Description of installation and activation procedures  d. Description of assembly and disassembly  e. Operational and maintenance manuals  f. Procedures for failure elimination while the system is in operation and within the basic and the middle level of technical maintenance.
+7.1.2	Maintenance documentation shall include:  a. Mechanical drawings  b. Part lists for all circuits  c. Highway diagrams and wire lists (connections) for the interconnection of modules, boards and subassemblies  d. The part numbers shall include the generic Original Equipment Manufacturers (OEM) numbers besides any others.
+7.1.3	The documentation shall be delivered in English and native language, one set per each MSS, in a book and electronic version
+7.1.4	The contents and scope of the documentation shall be agreed with the Buyer and by him approved before the documentation is delivered.
+7.2.1	The system shall provide necessary diagnostic information (BIT) without any external devices
+7.2.2	Scope and frequency of maintenance service and repairs shall be determined in the operational and maintenance documentation
+7.3.1	5-years warranty shall be provided for the whole delivery (including batteries and cooler)
+7.3.2	Failure elimination (through repair of replacement in the MSS base) during the warranty period may not take longer than 10 days
+7.3.3	During the warranty period, all failures as well as effects of natural wear -out of system components shall be eliminated by the Contractor at the Contractor’s expense
+7.3.4	The warranty will not refer to the defects caused by user or force majeure
+7.3.5	During the warranty period, the time of failure elimination will be counted starting from the day following written notification of the Contractor (fax or email message) and finishing on the day a failure is eliminated by repair or replacement
+7.3.6	The Contractor shall present a repair report after each repair. The report shall give: date of failure notification, nature and description of a failure, description of performed service/repair activities (list of replaced parts), description of verification procedures and their results, date of repair or replacement
+7.3.7	All correspondence referring to operation, maintenance and repair shall be in English and native language
+7.3.8	Warranty period for MSS shall be prolonged by the time of failure elimination
+7.3.9	The Contractor shall pay stipulated penalty for each day exceeding the repair time. The penalty will be 0,01% of the contract value of MSS made inoperable by a failure
+7.3.10	During the warranty period, the Contractor shall ensure permanent contact with their representatives. The representatives shall, free of charge, provide the user with information, consultation and technical support (Hot-line) in so far as the use of the subject equipment of the contract. Communication will be in English and native language
+7.4.1	Requirements for durability and total resistance to environmental factors  a. Operating temperature of the MSS outside (ambient) -30°C ÷ +45°C  b. The MSS shall be prepared to operate at the wind of up to 20 m/s  c. Storage temperature: -40°C ÷  +50°C d. Equipment installed on MSS should be capable of continuous operation without failure , while exposed to direct sunlight, precipitation (snow, rain, freezing drizzle) and when EO head lid covered with ice for a duration of not less than 12 hours . The penetration of rain, snow and so on is prevented.  e. Resistance to relative humidity up to 95%
+7.4.2.1	All the equipment installed in the MSS shall constitute integrated system switched on from the operator’s compartment, its ergonomics should facilitate work of operators
+7.4.2.2	Basic equipment (EO head, operator’s console, electronic unit) shall be installed in a way allowing for an easy access and disassembly in case of damage
+7.4.2.3	All the elements installed of the system shall be installed in such a way that they are protected against damage during a rough terrain drive
+7.4.2.4	The whole of the system shall be manufactured in an aesthetic and functional way minimizing  the up-keep costs
+7.4.2.5	All metal constructional elements shall be protected with a lasting anti-corrosive coat
+7.4.2.6	Materials used for building the system may not be inflammable and may not be a source for any toxic substances to be released
+7.4.2.7	Electrical connections shall be provided by means of unified connective elements and a way that prevents all risks of damages caused during normal operation compliant with the manuals; inter -module electrical connections markings shall be identical with those used on the cabling schemes.
+7.5.1	Detailed training syllabuses shall be accepted by User (before the training)
+7.5.2	Training courses shall be completed in issuance of certificates which authorise to run next training courses at system user’s place
+7.5.3	Training courses shall be conducted on the equipment identical to that be delivered. Training courses for operators shall be conducted in real conditions for the MSS operation (at day and night)
+7.5.4	All participants shall revive the documentation (identical to that be delivered with MSS) in native language in a book and electronic version
+7.5.5	During the course not more than 4 people shall be trained on the vehicle
+7.5.6	The total cost of insurance, transporting (from the place of service to the training location and back), boarding and accommodation of the trainees shall be borne by the Contractor
+7.5.7	Training  Scope: In order to ensure correct operation, preventive maintenance and repairs, as well as supervision on operation of the system, the Contractor  shall provide a training proposal for operators and maintenance technicians
+7.5.8	Training Location: Training for operators and technicians will be conducted at the place chosen by the Contractor
+7.5.9	Training Participants: There  shall be trained: 6 operators per each MSS, 2 maintenance technician per each MSS
+7.5.10	Training Duration : Training duration shall be not shorter than 5 working days
+7.5.11	Training Timing : Training schedules shall be agreed with User. Training will be concluded not lather 14 days before the MSSs are reported ready for provisional acceptance
+7.5.12	Training Participation: Participants  in the training shall be divided into groups trained at different time  of day
+7.5.13	Training Language: native
+7.6.1	Delivery of the equipment shall be the responsibility of the Contractor, who shall assume all risks and costs associated with transportation, storage and safety of the equipment until the acceptance by the User
+7.6.2	Packaging of the equipment to be supplied shall be to standards currently acceptable within the European Union Member States, and shall provide full protection against damage for transport by whatever means chosen by the Contractor.
+7.6.3	The delivery shall be in batches . None of the batches shall include more than 8 vehicles.
+7.7.1	Technical Offer shall include a certificate (report) and the results of successful laboratory verification of the offered type of the thermovision camera in so far as the requirements of points 4.1.3 e) of this Technical Specifications. The certificate shall be issued by a laboratory accredited for tests required by an accrediting authority of any of the countries.
+7.8.1	Requirements referring copyrights. Any software delivered within the contract shall have appropriate licenses allowing to use it the required number of copies.

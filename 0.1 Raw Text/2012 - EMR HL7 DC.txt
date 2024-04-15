@@ -1,0 +1,701 @@
+Unique ID	Label	Requirement Statement	Solution Scope	Solution Approach
+DC 1.	Care Management			
+	HL7 DC 1.0.0.01	The solution should conform to function IN.1.1 (Entity Authentication).	Unknown	Unknown
+	HL7 DC 1.0.0.02	The solution should conform to function IN.1.2 (Entity Authorization).	Unknown	Unknown
+	HL7 DC 1.0.0.03	The solution should conform to function IN.1.3 (Entity Access Control).	Unknown	Unknown
+	HL7 DC 1.0.0.04	The solution should conform to function IN.1.5 (Non- Repudiation), to guarantee that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	HL7 DC 1.0.0.05	The solution should conform to function IN.1.6 (Secure Data Exchange), to ensure that the data are protected.	Unknown	Unknown
+	HL7 DC 1.0.0.06	The solution should conform to function IN.1.7 (Secure Data Routing), to ensure that the exchange occurs only among authorized senders and receivers.	Unknown	Unknown
+	HL7 DC 1.0.0.07	The solution should conform to function IN.1.8 (Information Attestation), to show authorship and responsibility for the data.	Unknown	Unknown
+	HL7 DC 1.0.0.08	The solution should conform to function IN.1.9 (Patient Privacy and Confidentiality).	Unknown	Unknown
+	HL7 DC 1.0.0.09	The solution should conform to function IN.2.1 (Data Retention, Availability and Destruction).	Unknown	Unknown
+	HL7 DC 1.0.0.10	The solution should conform to function IN.2.3 (Synchronization).	Unknown	Unknown
+	HL7 DC 1.0.0.11	The solution should conform to function IN.2.4 (Extraction of Health Record Information), to support data extraction across the complete health record of an individual.	Unknown	Unknown
+	HL7 DC 1.0.0.12	The solution should conform to function IN.2.5.1 (Manage Unstructured Health Record Information), to ensure data integrity through all changes.	Unknown	Unknown
+	HL7 DC 1.0.0.13	The solution should conform to function IN.2.5.2 (Manage Structured Health Record Information), to ensure data integrity through all changes.	Unknown	Unknown
+	HL7 DC 1.0.0.14	The solution should conform to function IN.3 (Registry and Directory Services).	Unknown	Unknown
+	HL7 DC 1.0.0.15	The solution should conform to function IN.4.1 (Standard Terminologies and Terminology Models), to support semantic interoperability.	Unknown	Unknown
+	HL7 DC 1.0.0.16	The solution should conform to function IN.4.2 (Maintenance and Versioning of Standard Terminologies), to preserve the semantics of coded data over time.	Unknown	Unknown
+	HL7 DC 1.0.0.17	The solution should conform to function IN.4.3 (Terminology Mapping).	Unknown	Unknown
+	HL7 DC 1.0.0.18	The solution should conform to function IN.5.1 (Interchange Standards), to support interoperability.	Unknown	Unknown
+	HL7 DC 1.0.0.19	The solution should conform to function IN.5.2 (Interchange Standards Versioning and Maintenance), to accommodate the inevitable evolution of interchange standards.	Unknown	Unknown
+	HL7 DC 1.0.0.20	The solution should conform to function IN.5.3 (Standards-based Application Integration).	Unknown	Unknown
+	HL7 DC 1.0.0.21	The solution should conform to function IN.5.4 (Interchange Agreements), to define how the sender and receiver will exchange data.	Unknown	Unknown
+	HL7 DC 1.0.0.22	The solution should conform to function IN.6 (Business Rules Management).	Unknown	Unknown
+	HL7 DC 1.0.0.23	The solution should conform to function IN.7 (Workflow Management).	Unknown	Unknown
+	HL7 DC 1.0.0.24	The solution should conform to function S.2.2.1 (Health Record Output).	Unknown	Unknown
+	DC 1.1	Record Management		
+	DC 1.1.1	Identify and Maintain a Patient Record		
+	HL7 DC 1.1.1.01	The solution should create a single logical record for each patient.	Unknown	Unknown
+	HL7 DC 1.1.1.02	The solution should provide the ability to create a record for a patient when the identity of the patient is unknown.	Unknown	Unknown
+	HL7 DC 1.1.1.03	The solution should provide the ability to store more than one identifier for each patient record.	Unknown	Unknown
+	HL7 DC 1.1.1.04	The solution should associate key identifier information (e.g., solution ID, medical record number) with each patient record.	Unknown	Unknown
+	HL7 DC 1.1.1.05	The solution should provide the ability to uniquely identify a patient and tie the record to a single patient.	Unknown	Unknown
+	HL7 DC 1.1.1.06	The solution should provide the ability, through a controlled method, to merge or link dispersed information for an individual patient upon recognizing the identity of the patient.	Unknown	Unknown
+	HL7 DC 1.1.1.07	If health information has been mistakenly associated with a patient, then the solution should provide the ability to mark the information as erroneous in the record of the patient in which it was mistakenly associated and represent that information as erroneous in all outputs containing that information.	Unknown	Unknown
+	HL7 DC 1.1.1.08	If health information has been mistakenly associated with a patient, THEN the solution should provide the ability to associate it with the correct patient.	Unknown	Unknown
+	HL7 DC 1.1.1.09	The solution should provide the ability to retrieve parts of a patient record using a primary identifier, secondary identifiers, or other information which are not identifiers, but could be used to help identify the patient.	Unknown	Unknown
+	HL7 DC 1.1.1.10	The solution should provide the ability to obsolete, inactivate, nullify, destroy and archive a patient's record in accordance with local policies and procedures, as well as applicable laws and regulations.	Unknown	Unknown
+	HL7 DC 1.1.1.11	If related patients register with any identical data, then the solution should provide the ability to propagate that data to all their records.	Unknown	Unknown
+	HL7 DC 1.1.1.12	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.1.2	Manage Patient Demographics		
+	HL7 DC 1.1.2.01	The solution should capture demographic information as part of the patient record.	Unknown	Unknown
+	HL7 DC 1.1.2.02	The solution should store and retrieve demographic information as discrete data.	Unknown	Unknown
+	HL7 DC 1.1.2.03	The solution should provide the ability to retrieve demographic data as part of the patient record.	Unknown	Unknown
+	HL7 DC 1.1.2.04	The solution should provide the ability to update demographic data.	Unknown	Unknown
+	HL7 DC 1.1.2.05	The solution should provide the ability to report demographic data.	Unknown	Unknown
+	HL7 DC 1.1.2.06	The solution should store historical values of demographic data over time.	Unknown	Unknown
+	HL7 DC 1.1.2.07	The solution should present a set of patient identifying information at each interaction with the patient record.	Unknown	Unknown
+	HL7 DC 1.1.2.08	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.1.2.09	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.1.3	Data and Documentation from External Sources		
+	HL7 DC 1.1.3.0.01	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.1.3.0.02	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.1.3.1	Capture Data and Documentation from External Clinical Sources		
+	HL7 DC 1.1.3.1.01	The solution should provide the ability to capture external data and documentation.	Unknown	Unknown
+	HL7 DC 1.1.3.1.02	If lab results are received through an electronic interface, then the solution should receive and store the data elements into the patient record.	Unknown	Unknown
+	HL7 DC 1.1.3.1.03	If lab results are received through an electronic interface, then the solution should display them upon request.	Unknown	Unknown
+	HL7 DC 1.1.3.1.04	The solution should provide the ability to receive, store and display scanned documents as images.	Unknown	Unknown
+	HL7 DC 1.1.3.1.05	The solution should provide the ability to store imaged documents or reference the imaged documents via links to imaging solutions.	Unknown	Unknown
+	HL7 DC 1.1.3.1.06	The solution should provide the ability to receive, store and present text-based externally-sourced documents and reports.	Unknown	Unknown
+	HL7 DC 1.1.3.1.07	The solution should provide the ability to receive, store and display clinical result images (such as radiologic images) received from an external source.	Unknown	Unknown
+	HL7 DC 1.1.3.1.08	The solution should provide the ability to receive, store and display other forms of clinical results (such as wave files of EKG tracings) received from an external source.	Unknown	Unknown
+	HL7 DC 1.1.3.1.09	The solution should provide the ability to receive, store and present medication details from an external source.	Unknown	Unknown
+	HL7 DC 1.1.3.1.10	The solution should provide the ability to receive, store and present structured text-based reports received from an external source.	Unknown	Unknown
+	HL7 DC 1.1.3.1.11	The solution should provide the ability to receive, store and present standards-based structured, codified data received from an external source.	Unknown	Unknown
+	DC 1.1.3.2	Capture Patient-Originated Data		
+	HL7 DC 1.1.3.2.01	The solution should capture and explicitly label patient-originated data.	Unknown	Unknown
+	HL7 DC 1.1.3.2.02	If the solution provides the ability for direct entry by the patient, then the solution should explicitly label the data as patient entered.	Unknown	Unknown
+	HL7 DC 1.1.3.2.03	The solution should capture and label the source of clinical data provided on behalf of the patient.	Unknown	Unknown
+	HL7 DC 1.1.3.2.04	The solution should present patient-originated data for use by care providers.	Unknown	Unknown
+	HL7 DC 1.1.3.2.05	The solution should provide the ability for a provider to verify the accuracy of patient-originated data for inclusion in the patient record.	Unknown	Unknown
+	HL7 DC 1.1.3.2.06	The solution should provide the ability to view or comment, but not alter, patient-originated data.	Unknown	Unknown
+	DC 1.1.3.3	Capture Patient Health Data Derived from Administrative and Financial Data and Documentation		
+	HL7 DC 1.1.3.3.01	The solution should provide the ability to capture and label patient health data derived from administrative or financial data.	Unknown	Unknown
+	HL7 DC 1.1.3.3.02	The solution should provide the ability to capture and link data about the source of patient health data derived from administrative and financial data with that patient data.	Unknown	Unknown
+	HL7 DC 1.1.3.3.03	"The solution should provide the ability to present labeled patient health information derived from administrative or financial data and the source of that data for use by
+authorized users."	Unknown	Unknown
+	HL7 DC 1.1.3.3.04	The solution should provide the ability to view or comment on patient health information derived from administrative or financial data.	Unknown	Unknown
+	HL7 DC 1.1.3.3.05	The solution should provide the ability to request correction of the administrative or financial data.	Unknown	Unknown
+	DC 1.1.4	Produce a Summary Record of Care		
+	HL7 DC 1.1.4.01	The solution should present summarized views and reports of the patient’s comprehensive EMR.	Unknown	Unknown
+5643	HL7 DC 1.1.4.02	The solution should include at least the following in the summary: problem list, medication list, allergy and adverse reaction list.	Unknown	Unknown
+	HL7 DC 1.1.4.03	The solution should conform to function S.3.3.6 (Health Service Reports at the Conclusion of an Episode of Care).	Unknown	Unknown
+	HL7 DC 1.1.4.04	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.1.4.05	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.1.5	Present Ad Hoc Views of the Health Record		
+	HL7 DC 1.1.5.01	The solution should provide the ability to create views that prohibit patients from accessing certain information according to organizational policy, scope of practice, and jurisdictional law.	Unknown	Unknown
+	HL7 DC 1.1.5.02	The solution should provide the ability to create customized views of summarized information based on sort and filter controls for date or date range, problem, or other clinical parameters.	Unknown	Unknown
+	HL7 DC 1.1.5.03	The solution should provide the ability to access summarized information through customized views based on prioritization of chronology, problem, or other pertinent clinical parameters.	Unknown	Unknown
+	HL7 DC 1.1.5.04	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.1.5.05	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.2	Patient History		
+	HL7 DC 1.2.01	The solution should provide the ability to capture, update and present current patient history including pertinent positive and negative elements.	Unknown	Unknown
+	HL7 DC 1.2.02	The solution should provide the ability to capture and present previous external patient histories	Unknown	Unknown
+	HL7 DC 1.2.03	The solution should provide the ability to capture the relationship between patient and others.	Unknown	Unknown
+	HL7 DC 1.2.04	The solution should capture the complaint, presenting problem or other reason(s) for the visit or encounter.	Unknown	Unknown
+	HL7 DC 1.2.05	The solution should capture the reason for visit/encounter from the patient's perspective.	Unknown	Unknown
+	HL7 DC 1.2.06	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.2.07	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.3	Preferences, Directives, Consents, and Authorizations		
+	HL7 DC 1.3.0.01	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.3.0.02	The solution should to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.3.1	Manage Patient and Family Preferences		
+	HL7 DC 1.3.1.01	The solution should provide the ability to capture, present, maintain and make available for clinical decisions patient preferences such as language, religion, spiritual practices and culture.	Unknown	Unknown
+	HL7 DC 1.3.1.02	The solution should provide the ability to capture, present, maintain and make available for clinical decisions family preferences such as language, religion, spiritual practices and culture.	Unknown	Unknown
+	HL7 DC 1.3.1.03	The solution should conform to function DC.2.1.4 (Support for Patient and Family Preferences), and incorporate patient and family preferences into decision support solutions.	Unknown	Unknown
+	DC 1.3.2	Manage Patient Advance Directives		
+	HL7 DC 1.3.2.01	The solution should provide the ability to indicate that advance directives exist for the patient.	Unknown	Unknown
+	HL7 DC 1.3.2.02	The solution should provide the ability to indicate the type of advance directives completed for the patient such as living will, durable power of attorney, preferred interventions for known conditions, or the existence of a "Do Not Resuscitate order”.	Unknown	Unknown
+	HL7 DC 1.3.2.03	The solution should provide the ability to capture, present, maintain and make available for clinical decisions patient advance directives documents and “Do Not Resuscitate” orders.	Unknown	Unknown
+	HL7 DC 1.3.2.04	The solution should conform to function DC.1.1.3.1 (Capture Data and Documentation from External Clinical Sources) and capture scanned patient advance directive documents and “Do Not Resuscitate” orders.	Unknown	Unknown
+	HL7 DC 1.3.2.05	The solution should provide the ability to indicate when advanced directives were last reviewed.	Unknown	Unknown
+	HL7 DC 1.3.2.06	The solution should provide the ability to indicate the name and relationship of the party completing the advance directive for the patient.	Unknown	Unknown
+	HL7 DC 1.3.2.07	The solution should time and date stamp advance directives.	Unknown	Unknown
+	HL7 DC 1.3.2.08	The solution should provide the ability to document the location and or source of any legal documentation regarding advance directives.	Unknown	Unknown
+	HL7 DC 1.3.2.09	The solution should conform to function DC.2.1.4 (Support for Patient and Family Preferences).	Unknown	Unknown
+	DC 1.3.3	Manage Consents & Authorizations		
+	HL7 DC 1.3.3.01	The solution should provide the ability to indicate that a patient has completed applicable consents and authorizations.	Unknown	Unknown
+	HL7 DC 1.3.3.02	The solution should provide the ability to indicate that a patient has withdrawn applicable consents and authorizations.	Unknown	Unknown
+	HL7 DC 1.3.3.03	The solution should conform to function DC.1.1.3.1 (Capture Data and Documentation from External Clinical Sources) and capture scanned paper consent and authorization documents.	Unknown	Unknown
+	HL7 DC 1.3.3.04	The solution should provide the ability to view and complete consent and authorization forms on-line.	Unknown	Unknown
+	HL7 DC 1.3.3.05	The solution should provide the ability to generate printable consent and authorization forms.	Unknown	Unknown
+	HL7 DC 1.3.3.06	The solution should display the authorizations associated with a specific clinical activity, such as treatment or surgery, along with that event in the patient's electronic chart.	Unknown	Unknown
+	HL7 DC 1.3.3.07	The solution should provide the ability to display consents and authorizations chronologically.	Unknown	Unknown
+	HL7 DC 1.3.3.08	The solution should provide the ability to document an assent for patients legally unable to consent.	Unknown	Unknown
+	HL7 DC 1.3.3.09	The solution should provide the ability to document the source of each consent, such as the patient or the patient’s personal representative if the patient is legally unable to provide it.	Unknown	Unknown
+	HL7 DC 1.3.3.10	The solution should provide the ability to document the patient’s personal representative’s level of authority to make decisions on behalf of the patient.	Unknown	Unknown
+	DC 1.4	Summary Lists		
+	HL7 DC 1.4.0.01	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.4.0.02	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.4.1	Manage Allergy, Intolerance, and Adverse Reaction List		
+	HL7 DC 1.4.1.01	The solution should provide the ability to capture true allergy, intolerance, and adverse reaction to drug, dietary or environmental triggers as unique, discrete entries.	Unknown	Unknown
+	HL7 DC 1.4.1.02	The solution should provide the ability to capture the reason for entry of the allergy, intolerance or adverse reaction.	Unknown	Unknown
+	HL7 DC 1.4.1.03	The solution should provide the ability to capture the reaction type.	Unknown	Unknown
+	HL7 DC 1.4.1.04	The solution should provide the ability to capture the severity of a reaction.	Unknown	Unknown
+	HL7 DC 1.4.1.05	The solution should provide the ability to capture a report of No Known Allergies (NKA) for the patient.	Unknown	Unknown
+	HL7 DC 1.4.1.06	The solution should provide the ability to capture a report of No Known Drug Allergies (NKDA) for the patient.	Unknown	Unknown
+	HL7 DC 1.4.1.07	The solution should provide the ability to capture the source of allergy, intolerance, and adverse reaction information.	Unknown	Unknown
+	HL7 DC 1.4.1.08	The solution should provide the ability to deactivate an item on the list.	Unknown	Unknown
+	HL7 DC 1.4.1.09	The solution should provide the ability to capture the reason for deactivation of an item on the list.	Unknown	Unknown
+	HL7 DC 1.4.1.10	The solution should present allergies, intolerances and adverse reactions that have been deactivated.	Unknown	Unknown
+	HL7 DC 1.4.1.11	The solution should provide the ability to display user defined sort order of list.	Unknown	Unknown
+	HL7 DC 1.4.1.12	The solution should provide the ability to indicate that the list of medications and other agents has been reviewed.	Unknown	Unknown
+	HL7 DC 1.4.1.13	The solution should provide the ability to capture and display the date on which allergy information was entered.	Unknown	Unknown
+	HL7 DC 1.4.1.14	The solution should provide the ability to capture and display the approximate date of the allergy occurrence.	Unknown	Unknown
+	DC 1.4.2	Manage Medication List		
+	HL7 DC 1.4.2.01	The solution should provide the ability to capture patient specific medication lists.	Unknown	Unknown
+	HL7 DC 1.4.2.02	The solution should display and report patient-specific medication lists.	Unknown	Unknown
+	HL7 DC 1.4.2.03	The solution should provide the ability to capture the details of the medication such as ordering date, dose, route, and SIG (description of the prescription, such as the quantity) when known.	Unknown	Unknown
+	HL7 DC 1.4.2.04	The solution should provide the ability to capture other dates associated with medications such as start and end dates.	Unknown	Unknown
+	HL7 DC 1.4.2.05	The solution should provide the ability to capture medications not reported on existing medication lists or medication histories.	Unknown	Unknown
+	HL7 DC 1.4.2.06	The solution should provide the ability to capture nonprescription medications including over the counter and complementary medications such as vitamins, herbs and supplements.	Unknown	Unknown
+	HL7 DC 1.4.2.07	The solution should present the current medication lists associated with a patient.	Unknown	Unknown
+	HL7 DC 1.4.2.08	The solution should present the medication history associated with a patient.	Unknown	Unknown
+	HL7 DC 1.4.2.09	The solution should present the medication, prescriber, and medication ordering dates when known.	Unknown	Unknown
+	HL7 DC 1.4.2.10	The solution should provide the ability to mark a medication as erroneously captured and excluded from the presentation of current medications.	Unknown	Unknown
+	HL7 DC 1.4.2.11	The solution should provide the ability to print a current medication list for patient use.	Unknown	Unknown
+	HL7 DC 1.4.2.12	The solution should provide the ability to capture information regarding the filling of prescriptions (dispensation of medications by pharmacies or other providers).	Unknown	Unknown
+	DC 1.4.3	Manage Problem List		
+	HL7 DC 1.4.3.01	The solution should capture, display and report all active problems associated with a patient.	Unknown	Unknown
+	HL7 DC 1.4.3.02	The solution should capture, display and report a history of all problems associated with a patient.	Unknown	Unknown
+	HL7 DC 1.4.3.03	The solution should provide the ability to capture onset date of problem.	Unknown	Unknown
+	HL7 DC 1.4.3.04	The solution should provide the ability to capture the chronicity (chronic, acute/self-limiting, etc.) of a problem.	Unknown	Unknown
+	HL7 DC 1.4.3.05	The solution should provide the ability to capture the source, date and time of all updates to the problem list.	Unknown	Unknown
+	HL7 DC 1.4.3.06	The solution should provide the ability to deactivate a problem.	Unknown	Unknown
+	HL7 DC 1.4.3.07	The solution should provide the ability to re-activate a previously deactivated problem.	Unknown	Unknown
+	HL7 DC 1.4.3.08	The solution should provide the ability to display inactive and/or resolved problems.	Unknown	Unknown
+	HL7 DC 1.4.3.09	The solution should provide the ability to manually order/sort the problem list.	Unknown	Unknown
+	HL7 DC 1.4.3.10	The solution should provide the ability to associate encounters, orders, medications, notes with one or more problems.	Unknown	Unknown
+	DC 1.4.4	Manage Immunization List		
+	HL7 DC 1.4.4.01	The solution should capture, display and report all immunizations associated with a patient.	Unknown	Unknown
+	HL7 DC 1.4.4.02	The solution should record as discrete data elements data associated with any immunization given including date, type, lot number and manufacturer.	Unknown	Unknown
+	HL7 DC 1.4.4.03	The solution should prepare a report of a patient ‘s immunization history upon request for appropriate authorities such as Public Health organization.	Unknown	Unknown
+	DC 1.5	Manage Assessments		
+	HL7 DC 1.5.01	The solution should provide the ability to create assessments.	Unknown	Unknown
+	HL7 DC 1.5.02	The solution should provide the ability to use standardized assessments where they exist.	Unknown	Unknown
+	HL7 DC 1.5.03	The solution should provide the ability to document using standard assessments germane to the age, gender, developmental state, and health condition as appropriate to the EMR user’s scope of practice.	Unknown	Unknown
+	HL7 DC 1.5.04	The solution should provide the ability to capture data relevant to standard assessment.	Unknown	Unknown
+	HL7 DC 1.5.05	The solution should provide the ability to capture additional data to augment the standard assessments relative to variances in medical conditions.	Unknown	Unknown
+5644	HL7 DC 1.5.06	The solution should provide the ability to link data from a standard assessment to a problem list.	Unknown	Unknown
+	HL7 DC 1.5.07	The solution should provide the ability to link data from a standard assessment to an individual care plan.	Unknown	Unknown
+	HL7 DC 1.5.08	The solution should provide the ability to link data from external sources, laboratory results, and radiographic results to the standard assessment.	Unknown	Unknown
+	HL7 DC 1.5.09	The solution should provide the ability to compare documented data against standardized curves and display trends.	Unknown	Unknown
+	HL7 DC 1.5.10	The solution should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 1.5.11	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.6	Care Plans, Treatment Plans, Guidelines, and Protocols		
+	DC 1.6.1	Present Guidelines and Protocols for Planning Care		
+	HL7 DC 1.6.1.01	The solution should provide the ability to present current guidelines and protocols to clinicians who are creating plans for treatment and care.	Unknown	Unknown
+	HL7 DC 1.6.1.02	The solution should provide the ability to search for a guideline or protocol based on appropriate criteria (such as problem).	Unknown	Unknown
+	HL7 DC 1.6.1.03	The solution should provide the ability to present previously used guidelines and protocols for historical or legal purposes.	Unknown	Unknown
+	HL7 DC 1.6.1.04	The solution should conform to function DC.1.8.6 (Manage Documentation of Clinician Response to Decision Support Prompts).	Unknown	Unknown
+	HL7 DC 1.6.1.05	The solution should conform to function DC.2.2.1.2 (Support for Context-Sensitive Care Plans, Guidelines, Protocols).	Unknown	Unknown
+	HL7 DC 1.6.1.06	The solution should should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.6.2	Manage Patient-Specific Care & Treatment Plans		
+	HL7 DC 1.6.2.01	The solution should provide the ability to capture patient specific plans of care and treatment.	Unknown	Unknown
+	HL7 DC 1.6.2.02	The solution should conform to DC.1.6.1 (Present Guidelines and Protocols for Planning Care) and provide the ability to use locally or non-locally developed templates, guidelines, and protocols for the creation of patient-specific plans of care and treatment.	Unknown	Unknown
+	HL7 DC 1.6.2.03	The solution should provide the ability to use previously developed care plans as a basis for the creation of new plans of care and treatment.	Unknown	Unknown
+	HL7 DC 1.6.2.04	"The solution should provide the ability to track updates to a patient’s plan of care and treatment including authors, creation date, version history, references, local sources
+and non-local sources in accordance with scope of practice, organizational policy and jurisdictional law."	Unknown	Unknown
+	HL7 DC 1.6.2.05	The solution should provide the ability to coordinate order sets with care plans.	Unknown	Unknown
+	HL7 DC 1.6.2.06	The solution should provide the ability to derive order sets from care plans.	Unknown	Unknown
+	HL7 DC 1.6.2.07	The solution should provide the ability to derive care plans from order sets.	Unknown	Unknown
+	HL7 DC 1.6.2.08	The solution should provide the ability to transfer plans of care and treatment to other care providers.	Unknown	Unknown
+	HL7 DC 1.6.2.09	The solution should conform to function DC.3.1.1 (Clinical Task Assignment and Routing) and incorporate care plan items in the tasks assigned and routed.	Unknown	Unknown
+	HL7 DC 1.6.2.10	The solution should conform to function DC.3.1.2 (Clinical Task Linking) and incorporate care plan items in the tasks linked.	Unknown	Unknown
+	HL7 DC 1.6.2.11	The solution should conform to function DC.3.1.3 (Clinical Task Tracking) and incorporate care plan items in the tasks tracked.	Unknown	Unknown
+	HL7 DC 1.6.2.12	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.7	Orders & Referrals		
+	HL7 DC 1.7.0.01	The solution should to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.7.1	Manage Medication Orders		
+	HL7 DC 1.7.1.01	The solution should provide the ability to create prescription or other medication orders with the details adequate for correct filling and administration captured as discrete data.	Unknown	Unknown
+3193	HL7 DC 1.7.1.02	The solution should capture user and date stamp for all prescription related events.	Unknown	Unknown
+	HL7 DC 1.7.1.03	The solution should conform to function DC.1.4.2 (Manage Medication List) and update the appropriate medication list with the prescribed medications (in case of multiple medication lists).	Unknown	Unknown
+	HL7 DC 1.7.1.04	The solution should provide a list of medications to search, including both generic and brand name.	Unknown	Unknown
+	HL7 DC 1.7.1.05	The solution should provide the ability to maintain a discrete list of orderable medications.	Unknown	Unknown
+	HL7 DC 1.7.1.06	The solution should conform to function DC.1.7.2.1 (Manage Non-Medication Patient Care Orders) and provide the ability to order supplies associated with medication orders in accordance with scope of practice, organizational policy or jurisdictional law.	Unknown	Unknown
+	HL7 DC 1.7.1.07	The solution should make common content available for prescription details to be selected by the ordering clinician.	Unknown	Unknown
+	HL7 DC 1.7.1.08	The solution should provide the ability for the ordering clinician to create prescription details as needed.	Unknown	Unknown
+	HL7 DC 1.7.1.09	The solution should make available common patient medication instruction content to be selected by the ordering clinician.	Unknown	Unknown
+	HL7 DC 1.7.1.10	The solution should provide the ability to include prescriptions in order sets.	Unknown	Unknown
+	HL7 DC 1.7.1.11	"The solution should provide a list of frequently-ordered medications by diagnosis by provider which could include the full details of the medication, including SIG, quantity,
+refills, DAW, etc."	Unknown	Unknown
+	HL7 DC 1.7.1.12	The solution should provide the ability to select drugs by therapeutic class and/or indication.	Unknown	Unknown
+	HL7 DC 1.7.1.13	The solution should conform to function S.3.3.2 (Eligibility Verification and Determination of Coverage) and display the results of electronic prescription eligibility and health plan/payer formulary checking.	Unknown	Unknown
+3194	HL7 DC 1.7.1.14	The solution should provide the ability to re-prescribe medication by allowing a prior prescription to be reordered without re-entering previous data (e.g. administration schedule, quantity).	Unknown	Unknown
+	HL7 DC 1.7.1.15	"The solution should provide the ability to re-prescribe a medication from a prior prescription using the same dosage but allow for editing of details adequate for correct
+filling and administration of medication (e.g. dose, frequency, body weight)."	Unknown	Unknown
+	HL7 DC 1.7.1.16	The solution should conform to function DC.2.3.1.1 (Support for Drug Interaction Checking) and check and report allergies, drug-drug interactions, and other potential adverse reactions, when new medications are ordered.	Unknown	Unknown
+	HL7 DC 1.7.1.17	The solution should conform to function DC.2.3.1.2 (Support for Patient Specific Dosing and Warnings) and check and report other potential adverse reactions, when new medications are ordered.	Unknown	Unknown
+	HL7 DC 1.7.1.18	The solution should provide the ability to create prescriptions in which the weight-specific dose is suggested.	Unknown	Unknown
+	HL7 DC 1.7.1.19	The solution should conform to function DC.2.3.1.3 (Support for Medication Recommendations).	Unknown	Unknown
+	DC 1.7.2	Non-Medication Orders & Referrals Management		
+	DC 1.7.2.1	Manage Non-Medication Patient Care Orders		
+	HL7 DC 1.7.2.01	The solution should provide the ability to capture nonmedication patient care orders for an action or item.	Unknown	Unknown
+	HL7 DC 1.7.2.01	The solution should provide the ability to capture adequate order detail for correct order fulfillment.	Unknown	Unknown
+	HL7 DC 1.7.2.03	The solution should track the status of the ordered action or item.	Unknown	Unknown
+	HL7 DC 1.7.2.04	The solution should provide the ability to capture patient instructions necessary for correct order fulfillment.	Unknown	Unknown
+	HL7 DC 1.7.2.05	The solution should provide the ability to present patient instructions necessary for correct order fulfillment.	Unknown	Unknown
+	HL7 DC 1.7.2.06	The solution should provide the ability to communicate the order to the correct recipient(s) for order fulfillment.	Unknown	Unknown
+	HL7 DC 1.7.2.07	The solution should conform to DC.2.4.2 (Support for Non- Medication Ordering).	Unknown	Unknown
+	DC 1.7.2.2	Manage Orders for Diagnostic Tests		
+	HL7 DC 1.7.2.4.01	The solution should provide the ability to capture orders for diagnostic tests.	Unknown	Unknown
+	HL7 DC 1.7.2.4.02	The solution should provide the ability to capture adequate order detail for correct diagnostic test fulfillment.	Unknown	Unknown
+	HL7 DC 1.7.2.4.03	The solution should provide the ability to track the status of diagnostic test(s).	Unknown	Unknown
+	HL7 DC 1.7.2.4.04	The solution should provide the ability to capture and present patient instructions relevant to the diagnostic test ordered.	Unknown	Unknown
+	HL7 DC 1.7.2.4.05	The solution should communicate orders to the service provider of the diagnostic test.	Unknown	Unknown
+	HL7 DC 1.7.2.4.06	The solution should communicate supporting detailed documentation to the correct service provider of the diagnostic test.	Unknown	Unknown
+	HL7 DC 1.7.2.4.07	The solution should conform to DC.2.4.2 (Support for Non-Medication Ordering).	Unknown	Unknown
+	DC 1.7.2.3	Manage Orders for Blood Products & Other Biologics		
+	HL7 DC 1.7.2.3.01	The solution should provide the ability to interface with solutions of blood banks or other sources to manage orders for blood products or other biologics.	Unknown	Unknown
+	HL7 DC 1.7.2.3.02	The solution should provide the ability to capture use of such products in the provision of care.	Unknown	Unknown
+	HL7 DC 1.7.2.3.03	The solution should to function S.1.1 (Registry Notification).	Unknown	Unknown
+	DC 1.7.2.4	Manage Referrals		
+	HL7 DC 1.7.2.4.01	The solution should provide the ability to capture and communicate referral(s) to other care provider (s), whether internal or external to the organization.	Unknown	Unknown
+	HL7 DC 1.7.2.4.02	The solution should provide the ability to capture clinical details as necessary for the referral.	Unknown	Unknown
+	HL7 DC 1.7.2.4.03	The solution should provide the ability to capture administrative details (such as insurance information, consents and authorizations for disclosure) as necessary for the referral.	Unknown	Unknown
+	HL7 DC 1.7.2.4.04	The solution should present captured referral information.	Unknown	Unknown
+	HL7 DC 1.7.2.4.05	The solution should provide the ability to capture completion of a referral appointment.	Unknown	Unknown
+	HL7 DC 1.7.2.4.06	The solution should provide diagnosis based clinical guidelines for making a referral.	Unknown	Unknown
+	HL7 DC 1.7.2.4.07	The solution should provide order sets for referral preparation.	Unknown	Unknown
+	HL7 DC 1.7.2.4.08	The solution should provide the ability to document transfer of care according to organizational policy, scope of practice, and jurisdictional law.	Unknown	Unknown
+	DC 1.7.3	Manage Order Sets		
+	HL7 DC 1.7.3.01	The solution should provide the ability to present order set(s).	Unknown	Unknown
+	HL7 DC 1.7.3.02	The solution should provide the ability to order at the patient level from presented order sets.	Unknown	Unknown
+	HL7 DC 1.7.3.03	The solution should provide the ability to record each component of an order set that is ordered.	Unknown	Unknown
+	HL7 DC 1.7.3.04	The solution should conform to function DC.2.4.1 (Support for Order Sets).	Unknown	Unknown
+	HL7 DC 1.7.3.05	The solution should provide the ability for a provider to choose from among the order sets pertinent to a certain disease or other criteria.	Unknown	Unknown
+	DC 1.8	Documentation of Care, Measurements, and Results		
+	HL7 DC 1.8.0.01	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 1.8.1	Manage Medication Administration		
+3195	HL7 DC 1.8.1.01	The solution should present the list of medications to be administered.	Unknown	Unknown
+3196	HL7 DC 1.8.1.02	The solution should display the timing, route of administration, and dose of all medications on the list.	Unknown	Unknown
+3197	HL7 DC 1.8.1.03	The solution should display instructions for administration of all medications on the list.	Unknown	Unknown
+	HL7 DC 1.8.1.04	The solution should notify the clinician when specific doses are due.	Unknown	Unknown
+	HL7 DC 1.8.1.05	The solution should conform to function DC.2.3.1.1 (Support for Drug Interaction Checking) and check and report allergies, drug-drug interactions, and other potential adverse reactions, when new medications are about to be given.	Unknown	Unknown
+	HL7 DC 1.8.1.06	The solution should conform to function DC.2.3.1.2 (Support for Patient Specific Dosing and Warnings) and check and report other potential adverse reactions, when new medications are about to be given.	Unknown	Unknown
+3198	HL7 DC 1.8.1.07	The solution should provide the ability to capture medication administration details: including timestamps, observations, complications, and reason if medication was not given - in accordance with organizational policy, scope of practice, and jurisdictional law.	Unknown	Unknown
+	HL7 DC 1.8.1.08	The solution should securely relate interventions to be administered to the unique identity of the patient.	Unknown	Unknown
+	DC 1.8.2	Manage Immunization Administration		
+	HL7 DC 1.8.2.01	The solution should provide the ability to recommend required immunizations, and when they are due, during an encounter based on widely accepted immunization schedules.	Unknown	Unknown
+	HL7 DC 1.8.2.02	The solution should provide the ability to recommend required immunizations based on patient risk factors.	Unknown	Unknown
+	HL7 DC 1.8.2.03	The solution should perform checking for potential adverse or allergic reactions for all immunizations when they are about to be given.	Unknown	Unknown
+3199	HL7 DC 1.8.2.04	The solution should provide the ability to capture immunization administration details, including date, type, lot number and manufacturer.	Unknown	Unknown
+3200	HL7 DC 1.8.2.05	The solution should provide the ability to capture other clinical data pertinent to the immunization administration (e.g. vital signs).	Unknown	Unknown
+	HL7 DC 1.8.2.06	The solution should record as discrete data elements data associated with any immunization.	Unknown	Unknown
+	HL7 DC 1.8.2.07	The solution should provide the ability to associate standard codes with discrete data elements associated with an immunization.	Unknown	Unknown
+3201	HL7 DC 1.8.2.08	The solution should provide the ability to update the immunization schedule.	Unknown	Unknown
+	HL7 DC 1.8.2.09	The solution should provide the ability to prepare a report of a patient‘s immunization history upon request for appropriate authorities such as Public Health departmetn.	Unknown	Unknown
+	HL7 DC 1.8.2.10	The solution should conform to function DC.1.4.1 (Manage Allergy, Intolerance and Adverse Reaction Lists).	Unknown	Unknown
+3202	HL7 DC 1.8.2.11	The solution should transmit required immunization information to a public health immunization registry.	Unknown	Unknown
+	HL7 DC 1.8.2.12	The solution should receive immunization histories from a public health immunization registry.	Unknown	Unknown
+	DC 1.8.3	Manage Results		
+	HL7 DC 1.8.3.01	The solution should provide the ability to present numerical and non-numerical current and historical test results to the appropriate provider.	Unknown	Unknown
+	HL7 DC 1.8.3.02	The solution should provide the ability to filter results for a unique patient.	Unknown	Unknown
+	HL7 DC 1.8.3.03	The solution should provide the ability to filter results by factors that supports results management, such as type of test and date range.	Unknown	Unknown
+	HL7 DC 1.8.3.04	The solution should indicate normal and abnormal results depending on the data source.	Unknown	Unknown
+	HL7 DC 1.8.3.05	The solution should provide the ability to filter lab results by range, e.g. critical, abnormal or normal.	Unknown	Unknown
+	HL7 DC 1.8.3.06	The solution should display numerical results in flow sheets, graphical form, and allow comparison of results.	Unknown	Unknown
+	HL7 DC 1.8.3.07	The solution should the ability to group tests done on the same day.	Unknown	Unknown
+	HL7 DC 1.8.3.08	The solution should notify relevant providers (ordering, copy to) that new results have been received.	Unknown	Unknown
+	HL7 DC 1.8.3.09	The solution should provide the ability for the user, to whom a result is presented, to acknowledge the result.	Unknown	Unknown
+	HL7 DC 1.8.3.10	The solution should provide the ability to route results to other appropriate care providers, such as nursing home, consulting physicians, etc.	Unknown	Unknown
+	HL7 DC 1.8.3.11	The solution should route results to patients by methods such as phone, fax, electronically or letter.	Unknown	Unknown
+	HL7 DC 1.8.3.12	The solution should provide the ability for providers to pass on the responsibility to perform follow up actions to other providers.	Unknown	Unknown
+	HL7 DC 1.8.3.13	The solution should provide the ability for an authorized user to group results into clinically logical sections.	Unknown	Unknown
+	HL7 DC 1.8.3.14	The solution should trigger decision support algorithms from the results.	Unknown	Unknown
+	HL7 DC 1.8.3.15	The solution should link the results to a specific order.	Unknown	Unknown
+	HL7 DC 1.8.3.16	The solution should provide the ability for providers to annotate a result.	Unknown	Unknown
+	HL7 DC 1.8.3.17	The solution should display a link to an image associated with results.	Unknown	Unknown
+	DC 1.8.4	Manage Patient Clinical Measurements		
+	HL7 DC 1.8.4.01	The solution should capture patient vital signs such as blood pressure, temperature, heart rate, respiratory rate, and severity of pain as discrete elements of structured or unstructured data.	Unknown	Unknown
+	HL7 DC 1.8.4.02	The solution should capture psychiatric symptoms and daily functioning as structured or unstructured data	Unknown	Unknown
+	HL7 DC 1.8.4.03	The solution should capture other clinical measures such as peak expiratory flow rate, size of lesions, oxygen saturation, height, weight, and body mass index as discrete elements of structured or unstructured data.	Unknown	Unknown
+	HL7 DC 1.8.4.04	The solution should compute and display percentile values when data with normative distributions are entered.	Unknown	Unknown
+	HL7 DC 1.8.4.05	The solution should provide normal ranges for data based on age and other parameters such as height, weight, ethnic background, gestational age.	Unknown	Unknown
+	DC 1.8.5	Manage Clinical Documentation & Notes		
+	HL7 DC 1.8.5.01	The solution should provide the ability to capture clinical documentation (henceforth "documentation") including original, update by amendment in order to correct, and addenda.	Unknown	Unknown
+	HL7 DC 1.8.5.02	The solution should provide the ability to capture free text documentation.	Unknown	Unknown
+	HL7 DC 1.8.5.03	The solution should present documentation templates (structured or free text) to facilitate creating documentation.	Unknown	Unknown
+	HL7 DC 1.8.5.04	The solution should provide the ability to view other documentation within the patient's logical record while creating documentation.	Unknown	Unknown
+	HL7 DC 1.8.5.05	The solution should provide the ability to associate documentation for a specific patient with a given event, such as an office visit, phone communication, e-mail consult, lab result, etc.	Unknown	Unknown
+	HL7 DC 1.8.5.06	The solution should provide the ability to associate documentation with problems and/or diagnoses.	Unknown	Unknown
+	HL7 DC 1.8.5.07	The solution should provide the ability to update documentation prior to finalizing it.	Unknown	Unknown
+	HL7 DC 1.8.5.08	The solution should provide the ability to finalize a document or note.	Unknown	Unknown
+	HL7 DC 1.8.5.09	The solution should provide the ability to attribute record and display the identity of all users contributing to or finalizing a document or note, including the date and time of entry (see appropriate criteria in IN.2.2 (Auditable Records)).	Unknown	Unknown
+	HL7 DC 1.8.5.10	The solution should present captured documentation.	Unknown	Unknown
+	HL7 DC 1.8.5.11	The solution should provide the ability to filter, search or sort notes.	Unknown	Unknown
+	HL7 DC 1.8.5.12	The solution should provide documentation templates for data exchange.	Unknown	Unknown
+	DC 1.8.6	Manage Documentation of Clinician Response to Decision Support Prompts		
+	HL7 DC 1.8.6.01	The solution should provide the ability to capture clinical decision support prompts and user decisions to accept or override those prompts.	Unknown	Unknown
+	HL7 DC 1.8.6.02	The solution should provide the ability to record the reason for variation from the decision support prompt.	Unknown	Unknown
+	HL7 DC 1.8.6.03	The solution should provide the ability to display recorded variances upon request by authorized users of the EMR.	Unknown	Unknown
+	DC 1.9	Generate & Record Patient-specific instructions		
+	HL7 DC 1.9.01	The solution should provide the ability to generate instructions pertinent to the patient for standardized procedures.	Unknown	Unknown
+	HL7 DC 1.9.02	The solution should provide the ability to generate instructions pertinent to the patient based on clinical judgment.	Unknown	Unknown
+	HL7 DC 1.9.03	The solution should provide the ability to include details on further care such as follow up, return visits and appropriate timing of further care.	Unknown	Unknown
+	HL7 DC 1.9.04	The solution should provide the ability to record that instructions were given to the patient.	Unknown	Unknown
+	HL7 DC 1.9.05	The solution should provide the ability to record the actual instructions given to the patient or reference the document(s) containing those instructions.	Unknown	Unknown
+	HL7 DC 1.9.06	The Generate & Record Patient-Specific Instructions should conform to function IN.2.2 (Auditable Records) requirements.	Unknown	Unknown
+DC 2.	Clinical Decision Support			
+	HL7 DC 2.0.0.01	"The Clinical Decision Support capabilities should conform to function IN.1.1 (Entity
+Authentication) requirements."	Unknown	Unknown
+	HL7 DC 2.0.0.02	"The Clinical Decision Support capabilities should conform to function IN.1.2 (Entity
+Authorization) requirements."	Unknown	Unknown
+	HL7 DC 2.0.0.03	The Clinical Decision Support capabilities should conform to function IN.2.2 (Auditable Records)  requirements.	Unknown	Unknown
+	HL7 DC 2.0.0.04	"The Clinical Decision Support capabilities should conform to function IN.1.3 (Entity
+Access Control) requirements."	Unknown	Unknown
+	HL7 DC 2.0.0.05	The Clinical Decision Support capability should conform to function IN.1.5 (Non-repudiation), to guarantee that the sources and receivers of data cannot deny that they entered/sent/received the data, if the solution is used to enter, modify or exchange data.	Unknown	Unknown
+	HL7 DC 2.0.0.06	The  Clinical Decision Support capability should conform to function IN.1.7 (Secure Data Routing), to ensure that the exchange occurs only among authorized senders and receivers.	Unknown	Unknown
+	HL7 DC 2.0.0.07	The  Clinical Decision Support capability should conform to function IN.1.8 (Information Attestation), to show authorship and responsibility for the data.	Unknown	Unknown
+	HL7 DC 2.0.0.08	"The  Clinical Decision Support capability should conform to function IN.2.1 (Data
+Retention, Availability and Destruction)."	Unknown	Unknown
+	HL7 DC 2.0.0.09	The  Clinical Decision Support capability should conform to function IN.2.3 (Synchronization).	Unknown	Unknown
+	HL7 DC 2.0.0.10	"The  Clinical Decision Support capability should conform to function IN.2.4 (Extraction of Health Record Information), to support data extraction across the complete health record
+of an individual."	Unknown	Unknown
+	HL7 DC 2.0.0.11	"The  Clinical Decision Support capability should conform to function IN.2.5.1 (Manage
+Unstructured Health Record Information), to ensure data integrity through all changes."	Unknown	Unknown
+	HL7 DC 2.0.0.12	The  Clinical Decision Support capability should conform to function IN.2.5.2 (Manage Structured Health Record Information), to ensure data integrity through all changes.	Unknown	Unknown
+	HL7 DC 2.0.0.13	The  Clinical Decision Support capability should conform to function IN.4.1 (Standard Terminologies and Terminology Models), to support semantic interoperability.	Unknown	Unknown
+	HL7 DC 2.0.0.14	The  Clinical Decision Support capability should conform to function IN.4.2 (Maintenance and Versioning of Standard Terminologies), to preserve the semantics of coded data over time.	Unknown	Unknown
+	HL7 DC 2.0.0.15	The  Clinical Decision Support capability should conform to function IN.4.3 (Terminology Mapping) requirements.	Unknown	Unknown
+	HL7 DC 2.0.0.16	The  Clinical Decision Support capability should conform to function IN.5.1 (Interchange Standards), to support interoperability.	Unknown	Unknown
+	HL7 DC 2.0.0.17	The  Clinical Decision Support capability should conform to function IN.5.2 (Interchange Standards Versioning and Maintenance), to accommodate the inevitable evolution of interchange standards.	Unknown	Unknown
+	HL7 DC 2.0.0.18	"The  Clinical Decision Support capability should conform to conform to function IN.5.3
+(Standards-based Application Integration) requirements."	Unknown	Unknown
+	HL7 DC 2.0.0.19	The  Clinical Decision Support capability should conform to function IN.5.4 (Interchange Agreements), to define how the sender and receiver will exchange data, if the solution exchanges data with other solutions outside itself.	Unknown	Unknown
+	HL7 DC 2.0.0.20	The Clinical Decision Support capability should conform to function IN.1.9 (Patient Privacy and Confidentiality) requirements.	Unknown	Unknown
+	HL7 DC 2.0.0.21	The Clinical Decision Support capability should conform to function IN.2.2 (Auditable Records) requirements.	Unknown	Unknown
+	DC 2.1	Manage Health Information to Provide Decision Support		
+	HL7 DC 2.1.0.01	The Manage Health Information to Provide Decision Support capabilities should conform to function IN 1.4 (Patient Access Management) requirements.	Unknown	Unknown
+	HL7 DC 2.1.0.02	The Manage Health Information to Provide Decision Support capabilities should conform to function IN.1.9 (Patient Privacy and Confidentiality) requirements.	Unknown	Unknown
+	HL7 DC 2.1.0.03	The Manage Health Information to Provide Decision Support capabilities should conform to function IN.2.2 (Auditable Records)  requirements.	Unknown	Unknown
+	HL7 DC 2.1.0.04	The Manage Health Information to Provide Decision Support capabilities should conform to function IN.3 (Registry and Directory Services) requirements.	Unknown	Unknown
+	DC 2.1.1	Support for Standard Assessments		
+	HL7 DC 2.1.1.01	The solution should provide the ability to access the standard assessment in the patient record.	Unknown	Unknown
+	HL7 DC 2.1.1.02	The solution should provide the ability to access to health standards and practices appropriate to the EMR user’s scope of practice.	Unknown	Unknown
+	HL7 DC 2.1.1.03	The solution should provide the ability to compare elements of assessments captured by the clinician and those available as best practices and/or evidence based resources.	Unknown	Unknown
+	HL7 DC 2.1.1.04	The solution should provide the ability to derive supplemental assessment data from evidence based standard assessments, practice standards, or other generally accepted, verifiable, and regularly updated standard clinical sources.	Unknown	Unknown
+	HL7 DC 2.1.1.05	The solution should provide prompts based on practice standards to recommend additional assessment functions.	Unknown	Unknown
+5645	HL7 DC 2.1.1.06	The Support for Standard Assessments capability should conform to function DC.1.4.3 (Manage Problem List) requirements and provide the ability to update the problem list by activating new problems and deactivating old problems as identified by conduct of standard assessments.	Unknown	Unknown
+5646	HL7 DC 2.1.1.07	The solution should provide the ability to create standard assessments that correspond to the problem list.	Unknown	Unknown
+	HL7 DC 2.1.1.08	"The Support for Standard Assessments capability should conform to function DC 2.1.2
+(Support for Patient Context-driven Assessments) requirements."	Unknown	Unknown
+	DC 2.1.2	Support for Patient-Driven Assessments		
+	HL7 DC 2.1.2.01	The solution should provide the ability to access health assessment data in the patient record.	Unknown	Unknown
+	HL7 DC 2.1.2.02	The solution should provide the ability to compare assessment data entered during the encounter and the accessed health evidence based standards and best practices.	Unknown	Unknown
+	HL7 DC 2.1.2.03	The solution should provide the ability to compare health data and patient context-driven assessments to practice standards in order to prompt additional testing, possible diagnoses, or adjunctive treatment.	Unknown	Unknown
+5647	HL7 DC 2.1.2.04	The solution should provide the ability to correlate assessment data and the data in the patient specific problem list.	Unknown	Unknown
+	HL7 DC 2.1.2.05	"The Support for Patient-Driven Assessments should conform to function DC 2.1.1 (Support
+for Standard Assessments) requirements."	Unknown	Unknown
+	HL7 DC 2.1.2.06	"The Support for Patient-Driven Assessments should conform to function DC.1.5 (Manage
+Assessments) requirements."	Unknown	Unknown
+	HL7 DC 2.1.2.07	"The Support for Patient-Driven Assessments should conform to function DC.1.4.3
+(Manage Problem List) requirements."	Unknown	Unknown
+	DC 2.1.3	Support for Identification of Potential Problems & Trends		
+	HL7 DC 2.1.3.01	The Support for Identification of Potential Problems & Trends capability should conform to conform to function DC.1.5 (Manage Assessments) requirements and provide the ability to access standard assessment data in the patient record.	Unknown	Unknown
+	HL7 DC 2.1.3.02	The solution should provide the ability to access health standards and practices appropriate to the EMR user’s scope of practice at the time of the encounter.	Unknown	Unknown
+	HL7 DC 2.1.3.03	The solution should provide the ability to compare patient context-driven assessments and additional health information to best practices in order to identify patient specific growth or development patterns, health trends and potential health problems.	Unknown	Unknown
+	HL7 DC 2.1.3.04	The solution should provide the ability to configure rules defining abnormal trends.	Unknown	Unknown
+	HL7 DC 2.1.3.05	The solution should prompt the provider with abnormal trends.	Unknown	Unknown
+	HL7 DC 2.1.3.06	The solution should prompt the provider for additional assessments, testing or adjunctive treatment.	Unknown	Unknown
+	HL7 DC 2.1.3.07	The Support for Identification of Potential Problems & Trends capability should conform to function DC.1.8.6 (Manage Documentation of Clinician Response to Decision Support Prompts). requirements.	Unknown	Unknown
+	HL7 DC 2.1.3.08	The solution should provide the ability to integrate health information contained in the record with appropriate teaching materials.	Unknown	Unknown
+	HL7 DC 2.1.3.09	The Support for Identification of Potential Problems & Trends capability should conform to function DC 2.2.1.2 (Support for Context-sensitive Care Plans, Guidelines, Protocols) requirements.	Unknown	Unknown
+	DC 2.1.4	Support for Patient and Family Preferences		
+	HL7 DC 2.1.4.01	The Support for Patient and Family Preferences capability should conform to function DC.1.3.1 (Manage Patient and Family Preferences).	Unknown	Unknown
+	HL7 DC 2.1.4.02	The solution should provide for the ability to capture and manage patient and family preferences as they pertain to current treatment plans.	Unknown	Unknown
+	HL7 DC 2.1.4.03	The solution should provide the ability to update care guidelines and options relating to documented patient and family preferences, including standards of practice e.g. treatment options for individuals who refuse blood transfusions.	Unknown	Unknown
+	HL7 DC 2.1.4.04	The solution should provide the ability to compare care guidelines and options relating to documented patient and family preferences, including standards of practice.	Unknown	Unknown
+	HL7 DC 2.1.4.05	The solution should prompt the provider for testing and treatment options based on patient and family preferences and provide the ability to compare to standard practice	Unknown	Unknown
+	HL7 DC 2.1.4.06	The solution should provide the ability to integrate preferences with appropriate teaching materials.	Unknown	Unknown
+	HL7 DC 2.1.4.07	The solution should provide the ability to integrate necessary documentation of preferences, such as living wills, specific consents or releases	Unknown	Unknown
+	HL7 DC 2.1.4.08	The Support for Patient and Family Preferences capability should conform to function DC.1.3.2 (Manage Patient Advance Directives).	Unknown	Unknown
+	DC 2.2	Care and Treatment Plans, Guidelines and Protocols		
+	HL7 DC 2.2.0.01	The Care and Treatment Plans, Guidelines and Protocols capability should conform to function IN.1.9 (Patient Privacy and Confidentiality).	Unknown	Unknown
+	HL7 DC 2.2.0.02	The Care and Treatment Plans, Guidelines and Protocols capability should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+	DC 2.2.1	Support for Condition Based Care and Treatment Plans, Guidelines, Protocols		
+	HL7 DC 2.2.1.01	The Support for Condition Based Care and Treatment Plans, Guidelines, Protocols capability should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 2.2.1.02	The Support for Condition Based Care and Treatment Plans, Guidelines, Protocols capability should conform to function IN.3 (Registry and Directory Services).	Unknown	Unknown
+	DC 2.2.1.1	Support for Standard Care Plans, Guidelines, Protocols		
+	HL7 DC 2.2.1.1.01	The Support for Standard Care Plans, Guidelines, Protocols capability should conform to function DC.1.6.1 (Present Guidelines and Protocols for Planning Care) and provide the ability to access standard care plans, protocols and guidelines when requested within the context of a clinical encounter.	Unknown	Unknown
+	HL7 DC 2.2.1.1.02	The solution should provide the ability to create and use site specific care plans, protocols, and guidelines.	Unknown	Unknown
+	HL7 DC 2.2.1.1.03	The solution should provide the ability to make site-specific modifications to standard care plans, protocols, and guidelines obtained from outside sources.	Unknown	Unknown
+	HL7 DC 2.2.1.1.04	The solution should identify, track and provide alerts, notifications and reports about variances from standard care plans, guidelines and protocols.	Unknown	Unknown
+	HL7 DC 2.2.1.1.05	The Support for Standard Care Plans, Guidelines, Protocols capability should conform to DC.2.2.1.2 (Support for Context-Sensitive Care Plans, Guidelines, Protocols) requirements.	Unknown	Unknown
+	HL7 DC 2.2.1.1.06	The Support for Standard Care Plans, Guidelines, Protocols capability should conform to DC.2.1.1 (Support for Standard Assessments) requirements.	Unknown	Unknown
+	DC 2.2.1.2	Support for Context- Sensitive Care Plans, Guidelines, Protocols		
+	HL7 DC 2.2.1.2.01	The solution should provide the ability to access care and treatment plans that are sensitive to the context of patient data and assessments.	Unknown	Unknown
+	HL7 DC 2.2.1.2.02	The solution should provide the ability to capture care processes across the continuum of care.	Unknown	Unknown
+	HL7 DC 2.2.1.2.03	The solution should present care processes from across the continuum of care.	Unknown	Unknown
+	HL7 DC 2.2.1.2.04	The solution should provide the ability to document the choice of action in response to care plan suggestions.	Unknown	Unknown
+	HL7 DC 2.2.1.2.05	The solution should identify, track and provide alerts, notifications and reports about variances from standard care plans, guidelines and protocols.	Unknown	Unknown
+	HL7 DC 2.2.1.2.06	The Support for Context-Sensitive Care Plans, Guidelines, Protocols capability should conform to DC 2.2.1.1 Support for Standard Care Plans, Guidelines, Protocols.	Unknown	Unknown
+	HL7 DC 2.2.1.2.07	The Support for Context-Sensitive Care Plans, Guidelines, Protocols capability should conform to DC 2.1.1 Support for Standard Assessments.	Unknown	Unknown
+	HL7 DC 2.2.1.2.08	The Support for Context-Sensitive Care Plans, Guidelines, Protocols capability should conform to DC 2.1.2 Support for Patient Context-Driven Assessments.	Unknown	Unknown
+	DC 2.2.2	Support Consistent Healthcare Management of Patient Groups or Populations		
+	HL7 DC 2.2.2.01	The Support Consistent Healthcare Management of Patient Groups or Populationscapability should conform toDC 2.2.1 Support for Context-Sensitive Care Plans, Guidelines, Protocols requirements.	Unknown	Unknown
+	HL7 DC 2.2.2.02	The solution should provide the ability to identify patients eligible for healthcare management protocols based on criteria identified within the protocol.	Unknown	Unknown
+	HL7 DC 2.2.2.03	The solution should provide the ability to include or exclude a patient from an existing healthcare management protocol group.	Unknown	Unknown
+	HL7 DC 2.2.2.04	The solution should provide the ability to audit compliance of selected populations and groups that are the subjects of healthcare management protocols.	Unknown	Unknown
+	HL7 DC 2.2.2.05	The Support Consistent Healthcare Management of Patient Groups or Populations capability should conform to S 2.2.2 Standard Report Generation requirements.	Unknown	Unknown
+	HL7 DC 2.2.2.06	The Support Consistent Healthcare Management of Patient Groups or Populations capability should conform to IN 3 Registry & Directory Services requirements.	Unknown	Unknown
+	DC 2.2.3	Support for Research Protocols Relative to Individual Patient Care		
+	HL7 DC 2.2.3.01	The solution should provide the ability to present protocols for patients enrolled in research studies.	Unknown	Unknown
+	HL7 DC 2.2.3.02	The solution should provide the ability to maintain research study protocols.	Unknown	Unknown
+	HL7 DC 2.2.3.03	The Support for Research Protocols Relative to Individual Patient Care capability should conform to function S.3.3.1 (Enrollment of Patients), to enable participation in research studies.	Unknown	Unknown
+	HL7 DC 2.2.3.04	The solution should provide the ability to identify and track patients participating in research studies.	Unknown	Unknown
+	HL7 DC 2.2.3.05	The solution should provide the ability to capture appropriate details of patient condition and response to treatment as required for patients enrolled in research studies.	Unknown	Unknown
+	HL7 DC 2.2.3.06	The Support for Research Protocols Relative to Individual Patient Care capability should conform to function S.2.2.2 (Standard Report Generation).	Unknown	Unknown
+	HL7 DC 2.2.3.07	The Support for Research Protocols Relative to Individual Patient Care capability should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 2.2.3.08	The Support for Research Protocols Relative to Individual Patient Care capability should conform to function IN.3 (Registry and Directory Services) if research protocols require standardized transmission of data to/from a registry or directory.	Unknown	Unknown
+	DC 2.2.4	Support Self-Care		
+	HL7 DC 2.2.4.01	The solution should provide the ability to present patient guidance and reminders appropriate for self-management of clinical conditions.	Unknown	Unknown
+	HL7 DC 2.2.4.02	The solution should provide the ability to manage and/or develop patient guidance and reminders related to specific clinical conditions.	Unknown	Unknown
+	HL7 DC 2.2.4.03	The Support Self-Care capability should conform to function DC.1.1.3.2 (Capture of Patient Originated Data).	Unknown	Unknown
+	HL7 DC 2.2.4.04	The Support Self-Care capability should conform to function DC.1.3.1 (Manage Patient and Family Preferences).	Unknown	Unknown
+	HL7 DC 2.2.4.05	The Support Self-Care capability should conform to function IN.1.4 (Patient Access Management).	Unknown	Unknown
+	HL7 DC 2.2.4.06	The Support Self-Care capability should conform to function IN.3 (Registry and Directory Services).	Unknown	Unknown
+	DC 2.3	Medication & Immunization Management		
+	HL7 DC 2.3.0.01	The Medication & Immunization Management capabilities should conform to the IN 1.9 Patient Privacy & Confidentialty requirements.	Unknown	Unknown
+	HL7 DC 2.3.0.02	The Medication & Immunization Management capabilities should conform to the IN 2.2 Auditable Records requirements.	Unknown	Unknown
+	HL7 DC 2.3.0.03	The Medication & Immunization Managementcapabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 2.3.1	Support for Medication & Immunization Ordering		
+	DC 2.3.1.1	Support for Drug Interaction Checking		
+3203	HL7 DC 2.3.1.1.01	The solution should check for and alert providers to interactions between prescribed drugs and medications on the current medication list.	Unknown	Unknown
+3204	HL7 DC 2.3.1.1.02	The solution should relate medication allergies to medications to facilitate allergy checking decision support for medication orders.	Unknown	Unknown
+3205	HL7 DC 2.3.1.1.03	The solution should provide the ability to document that a provider was presented with and acknowledged a drug interaction warning.	Unknown	Unknown
+3206	HL7 DC 2.3.1.1.04	The solution should provide the ability to prescribe a medication despite alerts for interactions and/or allergies being present.	Unknown	Unknown
+3207	HL7 DC 2.3.1.1.05	The solution should provide the ability to set the severity level at which warnings should be displayed.	Unknown	Unknown
+3208	HL7 DC 2.3.1.1.06	The solution should provide the ability to check for duplicate therapies.	Unknown	Unknown
+3209	HL7 DC 2.3.1.1.10	The solution should provide the ability to check medications against a list of drugs noted to be ineffective for the patient in the past.	Unknown	Unknown
+3210	HL7 DC 2.3.1.1.11	The solution should identify contraindications between a drug and patient conditions at the time of medication ordering.	Unknown	Unknown
+	DC 2.3.1.2	Support for Patient Specific Dosing & Warnings		
+3211	HL7 DC 2.3.1.2.01	The solution should provide the ability to identify an appropriate drug dosage range, specific for each known patient condition and parameter at the time of medication ordering.	Unknown	Unknown
+3212	HL7 DC 2.3.1.2.02	The solution should provide the ability to automatically alert the provider if contraindications to the ordered dosage range are identified.	Unknown	Unknown
+3213	HL7 DC 2.3.1.2.03	The solution should provide the ability for the provider to override a drug dosage warning.	Unknown	Unknown
+3214	HL7 DC 2.3.1.2.04	The solution should provide the ability to document reasons for overriding a drug alert or warning at the time of ordering.	Unknown	Unknown
+3215	HL7 DC 2.3.1.2.08	The solution should compute drug doses, based on appropriate dosage ranges, using the patient’s body weight.	Unknown	Unknown
+	HL7 DC 2.3.1.2.09	The solution should provide the ability to specify an alternative “dosing weight” for the purposes of dose calculation.	Unknown	Unknown
+	HL7 DC 2.3.1.2.10	The solution should perform drug dosage functions using any component of a combination drug (e.g., acetaminophen-hydrocodone).	Unknown	Unknown
+	HL7 DC 2.3.1.2.11	The solution should provide the ability to record the factors used to calculate the future dose for a given prescription.	Unknown	Unknown
+	DC 2.3.1.3	Support for Medication Recommendations		
+	HL7 DC 2.3.1.3.01	The Support for Medication Recommendations capability should conform to function DC 2.3.1.2 (Support for Patient-Specific Dosing and Warnings) requirements.	Unknown	Unknown
+	HL7 DC 2.3.1.3.02	The solution should present recommendations for medication regimens based on findings related to the patient diagnosis.	Unknown	Unknown
+	HL7 DC 2.3.1.3.03	The solution should present alternative treatments in medications on the basis of practice standards, cost, formularies, or protocols.	Unknown	Unknown
+	HL7 DC 2.3.1.3.04	The solution should present suggested lab monitoring as appropriate to a particular medication.	Unknown	Unknown
+	HL7 DC 2.3.1.3.05	The Support for Medication Recommendations capability should conform to function IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	DC 2.3.2	Support for Medication and Immunization Administration		
+	HL7 DC 2.3.2.01	The solution should present information necessary to correctly identify the patient and accurately administer medications and immunizations such as patient name, medication name, strength, dose, route and frequency.	Unknown	Unknown
+	HL7 DC 2.3.2.02	The solution should alert providers to potential administration errors such as wrong patient, wrong drug, wrong dose, wrong route and wrong time as it relates to medication and immunizations administration.	Unknown	Unknown
+	HL7 DC 2.3.2.03	The solution should alert providers to potential medication administration errors at the point of medication administration.	Unknown	Unknown
+	HL7 DC 2.3.2.04	The solution should provide the ability to capture all pertinent details of the medication administration including medication name, strength, dose, route, time of administration, exceptions to administration, and administrator of the medication.	Unknown	Unknown
+	HL7 DC 2.3.2.05	The solution should capture the administrator of the immunization and the immunization information identified in DC.1.8.2 (Manage Immunization Administration), Conformance Criteria #4 (The solution should provide the ability to capture immunization administration details, including date, type, lot number and manufacturer).	Unknown	Unknown
+	HL7 DC 2.3.2.06	The solution should generate documentation of medication or immunization administration as a by-product of verification of patient, medication, dose, route and time.	Unknown	Unknown
+	HL7 DC 2.3.2.07	The solution should prompt or remind providers regarding the date/time range for timely administration of medications.	Unknown	Unknown
+	HL7 DC 2.3.2.08	"The solution should suggest alternative administration techniques based on age, developmental stage, weight, physiological status, mental status, educational level, and
+past physical history of the patient. "	Unknown	Unknown
+	HL7 DC 2.3.2.09	The Support for Medication and Immunization Administration capability should conform to DC 2.7.1 Access Healthcare Guidance and provide the ability for a provider to access drug monograph information.	Unknown	Unknown
+	DC 2.4	Orders, Referrals, Results & Care Management		
+	DC 2.4.1	Create Order Set Templates		
+	HL7 DC 2.4.1.01	The solution should provide the ability to create order set templates.	Unknown	Unknown
+	HL7 DC 2.4.1.02	The solution should provide the ability to maintain order set templates, including version control.	Unknown	Unknown
+	HL7 DC 2.4.1.03	The solution should provide the ability to create order set templates from provider input.	Unknown	Unknown
+	HL7 DC 2.4.1.04	The solution should capture order sets based on patient data that should be provided by the provider or that should be in accordance with preferred standards.	Unknown	Unknown
+	HL7 DC 2.4.1.05	The solution should provide the ability to create order set templates for known conditions for a particular disease.	Unknown	Unknown
+	HL7 DC 2.4.1.06	The solution should present the order set templates to the provider.	Unknown	Unknown
+	HL7 DC 2.4.1.07	The solution should record the basis of the practice standards or criteria for the creation of the order set templates.	Unknown	Unknown
+	HL7 DC 2.4.1.08	The solution should provide the ability to relate order set templates to aid decision support for certain diseases.	Unknown	Unknown
+	HL7 DC 2.4.1.09	The Create Order Set Templates capability should conform to DC 1.7.3 Manage Order Sets requirements.	Unknown	Unknown
+	DC 2.4.2	Support for Non-Medication Ordering		
+	HL7 DC 2.4.2.01	The solution should identify required order entry components for non-medication orders.	Unknown	Unknown
+	HL7 DC 2.4.2.02	The solution should present an alert at the time of order entry, if a non-medication order is missing required information.	Unknown	Unknown
+	HL7 DC 2.4.2.03	The solution should present an alert via warnings of orders that should be inappropriate or contraindicated for specific patients at the time of provider order entry.	Unknown	Unknown
+	HL7 DC 2.4.2.04	The Support for Non-Medication Ordering capability should conform to S 3.3.3 Service Authorization requirements.	Unknown	Unknown
+	DC 2.4.3	Support for Result Interpretation		
+	HL7 DC 2.4.3.01	The solution should present alerts for a result that is outside of a normal value range.	Unknown	Unknown
+	HL7 DC 2.4.3.02	The solution should provide the ability to trend results.	Unknown	Unknown
+	HL7 DC 2.4.3.03	The solution should provide the ability to evaluate pertinent results at the time of provider order entry (such as evaluation of lab results at the time of ordering a radiology exam).	Unknown	Unknown
+	DC 2.4.4	Support for Referrals		
+	DC 2.4.4.1	Support for referral Process		
+	HL7 DC 2.4.4.1.01	The solution should to include clinical and administrative data (e.g. insurance information) as part of the referral process.	Unknown	Unknown
+	HL7 DC 2.4.4.1.02	The solution should to include test and procedure results with a referral.	Unknown	Unknown
+	HL7 DC 2.4.4.1.03	The solution should to include standardized or evidence based protocols with the referral.	Unknown	Unknown
+	HL7 DC 2.4.4.1.04	The solution should allow clinical, administrative data, and test and procedure results to be transmitted to the referral clinician.	Unknown	Unknown
+	HL7 DC 2.4.4.1.05	The Support for Referral Process should conform to S 2.2.1 Health Record Output requirements.	Unknown	Unknown
+	DC 2.4.4.2	Support for Referral Recommendations		
+	HL7 DC 2.4.4.2.01	The solution should present recommendations for potential referrals based on diagnosis(es).	Unknown	Unknown
+	HL7 DC 2.4.4.2.02	The solution should present recommendations for potential referrals based on patient condition (e.g. for smoking cessation counseling if the patient is prescribed a medication to support cessation).	Unknown	Unknown
+	HL7 DC 2.4.4.2.03	The Support for Referral Recommendations capabilities should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	DC 2.4.5	Support for Care Delivery		
+	DC 2.4.5.1	Support for Safe Blood Administration		
+	HL7 DC 2.4.5.1.01	The solution should present information necessary to correctly identify the patient and accurately administer blood products including patient name, blood product number, amount, route, product expiration date and time of administration.	Unknown	Unknown
+	HL7 DC 2.4.5.1.02	The solution should capture validation of the correct matching of the patient to the blood product.	Unknown	Unknown
+	HL7 DC 2.4.5.1.03	The solution should capture the blood product number, amount, route and time of administration.	Unknown	Unknown
+	HL7 DC 2.4.5.1.04	The Support for Safe Blood Administration capability should conform to DC 1.8.4 manage Patient Clinical Measurements and capture the blood pressure, temperature, pulse, respirations of the patient receiving the product.	Unknown	Unknown
+	HL7 DC 2.4.5.1.05	The Support for Safe Blood Administration capability should conform to S 2.2.1 Health Record Output requirements.	Unknown	Unknown
+	DC 2.4.5.2	Support for Accurate Specimen Collection		
+	HL7 DC 2.4.5.2.01	"The solution should provide the ability to present information necessary to correctly identify the patient and accurately identify the specimen to be collected including,
+but not limited to, patient name, specimen type, specimen source, means of collection, date and time."	Unknown	Unknown
+	HL7 DC 2.4.5.2.02	The solution should report variation between the type of specimen order placed and actual specimen received.	Unknown	Unknown
+	HL7 DC 2.4.5.2.03	The solution should preesent the details of specimen collection.	Unknown	Unknown
+	HL7 DC 2.4.5.2.04	The Support for Accurate Specimen Collection capability should conform to S 2.2.1 Health Record Output requirements.	Unknown	Unknown
+	HL7 DC 2.4.5.2.05	The solution should notify the provider in real-time of a variation between the type of specimen order placed and the actual specimen received.	Unknown	Unknown
+	DC 2.5	Support for Health Maintenance: Preventative Care & Wellness		
+	HL7 DC 2.5.0.01	The Support for Health Maintenance: Preventative Care & Wellness capabilities should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	HL7 DC 2.5.0.02	The Support for Health Maintenance: Preventative Care & Wellness capabilities should conform to the IN 1.9 Patient Privacy & Confidentialty requirements.	Unknown	Unknown
+	HL7 DC 2.5.0.03	The Support for Health Maintenance: Preventative Care & Wellness capabilities should conform to the IN 2.2 Auditable Records requirements.	Unknown	Unknown
+	HL7 DC 2.5.0.04	The Support for Health Maintenance: Preventative Care & Wellness capabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 2.5.1	Present Alerts for Preventative Services and Wellness		
+	HL7 DC 2.5.1.01	The solution should provide the ability to establish criteria for the identification of preventive care and wellness services based on patient demographics (e.g. age, gender).	Unknown	Unknown
+	HL7 DC 2.5.1.02	The solution should provide the ability to modify the established criteria that trigger the alerts.	Unknown	Unknown
+	HL7 DC 2.5.1.03	The solution should present recommended preventative or wellness services needed based upon clinical test results.	Unknown	Unknown
+	HL7 DC 2.5.1.04	The solution should present alerts to the provider of all patient specific preventive services that are due.	Unknown	Unknown
+	HL7 DC 2.5.1.05	The solution should provide the ability to produce a list of all alerts along with the scheduled date and time for the preventive service.	Unknown	Unknown
+	HL7 DC 2.5.1.06	The solution should provide the ability to produce a history of all alerts that were generated for the patient in the record.	Unknown	Unknown
+	DC 2.5.2	Notifications and Reminders for Preventative Services and Wellness		
+	HL7 DC 2.5.2.01	The solution should generate timely notifications to patients including services, tests or actions that are due or overdue.	Unknown	Unknown
+	HL7 DC 2.5.2.02	The solution should capture a history of notifications.	Unknown	Unknown
+	HL7 DC 2.5.2.03	The solution should provide the ability to track overdue preventive services.	Unknown	Unknown
+	HL7 DC 2.5.2.04	The solution should provide notification of overdue preventative services in the patient record.	Unknown	Unknown
+	HL7 DC 2.5.2.05	The solution should provide the ability to configure patient notifications (such as repetitions or timing of the activity).	Unknown	Unknown
+	HL7 DC 2.5.2.06	The solution should provide the ability to update content of notifications, guidelines, reminders and associated reference materials.	Unknown	Unknown
+	HL7 DC 2.5.2.07	The solution should provide the ability to manage the lifecycle of the states of the notifications and reminders.	Unknown	Unknown
+	DC 2.6	Support for Population Health		
+	HL7 DC 2.6.0.01	The Support for Population Health capabilities should conform to the IN 1.9 Patient Privacy & Confidentialty requirements.	Unknown	Unknown
+	HL7 DC 2.6.0.02	The Support for Population Health capabilities should conform to the IN 2.2 Auditable Records requirements.	Unknown	Unknown
+	DC 2.6.1	Support for Epidemiological Investigations of Clinical Health Within a Population		
+	HL7 DC 2.6.1.01	The solution should provide the ability to to aggregate patient information based on user-identified criteria.	Unknown	Unknown
+	HL7 DC 2.6.1.02	The solution should apply local privacy and confidentially rules when assembling aggregate data to prevent identification of individuals by unauthorized parties.	Unknown	Unknown
+	HL7 DC 2.6.1.03	The solution should provide the ability to to use any demographic or clinical information as criteria for aggregation.	Unknown	Unknown
+	HL7 DC 2.6.1.04	The solution should present aggregate data in the form of reports for external use.	Unknown	Unknown
+	HL7 DC 2.6.1.05	The solution should provide the ability to save report definitions for later use.	Unknown	Unknown
+	HL7 DC 2.6.1.06	The solution should present aggregate data in an electronic format for use by other analytical programs.	Unknown	Unknown
+	HL7 DC 2.6.1.07	The solution should provide the ability to to derive statistical information from aggregate data.	Unknown	Unknown
+	HL7 DC 2.6.1.08	The Support for Epidemiological Investigations of Clinical Health Within a Population capabilities should conform to IN.3 Registry and Directory Services requirements if biosurveillance or other epidemiological investigations require standardized transmission of data to/from a registry or directory.	Unknown	Unknown
+	DC 2.6.2	Support for Notification & Response		
+	HL7 DC 2.6.2.01	The solution should provide the ability to identify individual care providers or care managers within a cared for population.	Unknown	Unknown
+	HL7 DC 2.6.2.02	The solution should provide the ability to prepare a response notification to the care providers or care managers.	Unknown	Unknown
+	HL7 DC 2.6.2.03	The solution should provide the ability to the ability to capture notification of a health risk within a cared-for population from public health authorities or other external authoritative sources as either free-text or a structured message.	Unknown	Unknown
+	HL7 DC 2.6.2.04	The solution should provide the ability to coordinate with local and national programs to disseminate notifications of health risk to individual care providers or care-managers.	Unknown	Unknown
+	HL7 DC 2.6.2.05	The solution should provide the ability to notify patients, directly or indirectly, who are described by the health risk alert.	Unknown	Unknown
+	HL7 DC 2.6.2.06	The solution should present suggestions to the care provider indicating an appropriate course of action.	Unknown	Unknown
+	HL7 DC 2.6.2.07	"The solution should provide the ability to to notify public health authorities or other external authoritative sources of a health risk within a cared for population in accordance
+with scope of practice, organizational policy and jurisdictional law."	Unknown	Unknown
+	HL7 DC 2.6.2.08	The Support for Notification & Responsecapabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 2.6.3	Support for Monitoring Response Notifications Regarding a Specific Patient's Health		
+	HL7 DC 2.6.3.01	The solution should present specific actions to be taken at the patient level for a health risk alert.	Unknown	Unknown
+	HL7 DC 2.6.3.02	The solution should notify appropriate care providers of specific patient actions required by a health risk alert.	Unknown	Unknown
+	HL7 DC 2.6.3.03	The solution should provide the ability to identify those patients who have not received appropriate action in response to a health risk alert.	Unknown	Unknown
+	HL7 DC 2.6.3.04	The solution should provide the ability to to report on the omission of an appropriate response to the health risk alert in specific patients.	Unknown	Unknown
+	HL7 DC 2.6.3.05	The Support for Monitoring Response Notifications Regarding a Specific Patient's Health capabilities should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	HL7 DC 2.6.3.06	The Support for Monitoring Response Notifications Regarding a Specific Patient's Health capabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 2.7	Support for Knowledge Access		
+	HL7 DC 2.7.0.01	The Support for Knowledge Access capabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 2.7.1	Access Healthcare Guidance		
+	HL7 DC 2.7.1.01	The solution should provide the ability to access evidencebased healthcare recommendations, with documentation of sources	Unknown	Unknown
+	HL7 DC 2.7.1.02	The solution should provide the ability to access evidenced-based documentation appropriate for the care provider to render a timely judgment.	Unknown	Unknown
+	HL7 DC 2.7.1.03	The solution should provide the ability to access external evidence-based documentation.	Unknown	Unknown
+	HL7 DC 2.7.1.04	The Access Healthcare Guidance capabilities should conform to the DC 2.2.1.1 Support for Standard Care Plans, Guidelines, and Protocols requirements.	Unknown	Unknown
+	HL7 DC 2.7.1.05	The Access Healthcare Guidance capabilities should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	DC 2.7.2	Patient Knowledge Access		
+	HL7 DC 2.7.2.01	The solution should provide the ability to access information about wellness, disease management, treatments, and related information that is relevant for a specific patient.	Unknown	Unknown
+	HL7 DC 2.7.2.02	The solution should provide the ability to access information related to a health question directly from data in the health record or other means such as key word search.	Unknown	Unknown
+	HL7 DC 2.7.2.03	The solution should provide the ability to access patient educational information from external sources.	Unknown	Unknown
+	HL7 DC 2.7.2.04	The solution should provide the ability to identify links specific to information if the information is external-based.	Unknown	Unknown
+	HL7 DC 2.7.2.05	The Patient Knowledge Access capabilities should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	HL7 DC 2.7.2.06	The Patient Knowledge Access capabilities should conform to the IN 1.9 Patient Privacy & Confidentialty requirements.	Unknown	Unknown
+	HL7 DC 2.7.2.07	The Patient Knowledge Access capabilities should conform to the IN 2.2 Auditable Records requirements.	Unknown	Unknown
+DC 3.	Operations Management & Communication			
+	HL7 DC 3.1.0.01	The Operations Management & Communication capabilities should conform to the IN 1.1 Entity Authentication requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.02	The Operations Management & Communication capabilities should conform to the IN 1.2 Entity Authorization requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.03	The Operations Management & Communication capabilities should conform to the IN 1.3 Entity Access Control requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.04	The Operations Management & Communication capabilities should conform to the IN 1.6 Secure Data Exchange requirements when solution data exchanges cross entity boundaries within the EMR or external to the EMR to ensure that the data are protected.	Unknown	Unknown
+	HL7 DC 3.1.0.05	The Operations Management & Communication capabilities should conform to the IN 1.7 Secure Data Routing requirements when solution data exchanges with other sources or destinations of data to ensure that the exchange occurs only among authorized senders and receivers.	Unknown	Unknown
+	HL7 DC 3.1.0.06	The Operations Management & Communication capabilities should conform to the IN 1.8 Information Attestation requirements when the EMR is used to enter or modify data in the health record to show authorship and responsibility for the data.	Unknown	Unknown
+	HL7 DC 3.1.0.07	The Operations Management & Communication capabilities should conform to the IN 1.9 Patient Privacy & Confidentialty requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.08	The Operations Management & Communication capabilities should conform to the IN 2.1 Data Retention, Availability, & Destruction requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.09	The Operations Management & Communication capabilities should conform to the IN 2.2 Auditable Records requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.10	The Operations Management & Communication capabilities should conform to the IN 2.3 Synchronization requirements.	Unknown	Unknown
+	HL7 DC 3.1.0.11	The Operations Management & Communication capabilities should conform to the IN 2.4 Extraction of Health Record Information requirements when used to extract data for analysis and reporting to support data extraction across the complete health record for an individual.	Unknown	Unknown
+	DC 3.1	Clinical Workflow Tasking		
+	DC 3.1.1	Clinical Task Assignment & Routing		
+3216	HL7 DC 3.1.1.01	The solution should provide the ability for users to create manual clinical tasks.	Unknown	Unknown
+3217	HL7 DC 3.1.1.02	The solution should provide the ability to automate clinical task creation.	Unknown	Unknown
+3218	HL7 DC 3.1.1.03	The solution should provide the ability to manually modify and update task status (e.g. created, performed, held, canceled, pended, denied, and resolved).	Unknown	Unknown
+3219	HL7 DC 3.1.1.03	The solution should provide the ability to manually modify and update task status (e.g. created, performed, held, canceled, pended, denied, and resolved).	Unknown	Unknown
+3220	HL7 DC 3.1.1.04	The solution should provide the ability to automatically modify or update the status of tasks based on workflow rules.	Unknown	Unknown
+3221	HL7 DC 3.1.1.05	The solution should provide the ability to assign, and change the assignment of, tasks to individuals or to clinical roles.	Unknown	Unknown
+3222	HL7 DC 3.1.1.06	The solution should provide the ability to manage workflow task routing to multiple individuals or roles in succession and/or in parallel.	Unknown	Unknown
+3223	HL7 DC 3.1.1.07	The solution should provide the ability to prioritize tasks based on urgency assigned to the task.	Unknown	Unknown
+3224	HL7 DC 3.1.1.08	The solution should provide the ability to restrict task assignment based on appropriate role as defined by the entity.	Unknown	Unknown
+3225	HL7 DC 3.1.1.09	The solution should provide the ability to escalate clinical tasks as appropriate to ensure timely completion.	Unknown	Unknown
+3225	HL7 DC 3.1.1.10	The Clinical Task Assignment & Routing capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+3225	HL7 DC 3.1.1.11	The Clinical Task Assignment & Routing capability should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 3.1.2	Clinical Task Linking		
+	HL7 DC 3.1.2.01	Thesolution should provide the ability to link a clinical task to the component of the HER required to complete the task.	Unknown	Unknown
+	HL7 DC 3.1.2.02	The Clinical Task Tracking capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	DC 3.1.3	Clinical Task Tracking		
+3226	HL7 DC 3.1.3.01	The solution should provide the ability to track the status of tasks.	Unknown	Unknown
+3227	HL7 DC 3.1.3.02	The solution should provide the ability to notify providers of the status of tasks.	Unknown	Unknown
+3228	HL7 DC 3.1.3.03	The solution should provide the ability to sort clinical tasks by status.	Unknown	Unknown
+3229	HL7 DC 3.1.3.04	The solution should provide the ability to present current clinical tasks as work lists.	Unknown	Unknown
+3230	HL7 DC 3.1.3.05	The solution should provide the ability to define the presentation of clinical task lists.	Unknown	Unknown
+	HL7 DC 3.1.3.06	The Clinical Task Tracking capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	HL7 DC 3.1.3.07	The Clinical Task Tracking capability should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 3.2	Support Clinical Communication		
+	HL7 DC 3.2.0.1	The Support Clinical Communication capabilities should conform to IN.3 Registry and Directory Services requirements.	Unknown	Unknown
+	DC 3.2.1	Support for Inter-Provider Communication		
+	HL7 DC 3.2.1.1	The solution should provide the ability to document in the patient record verbal/telephone communication between providers.	Unknown	Unknown
+	HL7 DC 3.2.1.2	The solution should leverage the CCHCS eUHR solution to incorporate scanned documents from external providers into the patient record.	Unknown	Unknown
+	HL7 DC 3.2.1.3	The solution should provide the ability to communicate using real-time messaging.	Unknown	Unknown
+	HL7 DC 3.2.1.4	The solution should provide the ability to communicate clinical information (e.g. referrals) via email or other electronic means.	Unknown	Unknown
+	HL7 DC 3.2.1.5	The solution should provide the ability to transmit electronic multi-media data types representing pictures, sound clips, or video as part of the patient record.	Unknown	Unknown
+	HL7 DC 3.2.1.6	The Inter-Provider Communication capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	DC 3.2.2	Support for Provider - Pharmacy Communication		
+	HL7 DC 3.2.2.1	The solution' Provider - Pharmacy Communication capability should support DC 1.7.1 Manage Medication Orders requirements and provide the ability to order medications.	Unknown	Unknown
+	HL7 DC 3.2.2.2	The solution should electronically communicate orders between the prescriber, provider and pharmacy, as necessary, to initiate, change, or renew a medication order.	Unknown	Unknown
+	HL7 DC 3.2.2.3	"The solution should receive any acknowledgements, prior authorizations, renewals, inquiries and fill notifications provided by the pharmacy or other participants in the
+electronic prescription and make it available for entry in the patient record. "	Unknown	Unknown
+	HL7 DC 3.2.2.4	The solution should provide the ability to electronically communicate current realm-specific standards to pharmacies.	Unknown	Unknown
+	HL7 DC 3.2.2.5	"The solution should provide the ability for providers and pharmacies to communicate clinical information via e-mail or other electronic means, on both general and specific
+orders."	Unknown	Unknown
+	HL7 DC 3.2.2.6	The solution should provide the ability to use secure realtime messaging.	Unknown	Unknown
+	HL7 DC 3.2.2.7	The solution should provide the ability to include workflow tasks as part of communication to the provider.	Unknown	Unknown
+	HL7 DC 3.2.2.8	The Provider - Pharmacy Communication capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	DC 3.2.3	Support for Communications between Provider and Patient and/or the Patient Representative		
+	HL7 DC 3.2.3.1	The solution should provide the ability to capture documentation of communications between providers and patients and/ or the patient representatives.	Unknown	Unknown
+	HL7 DC 3.2.3.2	The solution should leverage the CCHCS eUHR solution to incorporate scanned documents.	Unknown	Unknown
+	HL7 DC 3.2.3.3	The solution should provide the ability to document communication originating with the patient or patient representative (e.g. date, entity, details of communication).	Unknown	Unknown
+	HL7 DC 3.2.3.4	The solution should provide the ability to communicate between providers and patients or their representative using a secure internet connection.	Unknown	Unknown
+	HL7 DC 3.2.3.5	"The solution should provide the ability to manage documentation regarding family member or patient representative authorizations to receive patient related
+health information."	Unknown	Unknown
+	HL7 DC 3.2.3.6	The solution should alert providers to the presence of patient or patient representative originated communications.	Unknown	Unknown
+	HL7 DC 3.2.3.7	"The solution should provide the ability to to alert patients or patient representative to provider absences (e.g. vacations) and recommend rerouting of the information or
+request."	Unknown	Unknown
+	HL7 DC 3.2.3.8	The solution should provide the ability to to notify providers of events and new treatment options.	Unknown	Unknown
+	HL7 DC 3.2.3.9	"The solution should provide the ability to remind the patient or patient representative of events related to their care (e.g. upcoming appointments) as agreed upon by the
+patient and/or the patient representative."	Unknown	Unknown
+	HL7 DC 3.2.3.10	The Support for Communications between Provider and Patient and/or the Patient Representative capability should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	HL7 DC 3.2.3.11	The Support for Communications between Provider and Patient and/or the Patient Representative capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	DC 3.2.4	Patient, Family and Care Giver Education		
+	HL7 DC 3.2.4.1	The solution should provide the ability to access to a library of educational material for health concerns, conditions, and/or diagnosis.	Unknown	Unknown
+	HL7 DC 3.2.4.2	The solution should provide the ability to to communicate applicable educational materials to the patient and/or patient representative.	Unknown	Unknown
+	HL7 DC 3.2.4.3	The solution should provide the ability to deliver multilingual educational material.	Unknown	Unknown
+	HL7 DC 3.2.4.4	"The solution should provide the ability to to deliver patient
+educational materials using alternative modes to accommodate patient sensory capabilities."	Unknown	Unknown
+	HL7 DC 3.2.4.5	"The solution should provide the ability to access to external
+educational materials."	Unknown	Unknown
+	HL7 DC 3.2.4.6	The solution should provide the ability to use rules-based support to identify the most pertinent educational material, based on the patient health status, condition and/or diagnosis.	Unknown	Unknown
+	HL7 DC 3.2.4.7	The solution should provide the ability to to document who received the educational material provided, the patient, or the patient representative.	Unknown	Unknown
+	HL7 DC 3.2.4.8	"The solution should provide the ability to to document that the
+educational material was reviewed with the patient and/or patient representative and their comprehension of the material."	Unknown	Unknown
+	HL7 DC 3.2.4.9	"The solution should provide the ability to identify age appropriate
+and/or reading-ability appropriate educational materials for the patient and/or patient representative."	Unknown	Unknown
+	HL7 DC 3.2.4.10	The solution should provide the ability for direct access to the educational material available, by patients and/or patient representatives.	Unknown	Unknown
+	HL7 DC 3.2.4.11	The Patient, Family, & Care Giver Education capability should conform to the IN 1.4 Patient Access Management requirements.	Unknown	Unknown
+	HL7 DC 3.2.4.12	The Patient, Family, & Care Giver Education capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.	Unknown	Unknown
+	DC 3.2.5	Communication with Medical Devices		
+	HL7 DC 3.2.5.1	The solution should provide the ability to collect accurate electronic data from medical devices according to realm-specific applicable regulations and/or requirements.	Unknown	Unknown
+	HL7 DC 3.2.5.2	The solution should provide the ability to present information collected from medical devices as part of the medical record as appropriate.	Unknown	Unknown
+	HL7 DC 3.2.5.3	The Communications with Medical Devices capability should conform to  IN 1.4 Patient Access Management requirements.	Unknown	Unknown

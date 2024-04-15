@@ -1,0 +1,48 @@
+1.1	There shall be two levels of access; one for teachers and assistants and one for administrators.
+1.2	The teachers and assistants shall only be allowed to enter or edit child comments and child arrival or departure times.
+1.3	The administrators shall be allowed to enter or edit all data.
+1.4	Only the administrators shall be allowed to view or print reports.
+1.5	Only the administrators shall be allowed to view or print invoices.
+1.6	All employees shall be allowed to use the Daily Reminders.
+2.7	Each user shall be required to log on with a unique user name and password before using the system. The password does not need to be unique.
+2.8	The user name shall be the first four charters of the employee's last name followed by the first three characters of their first name.
+2.9	A password shall be assigned to each user.
+2.10	The password shall contain 6 to 8 alphanumeric characters.
+2.11	After three unsuccessful attempts to enter a password the user shall be locked out of the system until their password is reset.
+2.12	A new password shall be assigned if a user forgets.
+2.13	If there is no activity for 10 minutes the user shall be logged off of the system.
+3.14	Users shall only be allowed to set daily reminders for themselves.
+3.15	The date of the reminder shall be selected from a calendar.
+3.16	The user shall be allowed to enter up to a 50 character message for their reminder.
+3.17	When the user logs onto the system on the date of their reminder, they shall receive a popup window displaying their reminder message.
+4.18	A child's record shall contain the dates that their required immunizations were received.
+4.19	When a child is within two weeks of a required immunization a message shall be displayed when their teacher logs onto the system.
+4.20	A child's record shall contain the date of their last physical examination.
+4.21	The Administrators shall be able to enter the type and schedule of required immunizations.
+4.22	A notification for required immunizations shall be printed on the monthly invoice.
+5.23	If only a single child is enrolled a parent shall be billed $90 at the end of the each month.
+5.24	If only two children are enrolled a parent shall be billed $157.50 at the end of each month.
+5.25	If more than two children are enrolled a parent shall be billed $157.50 for the first two children plus $45 for each additional child at the end of each month.
+5.26	An account history for each customer shall contain all activity by date.
+5.27	Itemized customer invoices showing amount due shall be available for printing.
+5.28	Customers shall be billed $10 an hour (per child) for late pick ups.
+5.29	All invoices shall be available for printing at the end of each month.
+6.30	A Customer Directory Report shall list the customers alphabetically by last name and include their address and phone number.
+6.31	A Daily Classroom & Center Enrollment Report shall alphabetically list the names of children by classroom and indicate if they are present or absent.
+6.32	A Birthday Lists & Child Age Report shall list the children alphabetically by last name and include their birthday and age.
+6.33	A Parent/Child Cross Reference Report shall list the parents alphabetically by last name and include their children's first names.
+6.34	A Family Registration Information Report shall list the customer names alphabetically and include their address and home telephone number.
+6.35	An Immunization Due & History Report shall list the children alphabetically by last name and include any remaining immunizations that are required and the dates of previous immunizations.
+6.36	The Child Enrollment/Withdrawal Report shall list the children alphabetically by last name and whether or not they are registered or withdrawn from the Child Care Center.
+6.37	The Child Notes & Comments Report shall list the children alphabetically by last name and include any notes that are attached to their records.
+6.38	The Account Activity Report shall list a selected customer's account activity by date.
+7.39	When a user edits an account their user ID along with the date, time and a description of the change shall be recorded in the database.
+7.42	The software shall support the ability to enter, store, and update parent, child and billing information.
+7.43	Customer log notes shall store the date and comments regarding any correspondence with a parent.
+8.44	Each classroom shall only accept a maximum of 20 children.
+8.45	Each student shall only belong to one class
+8.46	One teacher and one assistant shall be assigned to each class.
+8.47	A waiting list shall store the names and phone numbers of up to 100 potential customers waiting for a classroom opening to enroll their child.
+9.48	The system shall have a Web based interface that works with Internet Explorer and Netscape Navigator.
+9.49	The background color of all windows shall be blue.
+9.50	The system shall respond to all user requests within 20 seconds.

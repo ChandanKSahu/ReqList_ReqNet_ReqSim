@@ -1,0 +1,15 @@
+D	MODIS Science Data Processing Software Requirements Specification
+3	SYSTEM-LEVEL REQUIREMENTS
+3.2	System Interface Requirements
+3.3	Computer Software Configuration Item Requirements
+4	SCIENCE DATA PRODUCT REQUIREMENTS
+4.1	MODIS Standard Product Requirements
+4.2	Metadata Requirements
+4.3	Product-Specific Requirements
+4.3.1	Climate Modeling Grid Product Requirements
+5	SOFTWARE PROCESS REQUIREMENTS
+5.1	Process Interface Requirements
+5.2	Process Reliability Requirements
+5.3	Process Quality Assurance Standards
+6	OPERATIONS REQUIREMENTS
+6.1	Product Generation Executive Requirements

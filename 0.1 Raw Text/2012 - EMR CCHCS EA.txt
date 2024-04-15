@@ -1,0 +1,122 @@
+Unique ID	Label	Requirement Statement	Solution Scope	Solution Approach
+	EA 1	Architecture Requirements		
+	EA 1.1	Architecture Quality Attributes		
+		Scalability		
+	EA 01.1.01	The solution should scale, maintaining acceptable performance, as the number of concurrent users increase.	Unknown	Unknown
+	EA 01.1.02	The solution should scale, maintaining acceptable performance, as the number of transactions increase.	Unknown	Unknown
+	EA 01.1.03	The solution should scale, maintaining acceptable performance, as the number of patients increase.	Unknown	Unknown
+	EA 01.1.04	The solution should be stable and will operate for sustained amounts of time without interruption.	Unknown	Unknown
+	EA 01.1.05	The solution should support 33 CDCR institutions and headquarters.	Unknown	Unknown
+		Reliability		
+	EA 01.1.06	The solution should be reliable. Reliability is the ability to rely on the system. Reliability is impacted primarily by the quality of the system. Reliability means that the user can rely on the accuracy of the system.	Unknown	Unknown
+	EA 01.1.07	The solution should use proven technologies and products. Technologies and products will only be approved after they have been proven in the marketplace (i.e. released to customers for at least 6 months).	Unknown	Unknown
+		Recoverability		
+	CCHIT SC 08.01	solution should be able to generate a backup copy of the application data, security credentials, and log/audit files.	Unknown	Unknown
+	CCHIT SC 08.02	The system restore functionality should result in a fully operational and secure state. This state should include the restoration of the application data, security credentials, and log/audit files to their previous state.	Unknown	Unknown
+	CCHIT SC 08.03	The system should have ability to run a backup concurrently with the operation of the application.	Unknown	Unknown
+	EA 01.1.10	The solution Mean Time to Repair (MTTR) should be: The solution average repair time should be less than four (4) hours.	Unknown	Unknown
+	EA 01.1.11	The solution Recovery Time Objective (RTO) should be: The solution should be restored within 72 hours after a disaster (or disruption) in order to avoid unacceptable consequences associated with a break in business continuity.	Unknown	Unknown
+	EA 01.1.12	The solution Recovery Point Objective (RPO) should be: The solution should restore data as of previous business day.	Unknown	Unknown
+		Maintainability		
+	EA 01.1.13	The solution should be maintainable that enables developers to debug, fix, integrate, and test. The marketplace should provide trained, affordable staff that have the skill sets to maintain the system.	Unknown	Unknown
+	EA 01.1.14	"The solution should provide end-to-end traceability of each transaction. Each message element of a transaction should be loggable each time it enters or leaves a host system of the
+solution."	Unknown	Unknown
+	EA 01.1.15	The solution should use supported software release levels. Computer software will be maintained at proven, stable version release levels that are supported by vendors.	Unknown	Unknown
+		Extensbility		
+	EA 01.1.16	The solution should be extensible where the solution can accommodate new functionality without compromising the system's dependability or future extensibility.	Unknown	Unknown
+	EA 01.1.17	The solution should be configurable which allows the user or developer to configure the system to meet changing requirements without changing code.	Unknown	Unknown
+		Usability		
+	EA 01.1.18	The solution should have a user interface compliant with American Disability Act (i.e., Section 508 compliant).	Unknown	Unknown
+		Availability		
+	EA 01.1.19	The solution should support load balancing across servers.	Unknown	Unknown
+	EA 01.1.20	The solution should support fail-over in the event of a failure to ensure the solution is highly available.	Unknown	Unknown
+		Integrity		
+	EA 01.1.21	The solution should  enforce referential integrity.	Unknown	Unknown
+	CCHIT SC 05.02	The solution should be configurable to prevent corruption or loss of data already accepted into the system in the event of a system failure (e.g. integrating with a UPS, etc.).	Unknown	Unknown
+	EA 1.2	Product architecture		
+	EA 01.2.01	The solution should allow for use of 3rd party reporting tools.	Unknown	Unknown
+	EA 01.2.02	The solution should support concurrency. Concurrency is the ability for multiple instances of the same process (or batch program) to execute at the same time.	Unknown	Unknown
+	EA 01.2.03	The should use a layered architecture where business components/services can be reused across multiple interfaces (e.g. Web, IVR, mobile). A layered architecture defines a clean separation between client, business logic, and database access.	Unknown	Unknown
+	CCHIT SC 02.06	The solution should be able to support time synchronization using NTP/SNTP, and use this synchronized time in all security records of time.	Unknown	Unknown
+	EA 01.2.04	All email capabilities of the system must support the IETF Simple Mail Transfer Protocol (SMTP) and/or IETF Post Office Protocol (POP) standards.	Unknown	Unknown
+	EA 01.2.05	The solution should support IETF Lightweight Directory Access Protocol (LDAP) and/or Microsoft Active Directory integration as the mechanism to retrieve authentication information.	Unknown	Unknown
+	EA 01.2.06	The solution should use IAB Transmission Control Protocol/Internet Protocol (TCP/IP) for network communications.	Unknown	Unknown
+	EA 01.2.07	The solution should support IETF SSH File Transfer Protocol (SFTP) for file transfer capabilities.	Unknown	Unknown
+	EA 01.2.08	The solution should support IETF Domain Name System (DNS).	Unknown	Unknown
+	EA 01.2.09	The solution should support IETF Dynamic Host Configuration Protocol (DHCP).	Unknown	Unknown
+	EA 01.2.10	The solution should support W3C Secure Hypertext Transfer Protocol (HTTPS).	Unknown	Unknown
+	EA 01.2.11	All server components of CCHCS solutions should run on Microsoft Windows Server and/or Red Hat Linux. 	Unknown	Unknown
+	EA 01.2.12	All client desktop components of CCHCS solutions should run on Microsoft Windows Client operating system.	Unknown	Unknown
+	EA 01.2.13	All transactional data should be stored in a relational database that supports SQL.	Unknown	Unknown
+	EA 01.2.14	All enterprise relational databases should be implemented using Microsoft SQL Server or Oracle Database technologies. 	Unknown	Unknown
+	EA 01.2.15	The solution should provide data retention of all patient-inmate information in a form that is accessible for auditing, analysis, and reporting.	Unknown	Unknown
+	EA 01.2.16	The solution should store seven (7) years of patient-inmate information within the operational data store.	Unknown	Unknown
+	EA 1.3	System Development Life Cycle		
+	EA 01.3.01	The solution should provide the ability to migrate setups/data between environments with minimal reconfigurations, reentry of data, or installs.	Unknown	Unknown
+	EA 01.3.02	The solution should provide the ability to customize and extend the product .Net, Java or XML technologies.	Unknown	Unknown
+	EA 01.3.03	All system configurations should be supported by the COTS upgrade process. Solution upgrades should not affect past customizations and should be verified by custom test scripts.	Unknown	Unknown
+	EA 01.3.04	The build, release, and install processes should be documented and repeatable.	Unknown	Unknown
+	EA 01.3.05	Environments (physical or virtual) should be available to support development, testing, production, and production fix processes.	Unknown	Unknown
+	EA 01.3.06	The solution should support version control of the product's development, test, or production configurations via an external management software product.	Unknown	Unknown
+	EA 01.3.07	All configuration items (e.g. COTS extensions, configuration files, system interface programs, data conversion programs) should be under configuration management control.	Unknown	Unknown
+	EA 01.3.08	The solution should support automation of the testing process natively or through integration with other COTS testing tools.	Unknown	Unknown
+	EA 01.3.09	Debugging capabilities should exist for all development items (e.g. workflows, extensions, custom adapters, transformations).	Unknown	Unknown
+	EA 2	Integration		
+	EA 02.00.01	The integration architecture should support a service-oriented architecture (SOA) which is a software design approach in which an application consists of software services and software service consumers.	Unknown	Unknown
+	EA 02.00.02	The solution should provide SOA integration capabilities that conforms to  Web Services Interoperability (WS-I).	Unknown	Unknown
+	EA 2.1	CCHCS Electronic Health Record (eUHR - Documentum)		
+	EA 02.01.01	The solution should integrate with the existing CCHCS Documentum platform, known as eUHR, to store patient documents. 	Unknown	Unknown
+	EA 02.01.02	The solution should integrate with eUHR search & retrieve a list of patient documents. 	Unknown	Unknown
+	EA 02.01.03	The solution should integrate with eUHR retrieve & display patient documents. 	Unknown	Unknown
+	EA 2.2	CCHCS PACS/RIS		
+	EA 02.02.01	The solution should integrate with CCHCS PACS/RIS solution to retrieve & display patient images. 	Unknown	Unknown
+	EA 2.3	CCHCS Dictation & Translation		
+	EA 02.03.01	The solution should integrate with CCHCS;s Dictation and Transcription to retrieve and play dictated and transcribed medical records for patients.	Unknown	Unknown
+	EA 2.4	CCHCS Third Party Administrator		
+	EA 02.04.01	The solution should integrate with CCHCS' Third Party Administrator to send them health care claims for processing.	Unknown	Unknown
+	EA 2.5	Quest 360		
+	EA 02.05.01	The solution should integrate with Quest 360 to retrieve & display lab results.	Unknown	Unknown
+	EA 2.6	CCHCS Central Fill Solution		
+	EA 02.05.01	The solution should integrate with Central Fill solution to submit medication orders.	Unknown	Unknown
+	EA 02.05.02	The solution should integrate with Central Fill solution to receive medication dispense information.	Unknown	Unknown
+	EA 2.7	CCHCS Medical Classification		
+	EA 02.07.01	The solution should integrate with the Medical Classification solution to track patient classification.	Unknown	Unknown
+	EA 2.8	CDCR Strategic Offender Management System (SOMS)		
+	EA 02.08.01	The solution should integrate with CDCR SOMS to retrieve patient demographic data.	Unknown	Unknown
+	EA 02.08.02	The solution should integrate with CDCR SOMS to post new or changed appointments on the inmate's calendar.	Unknown	Unknown
+	EA 02.08.03	The solution should integrate with CDCR SOMS to receive notifications that a healthcare appointment has been "bumped" by a higher priority appointment and it needs to be rescheduled.	Unknown	Unknown
+	EA 02.08.04	The solution should integrate with CDCR SOMS to receive patient movement notifications.	Unknown	Unknown
+	EA 02.08.05	The solution should integrate with CDCR SOMS to receive TB assessment data.	Unknown	Unknown
+	EA 02.08.06	The solution should integrate with CDCR SOMS to receive patient Effective Communications/ADA information.	Unknown	Unknown
+	EA 2.9	CCHCS Technical  Infrastructure		
+	EA 02.09.01	The solution should leverage CCHCS Digital Signature infrastructure for digital signatures.	Unknown	Unknown
+	EA 02.09.02	The solution should leverage CCHCS Secure FTP infrastructure for sending files external to CCHCS data center.	Unknown	Unknown
+	EA 02.09.03	The solution should leverage CCHCS Wireless infrastructure for mobile devices.	Unknown	Unknown
+	EA 2.10	CCHCS EMR Data Access		
+	EA 02.10.01	The solution should provide an open interface to enable CCHCS' Utilization Management solution and staff to extract data for analysis.	Unknown	Unknown
+	EA 02.10.02	The solution should provide an open interface to enable Office of Inspector General (OIG) staff to extract data for auditing purposes.	Unknown	Unknown
+	EA 3	Support		
+	EA 3.1	System Management		
+	EA 03.01.01	The solution should support IETF Simple Network Management Protocol (SNMP) traps as a mechanism for event notification.	Unknown	Unknown
+	EA 03.01.02	The solution should support IETF Syslog as a mechanism for logging. 	Unknown	Unknown
+	EA 03.01.03	The solution should support remote monitoring and administration via Netscape Secure Sockets Layer (SSL), IETF Secure Shell (SSH), IETF IP Security (IPSEC) or similar secure method.	Unknown	Unknown
+	EA 03.01.04	The solution should monitor COTS-provided components & services.	Unknown	Unknown
+	EA 03.01.05	The solution should support alerts for defined thresholds and errors.	Unknown	Unknown
+	EA 03.01.06	The solution should provide a system management console.	Unknown	Unknown
+	EA 03.01.07	The solution should support alert notifications via email.	Unknown	Unknown
+	EA 03.01.08	The solution should support alert notifications via pager.	Unknown	Unknown
+	EA 03.01.09	The solution should provide a browser interface for monitoring and administration.	Unknown	Unknown
+	EA 03.01.10	The solution should include GUI tools for monitoring of processes and errors.	Unknown	Unknown
+	EA 03.01.11	The solution should include a command line interface to allow automation of system processes (e.g. service startup, service shutdown).	Unknown	Unknown
+	EA 3.2	Documentation		
+	EA 03.02.01	The support manual should provide the information necessary to service and maintain an operational system or component throughout its life cycle. A support manual includes the associated hardware and software and procedures for servicing, repairing, or reprogramming it.	Unknown	Unknown
+	EA 03.02.02	The installation manual should provide the information necessary to install a system, set initial parameters, and prepare the system or component for operational use.	Unknown	Unknown
+	EA 03.02.03	The operator manual must provide the information necessary to initiate and operate a system. The operator manual includes procedures for preparation, operation, monitoring, and recovery.	Unknown	Unknown
+	EA 03.02.04	The programmer manual must provide the information necessary to develop or modify software for a given computer system. The programmer manual includes equipment configuration, operational characteristics, programming features, input/output features, and compilation or assembly features of the computer system.	Unknown	Unknown
+	EA 03.02.05	The diagnostic manual must provide the information necessary to execute diagnostic procedures for a system, identify malfunctions, and remedy those malfunctions. The diagnostic manual includes diagnostic features of the system and diagnostic tools available for its support.	Unknown	Unknown
+	CCHIT SC 04.01	The solution should include documentation that describes the patch (hot-fix) handling process the vendor will use for EHR (eRx), operating system and underlying tools (e.g. a specific web site for notification of new patches, an approved patch list, special instructions for installation, and post-installation test).	Unknown	Unknown
+	CCHIT SC 04.02	The solution should include documentation that explains system error or performance messages to users and administrators, with the actions required.	Unknown	Unknown
+	CCHIT SC 04.03	"The solution should include documentation of product capacities (e.g. number of users, number of transactions per second, number of records, network load, etc.) and the baseline representative configurations assumed for these capacities (e.g. number or type of processors, server/workstation configuration and
+network capacity, etc.)."	Unknown	Unknown
+	CCHIT SC 04.04	The solution should include documented procedures for product installation, start-up and/or connection.	Unknown	Unknown
+	CCHIT SC 04.09	The solution should include documentation that describes the steps needed to confirm that the system installation was properly completed and that the system is operational.	Unknown	Unknown

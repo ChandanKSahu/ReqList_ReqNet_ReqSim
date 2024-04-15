@@ -1,0 +1,144 @@
+3.1.1.1	The system shall support an administrator level.
+3.1.1.1.1	Requirement Specification: The administrator will have the following privileges: a. Ability to create user groups  such as NCSU TPP.org, GT TPP.org b. Ability to create project managers, analysts and guests c. Ability to reset user passwords when needed d. Ability to disable access for old project managers, analysts and guests. Removing old users implies removing their ability to access the system while still preserving the information entered by them.
+3.1.1.2	The system shall support a project manager level.
+3.1.1.2.1	The project manager will have the following privileges: a. Ability to insert a new privacy policy to the repository b. Ability to delete a privacy policy from the repository c. Ability to create/add a new domain of privacy policies (e.g, Healthcare, financial, e-commerce, federal agency, etc.) d. Ability to assign analysts to user groups  created by the administrator e. Ability to assign usergroups  and individual analysts to projects f. Project manager sets restrictions on access to certain kinds of information for guests g. Ability to export data from a project to an XML file so multiple project managers can use that data h. Ability to save the current version of the repository so that we can do evolution analysis
+3.1.1.3	The system shall support an analyst level.
+3.1.1.3.1	An analyst will have the following privileges:  a. Ability to select a privacy policy that has been assigned to them by the project manager. b. Ability to add, delete and update goals c. Ability to add, delete and update scenarios  d. Ability to view the details of any goal or a scenario in the repository such as ID, description, source, keyword, taxonomy, actor, occurrence, relevant policy etc. e. Ability to update personal profile such as name, ID, contact information, usergroups  and passwords f. Ability to add, delete and update requirements g. Ability to add, delete and update access control policies such as subject, object, action. h. Ability to view access control policies
+3.1.1.4	The system shall support a guest level.
+3.1.1.4.1	The guest will have the following privileges:  a. Ability to view kinds of information in the repository with restrictions set by the project manager. For instance, if a guest is given access permission to a certain privacy policy, he/she will not be able to view goa and scenario occurrences related to other privacy policies in the repository.
+3.1.2.1	The system shall allow all users to have different access levels to the projects.
+3.1.2.1.1	Each user will have different projects to work on as well as different access levels that will allow them certain privileges within the project.
+3.1.2.2	The system shall allow secure storage of passwords in the database.
+3.1.2.2.1	The system will provide secure storage of passwords of all users in the database.
+3.1.2.3	The system shall allow users to securely log onto the system.
+3.1.2.3.1	The system will provide secure way for users to log onto the system.
+3.2.1.0	The system shall allow analysts to add a new goal.
+3.2.1.1	The system will allow analysts to enter a new goal into the system as new goals are identified.
+3.2.1.1.1	Following are the necessary elements for each goal: a. Goal ID b. Goal Description (not long) c. Taxonomy Classification 1. Protection - Notice/Awareness - Choice/Consent - Security/Integrity - Access/Participation  - Enforcement/Redress 2. Vulnerability - Information Monitoring - Information Aggregation - Information Storage - Information Transfer  - Information Collection - Information Personalization - Contact d. Subject Classification  - Business Aggregation - Browsing Pattern/Site Usage - CC Information  - Children - Customer Information (CI) - Contacting Customer - Contact Institutions - Cookies/Web bugs - Customer System Information - Customer Aggregation - General Information - General User Preference - Identity Theft/Fraud - Law (HIPAA, COPPA, GLBA) - Liability/Responsibility - OPT in /out preferences - Personal Financial Information (PFI) - Personal Health Information (PHI) - Personally Identifiable Information (PII) - PFI/PHI/PII Usage - Policies/Procedures - PP/ToU - Security Access e.  Goal Actor f. Policy in which the goal was found g. Granularity Classification (Policy or Scenario goal) h. Observable/Unobservable i. Occurrences j. Context Information (for the goal) k. Relevant Legislation (e.g, HIPAA, COPPA, GLBA)
+3.2.1.2	The system shall provide templates for goals, scenarios, P3P statements, EPAL rules and access control policies.
+3.2.1.2.1	These templates will allow analysts to enter detailed information about each goal, scenario, P3P statement, EPAL rule and access control policy that they enter into the tool.
+3.2.1.3	The system shall allow analysts to classify goals.
+3.2.1.3.1	The system will allow the administrator, project manager and analysts to classify goals in the following categories: a. Policy goals or scenario goals b. Observable goals or unobservable goals c. Protection goals or vulnerabilities d. Goals based on subject classification
+3.2.1.4	The system shall allow multiple subject classifications for each goal.
+3.2.1.4.1	The system will allow analysts to choose multiple subject classifications for each goal. For instance, a goal could be a part of ‘security access’ as well as ‘personal health information.’
+3.2.1.5	The system shall provide the ability to dynamically add a new classification type of goals to the tool.
+3.2.1.5.1	The system will allow the project manager to add a new classification type of goals.
+3.2.1.6	The system shall allow the analysts to request a new classification type of goals and also allow the project manager to create that classification type.
+3.2.1.6.1	The system shall allow the analysts to request a new classification type of goals and also allow the project manager to create that classification type.
+3.2.1.7	The system shall provide the ability to update an existing goal.
+3.2.1.7.1	The system will analysts to edit an existing goal in the system.
+3.2.1.8	The system shall provide the ability to delete a goal.
+3.2.1.8.1	The system will analysts to delete an existing goal from the repository.
+3.2.1.9	The system shall provide the ability to automatically propagate associated policy information upon  deletion or replacement of a goal.
+3.2.1.9.1	The system will provide a way to merge goals into policies to reduce time spent on the goal reconciliation process. For instance, if goal A is deleted from the repository and replaced by a new goal B, all the policies where goal A appeared should be updated automatically to include goal B.
+3.2.1.10	The system shall maintain traceability links between a goal and the policy from which the goal was derived.
+3.2.1.10.1	The system will allow analysts and guest to choose a goal and then the system will display all the policies in which that particular goal appears.
+3.2.1.11	The system shall provide the ability to display the number of occurrences of a goal in a policy, in multiple policies and within a domain.
+3.2.1.11.1	The system will allow analysts and guest to choose a policy and a goal and then the system will allow analysts and guests to view the total occurrences of that particular goal in the chosen policy.
+3.2.1.12	The system shall provide the ability to display the number of different goals that occur in a policy.
+3.2.1.12.1	The system will allow analysts and guests to choose a policy and then the system will allow analysts and guests to view the number of different goals that occur in that policy. For instance, if the user chooses a health policy and there were 4 different goals found in that policy then the system will display 4. However, the policy might have those 4 goals repeated a number of times.
+3.2.1.13	The system shall display the context of a goal.
+3.2.1.13.1	The system will allow analysts and guests to choose a goal and the system will then allow analysts and guests to view the context of the goal, which is the actual statement from the policy in which the goal originally appeared.
+3.2.1.14	The system shall allow analysts to create and update goal keyword definitions and allow guests to view keyword definitions.
+3.2.1.14.1	The system will provide a way to display the definition of the goal keywords in the SPRAT for convenient access. For instance, the keyword ‘ALLOW’ will have its definition associated with it. Additionally, the system will provide the ability to access these definitions in a separate section.
+3.2.1.15	The system shall provide the ability to lock and unlock the keyword definition by either the project manager or the first person who created the definition in the repository.
+3.2.1.15.1	The system shall provide the ability to lock and unlock the keyword definition by either the project manager or the first person who created the definition in the repository.
+3.2.1.16	The system shall allow analysts and guests to search goals according to analyst chosen attributes.
+3.2.1.16.1	The system will generate a list of all goals that have the same source, actor, subject etc. upon analyst’s request. This will allow the analyst to determine effects caused by a change in conditions or can provide quick feedback on what goals need further elaboration.
+3.2.1.17	The system shall allow analysts to view elements of a goal returned by a query.
+3.2.1.17.1	The system will provide analysts the ability to view full details of any goal returned by a query.
+3.2.1.18	The system shall provide a template to express goals in BNF grammar.
+3.2.1.18.1	This template will conform to the BNF grammar of allowable structure. E.g.,  <Goal> ::= <keyword> <subject> <action>;
+3.2.1.19	The system shall support conflict identification and resolution.
+3.2.1.19.1	The system will provide a mechanism to automate the identification of conflicts between requirements and privacy policies.
+3.2.1.20	The system shall allow analysts to view scenarios associated with individual scenarios.
+3.2.1.20.1	When the analyst views the full details of a scenario, the system will indicate the goals that are shared among scenarios.
+3.2.1.21	The system shall provide a P3P dedicated section in the  tool.
+3.2.1.21.1	The elements of the section will include: specification, rationale, a drop down box with options such as yes, no or partial.
+3.2.1.22	The system shall provide an EPAL dedicated section in the tool.
+3.2.1.22.1	The elements of the section will include: specification, rationale, a drop down box with options such as yes, no or partial.
+3.3.1.1	The system shall allow project managers to add analysis documents and assign a domain to each document.
+3.3.1.1.1	The system will allow the project manager to add policies documents repository and assign a domain to each document. The domain could be healthcare, financial or e-commerce.
+3.3.1.2	The system shall allow project managers to edit the domain for the documents.
+3.3.1.2.1	The system will allow the project manager to edit the domain for the documents such as change the domain name.
+3.3.1.3	The system shall allow project managers to delete the domain for the documents.
+3.3.1.3.1	The system will allow the project manager to delete the domain for the documents.
+3.3.1.4	The system shall allow project managers to create document types.
+3.3.1.4.1	The system will allow the project manager to create document type such as policy documents, requirements document, manuals etc.
+3.3.1.5	The system shall provide the ability to display document names and links to the actual document text within a specific domain in an alphabetical order.
+3.3.1.5.1	The system will allow analysts and guest to view policies in the system in an alphabetical order.
+3.3.1.6	The system shall allow project managers to create a new domain and assign existing documents to this domain.
+3.3.1.6.1	The system will allow project managers to create a new domain for the documents and assign existing documents to that particular domain.
+3.3.1.7	The system shall support automatic multi-user analysis results comparison upon the project manager’s request.
+3.3.1.7.1	The system will allow analysts to classify goals separately and as a result they can automatically check the difference in their classification results for their resolution.
+3.4.1.1	The system shall provide a way calculate the Flesch Readability for textual documents.
+3.4.1.1.1	The system will provide analysts way to calculate the Flesch Readability Score (FRES) and Flesch-Kincaid Grade Level (FGL) for textual documents. For this, a link to the actual textual document as well as the corresponding FRES and FGL as the number of words and sentences in each document will be provided.
+3.5.1.1	The system shall provide the ability to add a scenario to the system.
+3.5.1.1.1	The system shall allow analysts to add a scenario to the system. Following are the necessary elements for each scenario: • Scenario Name • Sources • Actor(s) • Event(s) • Action(s) • Obstacle(s) • Constraint(s) • Pre-Condition(s) • Post-Condition(s) • Status  • Issue(s)- These are questions that come up: catch on • Goals • Requirements
+3.5.1.2	The system shall allow analysts to edit/modify a scenario within a project
+3.5.1.2.1	The system shall allow analysts to edit/modify a scenario within a project.
+3.5.1.3	The system shall provide the ability to delete a scenario from a project without deleting it from the system
+3.5.1.3.1	The system shall allow analysts to delete a scenario from the system.
+3.5.1.4	The system shall allow analysts to reuse other scenarios.
+3.5.1.4.1	The system shall allow analysts to reuse other scenarios when specifying a scenario.
+3.5.1.5	The system shall allow analysts to view goals associated with individual scenarios.
+3.5.1.5.1	When the analyst views the full details of a goal, the system will indicate the scenarios that are shared among goals.
+3.5.1.6	The system shall allow analysts to view the elements of any scenario in the project.
+3.5.1.6.1	The system shall allow analysts to view the elements of any scenario in the project assigned to this analyst.
+3.5.1.7	The system shall generate a list of all scenarios that share the same attribute or sets of attributes
+3.5.1.7.1	The system will allow analysts to generate list of all scenarios that have the same source, goal, actor, etc. This will allow the analyst to determine effects caused by a change in conditions or can provide quick feedback on what scenarios need further elaboration.
+3.6.1.1	The system shall provide the ability to specify requirements.
+3.6.1.1.1	The system will allow analysts to specify requirements.
+3.6.1.2	The system shall provide the ability to add a requirement.
+3.6.1.2.1	The system will allow analysts to add requirements to the system. The requirement will include the following:  -Goals  -Constraints
+3.6.1.3	The system shall provide the ability to delete a requirement.
+3.6.1.3.1	The system will allow analysts to delete requirements from the system.
+3.6.1.4	The system shall provide the ability to edit a requirement.
+3.6.1.4.1	The system will allow analysts to edit requirements.
+3.6.1.5	The system shall provide a template for specifying requirements.
+3.6.1.5.1	The system will provide a template to specify requirements.
+3.7.1.1	The system shall provide a demo version of the tool
+3.7.1.1.1	The system will provide a trial version of the tool allowing people to enter about 30 objects and try our system.
+3.8.1.1	The system shall allow analysts to add new objects (names, types and other attributes).
+3.8.1.1.1	The system shall allow analysts to add new objects. Elements of an object include: name, type, hierarchical information, preferences, etc.
+3.8.1.2	The system shall support association of privacy preferences with objects.
+3.8.1.2.1	The system shall allow analysts to associate privacy preferences with objects. Elements of a privacy preference include: purpose, recipient, retention, consent, etc.
+3.8.1.3	The system shall support hierarchical structure of data and its type.
+3.8.1.3.1	The system shall allow analysts to specify hierarchies to organize data and its types.
+3.8.1.4	The system shall allow graphical view of data structures.
+3.8.1.4.1	The system shall allow analysts to view data hierarchies graphically.
+3.8.1.5	The system shall support deriving access control elements.
+3.8.1.5.1	The system shall allow analysts to specify access control elements.
+3.8.1.6	The system shall allow analysts to view scenario elements and edit access control rules at the same time.
+3.8.1.6.1	The system shall allow analysts to view scenario elements on the left hand of the screen and edit access control rules on the right hand of the screen.
+3.8.1.7	The system shall support a hierarchical representation of organizational structures.
+3.8.1.7.1	The system shall allow analysts to specify business and organizational structures.
+3.8.1.8	The system shall support the representation of organizational boundaries.
+3.8.1.8.1	The system shall allow analysts to specify organization boundaries via the use of roles.
+3.8.1.9	The system shall support the representation of actor relationships.
+3.8.1.9.1	The system shall allow analysts to specify relationships among actors.
+3.8.1.10	The system shall support the definition of roles.
+3.8.1.10.1	The system shall allow analysts to specify roles.
+3.8.1.11	The system shall support role delegation.
+3.8.1.11.1	The system shall allow project managers to delegate their responsibilities to analysts for a specific time frame.
+3.8.1.12	The system shall support analysis of a specific type of data flow within or across the boundary of an organization, given a set of access control policies.
+3.8.1.12.1	The system shall allow analysts to graphically view the allowable flows for specific types within an organization and across multiple organizations given a set of access control policies.
+3.8.1.13	The system shall support access control specification using Ponder language.
+3.8.1.13.1	The system shall allow analysts to invoke the ponder policy editor.
+3.8.1.14		The system shall provide partial support for translating Ponder policy into Alloy specifications for security verification.
+3.8.1.14.1	The system shall provide partial support for translating Ponder policy into Alloy specifications for security verification. “Partial support” means providing as much automatic translation as possible so that manual specification of Alloy could be minimized. The partial support also includes providing interface between Ponder editor and Alloy tool.
+3.9.1.1		The system shall provide a way to extract goals data-usage information from a P3P privacy policy according to the P3P standard.
+3.9.1.1.1	The system will provide users a way to extract goals information which is the information pertaining to the usage of a data-item from a P3P privacy policy according to the P3P standard. This involves parsing the respective P3P documents- privacy policy documents or the user’s privacy preferences.
+3.9.1.2	The system shall provide a way to extract goals data-usage information according to as per the user’s privacy preferences in accordance with the P3P standard.
+3.9.1.2.1	The system will provide users a way to extract goals which is the information pertaining to the usage of a data-item according to the user’s privacy preferences in accordance with the P3P standard. Here the goals information pertaining necessary to accepting as well as rejecting a policy according to user’s privacy preferences are extracted. This involves obtaining parsing the respective documents- privacy policy documents or the user’s privacy preferences and deriving the goals pertinent rules from them.
+3.9.1.3	The system shall provide a way to capture the mined goals information from the P3P policy into a database corresponding to a P3P privacy policy.
+3.9.1.3.1	The system will provide users a way to concisely capture goals information mined from the P3P policy, into a database corresponding to a P3P privacy policy.
+3.9.1.4	The system shall provide a way to capture the mined goals information from the user’s privacy preferences into a database corresponding to the user’s privacy preferences.
+3.9.1.4.1	The system will provide users a way to concisely capture goals the rules derived from the user’s privacy preferences into a database corresponding to the user’s privacy preferences.
+3.9.1.5	The system shall provide a way to evaluate the information extracted from the P3P privacy policy against the information extracted from the user’s privacy preferences.
+3.9.1.5.1	The system will provide users an unambiguous way to evaluate the information extracted from the privacy policy against the information extracted from the user’s privacy preferences. During the evaluation, following scenarios need to be dealt with:
+3.9.1.5.1.1	If the data-usage goals information mined from the P3P policy match those from the user's privacy preferences corresponding to both acceptance and rejection of a policy, then a conflict should be detected and a notification requiring user's intervention raised.
+3.9.1.5.1.2	If the goals data-usage information mined from the P3P policy match those from the user's privacy preferences corresponding to either accepting or rejecting a policy, the policy should be accepted or rejected respectively.
+3.9.1.5.1.3	If the goals data-usage information mined from the P3P policy does not match those from the user’s privacy preferences corresponding to either acceptance or and rejection of a policy, then again a conflict should be detected and a notification requiring user’s intervention raised.
+4.1	The system shall generate an access log for every add, delete and edit action in the system.
+4.1.1	The system will generate an access log for every add, delete and edit action in the system for the purpose of future tracking. General elements of an access log contain time, date, user id, action and object..

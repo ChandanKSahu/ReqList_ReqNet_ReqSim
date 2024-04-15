@@ -1,0 +1,234 @@
+1.1	The system shall be based upon proven state-of-the-art technologies. This includes browser-based, server-side architectures, configurable, and a range of industry-standard database, operating system, and programming platforms.
+1.2	The Web-enabled portions of the application shall meet state-of-the-art Internet standards for graphics and design and for speed, reliability, and security for dynamic content and user interaction.
+1.3	The system shall provide the ability to maintain multiple operating environments for development, test, training and production.
+2.4	The system, including programs, database, and ancillary hardware and related software systems shall be able to retain its performance levels when adding additional users, functions, and data.
+2.5	The system shall be scalable and adaptable to meet future growth and expansion needs.
+2.6	The solution functionality and associated business rules shall be configured and re-configured (through tools that do not require "code" modifications).
+2.7	The screens shall be highly re-configurable, providing ability to reposition and rename field labels, remove or “turn-off” unused fields, maintain data, and allow addition of custom-defined fields.
+2.8	The system shall provide the ability to create and/or modify edits and business rules which determine The acceptance/correctness of data.
+2.9	The system shall provide the ability for on-line access by any site connected to the organization WAN.
+2.10	The system shall provide the ability for remote access by authorized individuals (i.e. web based VPN access).
+3.11	The system shall use an open relational database management system (RDBMS) to store all organization data.
+3.12	The database system shall provide Structured Query Language (SQL) capabilities for database queries.
+3.13	The system shall allow the database information exchange using current commonly accepted industry formats (e.g. HL7, XML).
+3.14	The system shall support common database connectivity protocols such as ODBC.
+3.15	The system shall provide an automated test script to validate the data after modifications or upgrades.  The tool will support the ability to customize the script and provide a final report to document the validation.
+3.16	The system shall provide data import functionality to receive standard format data from external parties.
+3.17	The system shall provide data export functionality that creates common export file format (e.g. comma delimited, tab delimited, space delimited, quotation delimited, etc.).
+3.18	The system shall provide the database backup and recovery tools required to support organization database recovery plan and procedures (note: if a DRP is in place).
+3.19	The database system shall provide the following features: - Simultaneous access to data by concurrent users - Row level Locking - Automatic Query Optiomization - Views - Multiprocessor query execution
+3.20	The system shall support an online data dictionary and table relationships that describe and maintain information on each data element including: data element name and type, description of the data element, and the format of each data element.
+3.21	The system shall utilize naming conventions and standards for data elements, entities and tables, programs, report names, etc.
+3.22	The system shall utilize utilities for database performance monitoring and tuning that comply with industry standards, including but not limited to tools for table & file maintenance.
+3.23	The system shall lock database records based on organization parameters (e.g., at row level, field level, or at the application level).
+3.24	The system shall accommodate separate instances of databases.
+3.25	The system shall support online modifications to database structures with minimal user downtime.
+3.26	The system shall allow for data replication including, but not limited to, copying an instance of any database to other organization specified locations (e.g., SAN).
+3.27	The system shall have the ability to roll back any system, database, or any other component(s) impacted within 15 minute increments up to 24hrs, any day in the month, any month in the year, and any year in 30 years.
+3.28	The system shall provide the ability for the administrator to track user behavior as well as database utilization.
+3.29	The system shall provide standard data extraction Application Program Interface (API) to allow import and export of data.
+4.30	The proposer shall provide all services needed to transform, standardize, migrate and load external legacy electronic data in order to establish an initial database suitable for live organization operations.
+4.31	The system shall provide the ability to extract required data from organization to produce file(s) that can be sent by FTP to external agencies, including a system automated process of generating, encrypting, and delivering data to external agencies.
+4.32	The system shall provide the ability to load information from standard file(s).
+4.33	The system shall provide the ability to perform real-time updates.
+4.34	The system shall have the capability to queue outbound messages in case a receiving system is down temporarily.
+4.35	The system shall monitor timeliness of messages and alert users if certain time limits have been exceeded.
+4.36	The system shall have the ability to evaluate interface messages for accuracy and completeness, and reject messages that are not constructed properly as well as the capability to generate reports of failed messages.
+4.37	The system shall have the capability to analyze, correct and resend messages that have been rejected.
+5.38	The system shall provide ability to use a single user sign-on for all modules with security configured for each module.
+5.39	The system shall have the ability for security module to be maintained by an in-house System Administrator
+5.40	The system shall provide expiration dates for passwords.
+5.41	The system shall automatically notify users and force them to change passwords on a pre-defined frequency.
+5.42	The system shall provide an efficient, flexible way to control and administer multiple levels of user access.
+5.43	The system shall have the ability to support web based client access or other internet based client access technologies, with appropriate security access controls.
+5.44	System must support password complexity that meets the following requirements: - Must contain at least 1 upper and 1 lower case alpha, 1 numeric, and 1 special character each -  Minimum password length – 8 characters - Minimum password age – 2 days - Maximum password age – 90 days - Password expire warning – 14 days - Different from the previous 6 passwords used - Must not be an English dictionary word - Disable accounts after 90 days of inactivity
+5.45	System provides the following password change rules for user accounts: -  Passwords can only be changed by the authorized County System Administrator or the associated user - Passwords can be changed by the associated user only once in a 2-day period -  Passwords can be changed by the associated user only once in a 2-day period - Users are re-authenticated before changing passwords
+5.46	The system shall provide lock-out capability after a pre-defined number of unsuccessful user sign-on attempts.
+5.47	The password is not displayed as clear text (Password Masking)
+5.48	System provides integrated security managed in a central accounts database
+5.49	System allows viewing of list of Users logged on to System in real-time
+5.50	System allows addition of user-defined messages to logon screen
+5.51	System integrates with Microsoft Active Directory for authentication and has the capability of notifying the end user of near domain account password expiration date as well as the ability to reset the password through the system’s user interface
+5.52	System performs secure and seamless logon for all third party integrated systems.
+5.53	System encrypts passwords before being stored or transmitted.
+5.54	System has the ability to disallow more than one active session per sign-on identification.
+5.55	System allows users to re-authenticate and remotely log out of an active user session before logging in at another location.
+5.56	System requires password re-entry before user is allowed to perform functions predefined as “high security”.
+5.57	System encrypts sensitive data transmitted between clients and servers using Secure Socket Layer (SSL) Certificates, Transport Layer Security (TLS), or by other means
+5.58	System provides a web (HTTPS) interface and provides an SSL configuration mechanism.
+5.59	System restricts users from directly accessing the database.
+5.60	System allows secure password resets in case passwords are forgotten.
+5.61	The system shall have the ability to assign application access rights across entire suite of applications at a single point of entry.
+5.62	System provides reminder alerts to users to reset passwords.
+5.63	The time for passwords to be changed is predefined as per user’s role and access level. The County standard for users is 90 days.
+5.64	System provides administrative ability to block users’ access during pre-defined off-hours.
+5.65	System provides the option for multi-factor authentication for users with higher security access.
+6.66	System provides the ability for users to define and store user profile information, including but not limited to, the user’s name, user ID, employee ID, professional designation, etc.
+6.67	The system shall have the ability to link the user logon ID to his/her employee number or contractor social security number, as well as to the location or group of locations to which the user is assigned.
+6.68	The system shall have the ability to identify the type of single enterprise authentication used for system access, e.g. MS Active Directory.
+6.69	System provides the ability to define user roles and user groups and associate these with user accounts.
+6.70	System allows authorized site-specific users to manage site-specific user groups and user accounts up to and including their level of authority.
+6.71	Ability for an administrator to delegate authority, by user group, to reset password
+6.72	Ability for an administrator to delegate authority, by user group, to restore system access of locked out user
+6.73	System provides the ability to restrict access based on users’ accounts’ privileges
+6.74	System provides the ability to specify roles and privileges based on login locations
+6.75	System allows restriction of rights, privileges or access at the user and group level
+6.76	System allows restricting the rights, privileges or access of processes to the minimum required for authorized tasks
+6.77	System allows authorization of administrators to manage restrictions or privileges associated with Users, groups, and processes including: - Defining levels of access - Assigning levels of access - Modifying a level of access - Removing a level of access - Viewing access levels, privileges and memberships
+6.78	The system shall have the ability to specify roles and control access by role to: - Database - Module - Field - Inquirey - Report - Approval - Transaction - Table - User Site (i.e. location) across all functional areas - Period
+6.79	The system shall have the ability to display the last date and time the user logged onto the system at the time of logon.
+6.80	The system shall have the ability to suspend user access based on a table-driven parameter (i.e., employment status).
+6.81	The system shall have the ability to suspend user access based on a pre-set date or based on hospital policy requiring renewal of access approval on a variable basis for non-County employees.
+6.82	The system shall have the ability to suspend user-access after an organization defined inactivity period (i.e., 90 days).
+6.83	System allows revocation of the access privileges of a user without requiring deletion of the user: - User-based (i.e., access rights assigned to each user) -  Role-based (i.e., Users are grouped and access rights assigned to these groups) - Context-based (i.e., role-based with additional access rights assigned or restricted based on the context of the transactions, such as time-of-day, workstation-location, emergency-mode, etc.)
+6.84	The system shall have the ability to limit user functionality based on the following access rights: - Full - Read - Write - Delete - Modify - Delete
+6.85	System shall allow assigning multiple roles to one user.
+7.86	System insures that input validation is applied whenever input is received through user or external data interfaces. The validation approach is to constrain, reject, and then sanitize input.
+7.87	System does not rely on client-side validation. The System design assumes that user input is malicious.
+7.88	Data is validated for type, length, format, and range. Data validation is consistent across the System.
+7.89	System avoids un-trusted input of file name and file paths. - System does not accept file names or file paths from calling functions. - Security decisions are not made based on user-supplied file names and paths.
+7.90	System does not use parent paths when data within the System is being accessed. Attempts to access resources using parent paths are blocked.
+7.91	The web server always asserts a character set: a locale and a country code, such as en_US.
+8.92	All system and user accounts are identified.
+8.93	Web sites are partitioned into un-restricted and restricted areas using separate folders.
+8.94	System uses least-privileged accounts.
+8.95	System insures that minimum error information is returned in the event of authentication failure.
+8.96	The system shall have the ability to support biometrics and biometrics plus passwords (e.g., fingerprint scan and fingerprint scan plus password).
+8.97	System authenticates the user before any access is allowed to protected resources (e.g., Protected Health Information)
+8.98	System authenticates standalone devices before access is allowed to protected resources.
+8.99	If Structured Query Language (SQL) authentication is used (e.g., communication between the application server and the database server) credentials are secured in storage and over the wire via Secure Socket Layer (SSL) or IP Security (IPSec).
+9.100	Measures are in place to prevent, detect and log unauthorized attempts to access the System.
+9.101	Rights and privileges are assigned based on authorization roles.
+9.102	Database restricts access to stored procedures to authorized accounts only.
+9.103	Direct access to database tables is prohibited.
+9.104	All account IDs that are used by the System are identified and the resources accessed by each account is known.
+9.105	Roles are mapped to user and data interfaces. Role rights and privileges are identified and maintained in an access control list.
+9.106	System resources are mapped to System roles and allowed operations for each role.
+10.107	Administration interfaces require strong authentication and authorization.
+10.108	Administrator privileges are separated based on roles (e.g., site content developer, system administrator).
+10.109	Remote administration channels are secured (e.g., SSL, VPN)
+10.110	Configuration stores are secured from unauthorized access and tampering.
+10.111	Configuration credentials and authentication tokens are not held in plain text in configuration files. (e.g., ssh client config file with remote login ID and password.)
+10.112	User accounts and service accounts used for configuration management have only the minimum privileges required for the task.
+11.113	Measures are in place to detect unauthorized changes to information.
+11.114	Measures are in place to protect information from being accidentally overwritten.
+11.115	System supports integrity mechanisms for transmission of both incoming and outgoing files, such as parity checks and cyclic redundancy checks (CRCs).
+11.116	Measures are in place to prevent the upload of unauthorized files (e.g., executable files).
+12.117	Sensitive data and secrets are not incorporated in  code.
+12.118	Secrets are stored securely using a one-way hash. Database keys, connections, passwords, or other secrets are not stored in plain text.
+12.119	Sensitive data is not logged in clear text by the System.
+12.120	Database/file encryption for protection of sensitive data fields while the data is at rest (i.e., stored data) is provided.
+12.121	Protection mechanisms are in place for sensitive data that is sent over the network.
+12.122	Sensitive data is not transmitted using insecure protocols, such as FTP, telnet, tftp etc., unless tunneled through an authenticated encrypted connection (e.g. VPN).
+12.123	Sensitive data is not stored in persistent cookies.
+12.124	Measures are in place to prevent, detect and log unauthorized attempts to access sensitive or confidential data.
+12.125	System restricts transactions involving financial or sensitive data to authorized user sessions originating on the County Intranet WAN only. Access to such transactions from the Internet is blocked.
+12.126	System restricts access to financial transactions and other sensitive data by authorized users outside the County Intranet to Read Only mode.
+12.127	All user sessions involving financial transactions or sensitive data are encrypted using SSL/HTTPS.
+12.128	System provides administrative ability to block users’ access to individual patient records  for privacy reasons
+13.129	SSL is used to protect authentication cookies.
+13.130	The system shall provide automatic logout of users when there has been no activity for a pre-defined period, maintaining transaction integrity.
+13.131	Session lifetime is limited to a pre-specified and configurable duration.
+13.132	Session state is protected from unauthorized access.
+13.133	Session identifiers are not passed in query strings.
+13.134	Temporary objects are removed from the system, database connections are closed, and memory is released.
+14.135	System provides an automatic timeout if the session is idle for a pre-specified and configurable duration.
+14.136	System warns the user before the timeout and prompts the user to re-enter their password.
+15.137	The system shall have the ability to support 128-bit SSL encryption, or higher, between the client browser and the application tier for any or all modules or sub-modules at organization discretion. Identify security standard (SSL/FIPS encryption).
+15.138	Encryption capability for certain data transmissions that require security protection.
+15.139	Platform-level cryptography is used with no custom implementations.
+15.140	System provides secure information delivery over the Internet via encryption by using triple-DES (Data Encryption Standard) or the Advanced Encryption Standard (AES)
+15.141	Encrypted data delivered over the Internet is transmitted via open protocols (e.g., SSL, XML encryption)
+15.142	Cryptographic algorithm and key size for the System’s data encryption requirements is AES 256 bit or stronger.
+15.143	Encryption keys are secured.
+15.144	Key management procedure to secure and manage the encryption keys is defined.
+16.145	All input parameters are validated (including form fields, query strings, cookies, and HTTP headers).
+16.146	Cookies with sensitive data (e.g. authentication cookies) are encrypted.
+16.147	Sensitive data is not passed in query strings or form fields.
+16.148	Security decisions do not rely on HTTP header information.
+17.149	System exception handling minimizes information disclosure in case of an exception.
+17.150	System returns generic error messages to the client, to avoid disclosure of sensitive information.
+17.151	System code does not rely on internal system generated error handling. The System provides error-handling processes.
+17.152	System errors are logged to the error log.
+17.153	Private and sensitive data (for example, passwords) are not logged.
+18.154	Auditing and logging in the System  includes, at a minimum, authenticated access, configuration changes, privileged access such as use of administrative rights, and change of rights and privileges. The parameters logged includes user or system account ID, date/time stamp, event source, IP address, error/event code and type.
+18.155	The system shall have the ability to record or capture information about each authorized and/or unauthorized access attempt such as: User ID, workstation, date, time, transaction (menu, screen, file, object), and attempted type of access (read, modify, etc.).
+18.156	System generates an audit record for all activity of a given user (i.e., a trail of all user activity within the System)
+18.157	System generates an audit record for activity associated with a transaction, from creation to completion, including logging of data additions, changes, and deletions
+18.158	System provides an audit trail and viewable history of all transactions including but not limited to, user’s login ID, date, and time stamp.
+18.159	System allows selection of transactions to be logged
+18.160	System allows selection of data elements to be logged in audit records
+18.161	System allows logging of all user IDs that has used a given function
+18.162	System allows logging of all user IDs that has updated a given field
+18.163	System logs the following information in each audit record: - Date and time of the event - Component of the System (e.g., software, hardware) where the event occurred -  User device or peripheral device involved in transactions - Type or transaction - User Identity - Outcome (success or failure) of the event
+18.164	The System tracks the before and after record of modified data elements
+18.165	The System restrict system administrator from changing log activity
+18.166	The System secures audit records in the following ways: -  Allows read access to authorized Users only - Protects stored audit records from unauthorized deletion - Prevents modifications to the audit records
+18.167	System monitors user audit logs via an automated process, and reports on irregular activity. Irregular activities are identified based on County departments’ rules and regulations. The irregular activity reports are customizable.
+18.168	System provides the ability to archive records, reports and historic information for predefined timeline based on rules and regulation.
+18.169	System prevents deleted records from being purged until they have been archived.
+18.170	System maintains an audit trail of errors and exceptions.
+18.171	All changes to the System hosting environment are logged and tracked. Reports are available for significant and critical changes and sent for review by a responsible person.
+19.172	Data collection devices (e.g. – handheld devices, etc.) synchronize with the System securely using authentication, authorization and encryption mechanisms.
+20.173	The system shall provide summarized and detailed reports on user access, usage logs, etc.
+20.174	System provides online reporting capability to authorized County system managers for necessary review and accountability.
+20.175	System provides error and exception reports.
+20.176	System provides usage reports.
+20.177	System provides configuration, user accounts, roles and privileges reports.
+20.178	System provides a listing of privileged account holders within the System hosting environment.
+21.179	The system shall generate charts and graphs based on report data within the system.
+21.180	The system shall generate reports directly to MS Office, Hypertext Markup Language (HTML) or PDF formats, Open Doc, Open XML, etc.
+21.181	The system shall provide ad hoc and standard query capabilities (with and without input parameters).
+21.182	The system shall provide ability to create and maintain a report distribution mechanism with predefined reports (e.g., monthly reports that are specific by role, organization, and location via portal or Web).
+21.183	The system shall provide the ability to view previously generated reports by all users or by specific users.
+21.184	The system shall provide capability to schedule reports to run automatically.
+21.185	The system shall allow for reporting by exception.
+21.186	The system shall allow print preview of all reports before printing and have print screen and selective page(s) print functionality.
+21.187	The system shall be capable of utilizing MS-Excel to download information from the application and upload information into the application.
+21.188	The system shall allow for user-friendly end-user report creation without requiring technical staff or expertise to create and publish reports within the modules.
+21.189	The proposer shall provide an Ad Hoc reporting tool.
+21.190	The Ad Hoc reporting tool shall be able to access any delivered or added fields in the database.
+22.191	The user interface shall integrate information from multiple components into a unified display by business area or work type.
+22.192	The system shall provide:
+22.193	The system shall have a customizable online documentation and training materials such as context-specific help, search capability, organization-specific business process documentation and process maps.
+22.194	The Proposer shall allow for field level edit checks for transactions during data entry and provide immediate user feedback, including error messages and possible corrective actions
+22.195	The system shall have the ability to design a preferred sequence to make data-entry columns and fields match the order of information in organization source documents.
+22.196	The system shall allow for the option of auto-fill capability per transaction/field entry throughout all modules
+22.197	The system shall have the ability to restrict free form entry (e.g., provide drop down calendar for date field)
+22.198	The system shall have the ability to accept mass data entry from an external source
+22.199	On-line, interactive help with support for hyperlink technology and industry standard formats (e.g., HTML file formats)
+22.200	Intelligent spell checking of text fields
+22.201	The system shall have the ability to minimize the necessity of the mouse when user performs data entry tasks
+22.202	The system shall present data to users such that a minimum of navigational effort is required, including:
+22.203	The data elements required to complete a job function, whether to inquire/read only or data entry must be readily available.
+22.204	The user interface shall integrate information from multiple components into a unified display by business area or work type.
+23.204	Capture system-generated documents and store them in virtual property or licensee folders.
+23.205	The system shall store electronic forms.
+23.206	The system shall scan and store imaged documents and electronic files.
+23.207	The system shall enable indexing and searching of documents by a variety of user-defined metadata attributes.
+23.208	The system shall support for full text search
+23.209	The system shall have built-in viewers/converters for a wide variety of file types.
+23.210	The system shall enable attachment of documents to e-mails and e-mail distribution lists.
+23.211	The system shall store location identification of paper documents (attributes shall minimally include folder, box, and physical location).
+24.212	The Proposer shall provide a recovery environment to maintain business continuity
+25.213	The system shall be able to handle an average transaction load with an average CPU utilization of no more than 35%-40% of the CPU capacity. The peak CPU utilization shall never exceed 70% of CPU capacity at any given time.
+25.214	The system shall have a response time where the average transaction on the server needs to occur on average less than 1 second. The response time for the most common requests to reach a user shall not exceed 3 seconds.
+25.215	The solution shall maintain 99.9% availability — including planned maintenance.
+25.216	The solution shall track system uptime and transaction response times in order to demonstrate operation within acceptable levels.
+25.217	The solution shall complete 100% of simple, single-screen online inquiry transactions in under one second, during peak usage.
+25.218	The solution shall complete an average of 99% of all online update transactions in under 5 seconds over any 60-minute period, during peak usage.
+26.219	The Proposer shall provide the facility required to host the computing and network environment, including appropriate physical security, required third-party software, and 24x7 staff support and monitoring environmental conditions (e.g. HVAC, port, fire detection, suppression, moisture, humidity and temperature.
+26.220	The Proposer shall provide and manage all required infrastructure and network equipment within the data center, such as servers, routers, switches, load balancers and consoles.
+26.221	Allow access to the EMH solution over the Internet and provide secure and confidential storage of all information transmitted to and from the LA DHS.
+26.222	The Proposer shall monitor the computing systems (24 x 7) and communications circuits to report and alert on compromised system health, security, availability and capacity.
+26.223	The Proposer shall review security notifications and alerts relevant to the hosting platform (e.g., notifications of bugs, attacks, patches), and apply as appropriate to maintain the highest level of defense.
+26.224	The Proposer shall provide adequate firewall protection in order to secure Personal Data and other Confidential Information users of the EHR from unauthorized access by third parties.
+26.225	The Proposer shall test application enhancements, fixes, and upgrades and assure the integrity of the resulting data.
+26.226	The Proposer shall provide and maintain a method for proper escalation of issues and log all incidents, problems and error corrections as agreed to with LA DHS.
+26.227	The Proposer shall adhere to service levels defined with LA DHS germane to availability, response time based on severity level, credits and other key hosting metrics.
+26.228	The Proposer shall meet performance requirements detailed in System Capacity & Performance (Requirements T-213 through T-218).
+27.229	The EHR System shall provide complete audit features for all transactions in all modules of the software solution.
+27.230	The EHR System shall be able to perform real-time data redundancy on independent storage devices
+27.231	simultaneously and switch over to the mirror database(s).
+27.232	The system shall take advantage of network HA and redundancies and switch over to mirror databases without impact on the user.
+27.233	The system shall provide system failovers or database redundancies.

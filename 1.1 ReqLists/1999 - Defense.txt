@@ -1,0 +1,346 @@
+3.2.1.1	Modules wishing to use Message Transfer Services must be written as clients to the Communication server.
+3.2.1.2	Message Transfer Services shall support 24-Hour, 7 day per week operations.
+3.2.1.3	Message Transfer Services shall provide for system restart to normal operations with no message loss after elimination or correction of a systemmalfunction or failure condition.
+3.2.1.4	Message Transfer Services shall not be held responsible for queuing delays on external circuits. In the event that a message cannot be delivered when it isready for delivery due to circumstances beyond the Communications processor’scontrol, Message Transfer Services shall queue the message for later delivery.
+3.2.1.5	Message Transfer Services shall be capable of handling both individual and organizational messages. This includes not only record (character-orientedand formatted) and binary messages but also electronic mail (E-mail).
+3.2.1.6	Message Transfer Services shall include message handling functions for storage.
+3.2.1.7	Message Transfer Services shall include message handling functions for retrieval.
+3.2.1.8	Message Transfer Services shall include message handling functions for query.
+3.2.1.9	Message Transfer Services shall include message handling functions for printing.
+3.2.2.1	Message Transfer Services shall be able to use device drivers provided by the COE and/or install the required operating system drivers to support datatransfer.
+3.2.2.2.0	Message Transfer Services shall be capable of connecting Data Terminal Equipment (DTE) or Data communications Equipment (DCE) such as terminals,personal computers, modems or mainframe host computers. The following datacommunications capabilities shall be supported:
+3.2.2.2.1	Message Transfer Services shall support Asynchronous Serial Interfaces.
+3.2.2.2.2	Message Transfer Services shall support Synchronous Serial Interfaces.
+3.2.2.2.3	Message Transfer Services shall support Direct Connection of DTE’s and DCE’s via RS 232-D interfaces.
+3.2.2.3.1	Message Transfer Services shall be capable of interacting with a parallel device and driver.
+3.2.2.4.1	Message Transfer Services shall be capable of interacting with a network device and driver.
+3.2.2.5	Message Transfer Services shall support external SCSI devices used for communications devices or other communications uses.
+3.2.2.6	Message Transfer Services shall support VME/VXI boards to be used for communications processors, communications multiplexers, or othercommunications uses.
+3.2.2.7	Message Transfer Services shall support EISA boards to be used for communications processors, communications multiplexers, or othercommunications uses.
+3.2.2.8	Message Transfer Services shall support S-Bus boards used for communications processors, communications multiplexers, or othercommunications uses.
+3.2.2.9	Message Transfer Services shall support PCMCIA cards used for communications processors, communications multiplexers, or othercommunications uses.
+3.2.2.10	Message Transfer Services shall support PCI bus-based devices for communications processors, communications multiplexers, or othercommunications uses.
+3.2.2.11	Message Transfer Services shall support Universal Serial Bus (USB) bus- based devices for communications processors, communications multiplexers, orother communications uses.
+3.2.3.1	An interface definition shall be provided to support the addition of interfaces as “plug in” modules to the communication server architecture.
+3.2.3.2.1	Message Transfer Services shall provide an interface to transmit and receive messages via serial EIA-RS-232.
+3.2.3.2.2	Message Transfer Services shall provide an interface to transmit and receive messages via serial MIL-STD-188.
+3.2.3.2.3	Message Transfer Services shall provide an interface to transmit and receive messages via serial EIA-RS-449.
+3.2.3.2.4	Message Transfer Services shall provide an interface to transmit and receive messages via serial V.35.
+3.2.3.2.5	Message Transfer Services shall support the AUTODIN Mode 1 protocol and interface.
+3.2.3.2.6	Message Transfer Services shall support the AUTODIN Mode 2 protocol and interface.
+3.2.3.2.7	Message Transfer Services shall support the AUTODIN Mode 6 protocol and interface.
+3.2.3.2.8	Message Transfer Services shall provide an interface to transmit and receive messages via Kermit.
+3.2.3.2.9	Message Transfer Services shall provide an interface to transmit and receive messages via PPP.
+3.2.3.2.10	Message Transfer Services shall provide an interface to transmit and receive messages via XModem.
+3.2.3.2.11	Message Transfer Services shall provide an interface to transmit and receive messages via YModem.
+3.2.3.2.12	Message Transfer Services shall provide an interface to transmit and receive messages via ZModem.
+3.2.3.3.1	Message Transfer Services shall provide an interface to transmit and receive messages via floppy disk.
+3.2.3.4.1	Message Transfer Services shall provide an interface to transmit and receive messages via network disk directories.
+3.2.3.5.1	DII COE networks shall be based on Ethernet standards (IEEE 802.2, 802.3, 802.4, 802.5), with Fiber Distributed Data Interface (FDDI) backbones tosupport larger installations.
+3.2.3.5.2	Hardware components shall be compatible with the ISO 8802-3 (IEEE 802.3) specification.
+3.2.3.5.3	MIL-STD-187-700 (Interoperability and Performance Standards for the Defense Information System) shall be used to share digital informationacross common user communication systems.
+3.2.3.5.4	Message Transfer Services shall provide an interface to transmit and receive messages via Transmission Control Protocol/Internet Protocol (TCP/IP) network communications.
+3.2.3.5.5	Each layer of the implemented protocol stacks shall be functionally autonomous from any adjacent layer.
+3.2.3.5.6	Message Transfer Services shall provide an interface to transmit and receive messages via broadcast User Datagram Protocol/Internet Protocol(UDP/IP).
+3.2.3.5.7	Message Transfer Services shall provide an interface to transmit and receive messages via multicast UDP/IP.
+3.2.3.5.8	Message Transfer Services shall provide an interface to transmit and receive messages via network file transfer protocol (ftp).
+3.2.3.5.9	Message Transfer Services shall provide an interface to transmit and receive messages via trivial network file transfer protocol (tftp).
+3.2.3.5.10	Message Transfer Services shall provide an interface to transmit and receive messages via IPX/SX network communications.
+3.2.3.5.11	Message Transfer Services shall provide an interface to transmit and receive messages via Banyan Vines network communications.
+3.2.3.6.1	Message Transfer Services shall provide an interface to transmit and receive messages via network Simple Mail Transfer Protocol (SMTP)electronic mail (E-mail).
+3.2.3.6.2	Message Transfer Services shall provide an interface to transmit and receive messages via X.400 mail (E-mail).
+3.2.3.6.3	Message Transfer Services shall provide an interface to receive messages via Post-Office-Protocol Version 3 (POP-3) E-mail.
+3.2.3.6.4	Message Transfer Services shall provide an interface to receive messages via IMAP-4 E-mail.
+3.2.4.1	Message Transfer Services shall provide the user interface to monitor the status and data flow through all communication interfaces within a given suite.
+3.2.4.2	Message Transfer Services shall provide default user interface clients to interact with the various Message Transfer Services for the creation, deletion,activation, deactivation, and configuration of communications interfaces,messages, logs, etc. These client applications will use the defined APIs of thesystem services and provide the basic capabilities for exercising the variousaspects of Communication subsystem without the presence of other service areas/client applications.
+3.2.4.3	Message Transfer Services shall not impose an arbitrary message size limit. Message sizes and rules for segmentation/collation shall be determined by the Interface and message sources. Any packetization will be transparent to theMessage Transfer Services user.
+3.2.4.4	Message Transfer Services shall provide the capability to perform a controlled (normal) termination of any or all communications which are active.
+3.2.4.5	Message Transfer Services shall provide channel status and utilization information on request of an application program; channel status will includesuccessful transmission count, aborted transmission count, received messagesegments with not correctable error(s) count.
+3.2.4.6	Message Transfer Services shall provide a framework and toolkit for Interface developers that allows a new interface to be plugged into the systemwithout modifying the Message Transfer Services code.
+3.2.5.1	Message Bounding: Message Transfer Services shall provide a configurable and extensible mechanism for specifying message or data boundingcriteria to be used by various interfaces in the handling of message traffic.
+3.2.5.1.1	Message Transfer Services shall be able to bound messages using the rules of the JANAP 128 message envelope type.
+3.2.5.1.2	Message Transfer Services shall be able to bound messages using the rules of the ACP 123 message envelope type.
+3.2.5.1.3	Message Transfer Services shall be able to bound messages using the rules of the ACP 126M message envelope type.
+3.2.5.1.4	Message Transfer Services shall be able to bound messages using the rules of the ACP 127 (NATO) message envelope type.
+3.2.5.1.5	Message Transfer Services shall be able to bound messages using the rules of the DD173 message envelope type.
+3.2.5.1.6	Message Transfer Services shall be able to bound messages using the rules of the DOI 103 message envelope type.
+3.2.5.2	Message Identification: Message Transfer Services shall provide a configurable and extensible mechanism for specifying message format andmessage type identification criteria to all for the message format/type labeling ofcurrent and future messages.
+3.2.5.3.1	Message Transfer Services shall provide a mechanism for the logging of transmitted or received messages by message type.
+3.2.5.3.2	Message Transfer Services shall provide a mechanism for the logging of transmitted or received messages by classification.
+3.2.5.3.3	Message Transfer Services shall provide a mechanism for the logging of transmitted or received messages by precedence.
+3.2.5.3.4	Message Transfer Services shall provide a mechanism for the logging of transmitted or received messages by Date-Time-Group (DTG).
+3.2.5.3.5	Message Transfer Services shall provide a mechanism for viewing messages that have been logged.
+3.2.5.3.6	Message Transfer Services shall provide a mechanism for correcting messages that have been logged.
+3.2.5.3.7	Message Transfer Services shall provide a mechanism for editing messages that have been logged.
+3.2.5.3.8	Message Transfer Services shall provide a mechanism for reprocessing messages that have been logged.
+3.2.5.3.9	Message Transfer Services shall provide a mechanism for retransmitting messages that have been logged.
+3.2.5.3.10	Message Transfer Services will retain a copy of original messages that have been edited.
+3.2.5.3.11	Message Transfer Services shall support creation, deletion, and management of multiple message logs on both incoming and outgoing trafficallowing for the segregation of messages into different logs based on messagetype, or other criteria.
+3.2.5.3.12	Message Storage/Retrieval: Message Transfer Services shall provide a mechanism for the storage and retrieval of messages or datatransmitted to or received from an interface for a period appropriate to theinterface and system capacity.
+3.2.5.3.13	Message Archive/Retrieval: Message Transfer Services shall provide a mechanism for the long term storage and retrieval of up to a year’sworth of messages and logs to off-line media.
+3.2.5.4.1	Messages shall be processed on a first-in, first-out (FIFO) basis, by precedence. The highest precedence queued messages shall be processedbefore any lower precedence queued messages, regardless of their order of arrival.
+3.2.5.4.2	Lower precedence messages shall be preempted (busted) by flash or ECP precedence messages on all circuits capable of message cancellation.
+3.2.5.5.1	Message Transfer Services shall provide APIs to the Message Processing module allowing client applications to manipulate messagesthrough these APIs.
+3.2.5.5.2	Message Transfer Services Message Management APIs will support C, C++, and Ada client applications.
+3.2.5.5.3	Message Transfer Services shall provide APIs to construct the message header information independent of constructing the message body.
+3.2.6.1	Message Transfer Services shall provide a mechanism for message processing client applications to request notification for messages of interest.
+3.2.6.2	Message Transfer Services shall provide a mechanism for message processing client applications to request alerting for messages of interest byvarious criteria such as message type, precedence, etc.
+3.2.6.3.1	Message Transfer Services shall support a database of addressees, which shall be maintained on nonvolatile storage and a backup for theaddressee database will be provided.
+3.2.6.3.2	Message Transfer Services shall provide a method for the comms administrator to change the addressee database on-line. Changes made by theoperator shall persist over a system restart.
+3.2.6.3.3	Message Transfer Services shall allow the operator to add addressees and their routing destinations.
+3.2.6.3.4	Message Transfer Services shall allow the operator to correct addressees and their routing destinations.
+3.2.6.3.5	Message Transfer Services shall support a Plain Language Addressees (PLA) database capable of storing PLA, Address Indicator Groups(AIG), Office Codes, and routing indicators (RI) associated with them.
+3.2.6.4.1	Message Transfer Services shall provide a mechanism for the validation of message headers and types on both incoming and outgoingtraffic.
+3.2.6.4.2	Message Transfer Services shall provide a mechanism for the logging of messages with invalid formats.
+3.2.6.4.3	Message Transfer Services shall provide a mechanism for the operator notification of messages with invalid formats.
+3.2.6.4.4	Message Transfer Services shall provide a mechanism for the correction of messages with invalid formats.
+3.2.6.4.5	Message Transfer Services shall provide a mechanism for the reprocessing of messages with invalid formats.
+3.2.6.4.6	The message error type shall be displayed in its original form and in plain English form.
+3.2.6.5.1	Message Transfer Services shall provide a message input accountability of 99.999% with an objective of 100% of messages handled overinterfaces that support protocol acknowledgment.
+3.2.6.5.2	Message Transfer Services shall provide a message output accountability of 99.999% with an objective of 100% of messages handled overinterfaces that support acknowledgment.
+3.2.6.5.3	Message accountability functions shall be performed automatically within Message Transfer Services.
+3.2.6.5.4	Message Transfer Services shall provide error detection to ensure message accountability as messages and data are processed from one deviceto another. Operator notification shall be provided for all errors detected.
+3.2.6.6.1	Provide users the capability to search the message journal retrospectively for the messages of interest based on defined search criteriaagainst the complete message and any annotations.
+3.2.6.6.2	Provide processes the capability to search the message journal retrospectively for the messages of interest based on defined search criteriaagainst the complete message and any annotations.
+3.2.6.6.3	Provide the user the ability to enter search interactively via a user interface.
+3.2.6.6.4	Provide the user the ability to enter delivery information interactively via a user interface.3.2.6.6.5 Provide the user the ability to enter search via an API.
+3.2.6.6.6	Provide the user the ability to enter delivery information via an API.
+3.2.6.6.7	Have no set limit on the maximum number of searches that can be run against a particular message.
+3.2.6.6.8	Have no set limit on the maximum number of users or processes to which results of a search can be sent.
+3.2.6.7.0	Message Transfer Services shall provide an area where both inbound and outbound messages are filed. Records placed in the operational journal will beaccessible by authorized users for retrieval, annotation, and/or additionalprocessing. The operational journal shall:
+3.2.6.7.1	Provide the capability to generate/display directory of journal records
+3.2.6.7.2	Provide the capability to log the following information from received and transmitted messages: a. Date and time of message origination - Date Time Group (DTG)b. Date and time the message was receivedc. Subject/Message IDd. Message originatore. Message destinationf. Security classification (including codewords/nicknames and special handling) g. Message identification h. Message Sequence number i. Message transmission/reception status
+3.2.6.7.3	Provide the capability to selectively log the following information from received and transmitted messages at the request of an applicationprogram: a. Message sender b. Message typec. Time Receivedd. Message Time Stampe. Channelf. Status
+3.2.6.7.4	Provide the capability to selectively retrieve the logged message information.
+3.2.6.7.5	Provide the capability to maintain the status of all messages under coordination and release review.
+3.2.6.7.6	Provide the capability for members on the message coordination and release list to access the status of all messages under coordination.
+3.2.6.7.7	Provide the capability to store the contents of the receive queue for subsequent retrieval in the event of a W/S re-initialization.
+3.2.6.7.8	Provide the capability to store selected messages on-line for quick access. Storage parameters shall include the message profile (i.e., type,originator, precedence) and specified time period (i.e., for 1, 2, 6, 12, 24, and 48hours).
+3.2.6.7.9	Provide the capability to search the message storage for messages of interest based upon a user-defined set of search criteria.
+3.2.6.7.10	Provide the capability to define message storage space capacity and threshold depletion limits.
+3.2.6.7.11	Message Transfer Services shall not impose an arbitrary message log limit but will base the limit on system resources (e.g., hard disk space,memory, etc.).
+3.2.6.7.12	Provide the capability to monitor message storage space for depletion.
+3.2.6.7.13	Provide the capability to route messages to an alternate, selectable, device when the message storage area limits are reached.
+3.2.6.7.14	Provide the capability to disable the acceptance of incoming non- ECP and non-Flash messages when primary storage devices are full.
+3.2.6.7.15	Provide the capability to delete the oldest messages having the same or lower precedence as the incoming message in order to make room when themessage storage area is full and acceptance of incoming messages is notdisabled.
+3.2.6.7.16	Provide the capability to enable the acceptance (for storage) of incoming messages according to message precedence.3.2.6.7.17 Provide the capability for an application program to delete selected messages from the message storage area.
+3.2.6.7.18	Message transfer services shall provide a mechanism for validation of message formats and types on both incoming and outgoing message traffic.
+3.2.6.7.19	Message Transfer Services shall provide the capability to create, store, and maintain subscriber tables.
+3.2.6.7.20	Message Transfer Services shall provide the capability to extract default message relaying information from an application directory or fromcurrent network configuration and status information.
+3.2.6.8.0	Message Transfer Services shall be capable of supporting the message processing module requirement that messages released to it for transmission are independentof any interface or protocol’s size limitations. Message Transfer Services shalltherefore provide message segmentation and collation functions to break apartlong messages for transmission and reassemble those message segments uponreception. Additionally, the Message Transfer Services shall:
+3.2.6.8.1	Create a single message from all sections of a multi-part message received in an operator-setable time period.
+3.2.6.8.2	Create multiple sections from a single message inserting the necessary segmenting information into the message body as defined by theinterface specification that supports segmentation.
+3.2.6.8.3	Handle an incomplete sectioned message at user direction.
+3.2.6.8.4	Ensure that the message is displayed in section order regardless of whether sections are received out-of-sequence or are missing.
+3.2.6.8.5	Place San indicator in the reconstituted message where portions of the message/message text are missing.
+3.2.6.9.1	Message Transfer Services shall provide message formatting and conversion, message in-processing, to include the viewing, logging, profiling,precedence processing, and user notification of incoming message traffic(based on message bounding).
+3.2.6.9.2	Message Transfer Services shall provide for message dissemination to include distribution by precedence, distribution by profile, and distributionby mailing list.
+3.2.6.9.3	Message Auto Print: Message Transfer Services shall provide a mechanism for automatically printing messages or data based on variouscriteria such as source, addressee, and message type.
+3.2.6.9.4	Message Transfer Services shall allow the operator to perform service message handling support.
+3.2.6.10.1	Message Transfer Services shall provide a mechanism to automatically forward messages or data to other destinations based onvarious criteria of the message (e.g., source, addressee, message type).
+3.2.6.10.2	Message Transfer Services shall provide a mechanism for distribution of messages to back-end clients based on criteria such as messagetype, routing indicators, office codes, and key words. This distribution shallsupport the Message Processing Services.
+3.2.6.10.3	Message Transfer Services shall allow the operator to add criteria for how messages are distributed to back-end users.
+3.2.6.10.4	Message Transfer Services shall allow the operator to modify  criteria by which messages are distributed to back-end users.
+3.2.6.10.5	Message Transfer Services shall route messages based on addressees found within the message. This applies to all message boundingtypes.
+3.2.6.10.6	Message Transfer Services shall provide the option of routing message traffic to an alternate destination based on precedence.
+3.2.6.10.7	Message Transfer Services shall provide the option of routing message traffic to an alternate destination based on other message headerfields as required.
+3.2.6.10.8	Message Transfer Services shall provide the option of routing message traffic to an alternate destination based on routing indicators.
+3.2.6.10.9	Message Transfer Services shall provide the option of routing message traffic to an alternate destination based on classification.
+3.2.6.10.10	For sectionalized messages, Message Transfer Services shall provide the capability to transfer concatenated messages (i.e., the messagesegments are combined back into the original message) or transfer themessage segments depending on the request from an application program.
+3.2.6.10.11	Message Envelope Format Conversion: Message Transfer Services shall provide a mechanism for the conversion of certain message envelopeformats to other message envelope formats as is appropriate for thetransmission interface, for example if autoforwarding over a different type ofchannel that supports a different message envelope.
+3.2.6.11.0	Messages entering the message processing module must be examined to identify and/or extract (copy or demarcate) message elements. Elements extracted frommessages are necessary for construction of corresponding message summarieswhich shall provide “two-level” message review capabilities required fordistribution, coordination, and retrieval functions used during search andretrieval processes. The message processing module shall:
+3.2.6.11.1	Provide the capability to enter message selection profiles for individual users, group of users, or processes.
+3.2.6.11.2	Support distribution criteria to include message routing criteria or message content.
+3.2.6.11.3	Compare messages and system profiles to determine which accounts should receive a copy of the associated message summaries.
+3.2.6.11.4	Compare messages and system profiles to determine which accounts should receive a copy of the associated parsed data.
+3.2.6.11.5	Determine from user profiles and message content which organization is assigned Action for the Office of Primary Interest (ACT/PI) fora given message.
+3.2.6.11.6	Determine from user profiles and message content which account shall be designated the Action Officer (AO) for the message.
+3.2.6.11.7	Provide an optional capability to distribute message summaries of transmitted messages (come-back copies) to any combination of accountslisted in the internal distribution fields (drafter, coordinators, releaser).
+3.2.6.11.8	Provide an optional capability to distribute message come-back copies to any combination of accounts listed in the internal distribution fields (drafter, coordinators, releaser).
+3.2.6.11.9	Support user re-addressal of received messages for retransmission to external organizations.
+3.2.6.11.10.1	To support generation of a message profile the Message Transfer Services shall	Extract the following precedence markings (on messages so marked): ■CRITIC ■EMERGENCY COMMAND PRECEDENCE (ECP) ■FLASH ■IMMEDIATE ■PRIORITY ■ROUTINE
+3.2.6.11.10.2	To support generation of a message profile the Message Transfer Services shall Process the message wrapper to identify and extract the following message elements: ■Subject/Message ID ■Date-Time-Group (DTG) ■Message Addresses (both action and information) ■Office Symbols (including multiple office symbols in a single address) ■Message Originator
+3.2.6.11.10.3	To support generation of a message profile the Message Transfer Services shall Extract U.S. classification and caveat markings including, but not limited to: ■TOP SECRET ■SECRET ■CONFIDENTIAL ■UNCLAS EFTO FOUO ■UNCLAS EFTO ■UNCLAS
+3.2.6.11.10.4	To support generation of a message profile the Message Transfer Services shall Identify message handling markings for control functions used to enforce user “need-to-know” access within the various classification and caveatlevels including, but not limited to: ■LIMDIS ■EYES ONLY (and who for) ■PERSONAL FOR (and who the message is personal for) ■SPECAT ■SPECAT EXCLUSIVE ■specified, special compartmental caveats as may be modified by theuser.
+3.2.6.12.1	Message Transfer Services shall provide for message out-processing to include transmittal, retransmittal, forwarding, logging, precedenceprocessing, and review and release of messages.
+3.2.6.12.2	Alternate Channel Selection/Routing: Message Transfer Services shall provide the capability for manually and automatically routing outgoingtraffic from one interface to another within the constraints of the alternaterouting tables.
+3.2.6.12.3	Message Transfer Services shall provide a mechanism for releasing/ transmitting messages or data. This mechanism will support both automaticand manual destination selection.
+3.2.6.12.4	Message Transfer Services shall provide the capability to support a number of addressees per message appropriate to the interface.
+3.2.6.12.5	Message Transfer Services shall provide the capability for an application program to define, without taking a workstation off-line, analternate channel for retransmission if the retry count for data transmission isexceeded, consistent with the security level of the alternate channel andconnected workstation.
+3.2.6.12.6	In the event the allowable retry count is reached during data transmission over a channel, Message Transfer Services shall provide thecapability to automatically attempt to utilize the assigned alternate channelfor transmission.
+3.2.6.12.7	Message Transfer Services shall provide the capability to define the number of recovery retries to be made in the event of failure duringtransmission, prior to selection of an alternate channel.
+3.2.6.12.8	The output of Message Transfer Services for character-oriented messages shall be messages or data that will be passed to other functions orprocesses to do message parsing and subsequent update of the system'sdatabase engine(s).
+3.2.6.12.9	Message Transfer Services shall provide the capability to notify an application program in case of a rejected or abort transmission after recoveryand retry mechanisms have been exhausted.
+3.2.6.12.10	Message Transfer Services shall support generation of simulated message traffic during exercises and training.
+3.2.6.12.11	Message Transfer Services shall notify the Application or Higher Layer software via APIs regarding message reception, message notification,and status but shall not be limited to the following: a.  Transmission notification such as successful or not successful. b.  Message reception status such as acknowledge or negative acknowledgment (ACK/NACK) c.  Message reception error notificationd.  Configuration status 3.3.2.1	Voice Communications Services shall support 500 type telephones (rotary dial).
+3.3.2.2	Voice Communications Services shall support 2500 type telephones (DTMF).
+3.3.2.3	Voice Communications Services shall support digital telephone sets with multiple lines.
+3.3.2.4	Voice Communications Services shall support digital telephones with multiple keys for special features, display, data capability, etc.
+3.3.2.5	Facsimile Services: Voice Communications Services shall support any facsimile machine designed in accordance with EIA Standard RS-465, Group 3Facsimile Apparatus for Document Transmission.
+3.3.3.1	Voice Communications Services shall support Call forwarding (all calls/ busy, and no answer).
+3.3.3.2	Voice Communications Services shall support Call waiting.
+3.3.3.3	Voice Communications Services shall support Programmed directories.
+3.3.3.4	Voice Communications Services shall support Teleconferencing.
+3.3.3.5	Voice Communications Services shall support Automatic call distribution (useful for busy customer service areas).
+3.3.3.6	Voice Communications Services shall support Call Park (allows putting a call on hold and disconnecting the call, the call can then be answered from anytelephone set).
+3.3.3.7	Voice Communications Services shall support Call detail recording.
+3.3.3.8	Voice Communications Services shall support Precedence.
+3.3.3.9	Voice Communications Services shall support Preemption.
+3.3.3.10	Voice Communications Services shall support Hot lines.
+3.3.3.11	Voice Communications Services shall support Class-of-service restrictions.
+3.3.4.1	Voice Communications Services shall support broadcast services that provide one-way audio communications services between a sending location andmultiple receiving locations.
+3.3.4.2	Voice Communications Services shall support broadcast services that provide one-way digital communications services between a sending location andmultiple receiving locations.
+3.3.4.3	Voice Communications Services shall be capable of detecting both voice and data when they present on the net.
+3.3.5.2	Voice Communications Services shall provide audio teleconferencing with common workstation windows between two or more users. This includes thecapability to refresh windows whenever someone displays new material orchanges an existing display. Every user is provided the capability to graphicallyannotate or modify the shared conference window.
+3.3.5.3	Voice Communications Services shall provide two-way video transmission between different sites. These services include full motion display of events andparticipants in a bi-directional manner, support for the management of directingthe cameras, ranging from fixed position, to sender directed, to receiver directed,to automated sound pickup.
+3.3.5.4	Voice Communications Services shall provide conferencing services that allow groups to participate in conferences. These conferences may not occur inreal time. Conferees or invited guests can drop in or out of conferences orsubconferences at will. The ability to trace the exchanges is provided. Servicesinclude exchange of documents, conference management, recording facilities, andsearch and retrieval capabilities.
+3.4.1	Information Technical Services shall provide the capability to utilize the workstation resident protocol layers over multiple subnetworks.
+3.4.2	In addition to the specific layer requirements detailed in subsequent paragraphs, the ISO Reference Model shall be implemented IAW the basic reference modeldocuments and certain layer independent standards as listed below:
+3.4.3.1	Technical Services shall Provide the capability to send formatted messages using the Message Handling System (MHS) protocol as defined in CCITT X.420, CCITT X.411, NIST500-177, and FIPS PUB 146.
+3.4.3.2	Technical Services shall Provide the capability to receive formatted messages using the MHS protocol as defined in CCITT X.420, CCITT X.411, NIST 500-177, and FIPS PUB146.
+3.4.3.3	Technical Services shall Provide for an MTA multi-destination delivery.
+3.4.4.1	Information Technical Services shall provide Association Control service as defined in ISO 8649/CCITT X.217 and FIPS Pub 146.
+3.4.4.2	Information Technical Services shall provide an ACSE protocol as defined in ISO 8650/CCITT X.227, NIST 500-177, and FIPS PUB 146.
+3.4.4.3	Information Technical Services shall provide an Association Control Service that supports the “ISO 8650-ACE1” Abstract Syntax as defined in ISO8650/CCITT X.227, NIST 500-177, and FIPS PUB 146.
+3.4.5.1	Information Technical Services shall provide Reliable Transfer service for the MHS protocol as defined in ISO 9066-1.2/CCITT X.218, NIST 500-177, andFIPS PUB 146.
+3.4.5.2	Information Technical Services shall provide the RTSE protocol for the MHS protocol as defined in ISO 9066-2.2/CCITT X.228, NIST 500-177, and FIPSPUB 146.
+3.4.5.3	Information Technical Services shall provide the Reliable Transfer Service for the MHS protocol that supports the “ISO 9066-RTSE1” Abstract Syntax asdefined in ISO 9066-2.2/CCITT X.228, NIST 500-177, and FIPS PUB 146.
+3.4.6	Information Technical Services shall provide a Remote Procedure Call (RPC) service IAW ISO DIS 10148-1988 Information Processing Systems Basic RPC UsingOSI Remote Operations.
+3.4.7	Management. Information Technical Services shall provide the capability for a management service using the Common Management Information Protocol (CMIP)as defined in ISO DIS 9596, FIPS PUB 146, and NIST 500-177.
+3.4.8	With respect to ISO DIS 8571-5-1989: Information Processing Systems, Open Systems Interconnection, File Transfer, Access and Management, Part 5:Implementation Conformance Statement Proforma,
+3.4.8.1	Information Technical Services shall provide the “FTAM-PCI” Abstract Syntax as defined in ISO 8571-1 to 5, FIPS PUB 146, and NIST 500-177.
+3.4.9	With respect to ISO 9041 PDAD2-1989: Information Processing Systems, Open Systems, Interconnection, Virtual Basic Terminal Class Protocol, Addendum 2:Additional Functional Units,
+3.4.9.1	Information Technical Services shall provide the capability for terminal emulation in accordance with FIPS PUB 146 and NIST 500-177.
+3.4.9.2	Information Technical Services shall provide the “ISO VT” Basic Abstract Syntax as defined in ISO, NIST 500-177, and FIPS PUB 146.
+3.4.10	Directory (GOSIP Version 3-1990). Information Technical Services shall provide the capability for the Directory Service as defined in ISO 9594-1 to 8, FIPS PUB 146,CCITT X.500 and NIST 500-177.
+3.4.11	Information Technical Services shall provide a Connection Oriented Presentation Service as defined in ISO 8822/CCITT X.216, NIST 500-177, and FIPSPUB 146.
+3.4.12	Information Technical Services shall provide a Presentation Protocol Kernel Functional Unit as defined in ISO 8823/CCITT X.226, NIST 500-177, and FIPS PUB146.
+3.4.13	Information Technical Services shall provide a Presentation Service that supports Abstract Syntax Notation One (ASN.1) Transfer Syntax as defined in ISO8824/CCITT X.208, ISO 8825/CCITT X.209, NIST 500-177, and FIPS PUB 146.
+3.4.14	Information Technical Services shall provide a Presentation Service that supports at least three (3) Presentation Contexts as defined in NIST 500-177.
+3.4.15	Information Technical Services shall provide the capability to bypass the Presentation protocol kernel functional unit for interoperability with QIP systemsprovided any security features are not bypassed.
+3.4.16	Information Technical Services shall provide the capability for the OSI connectionless transport protocol as defined in ISO 8602, FIPS PUB 146, and NIST 500-177.
+3.4.17	Information Technical Services shall provide the capability to send messages using a multicast address.
+3.4.18	Information Technical Services shall provide the capability to receive messages using a multicast address.
+3.4.19	Information Technical Services shall support the Network Service as defined in ISO 8348 and ISO 8348 Addendum 1 and FIPS PUB 146.
+3.4.20	Information Technical Services shall provide the capability for the ES-18 Routing capability defined in ISO 9542, FIPS PUB 146 and NIST 500-177.
+3.4.21	Information Technical Services shall provide an open public interface to the DoD host-to-host Services.
+3.4.22	Information Technical Services shall have the capability to provide a connection oriented interface to WAN interface devices using the network service primitives asdefined in ISO 8348/CCITT X.213.
+3.4.23	Information Technical Services shall have the capability to provide a connectionless interface to WAN interface devices using the CLNP primitives asdefined in ISO 8348 Addendum 1.
+3.4.24	Information Technical Services shall provide the capability to configure particular channels within WAN interface devices with specific, selectable protocolsduring normal operation of the other physical channels.
+3.4.25	Information Technical Services shall provide the capability to initiate transmissions over individual channels selectively within WAN interface deviceswithout affecting the operation and/or state of the other physical channels.
+3.4.26	Information Technical Services shall provide the capability to configure and control any communication channel operating parameters for the devices supportedby the WAN interface devices without preventing the operation of the other physicalchannels; this includes device configuration of selected channels, selected channelrestart, and selected channel shutdown.
+3.4.27	Information Technical Services shall provide the capability to initialize the selected communication protocol within WAN interface devices channels withoutpreventing the operation of the other physical channels.
+3.4.28	Information Technical Services shall provide the capability to download subscriber tables to the WAN interfacing devices.
+3.4.29	Information Technical Services shall provide the capability to regulate traffic over the Tactical Computer Unit/Portable Computer Unit (TCU/PCU) WANinterfacing devices on a per channel basis without affecting the operation or state ofother physical channels.
+3.4.30	Information Technical Services shall provide the capability to poll the WAN interfacing devices to ensure a channel is available before transmission.
+3.4.31	Information Technical Services shall provide the capability to load the CPP/WAN Interface Devices functions.
+3.4.32	Information Technical Services shall provide the capability to control the CPP/ WAN Interface Devices functions.
+3.4.33.1	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Using the network service primitives as defined in ISO 8348/CCIT X.213.
+3.4.33.2	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Using the CLNP primitives as defined in ISO 8348 Addendum 1.
+3.4.33.3	Configuring particular channels within WAN interface devices with specific, selectable protocols during normal operation of the other physicalchannels.
+3.4.33.4	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Initiating transmissions over individual channels selectively within WAN interface devices without affecting the operation and/or state of the other physical channels.
+3.4.33.5	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Configuring any communication channel operating parameters for the devices supported by the WAN interface devices without preventing theoperation of the other physical channels. This includes device configuration ofselected channels, selected channel restart, and selected channel shutdown.
+3.4.33.6	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Initializing the selected communication protocol within WAN interface devices channels without preventing the operation of the other physical channels.
+3.4.33.7	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Downloading subscriber tables to the WAN interfacing devices.
+3.4.33.8	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Regulating traffic over the Tactical Computer Unit / Portable Computer Unit (TCU/PCU) WAN interfacing devices or a per channel basis withoutaffecting the operation or state of other physical channels.
+3.4.33.9	Information Technical Services shall provide the capability to control interfaces to WAN interface devices Polling the WAN interfacing devices to ensure a channel is available before transmission.
+3.4.34.1	Control of Internal Communications. Information Technical Services shall have the capability to Control the Common Management Information Protocol (CMIP) management service.
+3.4.34.2	Control of Internal Communications. Information Technical Services shall have the capability to Manage message storage space for safe store and for outgoing traffic until user preset conditions are satisfied.
+3.4.34.3	Control of Internal Communications. Information Technical Services shall have the capability to Selectively retrieve message information from the message safe store including default relay information and message status information.
+3.4.34.4	Control of Internal Communications. Information Technical Services shall have the capability to Control the substitution of defaults and multihop relay parameters.
+3.4.34.5	Control of Internal Communications. Information Technical Services shall have the capability to Monitor the status of message transmission queues, precedence transfers, and multihop relays including the parameters to modify criteria.
+3.4.34.6	Control of Internal Communications. Information Technical Services shall have the capability to Monitor status and control mechanisms for communication resources: 1.  Create communications resource data log 2.  Maintain communications resource data log3.  Review communications resource data log
+3.5.2.1.1	Network Services shall support IEEE 802.2
+3.5.2.1.2	Network Services shall support IEEE 802.3
+3.5.2.1.3	Network Services shall support IEEE 802.4
+3.5.2.1.4	Network Services shall support IEEE 802.5
+3.5.2.1.5	Network Services shall support IEEE 802.11
+3.5.2.1.6	In cases where higher network loads are required, FDDI shall be used. This can be used for the whole network or in conjunction with Ethernet to provide a high speed backbone to support several slower Ethernet subnets.
+3.5.2.1.7	ISO 9314 shall be used for the protocols and physical connections for FDDI media access.
+3.5.2.1.8	LANs can be connected together by routers to serve a wider community.
+3.5.2.2.1	IEEE 802.6 shall be supported for connecting DII nodes across a MAN.
+3.5.2.3.1	X.25 shall be supported for connecting DII nodes across a WAN.
+3.5.2.3.2	ATM shall be supported for connecting DII nodes across a WAN.
+3.5.2.3.3	The Link Access Protocols-Balanced (LAP-B) link protocols shall be used to provide X.25 packet service among DII sites.
+3.5.2.4.1	Network Services shall support the PPP protocol.
+3.5.2.4.2	Network Services shall support the OSPF-2 protocol.
+3.5.2.5.1	Asynchronous Transfer Mode (ATM) provides point-to-point connections between network nodes, giving each pair of stations full networkbandwidth. Network Services shall support ATM.
+3.5.2.5.2	Fast Ethernet promises to increase the current 10 Mbps Ethernet bandwidth to 100 Mbps. Network Services shall support Fast Ethernet.
+3.5.2.5.3	Synchronous Optical Network (SONET) has been developed as a layer 1 and 2 fiber optic transmission service for very high speed facilities.Network Services shall support SONET.
+3.5.2.5.4	Broadband Integrated Services Digital Networks (B-ISDN) is a service requiring transmission channels capable of supporting rates greaterthan the 1.544 Mbps primary rate. It will provide, by using ATM and SONETtechnologies, interactive and distribution services ranging in bandwidth from64 Kbps to 644 Mbps. Network Services shall support B-ISDN.
+3.5.2.5.5	Frame Relay is a switched service designed to improve communications performance through reduced delays and more efficientbandwidth utilization. Network Services shall support Frame Relay.
+3.5.2.5.6	Switched Multimegabit Data Services (SMDS) is an on-demand layer 3 switching service where each frame contains the originating and terminatingaddresses. Network Services shall support SMDS.
+3.5.3.1	Network Services shall be based on Transmission Control Protocol/ Internet Protocol (TCP/IP), UDP and multicasting.
+3.5.3.2	DII COE TCP/IP shall be in compliance with MIL-STD-1778 and MIL-STD- 1777 as well as the following RFC’s: ■RFC 1123, Requirements for Internet Hosts-Application and Support ■RFC 1122, Requirements for Internet Hosts-Communications Layers ■RFC 1009, Requirements for Internet Gateways.
+3.5.3.3	The OSI network protocols shall be supported by Communications Software as specified in the FIPS 146-2 and FIPS 179.1.
+3.5.4.1.1	For DII COE, the Simple Mail Transfer Protocol (SMTP) shall be used. RFC 821 (Message Protocols) and RFC 822 (Text Message Formats) shall beused.
+3.5.4.1.2	RFC 1123 shall be used for implementation requirements and updates to RFC 821 and RFC 822.
+3.5.4.1.3	The Multipurpose Internet Mail Extensions (MIME) shall be used for moving non-text (i.e., binary files) E-mail within the context of SMTP. RFC1341 shall be used as the MIME standard.
+3.5.4.1.4	Post-Office-Protocol Version 3 (POP-3), as defined by the appropriate RFC, shall be supported.
+3.5.4.1.5	The IMAP-4 protocol, as defined by the appropriate RFC, shall be supported.
+3.5.4.3.1	DII COE shall use the File Transfer Protocol (FTP) as specified in MIL- STD-1780. The minimum implementation that is identified in section 4.1.2.13of RFC 1123 shall be used.
+3.5.4.4.1	MIL-STD-1782, Telnet, shall be used as the standard for simple asynchronous terminal capability.
+3.5.4.5.1	The Internet Gopher, is a client-server document search and retrieval protocol. The Gopher, as described in RFC 1436, shall be supported.
+3.5.4.5.2	HyperText Transport Protocol (HTTP) is a fast search and retrieval protocol used by the World Wide Web (WWW) to transfer HyperTextdocuments from one computer to another. The primary document format isthe HyperText Markup Language (HTML). HTTP and HTML shall besupported.
+3.5.4.5.3	Network News Transfer Protocol (NNTP) is a protocol for the distribution, inquiry, retrieval, and posting of news articles. The DII COE shallsupport the NNTP as defined in RFC 977. The format of news articles shall bein accordance with RFC 850, Standard for Interchange of Usenet Messages.
+3.5.5.5.1	Personal computers shall support a standardized connection to the DII COE networks (Ethernet).
+3.5.5.5.2	Personal computers shall support the TCP/IP protocol in order to connect to DII networks.
+3.5.5.5.3	All DII personal computer applications shall be Winsock-compliant. This includes the following network applications: ■E-mail ■File transfer ■Terminal Access ■Network Information Discovery and Retrieval (NIDR)
+3.5.5.5.4	Network Services shall provide the heterogeneous interface capability for one system to utilize the network services provided on oneplatform to communicate with another platform regardless of architecturaldifferences (e.g. big-endian/little endian).
+3.6.1	Communications Services shall support Public Switched data Services (PSDS) - Switched 56 Capability.
+3.6.2	Communication Services shall support MIL-STD-1553B.
+3.6.3	Communication Services shall support MIL-STD-1397A.
+3.6.4	C4I Message Management Requirements
+3.6.4.1	The system shall be able to bound messages using the rules of the JOTS Header message envelope type.
+3.6.4.2	The system shall be able to bound messages using the rules of the ADCCP message envelope type.
+3.6.4.3	The system shall be able to bound messages using the rules of the JVMF message envelope type.
+3.6.4.4	Support modification of an old message therefore creating a new message by: 1. Retrieving and displaying a whole message; 2. Editing of the displayed message, to include format lines;3. Replacement of existing addressees;4. Allowing the revised message to be submitted as a new message.
+3.6.4.5	Alternate routes shall be established and canceled by a command that is accessible only by the comms administrator.
+3.6.5.1	Communications Services shall support STU-III telephones.
+3.6.5.2	Communications Services shall support KY 68, DSVT, TA-954 DNVT telephones operation at 16 or 32 Kbps.
+3.6.5.3	Communications Services shall provide a user interface to select available data rates (up to 1200 baud) for the AN/PRC-77 combat net radio.
+3.6.5.4	Communications Services shall provide a user interface to select available data rates (up to 1200 baud) for the AN/PRC-104 combat net radio.
+3.6.5.5	Communications Services shall provide a user interface to select available data rates (up to 16k baud) for the SINCGARS combat net radio.
+3.6.6.1	In the Combat Net Radio network where the voice and data sharing the same net, Communications Services shall withhold the data transmission whenthe voice Push-to-talk button is activated to prevent voice and data collisions.
+3.6.7.1.1	Communications Services shall provide TADIL A services in accordance with MIL-STD-6011A.
+3.6.7.1.2	Communications Services shall provide a user interface to configure TADIL-A Link communications.
+3.6.7.1.3	Communications Services shall provide a user interface to configure TADIL-A Link forwarding.
+3.6.7.1.4	Communications Services shall provide a user interface to monitor TADIL-A link quality.
+3.6.7.1.5	Communications Services shall provide a user interface to enter TADIL-A Data Link Reference Point (DLRP).
+3.6.7.1.6	Communications Services shall provide a user interface to select and remove TADIL-A track pairing.
+3.6.7.1.7	Communications Services shall provide a user interface to support TADIL-A alerts.
+3.6.7.2.1	Communications Services shall provide TADIL B services in accordance with MIL-STD-6011A
+3.6.7.2.2	Communications Services shall provide a user interface to configure TADIL-B Link communications.
+3.6.7.2.3	Communications Services shall provide a user interface to configure TADIL-B Link forwarding.
+3.6.7.2.4	Communications Services shall provide a user interface to monitor TADIL-B link quality.
+3.6.7.2.5	Communications Services shall provide a user interface to enter TADIL-B Data Link Reference Point (DLRP).
+3.6.7.2.6	Communications Services shall provide a user interface to select and remove TADIL-B track pairing.
+3.6.7.2.7	Communications Services shall provide a user interface to support TADIL-B alerts.
+3.6.7.3.1	Communications Services shall provide TADIL J services in accordance with MIL-STD 6016.
+3.6.7.3.2	Communications Services shall provide a user interface to configure TADIL-J Link communications.
+3.6.7.3.3	Communications Services shall provide a user interface to configure TADIL-J Link forwarding.
+3.6.7.3.4	Communications Services shall provide a user interface to monitor TADIL-J link quality.
+3.6.7.3.5	Communications Services shall provide a user interface to select and remove TADIL-J track pairing.
+3.6.7.3.6	Communications Services shall provide a user interface to support TADIL-J alerts.
+3.6.7.4.1	Communications Services shall support receipt of OTH-GOLD formatted messages through the TCIM channel.
+3.6.7.4.2	Communications Services shall support transmission of OTH-GOLD formatted messages through the TCIM channel.
+3.6.7.4.3	Communications Services shall support receipt of binary messages, to include Air Tasking Orders (ATOs), through the TCIM channel.
+3.6.7.4.4	Communications Services shall support transmission of binary messages, to include Air Tasking Orders (ATOs), through the TCIM channel.
+3.6.7.4.5	Communications Services shall provide a user interface which includes the TCIM as an available communications circuit/interface that maybe added.
+3.6.7.4.6	Communications Services shall provide a user interface which includes the TCIM as an available communications circuit/interface that maybe configured.
+3.6.7.4.7	Communications Services shall provide a user interface to identify the tactical communications equipment to be connected to the TCIM channelin accordance with devices which are valid for the channel (including AN/PRC-77, AN/PRC-104, and SINCGARS combat net radios).
+3.6.7.4.8	Communications Services shall provide a user interface to select a supported protocol to configure the TCIM channel.
+3.6.7.4.9	Communications Services shall provide a user interface to configure the Modulation of the TCIM channel, consistent with the selected protocol andtactical communications equipment.
+3.6.7.4.10	Communications Services shall provide a user interface to configure the Data Rate of the TCIM channel, consistent with the selected protocol andtactical communications equipment.
+3.6.7.4.11	Communications Services shall provide a user interface to configure the Amplitude of the TCIM channel consistent with the selected protocol andtactical communications equipment.
+3.6.7.4.12	Communications Services shall provide a user interface to configure the Subscriber Address of the TCIM channel consistent with the selectedprotocol and tactical communications equipment.
+3.6.7.4.13	Communications Services shall provide error alerts when the operator has made an error in configuring a TCIM channel.
+3.6.7.4.14	Communications Services shall provide a user interface to stop a specified TCIM channel.
+3.6.7.4.15	Communications Services shall provide a user interface to restart a specified TCIM channel using the latest saved TCIM channel configurationsettings.
+3.6.7.5.1	Communications Services shall provide the capability to transmit formatted messages over the serial channel to the TLC-10.
+3.6.7.5.2	Communications Services shall provide the capability to transmit binary messages over the serial channel to the TLC-10.
+3.6.7.5.3	Communications Services shall provide the capability to receive formatted messages over the serial channel to the TLC-10 within the existingCommunications Services Communication Server architecture.
+3.6.7.5.4	Communications Services shall provide the capability to receive binary messages over the serial channel to the TLC-10 within the existingCommunications Services Communication Server architecture.
+3.6.7.6.1	Communications Services shall correlate PLI updates.
+3.6.7.6.2	Communications Services shall store PLI updates.
+3.6.7.7.1	The Basic Communications Interface Level (BCIL) shall utilize multicast transport services (one-to-many and many-to-one).

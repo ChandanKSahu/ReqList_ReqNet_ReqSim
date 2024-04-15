@@ -1,0 +1,3247 @@
+
+ 
+ All documentation, software, and data related to this project are proprietary and
+copyrighted. Use is governed by the contract  requirements as defined in the U. S. 
+Department of Transportation Federal Highway Administration Contract No. DTFH61-05-C-
+00022. Unauthorized use of this documentation is  a violation of law except as provided fo r
+in said contract.  
+Copyright © 2005 Mixon/Hill, Inc. All rights reserved. 
+  
+ 
+ 
+ 
+ 
+Clarus  Weather System Design 
+DETAILED 
+SYSTEM REQUIREMENTS 
+SPECIFICATION 
+ 
+ 
+December 2005 
+ 
+  
+Prepared By: 
+ 
+  
+  
+ 
+  
+Mixon/Hill, Inc. 
+12980 Metcalf Ave.  
+Suite 470 
+Overland Park, KS 66213 
+(913) 239-8400  Oklahoma Climatol ogical Survey 
+100 East Boyd Street  
+Suite 1210 
+Norman, Oklahoma 73019 
+(405) 325-2541  Cambridge Systematics, Inc. 
+100 CambridgePark Drive 
+Suite 400 
+Cambridge, MA 02140 
+(617) 354-0167 Stephenson Group 
+400 Colony Square   
+Suite 200 
+Atlanta, Georgia 30361 
+(404) 699-9003 
+ 
+ 
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0200 
+ 
+Page ii Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Table of Contents 
+1 INTRODUCTION..................................................................................................... 1  
+1.1 Purpose........................................................................................................................ .................... 1  
+1.2 Scope.......................................................................................................................... ...................... 3  
+1.3 Definitions, Acronyms, and Abbrevia tions .................................................................................. 4  
+1.4 References..................................................................................................................... .................. 5  
+1.5 Overview ....................................................................................................................... .................. 6  
+2 GENERAL DESCRIPTION.................................................................................... 8  
+2.1 System Perspective............................................................................................................. ............ 8  
+2.2 System Functions............................................................................................................... ........... 10  
+2.3 User Characteristics........................................................................................................... .......... 15  
+2.4 General Cons traints............................................................................................................ ......... 19  
+2.5 Assumptions and Dependencies .................................................................................................. 2 0 
+3 SYSTEM ARCHITECTURE ................................................................................ 21  
+4 SPECIFIC REQUIREMENTS.............................................................................. 23  
+4.1 Configuration & Administra tion Service (CAS) ....................................................................... 28  
+4.2 Configuration & Administrati on User Interface (CAUI) ......................................................... 33  
+4.3 Collector Serv ices (CS) ........................................................................................................ ........ 36  
+4.4 Watchdog (DOG) ................................................................................................................. ........ 45  
+4.5 Environmental Metada ta Cache (EMC) .................................................................................... 46  
+4.6 Environmental Metadata  Services (EMS).................................................................................. 49  
+4.7 Manual Entry User Interface (MEUI)........................................................................................ 53  
+4.8 Qualified Environmen tal Data (QEDC)..................................................................................... 53  
+4.9 Qualified Environmental Da ta Services (QEDS)....................................................................... 56  
+4.10 Quality Checking Services (QChS)............................................................................................. 66  
+4.11 Schedule Serv ice (SS).......................................................................................................... ......... 73  
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0200 
+ 
+Page iii Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.12 Program Requirements........................................................................................................... ..... 74  
+APPENDIX A -  DEFINITIONS, ACRONYMS, AND ABBREVIATIONS .......... 87  
+APPENDIX B -  SUPPLEMENTAL DESCRIPTION OF CLARUS  QC TESTS... 90  
+ 
+Table of Figures 
+FIGURE 1 – SYSTEM ARCHITECTURAL DESCRIPTION CONTEXT................................................... 2  
+FIGURE 2 – CLARUS  DATA ACQUISITION, PROCESSING, AND PUBLICATION ............................. 9  
+FIGURE 3 – BASIC CLARUS  SYSTEM OBJECTS AND FUNCTIONS .................................................. 11  
+FIGURE 4 – TIME HORIZO NS FOR WEATHER DATA......................................................................... 14  
+FIGURE 5 – CLARUS  USER LAYERS AND TIME HORIZON RELATIONSHIPS................................ 16  
+FIGURE 6 – CONTEXT DIAGRAM OF CLARUS  USER NEEDS............................................................ 17  
+FIGURE 6 – DATA FLOWS WITHIN THE CLARUS  SYSTEM............................................................... 21  
+FIGURE 7 – HIGH-LEVEL REQUIREMENTS CONTEXT...................................................................... 23  
+ 
+Table of Tables 
+TABLE 1 – POTENTIAL CLARUS  ENVIRONMENTAL DATA ELEMENTS........................................ 13  
+TABLE 2 - EXPLANATION OF TH E REQUIREMENTS TABLES ........................................................ 26  
+TABLE 3 – REQUIREMENT ID FORMAT............................................................................................... 2 6 
+TABLE 4 – ALLOCATION FORMAT.................................................................................................... ... 27 
+ 
+  
+Revision History 
+Revision Issue Date   Status Authority   Comments   
+00.05 October 2005 Draft DTFH61-05-C-
+00022 For Task Force review 
+01.00 December 
+2005 Final DTFH61-05-C-
+00022  
+Electronic File 
+    Saved As: 04037-rq301srs0200_Final_Detailed_Requirements  
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0200 
+ 
+Page 1 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 1 INTRODUCTION 
+1.1 Purpose 
+The purpose of this requirements specifica tion is to provide a repository for the 
+high-level and detailed requirements governing the design of the Clarus  system. 
+These requirements capture the expression of general needs in the Clarus  Concept 
+of Operations (ConOps), in meetings with potential users and participants, and in 
+subsequent documents identified below. These requirements will form the basis for the design verification and validation of the system. The intended audience for 
+this document includes decision makers, st akeholders, designers, and testers. 
+This document may be updated periodically  to reflect changes in the system 
+requirements, including changes reflected in subsequent versions of the system. 
+As indicated in the highlighted box in Figure 1, the Detailed Systems 
+Requirements Specification (DRS) is an intermediate deliverable in the larger context of the Clarus  Weather System Design project , using criteria documented 
+in the Concept of Operations, High-Leve l Requirements Specification, Survey of 
+Environmental Sensor Stations, Anal ysis of COTS Systems, Analysis 
+Architectural Alternatives An alysis, and the Design Gaps Analysis as input to the 
+DRS.
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0200 
+ 
+Page 2 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+  
+HRS
+SAD AAACOTSESS
+Criteria GAP
+Potential
+FeaturesCollectors/
+Contributors
+Potential Features
+Components
+AAA – Architectural Alternatives Analysis
+ConOps – Concept of Operations
+COTS – Systems Engineering Analysis of Clarus -Related Systems
+DRS – Detailed Requirements SpecificationESS – Clarus  ESS Survey
+GAP – Design Gaps Analysis
+HRS – High-Level Requirements SpecificationSGAPDRS
+Identified
+Gaps
+Identified
+GapsHigh Level Requirements
+SDDPOCDP
+POCTPPOCDR POCTRDetailed 
+Requirements
+Solutions
+To
+GapsSystem 
+DesignDeployment
+TestingConOps
+Concepts
+POCDP – Proof-of-Concept Deployment Plan
+POCDR – Proof-of-Concept Demonstration Report
+POCTP – Proof-of-Concept Test PlanPOCTR – Proof-of-Concept Test ResultsSAD – System Architectural Description
+SDD – System Design Document
+SGAP – Solution to Fill Design GapsClarus System Design Deliverables
+ 
+Figure 1 – Clarus  System Documentation 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 3 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 1.2 Scope  
+Clarus  is an initiative sponsored by the U.S.  Department of Transportation (U.S. 
+DOT) to organize and make more effec tive environmental and road condition 
+observation capabilities in support of four primary motivations. 
+1) Provide a North American resource  to collect, quality check, and make 
+available surface transportation weat her and road condition observations 
+so that State Departments of Transportation (DOTs) and other 
+transportation agencies can be more productive in maintaining safety and 
+mobility on all roads and surface transportation plat forms. In addition to 
+increasing productivity, it will maxi mize their RWIS/ESS investments. 
+2) Surface transportation-based weat her observations will enhance and 
+extend the existing weather data s ources that support general purpose 
+weather forecasting for the protection of life and property. 
+3) Collection of real-time surface tran sportation-based weather observations 
+will support real-time operational responses to weather. 
+4) Surface transportation-based weather observations integrated with existing 
+observation data will permit broade r support for the enhancement and 
+creation of models that make bette r predictions in the atmospheric 
+boundary layer and near the earth’s surface to support more accurate forecasts. 
+The intent of the Clarus  Initiative is to demonstrate how an open and integrated 
+approach to observational data management  can be used to collect, control the 
+quality of, and consolidat e surface transportation environmental data. The Clarus  
+Initiative will address the necessary infras tructure to consolidate the data from a 
+multitude of independent data collection systems. This process offers the prospect of enhancing data coverage, improving th e performance of meteorological support 
+services, and providing guidance to owners  of these data sources regarding the 
+quality of their data and performan ce of their data collection systems. 
+Clarus  represents the next step in bringi ng together surface transportation best 
+practices and the greater weather community. Surface transportation 
+environmental data collected by the Clarus  system will include atmospheric data, 
+pavement data
+1, and hydrologic (water level) data.  
+The Clarus  Initiative consists of two development components.  
+• The first component is the development of the Clarus  system – a network 
+for sharing, quality checking, and ex changing surface environmental data 
+and relevant surface transportation conditions.  
+• The second component is the development of tools (such as decision 
+support systems) that make effective use of the Clarus  system.  
+                                                 
+1 “Pavement data” in this context includes surface and subsurface data specified in NTCIP 1204 (Ref. 8). 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 4 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ The addition of Clarus  system data to national w eather observations will further 
+enhance general purpose weather forecasti ng, providing a wider range of benefits 
+to the protection of life and property.  
+Data from the Clarus  system will have a wide variety of direct and indirect uses. 
+Users having the most immediate contact with the Clarus  system will include the 
+owners and operators of the observing syst ems that are provid ing information to 
+the Clarus  system, as well as the users directly accessing the data contained 
+within the Clarus  system. The following is an initial list — which will likely grow 
+as the initiative progresse s — of these stakeholders: 
+• Observation system owners including federal, state, local, and private 
+institutions; 
+• Instrument and observation platform suppliers; 
+• Direct data users including system owners and their contractors; 
+• Surface transportation weather service providers (which may include the 
+observation system owners – e.g., state DOTs); 
+• The National Oceanic and Atmo spheric Administration (NOAA); 
+• General weather service providers; 
+• Research and engineering community; and 
+• Climate data warehouse and other non-surface weather interests. 
+The deployed Clarus  system is envisioned to include: 
+• A one-stop Internet portal for all surface transportation environmental 
+observations; 
+• Data provided with and without post-pr ocessing, ready to be incorporated 
+into value-added products including weat her and traffic models as well as 
+decision support systems; 
+• Continuous quality checking of data w ith feedback to operators of the 
+originating sensor stations; 
+• Data transferred in one common protocol with full metadata; 
+• Management of users’ rights to input or extract specific data components; 
+• Data retrieval tools; and 
+• Support for the inclusion of new technologies such as vehicle-based 
+sensors, surface visibility informati on from traffic cameras, and remote 
+sensing technologies. 
+1.3 Definitions, Acronyms, and Abbreviations  
+This document may contain terms, acr onyms, and abbreviations that are 
+unfamiliar to the reader. A dictionary of these terms, acronyms, and abbreviations can be found in Appendix A. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 5 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 1.4 References  
+The following documents contain additional information pertaining to this project 
+or have been referenced within this document: 
+1. Clarus – The Nationwide Surface Transportation Weather Observing and 
+Forecast System ; Pisano, Pol, Stern, and Goodwin; TRB 2005. 
+2. National ITS Architecture, Version 5.0 ; FHWA, U.S. DOT; October 2003. 
+3. Weather Information in the Na tional ITS Architecture Version  5.0; 
+Meridian Environmental Technology, Inc.; August 2004. 
+4. Clarus Initiative Coordinating Committee (ICC) Management Plan  
+(Revision 1); James Pol, U.S. DOT; September 2004. 
+5. Surface Transportation D ecision Support Requirements,  Version 1.0 ; 
+Mitretek Systems, Inc.; January 2000. 
+6. Weather Information for Surface  Transportation: National Needs 
+Assessment Report ; Office of the Federal Coor dinator for Meteorology; 
+FCM-R18-2002; December 2002. 
+7. Weather and Environmental Content on 511® Services ; 511 Deployment 
+Coalition; June 2003. 
+8. NTCIP 1204 v02.23b NTCIP Environmen tal Sensor Station Interface 
+Standard – Version 02 ; National Electrical Manuf acturers’ Association, 
+American Association of State Highwa y and Transportation Officials, and 
+Institute of Transportation Engineers; 2005. 
+9. Where the Weather Meets the Road: A Research Agenda for Improving 
+Road Weather ; The National Academies; BASC-U-02-06-A; 2004. 
+10. Road Weather Information Systems (R WIS) Data Integration Guidelines ; 
+Castle Rock Consultants; October 2002. 
+11. Draft Report: Joint TMC/TOC System Integration Study for Emergency 
+Transportation Operations and Weather: Baseline Conditions ; Battelle; 
+2004 (in review).  
+12. Clarus Final Draft Concept of Operations; Iteris and Meridian 
+Environmental Technology, Inc.; June 24, 2005.  
+13. IEEE Recommended Practice for Softw are Requirements Specifications ; 
+Software Engineering Standards Committee of the IEEE Computer 
+Society; IEEE Standard 830-1998, June 25, 1998. 
+14. Security of Federal Auto mated Information Resources ; Appendix III to 
+OMB Circular No. A-130; Office of Management and Budget; February 8, 
+1996. 
+15. Clarus Weather System Design – High-level System Requirements 
+Specification ; Mixon/Hill, Inc.; July 2005. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 6 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 16. Clarus Weather System Design – Sy stem Architectural Description;  
+Mixon/Hill, Inc.; October 2005. 
+17. Clarus Weather System Design – Clarus ESS Survey ; Cambridge 
+Systematics, Inc.; September 2005. 
+18. Clarus Weather System Design –  Systems Engineering Analysis of Clarus-
+Related Systems;  Mixon/Hill, Inc. and Oklahoma Climatological Survey; 
+September 2005. 
+19. Clarus Weather System Design –Arc hitectural Alternatives Analysis ; 
+Mixon/Hill, Inc.; September 2005. 
+20. Clarus Weather System Design –  Design Gaps Analysis ; Mixon/Hill, Inc.; 
+October 2005. 
+ 
+Some portions of the Clarus  Concept of Operations  (Ref. 12) have been 
+incorporated in this document, both for cont inuity of concept, and to help identify 
+the basis for the high-level and detailed requi rements. Specific attributions of this 
+content are only included where they enha nce the context of the requirements. 
+1.5 Overview  
+The organization and content of this doc ument is generally based on the IEEE 
+standards for System Requirements Speci fications (Ref. 13). The requirements 
+presented in this document represent the high-level and detailed objectives, constraints, and desires for the Clarus  system. 
+Each requirement is identified by a unique Clarus -specific identifier to allow the 
+requirement to be referenced in future documents, providing traceability throughout the development process. Each detailed requirement is traced to its 
+parent through its identification num ber followed by a unique identifier. 
+A requirements document states what must be accomplished to fulfill the vision 
+described in a concept of operations. It does not state how it is to be 
+accomplished. This document describes each requirement and the basis for inclusion of that requirement.  
+The remaining sections of the document contain the requirements for the system. 
+The sections and their content are as follows:  
+Section 2 – General Description  provides a general overview of the 
+entire system. This section describes the general factors that affect the 
+system and its requirements. 
+Section 3 – System Architecture  provides an overview of the Clarus  
+system’s components and their func tions. Specific requirements in the 
+next section are allocated to and orga nized according to these components. 
+Section 4 – Specific Requirements  contains the requirements developed 
+from reference documentation and stakeholder communications. This section organizes the requirements into categories that facilitate the system 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 7 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ development process. The categories in this document are: Configuration 
+& Administration Service (CAS), C onfiguration & Administration User 
+Interface (CAUI), Collector Services (CS), Watchdog (DOG), 
+Environmental Metadata Cache (EMC), Environmental Metadata Services (EMS), Qualified Environmental Data  (QEDC), Qualified Environmental 
+Data Services (QEDS), Quality Ch ecking Services (QChS), Schedule 
+Service (SS), and program requirements. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 8 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 2 GENERAL DESCRIPTION 
+This section provides an overview of the entire system and describes the general 
+factors that affect the system and its re quirements. This sec tion does not state 
+specific requirements, but instead is intended to make the requirements easier to understand by giving them context. That context and the overall intent of the 
+Clarus  program are described in detail in the Clarus  Concept of Operations (Ref. 
+12), from which much of the descri ption in this section was derived.  
+2.1 System Perspective  
+The Clarus  Initiative is essentially a plan to  create a “network of networks” — 
+much like the Internet — for surface tran sportation environmental data. While the 
+Internet is an interconnec tion of computer networks, Clarus  will be an 
+interconnection of environmental (weather,  pavement, and water level condition) 
+data collection networks. Each of the weather networks will function 
+autonomously; they will collect informati on and disseminate it internally without 
+direction or dependence on Clarus . 
+Each participating weathe r network’s connection to Clarus  will add two new 
+possible modes of functionality. First, the participants will be able to share 
+collected environmental data  with Clarus . Second, participants will be able to 
+receive environmental data  collected by Clarus . The primary recipients of this 
+data will be weather se rvice providers, but any Clarus  participants would be able 
+to receive data if they so chose. This  concept of autonomous  data sharing is 
+comparable to the World Wide Web layer of the Internet, where organizations can 
+publish information on web pages, or browse and download information published by other organizations on the we b. Ownership of the data is retained by 
+the organization that provided the data to Clarus , and the provider organization 
+can restrict the dissemination of the data through data sharing agreements with the 
+Clarus  program. 
+The Clarus  system will add a third mode of functionality, which might be called 
+“meta-librarian.” The Clarus  system will collect, organize, and quality check the 
+environmental data to be published by the system. The data will be collected from 
+the participants, organized by location and type of data, and quality flags will be added. When this is done, the data will be  published to the Service Providers and 
+other participant/consumers in Clarus . Figure 2 shows the general process as data 
+progresses from collection through p ublication to service providers. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 9 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 
+Service
+Providers
+Clarus
+Data Collection
+Systems
+Data Collection
+Systems
+Data Collection
+Systems
+Service
+Provider
+CustomersField Instrumentation 
+and Remote Sensing
+ 
+Figure 2 – Clarus  Data Acquisition, Proc essing, and Publication 
+The principal interfaces that will be critical to Clarus  are the interface between 
+Clarus  and the participating collect ors, and the interface between Clarus  and the 
+participating service providers. MADIS, for example, uses NetCDF files as a standard interchange format. While the service provider interface is completely within the control of the Clarus  Initiative, the interface(s) to the collectors may be 
+influenced by what interfaces these systems can support. 
+While the participants may want to  access the network through “a one-stop 
+Internet portal for all surface transpor tation weather and pavement related 
+observations” (Ref. 12), there is no requi rement that the system be a single 
+centralized system. Designers are free to explore centralized and de-centralized 
+architectures so long as the interfaces w ith participants give the appearance of a 
+“one-stop” portal. 
+The issues of data retention and archive are also not explicitly addressed. While 
+some data retention is likely to be n ecessary to support the quality checking 
+function and the publication function, there is  a clear recognition that as the data 
+age, they lose value to all but climatolog ical investigators a nd other researchers. 
+This phase of development does not include directly archiving the large volume of 
+environmental data in Clarus . Considering the technical scope of such an effort, 
+archiving may be externalized or be deferred until the Clarus  network is 
+operational and proven. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 10 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 2.2 System Functions  
+The Clarus  system will collect data from contributing members, organize and 
+quality check the data, and then publish the data for use by service providers and 
+other members of the network. These basi c processes are shown in Figure 3 in 
+terms of Clarus  system objects and their inter actions. The ellipses represent 
+specific types of data, user roles, or equipment, and the arrows represent the 
+interactions between them2. For example, a “Collector” administers a “Sensor,” 
+collects “Observation Data,” provides “Sensor Metadata,” and receives “Quality Feedback”.
+                                                
+ 
+2 The arrows in Figure 3 do not indicate data flows; they show th e subject-object orientation of the 
+relationship. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200 
+ 
+Page 11 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 
+ 
+Figure 3 – Basic Clarus  System Objects and Functions 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 12 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ The volume of data involved in this pr ocess has the potential to become very 
+large, which leads to a significant chal lenge in developing a system that can 
+effectively gather, organize, quality check, and disseminate the data. The Clarus  
+system should be a data collection system capable of handling a vast range of data 
+in a flexible manner that permits new data types to be added.  
+Determining data types will be a signifi cant challenge. Proper understanding of 
+the available data versus the required information will dictate how the data 
+gathering processes and the database itself should be designed for greatest 
+efficiency. 
+While there are many types of environmen tal data that could be collected, the 
+Clarus  emphasis on surface weather and transportation puts the focus on those 
+weather elements that have a direct bearing on surface transportation systems. 
+These environmental data elements are described in the NTCIP 1204 standard for 
+Environmental Sensor Station (ESS) inte rfaces (Ref. 8) and summarized in Table 
+1 as potential environmental data  elements to include in the Clarus  system. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 13 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+  
+Table 1 – Potential Clarus  Environmental Data Elements 
+Identification Objects  
+Station Category  
+Site Description Snapshot 
+Filename 
+Image Visibility Data Objects  
+Visibility 
+Visibility Situation 
+Data Instrumentation Objects 
+Type of Station Door Status  
+Battery Status  
+Line Volts  Station Meta Data Block  
+Weather Block 
+Mobile Block Air Quality Parameters 
+Carbon Monoxide Parameter  Carbon Dioxide Parameter 
+Nitrous Oxide Parameter 
+Nitrogen Dioxide Parameter  Sulfur Dioxide Parameter  
+Ozone Parameter  
+Particulate Matter Parameter  Air Quality Block Object Radiation Objects  
+Solar Radiation  Total Sun 
+Cloud Cover Situation 
+Terrestrial Radiation Solar Radiation v2 
+Total Radiation 
+Total Radiation Period 
+Location Objects 
+Latitude  
+Longitude  
+Vehicle Speed Vehicle Bearing 
+Odometer  Temperature Data Objects  
+Number of Temperature Sensors  
+Temperature Sensor Table 
+Temperature Sensor  Wetbulb Temperature  
+Dewpoint Temperature  
+Maximum Temperature Minimum Temperature 
+ Pavement Sensor Objects  
+Number of Pavement Sensors  
+Pavement Sensor Table  
+Pavement Sensor  Number of Sub-Surface Sensors  
+Sub-Surface Sensor Table  
+Sub-Surface Sensor  Pavement Block 
+Sub-Surface Block Object  
+Station Elevation Objects  
+Reference Height 
+Pressure Height  Wind Sensor Height  Atmospheric Pressure Snapshot Parameters  
+Number of Snapshot Cameras 
+Snapshot Camera Table Snapshot Camera Mobile Platform Objects 
+Detected Friction  
+Observed Ground State Observed Pavement State  
+Wind Data Section 
+Average Wind Direction  
+Average Wind Speed 
+Spot Wind Direction  Spot Wind Speed 
+Wind Situation 
+Wind Gust Speed Wind Gust Direction  
+Number of Wind Sensors 
+Wind Sensor Table  Wind Sensor  Humidity and Precipitation Data Objects 
+Relative Humidity  
+Water Depth 
+Adjacent Snow Depth  Roadway Snow Depth  
+Roadway Snow Pack Depth  
+Precipitation Indicator  Rainfall or Water Equivalent of Snow  
+Snowfall Accumulation Rate  
+Precipitation Situation  Ice Deposit (Thickness)  
+Precipitation Start Time  
+Precipitation End Time  Total Precipitation Past One Hour 
+Total Precipitation Past Three Hours  
+Total Precipitation Past Six Hours Total Precipitation Past Twelve 
+Hours  
+Total Precipitation Past Twenty-Four Hours Precipitation Sensor Model 
+Information  
+Number of Water Level Sensors  Water Level Sensor Table 
+Water Level Sensor  Pavement Treatment Objects  
+Number of Treatments 
+Pavement Treatment Table 
+Pavement Treatment Treatment Amount 
+Treatment Width  
+Pavement Treatment Block  Operational Mode 
+Command State 
+Sprayer State Signal Duration  
+Signal Event Count 
+Last Signal Event Active Event Count  
+Inactive Event Count  
+Last Active Event Last Inactive Event  
+PTS Error Code 
+Monitoring Detectors  
+Water Quality Parameters   
+ 
+There are basic temporal limits for the data collecti on, quality checking, 
+processing, and publication of the environm ental data. There is also a period for 
+which the Service Provider Customers ha ve temporal-driven requirements. The 
+design of Clarus  will need to consider these time horizons when planning the 
+technical limitations of the system architecture. These data time horizons are illustrated in Figure 4. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 14 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 
+ 
+Figure 4 – Time Horizons for Weather Data 
+The average elapsed time for the Aut onomous Layer varies as a result of 
+configuration and communicati ons latencies that are inherent within the operation 
+of the system to collect the data. The Clarus  component includes the time 
+required to communicate data from  the Autonomous Layer to the Clarus  system 
+import process as well as the time require d to process the input  data into storage 
+structures. Further, the variation in th e Service Provider component includes the 
+time required to add other data to the Clarus  data and to perform the human- and 
+machine-based product generation. The averag e data age grows as a result of the 
+aggregated times required to move through the various layers and eventually to 
+the Service Provider Customers. The Clarus  system design must address how best 
+to minimize these times to optimize the flow of data in a timely manner.  
+For the purposes of defining the boundaries  of these time horizons, the following 
+definitions apply: 
+• Average Elapsed Time is the estimated time for the process within a 
+given layer or layer subdivision to take place. The age of observed and 
+recorded values can vary wi dely within these bands. 
+• Average Data Age  is the estimated average ag e of an ESS observation as 
+it is transferred from the ESS to the end user. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 15 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 2.3 User Characteristics  
+Direct and indirect use of the Clarus  system can be applied to a wide audience. 
+Because a variety of users can derive benefit from the Clarus  system, it is 
+necessary to focus upon those users who have the most immediate contact with 
+the system components. 
+The primary user classes include the ow ners and operators of the observing 
+systems collecting and sending information to Clarus , and the users directly 
+accessing the data published by the Clarus  system.  
+The following is an initial list of stake holders whose user needs are considered: 
+• Observation system owners including federal, state, local, and private 
+institutions; 
+• Instrument and observation platform suppliers; 
+• Direct data users including system owners and their contractors; 
+• Surface transportation weather service providers (which may include the 
+observation system owners); 
+• NOAA; 
+• General weather service providers; 
+• Research and engineering community; and 
+• Climate data warehouse and othe r non-surface weather interests.  
+This list of direct us ers of data from the Clarus  system is a subset of the entire 
+population of stakeholders  interested in the Clarus  Initiative. The requirements of 
+the broader stakeholder comm unity are essential to the Clarus  Initiative and these 
+interests must serve as a framework for the core Clarus  system. From information 
+in the Surface Transportation Weather Decision Support Requirements  
+(STWDSR) (Ref. 5), Weather Information for Surface Transportation  (WIST) 
+(Ref. 6), and 511 Deployment Coalition (R ef. 7) documents, it is possible to 
+separate stakeholder groups into a condens ed list based upon th e user’s interface 
+or interaction with Clarus  data.  
+The users are viewed as defining layers in  the process of tran sferring data from 
+raw field observations to vari ous levels of data use. This  is illustrated in Figure 5.  
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 16 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Autonomous
+LayerClarusService
+ProvidersService Provider
+Customers
+Autonomous
+LayerClarusService
+ProvidersService Provider
+Customers
+ 
+Inherent Time Horizons
+Real-time Data Collection
+Primary Data Processing & Dissemination 
+Data Product Creation & Dissemination Inherent Time Horizons
+Real-time Data Collection
+Primary Data Processing & Dissemination 
+Data Product Creation & Dissemination 
+ 
+ 
+Figure 5 – Clarus  User Layers and Time Horizon Relationships 
+The Autonomous Layer is comprised of operational entities who utilize weather 
+and transportation data to make plans, decisions, and/or take action based upon 
+sensor data within their control. Thes e data include observations collected by 
+ESS, mobile data acquisition platforms, cameras, and other transportation-related 
+measurement devices. The Autonomous Layer data comprises the vast majority of 
+the raw input data to the Clarus  system. 
+The Clarus  Layer lies between the Autonomous and Service Providers Layers 
+and represents the nationwide system  and architecture to accomplish the 
+previously outlined goals of surface tran sportation environmental data collection 
+and management.  
+The Service Providers Layer is composed of both public  and private entities that 
+provide basic and value-added weather support services to support the weather 
+information needs of the broader surface transportation community. These support services rely on Clarus  data (raw and processed)  combined with other 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 17 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ environmental, road condition, or traffi c information products to develop or 
+provide road weather inform ation and enhanced products.  
+The Service Provider Customer Layer includes those groups who are direct 
+consumers of products generated by Serv ice Providers and are generally not a 
+direct user of Clarus  data. The members of this group could be anyone using 
+weather information, but are largely found within the su rface transportation 
+community. The weather products received by these end users are built from a combination of Clarus  and non- Clarus  data. In some instances, the Service 
+Provider Customer Layer includes entitie s and agencies also found within the 
+Autonomous Layer who receive quality ch ecking information on  the data they 
+originally provided to Clarus . 
+Figure 5 can also be viewed as a depicti on of the time horizons that separate the 
+stakeholder groups. There is an inherent tim e scale, similar to Figure 4, emanating 
+from the center of the diagram outward, representing the flow and processing of data through the Clarus  system and between the layers.  
+The context diagram in Figure 6 illustrates the relationship of the entities 
+interfacing with Clarus . The diagram also describes th e flow of data between the 
+entities and the Clarus  system. The data provider organizations maintain data 
+collection systems. These organizations make up the Autonomous Layer — the 
+primary contributors of surface transportation data to the Clarus  system. These 
+stakeholders can benefit from Clarus  by receiving quality-controlled data from 
+the Clarus  system. The quality-controlled data are not value-added data, but data 
+with flags indicating that elements do not meet quality checking thresholds.  
+ 
+Figure 6 – Context Diagram of Clarus  User Needs 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 18 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ The private and public sector Service Providers are the principal Clarus  users. 
+These Service Providers generate value-ad ded road and rail weather information 
+services for the transportation community. Additional Service Providers having direct access to Clarus  data resources include rese arch organizations, external 
+agencies that may choose to archive Clarus  data, and other related weather 
+service providers. 
+ 
+Within the context of Figure 6, the following roles can be assigned to each group of users: 
+• Federal, State, and Local Agencies – These are the transportation system 
+and road weather information system  (RWIS) operators and owners who 
+directly provide the Clarus  data. This group places considerable emphasis 
+on the pavement-specific component of the data at the observational level 
+to make immediate decisions. These users, primarily maintenance and 
+operations personnel, are the principal consumers of information provided by surface transportation weather serv ice providers. Additional data from 
+this group may include closed circu it television (CCTV) images, road 
+condition information, and records of tr eatment activities such as plowing 
+and chemical application.
+ 
+• Transit – These are the owners and operators of transit systems who 
+contribute raw data to the Clarus  system and may receive quality-
+controlled data from it. This gro up places considerable emphasis on 
+understanding weather conditi ons along designated routes. 
+• Rail – These are the owners and operator s of rail systems who contribute 
+raw data to the Clarus  system and may receive quality-controlled data 
+from it. This group places considerable emphasis on understanding weather conditions along designated rout es plus weather-induced specifics 
+such as rail temperatures, frozen  switches, icing on electrical power 
+distribution systems, and drifting snow. 
+• Vehicle – Emerging technologies are develo ping that will encourage a 
+greater level of data collection from vehicles for the purpose of 
+understanding the nature of the tran sportation system state including the 
+impacts of weather. As this met hod of data collection matures, the 
+information obtained on weather and pavement conditions from instrumentation on-board vehicles will be important Clarus  data. 
+• Surface Transportation Weather Service Providers (STWSP) – These 
+surface transportation weather service providers are the private and public 
+weather service providers  who assimilate the Clarus  data with other 
+available data to generate value-ad ded products and services used by the 
+surface transportation decision-makers at state and local transportation 
+agencies. 
+• Weather Service Providers – These include the weat her support services 
+that are primarily interested in  the meteorological and hydrologic 
+components of the Clarus  data. This group includes the efforts in public 
+forecasting by NOAA and the Nationa l Weather Service (NWS) along 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 19 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ with private sector weather servi ces and their value-added support to 
+markets such as agriculture, power  utilities, and construction. 
+• Research – This category incorporates federal, academic, and private 
+sector researchers who are working to  improve the state of knowledge and 
+practice through the research of surface transportation weather. 
+• Archives – This category includes ope rational and no n-operational 
+interests who choose to include the Clarus  data in their endeavors. The 
+archiving of Clarus  data will be most effective when combined with other 
+meteorological archives  beyond the scope of Clarus , but is not restricted 
+to such efforts. 
+2.4 General Constraints 
+Timeliness of information and reliability of the system are major constraints on 
+the design. Both of these factors can be addressed th rough appropriate system 
+architecture and implementation.  
+To address the timeliness factor, the system  should be designed such that it can 
+both retrieve and disseminate large volumes of data from a variety of sources and 
+at potentially high rates. An architectur e that spreads its data collection and 
+dissemination processes across multiple servers and communication channels may address this issue. The inhe rent scalability of such a design may also enable the 
+system to expand and add new data sources and end-users. 
+Reliability can be achieved through a variety of design and deployment 
+considerations. Hardware, operating syst em, and development environment have 
+significant impacts on the inherent reliabi lity of the system. To maximize system 
+uptime, redundancies may be required at both the hardware and software levels of the system. The primary challenge here wi ll be the trade-off between the desire 
+for reliability and the cost of redundancies. 
+ 
+While the availability of the system is covered in the Concept of Operations, the 
+criticality of the system is not explicitly addressed. Since Clarus  is not replacing 
+any existing application, the system is no t currently critical to any operation or 
+transportation function; neith er is it intended to s upport any “critical national 
+security missions.”3 Nonetheless, once the Clarus  system is operational, many 
+DOTs will use the environmental data from the Clarus  system in their normal 
+management and operations of their infrastructure. If the Clarus  system fails, 
+requestors will need to use their legacy systems.  
+The system will be “open,” using archite cture and communications interfaces that 
+are non-proprietary and broadly supporte d within the information technology 
+industry. The system should be standard s based, where national standards are 
+applicable. Special consideration should be given to the national intelligent 
+transportation system (ITS) standards. 
+                                                 
+3 Security considerations for the Clarus  system fall under the guidance of Reference 14, OMB Circular No. 
+A-130, which, by its own definition, does not apply to “critical national security missions.” Future 
+applications of Clarus  may necessitate revisiting this classification. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 20 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 2.5 Assumptions and Dependencies  
+The usefulness of the Clarus  system is dependent on participation by multiple 
+environmental data providers and multiple environmental data consumers. While the system could be placed in operation with data from only a single contributing 
+network, there is no added value without th e participation of other weather data 
+sources. Likewise, participation by a sma ll number of data consumers would not 
+justify the cost of operating the system. 
+Several assumptions have been made as  to how long it will take environmental 
+data contributors to collect, process, and publish their data. Data  not collected in a 
+timely manner may be of limited use to the data consumers. Assumptions have 
+also been made about the accuracy of the data, and the ability of the contributing 
+systems to provide adequate location, time/date, and data qualification tags. 
+Accepting data from contributors who ca nnot provide these tags with the data 
+could seriously complicate the design of the data acquisition interfaces. 
+Even though the system will check the data and apply quality flags, consumers of 
+Clarus -provided data will need to unders tand that neither FHWA nor the 
+contributing data providers will accept responsibility for the accuracy of any of 
+the data. The particul ar limitations and condi tions will be defined in data sharing 
+agreements to be established with data providers, and disclaimer information will be made available to data consumers by whatever means the data are published. 
+Several requirements deal with “regiona l” needs, without sp ecifying regional 
+boundaries. It is unlikely that the regiona l boundaries from contributing systems 
+will correspond with the regional boundaries defined within data consumer systems. It is even likely that participat ing data contributors will have different 
+(though possibly overlapping) coverage areas  for their networks. Data consumers 
+will need to understand that data will be  presented by geographic coordinates, not 
+by regional boundaries. Consumers will also  need to understand that coverage 
+will not be uniform and will depend on sensor placement by the contributing 
+organizations. 
+The availability, format, and precision of geo-reference c oordinates for data 
+collection points could present unusual pr oblems for the data acquisition system. 
+Data in the system database and in pub lished data sets will likely include geo-
+reference coordinates in decimal longitude, latitude, and elevation. 
+The availability, format, and precision of  time/date stamps could also present 
+unusual problems for the data acquisiti on system, particular ly if contributing 
+systems cannot manage Daylight Savings Ti me (DST), span time zones, or span 
+areas that do and do not participate in DST. Clarus  timestamps for data in the 
+database and in published data sets need  to be referenced to a standard time 
+reference such as Coordinated Universal Time (UTC). 
+The base assumption regarding “database tool s” is that the selected data storage 
+software will include appropriate programming interfaces, query tools, and configuration and management tools. No special database tools will be developed 
+as a part of the Clarus  system. Some tools may develope d in the future as part of 
+ongoing Clarus  Initiative activities. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 21 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 3 SYSTEM ARCHITECTURE 
+The process of generating detailed system requirements has two major parts: 
+allocating the high-level requirements to specific system components, and 
+elaborating the requirements on the f unction and interchange between those 
+components. The functional components of the Clarus  system have been detailed 
+in the Clarus  System Architectural Descrip tion and are summarized in this 
+section. Figure 7 , taken from that document, repr esents the general structure and 
+flow of information within the Clarus  system. 
+ED
+retrieval
+command
+retrieval
+parametersQED
+EMEMSchedule
+ServiceQED
+Cache
+Configuration /
+Administration
+Service
+Configuration /
+AdministrationUser InterfaceWatchdogED
+QED
+ServicesQED
+EM
+ServicesQED
+request
+EM
+requestED QED
+EM
+Cache
+state
+updatesystem
+stateEMquality
+rules
+EM
+request
+EMQED
+request
+ED – Environmental Data
+EM – Environmental MetadataQCh – Quality CheckingQED – Qualified Environmental DataEMEM
+requestScheduleQCh
+ServicesCollector
+Services
+Quality Manual FlagSchedule
+Figure 7 – Data Flows within the Clarus  System  
+Four of the components in Figure 7  are modeled as sets of services: the collector, 
+quality checking (QCh), qualified e nvironmental data, and environmental 
+metadata services. The collector, QED, a nd EM services are sets of services 
+because each individual service represents a particular data format interface. A set 
+of services is required to properly inte rpret and transform all the incoming and 
+outgoing environmental information. The pa rticular collector, QED, or EM 
+service performing a transformation depends on the origin and destination of the 
+environmental data. 
+The fourth component modeled as a set is the quality checking service. It is a set 
+of services because it represents in one  component all the QCh algorithms that 
+can be applied to environmental data collected by Clarus . The specific algorithms 
+and sequence in which they are appl ied are determined by quality rules 
+established through the configuration & ad ministration service. This arrangement 
+supports flexibility in adding and rem oving QCh algorithms to produce the best 
+possible qualified environmental data in the Clarus  system. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 22 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ There are two services that keep the Clarus  system operating: the watchdog and 
+schedule services. The watchdog service m onitors the overall system state and 
+restarts unresponsive services as need ed, thus preventing long-term service 
+disruption. The schedule servi ce prioritizes requests to receive environmental data 
+from collectors and contributors. The sche dule service will also prioritize and 
+respond to subscription requests for envi ronmental data (not depicted in Figure 
+7). 
+The set of collector services in the Clarus  system receives environmental data 
+from ED collectors and contributors through both push and pull methods. Each 
+collector service is capable of understand ing a particular data format and is 
+responsible for extracting th e environmental data and pl acing it into the qualified 
+environmental data cache flagged as  unqualified environmental data.  
+Quality rules set up by the configuration & administration service are executed by 
+the quality checking services to apply sets of computations on the environmental data stored in the qualified environmental data cache. Flagging out-of-range values is one example of a quality rule. Other quality rules could be created to derive environmental conditions from ex isting information such as dew point. 
+Multiple passes by the quality checking services on the QEDC information could 
+apply grid algorithms sequen tially to further quality check the environmental data. 
+This allows constant access to qualified environmental data in-process. The QEDC is still valuable to end-users since it will always identify its level of quality 
+and can be continuously delivered. 
+The QED services format the qualified environmental data to fulfill requests from 
+and information subscriptions for environm ental service providers and end-users. 
+Similarly, the EM services format the metadata to meet requests from and metadata subscriptions fo r environmental service providers. Each of these 
+components is a set of services, with  each individual service supporting a 
+particular data format. 
+The configuration and administ ration service supports both the Clarus  system and 
+program. It maintains information about da ta provider redistribution restrictions 
+and controls who has access to modify the system state, quality rules, and set ED retrieval schedules. The c onfiguration & administrati on service manages environ-
+mental metadata, formatting it for internal storage. Data transactions and system operational statistics are logged in the configuration and administration user 
+interface as well. The conf iguration and administration user interface allows 
+administrative users to in teract with these functi ons and supports the manual 
+quality review processes. 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 23 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4 SPECIFIC REQUIREMENTS 
+This section presents the high-leve l and detailed requirements for the Clarus  
+system and the associated institutional program necessary to achieve the needs 
+and goals described by the Concept of Op erations. These requirements describe 
+the expected attributes and capabilities of  the system and allocate capabilities to 
+specific components within the Clarus system. The high-level requirements in 
+this document are limited to those that can be derived from a context diagram (Figure 8) that pictures the Clarus  system as a single functional block with its 
+interfaces. The types of high-level requ irements described in this section 
+correspond roughly to these functions a nd interfaces. Functional requirements 
+describe what happens inside the Clarus  system itself: quality checking, 
+development, and packaging of envir onmental data. Each interface to the Clarus  
+system has its own requireme nts with regard to the collection of data from 
+providers as input; the dissemination of data for output; the controlling rules and 
+constraints under which the system opera tes; and the means (primarily data 
+management) by which it works. 
+ 
+Figure 8 – High-Level Requirements Context 
+The high-level perspective assumed for these requirements has implications for downstream development activ ities. The high-level requ irements provide a basis 
+for components in system elaboration, and detailed requirements are subsequently 
+tied to specific components. Conforman ce to high-level requirements is shown 
+through testing based on plans derived from  the detailed requirements. The entire 
+development process is tied together by lines of traceability anchored in the high-
+level requirements. 
+In this section, the requiremen ts are classified by the firs t letter in the requirement 
+identification as described in Table 2 and shown in Table 3. 
+• Functional Requirements – Lists the char acteristics that the system must 
+support for each interface. Identifies what is to be done by the system, 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 24 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ what inputs should be transformed to  what outputs, and what specific 
+operations are required. The functio nal requirements further include: 
+• Functional Data Requirements, which describe requirements 
+specific to the definition and management of data used and 
+provided by the system; and 
+• Functional Interface Requirements, which describe the functional 
+interfaces to the Clarus  system from information providers and 
+consumers. 
+• Performance Requirements – Specifies static and dynamic capacity for the 
+number of users, connections, and other performance related factors. 
+Performance requirements further include: 
+• Design Constraints, which id entify constraints imposed by 
+standards, regulations, software  or hardware limitations; and 
+• Quality Requirements, which provide requirements which address 
+the general quality, usability, extensibility, flexibility, and 
+maintainability of the system. 
+• Organizational Requirements – Include s requirements for policies and 
+procedures to support the implem entation, operations, training, and 
+institutional requirements to support the system. This category also:  
+• Details logical characteristics between the system and external data 
+sources; 
+• Specifies level of integration with  external systems and defines the 
+interfaces with each user class; and 
+• Specifies any communications interf aces and protocols that should 
+be supported. 
+Table 2 shows the general layout of the requirements tables, and explains the 
+purpose or content of each column of th e requirements table. The requirements in 
+this document are a subset of the requirements information that will be tracked in 
+the system “Requirements Matrix.” While this document is intended to record the 
+requirements that apply to a particul ar implementation of the system, the 
+Requirements Matrix tracks all proposed requirements for the system. The matrix 
+includes requirements that may apply to future versions of the system or which have been deferred due to cost or complexity. 
+Table 3 provides an explan ation of the requirement identification numbering 
+system. The high-level requirements are id entified as A-NNN, where A is the 
+classification and NNN is a unique nu mber. The detailed requirements are 
+identified as A-NNNUU, where A-NNN is the parent or high-level requirement 
+and UU is a unique identifier. 
+This section lists the functional characteris tics that the system must support. It 
+also identifies what is to be done by the system, what inputs should be transformed to what outputs, and what  specific operations  are required. The 
+Clarus Weather System Design 
+Detailed System Requirements Specification 
+  04037-rq301srs0200
+ 
+Page 25 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ functional requirements are broken into subsections by each allocation to specific 
+modules listed in Table 4. 
+Detailed requirements are associated with  a parent or high-level requirement. 
+They are used by developers in creating the design for the Clarus  system, by 
+testers to ensure all requirements are implemented during the build of the Clarus  
+system, and by the client for doc umenting their expectations.  
+Many of the high-level requirements are al located to more than one module or 
+component of the Clarus  system. Within each table, the high-level requirements 
+show their allocations to particular m odules. If the high-level requirement is 
+allocated to more than one module, th en the high-level requirement will be 
+repeated in the correspo nding allocation’s module. 
+Following the high-level requirement, detaile d requirement(s) are shown to create 
+more refined requirements specific to the associated module. Figure 7 may be 
+referenced while reviewing the detailed requirements to maintain context of the 
+Clarus  system’s architecture. 
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 26 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Table 2 - Explanation of  the Requirements Tables 
+ID Requirement  Source Allocation Comment Criticality 
+A unique identifier used 
+to trace requirements from beginning to end in 
+a system development 
+process. The text of the actual requirement. 
+Requirements formulated with “… shall…” are direct requirements; 
+those using “… shall be able to…” 
+are conditioned on other requirements being fulfilled or on 
+factors outside the control of the 
+requirement’s subject.  Source(s) for the 
+requirement; could be a reference 
+document or a 
+“parent” requirement. Identifies the 
+module(s) for the high-level 
+requirement as 
+shown in Table 4. Supporting text that 
+may help explain the requirement, its 
+priority, or the risks 
+associated with implementing the 
+requirement. H = High  
+M = Medium L = Low  
+ 
+Table 3 – Requirement ID Format 
+Requirement ID Format Explanation of Format  
+High-level Requirement 
+A-NNN 
+Detailed Requirement 
+A-NNNUU A Represents the classification of the requirements within the requirements document. The following 
+classifications have been used in this requirements specification:  
+D Design Constraints F General Functional Requirements 
+H Functional Data Requirements 
+I Functional Interface Requirements P System Performance Requirements 
+Q Quality Requirements 
+X Organizational Requirements 
+NNN Provides unique identification.  Numbering is not necessarily sequential; gaps in the sequence leave 
+room to add additional related requirements when they are discovered. 
+UU Provides unique identification.  
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 27 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+  
+Table 4 – Allocation Format 
+Allocation Name of Allocation Module 
+CAS Configuration and Administration Service 
+CAUI Configuration and Ad ministration User Interface 
+CS Collector Services 
+DOG Watchdog 
+EMC Environmental Metadata Cache 
+EMS Environmental Metadata Services 
+QEDC Qualified Environmental Data 
+QEDS Qualified Environmental Data Services 
+QChS Quality Checking Services 
+SS Schedule Service 
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 28 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.1 Configuration & Administration Service (CAS) 
+The requirements in this section specify  the service to configure and administ er the system.  The CAS supports the Clarus  
+system and program, manages information a bout data provider redistri bution restrictions, controls  access for modifying the 
+system state and quality rules, applies ma nual quality flags, establishes environmen tal data retrieval schedules, and manages 
+environmental metadata. 
+ID Requirement  Source Allocation 
+- CAS Comment Criticality
+F-101 The Clarus  system shall 
+implement quality checking processes as soon as data become available. ConOps §2.4 QChS, SS, 
+CAS   H 
+F-
+101B1 The CAS shall be able to 
+configure schedules for executing QChS.         
+F-151 The Clarus  system shall 
+record the methods applied when deriving quality checking information. MHI QChS, 
+CAS   H 
+F-
+151B1 The CAS shall record the 
+quality checking methods used.         
+F-155 The Clarus  system shall be 
+able to implement quality checking rules for each environmental parameter. ConOps §3.5.1.4 QChS, 
+CAS, CAUI   H 
+F-
+155B1 The CAS shall be able to 
+configure the quality checking rules for each environmental parameter.         
+F-
+155B2 The CAS shall enable 
+administrators to manage quality checking rules.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 29 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- CAS Comment Criticality
+F-161 The Clarus  system shall be 
+able to implement quality checking rules for specific environmental situations. ConOps §3.5.1.4 QChS, 
+CAS The rules for setting quality flags 
+on environmental data elements may themselves depend on other environmental data. For example, stormy conditions may allow more spatial and temporal variability in wind speed observations than under fair weather conditions. H 
+F-
+161B1 The CAS shall be able to 
+configure quality checking 
+rules for specific environmental situations.         
+F-163 The Clarus  system shall be 
+able to implement quality checking rules specific to observation locations. Task Force review QChS, 
+CAS Quality checking rules may vary 
+from region to region. H 
+F-
+163B1 The CAS shall be able to 
+configure quality checking rules specific to observation locations.         
+F-171 The Clarus  system shall be 
+able to base its quality checking process on historical environmental data. Inferred from ConOps 
+§3.5.1.4 QChS, 
+CAS   H 
+F-
+171B1 The CAS shall be able to 
+configure historical 
+environmental data to be used by quality checking processes.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 30 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- CAS Comment Criticality
+F-175 The Clarus  system shall be 
+able to use multiple algorithms for its quality checking process. Inferred from ConOps §4.3 QChS, 
+CAS Multiple methods or comparisons 
+may be needed for a given observation. M 
+F-
+175B1 The CAS shall be able to 
+configure multiple algorithms to be used in the quality checking process.         
+F-213 The Clarus  system shall 
+allow access to new surface transportation-related environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, QEDS, CAS, EMC, EMS, DOG Access could only be provided 
+when new data sources are established and available. L 
+F-
+213B1 The CAS shall be 
+configurable to allow new observation types to be implemented as they become available.         
+F-806 The Clarus  system shall 
+enable administrators to manage security groups. MHI CAS, 
+CAUI Manage means create, read, 
+update, and delete. H 
+F-
+806B1 The CAS  system shall 
+enable administrators to manage security group members.         
+F-
+806B2 The CAS shall have an 
+administrator security group.         
+F-
+806B3 The CAS shall have a quality 
+manager security group.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 31 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- CAS Comment Criticality
+F-811 The Clarus  system shall be 
+able to restrict environmental data publication based on source. MHI & ConOps §4.5 QEDS, 
+CAS Use MADIS as a template 
+(ConOps §3.6). H 
+F-
+811B1 The CAS shall be able to 
+record data sharing restrictions.         
+F-901 The Clarus  system shall 
+record statistics about its operation. OCS CAS   H 
+F-
+901B1 The CAS shall record 
+statistics about the system operation.         
+F-905 The Clarus  system shall log 
+data transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-
+905B1 The CAS shall log data 
+transactions.         
+H-120 The Clarus  system shall 
+acquire, process, and disseminate environmental metadata.  ConOps §3.3 CAS, EMC, 
+EMS, CAUI Roll up of H-121, H-122, H-123, 
+H-201, which were deprecated.   
+H-
+120B1 The CAS shall manage 
+contributor metadata.     For example, ESS & VII 
+contributor metadata.   
+H-
+120B2 The CAS shall manage 
+collector metadata.     For example, ESS & VII collector 
+metadata.   
+H-
+120B3 The CAS shall manage 
+quality checking schedules.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 32 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- CAS Comment Criticality
+H-
+120B4 The CAS shall manage 
+environmental data collection schedules.         
+H-
+120B5 The CAS shall manage ESS 
+metadata. Task Force    
+I-032 The Clarus  system shall 
+manage environmental data and metadata according to the Clarus  data sharing 
+agreements. MHI CAS, 
+CAUI Changed from “The Clarus  system 
+shall manage system user privileges according to the Clarus  
+data sharing agreements.” H 
+I-032B1 The CAS shall manage data 
+sharing rules based on contributor data sharing agreements.         
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 33 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.2 Configuration & Administration User Interface (CAUI) 
+The requirements in this section specif y the interface for administering the syst em and applying manual quality flags. 
+ID Requirement  Source Allocation - 
+CAUI Comment Criticality
+F-100 The Clarus  system shall collect, 
+quality check, and disseminate environmental data. ConOps §1 CS, QChS, 
+QEDS, CAUI Environmental data includes all NTCIP 
+1204 data (summarized in Table 1). H 
+F-100C1 The CAUI shall be able to initiate 
+CS on demand.     
+F-111 The Clarus  system shall provide 
+environmental data quality flags. OCS QChS, 
+CAUI, QEDC   H 
+F-111C1 The CAUI shall enable a quality 
+manager to apply manual flags to a set of observations from an individual ESS.     This requirement allows all observations 
+from an ESS to have manual flags applied. Example, the ESS was destroyed by a car.   
+F-111C2 The CAUI shall enable a quality 
+manager to apply manual flags to a set of observations.     This requirement allows only some of the 
+observations from an ESS to have manual flags applied. Example, a particular sensor is out of service.   
+F-111C3 The CAUI shall enable a quality 
+manager to apply manual flags to a set of observations over a fixed time range.         
+F-111C4 The CAUI shall enable a quality 
+manager to apply manual flags to a set of observations over a time range with an open ended future time.         
+F-141 The Clarus  system shall allow 
+human quality checks of environmental data. OCS CAUI, 
+QChS Changed from “The Clarus  system shall 
+allow human intervention to override automatically applied quality assessment.” M 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 34 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CAUI Comment Criticality
+F-141C1 The CAUI shall allow a quality 
+manager to apply a manual quality flag to environmental data.         
+F-141C3 The CAUI shall allow manual 
+quality flags to be entered.         
+F-155 The Clarus  system shall be able to 
+implement quality checking rules specific to each environmental parameter. ConOps 
+§3.5.1.4 QChS, CAS, 
+CAUI   H 
+F-155C1 The CAUI shall enable quality 
+checking rules to be configured specific to each environmental parameter.         
+F-806 The Clarus  system shall enable 
+administrators to manage security groups. MHI CAS, CAUI   H 
+F-806C1 The CAUI  shall enable 
+administrators to manage security group members.         
+H-120 The Clarus  system shall acquire, 
+process, and disseminate environmental metadata.  ConOps §3.3 CAS, EMC, 
+EMS, CAUI Roll up of H-121, H-122, H-123, H-201, 
+which were deprecated.   
+H-
+120C1 The CAUI shall enable 
+administrators to acquire environmental metadata.     
+H-
+120C2 The CAUI shall enable 
+administrators to manage environmental metadata.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 35 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CAUI Comment Criticality
+I-031 The Clarus  system shall provide a 
+user interface for administration. MHI CAUI   H 
+I-031C1 The CAUI shall enable 
+administrators to manage contributor metadata.         
+I-031C2 The CAUI shall enable 
+administrators to manage collector metadata.         
+I-031C3 The CAUI shall enable 
+administrators to manage quality checking schedules.         
+I-031C4 The CAUI shall enable 
+administrators to manage environmental data collection schedules.         
+I-032 The Clarus  system shall manage 
+environmental data and metadata according to the Clarus  data 
+sharing agreements. MHI CAS, CAUI Changed from “The Clarus  system shall 
+manage system user privileges according to the Clarus  data sharing agreements.” H 
+I-032C1 The CAUI shall enable 
+administrators to manage contributor data sharing agreements.         
+I-032C2 The CAUI shall enable 
+administrators to assign system privileges.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 36 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.3 Collector Services (CS) 
+The requirements in this section specify the collection of environmental data. The Collector Services shall receive environment al 
+data, convert the environmental data into a standard format, a nd store the environmental data in the Qualified Environmental 
+Data Cache. 
+ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-100 The Clarus  system shall collect, 
+quality check, and disseminate environmental data. ConOps §1 CS, QChS, 
+QEDS, CAUI Environmental data includes all NTCIP 
+1204 data (summarized in Table 1). H 
+F-100D1 CS shall collect environmental 
+data based on its configured schedule.         
+F-100D2 CS shall be able to transform 
+extracted environmental data into the internal storage format.         
+F-100D3 CS shall be able to store 
+transformed environmental data in 
+the QEDC.         
+F-100D4 CS shall be able to convert 
+observation units into the Clarus  
+standard unit specification.         
+F-100D5 CS shall be able to be initiated on 
+a schedule.         
+F-100D6 CS shall be able to be initiated on 
+demand.     
+F-200 The Clarus  system shall be able to 
+detect data submission errors. MHI CS   H 
+F-200D1 CS shall log when a data 
+submission error occurs.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 37 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-201 The Clarus  system shall be able to 
+access in-situ environmental observations from data collectors. OCS CS Access to data may be conditional based 
+on data sharing agreements to be reached with individual data collector organizations. H 
+F-201D1 CS shall be able to collect in-situ 
+environmental observations from data collectors.         
+F-205 The Clarus  system shall be able to 
+access remotely sensed environmental observations from data collectors. OCS CS   M 
+F-205D1 CS shall be able to retrieve 
+remotely sensed environmental observations from data collectors.         
+F-211 The Clarus  system shall be able to 
+receive roadway weather measurements derived from VII data. OCS CS   M 
+F-211D1 CS shall be able to retrieve 
+roadway weather measurements derived from VII data.         
+F-213 The Clarus  system shall allow 
+access to new surface transportation-related observed environmental data. ConOps §1, 
+2.4, 3.1 CS, QChS, 
+QEDC, QEDS, CAS, EMC, EMS, DOG Access could only be provided when new 
+data sources are established and available. L 
+F-213D1 CS shall be able to be 
+implemented to collect new observation types as they become available.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 38 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-214 The Clarus  system shall accept 
+environmental data derived from images. MHI CS Images would include CCTV and still 
+images. H 
+F-214D1 CS shall acc ept surface condition 
+data derived from surface images. Task Force 
+review   Surface condition data may include, for 
+example, "dry", "wet", "icy", "snow-covered", or "flooded". Used to be F-216. H 
+F-214D2 CS shall accept atmospheric 
+condition data derived from atmospheric images. Task Force 
+review   Used to be F-217.  H 
+F-221 The Clarus  system shall be able to 
+retrieve environmental data directly from environmental sensor station collectors. Task Force 
+review CS Changed from "The Clarus  system shall 
+be able to retrieve environmental data directly from environmental sensor stations." L 
+F-221D1 CS shall be able to retrieve 
+environmental data directly from environmental sensor station collectors.         
+F-222 The Clarus system shall minimize 
+the time for data acquisition.  OCS     H 
+F-222D1 CS shall be able to dynamically 
+adjust its retrieval schedules when environmental data is expected to be ready but is temporarily delayed.         
+F-223 The Clarus  system shall process 
+data as they are received. ConOps 
+§3.4.3 CS, QChS   H 
+F-223D1 CS shall process environmental 
+data as they are received.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 39 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-231 The Clarus  system shall collect 
+pavement-related observations. ConOps §2.5 CS Pavement-re lated observations could 
+include precipitation accumulation, flooding or treatments. H 
+F-231D1 CS shall be able to collect 
+pavement-related observations.         
+F-241 The Clarus  system shall accept 
+environmental data from railway systems or in-situ ESS along tracks. ConOps 
+§2.5.7 CS   H 
+F-241D1 CS shall be able to collect 
+environmental data from railway systems from railway collectors.         
+F-241D2 CS shall be able to collect 
+environmental data from in-situ ESS along tracks from railway collectors.         
+F-245 The Clarus  system shall accept 
+environmental data from railroad vehicles. ConOps 
+§2.5.7 CS   H 
+F-245D1 CS shall accept environmental 
+data derived from railroad vehicle data.         
+F-251 The Clarus  system shall accept 
+environmental data from (roadway) vehicles. Inferred from 
+ConOps §2.5.x CS   H 
+F-251D1 CS shall accept environmental 
+data collected from (roadway) vehicles.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 40 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-255 The Clarus  system shall accept 
+environmental data from maintenance and construction vehicles. ConOps 
+§2.5.2 CS   H 
+F-255D1 CS shall accept environmental 
+data collected from maintenance and construction vehicles.         
+F-261 The Clarus  system shall accept 
+environmental data from service patrol vehicles. ConOps 
+§2.5.3 CS   H 
+F-261D1 CS shall accept environmental 
+data collected from service patrol vehicles.         
+F-271 The Clarus  system shall accept 
+environmental data from transit vehicles. ConOps 
+§2.5.5 CS Transit vehicles include watercraft 
+(ferries) and buses. H 
+F-271D1 CS shall accept environmental 
+data collected from transit vehicles.         
+F-275 The Clarus  system shall accept 
+environmental data from emergency vehicles. ConOps 
+§2.5.6 CS   H 
+F-275D1 CS shall accept environmental 
+data collected from emergency vehicles.         
+F-281 The Clarus  system shall be able to 
+receive weather data from weather service providers. ConOps 
+§3.5.1.4 CS   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 41 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+F-281D1 CS shall be able to receive weather 
+data from weather service providers.     For example, ASOS/AWOS.   
+F-905 The Clarus  system shall log data 
+transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-905D1 CS shall create a log entry when a 
+data set is invalid.     An “invalid” data se t is one that cannot be 
+understood as received.   
+H-011 The Clarus  system baseline data 
+types shall be defined by the NTCIP ESS 1204 standard. ConOps §3.3 
+(Table 2) CS, QEDC, 
+QEDS Version 02.20 was accepted as a 
+recommended standard by the NTCIP Joint Committee in March 2005.  See www.ntcip.org/library/documents.  H 
+H-
+011D1 CS shall accept data types defined 
+by NTCIP 1204.     
+    
+H-012 The Clarus  system data definitions 
+shall be consistent with the ITE TM 1.03 standard, Functional Level Traffic Management Data Dictionary (TMDD). Task Force 
+review CS, QEDS   H 
+H-
+012D1 CS shall accept environmental 
+data described by definitions defined by the TMDD.         
+H-
+012D2 CS shall accept environmental 
+data described by definitions defined by CMML version 2.         
+H-020 The Clarus  system shall acquire, 
+process, and disseminate environmental data. ConOps §2.1 CS, QChS, 
+QEDS Roll up of H-021, H-022, H-023, which 
+were deprecated. H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 42 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+H-151 The Clarus  system shall accept 
+only observations that include location, timestamp, and source metadata. Implied 
+throughout ConOps CS Appendix A includes a discussion of 
+"metadata" in this context.  H 
+H-
+151D1 CS shall accept only observations 
+that include location, timestamp, and source metadata.         
+H-155 The Clarus  system shall accept 
+only observations of identified measurement types and units. OCS CS   H 
+H-
+155D1 CS shall accept only observation 
+of identified measurement types and units.     Incoming units will be converted to 
+NTCIP 1204 units.   
+H-301 The Clarus  system shall be able to 
+acquire, process, and disseminate 
+environmental data from across 
+North America. ConOps 
+§3.4.2, 
+amended in 
+Task Force review CS, QChS, 
+QEDS North America in this context includes the 
+United States, it territories, Canada, and 
+Mexico H 
+H-
+301D1 CS shall be able to acquire 
+environmental data from across North America.         
+I-011 The Clarus  system shall accept 
+data through a Clarus  standard 
+interface. OCS CS Standard to be determined during design 
+phase of this project. H 
+I-011D1 CS shall implement the Clarus  
+standard interface.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 43 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+I-012 The Clarus  system shall be able to 
+communicate with environmental sensor stations through its collector using the NTCIP ESS 1204. ConOps §3.3 CS Version 02.20 was accepted as a 
+recommended standard by the NTCIP Joint Committee in March 2005.  See www.ntcip.org/library/documents. The ending phrase "for data collection" was removed. L 
+I-012D1 CS shall be able to process NTCIP 
+ESS 1204 data.         
+I-013 The Clarus  system shall be able to 
+communicate with RWIS databases through their native interfaces. ConOps 
+§3.4.2 CS   L 
+I-013D1 CS shall be able to accept data 
+from an RWIS database in its native output format.     At such time as this requirement may be 
+implemented RWIS databases will be treated as a collector.   
+I-014 The Clarus  system shall be able to 
+communicate with an individual ESS through its native interface. ConOps 
+§3.4.2 CS Deprecated. F-221 covers this. L 
+I-016 The Clarus  system shall transfer 
+data as efficiently as possible. Inferred from 
+ConOps §3.2 CS, EMS, 
+QEDS, SS Related to F-501, F-222. H 
+I-016D1 CS shall transfer data 
+concurrently.         
+I-016D2 CS shall be able to request 
+collector environmental data on demand.         
+I-016D3 CS shall be able to accept 
+environmental data pushed from collectors.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 44 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+CS Comment Criticality
+I-017 The Clarus  system shall employ 
+industry standards to minimize implementation impact to users and providers. Inferred from 
+ConOps §4.1 CS, QEDS, 
+EMC, EMS Standards in this context refer to the 
+environmental data standards in common use among Clarus  stakeholders.  H 
+I-017D1 CS shall be able to extract 
+environmental data from an XML message that conforms to the Clarus  standard XML message 
+specification.         
+I-017D2 CS shall be able to extract 
+environmental data from comma separated value messages.         
+I-017D3 CS that process comma separated 
+value ASCII text shall be able to dynamically parse environmental data that includes a descriptive header row conforming to the Clarus  collector standard message 
+specification.         
+I-017D4 CS that process comma separated 
+value ASCII text shall be able to dynamically parse environmental data described by a stored collector configuration.         
+I-017D5 CS shall be able to extract 
+environmental data from CMML version 2 messages.         
+I-017D6 CS shall be able to extract 
+environmental data from netCDF version 3.6 messages.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 45 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.4 Watchdog (DOG) 
+The requirements in this section speci fy the operation of the watchdog to keep  the system running. The watchdog is an 
+automated system management serv ice that will monitor the overall Clarus  system, restart unresponsiv e services, notify the CAS 
+of failures, and log data transactions. 
+ID Requirement  Source Allocation - 
+DOG Comment Criticality
+F-213 The Clarus  system shall allow 
+access to new surface transportation related observed 
+environmental data. ConOps §1, 2.4, 
+3.1 CS, QChS, 
+QEDC, QEDS, 
+CAS, EMC, 
+EMS, DOG Access could only be provided when 
+new data sources are established and available. L 
+F-
+213G1 The DOG shall be able to 
+monitor new environmental data services as they are added.         
+F-905 The Clarus  system shall log data 
+transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-
+905G1 The DOG shall be able to record 
+its activities.         
+Q-012 The Clarus  system shall be able 
+to automatically recover from an unexpected shutdown. MHI DOG   H 
+Q-
+012G1 The watchdog service shall 
+monitor the overall Clarus  
+system state.         
+Q-
+012G2 The watchdog service shall be 
+able to restart unresponsive Clarus  system services.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 46 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.5 Environmental Metadata Cache (EMC) 
+The requirements in this section specify the storage of environmental metadata. The EMC will store environmental metadata 
+about the contributors an d collectors from the Configuratio n & Administration Services and se nd environmental metadata to the 
+Environmental Metadata Services upon request. 
+ID Requirement  Source Allocation 
+- EMC Comment Criticality
+F-213 The Clarus  system shall allow 
+access to new surface transportation related observed 
+environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, QEDS, 
+CAS, 
+EMC, EMS, DOG Access could only be provided when 
+new data sources are established and available. L 
+F-
+213E1 The EMC shall be configurable 
+to allow new observation types to be implemented as they become available.         
+H-120 The Clarus  system shall 
+acquire, process, and disseminate environmental metadata. ConOps §3.3 CAS, 
+EMC, EMS, CAUI Roll up of H-121, H-122, H-123, H-
+201, which have been deprecated.   
+H-
+120E1 The EMC shall be able to 
+process environmental metadata.         
+H-
+120E2 The EMC shall be able to 
+uniquely identify each contributor, collector, and station sensor.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 47 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- EMC Comment Criticality
+H-
+120E3 The EMC shall be able to 
+maintain contact info for each contributor, collector, and station sensor.         
+H-
+120E4 The EMC shall be able to 
+maintain backup contact info for each contributor, collector, 
+and station sensor.         
+H-
+120E5 The EMC shall be able to 
+maintain owner names for each contributor, collector, and station sensor.         
+H-
+120E6 The EMC shall be able to 
+maintain an equipment list for each station.         
+H-
+120E7 The EMC shall be able to 
+maintain pavement types for stations with corresponding instrumentation.         
+H-
+120E8 The EMC shall be able to 
+maintain latitude, longitude, and elevation for stations.         
+H-
+120E9 The EMC shall be able to 
+maintain a reference to additional metadata. Task Force  An example would be a URL to a 
+picture of the ESS.  
+I-017 The Clarus  system shall 
+employ industry standards to minimize implementation impact to users and providers. Inferred from ConOps 
+§4.1 CS, QEDS, 
+EMC, EMS Standards in this context refer to the 
+environmental data standards in common use among Clarus  
+stakeholders.  H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 48 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- EMC Comment Criticality
+I-017E1 The EMC shall store collector 
+metadata that consists of information based on TMDD & MS/ETMCC.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 49 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.6 Environmental Metadata Services (EMS) 
+The requirements in this section specify the services for the re trieval of environmental metada ta. The EMS receives request, ge ts 
+environmental metadata from cache, formats environmental metadata to fulfill requests and subscriptions, and sends formatted metadata back to requester. 
+ID Requirement  Source Allocation 
+- EMS Comment Criticality
+D-062 The Clarus  system shall 
+disseminate environmental metadata in response to polling. OCS EMS   H 
+D-
+062F1 EMS shall disseminate 
+metadata in response to polling.         
+D-091 The Clarus  system shall 
+disseminate data using standard Internet protocols. OCS QEDS, 
+EMS   H 
+D-
+091F1 EMS shall disseminate 
+metadata using standard Internet protocols.         
+F-213 The Clarus  system shall allow 
+access to new surface transportation related observed environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, QEDS, CAS, EMC, EMS, DOG Access could only be provided when 
+new data sources are established and available. L 
+F-213F1 The Clarus  system shall allow 
+new EMS to be implemented that disseminate new observation types to be implemented as they become available.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 50 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- EMS Comment Criticality
+F-401 The Clarus  system shall be 
+able to provide sensor equipment metadata in response to a request. OCS EMS Subject to data sharing agreements. H 
+F-401F1 EMS shall be able to provide 
+sensor equipment metadata in response to a request.         
+F-501 The Clarus  system shall 
+minimize the time for data dissemination. MHI QEDS, 
+EMS   H 
+F-501F1 EMS shall respond to queries 
+for metadata within five minutes.     Related to I-016, F-222.   
+F-905 The Clarus  system shall log 
+data transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-905F1 EMS shall log metadata 
+transactions.         
+H-120 The Clarus  system shall 
+acquire, process, and disseminate environmental metadata. ConOps §3.3 CAS, 
+EMC, EMS, CAUI Roll up of H-121, H-122, H-123, H-
+201, which have been deprecated.   
+H-
+120F1 The EMS shall accept source 
+queries that consist of a list of Clarus  contributors.         
+H-
+120F2 The EMS shall accept source 
+queries that consist of a list of 
+Clarus  contributors including 
+station identifier.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 51 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- EMS Comment Criticality
+H-
+120F3 The EMS shall accept location 
+queries based on a bounding latitude/longitude coordinate pair.         
+H-
+120F4 The EMS shall accept location 
+queries based on latitude/longitude  location and 
+radius. Task Force    
+I-016 The Clarus  system shall 
+transfer data as efficiently as possible. Inferred from ConOps 
+§3.2 CS, EMS, 
+QEDS, SS Related to F-501, F-222. H 
+I-016F1 EMS shall transfer data 
+concurrently.         
+I-017 The Clarus  system shall 
+employ industry standards to minimize implementation impact to users and providers. Inferred from ConOps 
+§4.1 CS, QEDS, 
+EMS “Standards” in this context refer to 
+the environmental data standards in common use among Clarus  
+stakeholders.  H 
+I-017F1 EMS shall be able to distribute 
+metadata in a comma separated value ASCII format.         
+I-023 The Clarus  system shall 
+respond to queries for environmental metadata from the available metadata. MHI     H 
+I-023F1 EMS responses shall include 
+metadata that meets the requested metadata query filtering specifications.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 52 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- EMS Comment Criticality
+I-023F2 EMS shall respond to queries 
+returning no results with a message stating that no results matching that query are available. Task Force    
+P-025 The Clarus  system shall 
+respond to a request for information within five minutes. MHI QEDS, 
+EMS Related to F-501. H 
+P-025F1 The EMS shall respond to a 
+request for metadata within five minutes.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 53 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.7  Qualified Environmental Data (QEDC) 
+The requirements in this section specify th e storage of qualified environmental data . The QEDC receives environmental data 
+from the Collector Services (CS), stores qualified environmental data, sends environm ental data to Quality Checking Services 
+(QCS), receives quality checked  environmental data from QCS, receives requests from the Qualified Environmental Data 
+Services (QEDS), and sends qualified envi ronmental data in response to Qualified Environmental Data Services’ request.  
+ID Requirement  Source Allocation 
+- QEDC Comment Criticality
+F-111 The Clarus  system shall 
+provide environmental data quality flags. OCS QChS, 
+CAUI, QEDC   H 
+F-111I1 The QEDC shall keep the 
+results of each quality test for each observation for the life of the observation.         
+F-213 The Clarus  system shall 
+allow access to new surface transportation related observed environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, QEDS, CAS, EMC, EMS, DOG Access could only be provided when new 
+data sources are establ ished and available. L 
+F-213I1 The QEDC shall be 
+configurable to allow new 
+observation types to be 
+implemented as they become available.         
+F-521 The Clarus  system shall 
+maintain a dynamic library of data for at least seven days. Task Force review QEDC   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 54 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- QEDC Comment Criticality
+F-521I1 The QEDC shall maintain 
+observations and their associated quality flags for seven days.         
+H-011 The Clarus  system baseline 
+data types shall be defined by the NTCIP ESS 1204 standard. ConOps §3.3 (Table 
+2) CS, QEDC, 
+QEDS Version 02.20 was accepted as a 
+recommended standard by the NTCIP Joint Committee in March 2005.  See www.ntcip.org/library/documents. H 
+H-011I1 The QEDC observation types 
+shall be defined by NTCIP ESS 1204.         
+I-021 The Clarus  system shall 
+allow service providers to select specific desired data sets. ConOps §3.5.1.4 QEDS, 
+QEDC   H 
+I-021I1 The QEDC shall support 
+queries for its observations.         
+I-022 The Clarus  system shall 
+respond to queries for environmental data from the 
+available data. MHI QEDS, 
+QEDC   H 
+I-022I1 The QEDC shall support 
+queries against all of its available observation datasets.         
+P-013 The Clarus  system shall 
+support 470 million current observations. MHI QEDC 4.7 million road miles in North America; 
+approximately 100 environmental parameters for a reporting location (based on NTCIP 1204). M 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 55 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation 
+- QEDC Comment Criticality
+P-013I1 The QEDC combined from 
+all available Clarus  hosts 
+shall support 470 million current observations.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 56 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.8 Qualified Environmental Data Services (QEDS) 
+The requirements in this section specify the means of disseminating qualified environmental data. In all requirements where it 
+applies, data is to be disseminated only in accordance with th e data sharing agreements. The QEDS receive requests, get quality  
+checked environmental data from cache, format quality checked  environmental data to fulfill requests and subscriptions, and 
+sends formatted environmental data back to requester. 
+ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+D-051 The Clarus  system shall 
+disseminate data in 
+response to a scheduled 
+request. OCS QEDS, SS   H 
+D-051J1 QEDS shall disseminate 
+data in response to a scheduled environmental data request.         
+D-061 The Clarus  system shall 
+disseminate environmental data in response to polling. OCS QEDS    H 
+D-061J1 QEDS shall disseminate 
+data in response to an immediate environmental data request.         
+D-071 The Clarus  system shall 
+disseminate data in response to a change notification request. OCS QEDS   H 
+D-071J1 QEDS shall disseminate 
+data in response to a change notification request.         
+D-081 The Clarus  system shall be 
+able to notify subscribers when data sets become available. OCS QEDS   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 57 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+D-081J1 QEDS shall disseminate 
+environmental data to subscribers when datasets fulfilling a subscription query become available.         
+D-081J2 QEDS shall be able to 
+disseminate environmental data to contributor subscribers when datasets fulfilling a subscription query applying threshold filters become available.     
+D-091 The Clarus  system shall 
+disseminate data using standard Internet protocols. OCS QEDS, 
+EMS   H 
+D-091J1 QEDS system shall 
+disseminate environmental data using standard Internet protocols.         
+F-100 The Clarus  system shall 
+collect, quality check, and disseminate environmental data. ConOps §1 CS, QChS, 
+QEDS, CAUI “Environmental data” includes all NTCIP 
+1204 data (summarized in Table 1). H 
+F-100J1 QEDS shall disseminate 
+environmental data.         
+F-100J2 QEDS shall be able to 
+disseminate environmental data in English units.     
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 58 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+F-115 The Clarus  system shall 
+provide notification of data quality conditions to data contributors. ConOps §2.4 QChS, 
+QEDS A “data contributor” in this context could 
+ultimately be a State DOT maintenance engineer or traffic manager. H 
+F-115J1 The observation quality 
+flags shall be used to determine data quality condition notifications.         
+F-115J2 QEDS shall provide quality 
+checking statistics to data contributors. Task Force  Functionality may be similar to that provided 
+by MADIS and MesoWest.  
+F-140 The Clarus  system shall 
+enable quality managers to review which quality checks passed or failed. OCS    New high-level requirement. H 
+F-140J1 QEDS shall enable quality 
+managers to review which quality checks passed or failed.         
+F-213 The Clarus  system shall 
+allow access to new surface transportation related observed environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, QEDS, CAS, EMC, EMS, DOG Access could only be provided when new data 
+sources are established and available. L 
+F-213J1 QEDS shall be able to 
+disseminate new observation types as they become available.         
+F-219 The Clarus  system shall 
+disseminate NWS watches, warnings, and advisories. Task Force review QEDS New. Split from F-218. M 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 59 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+F-219J1 QEDS shall be able to 
+disseminate NWS watches, warnings, and advisories.         
+F-501 The Clarus  system shall 
+minimize the time for data dissemination. MHI QEDS, 
+EMS   H 
+F-501J1 QEDS shall respond to 
+environmental data queries within one minute.     Related to I-016, F-222.   
+F-505 The Clarus  system shall be 
+able to disseminate data based on spatial queries. ConOps §3.4.2 QEDS Defining this as  "spatial" allows coverage of 
+custom regions. H 
+F-505J1 QEDS shall be able to 
+disseminate data based on spatial queries.         
+F-811 The Clarus  system shall be 
+able to restrict 
+environmental data publication based on source. MHI & ConOps 
+§4.5 QEDS, 
+CAS Use MADIS as a template (ConOps §3.6). H 
+F-811J1 QEDS shall be able to 
+determine if an observation can be disseminated.         
+F-905 The Clarus  system shall log 
+data transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-905J1 QEDS shall log their 
+activities.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 60 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+H-011 The Clarus  system baseline 
+data types shall be defined by the NTCIP ESS 1204 standard. ConOps §3.3 
+(Table 2) CS, QEDC, 
+QEDS Version 02.20 was accepted as a 
+recommended standard by the NTCIP Joint Committee in March 2005.  See www.ntcip.org/library/documents. H 
+H-011J1 QEDS shall disseminate 
+environmental data types defined by NTCIP 1204.         
+H-012 The Clarus  system data 
+definitions shall be consistent with the ITE TM 1.03 standard, Functional Level Traffic Management Data Dictionary (TMDD). Task Force review CS, QEDS   H 
+H-012J1 QEDS shall disseminate 
+data with descriptions that conform to the TMDD.         
+H-020 The Clarus  system shall 
+acquire, process, and disseminate environmental 
+data. ConOps §2.1  CS, QChS, 
+QEDS Roll up of H-021, H-022, H-023, which were 
+deprecated. H 
+H-301 The Clarus  system shall be 
+able to acquire, process, and disseminate environmental data from across North America. ConOps §3.4.2, 
+amended in Task Force review CS, QChS, 
+QEDS North America in this context includes the 
+United States, it territories, Canada, and Mexico H 
+H-301J1 QEDS shall be able to 
+disseminate environmental data collected from across North America.         
+I-016 The Clarus  system shall 
+transfer data as efficiently as possible. Inferred from 
+ConOps §3.2 CS, EMS, 
+QEDS, SS Related to F-501, F-222. H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 61 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+I-016J1 QEDS shall transfer data 
+concurrently.         
+I-017 The Clarus  system shall 
+employ industry standards to minimize implementation impact to users and providers. Inferred from 
+ConOps §4.1 CS, QEDS, 
+EMS “Standards” in this context refer to the 
+environmental data standards in common use among Clarus  stakeholders.  H 
+I-017J1 QEDS shall be able to 
+disseminate environmental data in netCDF version 3.6 format.         
+I-017J2 QEDS shall be able to 
+disseminate environmental data in HDF version 5 format.         
+I-017J3 QEDS shall be able to 
+disseminate environmental data in CMML version 2 format.         
+I-017J4 QEDS shall be able to 
+disseminate environmental data in comma separated value ASCII format.         
+I-021 The Clarus  system shall 
+allow service providers to select specific desired datasets. ConOps §3.5.1.4 QEDS, 
+QEDC   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 62 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+I-021J1 QEDS shall respond to 
+environmental data queries selecting specific desired datasets.         
+I-022 The Clarus  system shall 
+respond to queries for environmental data from the available data. MHI QEDS, 
+QEDC   H 
+I-022J1 QEDS shall enable users to 
+request environmental data from among the available output formats.         
+I-022J2 QEDS shall respond to 
+queries returning no results with a message stating that no results matching that query are available. Task Force    
+I-025 The Clarus  system shall 
+enable environmental data queries by timestamp. ConOps §3.5.1.4     H 
+I-025J1 QEDS shall accept 
+timestamp queries based on a single timestamp range.         
+I-026 The Clarus  system shall 
+enable environmental data queries by location reference. ConOps §3.5.1.4     H 
+I-026J1 QEDS shall accept location 
+queries based on a bounding latitude/longitude coordinate pair.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 63 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+I-026J2 QEDS shall accept location 
+queries based on a latitude/longitude location and radius.         
+I-027 The Clarus  system shall 
+enable environmental data queries by quality. ConOps §3.5.1.4     H 
+I-027J1 QEDS shall accept quality 
+flag queries based on a range of quality flag values.        
+I-028 The Clarus  system shall 
+enable environmental data queries by source. MHI     H 
+I-028J1 QEDS shall accept source 
+queries that consist of a list of Clarus  contributors.         
+I-028J2 QEDS shall accept source 
+queries that are a list of Clarus  contributors 
+combined with a station identifier.         
+I-033 The Clarus  system shall 
+allow users to create a data subscription request. ConOps §4.5     H 
+I-033J1 QEDS shall be able to 
+accept a subscription 
+request.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 64 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+I-033J2 QEDS shall accept data 
+subscriptions that include an environmental data request and the publishing trigger.         
+I-033J3 QEDS shall be able to 
+accept subscription requests with triggers based on a schedule.         
+I-033J4 QEDS shall be able to 
+accept subscription requests with triggers based on quality flag state changes.         
+I-033J5 QEDS shall disseminate 
+subscription responses to the originating request address by default.         
+I-033J6 QEDS shall disseminate 
+subscription responses to a specified return address.         
+I-033J7 QEDS shall uniquely 
+identify environmental data subscriptions.         
+I-033J8 QEDS shall automatically 
+delete a subscription when the triggering event will not occur again and no more 
+responses are possible.         
+P-024 The Clarus  system shall be 
+able to publish new data within twenty minutes of data receipt. ConOps §3.2 (Fig. 
+7) QChS, 
+QEDS   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 65 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QEDS Comment Criticality 
+P-024J1 QEDS shall disseminate 
+subscription responses within twenty minutes of new data becoming available.         
+P-025 The Clarus  system shall 
+respond to a request for information within one minute. MHI QEDS, 
+EMS Related to F-501. H 
+P-025J1 QEDS shall respond to an 
+environmental data request within one minute.         
+P-031 The Clarus  system shall be 
+able to handle three hundred simultaneous requests for environmental data. MHI QEDS Estimated that half  of the concurrent users 
+may be requesting data at any one time. H 
+P-031J1 QEDS shall be able to 
+respond to three hundred simultaneous queries.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 66 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.9 Quality Checking Services (QChS) 
+The requirements in this section specify the services needed for quality checking. The QChS r eceive environmental data from 
+qualified environmental data cache, execute multiple methods to quality check the environmental data, apply quality flags, and send quality checked environmental data to the Qualified Environm ental Data Cache (QEDC) with its associated quality flags. 
+ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-100 The Clarus  system shall 
+collect, quality check, and disseminate environmental data. ConOps §1 CS, QChS, 
+QEDS, CAUI “Environmental data” includes all NTCIP 
+1204 data (summarized in Table 1). H 
+F-100H1 The QChS shall quality 
+check environmental data.         
+F-101 The Clarus  system shall 
+implement quality checking processes as soon as data become available. ConOps §2.4 QChS, SS, 
+CAS   H 
+F-101H1 QChS shall be able to be 
+configured individually.         
+F-101H2 QChS processing order 
+shall be able to be configured.         
+F-101H3 QChS processing shall 
+commence when new data 
+arrives but no less 
+frequently than the scheduled interval.         
+F-111 The Clarus  system shall 
+provide environmental data quality flags. OCS QChS, 
+CAUI, QEDC   H 
+F-111H1 Each QChS shall produce a 
+unique quality flag value.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 67 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-111H2 The QChS shall be able to 
+indicate a numeric confidence value.         
+F-115 The Clarus  system shall 
+provide notification of data quality conditions to data contributors. ConOps §2.4 QChS, 
+QEDS A “data contributor” could be a State DOT 
+maintenance engineer or traffic manager. H 
+F-115H1 A QChS shall evaluate data 
+quality conditions.         
+F-121 The Clarus  system shall 
+detect out of range values. ConOps §3.5.1.4 QChS Examples – se nsor range tests and climates 
+tests.  H 
+F-121H1 QChS algorithms shall use 
+sensor range metadata for range checking bounds.        
+F-121H2 QChS algorithms shall use 
+climate records for range checking bounds.        
+F-121H3 QChS algorithms shall be 
+able to use monthly climate extremes for range checking bounds.     
+F-125 The Clarus  system shall 
+not modify original observations. OCS QChS   H 
+F-125H1 QChS shall apply separate, 
+independent quality flags that do not modify the observation.         
+F-141 The Clarus  system shall 
+allow human quality checks of observations. OCS CAUI, 
+QChS Changed from “The Clarus  system shall 
+allow human intervention to override automatically applied quality assessment.” Example – manual quality test. M 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 68 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-141H1 QChS shall implement a 
+manual override to set quality flags.         
+F-151 The Clarus  system shall 
+record the methods applied when deriving quality checking information. MHI QChS, CAS   H 
+F-151H1 QChS shall indicate when 
+a quality check has been performed.         
+F-155 The Clarus  system shall be 
+able to implement quality checking rules for each environmental parameter. ConOps §3.5.1.4 QChS, 
+CAS, CAUI Example – variable-specific tests. H 
+F-155H1 QChS shall be able to 
+implement quality checking rules for a specific environmental 
+parameter.         
+F-161 The Clarus  system shall be 
+able to implement quality checking rules for specific environmental situations. ConOps §3.5.1.4 QChS, CAS The rules for setting quality flags on 
+environmental data elements may themselves depend on other environmental data. For example, stormy conditions may allow more spatial and temporal variability in wind speed observations than under fair weather conditions. H 
+F-161H1 QChS shall be able to 
+implement quality checking rules for specific environmental situations.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 69 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-162 The Clarus  system shall be 
+able to implement quality checking spatial tests using available data. OCS    New requirement. Available data could be 
+from adjacent environm ental sensor stations 
+and ASOS. Examples – Barnes spatial test and optimal interpolation spatial test. H 
+F-162H1 QChS shall be able to 
+implement quality checking spatial tests using available data.     Available data could be from adjacent 
+environmental sensor stations and ASOS.   
+F-163 The Clarus  system shall be 
+able to implement quality checking rules specific to observation locations. Task Force review QChS, CAS Quality checking rules may vary from 
+region to region. H 
+F-163H1 QChS shall be able to 
+implement different quality checking rules specific to regional weather. 
+        
+F-165 The Clarus  system shall be 
+able to base its quality 
+checking process on values from multiple observations.ConOps §3.5.1.4   Example – variable-specific and like 
+instrument tests. H 
+F-165H1 QChS shall be able to flag 
+observations based on more than one observation type.         
+F-166 The Clarus  system shall be 
+able to base its quality checking process on values distributed in time. OCS     New high-level requirement. Example – 
+step tests and persistence tests. H 
+F-166H1 QChS shall be able to base 
+its quality checking process on values distributed in time.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 70 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-171 The Clarus  system shall be 
+able to base its quality checking process on historical environmental data. Inferred from 
+ConOps §3.5.1.4 QChS, CAS See F-121. H 
+F-171H1 QChS shall be able to use 
+historical environmental data in their quality checking algorithms.         
+F-175 The Clarus  system shall be 
+able to use multiple algorithms for its quality checking process. Inferred from 
+ConOps §4.3 QChS, CAS Multiple methods or comparisons may be 
+needed for a given observation. M 
+F-175H1 QChS shall be 
+implemented for each defined standard quality checking algorithm.         
+F-213 The Clarus  system shall 
+allow access to new 
+surface transportation related observed environmental data. ConOps §1, 2.4, 3.1 CS, QChS, 
+QEDC, 
+QEDS, CAS, EMC, EMS, DOG Access could only be provided when new 
+data sources are establ ished and available. L 
+F-213H1 QChS shall be 
+implemented to quality check new observation types as they become available.         
+F-223 The Clarus  system shall 
+process data as they are received. ConOps §3.4.3 CS,QChS   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 71 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+F-223H1 QChS shall apply quality 
+flags to data as they are received.         
+F-905 The Clarus  system shall 
+log data transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-905H1 QChS shall log quality 
+checking activity.         
+H-020 The Clarus  system shall 
+acquire, process, and disseminate environmental data.  ConOps §2.1 CS, QChS, 
+QEDS Roll up of H-021, H-022, H-023, which 
+were deprecated.  H 
+H-301 The Clarus  system shall be 
+able to acquire, process, and disseminate environmental data from 
+across North America. ConOps §3.4.2, 
+amended in Task Force review CS, QChS, 
+QEDS North America in this context includes the 
+United States, it territories, Canada, and Mexico H 
+H-
+301H1 QChS shall process 
+environmental data from across North America.         
+P-023 The Clarus  system shall be 
+able to complete an automated quality checking check of environmental data within ten seconds of data receipt. OCS QChS   H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 72 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation - 
+QChS Comment Criticality 
+P-023H1 A QChS shall be able to 
+complete an automated quality check within ten seconds of when data is available for checking.         
+P-024 The Clarus  system shall be 
+able to publish new data within twenty minutes of data receipt. ConOps §3.2 (Fig. 
+7) QChS, 
+QEDS   H 
+P-024H1 All QChS shall be 
+completed within twenty minutes of data being available for checking.     A goal of 5 minutes was established at the 
+task force review.   
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 73 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.10 Schedule Service (SS) 
+The requirements in this section specify the scheduling of th e collector services and quality  checking services. The SS schedul es 
+input for environmental data from collect ors and contributors, schedules Quality Checking Services (QCS), and schedules 
+dissemination of qualified environmental da ta and metadata based on subscriptions. 
+ID Requirement  Source Allocation 
+- SS Comment Criticality
+D-051 The Clarus  system shall 
+disseminate data in response to a scheduled request. OCS QEDS, SS   H 
+D-
+051K1 The SS shall be able to initiate 
+a QEDS response.         
+F-101 The Clarus  system shall 
+implement quality checking processes as soon as data become available. ConOps §2.4 QChS, SS, 
+CAS   H 
+F-
+101K1 The SS shall be able to initiate 
+QChS.         
+F-905 The Clarus  system shall log 
+data transactions. MHI CS, QEDS, 
+EMS, QChS, CAS, SS, DOG   H 
+F-
+905K1 The SS shall record when it 
+initiates actions.         
+I-016 The Clarus  system shall 
+transfer data as efficiently as possible. Inferred from ConOps 
+§3.2 CS, EMS, 
+QEDS, SS Related to F-501, F-222. H 
+I-016K1 The SS shall be able to store 
+event schedules.         
+I-016K2 The SS shall be able to initiate 
+CS.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 74 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ 4.11 Program Requirements 
+The requirements in this section sp ecify the distribution, performance,  and organizational requirements. 
+ID Requirement  Source Allocation Comment Criticality
+D-011 The Clarus  system shall be 
+able to be hosted at one or more physical locations. MHI     H 
+D-
+011A1 The Clarus  system shall 
+track its constituent hosts.         
+D-
+011A2 The Clarus  system shall 
+allocate each collector to a specific host.         
+D-
+011A3 The Clarus  system shall 
+allocate each contributor to a specific host.         
+D-
+011A4 Clarus  hosts shall be able to 
+aggregate environmental data from other Clarus  
+hosts.         
+D-
+011A5 Clarus  hosts shall be able to 
+distribute queries to other Clarus  hosts.         
+D-021 The Clarus  system shall use 
+hardware that implements industry accepted standard interfaces. MHI     H 
+D-031 The Clarus  system shall use 
+software that implements industry accepted standard 
+interfaces. MHI     H 
+D-041 The Clarus  system shall be 
+able to operate on redundant hardware. ConOps §3.4.2     H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 75 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+D-101 All HTML coding shall 
+meet FHWA requirements for web sites. Contract   FHWA requirements for HTML 
+coding can be found at http://www.tfhrc.gov/qkref/qrg08.htmH 
+D-111 The Clarus  system shall 
+support modular components. OCS     H 
+D-121 The Clarus  system shall be 
+able to use latitude, longitude, and elevation coordinates to specify location to the nearest three feet. MHI     H 
+D-126 The Clarus  system shall use 
+Coordinated Universal Time (UTC) for all timestamps. OCS     H 
+X-801 The Clarus  program shall 
+alert users to system modifications. OCS   Changed from F-801. H 
+P-011 The Clarus  system shall be 
+able to publish environmental data at three times the volume rate that it collects it. MHI     M 
+P-041 The Clarus  system shall be 
+able to support six hundred concurrent users. MHI   An estimate of the number of 
+concurrent potential users of the Clarus  system: one tenth of the 
+registered users at any one time. H 
+P-042 The Clarus  system shall be 
+able to support six thousand registered users. MHI   An estimate of the number of 
+individual user s: a pool of 250 
+weather service providers, ten per provider; 100 governmental agencies, 25 per agency; and 1000 other users. H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 76 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+Q-011 The Clarus  system shall be 
+able to mitigate communication denial-of-service attacks. MHI     H 
+Q-013 The Clarus  system shall be 
+able to respond to 95% of all requests for environmental data 95% of the time. MHI     H 
+X-201 The Clarus  program shall 
+establish data sharing agreements with all participating sources of environmental data. Task Force review     H 
+X-
+20110 The Clarus  program shall 
+identify categories of recipients for dissemination of data. Task Force    
+X-
+20111 The Clarus  program shall 
+determine the need for bilateral Clarus  Data 
+Sharing Agreements with countries, agencies, states, and regions.     The U.S. Department of State will 
+facilitate the review of international agreements if it is determined that a Circular 175 process is required.  [See Case-Zablocki Act of 1977]   
+X-
+20112 The authorized 
+representative(s) of the contributors shall be identified.      Both the signatories of the Clarus  
+Data Sharing Agreement and the positions/organizations responsible for Quality Control (QC)/Quality Assurance (QA) shall be named.   
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 77 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-
+20113 The contributors shall 
+identify and define the types of data and information that will be included in the Clarus Data Sharing 
+Agreement.     Examples of data and information 
+include surface condition data, atmospheric condition data,weather hazards reports and associated metadata.   
+X-
+20114 The contributors shall 
+identify the intended use of 
+their shared data and 
+information.        
+X-
+20115 The contributors shall 
+identify the categories of recipients of their shared data and information.         
+X-
+20116 The contributors shall define 
+the units of measurements of their shared data and information.     Identification markers are needed for 
+qualitative data and information.   
+X-
+20118 The Clarus  program shall 
+determine how it will provide data and information to contributors.        
+X-
+20119 The Clarus  program shall 
+provide data and information statistics on its operation to contributors.         
+X-
+20120 The contributors shall 
+inform the Clarus  program 
+of changes in authorized personnel/offices. Task Force    
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 78 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-
+20121 The Clarus  program shall 
+inform contributors of the "acceptance and use" of their data and information.         
+X-
+20123 The Clarus  Initiative 
+Management Team shall undertake joint communications activities and products that will enhance public understanding and dissemination of contributions of the Clarus  
+program.         
+X-
+20124 The Clarus  Initiative 
+Management Team shall agree upon the activities and products that will enhance public understanding/ communication of the contribution of the Clarus  
+program.         
+X-
+20126 The contributors shall 
+inform the Clarus  program 
+of known error(s) and modifications in its data and information.         
+X-
+20127 The Clarus  program shall 
+determine its redistribution of shared data from contributors based upon Clarus  Data Sharing 
+Agreements.         
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 79 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-
+20128 The Clarus  program shall 
+report successes and failures in data and information transmission to its contributors.         
+X-
+20129 The contributors shall report 
+periods of data and information outages to the 
+Clarus  program.         
+X-
+20131 The Clarus  program shall 
+maintain information about requestors and their access to data and information.         
+X-
+20132 The Clarus  Initiative 
+Management Team shall review and amend data and information sharing and use policies.     Define policy advisement structure.   
+X-
+20133 The Clarus  Initiative 
+Management Team shall specify the general frequency of policy meetings.     Define policy advisement structure.   
+X-
+20134 The Clarus  Initiative 
+Coordinating Committee shall nominate technical expert(s) to participate on technical working groups.     Define technical advisement 
+structure.   
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 80 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-
+20135 The requestors shall adhere 
+to the intellectual property requirements of the Clarus  
+User Agreement. Task Force       
+X-
+20136 The contributors shall 
+adhere to the intellectual property requirements of the Clarus  Data Sharing 
+Agreement.         
+X-
+20139 The contributors shall have 
+the right to use the Clarus  
+system data and information for purposes delineated within the Clarus  Data 
+Sharing Agreement.         
+X-
+20140 The requestors shall have 
+the right to use the Clarus  
+system data and information for purposes delineated within the Clarus  User 
+Agreement. Task Force       
+X-
+20141 The Clarus  program shall 
+have the right to reject the use of data and information provided by the contributors when deemed appropriate.         
+X-
+20142 The Clarus  program shall 
+inform contributors of the policies, processes and procedures employed to reject data and information provided by the contributors.        
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 81 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-
+20149 The contributors shall 
+provide the Clarus  program 
+with a timely notice of their intent to change, alter, replace, or eliminate any shared data and information as specified within this Clarus  Data Sharing 
+Agreement.         
+X-
+20152 Any reference in the Clarus  
+Data Sharing Agreement to statutes, regulations and rules shall be a reference to the amended, substituted, replaced or re-enacted statute, regulations and rules.         
+X-
+20165 The Clarus  program shall 
+provide to contributors the limitation of liability for contributing environmental data and metadata. Task Force    
+X-
+20166 The Clarus  program shall 
+provide to requesters the limitation of liability for using environmental data and metadata. Task Force    
+X-205 The Clarus  program shall 
+maintain continuous 24x7 operations. OCS     H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 82 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-207 The Clarus  program shall 
+provide an environment that has uninterruptible power for the Clarus  system. MHI     H 
+X-209 The Clarus  program shall 
+provide an environment that has redundant communication for the 
+Clarus  system. MHI     H 
+X-211 The Clarus  program shall 
+provide network management tools. OCS   Network management tools can be 
+used to determine latency. H 
+X-215 The Clarus  program shall 
+provide setup support. ConOps §3.3.1 (Fig. 9)     H 
+X-221 The Clarus  program shall 
+provide for customer service. OCS     H 
+X-225 The Clarus  program shall 
+provide a trained support staff. ConOps §3.3.1     H 
+X-232 The Clarus  program shall 
+define quality checking rules for environmental observations. MHI   Specifies the rules to be implemented 
+according to F-155, F-161, F-165, F-171, and F-175. H 
+X-233 The Clarus  program shall 
+define data retention standards. MHI     H 
+X-235 The Clarus  program shall 
+provide documentation of  
+Clarus  standards. OCS   That is, the Clarus  program needs to 
+provide documentation of whatever standards it creates for its own development, deployment, management, and operations. H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 83 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-237 The Clarus  program 
+standards shall accommodate contributions of new sensor technologies to the Clarus  system. Inferred from ConOps §1     M 
+X-239 The Clarus  program 
+standards shall support multiple methods of data 
+delivery to users. Inferred from ConOps 
+§4.3     M 
+X-305 The Clarus  program shall 
+maintain a comprehensive Clarus  system test 
+environment. OCS     H 
+X-311 The Clarus  program shall 
+test all software changes in the designated test environment before deployment to production. OCS     H 
+X-315 The Clarus  program shall 
+test all hardware changes in the designated test environment before deployment to production. OCS     H 
+X-601 The Clarus  program shall 
+operate the Clarus  system 
+according to its published IT 
+Security Plan. Contract     H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 84 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-605 The Clarus  program shall 
+operate according to Government IT security requirements as outlined in OMB Circular A-130, Management of Federal Information Resources, Appendix III, Security of Federal Automated Information Resources. Contract     H 
+X-611 The Clarus  program shall 
+operate according to Government IT security requirements as outlined in the National Institute of Standards and Technology (NIST) Guidelines, Departmental Information Resource Management Manual, and associated guidelines. Contract     H 
+X-615 The Clarus  program shall 
+operate according to Government IT security requirements as outlined in 
+U.S. DOT Order 1630.2B, 
+Personnel Security Management. Contract     H 
+X-805 Weather service providers 
+shall be able to use Clarus  
+data to provide localized special weather products. ConOps §3.4.2     L 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 85 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-811 Public agency maintenance 
+and construction personnel shall be able to use the Clarus  system to obtain 
+environmental conditions. ConOps §2.5.2     L 
+X-815 Rail system personnel shall 
+be able to use the Clarus  
+system to obtain 
+environmental conditions. Inferred from ConOps 
+§2.5.7     L 
+X-821 Traffic management 
+personnel shall be able to use the Clarus  system to 
+obtain environmental conditions. Inferred from ConOps 
+§2.5.3     L 
+X-823 Transit personnel shall be 
+able to use the Clarus  
+system to obtain environmental conditions. Inferred from ConOps 
+§2.5.5     L 
+X-825 The freight community shall 
+be able to use the Clarus  
+system to obtain environmental conditions. Inferred from ConOps 
+§2.5.8     L 
+X-827 Emergency management and 
+public safety personnel shall be able to use the Clarus  
+system to obtain 
+environmental conditions. Inferred from ConOps 
+§2.5.6     L 
+X-905 The Clarus  program shall 
+maintain information about data providers. OCS     H 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 86 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ ID Requirement  Source Allocation Comment Criticality
+X-910 The Clarus  program shall 
+maintain metadata about each data provider's network. OCS     H 
+X-915 The Clarus  program shall 
+maintain information about data provider redistribution restrictions. OCS     H 
+X-921 The Clarus  program shall 
+maintain information about service providers. OCS     H 
+X-925 The Clarus  program shall 
+maintain information about service provider communications. OCS     M 
+X-931 The Clarus  program shall 
+maintain information about service provider access to data. OCS     H 
+X-935 The Clarus  program shall 
+allow potential weather element data providers to request permission to submit weather information. MHI     H 
+X-101 The Clarus  system shall 
+accept data only from sources which data sharing agreements have been established. MHI (The 
+Clarus  
+program 
+shall approve sources.) “Approved sources” are anticipated 
+to be those with wh om a data sharing 
+agreement has been established. H 
+ 
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 87 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ APPENDIX A -  DEFINITIONS, ACRONYMS, AND 
+ABBREVIATIONS 
+The following table provides definitions of  terms, acronyms, and abbreviations to 
+assist interpretation of this document. 
+Term Definition 
+ADAS ARPS Data Analysis System 
+ARPS Advanced Regional Prediction System 
+ASCII A code that represents letters, numerals, punctuation marks and control signals 
+as seven bit groups. 
+CAS Configuration and Administration Service 
+CAUI Configuration and Ad ministration User Interface 
+CCTV Closed Circuit Television 
+Clarus Initiative • Development of tools, models, decision support that leverage the Clarus  
+System 
+• End-to-End processes spanning data gathering to road weather 
+information products & services 
+• Research activities that support creation of road weather information products & services
+ 
+Clarus Program Operations and maintenance functions and personnel needed to sustain the 
+Clarus  System 
+Clarus System Tools for sharing surface we ather observations and relevant surface 
+transportation conditions 
+CMML Canadian Meteorological Markup Language  
+Collector An electronic device used to conv ert environmental sensor electrical signals 
+into environmental condition measured va lues and store them for retrieval. 
+ConOps Concept of Operations 
+Contributor A managing agency or organization that owns and/or operates a set of 
+environmental sensor collectors. 
+COTS Commercial Off-the-Shelf 
+CS Collector Services 
+DOG Watchdog 
+DOT Department of Transportation 
+DRS Detailed Systems Requirements Specification 
+DSS Decision Support System 
+DST Daylight Savings Time 
+EMC Environmental Metadata Cache 
+EMS Environmental Metadata Services 
+Environmental data In the Clarus  context, includes atmospheric, surface, and hydrologic data; 
+more specifically, it includes all data defined in NTCIP 1204 (Ref. 8). 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 88 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Term Definition 
+Environmental metadata In the Clarus  context, includes all contributor, collector, ESS, and sensor data 
+relating to environmental data. 
+ESS Environmental Sensor Station 
+External data Weather data used to assist in quality checking such as ASOS and climate 
+records 
+FHWA Federal Highway Administration 
+GPS Global Positioning System 
+HDF Hierarchical Data Format; a data file  format developed at the National Center 
+for Supercomputing Applications (NCSA) (http://hdf.ncsa.uiuc.edu/) 
+hPa hectopascal = 100 Pascals = 1 millibar  
+HTML Hypertext Markup Language 
+ICC ( Clarus ) Initiative Coordinating Committee 
+IEEE Institute of Electrical an d Electronic Engineers, Inc. 
+in-situ From Latin, “in-situ” means “in place. ” As applied to meteorological data, it 
+refers to data specific to a (fixed) point of observation. 
+IT Information Technology 
+ITE Institute of Transportation Engineers 
+ITS Intelligent Transportation Systems 
+ITS America Intelligent Transportation Society of America 
+MADIS Meteorological Assimilation Data Ingest System 
+MDSS Maintenance Decision Support System 
+metadata In common information systems use,  “metadata” is “data about data .” Within 
+the meteorological community, this use has been extended to include data 
+about objects related to weather observations. For example, location data for an ESS becomes metadata for the observation data. 
+MHI Mixon/Hill, Inc. 
+MS/ETMCC Message Set for External Traffic Management Center Communication. 
+NCSA National Cener for Supercomputing Applications 
+netCDF Network Common Data Form is a binary data format standard for exchanging 
+scientific data 
+NIST National Institute of Standards and Technology 
+NOAA National Oceanic and Atmospheric Administration 
+NTCIP National Transportation Communications for ITS Protocol 
+NWS National Weather Service 
+OCS Oklahoma Climat ological Survey 
+OMB Office of Management and Budget 
+Open Using interfaces that are non-proprietary and broadly supported within the 
+information technology industry. 
+PMP Project Management Plan 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 89 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Term Definition 
+Polling Asking for information 
+QA Quality Assurance  
+QC Quality Control 
+QCh Quality Check or Quality Checking 
+QChS Quality Checking Services 
+QEDC Qualified Environmental Data Cache 
+QEDS Qualified Environmental Data Services 
+Quality checking The operational activities and t echniques required to ensure that quality 
+requirements have been fulfilled. 
+Quality flag An indicator of the degree to wh ich quality requirements have been fulfilled; in 
+the Clarus  context, an indicator of the reliability or usefulness of a data 
+element or dataset. 
+Quality manager Personnel charged with reviewing the quality of the environmental data. 
+Requestor The person or group requesting information from the Clarus system. 
+RUC Rapid Update Cycle 
+RWIS Road Weather Information System 
+Security groups A method of grouping users and their privileges. 
+SHEF Standard Hydrological Encoding Format 
+SS Schedule Service 
+STWDSR Surface Transportation Weathe r Decision Support Requirements 
+STWSP Surface Transportation Weather Service Provider 
+TMC Transportation Management Center 
+TMDD Traffic Management Data Dictionary 
+TOC Transportation (Traffic) Operations Center 
+TRB Transportation Research Board 
+U.S. DOT U.S. Department of Transportation 
+UTC Coordinated Universal Time 
+VII Vehicle Infrastructure Integration 
+WIST Weather Information for Surface Transportation 
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 90 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ APPENDIX B - SUPPLEMENTAL DESCRIPTION OF 
+CLARUS  QC TESTS 
+ 
+The Clarus  detailed requirements describe QC tests to be implemented as Clarus  
+standard tests. This appendix provides desc riptions of these QC test methods as a 
+means of clarifying the intended implemen tations. These descriptions should not 
+be interpreted, however, as further elabor ations of requirements or as design 
+specifications. The Clarus  system design descriptions will provide the final 
+specifications and will be subject to formal design review. 
+Manual Quality Test  
+The Clarus  manual quality test allows authorized Clarus  personnel to flag 
+particular observations as “passed” or  “failed” independent  of the automated 
+analysis. For instance, if a ne twork manager communicates to Clarus  that one of 
+its stations has a temperature bias, then that station’s temperature data can be 
+manually flagged as “failed” until the network corrects the problem. If a Clarus  
+QA meteorologist determines that suspici ous-looking snow depth data are from a 
+real, meteorological event, that station’ s snow depth can be manually flagged as 
+“passed” until the event ends. Observations that have received manual quality checks need not be run through the automated quality checks (Fiebrich and Crawford 2001). 
+Sensor Range Test 
+The Clarus  range test will flag any observation that lies outside of the pre-
+determined range threshold values as “f ailed”. The threshold values will usually 
+be determined via sensor specifications or theoretical limits (Meek and Hatfield 1994). For instance, the range for relative humidity would likely be 0 to 100%. Observations that have received range filter flags of “failed” need not be run through the automate d quality checks. 
+Climate Test 
+The Clarus  climate test will flag any observation that exceeds defined, variable-
+specific climatological ranges as “failed”  (Reek et al., 1992). Otherwise, the 
+observation will be fl agged as “passed”. The Clarus  climatological threshold 
+values will be station-specific and will be  based on either regional extremes or 
+individual station extremes (if they are available). 
+Barnes Spatial Test 
+The Clarus  Barnes spatial test will calculate an estimate for each observation 
+using a one-pass Barnes objective analys is routine (Barnes 1964, Shafer et al. 
+2000). Neighboring observations will be weig hted according to their distance 
+from the station that is being estimated: 
+Ze=w(ri)zi ∑
+w(ri)∑, 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 91 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ where Ze is the estimated value, zi are the neighboring observations, and w is the 
+weighting, based on the neighboring site’s distance to the site in question. The 
+weighting decreases exponentially with distance from the station: 
+W(ri)=e−ri2
+ko. 
+The weight function, ko, is determined by the Barnes analysis based upon the 
+mean station spacing. Th e standard deviation, σ, of the observations within the 
+radius of influence is calculated. The ra tio of the difference between the observed 
+(Zo) and estimated ( Ze) values to the analysis’ sta ndard deviation is defined as: 
+∆=Ze−Zo
+σ. 
+The Clarus  Barnes spatial test will fail a ny observation whose value differs by 
+more than three standard deviatio ns from its estimated value (i.e., ∆ > 3). 
+Otherwise, the Clarus  Barnes spatial test will pass the observation, and list the ∆ 
+value with the QC flag to indicate the c onfidence in the observation. For instance, 
+a ∆ value of 1.5 would indicate that th e observation was within 1.5 standard 
+deviations of its expected value. Furthe r analysis may indicate that the Barnes 
+spatial test should have the ability to in corporate background fields (e.g., ADAS 
+or RUC analysis from the previous hour) into the analysis to compensate for regions that have inadequate spatial or temporal coverage. 
+Optimal Interpolation Spatial Test 
+The Clarus  Optimal Interpolation spatial test will calculate an estimate for each 
+observation using a univariat e optimal-interpolation tec hnique (Belousov et al., 
+1968). Specifically, the test will use th e nearest observation in each of eight 
+directional sectors distri buted around the observati on (Miller and Benjamin, 
+1992). If the difference between the obs ervation and estimate is “small”, the 
+observation is flagged as “passed”, and the difference between the observation 
+and the estimate is listed to indicate the confidence in the observation. The threshold for “small” is a function of the expected analysis error, which is dependent on location and density of th e neighboring observations (Gandin, 1963, 
+and Miller and Benjamin, 1991). If the di fference is large, then neighboring 
+observations are successively eliminated from the analysis to determine whether the discrepancy was caused by an errone ous observation from a neighboring site. 
+If successively eliminating a neighboring station from the analysis results in a 
+value that agrees with the observation,  then the observation is flagged as 
+“passed”. The difference between the obs ervation and the estimate indicates the 
+confidence in the observation. In additi on, the suspicious neighboring observation 
+is not used in the analysis of other stations. If successive eliminations of 
+neighboring stations does not result in an  estimated value that agrees with the 
+observation, the observation is flagged as “failed”. 
+The Clarus  Optimal Interpolation spatial check will incorporate a background 
+field (e.g., ADAS or RUC analysis from th e previous hour) into the analysis to 
+compensate for regions that have inadequa te spatial or temporal coverage. Miller 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 92 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ and Benjamin (1992) found that subt racting the background field before 
+performing the analysis im proved error detection.  
+Step Test 
+The Clarus  step test will flag all observati ons whose consecutive values in time 
+exceed predefined variable-spe cific step threshold values as “failed” (Fiebrich and 
+Crawford 2001). For instance,  if a pressure observati on changes by greater than 
+10 hPa in five minutes, the observation is flagged as “failed”. As another 
+example, if a temperature observation ch anges by greater than 10 °C in five 
+minutes, the observation would be flagged as “failed”. 
+Persistence Test 
+The Clarus  persistence test will flag all observ ations whose consecutive values in 
+time remain the same for a predefined variable-specific persistence threshold value during a defined time interval as  “failed” (Oklahoma Climatological 
+Survey). For instance, if a pressure ob servation remains unchanged (to the nearest 
+pascal) for more than 30 minutes, the obs ervation would be fl agged as “failed”. 
+As another example, if a temperatur e observation remains unchanged (to the 
+nearest tenth of a °C) for more than 120 minutes, the observation would be 
+flagged as “failed”. 
+Like Instrument Test 
+The Clarus  like instrument test will flag a ll observations that differ from the 
+corresponding like-instrument observations by more than a predefined variable-
+specific threshold value as “failed” (Fiebrich and Craw ford 2001). For instance, if 
+the wind speed at 10 m differs from th e wind speed at 2 m by more than 5 ms-1, 
+then the observation would be flagged as “failed”. 
+Potential Temperature Test 
+The Clarus  potential temperature test will flag all temperature observations whose 
+potential temperatures fail the Clarus  Optimal Interpolation spatial test as 
+“failed”. Elevation differences will be incorporated to help model the horizontal correlation between mountain stat ions (Miller and Benjamin 1992). 
+Dew Point Temperature Test 
+The Clarus  dew point temperature test will flag all temperature and relative 
+humidity observations whose resu lting dew point values fail the Clarus  Barnes 
+spatial test or the Clarus  Optimal Interpolation spatial test as “failed” (Oklahoma 
+Climatological Survey). 
+Sea Level Pressure Test 
+The Clarus  sea level pressure test will flag all pressure observations whose 
+computed sea level pressure values fail the Clarus  Barnes spatial test or the 
+Clarus  Optimal Interpolation spatial test as “failed” (Oklahoma Climatological 
+Survey). 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 93 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Theoretical Solar Radiation Test 
+The Clarus  theoretical solar radiation test will flag all downwelling short wave 
+radiation observations whos e values exceed the theoreti cal solar radiation for the 
+site’s latitude, longitude, and day of y ear as “failed” (Okl ahoma Climatological 
+Survey). 
+Precipitation Amount Test 
+The Clarus  precipitation amount test woul d flag all precipitation amount 
+observations whose values differ from the radar-estimated precipitation amount 
+by more than a pre-determined  threshold as “failed”. The nearest or best radar to 
+use for each location would be configurable. This te chnique is still being 
+researched and is not recommended for Clarus  proof-of-concept implementation 
+(Oklahoma Climatol ogical Survey). 
+Wind Direction Test 
+The Clarus  wind direction test will function the same way as the Barnes and 
+Optimal Interpolation spatial tests do, with the exception that wind direction 
+estimates will be calculated from directional means (rather than arithmetic means). In addition, the wind direction observation will be subject to this test only if its associated wind speed observations are greater than 3 ms
+-1 (Oklahoma 
+Climatological Survey). For instance, wi nd directions with associated wind 
+speeds of 0-3 ms-1 will not be tested, because wind  direction is highly variable 
+during calm/light winds. 
+Soil Moisture Change Test 
+The Clarus  soil moisture change test will functi on similarly to the step test except 
+that different thresholds will be set for changes in moistening versus drying. For instance, the observations will be allowed to moisten more rapidly than they will 
+be allowed to dry (Oklahom a Climatological Survey 2005). 
+Soil Moisture Freeze Test 
+The Clarus  soil moisture freeze test will flag all observations whose associated 
+subsurface temperatures are below freezi ng as “failed”. Most soil moisture 
+sensors do not operate correctly when the soil is frozen (Okl ahoma Climatological 
+Survey 2005). 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 94 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+  
+Variable  Manual 
+Flag Sensor 
+Range Climate 
+Check Barnes 
+Spatial OI 
+Spatial Persistence Step Like 
+Instrument Variable 
+Specific 
+Air Temperature X X X X X X X X X 
+Atmospheric Pressure X X X   X X  X 
+Humidity X X X X X X X  X 
+Long Wave Radiation X X X X  X X   
+Short Wave Radiation X X X X  X X  X 
+Precipitation Occurrence X X    X  X  
+Precipitation Type X X X     X  
+Precipitation Rate X X X   X X X  
+Precipitation Amount X X X    X X  
+Visibility X X X X  X X   
+Wind Speed X X X X X X X X  
+Wind Direction X X X   X X  X 
+Wind Gust X X X X  X X X  
+Pavement Condition X X X X      
+Pavement Temperature X X X X  X X X  
+Pavement Chem Soln Freeze Pt X X X X      
+Pavement Ice Thickness X X X X  X X   
+Snow Depth X X X   X X   
+Water Depth, Road X X X   X X   
+Water Depth, Stream X X X   X X   
+Subsurface Temperature X X X X  X X X  
+Subsurface Moisture X X X      X 
+Air Quality Condition X X X       
+Bio-Hazards X X X       
+Camera Imagery X X        
+ 
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 95 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Notes 
+Variable Comments 
+Air Temperature Like Instrument only if air temperat ure at another level is available.  
+Variable specific tests include potentia l temperature and dew point tests. 
+Atmospheric Pressure Variable specific test includes sea level pressure test. 
+Humidity Variable specific te st includes dew point test. 
+Long Wave Radiation Spatial would be possible only for net and/or LW down 
+Short Wave Radiation Variable specific test  includes theoretical solar radiation test. 
+Precipitation Occurrence Like instrument te st with precipitation rate observations.  
+Precipitation Type Like instrument test with precipitation occurrence observations. 
+Precipitation Rate Like instrument test with precipitation occurrence observations.  
+Precipitation Amount Like instrument test with precipitation occurrence observations.  
+Visibility  
+Wind Speed Like instrument only if wind speed at another level is available. 
+Wind Direction Variable specific test  includes the wind direction test. 
+Wind Gust Like instrument with wind speed observations. 
+Pavement Condition  
+Pavement Temperature Like instrument tests with air temperature and subsurface te mperature (if available) 
+Pavement Chem Soln Freeze Pt  
+Pavement Ice Thickness  
+Snow Depth  
+Water Depth, Road  
+Water Depth, Stream  
+Subsurface Temperature Intercomparison tests with air te mperature and other subsurface  
+temperatures (if available) 
+Subsurface Moisture Variable specific tests incl ude soil moisture change and soil moisture freeze tests. 
+Air Quality Condition  
+Bio-Hazards  
+Camera Imagery  
+Clarus Weather System Design 
+ Detailed System Requirements Specification 
+ 04037-rq301srs0100 
+ 
+Page 96 Copyright © 2005 Mixon/Hill, Inc.
+All rights reserved.
+ Appendix B References 
+Barnes, S. L., 1964: A technique for ma ximizing details in numerical weather 
+map analysis. J. Appl. Meteor ., 3, 396-409. 
+Belousov, S. L., L. S. Gandin, and S. A. Mashkovich, 1968 : Computer Processing 
+of Current Meteorological Data . Ed. V. Bugaev. Meteorological 
+Translation No. 18, 1972, Atmospheric Environment Service, Downsview, 
+Ontario, Canada, 227 pp. 
+Fiebrich, C. A., and K. C. Crawford, 2001: The impact of unique meteorological 
+phenomena detected by the Oklaho ma Mesonet and ARS Micronet on 
+automated quality checking. Bull. Amer. Meteor. Soc ., 82, 2173-2187. 
+Gandin, L. S., 1963: Objective Anal ysis of Meteorological Fields. 
+Gidrometeorologicheskoe Izdatel’stvo.  Translated from Russian, 1965, 
+Israel Program for Scien tific Translations, 242 pp. 
+Meek, D. W., and J. L. Hatfield, 1994: Data quality checking for single station 
+meteorological databases. Agric. Forest Meteor ., 69, 85-109. 
+Miller, P. A., and S. G. Benjamin, 1991:  Horizontal quality checking for a real-
+time three-hourly assimilation system c onfigured in isentropic coordinates. 
+Preprints, Ninth Conf. Nu merical Weather Prediction,  Denver, Amer. 
+Meteor. Soc., 32-36. 
+Miller, P. A., and S. G. Benjamin, 1992:  A system for the hourly assimilation of 
+surface observations in mountainous and flat terrain. Mon. Wea. Rev ., 120, 
+2342-2359. 
+Oklahoma Climatological Survey, 2005: Estimates of soil moisture from the 
+Oklahoma Mesonet, Version 3.0, 19 pp. 
+Reek, T., S. R. Doty, and T. W. Owen, 1992: A deterministic approach to the 
+validation of historical daily temper ature and precipitation data from the 
+cooperative network. Bull. Amer. Meteor. Soc.,  73, 753-762. 
+Shafer, M. A., C. A. Fiebrich, D. S. Arndt , S. E. Fredrickson, and T. W. Hughes, 
+2000: Quality assurance procedures in the Oklahoma Mesonetwork. J. 
+Atmos. Oceanic Technol ., 17, 474-494. 

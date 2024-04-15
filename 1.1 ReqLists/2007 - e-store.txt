@@ -1,0 +1,112 @@
+3.1.1.1	The system shall display all the products that can be configured.
+3.1.1.2	The system shall allow user to select the product to configure.
+3.1.1.3	The system shall display all the available components of the product to configure
+3.1.1.4	The system shall enable user to add one or more component to the configuration.
+3.1.1.5	The system shall notify the user about any conflict in the current configuration.
+3.1.1.6	The system shall allow user to update the configuration to resolve conflict in the current configuration.
+3.1.1.7	The system shall allow user to confirm the completion of current configuration
+3.1.2.1	The system shall display detailed information of the selected products.
+3.1.2.2	The system shall provide browsing options to see product details.
+3.1.3.1	The system shall display detailed product categorization to the user.
+3.1.4.1	The system shall enable user to enter the search text on the screen.
+3.1.4.2	The system shall enable user to select multiple options on the screen to search.
+3.1.4.3	The system shall display all the matching products based on the search.
+3.1.4.4	The system shall display only 10 matching result on the current screen.
+3.1.4.5	The system shall enable user to navigate between the search results.
+3.1.4.6	The system shall notify the user when no matching product is found on the search.
+3.1.5.1	The system shall allow user to create profile and set his credential.
+3.1.5.2	The system shall authenticate user credentials to view the profile.
+3.1.5.3	The system shall allow user to update the profile information.
+3.1.6.1	The system shall display both the active and completed order history in the customer profile.
+3.1.6.2	The system shall allow user to select the order from the order history.
+3.1.6.3	The system shall display the detailed information about the selected order.
+3.1.6.4	The system shall display the most frequently searched items by the user in the profile.
+3.1.6.5	The system shall allow user to register for newsletters and surveys in the profile.
+3.1.7.1	The system shall provide online help, FAQ’s customer support, and sitemap options for customer support.
+3.1.7.2	The system shall allow user to select the support type he wants.
+3.1.7.3	The system shall allow user to enter the customer and product information for the support.
+3.1.7.4	The system shall display the customer support contact numbers on the screen.
+3.1.7.5	The system shall allow user to enter the contact number for support personnel to call.
+3.1.7.6	The system shall display the online help upon request.
+3.1.7.7	The system shall display the FAQ’s upon request.
+3.1.8.1	The system shall maintain customer email information as a required part of customer profile.
+3.1.8.2	The system shall send an order confirmation to the user through email.
+3.1.9.1	The system shall display detailed invoice for current order once it is confirmed.
+3.1.9.2	The system shall optionally allow user to print the invoice.
+3.1.10.1	The system shall provide shopping cart during online purchase.
+3.1.10.2	The system shall allow user to add/remove products in the shopping cart.
+3.1.11.1	The system shall display different shipping options provided by shipping department.
+3.1.11.2	The system shall enable user to select the shipping method during payment process.
+3.1.11.3	The system shall display the shipping charges.
+3.1.11.4	The system shall display tentative duration for shipping.
+3.1.12.1	The system shall allow user to enter the order information for tracking.
+3.1.12.2	The system shall display the current tracking information about the order.
+3.1.13.1	The system shall calculate tax for the order.
+3.1.13.2	The system shall display tax information for the order.
+3.1.14.1	The system shall display available payment methods for payment.
+3.1.14.2	The system shall allow user to select the payment method for order.
+3.1.15.1	The system shall display the orders that are eligible to change.
+3.1.15.2	The system shall allow user to select the order to be changed.
+3.1.15.3	The system shall allow user to cancel the order.
+3.1.15.4	The system shall allow user to change shipping, payment method.
+3.1.15.5	The system shall notify the user about any changes made to the order.
+3.1.16.1	The system shall display the reviews and ratings of each product, when it is selected.
+3.1.16.2	The system shall enable the user to enter their reviews and ratings.
+3.1.17.1	The system shall display all the available financing options.
+3.1.17.2	The system shall allow user to select the financing option.
+3.1.17.3	The system shall notify the use about the financing request.
+3.1.18.1	The system shall allow user to view detailed sitemap.
+3.1.19.1	The system shall display all the available promotions to the user.
+3.1.19.2	The system shall allow user to select available promotion.
+3.1.20.1	The system shall allow user to confirm the purchase.
+3.1.20.2	The system shall enable user to enter the payment information.
+3.2.1.1	The system shall provide a uniform look and feel between all the web pages.
+3.2.1.2	The system shall provide a digital image for each product in the product catalog.
+3.2.1.3	The system shall provide use of icons and toolbars.
+3.2.2.1	The system shall provide handicap access.
+3.2.2.2	The system shall provide multi language support.
+3.3.1.1	The system shall provide storage of all databases on redundant computers with automatic switchover.
+3.3.1.2	The system shall provide for replication of databases to off-site storage locations.
+3.3.1.3	The system shall provide RAID V Disk Stripping on all database storage disks.
+3.3.2.1	The system shall provide a contractual agreement with an internet service provider for T3 access with 99.9999% availability.
+3.3.2.2	The system shall provide a contractual agreement with an internet service provider who can provide 99.999% availability through their network facilities onto the internet.
+3.4.1	The product shall be based on web and has to be run from a web server.
+3.4.2	The product shall take initial load time depending on internet connection strength which also depends on the media from which the product is run.
+3.4.3	The performance shall depend upon hardware components of the client/customer.
+3.5.1.1	The system shall use secure sockets in all transactions that include any confidential customer information.
+3.5.1.2	The system shall automatically log out all customers after a period of inactivity.
+3.5.1.3	The system shall confirm all transactions with the customer’s web browser.
+3.5.1.4	The system shall not leave any cookies on the customer’s computer containing the user’s password.
+3.5.1.5	The system shall not leave any cookies on the customer’s computer containing any of the user’s confidential information.
+3.5.2.1	The customer’s web browser shall never display a customer’s password.  It shall always be echoed with special characters representing typed characters.
+3.5.2.2	The customer’s web browser shall never display a customer’s credit card number after retrieving from the database.  It shall always be shown with just the last 4 digits of the credit card number.
+3.5.2.3	The system’s back-end servers shall never display a customer’s password.  The customer’s password may be reset but never shown.
+3.5.2.4	The system’s back-end servers shall only be accessible to authenticated administrators.
+3.5.2.5	The system’s back-end databases shall be encrypted.
+3.6.1.1	The source code developed for this system shall be maintained in configuration management tool.
+3.7.1.1	The system shall be built using a standard web page development tool that conforms to either IBM’s CUA standards or Microsoft’s GUI standards.
+3.7.2.1	There are no memory requirements
+3.7.2.2	The computers must be equipped with web browsers such as Internet explorer.
+3.7.2.3	The product must be stored in such a way that allows the client easy access to it.
+3.7.2.4	Response time for loading the product should take no longer than five minutes.
+3.7.2.5	A general knowledge of basic computer skills is required to use the product
+3.8.1	It shall provide specific guidelines to a user for using the E-Store system and within the system.
+3.8.2	To implement online user help, link and search fields shall be provided.
+3.10.1	The protocol used shall be HTTP.
+3.10.2	The Port number used will be 80.
+3.10.3	There shall be logical address of the system in IPv4 format.
+3.10.1.1	The user interface for the software shall be compatible to any browser such as Internet Explorer, Mozilla or Netscape Navigator by which user can access to the system.
+3.10.1.2	The user interface shall be implemented using any tool or software package like Java Applet, MS Front Page, EJB etc.
+3.10.2.1	Since the application must run over the internet, all the hardware shall require to connect internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet Cross-Cable.
+3.10.3.1	The e-store system shall communicate with the Configurator to identify all the available components to configure the product.
+3.10.3.2	The e-store shall communicate with the content manager to get the product specifications, offerings and promotions.
+3.10.3.3	The e-store system shall communicate with billPay system to identify available payment methods , validate the payments and process payment."
+3.10.3.4	The e-store system shall communicate to credit management system for handling financing options.
+3.10.3.5	The e-store system shall communicate with CRM system to provide support.
+3.10.3.6	The e-store system shall communicate with Sales system for order management.
+3.10.3.7	The e-store system shall communicate with shipping system for tracking orders and updating of shipping methods.
+3.10.3.8	The e-store system shall communicate with external Tax system to calculate tax.
+3.10.3.9	The e-store system shall communicate with export regulation system to validate export regulations.
+3.10.3.10	The system shall be verisign like software which shall allow the users to complete secured transaction. This usually shall be the third party software system which is widely used for internet transaction.
+3.10.4.1	The e-store system shall use the HTTP protocol for communication over the internet and for the intranet communication will be through TCP/IP protocol suite.
+3.12.1		E-store should display the disclaimers, copyright, word mark, trademark and product warranties of the Marvel electronics and home entertainment.

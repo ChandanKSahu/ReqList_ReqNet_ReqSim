@@ -1,0 +1,509 @@
+
+Software Requirements Specification 
+for the 
+System Administration 
+of an 
+Integrated Library System 
+Version 3.0 final 
+Prepared by Lori Ayre and Lucien Kress 
+Galecia Group 
+January 28, 2009 
+Software Requirements Specification, System Administ ration of an Integrated Library System Page i 
+Table of Contents 
+1. Introduction..................................... ................................................... ................................................... .............1 
+1.1 Purpose and Perspective ......................... ................................................... ................................................1 
+1.2 Product Scope and Features ...................... ................................................... .............................................1 
+1.3 Intended Audience ............................... ................................................... ................................................... .1 
+1.4 Document Conventions............................ ................................................... ................................................2 
+1.5 User Classes and Characteristics................ ................................................... ............................................2 
+1.6 Operating Environment ........................... ................................................... ................................................2 
+1.7 Design and Implementation Constraints ........... ................................................... ......................................2 
+1.8 User Documentation.............................. ................................................... ..................................................3
+1.9 Assumptions and Dependencies.................... ................................................... ...........................................3 
+2. System Requirements.............................. ................................................... ................................................... .....4 
+2.1 Systems: General ................................ ................................................... ................................................... ..4 
+2.2 Systems: Consoles and Dashboards ................ ................................................... ........................................6 
+2.3 Systems: Business Rules ......................... ................................................... .................................................9 
+2.4 Systems: Data Recovery .......................... ................................................... ..............................................10 
+2.5 Systems: Security ............................... ................................................... ................................................... .11 
+2.6 Systems: Maintenance ............................ ................................................... ...............................................12 
+2.7 Systems: Client Management...................... ................................................... ...........................................13 
+2.8 Systems: Queries and Reports .................... ................................................... ...........................................14 
+Software Requirements Specification, System Administ ration of an Integrated Library System Page ii 
+Revision History 
+Name Date Reason For Changes Version 
+Lucien Kress 9/26/08 Initial Draft 1.0 draft 
+Lucien Kress 12/1/08 Revisions, Requirements worksh op 2.0 draft 
+Lucien Kress 1/28/09 Revisions, Final 3.0 final 
+Software Requirements Specification, System Administ ration of an Integrated Library System Page 1 
+1. Introduction 
+1.1 Purpose and Perspective 
+This Software Requirements Specification (SRS) desc ribes the functional and nonfunctional 
+requirements for the System Administration Module o f an Integrated Library System (ILS). The 
+requirements were developed specifically for King C ounty Library System, but are believed to be 
+suitable for many large, urban, multiple-branch, ce ntralized library systems.  
+  
+The requirements in this SRS presuppose the general  data structures and functionality of a full- 
+fledged ILS. The System Administration Module will replace and enhance the current capabilities of 
+commercially available ILSes, as well as add new fu nctionality. 
+1.2 Product Scope and Features 
+The System Administration Module facilitates the ma nagement of every aspect of the Integrated 
+Library System. Specifically, the System Administra tion Module support the following activities, 
+among others: 
+  
+•Configuring the ILS to enable and support features and processes required for management 
+of the Library branches, patrons, collections, and circulation transactions. 
+•Monitoring, troubleshooting, and controlling server  performance. 
+•Monitoring, troubleshooting, and controlling databa se and application performance. 
+•Monitoring, troubleshooting, and controlling servic es, ports, and application programming 
+interfaces. 
+•Managing user and group accounts and privileges. 
+•Managing server and client software installation, u pgrades, and updates. 
+•Backing up databases, configuration files, log file s, etc. 
+The current specification presupposes the general f unctionality of an ILS and specifies only those 
+requirements that directly or indirectly relate to management activities. King County Library has 
+previously published specifications for Acquisition s and Serials Management, Circulation, and 
+Cataloging modules. Requirements for OPAC and web s ervices are currently under development. 
+Moreover, the current specification is focused on f unctional characteristics of System 
+Administration. Data structures and user interfaces  will require further specification and 
+development using an iterative, prototype-oriented software development methodology. 
+1.3 Intended Audience 
+This SRS is intended both for library managers and staff who may contribute additional 
+requirements or commentary, and for software projec t managers and developers who will implement 
+the requirements. As such, it aims for a high level  of readability for a non-technical audience, while  
+providing enough specificity to be useful to a soft ware developer.  
+It is assumed that when software development occurs , it will be in a highly collaborative and 
+iterative environment in which end-users have multi ple opportunities to review prototypes and 
+refine the user interface and software functionalit y. 
+Software Requirements Specification, System Administ ration of an Integrated Library System Page 2 
+It is also assumed that the reader has a general un derstanding of Library services and processes and 
+does not require definition of common Library termi nology. 
+1.4 Document Conventions 
+The SRS includes requirements. Requirements include  a reference to a process flowchart where 
+appropriate. Flowcharts generally indicate the curr ent approach to System Administration at King 
+County Library System, and should be considered to give contextual information rather than to 
+prescribe or constrain new software development. 
+1.5 User Classes and Characteristics 
+Patron A Patron is a customer of King County Librar y System, either possessing a 
+library card or not, either on site of a community library or not, using either print 
+materials, media materials, or electronic resources . 
+Staff Staff include managers, librarians, library t echnicians, library assistants, and 
+library pages who are involved in designing and pro viding services for the 
+Library. 
+  
+System 
+Administrators System Administrators include staff with responsibi lity for managing servers, 
+databases, applications, services, ports, and APIs related to the ILS. 
+Managers Managers include management staff who over see Library processes. 
+Library 
+Managers Library Managers include Cluster and Site Managers who provide input to the 
+design and implementation of Library services. 
+Library 
+Directors Library Directors include members of the Library Ex ecutive Team who plan and 
+direct Library services and priorities. 
+1.6 Operating Environment 
+OE-1: System Administration support the needs of a large, multiple-branch library system. 
+Specifically, the system must support a library sys tem with 50 locations, 20 million 
+circulations, purchasing and processing over 500,00 0 items per year.  It is highly 
+desirable that searches and reports can be processe d during open hours without 
+disrupting other system functions. 
+OE-2: System Administration shall operate on a Linu x or Solaris server. 
+OE-3: System Administration shall be accessible thr ough a web-browser or a Windows- 
+compatible client. 
+OE-4: If web-browser based, System Administration s hall be accessible through Microsoft 
+Internet Explorer (v.6.0 and later) and Mozilla Fir efox (v.2.0 and later). 
+OE-5: System Administration shall be accessible wit h screen-reading software, screen- 
+magnification software, and other software programs  designed to increase 
+accessibility. 
+  
+1.7 Design and Implementation Constraints 
+CO-1: System Administration Module shall use a full y relational database back-end. 
+Software Requirements Specification, System Administ ration of an Integrated Library System Page 3 
+CO-2: System Administration Module shall produce st andards-compliant HTML. 
+CO-3: System Administration Module shall provide a development and training 
+environment with the ability to migrate configurati ons to a production environment. 
+CO-4: User rights and privileges will be controlled  through security groups and/or “roles” 
+that allow access control for individuals, workgrou ps, and arbitrary staff groups. 
+1.8 User Documentation 
+UD-1: The software developer shall provide complete  data specifications for authority 
+records, bibliographic records, order records, item  records, hold/request records, and 
+other records maintained or accessed by the System Administration Module. 
+UD-2: The software developer shall provide a thorou gh high-level description of major 
+processes, including bibliographic record import an d export, validation of 
+bibliographic records against internal and external  authority sources, and standard 
+reports. 
+UD-3: The system shall provide an online, hierarchi cal, and cross-linked help system in 
+HTML that describes and illustrates all system func tions. 
+1.9 Assumptions and Dependencies 
+AS-1: The System Administration Module is part of a n enterprise-level Library Automation 
+System. 
+AS-2: System Administration process are consolidate d at a central location, and accept 
+input and provide services to multiple locations. 
+DE-1: The System Administration Module relies on th e data structures and functionality of 
+an enterprise-level Library Automation System, incl uding Acquisitions and 
+Cataloging modules. 
+DE-2: The System Administration Module interface wi th a variety of vendor websites, via 
+published APIs and/or automated transfer of standar d-format data files (e.g. 
+USMARC21, EDIFACT). 
+DE-3: The System Administration Module interacts wi th a patron interface, also known as 
+an Online Public Access Catalog (OPAC. 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 4 
+System Requirements 
+Category: Systems: General 
+Priority: 3 Req ID: 6512 
+Name: SQL-based database 
+Description: System runs on a fully relational, SQL-based databa se system.  Ability 
+to run SQL queries against any table in the databas e. Ability to access 
+database as an ODBC source. All data tables and dat a storage are 
+fully accessible. 
+Related Reqs: 2456 2475 Related Process Source: ITS 
+Priority: 3 Req ID: 5615 
+Name: real-time processing 
+Description: The system provides real-time processing.  For exam ple:  pull lists are 
+up to date at time of viewing or printing; system s upports live shelf 
+reading and weeding. 
+Related Reqs: Related Process Source: MGT 
+Priority: 3 Req ID: 5323 
+Name: field and record sharing 
+Description: Ability for multiple staff members and patrons to s imultaneously access 
+and update patron and item records, including on st aff check-in and 
+check-out terminals, on self check-out stations, th rough SIP2/NCIP2 
+and similar protocols and APIs, and in OPAC. Depend ing on assigned 
+privileges, staff can view all patron and item fiel ds; patrons can access 
+only selected fields. Record changes are applied in  a reasonable way, 
+with prompts to warn when a record has been changed  since it was 
+displayed. 
+Related Reqs: Related Process Source: CIR 
+Priority: 3 Req ID: 6513 
+Name: record lock management 
+Description: For any patron record or item record, staff can ide ntify where it is in 
+use (location, user, date and time placed). 
+Related Reqs: 6501 7302 Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 5 
+Priority: 2 Req ID: 2492 
+Name: individual and shared staff login accounts 
+Description: Support for individual and shared staff login accou nts; access to 
+modules is granted by use of "roles" or "privileges " that allow each 
+account to access as many (or as few) modules as ne eded. Individual 
+logins allow user-level preferences and audit trail .
+Related Reqs: 5514 Related Process Source: ACQ 
+Priority: 3 Req ID: 2428 
+Name: system documentation 
+Description: System documentation is library-specific and follow s standard formats 
+for technical documentation. Documentation is speci fic to the particular 
+version of the software in use at library. Document ation is web-based, 
+indexed, organized by function, and easily searchab le. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2431 
+Name: system upgrade guidelines 
+Description: System upgrades and updates include written guideli nes for updating 
+servers and clients.  Includes list of new, changed , and removed 
+features. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2479 
+Name: configuration file access 
+Description: System provides access to all configuration files. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2474 
+Name: log file access 
+Description: System provides full access to all log files.  Log files can be reviewed 
+without stopping system. Logs can be enabled, disab led, and set to a 
+specific retention threshold. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 6 
+Priority: 3 Req ID: 2470 
+Name: root shell access 
+Description: System provides access to root shell. 
+Related Reqs: Related Process Source: ITS 
+Category: Systems: Consoles and Dashboards 
+Priority: 3 Req ID: 6520 
+Name: dashboard configuration 
+Description: System supports creation of custom dashboards that display current 
+and historical data about system performance, recor d creation and 
+modification, circulation transactions, etc.  Admin istrators can create 
+dashboards and give access to selected users and gr oups. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6501 
+Name: system monitoring 
+Description: System provides full support for SNMP and supports monitoring of 
+system resources, including disk space, CPU load, m emory load, 
+system processes, system interfaces and ports.  Ale rt thresholds are 
+configurable. Alerts can be sent via administrative  dashboards, email 
+messages, and text messages. Alerts can be sent to unlimited number 
+of recipients via any or all alert methods. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 7302 
+Name: record lock administration 
+Description: Ability to set thresholds on the length of time rec ords are locked  and 
+provide, for all record types, a list of records in  sustained use/locked 
+condition. Ability from the same console to unlock one or more records. 
+Related Reqs: 6513 Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 7 
+Priority: 3 Req ID: 2467 
+Name: system performance dashboard 
+Description: System provides dashboard of performance monitoring  and 
+management tools. Identification of processes with process ID, owner 
+username, IP address (if applicable), CPU utilizati on, memory 
+utilization, run time. Runaway processes are identi fied. System status 
+is represented by visual indicators (e.g. green and  red lights). 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2466 
+Name: server console 
+Description: System provides a server management console includi ng:  software 
+shutdown utility, software startup utility, server shutdown utility, server 
+restart utility. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2464 
+Name: application dashboard 
+Description: System provides an administrative dashboard display ing: last full and 
+incremental backup; last planned and unplanned syst em reboot; last 
+software upgrade; current software version; transac tions waiting to be 
+processed; size of log-files; current count of reco rds by record type 
+(item, bibliographic, patron etc), database utiliza tion (size, processes 
+running). 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2430 
+Name: client management console 
+Description: System provides a management console displaying wor kstations 
+running client software; workstation name and IP ad dress; and utilities 
+for managing and killing client sessions. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 8 
+Priority: 3 Req ID: 6503 
+Name: circulation dashboard 
+Description: System provides a circulation dashboard showing key  performace 
+indicators such as check-outs per hour, check-ins p er hour, holds 
+placed per hour, holds paged per day, etc. Indicato rs can be limited to 
+a single branch or set to systemwide. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6517 
+Name: configuration file console 
+Description: System provides a single console with access to all  configuration files.  
+Read and write permission to individual configurati on files can be 
+assigned to users and groups. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2433 
+Name: log-file dashboard 
+Description: System provides a dashboard for locating and viewin g log files. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6521 
+Name: job scheduling console 
+Description: System provides a single interface for reviewing an d controlling 
+scheduled tasks, including staff-scheduled tasks, a utomated reports, 
+scheduled imports and exports, software updates, et c. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6515 
+Name: email configuration 
+Description: Ability to access and edit email configuration, inc luding a quick menu 
+of common settings (such as masquerading, log reten tion, bounce 
+management). 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 9 
+Priority: 3 Req ID: 6516 
+Name: SMTP support 
+Description: System supports SMTP for email transport. 
+Related Reqs: Related Process Source: ITS 
+Category: Systems: Business Rules 
+Priority: 3 Req ID: 2445 
+Name: business rules 
+Description: System supports restrictions based on business rule s, e.g. restrictions 
+on deleting item records that are in checked-out st atus, or restrictions 
+on deleting bibliographic records with existing hol ds. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 5278 
+Name: suppression rules 
+Description: System provides customizable 'Rules of Suppression'  that specify 
+whether patrons and staff can view authority, bibli ographic, order, and 
+item records in staff and public (OPAC) interfaces.  Records may be 
+visible to specific workgroups only; to all staff a nd patrons at specific 
+locations; or to all staff and all patrons. (See RE Q-5057 for related 
+requirements on loan rules, and REQ-5190 for relate d requirements on 
+holdability.) 
+Related Reqs: 5057 5190 580 Related Process CAT180 Source: CIR 
+Priority: 3 Req ID: 5190 
+Name: requesting rules 
+Description: System allows creation and modification of requesti ng rules that 
+determine whether a patron can place a hold on an i tem. Requesting 
+rules may evaluate patron type, current number of h olds, current 
+patron account balance, item type, item status, own ing location code, 
+and other criteria. For example, requesting rules m ay prohibit patrons 
+from placing holds on on-order CD titles, but allow  patrons to place 
+holds on other on-order titles. Requesting rules al so specify whether 
+staff with specific privileges or roles can overrid e specific criteria. (See 
+REQ-5057 re loan rules, REQ-5278 re visibility.) 
+Related Reqs: 5057 5278 Related Process HOL-011 Source: CIR 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 10 
+Priority: 3 Req ID: 5057 
+Name: loan rules 
+Description: System allows creation and modification of loan rul es that allow or 
+disallow check-out of items, calculate loan periods ,  and determine 
+renewal limits. Loan rules may evaluate patron type , current number of 
+items checked out, current patron account balance, item type, item 
+status, owning location code, check-out location co de, and other 
+criteria. For example, loan rules may prohibit patr ons from checking 
+out items with an unavailable status, e.g. an item with a triggered hold 
+for another patron or an item that is already check ed out to another 
+patron. Loan rules can access check-out location op en/closed 
+schedule in calculating due date. Loan rules also s pecify whether a 
+specific criteria may be overridden by staff with s pecific privileges or 
+roles. (Also see REQ-5190 re requesting rules.) 
+Related Reqs: 5190 Related Process HOL-131 Source: CIR 
+Priority: 3 Req ID: 5328 
+Name: data validation 
+Description: Ability to specify default value, data validation, automatic formatting, 
+and required status for any field. 
+Related Reqs: Related Process Source: CIR 
+Category: Systems: Data Recovery 
+Priority: 3 Req ID: 6502 
+Name: system backup 
+Description: System provides capability to perform live incremen tal and full backups 
+of data and transaction logs. System supports use o f third-party 
+backup software such as EMC NetWorker. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6505 
+Name: data rollback 
+Description: System logs data changes (such as record deletions)  and provides 
+"undo" functionality.  Ideally, system provides rev ision control. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 11 
+Priority: 3 Req ID: 2462 
+Name: server clustering 
+Description: Ability to cluster servers for failover capability.
+Related Reqs: Related Process Source: ITS 
+Category: Systems: Security 
+Priority: 3 Req ID: 6510 
+Name: patron data security 
+Description: Patron data is secure in all transfers to and from the system. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6509 
+Name: user account privileges 
+Description: System administrative staff has full visibility and  control of user 
+privileges. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6511 
+Name: secure protocol support 
+Description: System supports secure protocols, including SFTP, S SL, and SSH.  
+SFTP is supported in both active and passive modes,  configurable per 
+vendor. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 12 
+Category: Systems: Maintenance 
+Priority: 3 Req ID: 1716 
+Name: MARC import/export 
+Description: MARC bibliographic and authority records can be imp orted and 
+exported, singly and in batch, all fields or select ed fields, to and from 
+vendors including OCLC. Imported records can overla y existing short 
+or full bibliographic records. Imported batches can  be maintained and 
+manipulated as selection lists (see REQ-3004). 
+Related Reqs: 3004 Related Process CAT180 Source: CAP 
+Priority: 3 Req ID: 6518 
+Name: record sets 
+Description: System supports an unlimited number of record sets,  with the ability to 
+import and export set members in batch.  Record set s can be the basis 
+for batch field updates; can be used as a limiting scope for queries; 
+can be used to delete original records with the abi lity to review prior to 
+deletion, write errors to a log file, and undo one or more deletions. 
+Related Reqs: 2204 Related Process Source: ITS 
+Priority: 3 Req ID: 2420 
+Name: staff account setup 
+Description: System provides a dedicated interface for creating new staff accounts.  
+New staff account creation process provides configu rable templates for 
+account administrator use; provides granular privil eges for account 
+creation, modification, and deletion. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2419 
+Name: patron account setup 
+Description: System provides a dedicated interface for creating new patron 
+accounts.  Patron account creation process provides  configurable 
+templates for staff use; supports field validation and required fields; 
+provides configurable defaults. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 13 
+Priority: 3 Req ID: 6507 
+Name: job scheduling 
+Description: System supports scheduling of maintenance tasks, re ports, and data 
+exports.  Jobs can be scheduled in sequence ("start  job B when job A 
+finishes") and can be modified or cancelled at any time prior to starting. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 6508 
+Name: job scheduling: management 
+Description: Staff can be given permission to schedule tasks, re ports, and data 
+exports.  System administration staff can view and manage jobs 
+scheduled by other staff. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2220 
+Name: keyboard macros and shortcuts 
+Description: System supports administrator-programmable and user -programmable 
+macros and/or keyboard shortcuts. Shortcut keys may  be assigned to 
+macros (e.g. 'Insert Field') or to text strings. Ma cros are centrally 
+managed on server, can be imported from and exporte d to individual 
+users, and can be restricted for use and/or edittin g through centrally- 
+managed permissions. 
+Related Reqs: Related Process Source: ACQ 
+Category: Systems: Client Management 
+Priority: 3 Req ID: 6514 
+Name: accounts independent from workstation 
+Description: Staff and group accounts are independent from works tations; client 
+install should not be tied to a specific location. 
+Related Reqs: Related Process Source: ITS 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 14 
+Priority: 3 Req ID: 6504 
+Name: client software updates 
+Description: Client software installation and updates must be ce ntrally managed, 
+using standard or proprietary network management to ols, allowing 
+streaming updates from server.  Ability to specify specific clients to be 
+updated. Client software can be managed with VNC an d Remote 
+Desktop. 
+Related Reqs: 2430 Related Process Source: ITS 
+Priority: 3 Req ID: 6519 
+Name: client configurations 
+Description: All client configuration files are server based; co nfigurations can be 
+exported and imported between clients. 
+Related Reqs: Related Process Source: ITS 
+Category: Systems: Queries & Reports 
+Priority: 2 Req ID: 2197 
+Name: report format and output 
+Description: Ability to fully customize layout and appearance of  reports. Ability to 
+display, print, email, or save report to standard f ormats including CSV 
+and Excel, as well as to customizable formats. 
+Related Reqs: Related Process Source: ACQ 
+Priority: 3 Req ID: 5624 
+Name: query tool 
+Description: System provides a user-friendly interface for desig ning queries against 
+all record types. Staff can select fields to query;  select values from 
+picklist of possible values; select regular express ions from drop-down 
+menu, and use a full range of Boolean operators. Ad ministrators 
+control staff access to tables and fields. 
+Related Reqs: Related Process Source: MGT 
+Software Requirements Specification, System Adminis tration of an Integrated Library System Page 15 
+Priority: 3 Req ID: 5607 
+Name: report templates 
+Description: System administrators can create report templates t hat are available to 
+front-line staff, and can be run as is or modified to the staff person's 
+particular needs. 
+Related Reqs: Related Process Source: MGT 
+Priority: 3 Req ID: 5617 
+Name: reports permissions 
+Description: System provides fine-grained permissions to allow o r disallow staff to 
+run specific reports, and/or to run ad hoc reports on specific sets of 
+data. 
+Related Reqs: Related Process Source: MGT 
+Priority: 3 Req ID: 2465 
+Name: record number report 
+Description: System reports for each record type: current record  number, current 
+number of records, number deleted, and number purge d. Record types 
+include patron, bibliographic, item, order, invoice , etc.  Access to 
+record numbers is controlled at the user/group leve l. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2441 
+Name: printer support 
+Description: Ability to define and select four types of printers : receipt printer, 
+standard printer, label printer, and forms printer.   All Windows printers 
+are supported. 
+Related Reqs: Related Process Source: ITS 
+Priority: 3 Req ID: 2439 
+Name: multiple print output options 
+Description: Ability to print to a file on the server, ftp , ema il, or printer from any part 
+of the application. When applicable, the ability to  select record fields 
+and control order of fields when printing. 
+Related Reqs: Related Process Source: ITS 

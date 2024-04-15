@@ -1,0 +1,31 @@
+D	DALLAS / FT. WORTH REGIONAL CENTER-TO-CENTER COMMUNICATIONS NETWORK
+2	REQUIREMENTS
+2.1	Interfaces
+2.1.1	Roadway Network Interface Requirements
+2.1.2	Traffic Conditions Interface Requirements
+2.1.3	Incident Data Interface Requirements
+2.1.4	Lane Closure Interface Requirements
+2.1.5	Dynamic Message Sign Interface Requirements
+2.1.6	Lane Control Signal Interface Requirements
+2.1.7	Closed Circuit Television Interface Requirements
+2.1.8	Ramp Mete r Requirements
+2.1.9	Highway Advisory Radio Requirements
+2.1.10	Traffic Signals Requirements
+2.1.11	Environment Sensor Station Requirements
+2.1.12	High Occupany Vehicle Requirements
+2.1.13	Parking Lot Requirements
+2.1.14	School Zone Requirements
+2.1.15	Railroad Crossing Requirements
+2.1.16	Reversible Lanes Requirements
+2.1.17	Dynamic Lane Assignments Requirements
+2.1.18	Transit Requirements
+2.1.19	Netw ork Device Status Interface Requirments
+2.1.20	Command Timeframe Request / Response Interface Requirements
+2.2	Functional
+2.2.1	Data Collector Requirements
+2.2.2	Data Transmission Requirements
+2.2.3	Web Map Requirements
+2.2.4	Incident GUI Requirements
+2.2.5	Remote Control GUI
+2.3	Design and Construction Standards
+2.4	Operational

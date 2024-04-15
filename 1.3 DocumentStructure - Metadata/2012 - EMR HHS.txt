@@ -1,0 +1,6 @@
+D	California Correctional Health Care Services (CCHCS) Emergency Medical Response (EMR) System 
+1	HIPAA Requirements
+1.6	HIPAA Remote Access
+1.7	HIPAA TCS
+2	Health Information Technology (HIT)
+3	HITECH Requirements - HITECH Breach Notification

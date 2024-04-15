@@ -1,0 +1,15 @@
+3.1	The dose of insulin to be delivered shall be computed by measuring the current level of blood sugar, comparing this to a previous measured level and computing the required dose as described in 3.3 below.
+3.2	The system shall measure the level of blood sugar and deliver insulin if required every 10 minutes.
+3.3	The amount of insulin to be delivered shall be computed according to the current sugar reading as measured by the sensor:
+3.3.1	If the reading is below the safe minimum, no insulin shall be delivered. See schema SUGAR_LOW.
+3.3.2	If the reading is within the safe zone, then insulin is only delivered if the level of sugar is rising and the rate of increase of sugar level is increasing. The amount of insulin required is defined in the schema SUGAR_OK.
+3.3.3	If the reading is above the recommended level, insulin is delivered unless the level of blood sugar is falling and the rate of decrease of the blood sugar level is increasing. The amount of insulin required in this case is defined in the schema SUGAR_HIGH.
+3.3.4	The amount of insulin actually delivered may be different from the computed dose as various safety constraints are included in the system as defined in the schema RUN. There is a limit on the maximum dose to be delivered in a single injection and a limit on the total cumulative dose in a single day.
+3.4	Under normal operating conditions, the system is defined by the schema RUN.
+3.5	When operating in manual mode, the system is defined by the schema MANUAL.
+3.6	The controller shall run a self-test program every 30 seconds. This shall test for the conditions shown in Table 1 below. The self-testing of the system is defined by the schema TEST.
+3.7	When switched on, the system is initialised as defined in the schema STARTUP.
+3.8	The system shall maintain three displays: display1! is a text display that shows system messages. It has an associated hardware buffer that can hold several messages. When there is more than 1 message in this buffer, each message is displayed for 5 seconds until all messages have been displayed. The display sequence then restarts with the first message. Hence, several messages may be specified for display on display1!. display2! shows the last dose of insulin that was computed. clock! displays the current clock time.
+3.9	The user may replace the insulin reservoir with a new reservoir at any time. The design of the reservoir compartment is such that only full reservoirs holding 100 ml of insulin may be inserted. When a new insulin reservoir has been inserted, the system is reset according the RESET schema.
+3.10	At the beginning of each 24 hour period (indicated by clock =00:00:00), the cumulative dose of insulin delivered is reset to 0.
+3.11	The error conditions that should be detected and indicated by the system are shown in Table 1.

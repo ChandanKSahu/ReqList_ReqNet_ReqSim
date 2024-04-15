@@ -1,0 +1,38 @@
+D	GAMMA-J Web Store
+2	Overall Description 
+2.4	Operating Environment 
+2.5	Design and Implementation Constraints 
+2.6	User Documentation 
+3	System Features 
+3.1	Customer Accounts 
+3.1.1	Description And Priority 
+3.1.3	Functional Requirements 
+3.2	Inventory Management 
+3.2.1	Description And Priority 
+3.2.3	Functional Requirements 
+3.3	Shopping Cart 
+3.3.1	Description And Priority 
+3.3.3	Functional Requirements 
+3.4	Order Confirmation 
+3.4.1	Description And Priority 
+3.4.3	Functional Requirements 
+3.5	Interface 
+3.5.1	Description And Priority 
+3.5.3	Functional Requirements 
+3.6	Plug-in API 
+3.6.1	Description And Priority 
+3.6.3	Functional Requirements 
+4	External Interface Requirements 
+4.3	WebOrder Browser Interface 
+4.4	Communications Interfaces 
+5	Quality Attribute Requirements 
+5.1	Performance Requirements 
+5.2	Safety Requirements 
+5.3	Security Requirements 
+5.4	Availability Requirements 
+5.5	Efficiency Requirements 
+5.6	Usability Requirements 
+5.7	Maintainability Requirements 
+5.8	Portability Requirements 
+5.9	Testability Requirements 
+6	Other Requirements

@@ -1,0 +1,28 @@
+D	Project ZNIX - refine traditional information management systems to provide an object-based, application-independent retrieval and manipulation framework
+3	Specific Requirements
+3.1	Functionality
+3.1.1	Centralized store for user information
+3.1.2	Hierarchical view of the information
+3.1.3	Archiving of information
+3.1.4	The public API
+3.2	Usability
+3.2.1	Typical training time required
+3.3	Reliability
+3.3.1	Mean Time between Failure (MTBF)
+3.4	Performance
+3.4.1	Capacity
+3.4.2	Resource Utilization
+3.5	Supportability
+3.5.1	Coding Convent ions
+3.5.2	Compliance to Opens Source Standard Practices
+3.6	Security
+3.7	Design Constraints
+3.8	Online User Documentation and Help System Requirements
+3.10	Interfaces  
+3.10.1	User Interfaces
+3.10.2	Hardware Interfaces
+3.10.3	Software Interfaces
+3.10.4	Communications Interfaces
+3.11	Licensing Requirements
+3.12	Legal, Copyright and Other Notices
+3.13	Applicable Standards

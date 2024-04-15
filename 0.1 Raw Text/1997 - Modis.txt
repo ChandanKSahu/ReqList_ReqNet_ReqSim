@@ -1,0 +1,850 @@
+
+MODIS
+Science Data Processing Software
+Requirements Specification
+Version 2 and Beyond
+FCSS GSBR
+November 10, 1997
+SDST-089
+Change Notice 1
+MODIS
+Science Data Processing Software
+Requirements Specification
+Version 2 and Beyond
+Prepared By:
+______________________________________________________________________
+Frederick S. Patt, SAIC/GSC Date
+SDST Systems Analyst
+Reviewed By:
+______________________________________________________________________
+Dr. Al Fleig, University of Maryland Date
+Data System Scientist
+______________________________________________________________________
+Marghi Hopkins, SAIC/GSC Date
+MCST Software Engineer
+______________________________________________________________________
+Barbara Putney, GSFC/Code 920 Date
+MODIS Systems Engineer
+______________________________________________________________________
+Laurie Schneider, SAIC/GSC Date
+SDST R&QA Manager
+______________________________________________________________________
+Dr. Richard Isaacman, SAIC/GSC Date
+MODIS SDST Task Manager
+Approved By:
+______________________________________________________________________
+Dr. Bruce Guenther, GSFC/Code 925 Date
+MODIS MCST Manager
+______________________________________________________________________
+Edward Masuoka, GSFC/Code 922 Date
+MODIS SDST Manager
+Change Record Page
+This document is baselined and has been placed under Configuration Control.  Any
+changes to this document will need the approval of  the Configuration Control Board.
+Document Title: MODIS Science Data Processing Software Requirements
+Specification, Version 2 and Beyond
+Document Date:   December 12, 1996
+Issue Date Page Affected Description
+Original 12/12/96 All Baseline
+Change Notice 1 11/10/97 17, 18, 19, 20, 21, 22 CCRs: 302 and 306
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 iMODIS
+Science Data Processing Software
+Requirements Specification
+Version 2 and Beyond
+Table of Contents
+1. INTRODUCTION ........................................................................................ 1
+1.1 Purpose .............................................................................................................................. 1
+1.2 Scope .................................................................................................................................. 1
+1.3 Content and Structure ...................................................................................................... 2
+2. RELATED DOCUMENTATION ..................................................................... 3
+2.1 Parent Document .............................................................................................................. 3
+2.2 Applicable Documents ...................................................................................................... 3
+2.3 Information Documents .................................................................................................... 4
+3. SYSTEM-LEVEL REQUIREMENTS ............................................................... 5
+3.1 External Constraints ......................................................................................................... 5
+3.2 System Interface Requirements ..................................................................................... 5
+3.3 Computer Software Configuration Item Requirements ............................................... 5
+4. SCIENCE DATA PRODUCT REQUIREMENTS ................................................ 7
+4.1 MODIS Standard Product Requirements ...................................................................... 7
+4.2 Metadata Requirements ................................................................................................... 7
+4.3 Product-Specific Requirements ...................................................................................... 8
+4.3.1 Climate Modeling Grid Product Requirements .................................................. 8
+5. SOFTWARE PROCESS REQUIREMENTS ..................................................... 9
+5.1 Process Interface Requirements .................................................................................... 9
+5.2 Process Reliability Requirements ................................................................................... 9
+5.3 Process Quality Assurance Standards ........................................................................ 10
+6. OPERATIONS REQUIREMENTS ................................................................. 11
+6.1 Product Generation Executive Requirements ............................................................ 11
+7. REQUIREMENTS TRACEABILITY MATRIX .................................................. 12
+APPENDIX A:  ACRONYMS AND ABBREVIATIONS .......................................... 15
+APPENDIX B: MODIS STANDARD DATA PRODUCTS ....................................... 16
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 iiList of Tables
+Table 4-1.  MODIS Data Level Definitions ............................................................................... 7
+Table 7-1.  Requirements Traceability .................................................................................... 12
+Table B-1.  Standard Data Products Definitions .................................................................... 17
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 1MODIS
+Science Data Processing Software
+Requirements Specification
+Version 2 and Beyond
+1. INTRODUCTION
+1.1 Purpose
+This document is the requirements specification for the Moderate Resolution Imaging
+Spectroradiometer (MODIS) Science Data Processing Software (SDP S/W) system.
+The MODIS SDP S/W will be integrated in the MODIS Team Leader Computing Facility
+(TLCF) at Goddard Space Flight Center (GSFC) and migrated to the EROS Data Center
+(EDC) Distributed Active Archive Center (DAAC), National Snow and Ice Data Center
+(NSIDC) DAAC, and the GSFC DAAC.  The Team Leader Working Agreement (TLWA)
+serves as the parent document for this requirements specification.  As specified in the
+TLWA, the programs in the SDP S/W for Version 2 shall constitute a launch ready,
+complete, verified, and operational software system.
+The major software elements provided by the Science Data Support Team (SDST) and
+the MODIS Characterization Support Team (MCST) include:
+• Level 1A (L1A) and Geolocation Processing Software.
+• Level 1B (L1B) Processing Software.
+• Product Generation Executive (PGE) scripts.
+• MODIS-Application Program Interface (M-API) utilities.
+• Other SDST-developed utilities.
+The major software elements provided by the Science Team Members (STM) include:
+• Level 2 (L2), Level 2 Gridding (L2G), Level 3 (L3), and Level 4 (L4) software
+processes.
+• Gridding and binning utilities.
+ 
+1.2 Scope
+This document defines the system-level requirements which must be met by the
+software elements comprising the MODIS SDP S/W.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 21.3 Content and Structure
+This document’s structure was derived from NASA-STD-2100-91 and is organized into
+the following sections:
+• Section 1 provides the background and introduction to this document.
+• Section 2 identifies the relevant documents.
+• Section 3 details the system-level requirements.
+• Section 4 details SDST’s product-specific requirements.
+• Section 5 identifies process-specific requirements.
+• Section 6 identifies operational requirements.
+• Section 7 provides the requirements traceability.
+• Appendix A identifies the acronyms and abbreviations.
+• Appendix B lists the standard data products.
+ 
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 32. RELATED DOCUMENTATION
+This section provides the documentation relevant to the MODIS SDP S/W
+Requirements Specification.
+2.1 Parent Document
+• Team Leader Working Agreement for MODIS Between EOS AM & PM Projects
+GSFC and the MODIS Science Team Leader; GSFC 421-12-14-02; April 21, 1994.
+ 
+2.2 Applicable Documents
+• An ECS Data Producer’s Guide to Metadata; August 1996 (Draft); 163-WP-001-001.
+• Approach to Flexibility in EOSDIS Data Format Standards; H.K. Ramapruyan;
+July 1996.
+• Definition of HDF-EOS; October 1996 (Draft).
+• Earth Observing System (EOS) Reference Handbook; 1995.
+• ECS Technical Baseline, Version 4.0; March 1996.
+• Establishing Science Software Exit Conditions for the Production Environment;
+November 1996; 420-WP-006-001.
+• Interface Control Document (ICD) Between EOSDIS Core System (ECS) and SCF
+(209-CD-005-001); December 1995.
+• MODIS Software Development Standards and Guidelines, Version 1; SDST-022A;
+March 18, 1996.
+• MODIS Data Aquisition and Processing Scenarios; D. Han, et. al; May 1989.
+• MODIS Version 1 Science Software Integration and Test Procedures and Agreement
+with the GSFC DAAC; SDST-092; October 1996 (Draft).
+• MODIS Version 1 Team Leader Computing Facility Integration and Test Plan;
+SDST-068; July 8, 1996.
+• SDP Toolkit User’s Guide for the ECS Project; June 1996; Data Item Description
+(DID) 333-CD-003-002.
+• Science Data Processing Segment Database Design and Database Schema
+Specification for the ECS Project; DID 311-CD-008-001; July 1996.
+• Science User’s Guide and Operations Procedure Handbook for the EOS Core
+System Project, Part 4: Software Developer’s Guide to Preparation, Delivery,
+Integration, and Test with the ECS; 205-CD-002-002; Final, August 1995.
+• SWAMP and AM Session of the AGU Fall Meeting; The Earth Observer; Nov/Dec
+1995, Vol. 7, No. 6, Page 11.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 4• Version 1 Science Computing Facility Software Delivery Guide; SDST-066 (CN 1),
+July 1996.
+ 
+2.3 Information Documents
+• Data Production Software (DPS) and Science Computing Facility (SCF) Standards
+and Guidelines; January 1994.
+• MODIS Software Management Plan; October 24, 1995; SDST-002.
+• MODIS Data Management Plan; October 25, 1995; SDST-006.
+• MODIS Operations Concept Document-Version 1, SDST; August 1993.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 53.  SYSTEM-LEVEL REQUIREMENTS
+3.1 External Constraints
+This section describes the assumptions and dependencies affecting the MODIS SDP
+S/W.
+In addition to the mandatory functions, the MODIS SDP S/W depends on ECS to
+provide the following capabilities implemented in Science Data Production Toolkit
+(SDPTK) routines:
+• Access to solar system object positions.
+• Values of mathematical and physical constants.
+• Access to ECS-provided ancillary data.
+The production environment to be employed by each DAAC for each MODIS SDP S/W
+release will be described by the Science Software Integration and Test Procedures for
+the MODIS Instrument and verified prior to the start of system testing for that release.
+The environment specification consists of the hardware platform, operating system,
+SDPTK version, Hierarchical Data Format (HDF) version, HDF-EOS version, and
+Commercial Off-The-Shelf (COTS) software versions.
+3.2 System Interface Requirements
+3.2-1The MODIS SDP S/W shall produce the standard data products shown in Table
+B-1.
+3.2-2Each MODIS standard data product shall be produced within the data volume
+and processing load allocation shown in Table B-1.
+3.2-3Each software developer shall provide an HDF file description for the standard
+MODIS data product(s) produced by his/her software describing the structure
+and format of the HDF data objects in the files.
+3.3 Computer Software Configuration Item Requirements
+A MODIS Computer Software Configuration Item (CSCI) is any independently tracked
+and configured unit of software within the MODIS SDP S/W, including processes,
+scripts, and utility libraries.
+3.3-1Each CSCI in the MODIS SDP S/W shall run in the ECS production environment.
+3.3-2Each CSCI within the MODIS SDP S/W system shall employ the Earth Science
+Data and Information System (ESDIS)-supplied SDPTK mandatory functions to
+access the DAAC production environment and services.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 63.3-3The numbering scheme for the logical numbers used by the CSCI to obtain data
+from the SDPTK shall follow the convention defined in the SCF Software Delivery
+Guide, and shall not conflict with the range of logical numbers reserved for use
+by the Toolkit routines (10,000 - 10,999).
+3.3-4Each CSCI shall be coded according to the standards specified in the MODIS
+Software Development Standards and Guidelines, SDST-022 .
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 74.  SCIENCE DATA PRODUCT REQUIREMENTS
+4.1 MODIS Standard Product Requirements
+4.1-1The definition of the level of a given product shall adhere to Table 4-1, MODIS
+Data Level Definitions.
+4.1-2The MODIS standard products defined in Table B-1 shall be stored in HDF file
+structures appropriate for the data product level and type.
+4.1-3Each HDF file description for a product shall be consistent with the format and
+content of the corresponding MODIS Standard Product.
+Table 4-1.  MODIS Data Level Definitions
+Data Level Data Definition
+Level 0 Reconstructed, unprocessed instrument/payload data at full resolution;
+any and all communications artifacts (e.g., synchronization frames,
+communications headers, duplicate data) removed.
+L1A Reconstructed, unprocessed instrument data at full resolution, time-
+referenced, and annotated with ancillary information, including
+radiometric and geometric calibration coefficients and georeferencing
+parameters (e.g., platform ephemeris) computed and appended but not
+applied to the Level 0 data.
+L1B L1A data  that have been processed to sensor units (not all instruments
+will have a L1B equivalent).
+L2Derived geophysical variables at the same resolution and location as the
+L1 source data.
+L2G L2 data that have been resorted onto a spatial grid, but not averaged or
+composited.
+L3Variables mapped on uniform space-time grid scales, usually with some
+completeness and consistency.
+L4Model output or results from analyses of lower level data (e.g., variables
+derived from multiple measurements).
+4.2 Metadata Requirements
+4.2-1Each MODIS Standard Product shall contain ECS core metadata with the
+content and format specified in DID 311.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 84.2-2All searchable product-specific metadata in MODIS standard products shall be
+formatted as specified in DID 311.
+4.2-3Each MODIS standard product shall contain the MODIS product file name for all
+input product files as ECS archive metadata.
+4.3 Product-Specific Requirements
+4.3.1 Climate Modeling Grid Product Requirements
+4.3-1The allowed grid resolutions for Climate Modeling Grid (CMG) products shall
+use an equal angle grid at 1.0 degree (111 km), 0.5 degree (57 km), and/or
+0.25 degree (28.5 km) resolution.
+4.3-2The spatial starting points for all CMG grids shall be defined such that vertically
+(latitudinal) the bottom of the first row of cells in the Northern hemisphere will
+touch the equator and horizontally (meridional) the left edge of the first cell on
+the left at the equator will be at 180 degrees West longitude.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 95. SOFTWARE PROCESS REQUIREMENTS
+5.1 Process Interface Requirements
+5.1-1The numbering scheme for the Status Message Facility (SMF) seed numbering
+assignments used by the software processes to log error messages using the
+SDPTK shall follow the convention defined in the SCF Software Delivery Guide
+within the range of values assigned by ECS to MODIS (35,000 - 39,999).
+5.1-2Each software developer shall provide the information required to define an Earth
+Science Data Type  (ESDT) for each non-temporary file required by his/her
+software.
+5.1-3Each software process shall close all product output files prior to termination.
+5.1-4Each software process shall use the SDPTK function to designate files which are
+required by the SCF for diagnostic purposes.
+5.2 Process Reliability Requirements
+5.2-1Each software process shall trap and properly process all exceptions that may
+produce an abnormal termination and report all such events using the SDPTK
+error message functions.
+5.2-2Upon detection of a non-recoverable error condition each software process shall
+report the fatal error condition using the SDPTK error message functions, and
+return a defined exit code.
+5.2-3Each software process shall be able to process input data sets with the following
+nominal attributes:
+5.2-3.1Time transitions, including Greenwich Meridian crossing, leap year,
+beginning of the year, beginning of the millennium, and/or start of data
+collection not on a granule boundary.
+5.2-3.2Terminator crossing , International Date Line crossing, and/or Earth
+pole within a granule.
+5.2-3.3Day, Night, or mixed  mode data.
+5.2-4Each software process shall handle input data sets with the following error
+attributes:
+5.2-4.1 Fill data, including filled pixels, filled bands, and/or filled scans.
+5.2-4.2 Redundant data, consisting of repeated packets at Level 0 or duplicate
+input files at all product levels.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 105.2-4.3 Corrupted data as indicated by Quality Assurance (QA) flags also
+located within the file.
+5.2-4.4 Missing input MODIS product files, ancillary files, and look-up tables.
+5.2-4.5 Wrong format input files.
+5.2.4-6 Noisy or dead detectors, as indicated by QA flags located within the
+Level 1B file.
+5.3 Process Quality Assurance Standards
+Requirements for QA fields in the standard data products currently are limited to the
+ECS core metadata QA attributes.  Additional product QA content requirements will be
+established from the MODIS QA Plan and ECS/ESDIS QA Plan when they are
+baselined.
+5.3-1Each software process shall perform quality checks on the input and output data
+and report on the degree to which the product conforms to instrument
+specification or science data accuracy specifications.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 116. OPERATIONS REQUIREMENTS
+6.1 Product Generation Executive Requirements
+A PGE is a script which executes one or more MODIS software processes within the
+ECS environment.
+6.1-1The SDST shall integrate all software processes available to the SDST software
+integration team into a set of PGEs that execute all processes in the MODIS
+TLCF.
+6.1-2 The SDST shall integrate subsets of these processes into sets of PGEs that
+execute in the GSFC DAAC, EDC DAAC, and the NSIDC DAAC as specified in
+Table B-1.
+6.1-3Each PGE shall return exit codes as defined by the developer according to the
+ECS standards.
+6.1-4A PGE shall not set or redefine environmental variables.
+6.1-5Each PGE shall be provided with one or more sets of production rules, which
+specify the inputs, outputs, and activation conditions for the PGE.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 127. REQUIREMENTS TRACEABILITY MATRIX
+Table 7-1.  Requirements Traceability
+Req. # Requirement Traceability
+3.2-1 The MODIS SDP S/W shall produce the standard data products shown
+in Table B-1.TLWA 3.3.2
+3.2-2 Each MODIS standard data product shall be produced within the data
+volume and processing load allocation shown in Table B-1.ECS Technical
+Baseline
+3.2-3 Each software developer shall provide an HDF file description for the
+standard MODIS data product(s) produced by his/her software
+describing the structure and format of the HDF data objects in the files.TLWA 3.4.1
+3.3-1 Each CSCI in the MODIS SDP S/W shall run in the ECS production
+environment.TLWA 3.4.1
+3.3-2 Each CSCI within the MODIS SDP S/W system shall employ the Earth
+Science Data and Information System (ESDIS)-supplied SDPTK
+mandatory functions to access the DAAC production environment and
+services.TLWA 3.4.1
+3.3-3 The numbering scheme for the logical numbers used by the CSCI to
+obtain data from the SDPTK shall follow the convention defined in the
+SCF Software Delivery Guide, and shall not conflict with the range of
+logical numbers reserved for use by the Toolkit routines (10,000 -
+10,999).TLWA 3.4.1,
+DID 333
+(C.1.1)
+3.3-4 Each CSCI shall be coded according to the standards specified in the
+most recent baselined version of the MODIS Software Development
+Standards and Guidelines, SDST-022 .TLWA 3.4.3
+4.1-1 The definition of the level of a given product shall adhere to Table 4-1,
+MODIS Data Level Definitions.EOS
+Reference
+Handbook
+4.1-2 The MODIS standard products defined in Table B-1 shall be stored in
+HDF file structures appropriate for the data product level and type.Approach to
+Flexibility
+4.1-3 Each HDF file description for a product shall be consistent with the
+format and content of the corresponding MODIS Standard Product.TLWA 3.4.3
+4.2-1 Each MODIS Standard Product shall contain ECS core metadata with
+the content and format specified in DID 311.TLWA 3.4.1,
+DID 311
+4.2-2 All searchable product-specific metadata in MODIS standard products
+shall be formatted as specified in DID 311.TLWA 3.4.1
+4.2-3 Each MODIS standard product shall contain the MODIS product file
+name for all input product files as ECS archive metadata.TLWA 3.3.5
+4.3-1 The allowed grid resolutions for Climate Modeling Grid (CMG) product
+shall use an equal angle grid at 1.0 degree (111 km), 0.5 degree (57
+km), and/or 0.25 degree (28.5 km) resolution.SWAMP
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 13Req. # Requirement Traceability
+4.3-2 The spatial starting points for all CMG grids shall be defined such that
+vertically (latitudinal) the bottom of the first row of cells in the Northern
+hemisphere will touch the equator and horizontally (meridional) the left
+edge of the first cell on the left at the equator will be at 180 degrees
+West longitude.SWAMP
+5.1-1 The numbering scheme for the Status Message Facility (SMF) seed
+numbering assignments used by the software processes to log error
+messages using the SDPTK shall follow the convention defined in the
+SCF Software Delivery Guide within the range of values assigned by
+ECS to MODIS (35,000 - 39,999).TLWA 3.4.1
+5.1-2 Each software developer shall provide the information required to define
+an Earth Science Data Type (ESDT) for each non-temporary file
+required by his/her software.Guide to
+Metadata,
+DID 311
+5.1-3 Each software process shall close all product output files prior to
+termination.TLWA 3.3-2,
+DID 205
+(5.2.3)
+5.1-4 Each software process shall use the SDPTK function to designate files
+which are required by the SCF for diagnostic purposes.TLWA 3.4.1
+5.2-1 Each software process shall trap and properly process all exceptions
+that may produce an abnormal termination and report all such events
+using the SDPTK error message functions.TLWA 3.4.3,
+DID 205
+(5.2.6)
+5.2-2 Upon detection of a non-recoverable error condition each software
+process shall report the fatal error condition using the SDPTK error
+message functions, and return in defined exit code.DID 205
+(5.7.3)
+5.2-3 Each software process shall be able to process input data sets with the
+following nominal attributes:DID 205
+(5.7.3)
+5.2-3.1 Time transitions, including Greenwich Meridian crossing, leap year,
+beginning of the year, beginning of the millennium, and/or start of
+data collection not on a granule boundary.DID 205
+(5.7.3)
+5.2-3.2 Terminator crossing, International Date Line crossing, and/or Earth
+pole within a granule.DID 205
+(5.7.3)
+5.2-3.3 Day, Night, or mixed mode data. DID 205
+(5.7.3)
+5.2-4 Each software process shall handle input data sets with the following
+error attributes:DID 205
+(5.7.3)
+5.2-4.1 Fill data, including filled pixels, filled bands, and/or filled scans. DID 205
+(5.7.3)
+5.2-4.2 Redundant data, consisting of repeated packets at Level 0 or
+duplicate input files at all product levels.DID 205
+(5.7.3)
+5.2-4.3 Corrupted data as indicated by Quality Assurance (QA) flags also
+located within the file.DID 205
+(5.7.3)
+5.2-4.4 Missing input MODIS product files, ancillary files, and look-up tables. DID 205
+(5.7.3)
+5.2-4.5 Wrong format input files. DID 205
+(5.7.3)
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 14Req. # Requirement Traceability
+5.2-4.6 Noisy or dead detectors, as indicated by QA flags located within the
+Level 1B file.TLWA 3.3.2
+5.3-1 Each software process shall perform quality checks on the input and
+output data and report on the degree to which the product conforms to
+instrument specification or science data accuracy specifications.TLWA 3.3.2
+6.1-1 The SDST shall integrate all software processes available to the SDST
+software integration team into a set of PGEs that execute all processes
+in the MODIS TLCF.TLWA 3.4.1,
+TLWA 3.4.3,
+DID 205
+(5.2.4)
+6.1-2 The SDST shall integrate subsets of these processes that execute in the
+GSFC DAAC, EDC DAAC, and the NSIDC DAAC as specified in Table
+B-1.TLWA 3.4.1,
+TLWA 3.4.3,
+DID 205
+(5.2.4)
+6.1-3 Each PGE shall return exit codes as defined by the developer according
+to the ECS standards.TLWA 3.4.1,
+DID 205
+(5.2.4)
+6.1-4 A PGE shall not set or redefine environmental variables. TLWA 3.4.1
+6.1-5 Each PGE shall be provided with one or more sets of production rules,
+which specify the inputs, outputs, and activation conditions for the PGE.DID 205
+(4.2.1)
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 15APPENDIX A:  ACRONYMS AND ABBREVIATIONS
+AHWGP Ad-Hoc Working Group on Production
+CMG Climate Modeling Grid
+COTS Commercial Off-The-Shelf
+CSCI Computer Software Configuration Item
+DAAC Distributed Active Archive Center
+DAO Data Assimilation Office
+DID Data Item Description
+ECS EOSDIS Core System
+EDC EROS Data Center
+EOS Earth Observing System
+ESDIS Earth Science Data and Information System
+ESDT Earth Science Data Type
+GSFC Goddard Space Flight Center
+HDF Hierarchical Data Format
+ICD Interface Control Document
+L1A Level 1A
+L1B Level 1B
+L2 Level 2
+L2G Level 2 Gridding
+L3 Level 3
+L4 Level 4
+M-API MODIS Application Programming Interface
+MCST MODIS Characterization Support Team
+MODIS Moderate Resolution Imaging Spectroradiometer
+NSIDC National Snow and Ice Data Center
+PGE Product Generation Executive
+PI Principal Investigator
+QA Quality Assurance
+SCF Science Computing Facility
+SDP S/W Science Data Production Software
+SDPTK Science Data Production Toolkit
+SDST Science Data Support Team
+SMF Status Message Facility
+SPSO Science Processing Support Office
+STM Science Team Member
+TLCF Team Leader Computing Facility
+TLWA Team Leader Working Agreement
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 16APPENDIX B: MODIS STANDARD DATA PRODUCTS
+Table B-1 presents the list of MODIS standard data products for each product, the
+following information is given:
+• Product ID, name, and level;
+• Time coverage;
+• Processing center (the DAAC that produces the product) and archive enter (the
+DAAC where the product is stored);
+• Daily data volume and processing load.  These items are referenced to the February
+1996 baseline provided to the Ad-Hoc Working Group on Production (AHWGP);
+• Principal Investigator (PI).
+The term “granule” for time coverage refers to the specific time interval chosen for L1
+and L2 products, as opposed to the ECS definition of a granule as the smallest
+independently tested unit of data.  Level 3 CMG products include “CMG” in the product
+name.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 17Table B-1.  Standard Data Products Definitions
+Product ID Product NameProd
+LevelTime
+CoverProcess
+CenterArchive
+CenterDaily
+Volume
+(GB/day)Processing
+Load
+(MFLOPS) PI
+MODMGGA Tiled Geolocation Angular Data 2G1 dayGSFC EDC 8.097 33.053 Justice
+MODMGPNTR L2G Pointer Map - 250m 2G1 dayGSFC EDC240.123 1308.932 Justice
+L2G Pointer Map - 500m 2G1 dayGSFC EDC50.266 Justice
+L2G Pointer Map - 1km 2G1 dayGSFC EDC 8.460 Justice
+N/A Early Warning Volcano Alert 2granuleGSFC N/A ? ?N/A
+MOD01 Level-1A Counts, MODIS 1granuleGSFCGSFC115.099 99.917 SDST
+MOD02QKM Level-1B Radiance, 250m 1granuleGSFCGSFC 451298.89 MCST
+MOD02HKM Level-1B Radiance, 500m 1granuleGSFCGSFC 35 (3)MCST
+MOD01HKM Level-1B Radiance, 1km 1granuleGSFCGSFC 90 (3)MCST
+MOD02OBC Level-1B On Board Calibration
+Engineering1granuleGSFCGSFC 10 (3)MCST
+MOD03 Geolocation Fields 1granuleGSFCGSFC13.455 40.964 SDST
+MOD04 Aerosol Product 2granuleGSFCGSFC 1.8 200.0Kaufman/
+Tanre
+MOD04LA Gridded Land Aerosol 3orbitGSFCGSFC 0.6 14.6Vermote
+MOD05 Total Precipitable Water 2granuleGSFCGSFC 2.9 27.0Gao/
+Kaufman
+MOD06 Cloud Product 2granuleGSFCGSFC 5.0 440.0Gao/King/
+Menzel
+MOD07 Atmospheric Profiles 2granuleGSFCGSFC 6.0 54.0Menzel
+MOD08 Gridded Atmospheric Product
+Daily31 dayGSFCGSFC 0.3Not
+Avail.Gao/
+Kaufman/
+King/
+Menzel/
+Tanre
+Gridded Atmospheric Product 8-
+day38 daysGSFCGSFC 0.3Not
+Avail.Gao/
+Kaufman/
+King/
+Menzel/
+Tanre
+Gridded Atmospheric Product
+Monthly3calendar
+monthGSFCGSFC 0.3Not
+Avail.Gao/
+Kaufman/
+King/
+Menzel/
+Tanre
+MOD09 Surface Reflectance 2granuleGSFC EDC72.891 72.871 Vemote
+MOD09A Gridded Surface Reflectance -
+250m38-dayGSFC EDC ? ?Vemote
+Gridded Surface Reflectance -
+500m38-dayGSFC EDC ? ?Vemote
+MOD09G Tiled Surface Reflectance - 250m 2GdayGSFC EDC97.772 169.645 Vemote
+Tiled Surface Reflectance - 500m 2GdayGSFC EDC48.185 Vemote
+MOD10 Snow Cover 2granuleGSFCNSIDC 1.579 2.048Hall
+MOD10G Tiled Snow Cover 2GdayGSFCNSIDC 4.820 30.445 Hall
+MOD10A1 Gridded Daily Snow Cover - daily 3dayNSIDCNSIDC 8.112 0.070Hall
+MOD10A2 Gridded Daily Snow Cover - 8-day 38-dayNSIDCNSIDC 1.159 0.030Hall
+MOD10A3 Gridded Daily Snow Cover -
+monthly3monthNSIDCNSIDC ? ?Hall
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 18Product ID Product NameProd
+LevelTime
+CoverProcess
+CenterArchive
+CenterDaily
+Volume
+(GB/day)Processing
+Load
+(MFLOPS) PI
+MOD10C1 Gridded Daily Snow Cover daily
+CMG31 dayNSIDCNSIDC ? ?Hall
+MOD10C2 Gridded Daily Snow Cover - 8-day
+CMG38-dayNSIDCNSIDC ? ?Hall
+MOD10C3 Gridded Daily Snow Cover -
+monthly CMG3monthNSIDCNSIDC ? ?Hall
+MOD11 Land_surface Temperature/
+Emissivity2granuleGSFC EDC 6.376 6.908Wan
+MOD11A1 Gridded Daily Land_sfc Temp/
+Emissivity - 1km31 dayGSFCGSFC 6.57 13.452 Wan
+Gridded Daily Land_sfc Temp/
+Emissivity - 5km31 dayGSFCGSFC Wan
+MOD11A2 Gridded 8-day Land_sfc Temp/
+Emissivity - 1km38 days EDCEDC 2.974 0.103Wan
+Gridded 8-day Land_sfc Temp/
+Emissivity - 5km38 days EDCEDC Wan
+MOD11C1 Gridded Daily Land_sfc Temp/
+Emissivity - CMG31 dayEDCEDC ? ?Wan
+MOD11C2 Gridded 8-day Land_sfc Temp/
+Emissivity - CMG38 days EDCEDC ? ?Wan
+MOD11C3 Gridded Monthly Land_sfc Temp/
+Emissivity - CMG3month EDCEDC ? ?Wan
+MOD12M Monthly Land_Cover Database 3month EDCEDC 4.411 13.677 Strahler
+MOD12Q1 Quarterly Land Cover Type 33 mos. EDCEDC1.014? 2.857Strahler
+MOD12Q2 Quarterly Land Cover Change 33 mos. EDCEDC ?2.857Strahler
+MOD12C1 Land Cover Type - CMG 33 mos. EDCEDC ? ?Strahler
+MOD12C2 Land Cover Change - CMG 33 mos. EDCEDC ? ?Strahler
+MOD13A1 Gridded Vegetation Indices -
+250m (Max NDVI and Integrated
+MVI), 16-day316 days EDCEDC 9.356 123.185 Huete/
+Justice
+MOD13A2 Gridded Vegetation Indices - 1km
+(Max NDVI and Integrated MVI),
+16-day316 days EDCEDC ? ?Huete/
+Justice
+MOD13A3 Gridded Vegetation Indices - 1km
+(Max NDVI and Integrated MVI),
+Monthly3month EDCEDC 3.119 108.363 Huete/
+Justice
+MOD13C2 Gridded Vegetation Indices -1km
+(Max NDVI and Integrated MVI),
+16-day - CMG316 days EDCEDC ? ?Huete/
+Justice
+MOD13C3 Gridded Vegetation Indices -1km
+(Max NDVI and Integrated MVI),
+Monthly - CMG3month EDCEDC ? ?Huete/
+Justice
+MOD14 Thermal Anomalies 2granuleGSFC EDC 3.569 Justice
+MOD14A1 Gridded Daily Thermal Anomalies
+(Fire Size and Temp)31 dayEDCEDC 0.450 10.833 Justice
+MOD14A2 Gridded 8-Day Thermal Anomalies
+(Fire Size and Temp)38 days EDCEDC ? ?Justice
+MOD14A3 Gridded Monthly Thermal
+Anomalies (Fire Size and Temp)3month EDCEDC 0.150 9.530Justice
+MOD14C1 Gridded Daily Thermal Anomalies
+(Fire Size and Temp) - CMG3 P.L.1 dayEDCEDC 0.450 10.833 Justice
+MOD14C2 Gridded 8-Day Thermal Anomalies
+(Fire Size and Temp) - CMG3 P.L.8 days EDCEDC ? ?Justice
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 19Product ID Product NameProd
+LevelTime
+CoverProcess
+CenterArchive
+CenterDaily
+Volume
+(GB/day)Processing
+Load
+(MFLOPS) PI
+MOD14C3 Gridded Monthly(???) Thermal
+Anomalies (Fire Size and Temp) -
+CMG3 P.L.month
+???EDCEDC ? ?Justice
+MOD14G Tiled Thermal Anomalies 2G1 dayGSFC EDC 7.446 15.319 Justice
+MOD15 Leaf Area Indices (LAI) & FPAR 48 days EDCEDC 0.150 0.050Running
+MOD15A1 Daily intermediate LAI/FPAR 31 dayEDCEDC Running
+MOD15A2 Daily LAI and FPAR 41 dayEDCEDC Running
+MOD15C1 LAI and FPAR - CMG 48 days EDCEDC Running
+MOD15C2 LAI and FPAR - CMG 4month EDCEDC Running
+MOD17A1 Vegetation Production, Net
+Primary (PSN) - 8-day48 days EDCEDC 0.075 0.030Running
+MOD17A2 Vegetation Production, Net
+Primary (NPP), Yearly4yearEDCEDC 0.003 0.020Running
+MOD17C1 Vegetation Production, Net
+Primary (PSN), 8-day - CMG48 days EDCEDC ? ?Running
+MOD17C2 Vegetation Production, Net
+Primary (NPP), Yearly - CMG4yearEDCEDC ? ?Running
+MOD18 Water-leaving Radiance 2granuleGSFCGSFC49.108 279.893 Gordon
+Water-leaving Radiance 3-week
+Reference, Weekly324 days GSFCGSFC ? ?Gordon
+Water-leaving Radiance, Daily 31 dayGSFCGSFC 6.340 57.300 Gordon
+Water-leaving Radiance, Weekly 38 daysGSFCGSFC 0.906 0.070Gordon
+MOD18_QC Ocean Color QC 2granuleGSFCGSFC (2) (2) Evans
+MOD19 CZCS Pigment Conc 3-week
+Reference, Weekly324 days GSFCGSFC (2) (2) Clark
+CZCS Pigment Conc, Daily 31 dayGSFCGSFC (2) (2) Clark
+CZCS Pigment Conc, Weekly 38 daysGSFCGSFC (2) (2) Clark
+CZCS Pigment Concentration 2granuleGSFCGSFC (2) (2) Clark
+MOD20 Chlorophyll Fluorescence 3-week
+Reference, Weekly324 days GSFCGSFC (2) (2) Abbott
+Chlorophyll Fluorescence, Daily 31 dayGSFCGSFC (2) (2) Abbott
+Chlorophyll Fluorescence, Weekly 38 daysGSFCGSFC (2) (2) Abbott
+Chlorophyll Fluorescence 2granuleGSFCGSFC (2) (2) Abbott
+MOD21 Chlorophyll_a Pigment Conc 3-
+week Reference, Weekly324 days GSFCGSFC (2) (2) Clark
+Chlorophyll_a Pigment Conc,
+Daily31 dayGSFCGSFC (2) (2) Clark
+Chlorophyll_a Pigment Conc,
+Weekly38 daysGSFCGSFC (2) (2) Clark
+Chlorophyll_a Pigment Conc 2granuleGSFCGSFC (2) (2) Clark
+MOD22 PAR 3-week Reference, Weekly 324 days GSFCGSFC (2) (2) Carder
+PAR, Daily 31 dayGSFCGSFC (2) (2) Carder
+PAR, Weekly 38 daysGSFCGSFC (2) (2) Carder
+PAR 2granuleGSFCGSFC (2) (2) Carder
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 20Product ID Product NameProd
+LevelTime
+CoverProcess
+CenterArchive
+CenterDaily
+Volume
+(GB/day)Processing
+Load
+(MFLOPS) PI
+MOD23 Suspended-Solids Concentration,
+Ocean Water, 3-week Reference,
+Weekly324 days GSFCGSFC (2) (2) Clark
+Suspended-Solids Conc, Ocean
+Water, Daily31 dayGSFCGSFC (2) (2) Clark
+Suspended-Solids Conc, Ocean
+Water, Weekly38 daysGSFCGSFC (2) (2) Clark
+Suspended-Solids Conc, Ocean
+Water2granuleGSFCGSFC (2) (2) Clark
+MOD24 Organic Matter Conc, 3-week
+Reference, Weekly324 days GSFCGSFC (2) (2) Clark
+Organic Matter Conc, Daily 31 dayGSFCGSFC (2) (2) Clark
+Organic Matter Conc, Weekly 38 daysGSFCGSFC (2) (2) Clark
+Organic Matter Conc 2granuleGSFCGSFC (2) (2) Clark
+MOD25 Coccolith Concentration,
+Detached, 3-week Reference,
+Weekly324 days GSFCGSFC (2) (2) Gordon
+Coccolith Conc, Detached, Daily 31 dayGSFCGSFC (2) (2) Gordon
+Coccolith Conc, Detached, Weekly 38 daysGSFCGSFC (2) (2) Gordon
+Coccolith Conc, Detached 2granuleGSFCGSFC (2) (2) Gordon
+MOD26 Ocean Water Attenuation
+Coefficient 3-week Reference,
+Weekly324 days GSFCGSFC (2) (2) Clark
+Ocean Water Attenuation
+Coefficient, Daily31 dayGSFCGSFC (2) (2) Clark
+Ocean Water Attenuation
+Coefficient, Weekly38 daysGSFCGSFC (2) (2)  Clark
+Ocean Water Attenuation
+Coefficient2granuleGSFCGSFC (2) (2) Clark
+MOD27 Ocean Productivity, Yearly 4yearGSFCGSFC<0.001 0.010Esaias
+MOD28 Sea_sfc Temperature Day Mode
+3-week Reference, Weekly324 days GSFCGSFC ? ?Brown
+Sea_sfc Temperature Day Mode,
+Daily31 dayGSFCGSFC 0.792 76.600 Brown
+Sea_sfc Temperature Day Mode,
+Weekly38 daysGSFCGSFC 0.113 0.270Brown
+Sea_sfc Temperature Night Mode
+3-week Reference, Weekly324 days GSFCGSFC ? ?Brown
+Sea_sfc Temperature Night Mode,
+Daily31 dayGSFCGSFC ? ?Brown
+Sea_sfc Temperature Night Mode,
+Weekly38 daysGSFCGSFC ? ?Brown
+Sea_sfc Temperature 2granuleGSFCGSFC 3.159 146.453 Brown
+MOD28_QC Sea_sfc Temperature QC 2granuleGSFCGSFC Evans
+MOD29 Sea_Ice Max Extent 2granuleGSFCNSIDC 1.579 4.980Hall
+MOD29A1 Gridded Daily Sea_Ice Max Extent 31 dayNSIDCNSIDC 3.120 0.070Hall
+MOD29A2 Gridded Daily Sea_Ice - 8-day 38-dayNSIDCNSIDC 0.446 13.631 Hall
+MOD29A3 Gridded Daily Sea_Ice - Monthly 3monthNSIDCNSIDC ? ?Hall
+MOD29C1 Gridded Daily Sea_Ice Daily CMG 31 dayNSIDCNSIDC ? ?Hall
+MOD29C2 Gridded Daily Sea_Ice - 8-day
+CMG38-dayNSIDCNSIDC ? ?Hall
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 21Product ID Product NameProd
+LevelTime
+CoverProcess
+CenterArchive
+CenterDaily
+Volume
+(GB/day)Processing
+Load
+(MFLOPS) PI
+MOD29C3 Gridded Daily Sea_Ice - Monthly
+CMG3monthNSIDCNSIDC ? ?Hall
+MOD29G Tiled Sea_Ice Max Extent 2G1 dayGSFCNSIDC 1.854 27.626 Hall
+MOD30 Temperature and Moisture Profiles 2granuleGSFCGSFC 7.192 (1)Menzel
+MOD31 Phycoerthrin Conc, 3-week
+Reference, Weekly324 days GSFCGSFC (2) (2) Hoge
+Phycoerthrin Conc, Daily 31 dayGSFCGSFC (2) (2) Hoge
+Phycoerthrin Conc, Weekly 38 daysGSFCGSFC (2) (2) Hoge
+Phycoerthrin Concentration 2granuleGSFCGSFC (2) (2) Hoge
+MOD32 Calibration Data, BUOYMDB 2granuleGSFCGSFC 4.072 1.415Evans
+MOD32A1 Calibration Data, GLOBSUBS 2granuleGSFCGSFC12.800 111.956 Evans
+MOD35 Cloud Mask 2granuleGSFCGSFC 4.700 800.000 Menzel
+MOD36 Absorption Coef, Gelbstof and
+Total, 3-week Reference, Weekly324 days GSFCGSFC (2) (2) Carder
+Absorption Coef, Gelbstof and
+Total, Daily31 dayGSFCGSFC (2) (2) Carder
+Absorption Coef, Gelbstof and
+Total, Weekly38 daysGSFCGSFC (2) (2) Carder
+Absorption Coef, Gelbstof and
+Total2granuleGSFCGSFC (2) (2) Carder
+MOD37 Ocean Aerosol Radiance
+Properties2granuleGSFCGSFC (2) (2) Gordon
+Ocean Aerosol Radiance
+Properties 3-week Reference,
+Weekly324 days GSFCGSFC (2) (2) Gordon
+Ocean Aerosol Radiance
+Properties, Daily31 dayGSFCGSFC (2) (2) Gordon
+Ocean Aerosol Radiance
+Properties, Weekly38 daysGSFCGSFC (2) (2) Gordon
+MOD38A1 Water Vapor, Atmospheric
+(Thermal IR), Monthly3monthGSFCGSFC (1) (1) Menzel
+MOD39 Clear Water Epsilon, 3-week
+Reference, Weekly324 days GSFCGSFC (2) (2) Carder
+Clear Water Epsilon, Daily 31 dayGSFCGSFC (2) (2) Carder
+Clear Water Epsilon, Weekly 38 daysGSFCGSFC (2) (2) Carder
+Clear Water Epsilon 2granuleGSFCGSFC (2) (2) Carder
+MOD40 Burn Scars 4 P.L.8 daysEDC?EDC? ? ?
+MOD43B1 SemiEmpirical BRDF/Albedo 316 days EDCEDC58.170 698.760 Strahler
+MOD43B2 Empirical BRDF/Albedo 316 days EDCEDC (4) (4)Strahler
+MOD43B3 Minimal Albedo 316 days EDCEDC (4) (4)Strahler
+MOD43B4 BRDF-adjusted Nadir
+Reflectances316 days EDCEDC 0.473 (4)Strahler
+MOD43C1 BRDF/Albedo - 16-day CMG 316 days EDCEDC ? ?Strahler
+MOD43C2 BRDF/Albedo - Monthly CMG 3month EDCEDC ? ?Strahler
+MOD44A 1km Land Cover Change 4 32
+daysEDC?EDC? ? ?Townsend
+MOD44B 1km Land Cover Continuous Field 432 days EDC?EDC? ? ?Townsend
+(1)Included in the corresponding MOD07 allocation.
+(2)Included in the corresponding MOD18 allocation.
+(3)Included in the corresponding MOD02QKM allocation.
+(4)Included in the corresponding MOD43B1 allocation.
+SDP S/W Requirements Specification V2 and Beyond SDST-089
+Change Notice 1
+November 10, 1997 22

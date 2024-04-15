@@ -1,0 +1,23 @@
+3.1.1	The application will have a task-based screen interface for increased usability and workflow pace. The interface will use accelerator keys heavily to allow limited “keyboard-only” application use.
+3.1.2	A task-pane will be available in all workflow scenarios to allow easy access to on-line help and next-step options. The navigation options in every screen will be similar to lower or eliminate the application learning curve.
+3.1.3	Input confirmation and error notification will be consistent throughout the application.
+3.1.4	Themeing of the application allows consumers to use the application in the context of the ABC Paint website, while ABC Paint employees may use the new system in the familiar environment of a enterprise LAN.
+3.1.5	A Pointing device will be required for color selection, for example, when matching colors or using the graphical color chooser.
+3.2.1	The client computer must have a display device capable of display of 16.7 million colors or greater. Colors displayed on the target client computer will only be accurate when the device is properly calibrated.
+3.2.2	The keyboard is used to enter and place Paint name and paint number searches. The keyboard also provides “keyboard-only” application functionality when a Pointing device is not available.
+3.2.3	The Pointing device provides intuitive, fluid control of the application for less sophisticated consumer users, and ease-of-use for the graphical color chooser interface.
+4.1.2	The color chooser requires the presence of a hardware pointing device.
+4.2.2	The color translator requires the presence of the software color search module.
+4.3.2	The closest colors tool requires the presence of the software color search module.
+4.4.2	The color search engine requires the color space and paint information databases to be present. These two databases store paint and collection information.
+4.5.2	The User Color Palette requires the color search engine for color requests and the color sample matcher to enable the storing of uploaded images for matching.
+4.6.2	The application administrative interface requires the color space and paint information databases to be present.
+4.7.2	The color sample matcher requires the color search engine module to function. The color chooser requires the presence of a hardware pointing device.
+5.1.1	Color searches among the various collections defined by ABC Paint will be processed in sub-second time on the server.
+5.1.2	Changes to Paint and collection information will occur in Real-time, although the actual processing time will vary with respect to the amount of information to be updated, added, or deleted on the server.
+5.1.3	While performance requirements are transparently defined at the server, ColorKast makes no guarantees as to the speed, completeness, or timeliness of service over the greater internet. Performance of the application will vary on the speed and type of internet access to which the client computer has access.
+5.1.4	To verify the performance of the application, ColorKast will show the amount of time the server takes to process a request. The time shown will not take into account the transit time of the information over various computer networks.
+5.2.1	Analysis of the proposed product requirements and features has not brought any safety concerns to light. ColorKast recommends that a full legal review of the final product be undertaken prior to any public use of the product or business-wide rollout. This will ensure that ABC Paint is allowed full indemnification of liability.
+5.3.1	Due to the nature of the product, the data stored in repositories of the product is generally public information consisting of paint names and color values not easily secured or obfuscated and always recoverable by a sophisticated end user. No attempts will be made to secure this information.
+5.3.2	Information that the product will collect or store, which need access protections include user specified color palettes and their store of access permissions. Access to this information must be private. Most important, the store of access permissions to administrative features and access permissions must be secure.
+5.3.3	Implementations of Privacy and security must be on par with industry standards.

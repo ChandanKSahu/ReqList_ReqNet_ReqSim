@@ -1,0 +1,192 @@
+1.1.1	The solution should authenticate principals prior to accessing an EMR application or EMR data.
+1.1.2	The solution should prevent access to EMR applications or EMR data to all non-authenticated principals.
+1.1.3	The solution should provide the ability to implement a Chain of Trust agreement.
+1.1.4	If other appropriate authentication mechanisms are absent, then the solution should authenticate principals using at least one of the following authentication mechanisms: username/password, digital certificate, secure token or biometrics.
+1.2.1	The solution should provide the ability to create and update sets of access-control permissions granted to principals.
+1.2.2	The solution should conform to function IN.2.2 (Auditable Records) for the purpose of recording all authorization actions.
+1.2.3	The solution should provide EMR security administrators with the ability to grant authorizations to principals according to scope of practice, organizational policy, or jurisdictional law.
+1.2.4	The solution should provide EMR security administrators with the ability to grant authorizations for roles according to scope of practice, organizational policy, or jurisdictional law.
+1.2.5	The solution should provide EMR security administrators with the ability to grant authorizations within contexts according to scope of practice, organizational policy, or jurisdictional law.
+1.2.6	The solution should provide the ability to define context for the purpose of principal authorization based on identity, role, work assignment, present condition, location, patient consent, or patient’s present condition.
+1.2.7	The solution should provide the ability to define context based on legal requirements or disaster conditions.
+1.3.1	The solution should conform to function IN.1.1 (Entity Authentication).
+1.3.2	The solution should conform to function IN.1.2 (Entity Authorization).
+1.3.3	The solution should provide the ability to define solution and data access rules.
+1.3.4	The solution should enforce solution and data access rules for all EMR resources (at component, application, or user level, either local or remote).
+1.4.1	The solution should conform to function IN.1.3 (Entity Access Control) in order for a healthcare delivery organization to manage a patient’s access to his or her healthcare information.
+1.5.1	The solution should time stamp initial entry, modification, or exchange of data, and identify the actor/principal taking the action as required by users' scope of practice, organizational policy, or jurisdictional law.
+1.5.2	The solution should provide additional non-repudiation functionality where required by users' scope of practice, organizational policy, or jurisdictional law.
+1.5.3	The solution should conform to function IN.2.2 (Auditable Records) to prevent repudiation of data origination, receipt, or access.
+1.5.4	The solution should conform to function IN.1.8 (Information Attestation) to ensure the integrity of data exchange and thus prevent repudiation of data origination or receipt.
+1.6.1	The solution should secure all modes of EMR data exchange.
+1.6.2	The solution should conform to function IN.1.7 (Secure Data Routing).
+1.6.3	The solution should provide the ability to obfuscate data.
+1.6.4	The solution should encrypt and decrypt EMR data that is exchanged over a non-secure link.
+1.6.5	The solution should support standards-based encryption mechanisms when encryption is used for secure data exchange.
+1.7.1	The solution should automatically route electronically exchanged EMR data only from and to known sources and destinations and only over secure networks.
+1.7.2	The solution should route electronically exchanged EMR data only to and from authenticated sources and destinations (conform to function IN.1.1 (Entity Authentication)).
+1.7.3	The solution should conform to function IN.2.2 (Auditable Records) to provide audit information about additions and changes to the status of destinations and sources.
+1.8.1	The solution should conform to function IN.1.1 (Entity Authentication).
+1.8.2	The solution should conform to function IN.1.2 (Entity Authorization).
+1.8.3	The solution should provide the ability to associate any attestable content added or changed to an EMR with the content's author (for example by conforming to function IN.2.2 (Auditable Records).
+1.8.4	The solution should provide the ability for attestation of attestable EMR content by the content's author.
+1.8.5	The solution should indicate the status of attestable data which has not been attested.
+1.8.6	The solution should provide the ability for attestation of EMR content by properly authenticated and authorized users different from the author as required by users’ scope of practice, organizational policy, or jurisdictional law.
+1.8.7	The solution should provide the ability to use digital signatures as the means for attestation.
+1.9.1	The solution should provide the ability to fully comply with the requirements for patient privacy and confidentiality in accordance with a user's scope of practice, organizational policy, or jurisdictional law.
+1.9.2	The solution should conform to function IN.1.1 (Entity Authentication).
+1.9.3	The solution should conform to function IN.1.2 (Entity Authorization).
+1.9.4	The solution should conform to function IN.1.3 (Entity Access Control).
+1.9.5	The solution should conform to function IN.1.5 (Non-Repudiation).
+1.9.6	The solution should conform to function IN.1.6 (Secure Data Exchange).
+1.9.7	The solution should conform to function IN.2.2 (Auditable Records).
+1.9.8	The solution should provide the ability to maintain varying levels of confidentiality in accordance with users' scope of practice, organizational policy, or jurisdictional law.
+1.9.9	The solution should provide the ability to mask parts of the electronic health record (e.g. medications, conditions, sensitive documents) from disclosure according to scope of practice, organizational policy or jurisdictional law.
+1.9.10	The solution should provide the ability to override a mask in emergency or other specific situations according to scope of practice, organizational policy or jurisdictional law.
+2.1.1	The solution should provide the ability to store and retrieve health record data and clinical documents for the legally prescribed time.
+2.1.2	The solution should provide the ability to retain inbound data or documents (related to health records) as originally received (unaltered, inclusive of the method in which they were received) for the legally organizationally prescribed time in accordance with users’ scope of practice, organizational policy, or jurisdictional law.
+2.1.3	The solution should retain the content of inbound data (related to health records) as originally received for the legally prescribed time.
+2.1.4	The solution should provide the ability to retrieve both the information and business context data within which that information was obtained.
+2.1.5	The solution should provide the ability to retrieve all the elements included in the definition of a legal medical record.
+2.1.6	The solution should provide the ability to identify specific EMR data/records for destruction, review and confirm destruction before it occurs and implement  Auditable Records function.
+2.1.7	The solution should provide the ability to destroy EMR data/records so that all traces are irrecoverably removed according to policy and legal retentions periods.
+2.1.8	The solution should pass along record destruction date information (if any) along with existing data when providing records to another entity.
+2.2.1	The solution should provide audit capabilities for recording access and usage of solutions, data, and organizational resources.
+2.2.2	The solution should conform to Entity Authentication.
+2.2.3	The solution should provide audit capabilities indicating the time stamp for an object or data creation.
+2.2.4	The solution should provide audit capabilities indicating the time stamp for an object or data modification in accordance with users' scope or practice, organizational policy, or jurisdictional law.
+2.2.5	The solution should provide audit capabilities indicating the time stamp for an object or data extraction in accordance with user's scope or practice, organizational policy, or jurisdictional law.
+2.2.6	The solution should provide audit capabilities indicating the time stamp for an object or data exchange.
+2.2.7	The solution should provide audit capabilities indicating the time stamp for an object or data view.
+2.2.8	The solution should provide audit capabilities indicating the time stamp for an object or data deletion in accordance with user's scope or practice, organizational policy, or jurisdictional law.
+2.2.9	The solution should provide audit capabilities indicating the author of a change in accordance with user's scope or practice, organizational policy, or jurisdictional law.
+2.2.10	The solution should provide audit capabilities indicating the viewer of a data set.
+2.2.11	The solution should provide audit capabilities indicating the data value before a change.
+2.2.12	The solution should provide audit capabilities to capture solution events at the hardware and software architecture level.
+2.2.13	The solution should conform to function IN.1.3 (Entity Access Control) to limit access to audit record information to appropriate entities in accordance with users’ scope of practice, organizational policy, or jurisdictional law.
+2.2.14	The solution should provide the ability to generate an audit report.
+2.2.15	The solution should provide the ability to view change history for a particular record or data set in accordance with users’ scope of practice, organizational policy, or jurisdictional law.
+2.2.16	The solution should provide the ability to record system maintenance events for loading new versions of, or changes to, the clinical system.
+2.2.17	The solution should provide the ability to record solution maintenance events for loading new versions of codes and knowledge bases.
+2.2.18	The solution should provide the ability to record changing the date and time where the clinical solution allows this to be done.
+2.2.19	The solution should provide the ability to record solution maintenance events for creating and restoring of backup.
+2.2.20	The solution should provide the ability to record solution maintenance events for archiving any data.
+2.2.21	The solution should provide the ability to record solution maintenance events for re-activating of an archived patient record.
+2.2.22	The solution should provide the ability to record solution maintenance events for entry to and exit from the EMR solution.
+2.2.23	The solution should provide the ability to record solution maintenance events for remote access connections including those for solution support and maintenance activities.
+2.2.24	The solution should utilize standardized time keeping (for example using the IHE consistent time profile).
+2.2.25	The solution should provide the ability to record and report upon audit information using a standards-based audit record format (for example RFC 3881).
+2.3.1	The solution should conform to function IN.5.1 (Interchange Standards).
+2.3.2	The solution should conform to function IN.3 (Registry and Directory Services) to enable the use of registries and directories.
+2.3.3	The solution should provide the ability to link entities to external information.
+2.3.4	The solution should store the location of each known health record component in order to enable authorized access to a complete logical health record if the EMR is distributed among several applications within the EMR.
+2.4.1	The solution should provide the ability to extract health record information.
+2.4.2	The solution should conform to function IN.1.6 (Secure Data Exchange) to provide secure data exchange capabilities.
+2.4.3	The solution should provide the ability to de-identify extracted information.
+2.4.4	The solution should conform to function IN.5.1 (Interchange Standards) to enable data extraction in standard-based formats.
+2.4.5	The solution should provide the ability to perform extraction operations across the complete data set that constitutes the health record of an individual within the solution.
+2.4.6	The solution should provide the ability to perform extraction operations whose output fully chronicles the healthcare process.
+2.4.7	The solution should provide the ability to extract data for administrative purposes.
+2.4.8	The solution should provide the ability to extract data for financial purposes.
+2.4.9	The solution should provide the ability to extract data for research purposes.
+2.4.10	The solution should provide the ability to extract data for quality analysis purposes.
+2.4.11	The solution should provide the ability to extract data for public health purposes.
+2.5.1.1	The solution should capture unstructured health record information as part of the patient EMR.
+2.5.1.2	The solution should retrieve unstructured health record information as part of the patient EMR.
+2.5.1.3	The solution should provide the ability to update unstructured health record information.
+2.5.1.4	The solution should provide the ability to conform to Data Retention, Availability, and Destruction to provide the ability to inactivate, obsolete, or destroy unstructured health record information.
+2.5.1.5	The solution should provide the ability to report unstructured health record information.
+2.5.1.6	The solution should track unstructured health record information over time.
+2.5.1.7	The solution should provide the ability to append corrected unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.
+2.5.1.8	The solution should provide the ability to append unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.
+2.5.1.9	The solution should provide the ability to append augmented unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.
+2.5.2.1	The solution should capture structured health record information as part of the patient EMR.
+2.5.2.2	The solution should retrieve structured health record information as part of the patient EMR.
+2.5.2.3	The solution should provide the ability to update structured health record information.
+2.5.2.4	The solution should conform to Data Retention, Availability, and Destruction to provide the ability to inactivate, obsolete, or destroy structured health record information.
+2.5.2.5	The solution should provide the ability to report structured health record information.
+2.5.2.6	The solution should track structured health record information over time.
+2.5.2.7	The solution should provide the ability to retrieve each item of structured health care information discretely within patient context.
+2.5.2.8	The solution should provide the ability to append corrected structured health record information to the original structured health record information. A specific type of implementation is not implied.
+2.5.2.9	The solution should provide the ability to append structured health record information to the original structured health record information. A specific type of implementation is not implied.
+2.5.2.10	The solution should provide the ability to append augmented structured health record information to the original structured health record information. A specific type of implementation is not implied.
+3.1.1	The solution should provide the ability to use registry services and directories.
+3.1.2	The solution should provide the ability to securely use registry services and directories.
+3.1.3	The solution should conform to Interchange Standards to provide standard data interchange capabilities for using registry services and directories.
+3.1.4	The solution should communicate with local registry services through standardized interfaces.
+3.1.5	The solution should communicate with non-local registry services (that is, registry services that are external to an EMR) through standardized interfaces.
+3.1.6	The solution should provide the ability to use registries or directories to uniquely identify patients for the provision of care.
+3.1.7	The solution should provide the ability to use registries or directories to uniquely identify providers for the provision of care.
+3.1.8	The solution should provide the ability to use registries or directories to retrieve links to relevant healthcare information regarding a patient.
+3.1.9	The solution should provide the ability to use registries to supply links to relevant healthcare information regarding a patient.
+3.1.10	The solution should provide the ability to use registries or directories to identify payers, health plans, and sponsors for administrative and financial purposes.
+3.1.11	The solution should provide the ability to use registries or directories to identify employers for administrative and financial purposes.
+3.1.12	The solution should provide the ability to use registries or directories to identify public health agencies for healthcare purposes.
+3.1.13	The solution should provide the ability to use registries or directories to identify healthcare resources and devices for resource management purposes.
+4.1.1	The solution should provide the ability to use standard terminologies to communicate with other solutions (internal or external to the EMR).
+4.1.2	The solution should provide the ability to validate that clinical terms and coded clinical data exists in a current standard terminology.
+4.1.3	The solution should provide the ability to exchange healthcare data using formal standard information models and standard terminologies.
+4.1.4	The solution should provide the ability to use a formal standard terminology model.
+4.1.5	The solution should provide the ability to use hierarchical inference searches e.g. subsumption across coded terminology concepts that were expressed using standard terminology models.
+4.1.6	The solution should provide the ability to use a terminology service (internal or external to the EMR).
+4.1.7	If there is no standard terminology model available, then the solution should provide a formal explicit terminology model.
+4.2.1	The solution should provide the ability to use different versions of terminology standards.
+4.2.2	The solution should provide the ability to update terminology standards.
+4.2.3	The solution should relate modified concepts in the different versions of a terminology standard to allow preservation of interpretations over time.
+4.2.4	The solution should provide the ability to interoperate with solutions that use known different versions of a terminology standard.
+4.2.5	The solution should provide the ability to deprecate terminologies.
+4.2.6	The solution should provide the ability to deprecate individual codes within a terminology.
+4.2.7	The solution should provide the ability to cascade terminology changes where coded terminology content is embedded in clinical models (for example, templates and custom formularies) when the cascaded terminology changes can ge accomplished unambiguously.
+4.2.8	The solution should apply changes in terminology to all new clinical content (via templates, custom formularies).
+4.3.1	The solution should provide the ability to use a terminology map.
+4.3.2	The solution should provide the ability to use standard terminology services for the purposes of mapping terminologies.
+4.3.3	The solution should provide the ability for a user to validate a mapping.
+4.3.4	The solution should provide the ability to create a terminology map.
+5.1.1	The solution should provide the ability to use interchange standards as required by realm specific and/or local profiles.
+5.1.2	The solution should provide the ability to seamlessly perform interchange operations with other solutions that adhere to recognized interchange standards.
+5.1.3	The solution should conform to Standard Terminologies and Terminology Services to support terminology standards in accordance with a user's scope of practice, organizational policy, or jurisdictional law.
+5.1.4	If there is no standard information model available, then the solution should provide a formal explicit information model in order to support the ability to operate seamlessly with other solutions.
+5.1.5	The solution should provide the ability to exchange data using an explicit and formal information model and standard, coded terminology.
+5.2.1	The solution should provide the ability to use different versions of interchange standards.
+5.2.2	The solution should provide the ability to change (reconfigure) the way that data is transmitted as an interchange standard evolves over time and in accordance with business needs.
+5.2.3	The solution should provide the ability to deprecate an interchange standard.
+5.2.4	The solution should provide the ability to interoperate with other solutions that use known earlier versions of an interoperability standard.
+5.3.1	The solution should provide the ability to support standards-based application integration.
+5.4.1	The solution should use interchange agreement descriptions when exchanging information with partners.
+5.4.2	The solution should use interchange agreement description standards (when available).
+5.4.3	The solution should conform to Registry and Directory Services to interact with entity directories to determine the address, profile, and data exchange requirements of known and/or potential partners.
+5.4.4	The solution should provide the ability to automatically discover interchange services and capabilities.
+6.1.1	The solution should provide the ability to manage business rules.
+6.1.2	The solution should provide the ability to create, import, or access decision support rules to guide solution behavior.
+6.1.3	The solution should provide the ability to update decision support rules.
+6.1.4	The solution should provide the ability to customize decision support rules and their components.
+6.1.5	The solution should provide the ability to inactivate, obsolete, or destroy decision support rules.
+6.1.6	The solution should conform to Auditable Records to audit all changes to decision support rules.
+6.1.7	The solution should provide the ability to create diagnostic support rules to guide solution behavior.
+6.1.8	The solution should provide the ability to update diagnostic support rules.
+6.1.9	The solution should provide the ability to customize diagnostic support rules and their components.
+6.1.10	The solution should provide the ability to inactivate, obsolete, or destroy diagnostic support rules.
+6.1.11	The solution should conform to Auditable Records to audit all changes to diagnostic support rules.
+6.1.12	The solution should provide the ability to create workflow control rules to guide solution behavior.
+6.1.13	The solution should provide the ability to update workflow control rules.
+6.1.14	The solution should provide the ability to customize workflow control rules and their components.
+6.1.15	The solution should provide the ability to inactivate, obsolete, or destroy workflow control rules.
+6.1.16	The solution should conform to Auditable Records to audit all changes to workflow control rules.
+6.1.17	The solution should provide the ability to create access privilege rules to guide solution behavior.
+6.1.18	The solution should provide the ability to update access privilege rules.
+6.1.19	The solution should provide the ability to customize access privilege rules and their components.
+6.1.20	The solution should provide the ability to inactivate, obsolete, or destroy privilege rules.
+6.1.21	The solution should conform to Auditable Records to audit all changes to privilege rules.
+6.1.22	The solution should conform to Auditable Records to audit all changes to other business rules.
+6.1.23	The solution should support the ability to selectively export business rules.
+7.1.1	The solution should use workflow-related business rules to direct the flow of work assignments.
+7.1.2	The solution should provide the ability to create workflow (task list) queues.
+7.1.3	The solution should provide the ability to manage workflow (task list) queues.
+7.1.4	The solution should provide the ability to manage human resources (i.e., personnel lists) for workflow queues.
+7.1.5	The solution should use solution interfaces that support the management of human resources (i.e., personnel lists).
+7.1.6	The solution should use solution interfaces that support the management of workflow (task lists) queues.
+7.1.7	The solution should provide the ability to distribute information to and from internal and external parties.
+7.1.8	The solution should provide the ability to route notifications and tasks based on solution triggers.
+7.1.9	The solution should dynamically escalate workflow according to business rules.
+7.1.10	The solution should dynamically redirect workflow according to business rules.
+7.1.11	The solution should dynamically reassign workflow according to business rules.

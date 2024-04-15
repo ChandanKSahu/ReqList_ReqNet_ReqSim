@@ -1,0 +1,369 @@
+Label	Requirement Statement	Solution Scope	Solution Approach	
+CCHCS 00 Pharmacy General Requirements				
+Pharm 00.001	The solution should provide the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate facilities including  housing units. 	Unknown	Unknown	
+Pharm 00.002	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate and acute care facilities e.g.  licensed hospitals and licensed psychiatric hospital.	Unknown	Unknown	
+Pharm 00.003	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including an emergency department. 	Unknown	Unknown	
+Pharm 00.004	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including long term care/rehabilitation/skilled nursing facilities e.g. licensed elderly care unit, in-patient psychiatric facilities, a hospice unit for AIDS/HIV or terminally ill inmates.	Unknown	Unknown	
+Pharm 00.005	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient medical clinics. 	Unknown	Unknown	
+Pharm 00.006	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient dental clinics.	Unknown	Unknown	
+Pharm 00.007	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including Reception Centers.	Unknown	Unknown	
+Pharm 00.008	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate care mental health.	Unknown	Unknown	
+Pharm 00.009	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including correctional treatment center (CTC).	Unknown	Unknown	
+Pharm 00.010	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including intermediate care mental health.	Unknown	Unknown	
+Pharm 00.011	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including inpatient surgery facilities.	Unknown	Unknown	
+Pharm 00.012	The solution should support the prescribing and ordering, order communication, dispensing, administration, monitoring, formulary and inventory requirements of different types of inmate care facilities including outpatient surgery facilities.	Unknown	Unknown	
+CCHCS 01. Prescribe & Order				
+Pharm 01.001	The solution should support the entering and verification of medication orders.	Unknown	Unknown	
+Pharm 01.002	The solution should provide and interface download from an Offender Management System.	Unknown	Unknown	
+Pharm 01.003	The solution should provide and bi-direction interface to Interface to the EMR using HL7 messaging standard.	Unknown	Unknown	
+Pharm 01.004	The solution should provide an interface to the Central Fill Automation system.	Unknown	Unknown	
+Pharm 01.005	The solution should accept the transmission of prescription data from the EMR's ePrescribing solution.	Unknown	Unknown	
+Pharm 01.006	The solution should accept the transmission of prescription data from CPOE systems.	Unknown	Unknown	
+Pharm 01.007	The solution should accept the transmission of prescription data from EMR systems.	Unknown	Unknown	
+Pharm 01.008	The solution should interface with CPOE systems.	Unknown	Unknown	
+Pharm 01.009	The solution should interface with EHR/EMR systems.	Unknown	Unknown	
+Pharm 01.010	The solution should have a robust CPOE functionality.	Unknown	Unknown	
+Pharm 01.011	The solution should provide the use of a third party database (e.g., American Druggist Bluebook, "DPIF" Drug Product Information File, Medispan, Micromedex).	Unknown	Unknown	
+Pharm 01.012	The solution should provide prescription imaging to capture  prescription orders as electronic images and to link images to the inmate record.	Unknown	Unknown	
+Pharm 01.013	The solution should utilize a rules-based engine that automatically sends scanned order images to the appropriate work list/queue for processing. 	Unknown	Unknown	
+Pharm 01.014	If faxing is utilized, then the scanned image should go directly into the pharmacy system and into the appropriate order entry work queue.	Unknown	Unknown	
+Pharm 01.015	The solution should provide separate fields for 3rd party approval codes (such as is needed for non-formulary approval), allowing for days supply and quantity limitations.	Unknown	Unknown	
+Pharm 01.016	The solution should provide imaging to capture non-formulary approvals as electronic images and to link images to the prescription order within the inmate record.	Unknown	Unknown	
+Pharm 01.017	The  imaging function should utilize a rules based engine and workflow queues to support prescription & order entry.	Unknown	Unknown	
+Pharm 01.018	The solution should allow allergies, weight, and body surface area be entered during order entry.	Unknown	Unknown	
+Pharm 01.019	The solution should display allergies during the order entry and refill process. The information includes all reactions and dates of reaction including those that are classifiable as a true allergy, intolerance, side effect or other adverse reaction to drug, dietary or environmental triggers. Notations indicating whether item is inmate reported and/or provider verified are maintained.	Unknown	Unknown	
+Pharm 01.020	The solution should support the medication reconciliation process by providing on-line and paper-based access to an inmate profile  that allows the staff to see all active, inactive medications for the inmate, as well as any documented allergies. The physician and nursing staff can use these reports to renew, discontinue,  or change existing prescription orders, or to write new prescriptions. 	Unknown	Unknown	
+Pharm 01.021	The solution should display additional inmate information during the order entry process.	Unknown	Unknown	
+Pharm 01.022	The solution should display clinical information (medical/dental) during the order entry process.	Unknown	Unknown	
+Pharm 01.023	The solution should show available laboratory test data during order processing.	Unknown	Unknown	
+Pharm 01.024	The solution should provide access to laboratory data for re-evaluating lab data each time medication is dispensed.	Unknown	Unknown	
+Pharm 01.025	The solution should provide mechanisms for incorporating external clinical data and documentation (including identification of source) as image documents attached to the inmate record.	Unknown	Unknown	
+Pharm 01.026	The solution should allow the rejection of medication ordering and/or dispensing based upon out-of-range lab data.	Unknown	Unknown	
+Pharm 01.027	The solution should provide real time multi-level clinical decision support (for all routes) on the front end of order entry.	Unknown	Unknown	
+Pharm 01.028	The solution should automatically check for drug-fluid compatibility during the order entry process.	Unknown	Unknown	
+Pharm 01.029	The solution should automatically check for drug-drug interaction (for all routes) during the order entry process.	Unknown	Unknown	
+Pharm 01.030	The solution should automatically check for drug-lab interaction (for all routes) during the order entry process.	Unknown	Unknown	
+Pharm 01.031	The solution should automatically check for drug-food interaction (for all routes) during the order entry process.	Unknown	Unknown	
+Pharm 01.032	The solution should automatically check for drug-procedure interaction (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.033	The solution should automatically check for drug-lactation precaution (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.034	The solution should automatically check for drug-pregnancy precaution (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.035	The solution should provide dose range checking by age (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.036	The solution should provide dose range checking by weight  (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.037	The solution should provide dose range checking by disease state  (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.038	The solution should provide interaction screening for drug duplicates  (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.039	The solution should provide interaction screening for therapeutic duplicates  (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.040	The solution should provide alerts that indicate the medication is not vegetarian  (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.041	The solution should provide alerts for short man/tall man (for all routes) during the order entry process.	Unknown	Unknown	
+Pharm 01.042	The solution should provide alerts for sound alike and look alike drugs (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.043	The solution should provide alerts for user-configured business rules (for all routes)  during the order entry process.	Unknown	Unknown	
+Pharm 01.044	The solution should help prevent medication errors by using current JCAHO, ISP, and other widely accepted standards.	Unknown	Unknown	
+Pharm 01.045	The solution should allow CCHCS to prioritize / rank the importance of the interaction and/or warning.	Unknown	Unknown	
+Pharm 01.046	The solution should support the on-line acknowledgement of alerts with override control by authorized users.	Unknown	Unknown	
+Pharm 01.047	The solution should provide an audit trail whenever an interaction is overridden.	Unknown	Unknown	
+Pharm 01.048	The solution should support a reason for an alert override based on CCHCS criteria and/or alert level e.g. allows alerts to be customized according to the level of severity.	Unknown	Unknown	
+Pharm 01.049	The solution should allow alerts to be customized according to CCHCS criteria.	Unknown	Unknown	
+Pharm 01.050	The solution should provide documentation of medication errors and adverse drug reactions.	Unknown	Unknown	
+Pharm 01.051	The solution should automatically suspend order processing and provide on-line notification if any interaction occurs.	Unknown	Unknown	
+Pharm 01.052	The solution should allow interactions to be overridden depending on user's security level.	Unknown	Unknown	
+Pharm 01.053	The solution should provide checking for levels of interaction severity.	Unknown	Unknown	
+Pharm 01.054	The solution should provide on-line pharmacokinetic dosing/assessment.	Unknown	Unknown	
+Pharm 01.055	The solution should automatically check for max/min doses per body weight or body surface area during the order entry process.	Unknown	Unknown	
+Pharm 01.056	The solution should automatically check for maximum fluid rate during the order entry process.	Unknown	Unknown	
+Pharm 01.057	The solution should automatically check for inappropriate administration schedule (e.g., TID for extend release) during the order entry process.	Unknown	Unknown	
+Pharm 01.058	The solution should automatically display side effects during the order entry process.	Unknown	Unknown	
+Pharm 01.059	The solution should display termination date and time of current orders during the order entry process.	Unknown	Unknown	
+Pharm 01.060	The solution should support dose calculations for "odd doses".	Unknown	Unknown	
+Pharm 01.061	The solution should provide on-line programs for vasopressor calculations and flow sheets.	Unknown	Unknown	
+Pharm 01.062	The solution should provide entry of parole/release orders.	Unknown	Unknown	
+Pharm 01.063	The solution should provide on-line entry of tapered orders.	Unknown	Unknown	
+Pharm 01.064	The solution should provide on-line entry of alternating orders.	Unknown	Unknown	
+Pharm 01.065	The solution should provide on-line entry of non-formulary orders.	Unknown	Unknown	
+Pharm 01.066	The solution should provide on-line entry of floor stock orders.	Unknown	Unknown	
+Pharm 01.067	The solution should provide on-line entry of physician standing order sets.	Unknown	Unknown	
+Pharm 01.068	The solution should provide standing order functionality with unlimited number of Meds, IV/LVP, IVPB, etc.	Unknown	Unknown	
+Pharm 01.069	The solution should provide standing order functionality with separate pre-defined fields for all orders.	Unknown	Unknown	
+Pharm 01.070	The solution should provide standing order functionality with compound orders such as a profile composed of separate formulary items.	Unknown	Unknown	
+Pharm 01.071	The solution should provide standing order functionality defined by user mnemonics.	Unknown	Unknown	
+Pharm 01.072	The solution should provide standing order functionality with fractional/multiple dose profiling.	Unknown	Unknown	
+Pharm 01.073	The solution should provide entry of IV/LVP orders including alternating orders.	Unknown	Unknown	
+Pharm 01.074	The solution should provide entry of IV/LVP orders including chemotherapeutic agents.	Unknown	Unknown	
+Pharm 01.075	The solution should provide entry of IV/LVP orders including syringes.	Unknown	Unknown	
+Pharm 01.076	The solution should provide entry of IV/LVP orders including irrigation solutions.	Unknown	Unknown	
+Pharm 01.077	The solution should automatically test for maximum/minimum doses per body weight or body surface area during the order entry process.	Unknown	Unknown	
+Pharm 01.078	The solution should support automatic calculations for total volume of order during the order entry process.	Unknown	Unknown	
+Pharm 01.079	The solution should support automatic calculations infusion rate of order during the order entry process.	Unknown	Unknown	
+Pharm 01.080	The solution should support automatic calculations of total bags/bottles to be administered per time period during the order entry process.	Unknown	Unknown	
+Pharm 01.081	The solution should support nutritional assessment of IV/LVP orders.	Unknown	Unknown	
+Pharm 01.082	The solution should allow for dosage by the hour or bottle IV entry method.	Unknown	Unknown	
+Pharm 01.083	The solution should allow for frequency by hour or bottle IV entry method.	Unknown	Unknown	
+Pharm 01.084	The solution should allow for alternating IV entry method.	Unknown	Unknown	
+Pharm 01.085	The solution should allow for labels set to drip rate IV entry method.	Unknown	Unknown	
+Pharm 01.086	The solution should allow for automatic profiling IV entry method.	Unknown	Unknown	
+Pharm 01.087	The solution should provide the ability to schedule IV/LVP for extended time periods.	Unknown	Unknown	
+Pharm 01.088	The solution should provide the ability to accurately calculate IV/LVP hang times when revising dates.	Unknown	Unknown	
+Pharm 01.089	The solution should provide the ability to add IV/LVP according to alternating solutions.	Unknown	Unknown	
+Pharm 01.090	The solution should provide the ability to add IV/LVP according to SIG.	Unknown	Unknown	
+Pharm 01.091	The solution should provide the ability to add IV/LVP according to route.	Unknown	Unknown	
+Pharm 01.092	The solution should provide the ability to add IV/LVP according to note.	Unknown	Unknown	
+Pharm 01.093	The solution should provide the ability to add IV/LVP according to rate.	Unknown	Unknown	
+Pharm 01.094	The solution should provide the ability to add IV/LVP according to volume.	Unknown	Unknown	
+Pharm 01.095	The solution should provide the ability to add IV/LVP according to solution and additives.	Unknown	Unknown	
+Pharm 01.096	The solution should allow on-line entry of, and updates to, inmate medication profiles from non-pharmacy locations (for example; in the ED, Psychiatric Ward, etc).	Unknown	Unknown	
+Pharm 01.097	The solution should automatically assign prescription control numbers and maintain a prescription number list.	Unknown	Unknown	
+Pharm 01.098	The solution should provide long  and short term skilled nursing facility needs such as flexible physician's orders	Unknown	Unknown	
+Pharm 01.099	The solution should maintain list of all staff physicians and include their DEA number.	Unknown	Unknown	
+Pharm 01.100	The solution should maintain list of all staff physicians and include their Medical license number.	Unknown	Unknown	
+Pharm 01.101	The solution should maintain list of all staff physicians and include their state certificate.	Unknown	Unknown	
+Pharm 01.102	The solution should provide physician order entry of prescriptions.	Unknown	Unknown	
+Pharm 01.103	The solution should display clinical protocols and on-demand printing of protocols.	Unknown	Unknown	
+Pharm 01.104	The solution should provide a TPN/hyperalimentation program (calculation of doses, interactions, pre-set criteria, labels nutritional summary).	Unknown	Unknown	
+Pharm 01.105	The solution should provide piggyback of orders/order explosion.	Unknown	Unknown	
+Pharm 01.106	The solution should provide chemotherapy orders.	Unknown	Unknown	
+Pharm 01.107	The solution should provide ordering of investigational medications.	Unknown	Unknown	
+Pharm 01.108	The solution should provide chemotherapy orders entered by open volume of fluids based on additives.	Unknown	Unknown	
+Pharm 01.109	The solution should provide chemotherapy orders entered by calculation checks body surface area.	Unknown	Unknown	
+Pharm 01.110	The solution should provide chemotherapy orders entered by calculation checks body surface area.	Unknown	Unknown	
+Pharm 01.111	The solution should handle differing dosage of same medication at different times of the day both from an issue and medication administration.	Unknown	Unknown	
+Pharm 01.112	The solution should handle alternating IV's and the appropriate shifting of these IV's for rate adjustment.	Unknown	Unknown	
+Pharm 01.113	The solution should handle TPN's (hyperals) with 18 additives and 24 hour days.	Unknown	Unknown	
+Pharm 01.114	The solution should display medications that have been modified based on inmate's preferences e.g. will only take small blue tablet.	Unknown	Unknown	
+Pharm 01.115	The solution should allow order entry of orders from a centralized location for a single location (institution).	Unknown	Unknown	
+Pharm 01.116	The solution should allow order entry of orders from multiple decentralized locations for a single location (institution).	Unknown	Unknown	
+Pharm 01.117	The solution should allow order entry of orders from a centralized location for multiple locations (institutions).	Unknown	Unknown	
+Pharm 01.118	The solution should provide alerts/reminders when departing from inmate-specific formulary.	Unknown	Unknown	
+Pharm 01.119	The solution should calculate pharmacokinetic parameters for designated drugs.	Unknown	Unknown	
+Pharm 01.120	The solution should support tracking of inmate preferences related to diet, language, religion, spiritual practices and  culture are available  at the point of prescribing and ordering 	Unknown	Unknown	
+Pharm 01.121	The solution should provide rules and alerts related to diet, language, religion, spiritual practices and  culture during the order entry process.	Unknown	Unknown	
+Pharm 01.122	The solution should support order sets based on provider, or other preferences. 	Unknown	Unknown	
+Pharm 01.123	The solution should capture and display the preferences of the inmate (e.g. reluctance to use an antibiotic or specific brand of medication).	Unknown	Unknown	
+Pharm 01.124	The solution should support the ability to indicate prescription status as pill line, nurse observed, medication cart, keep on person,  or other CCHCSspecified status.	Unknown	Unknown	
+Pharm 01.125	The solution should support entering a medication order for a future start date.	Unknown	Unknown	
+Pharm 01.126	The solution should support entering a medication order or a future stop date.	Unknown	Unknown	
+Pharm 01.127	The solution should support putting an order "On Hold" by the pharmacist and tracks the "On Hold" medication based on CCHCScriteria.	Unknown	Unknown	
+Pharm 01.128	The solution should have the ability to interact with clinical problem list when the problem list is codified.	Unknown	Unknown	
+CCHCS 02.  Order Communication				
+Pharm 02.001	The solution should support medication lists including capturing all pertinent dates, including medication start, modification, and end dates are stored.	Unknown	Unknown	
+Pharm 02.002	The solution should provide view of the entire medication history for any medication, including alternative supplements and herbal medications for authorized users.	Unknown	Unknown	
+Pharm 02.003	The solution should provide HIPAA secure two-way on-line communication capability between the pharmacy and physicians, nurses and other clinicians.	Unknown	Unknown	
+Pharm 02.004	The solution should provide the documentation of such secure two-way on-line communication exchanges and provide ability to associate the communication with a specific inmate's record.	Unknown	Unknown	
+Pharm 02.005	The solution should allow the user to defer verification or modification of orders and facilitate secured two-way online communication with the physician or nurse regarding the verification status. 	Unknown	Unknown	
+Pharm 02.006	The solution should allow standard and free form pharmacy notes to be entered.	Unknown	Unknown	
+Pharm 02.007	The solution should provide automated workflow in the distribution process with sequenced orders that guide staff through emergency, high-priority, routine, and batch order fulfillment.	Unknown	Unknown	
+Pharm 02.008	The solution should provide messaging capability notification for instant alert of interventions.	Unknown	Unknown	
+Pharm 02.009	The solution should provide messaging capability notification for instant alert of adverse drug reactions.	Unknown	Unknown	
+Pharm 02.010	The solution should provide messaging capability notification for instant alert of medication errors.	Unknown	Unknown	
+Pharm 02.011	The solution should provide medication reconciliation via the communicating of information to the next provider(s) of care at each transition (e.g., change of location, setting, service, level of care, provider).	Unknown	Unknown	
+Pharm 02.012	The solution should provide the automated discontinue of medications when an inmate is released or deceased.	Unknown	Unknown	
+CCHCS 03. Dispensing				
+Pharm 03.001	This solution should allow dispensing to be performed by a variety of methods e.g. by NDC, patient, facility, building, administration method, etc.	Unknown	Unknown	
+Pharm 03.002	The solution should use bar code readers for dispensing functions and ensures prescriptions are filled accurately by comparing the NDC on the prescription label against the product being dispensed.  	Unknown	Unknown	
+Pharm 03.003	The solution's barcode checking functionality should allow the pharmacy technician or pharmacist  to select another NDC with the same GSN classification from the available inventory (brand-swap).  The brand-swap occurs in the background, the patient record is updated and a new prescription label is printed.  	Unknown	Unknown	
+Pharm 03.004	The solution should require that the new prescription label be barcode-checked before the product can be dispensed.  	Unknown	Unknown	
+Pharm 03.005	The solution should maintain and display inmate medication profiles on-line for a CCHCS specified number of days after release	Unknown	Unknown	
+Pharm 03.006	The solution should support unit dose distribution method.	Unknown	Unknown	
+Pharm 03.007	The solution should support traditional distribution method.	Unknown	Unknown	
+Pharm 03.008	The solution should support floor stock distribution method.	Unknown	Unknown	
+Pharm 03.009	The solution should support refilling of medication orders, including deducting from and tracking of number of refills.	Unknown	Unknown	
+Pharm 03.010	The solution should allow nurses to request prescription refills and the solution validates refill availability and queues refill for filling.	Unknown	Unknown	
+Pharm 03.011	The solution should allow the pharmacist to "push" a refill when there are no more refills.  The system captures the reason for the "refill push" and the pharmacist requesting the refill.	Unknown	Unknown	
+Pharm 03.012	The solution should provide requesting a refill for a medication that can't be refilled until some date in the future. 	Unknown	Unknown	
+Pharm 03.013	The solution should update cart "fill lists" with all types of orders entered (e.g., new, refill, PRN's, suspends, etc.).	Unknown	Unknown	
+Pharm 03.014	The solution should reprint medication and IV "fill lists" and/or labels without recharging a inmate.	Unknown	Unknown	
+Pharm 03.015	The solution provides on-line generation of dose user-defined labels.	Unknown	Unknown	
+Pharm 03.016	The solution should generate batch labels for batch medication dispensing by medication and inventory on demand by authorized user.	Unknown	Unknown	
+Pharm 03.017	The solution should automatically determine location of label printing (e.g., satellite vs. main pharmacy) based on inmate classification and/or location.	Unknown	Unknown	
+Pharm 03.018	The solution should provide immediate printing of all STAT IV admixture requisitions.	Unknown	Unknown	
+Pharm 03.019	The solution should provide immediate printing of all stop/discontinue IV Admixture requisitions.	Unknown	Unknown	
+Pharm 03.020	The solution should provide the ability to set IV label batch prints at pre-defined time periods.	Unknown	Unknown	
+Pharm 03.021	The solution should store prescription refill information on-line and support automatic refill processing.	Unknown	Unknown	
+Pharm 03.022	The solution should provide appropriate "cautionary" information for auxiliary labeling.	Unknown	Unknown	
+Pharm 03.023	The solution should print labels automatically or on demand for prescription orders.	Unknown	Unknown	
+Pharm 03.024	The solution should provide the ability to refill multiple prescriptions from a single profile.	Unknown	Unknown	
+Pharm 03.025	The solution should provide the ability to refill multiple prescriptions from multiple profiles.	Unknown	Unknown	
+Pharm 03.026	The solution should provide long  and short term skilled nursing facility needs including flexible distribution methods.	Unknown	Unknown	
+Pharm 03.027	The solution should provide automatic prescription price comparisons.	Unknown	Unknown	
+Pharm 03.028	The solution should print labels for controlled drug floor stock issues that include serial number.	Unknown	Unknown	
+Pharm 03.029	The solution should print labels for controlled drug floor stock issues that include nursing location.	Unknown	Unknown	
+Pharm 03.030	The solution should print labels for controlled drug floor stock issues that include drug, strength, form.	Unknown	Unknown	
+Pharm 03.031	The solution should print labels for controlled drug floor stock issues that include location (e.g., to be placed on drug box, floor stock sheets, and receipt forms).	Unknown	Unknown	
+Pharm 03.032	The solution should print labels for multi-dose controlled drugs.	Unknown	Unknown	
+Pharm 03.033	The solution should print medication cart filling list that support daily fill e.g. for hospital, SNF setting.	Unknown	Unknown	
+Pharm 03.034	The solution should print stock labels on demand or at a specified time.	Unknown	Unknown	
+Pharm 03.035	The solution should print stock labels with pertinent item data including lot number and expiration date or preparation time.	Unknown	Unknown	
+Pharm 03.036	The solution should provide order prioritization (STAT orders print first).	Unknown	Unknown	
+Pharm 03.037	The solution should support batch order filling at user-defined time periods.	Unknown	Unknown	
+Pharm 03.038	The solution should have a standard bi-directional  interfaces with administration systems e.g. smart pumps, etc.	Unknown	Unknown	
+Pharm 03.039	The solution should provide instrument interfaces to unit dose packaging equipment.	Unknown	Unknown	
+Pharm 03.040	The solution should have a standard bi-directional  interfaces with  automated  preparation and dispensing technologies such as automated dispensing cabinets, robotic IV automation devices, and automated packaging systems.  	Unknown	Unknown	
+Pharm 03.041	The solution should have a standard interface to a send required medication data to a variety of EHR's or CDR for access by clinicians involved in the inmate’s care. Information could include medication lot number, expiration date, and quantity dispensed.	Unknown	Unknown	
+Pharm 03.042	The interfaced solutions should send notifications to the Pharmacy system regarding medication dispensed.	Unknown	Unknown	
+Pharm 03.043	The  interfaced solutions should send notifications to the Pharmacy system regarding medication returned.	Unknown	Unknown	
+Pharm 03.044	The  interfaced solutions should send notifications to the Pharmacy system regarding machine load/unload.	Unknown	Unknown	
+Pharm 03.045	The  interfaced solutions should send notifications to the Pharmacy system regarding inventory count.	Unknown	Unknown	
+Pharm 03.046	The solution must should notifications to the dispensing machine regarding medications ordered for the inmate, and new/deleted drug dictionary entries.	Unknown	Unknown	
+Pharm 03.047	The solution should provide a link between medication administration and dispensing to manage inventories on the location level.	Unknown	Unknown	
+Pharm 03.048	The solution should provide a link between medication administration and dispensing to manage inventories on the site level.	Unknown	Unknown	
+Pharm 03.049	The solution should provide a link between medication administration and dispensing to manage inventories on the facility level.	Unknown	Unknown	
+Pharm 03.050	The solution should provide a link between medication administration and dispensing to manage inventories on the enterprise level.	Unknown	Unknown	
+Pharm 03.051	The solution should record withdrawal of medication from automated dispensing technology to inmate profile  and make available for drug interaction checking.	Unknown	Unknown	
+Pharm 03.052	The solution should provide on-line generation of dose volume labels at order entry.	Unknown	Unknown	
+Pharm 03.053	The solution should provide the ability to print labels in other languages besides English	Unknown	Unknown	
+Pharm 03.054	The solution should provide dual language sigs; with ability to automatically print both languages based on languages entered into The solutions.	Unknown	Unknown	
+Pharm 03.055	The  solution should support providing specific medication instructions for a parole which can be scanned and attached to inmate's record/profile.	Unknown	Unknown	
+Pharm 03.056	The solution should support manifests to track prescriptions to a particular yard, pod, or cell within a prison and generates the manifest reports used in the distribution of prescriptions throughout the facility.  	Unknown	Unknown	
+Pharm 03.057	The solution should support the pharmacist verification of all  medications prior to their being dispensed. 	Unknown	Unknown	
+Pharm 03.058	The solution should provide a Receipt of Medications document for parole medications which can be scanned and attached to inmate's record/profile.	Unknown	Unknown	
+Pharm 03.059	The solution should provide an override function (that requires a reason and the pharmacist's user ID) to dispense a non-authorized/non-formulary medication in special circumstances.  	Unknown	Unknown	
+Pharm 03.060	The solution should permit the partial dispensing of medication for an order and will prompt the pharmacy at the appropriate time of the need to send more medication to complete the order.	Unknown	Unknown	
+Pharm 03.061	The  solution should support a replacement function for lost or stolen meds that doesn't reduce the number of remaining refills.	Unknown	Unknown	
+Pharm 03.062	The solution should provide a report of medications which are due to expire for provider review and renewal.	Unknown	Unknown	
+CCHCS 04. Administration				
+Pharm 04.001	The solution should use bar code readers for the manifest function.	Unknown	Unknown	
+Pharm 04.002	The solution should perform edit checks during the manifesting process to confirm that the medication has been verified, barcode checked, validates that the patient is in the building being manifested, and to ensure that Rx has not be associated with a different manifest.	Unknown	Unknown	
+Pharm 04.003	The solution should provide the option to use bar code readers for medication administration functions.  	Unknown	Unknown	
+Pharm 04.004	The solution should support medication administration records (MARs) and allow updates.	Unknown	Unknown	
+Pharm 04.005	The solution should provide the ability to view MARs in ancillary or interfaced systems.	Unknown	Unknown	
+Pharm 04.006	The solution should display and/or print inmate MARs.	Unknown	Unknown	
+Pharm 04.007	The solution should print an inmate's MAR on demand or at a specified time.	Unknown	Unknown	
+Pharm 04.008	The solution should provide status of orders on-line.	Unknown	Unknown	
+Pharm 04.009	The solution should provide a method of updating and distributing MARs that limits and/or reduces the amount of paperwork received by the nurses.	Unknown	Unknown	
+Pharm 04.010	The solution should provide flexibility in printing and distributing MARs to the nurses e.g. All insulin MARs are printed and distributed by location of where the insulin in dispensed - not the location of the inmate.	Unknown	Unknown	
+Pharm 04.011	The solution should allow an authorized user to set up and maintain rules for that automate the printing and distribution of MARs based on CCHCS criteria.	Unknown	Unknown	
+Pharm 04.012	The solution should allow an authorized user  to design and change the format and information contain on the MARs on a CCHCS as-needed basis.   	Unknown	Unknown	
+Pharm 04.013	The solution should have a robust electronic Medication Administration (eMAR) functionality with the ability to bar code scan a medication against what was ordered and at the same time bar code verify that it is being administered to the correct patient.	Unknown	Unknown	
+Pharm 04.014	The solution should provide automatic assignment of scheduled dosing times (based on CCHCS specifications).	Unknown	Unknown	
+Pharm 04.015	The solution should automatically adjust dosage times when inmate transfers nursing units/facility/etc. based on the CCHCS defined parameters for the locations.	Unknown	Unknown	
+Pharm 04.016	The solution should track and display order status e.g. order completed, order not found, order on hold, order in process, etc.	Unknown	Unknown	
+Pharm 04.017	The solution should provide drug order status of hard/soft stop.	Unknown	Unknown	
+Pharm 04.018	The solution should provide drug order status of active.	Unknown	Unknown	
+Pharm 04.019	The solution should provide drug order status of suspend.	Unknown	Unknown	
+Pharm 04.020	The solution should provide drug order status of hold.	Unknown	Unknown	
+Pharm 04.021	The solution should provide drug order status of cancelled.	Unknown	Unknown	
+Pharm 04.022	The solution should provide drug order status of conditional.	Unknown	Unknown	
+Pharm 04.023	The solution should provide drug order status of reinstated.	Unknown	Unknown	
+Pharm 04.024	The solution should allow routine or one-time orders.	Unknown	Unknown	
+Pharm 04.025	The solution should provide special order scheduling.	Unknown	Unknown	
+Pharm 04.026	The solution should provide default SIGs.	Unknown	Unknown	
+Pharm 04.027	The solution should include a message function for communication with doctors, nurses, etc.	Unknown	Unknown	
+Pharm 04.028	The solution should automatically provide a prescription received signature form, according to inmate type as specified by CPHCS.	Unknown	Unknown	
+Pharm 04.029	The solution should provide long and short term skilled nursing facility  needs such as customized MARs.	Unknown	Unknown	
+Pharm 04.030	The solution should list available outstanding proof-of-use forms sorted by use and/or drug.	Unknown	Unknown	
+Pharm 04.031	The solution should provide QA (drug utilization evaluation, adverse drug reaction, concurrent reporting) functionality and maintains data for a CPHCS-defined period of time.	Unknown	Unknown	
+Pharm 04.032	The solution should generate inmate release medication summary.	Unknown	Unknown	
+Pharm 04.033	The solution should have the capabilities to link NDC's for generically equivalent drugs for the purpose of scanning at inmate administration.	Unknown	Unknown	
+Pharm 04.034	The solution should allow interdepartmental charges by par levels, requesting areas, and usage patterns.	Unknown	Unknown	
+Pharm 04.035	The solution should maintain records of medication instructions for inmates.	Unknown	Unknown	
+Pharm 04.036	The solution should support documentation and update of inmate specific immunization lists with the ability to capture details of immunizations administered including date, type, manufacturer and lot number.	Unknown	Unknown	
+CCHCS 05. Monitoring				
+Pharm 05.001	The solution should display medication and doses since initial orders including suspended and discontinued orders during the order entry process.	Unknown	Unknown	
+Pharm 05.002	The solution should support Medication Error Reporting to create and track incident reports whenever an error occurs related to the fulfillment of a prescription.	Unknown	Unknown	
+Pharm 05.003	The solution should provide STAT medication daily report.	Unknown	Unknown	
+Pharm 05.004	The solution should provide medication on hold or discontinued in a daily report.	Unknown	Unknown	
+Pharm 05.005	The solution should provide automatic stop order in a daily report.	Unknown	Unknown	
+Pharm 05.006	The solution should provide list of all interactions occurring and the action taken (e.g. overrides) to including pharmacist identification in a daily report.	Unknown	Unknown	
+Pharm 05.007	The solution should track controlled substance usage.	Unknown	Unknown	
+Pharm 05.008	The solution should provide controlled substances report by nursing station, inmate and/or physician in a daily report.	Unknown	Unknown	
+Pharm 05.009	The solution should provide alphabetical listing of all controlled substances sorted by DEA classification and their usage levels.	Unknown	Unknown	
+Pharm 05.010	The solution should provide list of all requests for missing doses in a daily report.	Unknown	Unknown	
+Pharm 05.011	The solution should generate and print an inmate's medication/charge summaries during discharge processing.	Unknown	Unknown	
+Pharm 05.012	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by medication.	Unknown	Unknown	
+Pharm 05.013	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by diagnosis.	Unknown	Unknown	
+Pharm 05.014	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by drug class.	Unknown	Unknown	
+Pharm 05.015	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by physician.	Unknown	Unknown	
+Pharm 05.016	The solution should generate and print a list of inmates (in house or paroled) for drug utilization by medical specialty of physician.	Unknown	Unknown	
+Pharm 05.017	The solution should provide the ability to chart medication and IV administration on-line.	Unknown	Unknown	
+Pharm 05.018	The solution should maintain and display inmate/inmate medication profiles.	Unknown	Unknown	
+Pharm 05.019	The solution should provide daily log of vault activity.	Unknown	Unknown	
+Pharm 05.020	The solution should provide drug utilization tracking by drug, dose, diagnosis, age/weight, and physician.	Unknown	Unknown	
+Pharm 05.021	The solution should maintain records of inspections by pharmacy personnel of nursing, stock and other locations.	Unknown	Unknown	
+Pharm 05.022	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by area/location.	Unknown	Unknown	
+Pharm 05.023	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by pharmacist.	Unknown	Unknown	
+Pharm 05.024	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by shift.	Unknown	Unknown	
+Pharm 05.025	The solution should generate reports of workload statistics on preparation of oral solids, oral liquids, IVs, chemotherapy, and number of orders listed by other attributes.	Unknown	Unknown	
+Pharm 05.026	The solution should track adverse drug reactions.	Unknown	Unknown	
+Pharm 05.027	The solution should provide the ability to track clinical interventions.	Unknown	Unknown	
+Pharm 05.028	"The solution should support the recording of an intervention by the pharmacist, what
+drugs were involved, steps of action taken by the pharmacist, and possible effects."	Unknown	Unknown	
+Pharm 05.029	The solution should provide the ability to chart medication and IV administration on-line.	Unknown	Unknown	
+Pharm 05.030	The solution should maintain and display inmate/inmate medication profiles.	Unknown	Unknown	
+Pharm 05.031	The solution should allow a user to report on clinical interventions by intervention category.	Unknown	Unknown	
+Pharm 05.032	The solution should track errors and drug reactions using audit trails, reporting, and documentation.	Unknown	Unknown	
+Pharm 05.033	The solution should restrict validation of orders to authorized personnel only.	Unknown	Unknown	
+Pharm 05.034	The solution should provide a log of all unverified orders in a daily report.	Unknown	Unknown	
+Pharm 05.035	The solution should provide a log of all verified orders by verifier in a daily report.	Unknown	Unknown	
+Pharm 05.036	The solution should maintain inmate specific interactions for the pharmacy and will automatically generate reports for follow up on day scheduled for intervention follow up.	Unknown	Unknown	
+Pharm 05.037	The solution should provide the ability to document clinical interventions, adverse reactions, and progress notes all within the single order processing area.	Unknown	Unknown	
+CCHCS 06. Formulary				
+Pharm 06.001	The solution should allow electronic and manual updating of the formulary.	Unknown	Unknown	
+Pharm 06.002	The solution should provide the ability to maintain/display the formulary with pertinent data by authorized personnel.	Unknown	Unknown	
+Pharm 06.003	The solution should maintain pharmacy formulary that includes dosage form (e.g., tablet, oral, liquid, injection) for each medication.	Unknown	Unknown	
+Pharm 06.004	The solution should maintain pharmacy formulary that includes dispensing form (e.g., ampoule, vial, syringe) for each medication.	Unknown	Unknown	
+Pharm 06.005	The solution should maintain pharmacy formulary that includes generic drug name (or trade name for combination products) for each medication.	Unknown	Unknown	
+Pharm 06.006	The solution should maintain pharmacy formulary that includes trade name(s) or synonyms for each medication.	Unknown	Unknown	
+Pharm 06.007	The solution should maintain pharmacy formulary that includes American Hospital Formulary Service Number for each medication.	Unknown	Unknown	
+Pharm 06.008	The solution should maintain pharmacy formulary that includes therapeutic class name for each medication.	Unknown	Unknown	
+Pharm 06.009	The solution should maintain pharmacy formulary that includes CCHCS-defined attributes for each medication  (i.e., formulary code, generic name, trade name, NDC, and AHFS number, etc.).	Unknown	Unknown	
+Pharm 06.010	The solution should allow user-defined formulary items to be added by authorized personnel.	Unknown	Unknown	
+Pharm 06.011	The solution should accept electronic updates of therapeutics, dosing, interaction and financial data for the drugs in the formulary.	Unknown	Unknown	
+Pharm 06.012	The solution should provide frequent on-line updates of the vendor-provided formulary.	Unknown	Unknown	
+Pharm 06.013	The solution should allow multiple concurrent formularies.	Unknown	Unknown	
+Pharm 06.014	The solution should provide on-line formulary lookup using Soundex search method.	Unknown	Unknown	
+Pharm 06.015	The solution should provide formulary building and maintenance with ease of use.	Unknown	Unknown	
+Pharm 06.016	The solution provides a pre-populated formulary using First Data Bank or  other vendor.	Unknown	Unknown	
+Pharm 06.017	The solution should not require system downtime for formulary maintenance.	Unknown	Unknown	
+Pharm 06.018	The solution should not limit system functionality during formulary maintenance.	Unknown	Unknown	
+Pharm 06.019	The solution should provide designation of vitamins, minerals, etc. on the formulary.	Unknown	Unknown	
+Pharm 06.020	The solution should allow automatic substitution of drugs by authorized users.	Unknown	Unknown	
+Pharm 06.021	The solution should provide alerts whenever a substitution of drugs has occurred.	Unknown	Unknown	
+Pharm 06.022	The solution should allow an authorized user to flag a medication as "Do not substitute"  e.g. substitution never allowed for  the no sugar/no alcohol mouthwash.  	Unknown	Unknown	
+Pharm 06.023	The solution should provide display of compound medications within the formulary.	Unknown	Unknown	
+Pharm 06.024	The solution should provide designation of natural/homeopathic on the formulary.	Unknown	Unknown	
+Pharm 06.025	The solution should provide designation of clinical trails on the formulary.	Unknown	Unknown	
+CCHCS 07.  Inventory				
+Pharm 07.001	The solution should provide inventory control for multiple facilities, with each having their own inventory database.	Unknown	Unknown	
+Pharm 07.002	The solution should provide inventory control for multiple locations within a facility. 	Unknown	Unknown	
+Pharm 07.003	The solution should provide the option to use bar code readers for inventory management functions.  	Unknown	Unknown	
+Pharm 07.004	The solution should support perpetual inventory.	Unknown	Unknown	
+Pharm 07.005	The solution should have a standard bi-directional interface to a variety of  storage and retrieval systems that automate and manage inventory throughout the receiving, storage, retrieval, and distribution process.	Unknown	Unknown	
+Pharm 07.006	The solution should maintain and display vendor file.	Unknown	Unknown	
+Pharm 07.007	The solution should provide on-line entry of stock received, adjusted, and transferred.	Unknown	Unknown	
+Pharm 07.008	The solution should provide a direct interface with drug wholesaler information systems.	Unknown	Unknown	
+Pharm 07.009	The solution should allow a manual correction to a count of an item in inventory by increasing or decreasing the item’s on hand quantity.	Unknown	Unknown	
+Pharm 07.010	The solution should offer a Return to Stock function.	Unknown	Unknown	
+Pharm 07.011	The solution should track and maintain minimum and maximum inventory levels.	Unknown	Unknown	
+Pharm 07.012	The solution should identify the primary vendor or manufacturer of inventory items.	Unknown	Unknown	
+Pharm 07.013	The solution should flag drugs when their user-defined critical order levels are reached.	Unknown	Unknown	
+Pharm 07.014	The solution should allow electronic ordering from prime vendors using an X.12 interface.	Unknown	Unknown	
+Pharm 07.015	The solution should prepare purchase orders based on inventory levels, usage and other reorder criteria.	Unknown	Unknown	
+Pharm 07.016	The solution should provide automatic or on demand generation of purchase orders.	Unknown	Unknown	
+Pharm 07.017	The solution should provide purchase order reconciliation electronically and manually.	Unknown	Unknown	
+Pharm 07.018	The solution should alert the user of discontinued, back ordered, non-formulary, etc drug orders at the point of ordering from the vendor.	Unknown	Unknown	
+Pharm 07.019	The solution should provide a process to quickly order back-ordered, discontinued drugs, etc.  from another vendor or manufacturer.	Unknown	Unknown	
+Pharm 07.020	These solution should allow inventory updates electronically and manually from sources determined by CCHCS.	Unknown	Unknown	
+Pharm 07.021	The solution should allow automatic updates for inventory data via multiple sources as determined by CCHCS.	Unknown	Unknown	
+Pharm 07.022	The solution should provide flexibility in how items are deducted from inventory and supports concurrent multiple methodologies within the same facility.	Unknown	Unknown	
+Pharm 07.023	The solution should maintain pricing data for all formulary and non-formulary items.  	Unknown	Unknown	
+Pharm 07.024	The solution should support electronic and manual pricing updates.	Unknown	Unknown	
+Pharm 07.025	The solution should provide user-definable pricing formulas to copy existing pricing formulas to create new ones.	Unknown	Unknown	
+Pharm 07.026	The solution should track prices based on AWP, Bid, or MAC price.	Unknown	Unknown	
+Pharm 07.027	The solution should provide a price modeling function to analyze the impact of price structure changes before implementation.	Unknown	Unknown	
+Pharm 07.028	The solution should support entry of pricing information and choice of a "charge" algorithm e.g. minimum charge, handling fees, percent markups, etc. 	Unknown	Unknown	
+Pharm 07.029	The solution should assign lot numbers for prepared medication packages.	Unknown	Unknown	
+Pharm 07.030	The solution should support and track controlled medication inventory levels.	Unknown	Unknown	
+Pharm 07.031	The solution should maintain "vault" records for controlled medications.	Unknown	Unknown	
+Pharm 07.032	The solution should support fractional inventory calculation, user definable at time of order entry.	Unknown	Unknown	
+Pharm 07.033	The solution should provide inventory valuation based on CCHCS criteria.	Unknown	Unknown	
+Pharm 07.034	The solution should support on demand inventory valuation.	Unknown	Unknown	
+Pharm 07.035	The solution should print pharmacy inventory audit/cycle count  worksheet listing drug data, quantity-on-hand and last audit/verification date.	Unknown	Unknown	
+Pharm 07.036	The solution should track departmental (or other types) requisitions with printed monthly transaction statements.	Unknown	Unknown	
+Pharm 07.037	The solution should support floor stock medication or bulk stock inventory control.  	Unknown	Unknown	
+Pharm 07.038	The solution should support daily floor stock or bulk stock medication lists on demand or at a user-defined time.	Unknown	Unknown	
+Pharm 07.039	The solution should support complete floor stock usage tracking, charging, and statistical reporting.	Unknown	Unknown	
+Pharm 07.040	The solution should print prepackaging log and inventory transfers.	Unknown	Unknown	
+Pharm 07.041	The solution should support the ability to check in inventory received from another store and to automatically update the inventory levels.	Unknown	Unknown	
+Pharm 07.042	The solution should support the ability to transfer inventory received to another store and to automatically update the inventory levels. 	Unknown	Unknown	
+Pharm 07.043	The solution should track drugs returned to manufacturer or wholesalers.	Unknown	Unknown	
+Pharm 07.044	The solution should track physician-prescribing patterns.	Unknown	Unknown	
+Pharm 07.045	The solution should generate spoilage report for outdated inventory.	Unknown	Unknown	
+Pharm 07.046	The solution should track wholesaler performance.	Unknown	Unknown	
+Pharm 07.047	The solution should maintain data on drugs borrowed from and loaned to other institutions.	Unknown	Unknown	

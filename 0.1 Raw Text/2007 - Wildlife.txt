@@ -1,0 +1,841 @@
+
+ 
+ 
+Software Requirements 
+Specification  
+Wildlife Areas Habitat Conservation Plan  
+Activities Management Application 
+Version 1.1  
+May 10, 2007 
+        
+Prepared by:  
+GeoNorth LLC 
+ 
+ Prepared for: 
+Washington Department of Fish and Wildlife 
+
+ 
+Document Revision History 
+Version Date Description 
+1.0 4/05/07 Document Template Created. 
+1.0.1 4/10/07 First Draft Development 
+1.0.2 4/10/07 Internal Draft Review Work 
+1.0.3 4/11/07 WADFW Initial Review 
+1.0.4 4/13/07 Preliminary Draft SRS 
+1.0.5 5/1/07 Draft SRS 
+1.0.6 5/3/07 Associ ate/Link Updates 
+1.0.7 5/4/07 Review with WADFW and Database Update 
+1.0.8 5/10/07 WADFW Final Draft SRS Review 
+1.1 5/10/07 Final SRS Document 
+ 
+ 
+Table of Contents 
+1. Introduction .................................................................................................................. ........................ 1  
+1.1. Purpose ....................................................................................................................... ........... 1  
+1.2. Project Scope ................................................................................................................. ........ 1  
+2. Overall Descr iption ........................................................................................................... ................... 2  
+2.1. Product Perspective ........................................................................................................... .... 2 
+2.2. Product F eatures .............................................................................................................. ...... 2  
+2.3. User Classes and Ch aracteristics .......................................................................................... 3  
+2.4. Operating En vironment ......................................................................................................... . 4 
+2.5. Design and Implementati on Constraints ................................................................................ 4  
+2.6. User Documentation and Technical Su pport ......................................................................... 5  
+2.7. Assumptions and D ependencies ............................................................................................ 5  
+2.8. Transaction En vironment .......................................................................................................  5 
+3. Data Requi rements ............................................................................................................. ................ 6  
+3.1. Data Requi rements ............................................................................................................. ... 6 
+4. Functional R equirements ....................................................................................................... ............. 7  
+4.1. Create Activity  Features ...................................................................................................... ... 7 
+4.2. Edit Activity Features ............................................................................................................ 10  
+4.3. Query Activity  Features ....................................................................................................... . 11 
+4.4. Delete/Archive Acti vity Features .......................................................................................... 12  
+4.5. Navigation F eatures ........................................................................................................... .. 12 
+4.6. Disconnect Activi ty Geodataba se ........................................................................................ 13  
+4.7. Reconnect Activity  Geodataba se ......................................................................................... 14  
+5. Non-functional Requirements ................................................................................................... ......... 16  
+5.1. User Inte rfaces ............................................................................................................... ...... 16  
+5.2. Performance Re quirements ................................................................................................. 16  
+Appendix A:   Physical Database Model ................................................................................................ 17  
+Appendix B:   Requirements I dentifiers .................................................................................................. 18  
+Appendix C:   Activities Data M odel Descrip tion .................................................................................... 19  
+Appendix D:   Issues List .................................................................................................................. ...... 21  
+Appendix E:   Document Sign Off ........................................................................................................... 22 
+ 
+SRS v1.1.doc - 1 - Printed on: 5/11/2007 10:03:00 AM 1. Introduction 
+1.1. Purpose 
+This Software Requirements Specification (SRS ) describes the functional and nonfunctional 
+requirements for Release 1.0 of the Habitat C onservation Plan’s (HCP) Activities Management 
+Application.  Members of the project team that will implement and verify correct functioning of the 
+system will use this document as a guide.  Un less otherwise noted all requirements specified 
+here are Mandatory and committed for Release 1.0. 
+1.2. Project Scope 
+As part of the Habitat Conservation Plan developmen t, this phase of the project activity focuses 
+on the development and implementation of an ac tivities management application.  This 
+application is needed by the WDFW to insure cons istent collection and management of activity 
+information associated with t he HCP process.  The applicat ion will utilize a standardized 
+database schema and an easy to use interface for the collection of habitat activity data.  This 
+project represents the first phase of a series of  applications and databases designed to interact 
+with the HCP database model.   
+ 
+SRS v1.1.doc - 2 - Printed on: 5/11/2007 10:03:00 AM 2. Overall Description 
+2.1. Product Perspective 
+The product developed will provide additional  functionality working within the ArcMap 
+environment allowing the user to query, create , edit, import and attribute Activity features.  
+The product will simplify and standardize the data management and maintenance associated with 
+Activities.  The goal is to provide a system where necessary information can be easily captured 
+for use in future HCP related analysis. 
+ 
+2.2. Product Features 
+The main tasks the syst em will perform are to: 
+ Standardize the collection of Activities in  a single enterprise database (Mandatory) 
+ Allow the easy collection of the Activities data  (Mandatory) 
+ Help standardize data collection,  management, and data entry (Mandatory) 
+ Create, Modify, Import, Delete Ac tivity features (Mandatory) 
+ Create New Activity Classes (Mandatory) 
+ Compatible with Activities Database Model (Mandatory) 
+ Standardize projection system (Mandatory) 
+ Minimal attribution by user  - Auto Populating Data (Mandatory) 
+ Feature class editing - Point, Line, Polygon (Mandatory) 
+ Associate Activity features with ot her Activity features (Mandatory) 
+ Track events (Mandatory) 
+ Easy navigation for the User (Mandatory) 
+ Define Associated Activities without mapping (unmapped activities) (Mandatory) 
+ Report if activity records are complete (Mandatory) 
+ Disconnected editing environment - Da ta export processes (Mandatory) 
+ User Auditing at Feature Level - Attribute le vel and historical Geodatabase tables (Highly 
+Desirable) 
+ Search functionality - Attribute,  Location (Highly Desirable) 
+ Analysis done by WDFW regions (Highly Desirable) 
+ Lookup tables for easy data entry (Highly Desirable) 
+ Export to Excel spreadsheets (Highly Desirable) 
+ 
+          
+ 
+SRS v1.1.doc - 3 - Printed on: 5/11/2007 10:03:00 AM 2.3. User Classes and Characteristics 
+User Class Characteristics 
+GIS novices (favored) This category of users is the most prominent in the Regions 
+based on the interview results.  The HCP Activities Management 
+Application will need to consider the limited GIS training and 
+experience of these users.   
+GIS professionals Although the application will be mainly designed for the GIS 
+novices, it will also need to allo w the GIS professi onals in these 
+Regions to utilize their knowledge and GIS skills without being 
+constrained by the HCP Activities  Application functionalities. 
+ 
+SRS v1.1.doc - 4 - Printed on: 5/11/2007 10:03:00 AM 2.4. Operating Environment 
+OE-1 The software application developed shall reside on the DFW desktop computers of the 
+application’s primary users. 
+OE-2 The system input data shall reside in the DFW SQL (SQL Server) database environment 
+and in a detached user (ACCESS) database environment. 
+OE-3 The system shall operate within and be compatible with the DFW network environment. 
+OE-4 The system shall be compatible with th e current DFW minimum desktop configuration 
+hardware and software standards, as defined below: 
+Environment Standards 
+Desktop Operating System: Microsoft Windows 2000 SP4 or XP 
+Directory Services: LDAP 
+GIS: ArcGIS 9.2 
+GIS License: ArcView or Better ArcGIS Editor 
+Disconnected Database Types: Personal (MS Access) 
+Email: Groupwise (Outlook soon) 
+Office Applications: Microsoft Office (2000) 
+ArcSDE: ArcSDE 9.1 (ArcSDE 9.2 soon) 
+SQL Server Version 2000 (Migrating to 2005 soon) 
+2.5. Design and Implementation Constraints 
+CO-1 The system shall be developed in ArcGIS 9.2 and available as an extension on the DFW 
+network. 
+CO-2 The system shall be developed using VB.NET for .NET 2.0 framework with Windows user 
+interfaces. 
+ 
+CO- 3    Application development will adhere to  the model-view-controller architectural pattern. 
+This pattern serves to separate data (model) and user interface (view) concerns, so that 
+changes to the user interface do not affect  the data handling, and that the data can be 
+reorganized without changing the user interf ace. Adhereing to the model-view-controller 
+pattern will decouple data access and busine ss logic from data presentation and user 
+interaction, by introducing an intermediate component: the controller. 
+ 
+CO- 4   Variables will be created using camel case (creating compound words or phrases in which 
+the words are joined without spaces and are capitalized within the compound with the first 
+letter of the variable lowercase).  
+ CO- 5   Variables referencing ArcObjects com classes, interfaces, or objects will not be 
+abbreviated and will be dimensioned using a ca mel case naming convention. Do not use 
+pointers such as m_p or g_p as a prefix to ArcObjects classes/interfaces. 
+  
+CO- 6    Do not use prefixes to variables such as int, str, lng, etc. 
+ 
+CO-7    In-line documentation for coding, flow chart and/or diagram – what each module does, 
+who did it and when it was done 
+ 
+ 
+SRS v1.1.doc - 5 - Printed on: 5/11/2007 10:03:00 AM CO-8    Methods, procedures and functions will be sufficiently commented to support 
+maintenance programmers with easily under standing the logic and purpose of the 
+routines. 
+CO- 9    Once delivered, code will to be managed through WDFW’s CVS repository 
+2.6. User Documentation and Technical Support 
+UD-1  The user documentation (Help and Tutorial ) shall be available as a separate electronic 
+document (PDF) which can be opened from within the system. 
+UD- 2    The user documentation will use screen captures of application interfaces to illustrate 
+methods and procedures. 
+2.7. Assumptions and Dependencies 
+AD-1 The Department of Fish and Wildlife shall provide leadership and support to successfully 
+implement the HCP Activities Management Tool in the department. 
+AD-2 The users of the HCP Activities Managem ent Tool shall have basic knowledge/training of 
+ArcGIS and its editing functions (spatial and tabular edits). 
+AD-3 Administrative tools for managing lookup tables will be provided (Based on budget 
+approval). 
+AD-4 The initial application will allow users to only archive (not delete) records.   
+AD-5 The application will be developed to accommodate 3 Event types (O&M, Recreation, and 
+E&R) for 3 feature types resulting in 9 Activity feature classes. 
+2.8. Transaction Environment 
+TE-1 The application will directly work with SQL server for tabular data transactions. 
+TE-2 The application will directly work with ArcSDE for Spatial Data transactions. 
+TE-3 The application will work in any ArcSDE versioning environment.  Users will be required 
+to use the appropriate SDE connection to be within the database’s configured 
+transactional environment. 
+ 
+  
+ 
+ 
+ 
+SRS v1.1.doc - 6 - Printed on: 5/11/2007 10:03:00 AM 3. Data Requirements 
+3.1. Data Requirements 
+DR-1 The system shall use corporate data loca ted on SQLUSR1 (database) as the default data 
+source location, unless specified otherwise by the user. 
+DR-2  The user or system administrator shall be  responsible for managing data in lookup tables 
+in the Activities Record Database. 
+DR-3 The database shall be stored in a SQL Server environment. 
+DR-4 The application must work with t he database model specified in Appendix A. 
+   
+  
+ 
+ 
+SRS v1.1.doc - 7 - Printed on: 5/11/2007 10:03:00 AM 4. Functional Requirements 
+The features listed below describe the functional requ irements for the Activities Management Application, 
+Release 1.0.  The priority of each feature is identif ied as either Mandatory or Highly Desired.  Highly 
+Desired requirements will be implemented only if they are deemed feasible in the design phase and fit 
+within the project time and cost constraints.  As an aid to understand the system  functionalities, please 
+consult the WDFW Activities Data Model Description  in Appendix C.  
+4.1. Create Activity Features  
+4.1.1. Description and Priority 
+This section describes the processes involved with the creation of new activity feature classes in 
+the Activities Management Tool.  Users will choo se the Activity Event Type, the Activity, and 
+related activity types and features.  (Mandatory) 
+ 
+4.1.2. Stimulus/Response Sequences 
+Stimulus: User clicks on button to launc h the Activity Feature Management Tool. 
+Response: The system will load a window form for data entry.  The form will auto fill 
+dropdown tools with data stored in application lookup tables. 
+ 
+Stimulus: User initiates the application for the first time. 
+Response: The system will prompt the user to set the default values for confidence and 
+methods sources. 
+ 
+Stimulus: User uses query tools to navigate to a location on the map. 
+Response: The system will navigate the us er to the selected feature location. 
+ 
+Stimulus: User chooses the activity edit type (tabular or spatial) prior to editing. 
+Response: The system will set the edit environment based upon the type of activity edit.  
+ 
+Stimulus: When a spatial edit is selected, the user digitizes the new activity from scratch 
+or copies a feature from an existing layer.   (See requirements) 
+Response: System creates a new activity feat ure and prompts the user if he/she wants to 
+digitize another. 
+ 
+Stimulus: When a tabular edit is selected, t he user creates an activity record without 
+creating spatial data. 
+Response: The system will creat e and track the pending activi ty record in the database. 
+ 
+Stimulus:  
+User chooses Event Type and creates a new activity record. 
+Response: The system creates a new activity record based on the activity event type, sets 
+the default values in the form. 
+ 
+Stimulus: User enters data in the form  using text boxes and dropdown boxes. 
+Response: 
+ Stimulus: 
+Response: The system will require th e confidence source to be set when entering data. 
+ The user adds occurrence data connected with an activity. 
+The tool will record and manage occurrence record connected to the activity 
+record.  
+Stimulus: The user creates an activity record prior to creating spatial data. 
+Response: The tool will create a new activity record without linked spatial data. 
+ 
+ 
+SRS v1.1.doc - 8 - Printed on: 5/11/2007 10:03:00 AM  
+Stimulus: The user selects a spatial feature and then links existing spatial data to an 
+activity record. 
+Response: The tool will set the Activity Record  Id in the selected spatial feature to the 
+Activity Record Id creating a linked relationship. 
+ 
+Stimulus: The user unlinks selected spatial data to an activity record. 
+Response: The tool will set the Activity Record  Id in the selected feature to NULL to unlink 
+the spatial record with the activity record.  
+Stimulus: User defines activity (ies) that ar e associated with the current editable activity 
+record.  
+Response: The system will store the list of activi ty (ies) associated with  the activity feature 
+in a database table.  All currently selected features are unselected. 
+ 
+Stimulus: The user optionally creates records for associated activities (if not completed 
+already) 
+Response: The system saves the current editabl e record and starts a new edit session for 
+the new activity.  For those associated ac tivities that records are not created 
+are displayed on the “To Do” list.  
+Stimulus: The user associates activities that  are recorded to the current editable Activity 
+Record. 
+Response: The tool will record the associatio n of a activity reco rds with the selected 
+features on the map.  In the case of co incidental features in a selection, the 
+user will be required to use existing t ools in ArcGIS to deselect unwanted 
+records. 
+ 
+Stimulus: The user unassociates activity records assign to an activity. 
+Response: The tool will unasso ciate selected spatial activity  records by archiving the 
+spatial activity association records in the database.  
+Stimulus: User edits the confidence source of the activity record. 
+Response: The tool overrides the default value in the current record.   
+ 
+Stimulus: User selects the option to duplicate the spatial feature and/or attributes of the 
+activity record for the next new feature. 
+Response: The system will create a new feat ure by duplicating spat ial features and/or 
+duplicate attribute records.  
+Stimulus: User chooses which fields (attri butes) to be propagated into a new record. 
+Response: The system will propag ate the selected field attribut e values to the next record 
+created.   
+ 
+Stimulus: User clicks on t he Edit Session close button. 
+Response: The system will save all edits in t he activity table, feat ure class, and related 
+tables.  
+4.1.3. Functional Requirements 
+Create.Form The tool shall provide an easy  to use form for the attribution of 
+an activity feature.  This form should be used for querying 
+(section 4.3) and editing (section 4.2) functionality as well. 
+Create.Type.Selection The tool shall allo w the selection of Activity Event Type. 
+Create.Data.Type The tool shall allow the creation of point, line, or polygon 
+features. 
+ 
+SRS v1.1.doc - 9 - Printed on: 5/11/2007 10:03:00 AM Create.Data.Multipart The user shall not be allowed to create multi-part feature 
+classes, only discreet features.   
+Create.Tools.Edit The tool shall use the existing editing tools provided by ArcGIS 
+Desktop. 
+Create.Tools.Add The tool shall allow the user to create multiple feature types for 
+an activity record. 
+Create.Tools.Copy The tool shall provide t he functionality to import existing spatial 
+data features into the new activity feature. 
+Create.Dates.Calendar The tool shall provide a calendar control for the selection of date 
+attribute information. 
+Create.Metrics.Selection The tool shall prov ide “smart” controls that only provide the 
+appropriate metric denominator based upon a type. 
+Create.Feature.Duplicate The tool shall provi de the ability to duplicate spatial and attribute 
+data from one feature/record to a new feature/record. 
+Create.Associations.Define The tool shall provi de the user the ability to define the activity 
+features based upon the assigned activity associations. 
+Create.Associations.Assign  The tool shall provide the user t he ability to assign subordinate 
+activities (sub-activities) wi th the newly created feature. 
+Create.Associations.Unassign  The tool shall prov ide the user the ability to unassign subordinate 
+activity relationships.. 
+Create.Link.Assign The tool shall allow the user to assign multiple spatial features 
+with a single activity. 
+Create.Link.Unassign The tool shall allow the user to unassociate spatial activity 
+records that are associated with a single activity record. 
+Create.Occurences.Assign The tool shall pr ovide an interface for the user to assign 
+occurrence information.  
+Create.Occurences.Frequency The tool shall aut omate the creation of multiple records when 
+dealing with frequency. 
+Create.Confidence.Enable The tool shall require  the confidence source (and if necessary 
+names) be assigned anytime beginning and end dates, number of day, frequency and effort (e.g., lbs/acres) are entered. 
+Create.Dropdown.Values The tool shall automatic ally complete dropdown forms in the tool 
+with values stored in an application lookup tables. 
+Create.Creation.Date The tool shall auto-populat e the Creation Date field in the activity 
+feature class. 
+Create.Creation.By The tool shall auto-popul ate the Create By field in the activity 
+feature class.  The name should be retrieve from the system 
+user name. 
+Create.Modification.Date The tool shall auto-populate the Modification Date field in the 
+activity feature class.  This should be the same as the Creation 
+Date field value when a feature is created. 
+Create.Modifcation.By The tool shall auto- populate the Modification By field in the 
+activity feature class.  This should be the same as the Creation 
+By field value when a feature is created. 
+Create.Confidence.Source The tool shall auto- populate and/or provide functionality for the 
+user to reference the confidence source for an activity record. 
+Create.Manage.Links The tool shall provide t he user with the ability to identify records 
+that do not have spatial features linked to an activity record. 
+Create.Manage.Display The tool shall provide t he user with the ability to visual see in the 
+map frame spatial features that do not have activity records associated with them. 
+ 
+SRS v1.1.doc - 10 - Printed on: 5/11/2007 10:03:00 AM Create.Manage.Attributes The tool shall prov ide an easy to use interface (checkboxes) for 
+the user to select attributes to propagate to a new record.  When 
+a new record is created with this option, the application will auto-
+fill the edit form.  The application will only store this propagated information for the next record created. 
+Create.Requirement.Attributes The tool shall only allow the user to save and complete an 
+activity record if all the “Required” attributes are completed. 
+ 
+ 
+4.2. Edit Activity Features  
+4.2.1. Description and Priority 
+This section describes the editing of Activity f eatures in the Activities Management Tool. Edit 
+functionality found in the Create Activity features  (Section 4.1) will also be available in an edit 
+mode. (Mandatory)  
+4.2.2. Stimulus/Response Sequences 
+Stimulus: The user selects the tabular Activity feature to edit. 
+Response: The tool shall set the edit envir onment to the appropriate Activity tabular 
+record, display the form with the current record information. In the event when 
+more than one feature or record is  selected, the form must provide a 
+mechanism to navigate between records. 
+ 
+Stimulus: The user selects a spatial Activity Feature to edit. 
+Response: The tool should set the edit featur e to the selected spatial Activity Feature. 
+ 
+Stimulus: The user uses a standardized form to edit feature attribution. 
+Response: The tool should allow the editing of  a selected activity feature attribute data in 
+a standard form. 
+  
+Stimulus: The user uses spatial tools to modify  the spatial features of the activity record. 
+Response: The tool should activate the ArcGIS Editing tools for the user. 
+  
+Stimulus: The user queries for the Activity Feature to edit. 
+Response: The tool should provide tools fo r querying activity data and navigate to that 
+query result.  (See section 4.3) 
+ 
+4.2.3. Functional Requirements 
+ 
+Edit.Functionality.Other The tool shall provi de the same functionality found in the create 
+feature functionality.(Section 4.1) 
+Edit.Form.Functionality The tool shall allow the user to perform edits in the same form as 
+adding and querying data. 
+Edit.Select.Spatially The system shall prov ide the user with the ability to select 
+activity features through a spatial enabled user interface. 
+Edit.Select.Attribute The tool shall provide t he user with a method to select an activity 
+feature based upon its attribute values. 
+Edit.Modification.Date The tool shall auto-populate the Modification Date field in the 
+activity feature class.   
+Edit.Modifcation.By The tool shall auto-po pulate the Modification By field in the 
+activity feature class.   
+ 
+SRS v1.1.doc - 11 - Printed on: 5/11/2007 10:03:00 AM  
+4.3. Query Activity Features  
+4.3.1. Description and Priority 
+This section describes the query functionality r equired by the Activities Management Tool.  
+(Mandatory) 
+ 
+4.3.2. Stimulus/Response Sequences 
+Stimulus: The user selects values in the edit form. 
+Response: The system will automatically filter  the activity feature database with values 
+selected by the user.  
+ 
+Stimulus: The user uses the location query tool to query data. 
+Response: The system will automatically filter the activity form with the selected features. 
+  
+Stimulus: The user may use the ArcGIS  attribute query tool to query data. 
+Response: The system will automatically filter the activity form with the selected features. 
+  
+Stimulus: The user uses the ArcGIS s patial selection tool to query data. 
+Response: The system will automatically filter the activity form with the selected features. 
+  
+Stimulus: The user selects more t han one feature or activity record. 
+Response: The tool should provide basic VCR style record navigation.  (See section 4.3) 
+ 
+ 
+4.3.3. Functional Requirements 
+ 
+Query.Form.Functionality The tool shall allow the user to perform edits in the same form as 
+adding and querying data. 
+Query.Controls.Query The tool shall perform  a query of the activity data when a user 
+selects a value from a dropdow n list and when a user enters a 
+value in a text box. 
+Query.Controls.Navigation The tool shall provide controls that provide the easy navigation of 
+a selected set of records. 
+Query.Controls.Feature The tool shall zoom to  and highlight the current activity record 
+displayed in the query/edit form if linked to spatial data. 
+ 
+SRS v1.1.doc - 12 - Printed on: 5/11/2007 10:03:00 AM  
+4.4. Delete/Archive Activity Features  
+4.4.1. Description and Priority 
+This section describes the deleti on/archiving processes involved with the Activities Management 
+Tool.  For budget purposes, the tool will onl y provide archiving functionality.  (Mandatory) 
+ 
+4.4.2. Stimulus/Response Sequences 
+Stimulus: The user clicks on a button to delete a record. 
+Response: The system shall set the archive flag for the Activity record, archives the 
+associations, and archives the linked spat ial features.  The result will be to 
+prevent the record/feature from drawin g or be captured by spatial and tabular 
+queries. 
+ 
+Stimulus: The user deletes spatial feature during an edit session. 
+Response: The system will set the archive flag fo r the spatial feature.  The result will be to 
+prevent the feature from drawing or be captured by spatial and tabular queries. 
+ 
+4.4.3. Functional Requirements 
+Delete.Feature.Archive The tool shall change t he archive field in the Activity Feature and 
+other associated table records to TRUE. 
+Delete.Feature.Definition All F eature Layers shall have a Definition Query setup with the 
+Archive set to FALSE. 
+Delete.Feature.Unarchive The tool shall allow t he unarchiving of activity records that meet 
+a specified criteria (i.e. not a mistake). 
+ 
+4.5. Navigation Features  
+4.5.1. Description and Priority 
+This section describes the navigation features  provided with the Activity Management Tool. 
+Mandatory) 
+ 
+4.5.2. Stimulus/Response Sequences 
+Stimulus: The user navigates the ma p with spatial navigation tools. 
+Response: The system will provide basic zoom and pan navigation.  
+ 
+Stimulus: The user navigates to features through the Attribute Form. 
+Response: The system will query  and navigate to the queried fe ature. (See section4.3).  
+ 
+4.5.3    Functional Requirements 
+Navigate.Map.Tools The tool shall provide access to basic navigation tools found in 
+ArcGIS. 
+Navigate.Map.Query The tool shall provide ma p navigation to select spatial features 
+when a query is performed in the edit form. 
+ 
+SRS v1.1.doc - 13 - Printed on: 5/11/2007 10:03:00 AM  
+4.6. Disconnect Activity Geodatabase 
+4.6.1. Description and Priority 
+This section describes the functionality of creatin g a “disconnected” Activity Geodatabase for field 
+use.  The tool should provide a disconnected G eodatabase, application specific database tables, 
+and ArcGIS Map Document.  (Mandatory)  
+4.6.2. Stimulus/Response Sequences 
+Stimulus: User clicks on button to  create a disconnected database. 
+Response: The system will prompt the user for the file directory location of the exported 
+database.  
+Stimulus: User provides a name for the exported project. 
+Response: The system will create a folder in the selected file directory with the name 
+specified by the user. 
+ 
+Stimulus: User selects the location and clicks ok. 
+Response: The system will run processes that will generate a disconnected environment 
+of the Activity Management tool based on the visual extent of the map displayed in ArcGIS. 
+ 
+4.6.3. Functional Requirements 
+Disconnect.Location.Directory The tool shall prompt the user for the output directory. 
+Disconnect.Location.Folders The tool shall creat e a new folder in the output directory.  The 
+directory will have the name specif ied by the user as well as a 
+date stamp.  (ex. MYPROJECT_041007) 
+Disconnect.Data.Geodatabase The tool shall create a copy of the Geodatabase data in a 
+personal Geodatabase in the output folder location.  
+Disconnect.Data.OtherTables The t ool shall copy the primary and lookup tables in the activities 
+database to the disconnected database. 
+Disconnect.Data.BaseData  The tools will not clip or select  out base data pr ovided in the 
+ArcGIS Map Document that is not part of the Activities Database. 
+The user will be responsible fo r acquiring and copying base GIS 
+data to the field work machine. 
+Disconnect.Data.Imagery The user shall be re sponsible for acquiring and copying imagery 
+(aerial photos) to the project directory. 
+Disconnect.Map.Document The tool shall make a copy of the ArcGIS Map Document to the 
+folder. 
+Disconnect.Map.Connections The user shall reconnect map layers to the appropriate location 
+of the disconnected data. 
+Disconnect.Date.CheckedOut The tool shall track the checkout dat e when the database ha 
+been disconnected. 
+ 
+ 
+ 
+ 
+  
+ 
+SRS v1.1.doc - 14 - Printed on: 5/11/2007 10:03:00 AM 4.7. Reconnect Activity Geodatabase  
+4.7.1. Description and Priority 
+This section describes the import process of data collected in a disconnected environment.  
+(Mandatory) 
+ 
+4.7.2. Stimulus/Response Sequences 
+Stimulus: User clicks on button to reconnec t the disconnected database to the enterprise 
+Activity Database. 
+Response: The system will prompt the user for the location of the disconnect project. 
+ 
+Stimulus: User selects the disconnected project directory. 
+Response: The system will start the import process and prompt the user when complete. 
+ 
+Stimulus: When the system detects identical record ids with different modification dates 
+in spatial and/or tabular records, the user will be prompted to reconcile the 
+modified records.  
+Response: The system will post the selected data by the user to the enterprise database. 
+  
+4.7.3. Functional Requirements 
+Reconnect.Folder.Location The tool should prompt  the user for the location of the disconnect 
+database. 
+Reconnect.Data.Import The tool shall import any record that has been modified in the 
+disconnected database. 
+Reconnect.Data.Reconcile The tool shall prom pt the user when a record id in the 
+disconnected database and enterprise database has been 
+modified. 
+Reconnect.Data.Ids The tool should reconc ile the IDs stored in the disconnected 
+database with the IDs in the enterprise database. 
+Reconnect.Data.Tables The tool will reconc ile all table data fr om the disconnected 
+database.  This includes lookup and relationship tables. 
+Reconnect.Data.Obselete The tool will reconcile data that has been flagged obsolete. 
+Reconnect.Data.Spatial The tool will import all modified spatial features into the 
+enterprise Geodatabase.  Spat ial data will be reconciled the 
+same as tabular records. 
+ 
+SRS v1.1.doc - 15 - Printed on: 5/11/2007 10:03:00 AM  
+4.8. Lookup Table Management 
+4.8.1. Description and Priority 
+This section describes the management of l ookup tables in the database.  (Mandatory) 
+ 
+4.8.2. Stimulus/Response Sequences 
+Stimulus: The user clicks on the lookup management interface button. 
+Response: The system will load a lookup table editing form. 
+ 
+Stimulus: The user selects from a list the lookup table to modify. 
+Response: The system will load the appropriate lookup table into an edit form. 
+ 
+Stimulus: The user edits the lookup va lues in the form (Add/Modify).  
+Response: The system will modify  the lookup table information. 
+ 
+Stimulus: The user attempts to obsolete a lookup value.  
+Response: The system will query the database for inst ances of the lookup value in use.  If 
+found, the obsolete request will not be allowed.   
+  
+4.8.3. Functional Requirements 
+Lookup.Form.Edit The tool shall provide a form for the editing of lookup table 
+records. 
+Lookup.Record.Obselete The tool shall query the database for instances of the lookup 
+value in use.  If found, the obsol ete request will not be allowed. 
+Lookup.Modification.Config The t ool shall provide a configuratio n file which will control the 
+access of modification of lookup tables. 
+ 
+ 
+SRS v1.1.doc - 16 - Printed on: 5/11/2007 10:03:00 AM 5. Non-functional Requirements 
+5.1. User Interfaces 
+UI-1 The user interface design shall follo w .NET Coding Standards and Windows User 
+Interface Guidelines. 
+UI-2 Basic Windows Functions and Standards. 
+UI-3 The interface should be developed to work on a minimum screen resolution of 
+1280x1024. 
+UI-4  The interface must interact with the ArcGIS desktop as a dockable window. 
+5.2. Performance Requirements 
+PR-1 Must meet standard DFW application performance standards. 
+PR-2 Must work within the operating parameters of ArcGIS. 
+ 
+ 
+ 
+SRS v1.1.doc - 17 - Printed on: 5/11/2007 10:03:00 AM Appendix A:  Physical Database Model 
+The application will use the following Geodatabase Feature Classes an d tables as per the following Physical Database model.  Pl ease refer to the Visio 
+Document and Access Database provided with this document. 
+ 
+ACTIVITY_D
+PK,FK1 ACTIVITY_Id INTEGER
+FK10 EVENT_Id INTEGER
+ Begin_Date DATETIME
+ End_Date DATETIMEFK11 Date_CONFIDENCE_SOURCE_Id SMALLINT ACTIVITY_Duration_Day_Cnt INTEGER FREQUENCY_LUT_Id SMALLINTFK4 Freq_CONFIDENCE_SOURCE_Id INTEGER SOURCE_TYPE_LUT_Id SMALLINT SOURCE_METHOD_LUT_Id SMALLINT
+ Create_DFWuser_Id VARCHAR(50)
+ Create_DT DATETIME Mdfy_DFWuser_Id VARCHAR(50) Mdfy_DT DATETIME Comment_Txt VARCHAR(1024) Analysis_Ind BIT
+ ARCHIVE_TYPE_LUT_Id CHAR(10)EVENT_D
+PK,I1 EVENT_Id SMALLINT
+FK3 EVENT_LUT_Id SMALLINT
+FK4 ACTIVITY_TYPE_LUT_Id SMALLINT
+FK1 ACTIVITY_CLASS_LUT_Id SMALLINT
+FK2 ACTIVITY_SUBCLASS_LUT_Id SMALLINT Feature_Class_Name VARCHAR(50)
+ACTIVITY_ASSOCIATION_R
+PK ACTIVITY_ASSOCIATION_Id INTEGER
+PK,FK3 ACTIVITY_Id INTEGER
+FK2 Assoc_ACTIVITY_Id INTEGER
+FK4 EVENT_Id SMALLINT Create_DFWuser_Id VARCHAR(50) Create_DT DATETIME Mdfy_DFWuser_Id VARCHAR(50) Mdfy_DT DATETIME ARCHIVE_TYPE_LUT_Id SMALLINTWLA_DESIGNATION_LUT
+PK WLA_DESIGNATION_LUT_Id SMALLINT
+I1 Subunit_Id INTEGER
+ Subunit_Name VARCHAR(55)I3 Unit_Id INTEGER Unit_Name VARCHAR(55)I2 Superunit_Id INTEGER Superunit_Name VARCHAR(65)I4 Wdfwreg_NUM INTEGER
+ Manager VARCHAR(60)
+ Obsolete_Flag BIT Obsolete_DT DATETIMEACTIVITY_WLA_DESIGNATION_R
+PK,FK1 ACTIVITY_Id INTEGER
+PK,FK2,I2 WLA_DESIGNATION_LUT_Id SMALLINT
+CONFIDENCE_SOURCE_D
+PK,I4 CONFIDENCE_SOURCE_Id INTEGER
+ CONFIDENCE_SOURCE_Document VARCHAR(80)
+ Web_Reference VARCHAR(80) CONFIDENCE_SOURCE_Date DATETIMEFK2,I3 CONTACTS_Id INTEGERFK3 CONFIDENCE_LUT_Id SMALLINTCONFIDENCE_LUT
+PK,I1 CONFIDENCE_LUT_Id SMALLINT
+ CONFIDENCE_Desc VARCHAR(30)
+ Obsolete_Flag BIT Obsolete_DT DATETIMECONTACTS_D
+PK CONTACTS_Id INTEGER
+ Last_Name VARCHAR(40)
+ First_Name VARCHAR(40)
+ Middle_Name VARCHAR(30)
+ Organization_Name VARCHAR(100)
+ Line1_Addr VARCHAR(75)
+ Line2_Addr VARCHAR(75) Line3_Addr VARCHAR(75) City_Name VARCHAR(30) State_Prov VARCHAR(30)I1 Zip_Code VARCHAR(30)
+ Home_Phone_Num VARCHAR(10)
+ Work_Phone_Num VARCHAR(10) Cell_Phone_Num VARCHAR(10) Work_Phone_Extension_Num VARCHAR(10) Email_Addr VARCHAR(20)ACTIVITY_PR_CODE_R
+PK,FK1 ACTIVITY_Id INTEGER
+PK,FK2,I2 PR_CODE_LUT_Id SMALLINT
+PR_CODE_LUT
+PK,I2 PR_CODE_LUT_Id SMALLINT
+I1 PR_CODE_Code VARCHAR(10)
+ PR_CODE_Desc VARCHAR(60)
+ Obsolete_Flag BIT
+ Obsolete_DT DATETIME
+ACTIVITY_PR_FUNDING_R
+PK,FK1 ACTIVITY_Id INTEGER
+PK,FK2,I2 PR_FUNDING_LUT_Id SMALLINT
+PR_FUNDING_LUT
+PK,I2 PR_FUNDING_LUT_Id SMALLINT
+ PR_FUNDING_Code CHAR(10)
+I1 PR_FUNDING_Desc VARCHAR(50) Obsolete_Flag BIT Obsolete_DT DATETIME
+ACTIVITY_OCCURENCE_D
+PK,I2 ACTIVITY_OCCURENCE_Id INTEGER
+FK1 ACTIVITY_Id INTEGER
+ Begin_Date DATETIME End_Date DATETIMEFK3,I3 Date_CONFIDENCE_SOURCE_Id INTEGER Duration_Days INTEGER Create_DFWuser_Id VARCHAR(50)
+ Create_DT DATETIME
+ Mdfy_DFWuser_Id VARCHAR(50)
+ Mdfy_DT DATETIME
+ ARCHIVE_TYPE_LUT_Id SMALLINTACTIVITY_RULE_R
+PK,FK1 ACTIVITY_Id INTEGER
+PK,FK2,I2 RULE_LUT_Id SMALLINT
+RULE_LUT
+PK,I2 RULE_LUT_Id SMALLINT
+I1 RULE_Type VARCHAR(50)
+ RULE_Class VARCHAR(60)
+ RULE_SubClass VARCHAR(50) Obsolete_Flag BIT Obsolete_DT DATETIME
+FREQUENCY_LUT
+PK,I2 FREQUENCY_LUT_Id SMALLINT
+I1 FREQUENCY_Code SMALLINT
+ FREQUENCY_Desc VARCHAR(25)
+ Obsolete_Flag BIT
+ Obsolete_DT DATETIMESOURCE_TYPE_LUT
+PK,I1 SOURCE_TYPE_LUT_Id SMALLINT
+ SOURCE_TYPE_Desc VARCHAR(80)
+ Obsolete_Flag BIT Obsolete_DT DATETIME
+SOURCE_METHOD_LUT
+PK,I1 SOURCE_METHOD_LUT_Id SMALLINT
+ SOURCE_METHOD_Desc VARCHAR(50)
+ Obsolete_Flag BIT Obsolete_DT DATETIMEACTIVITY_EFFORT_R
+PK,FK2 ACTIVITY_Id INTEGER
+PK,FK1,I2 EFFORT_Id SMALLINTEFFORT_D
+PK,I1 EFFORT_Id SMALLINT
+ EFFORT_Qty SMALLINT
+FK1 UNIT_MEASUREMENT_LUT_Id SMALLINTFK2 MEASUREMENT_DESC_LUT_Id SMALLINT Obsolete_Flag BIT Obsolete_DT DATETIME
+WDFW Activities Data Model - Draft #4_mm
+April 26, 2007NEXT_ID
+I1 Next_Id INTEGERARCHIVE_TYPE_LUT
+PK ARCHIVE_TYPE_LUT_Id SMALLINT
+ ARCHIVE_TYPE_Desc VARCHAR(25)
+ Obsolete_Flag BIT Obsolete_DT DATETIMEUNIT_MEASUREMENT_LUT
+PK UNIT_MEASUREMENT_LUT_Id SMALLINT
+ UNIT_MEASUREMENT_LUT_Desc VARCHAR(50)
+ Obsolete_Flag BIT Obsolete_DT DATETIME
+MEASUREMENT_DESC_LUT
+PK MEASUREMENT_DESC_LUT_Id SMALLINT
+ MEASUREMENT_DESC_LUT_Desc VARCHAR(50)
+ Obsolete_Flag BIT Obsolete_DT DATETIMEACTIVITY_TYPE_LUT
+PK ACTIVITY_TYPE_LUT_Id SMALLINT
+ ACTIVITY_TYPE_Desc VARCHAR(65)
+ Obsolete_Flag BIT Obsolete_DT DATETIME
+ACTIVITY_CLASS_LUT
+PK ACTIVITY_CLASS_LUT_Id SMALLINT
+ ACTIVITY_CLASS_LUT_Desc VARCHAR(75)
+ Obsolete_Flag BIT
+ Obsolete_DT DATETIMEACTIVITY_SUBCLASS_LUT
+PK ACTIVITY_SUBCLASS_LUT_Id SMALLINT
+ ACTIVITY_SUBCLASS_Desc VARCHAR(60)
+ Obsolete_Flag BIT Obsolete_DT SMALLINTEVENT_LUT
+PK EVENT_LUT_Id SMALLINT
+ EVENT_Desc CHAR(50)
+ Obsolete_Flag BIT Obsolete_DT DATETIME
+Lookup TableAssociative RelationshipData TableEntity LegendVALIDEVENT_D
+PK,I1 VALIDEVENT_Id SMALLINT
+FK1 EVENT_LUT_Id SMALLINT
+FK3 ACTIVITY_TYPE_LUT_Id SMALLINTFK4 ACTIVITY_CLASS_LUT_Id SMALLINTFK2 ACTIVITY_SUBCLASS_LUT_Id SMALLINT
+ 
+ 
+SRS v1.1.doc - 18 - Printed on: 5/11/2007 10:03:00 AM Appendix B:  Requirements Identifiers 
+The following is a key to the codes that uniquely i dentify the requirements, except for the functional 
+requirements in section 4 of the document. 
+ 
+AD Assumptions and Dependencies CO Design and Implementation Constraint 
+DR Data Requirements 
+UD User Documentation OE Operating Environment 
+PR Performance Requirement 
+QA Quality Attribute UI User Interfaces 
+ 
+SRS v1.1.doc - 19 - Printed on: 5/11/2007 10:03:00 AM Appendix C:  Activities Data Model Description 
+Description of the WDFW Activities Data Model  
+ 
+Many different types of activities occur on WD FW owned and managed lands. These activities can be 
+classified as one of three broad types of acti vities: recreation, operation and maintenance, or 
+enhancement and restoration. Each of the activities can be more specif ically described as participating 
+in a class of activities and a subclass of activities.  Class and Subclass provide for a more detailed set of 
+distinguishing characteristics. 
+ 
+Activities may optionally be identified as being subj ect to regulations or polices. This could include 
+Washington Administrative Codes (WACs), Revis ed Code of Washington (RCW), WDFW Rules and 
+Regulations, local government ordinances, and Federal Laws. 
+ Activities can occur on either a regular or periodic basis, within a calendar year or across many years. 
+The duration of an activity can be described by the num ber of days that each event of an activity occurs.  
+The frequency of activity can be described by it annual reoccurrence. Activities can both occur 
+individually or be associated with one or more other activities.  
+ 
+Information about activities will be collected from a variety of sources and will be based on a variety of 
+data collection methods and procedures. Each may have higher or lower confidence associated with 
+them.  
+ 
+Each confidence source may have some combinatio n of the name of the source, document name, web 
+reference, date, contact information and a source confidence designation of: • A Legal Description 
+• Empirical Data 
+• Expert Opinion • Best Professional Judgement 
+• Modeled Data 
+ Each activity will be designated as occurring wi thin a described WDFW administrative area. The 
+designations will be hierarchical, going from Region to  Complex; Complex to Wildlife Area; and Wildlife 
+Area to Wildlife Area Unit. Some activity areas may not be currently assigned to the hierarchy and 
+designated as being unassigned. 
+ 
+Each activity can be measured in terms of the intens ity of effort that is applied. These metrics will be 
+expressed in terms of the quantity, units, and measur e. For instance 100 (quantity) pounds (unit) per 
+acre (measure) or 10 (quantity) people (unit) per campsi te (measure).  An activity can have zero or more 
+measured efforts. Metrics will only be collected at the Ac tivity level. Individual occurrences of an activity 
+will inherit the metrics of the parent activity. If it is important to apply a different level of effort, then a new 
+activity will need to be created in order to capture a variance in the metrics. The system should support 
+propagating existing core activity attributes into a ne w activity in order to minimize the need for new data 
+entry when the only significant change is effort. A highly desired functional property of the application 
+would be to allow the user to place checkboxes next to those fields that should be propagated into the 
+new record. 
+ 
+Activities often are associated with other activities. Many activities can be associated with one activity 
+and the one activity can be associated with one or more other activities. This results in a many-to-many 
+relationship between activities. The system will need to support several workflows around the process of 
+associating activities. This includes • Creating activity records prior to creating spatial data 
+• Linking existing spatial data to an activity 
+ 
+SRS v1.1.doc - 20 - Printed on: 5/11/2007 10:03:00 AM • Un-linking spatial data to an activity 
+• Associating an activity to other activities 
+• Unassociating an activity from an activity   
+Each activity will be managed as both tabular data an d spatial data. One requirement is that the system 
+support creating tabular records for activities independ ent of the process of crea ting the spatial data that 
+must be linked to the activities.  This will allow fo r creating a placeholder for more specific information 
+that will be collected during visits for satellite offices. 
+ In order to reduce application development cost, a strategy has been identified for managing records 
+that are no longer needed due to a change in informati on, methods, or mistakes. This application deals 
+with both tabular and spatial data that is linked th rough an application assigned primary key, which is 
+carried in both the tabular and spatial records. It w ould be costly to develop an application that manages 
+deletions of both the tabular and spatial data. Not to  mention that features could be deleted outside the 
+application. Each record in the Activity, Activity Association, and Activity Occurrence tables will be 
+attributed as being in some stage of archival state (e .g. Not Archived, Archived with Delete, Archived, 
+etc). This level of attribution will support a bette r understanding on the reason for making a record 
+inactive. 
+ 
+ At beginning of a session (when application is first init iated) user will be prompted to set default options 
+for confidence and methods sources. 
+ Inventory sessions will occur in the field and be di sconnected from the SQL database. The application 
+and the tabular and spatial records will be “checked out”  to the inventory biologist and used on a laptop.  
+While data is “checked out” that  particular data on the SQL database will  be editable.  When data is 
+“checked in” the application will need to: 1) reconcile and update the SQL database with new additions 
+to look up tables that may have occurred when disconnected, and 2) reconcile and update any new 
+and/or modified activities records.  
+ 
+ 
+SRS v1.1.doc - 21 - Printed on: 5/11/2007 10:03:00 AM Appendix D:  Issues List 
+# Description Due Date Assigned To 
+    
+    
+    
+ 
+SRS v1.1.doc - 22 - Printed on: 5/11/2007 10:03:00 AM Appendix E:  Document Sign Off 
+The sign off of this document indicates that the Wa shington Department of Fish and Wildlife has agreed 
+with described Software Requirements Specificat ion in relation to the Wildlife Areas Habitat 
+Conservation Plan  project and approves of GeoNorth to start the development of a software Design 
+Specification.  
+ 
+  
+ 
+Jennifer Quan, WADFW                     Date  
+ 
+  

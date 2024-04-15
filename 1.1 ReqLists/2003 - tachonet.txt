@@ -1,0 +1,37 @@
+1.1	The system must allow a member of the network to send requests to a particular or all the other members about possible delivery of a driver’s smart card to a similar person.
+1.2	The system must allow a member of the network to send a bulk request on all or a large part of its driver’s smart card holders to a particular or all members of the network.
+1.3	The system must allow a member to do statistics on messages issued and received from/to his system.
+1.4	The system must provide automatic reply to the sender of the request through the use of a standard interface to the Members systems.
+1.5	The system must track the workflow between senders and related replies.
+1.6	The system must be able, in accordance with the rules on delays for each transaction, to automatically transmit alert messages to senders/replier/administrator when, f.i. a constraint on delay for reply is not fulfilled.
+1.7	The system must allow the administrator to extract statistics of use, standard delay of reply by member/period, percentage of unsuccessful transaction,... .
+1.8	The system must provide the management of user rights and permissions.
+1.9	The system must be able to define and manage various type of messages already in the driver’s smart card holder like pre-delivery check, stolen/lost cards, renewals, exchanges and duplicates.
+1.10	The system must be able to include new members in the network through simple administrative tasks.
+1.11	The system must be highly automatic to relieve the users of as many repetitive and tedious tasks as possible.
+1.12	The system must provide at application level a full security and encryption policy compatible with the level of security required in such situation.
+1.13	The system must be such that none of the Member States of the network, including the administrator, re-construct a consolidated European database.
+1.14	The system must allow a Member State (through its Card Issuing Authority) to ask for the status of card (lost, stolen,…) to the corresponding Card Issuing Authority of the Member State having issued the card.
+1.15	The system must allow a Member State (through its Card Issuing Authority) to send card status modification requests (lost, stolen,…) to the corresponding Card Issuing Authority of the Member State having issued the card.
+1.16	The system must allow enforcement authorities (through its Card Issuing Authority) to ask for driver’s card status (based on either card number + issuing Member State code or driver’s surname, first names, date of birth and issuing Member State code) to the corresponding Card Issuing Authority of the Member State having issued the card.
+1.17	The system must allow enforcement authorities (through its Card Issuing Authority) to ask for workshop card status (based on workshop card number + issuing Member State code) to the corresponding Card Issuing Authority of the Member State having issued the card.
+2.1.1	The system must guide users through an interface based on end user concepts.
+2.1.2	The system must be easy to learn and does not obstruct the thematic understanding of the users.
+2.1.3	The system must make it easy to correct mistakes.
+2.2.1	The system is to be designed as a robust and dependable operational system which is tolerant to operator errors and which will recover cleanly from power cuts or other disasters.
+2.2.2	The system must function reliably, with few or no interruptions in its first operational year and fewer still thereafter.
+2.2.3	The system must give stable and reproducible results.
+2.3.2	There will be no restriction in time or place for the use of the software built from the specifications produced under this contract.
+2.3.3	The system must be able to establish and keep the dialog with the Members systems despite the various technical environments and technologies used on their sites.
+2.3.4	The system will be designed so that background tasks can continue while the user performs foreground tasks.
+2.3.5	The system will be used 24x7 by operators under pressure to produce results rapidly. The system must respond rapidly to user requests irrespective of any background tasks. Such high-availability (24x7) is also required from the Member States systems to ensure acceptable response time (less than 1 minute) to enforcement authorities requests.
+2.4.1	The system should be able to support other types of message structure to cover f.i. a future driving license network and correlated activities.
+2.4.2	The system must be maintainable and extensible.
+2.4.3	The system must be designed so that it can migrate to upgraded hardware or new versions of the operating systems involved.
+2.4.4	The system must be able to migrate to other type of network than the one proposed by TESTA-II.
+2.4.5	The system must provide solutions/rules regarding data encoding problems such as supporting different character sets, name truncation rules, name matching in case of misspelling,...
+2.5.1	The system must be designed and documented with the expectation that its operational lifetime will be many years.
+2.5.2	Each Member of this network will organise its data about smart card holders with no constraints or recommendations on operating system and/or technology used. The system will be able to dialog with these environments or specify a generic interface to dialog with the Member’s applications.
+2.6.1	The system must use the network facilities supplied by the TESTA-II network.
+2.6.2	The algorithms in the software will be based on existing techniques and no research will be required to develop new algorithms under this contract.
+2.6.3	Most of the functionality of the new software shall depend on pre-existing or commercially available software.

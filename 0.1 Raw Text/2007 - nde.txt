@@ -1,0 +1,3353 @@
+
+NOAA/NESDIS/OSDPD                                                                                                         NOAA- ESPC/(018)-2007 
+ESPC-CM1301-05-CT-0044                                                                                                       DC N 1.0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+ 
+   
+Environmental Satellite Processing 
+Center (ESPC) 
+  
+  
+    
+NPP and NPOESS Data Exploitation 
+(NDE) 
+ 
+NDE System Requirements 
+Specification 
+ 
+Version 1.0 August 2007 
+ 
+ 
+Prepared by: 
+U.S. Department of Commerce 
+National Oceanic and Atmospheric Administration (NOAA) 
+National Environmental Satellite, Data, and Information Service ( NESDIS) 
+Environmental Satellite Processing Center (ESPC) 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+1  
+ 
+ 
+ 
+Environmental Satellite Processing Center (ESPC) 
+  
+ 
+NPP and NPOESS Data Exploitation (NDE) 
+ 
+NDE Configuration Management Plan 
+ 
+  
+August 2007 
+ 
+ 
+DRAFT 
+ 
+    
+ 
+ 
+Prepared by: 
+ 
+U.S. Department of Commerce 
+National Oceanic and Atmospheric Administration (NOAA) 
+National Environmental Satellite, Data, and Information Service (NESDIS) 
+Office of Satellite Data processing and Distribution (OSDPD) 
+Environmental Satellite Processing Center (ESPC) 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+2  
+Approval Page 
+ 
+Document Numbers: 
+NOAA/NESDIS/OSDPD NOAA- ESPC - 018-2007
+ESPC-  CM1301-05-CT-0044 DCN 1.0 (08/07/2007)
+OSD/ESPC-NDE-008-018-005-V1.0  
+Document Title Block:  
+ 
+Environmental Satellite Processing Center (ESPC) 
+ 
+NPP and NPOESS Data Exploitation (NDE) 
+NDE Configuration Management Plan 
+ 
+PROGRAM :  ESPC DOCUMENT RELEASE DATE :  ( Approval Date) 
+APPROVALS 
+GROUP:   ESPC-NDE                                                Date 
+  
+ 
+  
+NAME:  Jim Silva, NDE Project Manager GROUP:  ESPC                                                                 Date     
+                                                           
+ 
+  NAME: Reginald B. Lawrence, IPD Manager 
+GROUP:   ESPC                                                   Date 
+ 
+    NAME:  Dave Benner,  OSDP D Satellite Services Division 
+Chief GROUP:   ESPC                                                                Date 
+  
+ 
+   NAME:  Ken Dropco, ESPC /PSGS Program Manager 
+GROUP:   ESPC-NDE                                                 Date 
+  
+ 
+  
+ NAME:  David Manion, NDE /PSGS Project Manager GROUP:   ESPC-NDE                                                       Date 
+  
+ 
+   NAME:   Lou Fenichel (Author) 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+3 VERSION NUMBER IDENTIFIER 
+The document version number which also corres ponds to the Document Control Number (DCN) 
+identifies whether the document is a working copy, final, revision, or update, defined as follows: 
+• Working copy or Draft:  a document no t yet finalized or ready for distribution; 
+sometimes called a draft.  Use 0.1A, 0.1B, etc. for unpublished documents. 
+• Final:   the first definitive edition of the document.  The final is always identified as 
+Version 1.0. 
+• Revision:  a n edition with minor changes from the previous edition, defined as changes 
+affecting less than one-third of the pages in the document.  The version numbers for 
+revisions 1.1 through 1.9, 2.1 through 2.9, and so fo rth.  After nine revisions, any other 
+changes to the document are considered an update. A revision in draft, i.e. before be re-baselined should be numbered as 1.1, A, 1.1B, etc. 
+• Update:   an edition with major changes from the previous edition, defined as changes 
+affecting more than one-third of the pages in the document.  The version number for an update is always a whole number (Version 2.0, 3.0, 4.0, and so forth). 
+ 
+               
+ 
+   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+4  
+DOCUMENT HISTORY 
+ 
+DOCUMENT REVISION LOG 
+ 
+The Document Revision Log identifies the series of  revision to this Document since the baseline 
+release. This page will become a permanent part of this document. 
+ 
+DOCUMENT TITLE: NDE System Requirements Specification 
+DOCUMENT CHANGE HISTORY 
+Revision 
+No. Date Revision Originator  Approval Authority 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+ 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+5  
+ 
+LIST OF CHANGE-AFFECTED PAGES/SECTIONS/APPENDICES 
+ 
+Release 
+# Version # Page___of__ 
+page(s) Date Description of Change(s) Item 
+ 
+      
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+ 
+ 
+     
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+6 Table of Contents 
+Table of Contents .............................................................................................................. ............ 6 
+1 Scope.......................................................................................................................... ......... 9 
+1.1 System Overview ..................................................................................................... 9 
+1.2 Document Overview................................................................................................. 9 
+1.3 Definitions.............................................................................................................. 10 
+1.4 Document Organization ......................................................................................... 10 
+2 Referenced Documents ................................................................................................... 11 
+3 Requirements .................................................................................................................. 12 
+3.1 Required States and Modes .................................................................................... 12 
+3.1.1 Open Mode ................................................................................................. 12 
+3.1.2 Degraded System Mode ............................................................................. 12 
+3.1.3 Restricted Access Mode ............................................................................. 12 
+3.2 Capability Requirements ........................................................................................ 12 
+3.2.1 Define Data Products.................................................................................. 12 
+3.2.2 Integrate Syst em Elements ......................................................................... 12 
+3.2.3 Test Support ............................................................................................... 12 
+3.2.4 Maintain Records of Data and System Elements ....................................... 13 
+3.2.5 Control Algorithm Execution..................................................................... 13 
+3.2.6 Data Product Generation ............................................................................ 13 
+3.2.7 Data Product Availability........................................................................... 14 
+3.2.8 Data Delivery ............................................................................................. 15 
+3.2.9 Order Status Notification............................................................................ 15 
+3.2.10 System Status Notification ......................................................................... 15 
+3.2.11 Data Authorization Procedures .................................................................. 15 
+3.2.12 Customer Registration................................................................................ 15 
+3.2.13 Health and Status........................................................................................ 15 
+3.2.14 Provide Automatic Failover ....................................................................... 15 
+3.2.15 Monitor Input Data Integrity ...................................................................... 15 
+3.2.16 Data Product Latency ................................................................................. 15 
+3.2.17 Capture Performance Statistics .................................................................. 16 
+3.2.18 Generate Custom Reports........................................................................... 16 
+3.3 External interf ace requirements.............................................................................. 16 
+3.3.1 Receive from IDPS..................................................................................... 16 
+3.3.2 Ancillary Data Product Acquisition ........................................................... 16 
+3.3.3 Process Archived Data ............................................................................... 17 
+3.3.4 Receive from CLASS................................................................................. 17 
+3.3.5 MMC Interface Through ESPC.................................................................. 17 
+3.3.6 NPOESS Trouble Ticket Interface............................................................. 17 
+3.3.7 ESPC Trouble Ticket Interface .................................................................. 17 
+3.4 Internal Interface Requirements ............................................................................. 17 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+7 3.4.1 Schedule Tasks........................................................................................... 17 
+3.4.2 Event Driven Tasks .................................................................................... 17 
+3.4.3 Reliability of Scheduled Tasks................................................................... 17 
+3.4.4 Reliability of Event Driven Tasks.............................................................. 17 
+3.4.5 Adjust Priorities of Tasks........................................................................... 18 
+3.5 Internal data Requirements..................................................................................... 18 
+3.5.1 Test Data Capacity ..................................................................................... 18 
+3.5.2 Metadata Standards Validation .................................................................. 18 
+3.5.3 Record Quality Information ....................................................................... 18 
+3.5.4 NOAA-Unique Product Shelf Life............................................................. 18 
+3.6 Adaptation Requirements....................................................................................... 18 
+3.6.1 Technology Updates................................................................................... 18 
+3.6.2 Scalability................................................................................................... 18 
+3.7 Security and Privacy Requirements ....................................................................... 18 
+3.7.1 Follow ESPC Security Procedures............................................................. 18 
+3.7.2 Generate System Backups .......................................................................... 19 
+3.7.3 Identify Automated Backup Procedures..................................................... 19 
+3.7.4 Restore from System Backups ................................................................... 19 
+3.7.5 Integrity - Protect from Human Errors....................................................... 19 
+3.7.6 Integrity - Protect from Transmission Errors ............................................. 19 
+3.7.7 Integrity - Protect from Software Bugs ...................................................... 19 
+3.7.8 Integrity - Protect from Hardware Malfunction ......................................... 19 
+3.7.9 Integrity - Protect from Natural Disasters .................................................. 19 
+3.7.10 ESPC Network Authorization .................................................................... 19 
+3.8 Computer Resource Requirements......................................................................... 19 
+3.8.1 Computer Hardware Requirements ............................................................ 19 
+3.8.2 Computer software requirements ............................................................... 19 
+3.9 Operator-Related requirements .............................................................................. 20 
+3.9.1 Log and Track Events................................................................................. 20 
+3.9.2 Provide an Operator Log ............................................................................ 20 
+3.9.3 Sort/Search Operator Log........................................................................... 20 
+3.9.4 Report on Events ........................................................................................ 20 
+3.9.5 Restart Procedures...................................................................................... 20 
+3.9.6 Monitor Input Quality ................................................................................ 20 
+3.9.7 Monitor Output Quality.............................................................................. 20 
+3.9.8 Degraded Operations Notification.............................................................. 21 
+3.9.9 Archive System Elements .......................................................................... 21 
+3.10 Other Requirements................................................................................................ 21 
+3.10.1 Availability Requirements.......................................................................... 21 
+3.10.2 Performance Requirements ........................................................................ 21 
+3.10.3 Capacity Requirements............................................................................... 22 
+3.10.4 Federal Enterprise Architecture ................................................................. 22 
+4 Requirements Traceability............................................................................................. 23 
+4.1 NDE Contract Section J ......................................................................................... 23 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+8 4.2 Traceability Table................................................................................................... 23 
+ 
+ 
+ 
+ 
+ 
+Appendix A: Glossary 
+ Appendix B: Acronyms and Abbreviations  Appendix C: Section J Contract Matrices 
+ 
+                         
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+9  
+1 SCOPE 
+The purpose of the National Polar-orbiting Operational Environmental Satellite System (NPOESS) 
+Data Exploitation (NDE) System Requirements Speci fication is to identify the system requirements 
+that will support customer needs for products from the NPOESS Preparatory Project (NPP) satellite, 
+as well as the NPOESS satellites that are part of  the NPOESS program.  These requirements also 
+serve as the primary focal point for the traceability  of all lower level or derived requirements 
+documented in other NDE deliverables. 
+1.1 System Overview 
+NOAA’s NPOESS Data Exploitation (NDE) system w ill receive data from the NPOESS Interface 
+Data Processing Segment (IDPS), process and pack age it to meet user requirements, ensure 
+appropriate NDE unique products are archived, dist ribute data to authorized users, and provide 
+customer service to users of its products. NDE’s primary mission is to provide products  derived from NPOESS observations to NOAA’s 
+operational and climate communities and to other ci vilian customers. In order to fulfill the mission, 
+NDE will acquire the resources necessary to achieve the following objectives:  
+• Disseminate NPOESS Data Records from the IDPS to  customers  
+• Generate and disseminate tailored NPOESS Data Records (versions of NPOESS Data 
+Records in previously agreed alternative formats and views)   • Generate and disseminate NOAA-unique produc ts (augmented environmental products 
+constructed from NPOESS Data Records)   • Deliver NOAA-unique products and associated me tadata to the NOAA’s long term archive, 
+the Comprehensive Large Array-data Stewardship System (CLASS) • Provide services to customers, includi ng a Help Desk, NDE product training, product 
+enhancement, and implementation support across NOAA  • Coordinate NPOESS-related activities across NOAA  - 
+− Assist with planning for the implementation of NPOESS data by user systems - 
+− Ensure end-user preparedness for NPOESS data  
+• Develop a sustainable system that meets its customer needs  
+• Provide software for NPOESS Data Record format conversion  
+ 
+In order to support these objectives, the NDE System will be partitioned into Operational (OPS), System Test (TEST), and Development (DEV) Envi ronments.  Each environment will be designed 
+for a specific purpose for both the NPOESS Preparator y Project (NPP) era, as well as the NPOESS 
+C1 and C2 eras. 
+1.2 Document Overview 
+The System Requirements Specification is based on the IEEE/EIA 12207 Standard  for Software Life 
+Cycle Processes published in 1995 by the Institute of  Electrical and Electronics Engineers.  This 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+10 document was created and published using the DOORS 7.1 automated requirements management 
+tool.  
+1.3 Definitions  
+These definitions are used throughout the System Requirements Specification:  Component - refers to Hardware, equipment, and licensed software products (i.e., Operating 
+Systems, DBMS, middleware, COTS or GOTS products, CASE tools, etc.), used in discussions of 
+NDE infrastructure.  Element - refers to In-house developed capabilities (i.e., the source code for algorithms, programs, 
+utilities, control tables, called procedures, etc.), used in discussions of NDE infrastructure.  
+ Product Latency - The point in time when all of the required xDRs needed to create a product are 
+successfully ingested and the point in time where the product is made available for distribution to 
+customers.  System - refers to the assemblage of entity/obj ects comprising the whole of NDE, with each and 
+every component/element interacting or related to at least one other component/element.    Tool - refers to a component used by the NDE deve lopment staff in the process of creating, testing, 
+organizing, or tracking NDE components/elements, but not incorporated into the architecture of the 
+operational or test systems (e.g., a requirements management tool). 
+1.4 Document Organization 
+Section 1 provides introduction and background information. 
+ Section 2 lists the applicable and reference documentation.  Section 3 provides the formal requirements statements.  Section 4 provides the qualification provisions. 
+ 
+Section 5 contains traceability information. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+11 2 REFERENCED DOCUMENTS 
+• OMB Federal Enterprise Architecture (F EA)  http://www.whitehouse.gov/omb/egov/a-1-
+fea.htmlNOAA’s 
+• NPOESS Data Exploitation Charter http://projects.osd.noaa.gov/nde  
+• NPOESS IPO, Integrated Operational Require ments Document II (IORD II), version 6, 2002.  
+• National Oceanic and Atmospheric Administration Information Quality Guidelines, 
+September 30, 2002, http://www.noaanews.noaa.gov/stories/iq.htm  
+• Concept of Operations (CONOPS) for the National Polar-Orbiting Operational 
+Environmental Satellite System (NPOESS) Program,  Version 1.2, September 15, 2003  • Comprehensive Large Array-data Stewards hip System (CLASS) Archive, Access and 
+Distribution System Allocated Requirements, Version 1  
+• Concept of Operations for the National Environmental Satellite, Data, and Information 
+Service: 2010-2020, 2002   • National Oceanic and Atmospheric Administ ration (NOAA)  Concept of Operations 
+(CONOPS) For NPOESS Data Exploitation (NDE), Version 2.0,  08/03/05 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+12 3 REQUIREMENTS 
+3.1 Required States and Modes 
+3.1.1 Open Mode 
+The System shall provide the capability to operate in an Open Mode , within which authorized 
+customers shall be allowed read-only access to reque sted Data Products.  This is the nominal system 
+mode. 
+3.1.2 Degraded System Mode 
+The System shall provide the capability to operate in a Degraded System Mode, within which the 
+system generates a subset of products based upon priority and availability of system resources. 
+3.1.2.1 Degraded Data Notification 
+The System shall provide the capability to notify customers upon the NPOESS Ground System 
+entering and leaving a Degraded Operations Mode. 
+3.1.3 Restricted Access Mode 
+The System shall provide the capability to operate in a Restricted Access Mode , within which only 
+users meeting certain criteria will be authorized access to the data. Criteria will be defined in the 
+TBD Data Denial Plan.  
+3.1.3.1 Restricted Access Notification 
+The System shall provide the capability to send an electronic notification to authorized users when 
+they receive restricted access data. 
+3.2 Capability Requirements 
+3.2.1 Define Data Products 
+The System shall be capable of defining Data Products for Ingest. 
+3.2.2 Integrate System Elements 
+The System shall be capable of integrating System Elements including Scientific Algorithms, 
+Product Tailoring Tools, Data Format Translati on Tools, and other pre-defined transformation 
+utilities. 
+3.2.3 Test Support 
+The System shall provide the capability to suppor t functional and performance tests of system 
+elements without impacting operational product generation. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+13 3.2.4 Maintain Records of Data and System Elements 
+The System shall be capable of maintaining reco rds of at least 30 days (configurable) worth of 
+Ingest history. 
+3.2.5 Control Algorithm Execution 
+The System shall provide the capability to control the execution of Scientific Algorithms. 
+3.2.6 Data Product Generation 
+The System shall be capable of generating Data Products. 
+3.2.6.1 Data Product Priorities 
+The System shall provide the capability for an authorized user to adjust Product Generation 
+priorities. 
+3.2.6.2 Platte Carre Projection 
+The System shall be capable of rendering Platte Carre projections. 
+3.2.6.3 Mercator Projection 
+The System shall be capable of rendering Mercator projections. 
+3.2.6.4 Polar Stereographic Projection 
+The System shall be capable of rendering Polar Stereographic projections. 
+3.2.6.5 Available Data Product Aggregations 
+The System shall be capable of aggregating Data Products up to and including one orbit. 
+3.2.6.6 Time-Averaged Data Products 
+The System shall be capable of producing time-averaged Data Products. 
+3.2.6.7 Available Grid Spacing 
+The System shall be capable of generating NOAA-Unique and Tailored Data Products with 
+Government-specified grid spacing. 
+3.2.6.8 BUFR Data Format 
+The System shall be capable of reformatting Data Products into BUFR. 
+3.2.6.9 GRIB2 Data Format 
+The System shall be capable of reformatting Data Products into GRIB2. 
+3.2.6.10 GeoTIFF Data Format 
+The System shall be capable of reformatting Data Products into GeoTIFF. 
+3.2.6.11 HDF5 Data Format 
+The System shall be capable of reformatting Data Products into HDF5. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+14 3.2.6.12 netCDF Data Format 
+The System shall be capable of reformatting Data Products into netCDF. 
+3.2.6.13 GZIP Compression Format 
+The System shall be capable of compressing Data Products with the GZIP algorithm. 
+3.2.6.14 ZIP Compression Format 
+The System shall be capable of compressing Data Products with the ZIP algorithm. 
+3.2.6.15 RICE Compression Format 
+The System shall be capable of compressing Data Products with the RICE algorithm. 
+3.2.6.16 JPEG Compression Format 
+The System shall be capable of compressing imag es of Data Products with the JPEG algorithm. 
+3.2.6.17 MPEG Compression Format 
+The System shall be capable of compressing animat ed images of Data Products with the  MPEG 
+algorithm. 
+3.2.6.18 Data Product Recovery 
+The System shall be capable of generating Data Products within a time frame not to exceed the 
+maximum user-specified shelf-life of the Data Product. 
+3.2.7 Data Product Availability 
+The System shall be capable of making Data Products available to registered users. 
+3.2.7.1 User Subscription Requests 
+The System shall provide an online capability for regi stered users to request subscriptions to xDRs, 
+Ancillary, NOAA-Unique, and Tailored Data Products. 
+3.2.7.2 Approve Subscription Requests 
+The System shall provide an online capability for the Government to approve subscription requests 
+for xDRs, Ancillary, NOAA-Unique, and Tailored Data Products. 
+3.2.7.3 Archive NOAA-Unique Data Products 
+The System shall be capable of distributing NOAA- Unique Data Products to  the CLASS Long-Term 
+Archive (LTA). 
+3.2.7.3.1 Provide Manifest and File Reports to CLASS 
+The System shall provide a list of files distributed to CLASS. 
+3.2.7.4 Receipt from CLASS 
+The System shall provide the capability to receive  an electronic delivery acknowledgement  message 
+from CLASS. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+15 3.2.8 Data Delivery 
+The System shall be capable of delivering NDE Data Products to registered us er's computer systems. 
+3.2.9 Order Status Notification 
+The System shall be capable of notifying regist ered users of the status of their orders. 
+3.2.10 System Status Notification 
+The System shall be capable of notifying regi stered users of the status of the System. 
+3.2.11 Data Authorization Procedures The System shall ensure that NDE information is accessible only to those authorized to have access. 
+3.2.12 Customer Registration 
+The System shall be capable of registering Us ers for the purpose of controlling their access to 
+System Elements and Data Products. 
+3.2.13 Health and Status 
+The System shall provide a mechanism for reporti ng performance related to resource utilization, 
+communications, product latencies, and hardware. 
+3.2.14 Provide Automatic Failover 
+The System shall provide an automatic failover capability that will re-create a fully functioning 
+configuration from a failed configuration. 
+ 
+3.2.14.1 OPS Failover to Test 
+In the event of a failure of the Operational Environment during the NPOESS missions, the System 
+Test Environment shall be capable of delivering products to the operational community within the 
+same throughput and latency parameters as the operational system. 
+3.2.15 Monitor Input Data Integrity 
+The System shall be capable of monitoring the inte grity of all data received from external sources. 
+3.2.15.1 Define Data Integrity Checks 
+The System shall provide the capability for an authori zed user to define data input integrity checks. 
+3.2.15.2 Execute Data Integrity Checks 
+The System shall be capable of executing and record ing the results of data input integrity checks, 
+and initiate actions based on those results. 
+3.2.16 Data Product Latency 
+The System shall be capable of making products available for distribution according to customer- 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+16 specified latencies. 
+3.2.17 Capture Performance Statistics 
+The System shall have the capability to monitor,  record statistics, and deliver reports on its 
+performance. 
+3.2.17.1 Performance Log Retention 
+The System shall be capable of re taining logs of all performance data for no less than 90 consecutive 
+calendar days. 
+3.2.18 Generate Custom Reports 
+The System shall provide the capability to generate custom reports from data collected during data 
+receipt, processing, and distribution.  
+3.3 External interface requirements 
+3.3.1 Receive from IDPS  
+The System shall be capable of receiving data and products from IDPS. 
+3.3.1.1 xDR Ingest from IDPS 
+The System shall be capable of requesting and accepting all xDRs generated by the IDPS.  
+3.3.1.2 SARSAT Telemetry from IDPS 
+The System shall be capable of receiving SARSAT Telemetry from the IDPS. 
+3.3.1.3 A-DCS Data and Telemetry from IDPS 
+The System shall be capable of receiving A-DCS data and telemetry from the IDPS. 
+3.3.1.4 Product Subscriptions to the IDPS 
+The System shall provide an operator console capable of utilizing IDPS client software for 
+submitting subscriptions for Data Products to the IDPS. 
+3.3.1.5 Ad Hoc Requests to the IDPS 
+The System shall be capable of automatica lly submitting Ad Hoc Requests to the IDPS for 
+retransmission of Data Products. 
+3.3.1.6 Data Delivery Notifications 
+The System shall be capable of receiving Data Delivery Reports (DDRs) from the IDPS. 
+3.3.2 Ancillary Data Product Acquisition 
+The System shall be capable of receiving Ancillary Data Products from the Environmental Satellite 
+Processing Center (ESPC). 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+17 3.3.3 Process Archived Data 
+The System shall be capable of ingesting and processing archived data. 
+3.3.4 Receive from CLASS 
+The System shall provide an operator console capable of requesting Data Products from the 
+Comprehensive Large Array-data Stewardship System (CLASS). 
+3.3.4.1 Data Products from CLASS 
+The System shall be capable of receiving Data Products delivered from CLASS. 
+3.3.4.2 Send CLASS Data Receipt 
+The System shall be capable of sending a Data Receipt to CLASS for each Data Product received 
+from CLASS. 
+3.3.5 MMC Interface Through ESPC 
+ESPC Operations shall provide an interface between NDE and the NPOESS Mission Management 
+Center (MMC) such that 100% of the NDE inquiri es to the MMC and NDE replies to MMC requests 
+are received by the MMC in a time not  to exceed that specified in the ICD, and that 100% of the 
+notifications and inquiries from the MMC to NDE are received by NDE in a time not to exceed that 
+specified by the ICD. 
+3.3.6 NPOESS Trouble Ticket Interface 
+The System shall provide an operator console capable of interfacing w ith the NPOESS trouble 
+ticketing system. 
+3.3.7 ESPC Trouble Ticket Interface 
+The System shall provide an operator console capab le of interfacing with the ESPC trouble ticketing 
+system. 
+3.4 Internal Interface Requirements  
+3.4.1 Schedule Tasks 
+The System shall be capable of executing tasks according to a schedule. 
+3.4.2 Event Driven Tasks 
+The System shall be capable of executing tasks initiated by events. 
+3.4.3 Reliability of Scheduled Tasks 
+The System shall be capable of executing 99% of  its scheduled tasks in any consecutive 30 day 
+period. 
+3.4.4 Reliability of Event Driven Tasks 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+18 The System shall be capable of executing 99% of its event driven tasks in any consecutive 30 day 
+period. 
+3.4.5 Adjust Priorities of Tasks 
+The System shall be capable of adjusting the priorities of scheduled and event-driven tasks. 
+3.5 Internal data Requirements 
+3.5.1 Test Data Capacity 
+The System shall have the capacity to store 4 Terabytes (TBs) of data for testing purposes. 
+3.5.2 Metadata Standards Validation 
+The System shall be capable of reporting on all i ngested, generated, and distributed data according 
+to the (Federal Geographic Data Committee (F GDC) Content Standard for Digital Geospatial 
+Metadata (CSDGM), Vers. 2 (FGDC-STD-001-1998 
+<http://www.fgdc.gov/standards/projects/F GDC-standards-projects/metadata/base-
+metadata/index_html> ) and the CSDGM Remote Sensing Extensions (FGDC-STD-012-2002). 
+3.5.3 Record Quality Information 
+The System shall be capable of storing product quality information in the metadata of products 
+created. 
+3.5.4 NOAA-Unique Product Shelf Life  
+The System shall be capable of retaining Data Products for a configurable period of time not to 
+exceed 96 hours. 
+3.6 Adaptation Requirements 
+3.6.1 Technology Updates 
+The System shall be capable of accepting technology updates without System downtime. 
+3.6.2 Scalability 
+The System shall be capable of adding additional capacity without redesign of it's infrastructure. 
+3.7 Security and Privacy Requirements 
+3.7.1 Follow ESPC Security Procedures 
+The System shall comply with ESPC (DoC/NOAA/NESD IS) procedures and policies as stated in the 
+NOAA IT Security Manual 212-1300, Version 3.3, dated May 15, 2007. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+19 3.7.2 Generate System Backups 
+The System shall be capable of generating backups for all NDE data, procedures, and software. 
+3.7.3 Identify Automated Backup Procedures 
+The System shall be capable of implementing automated backup procedures. 
+3.7.4 Restore from System Backups 
+The System shall be capable of returning to nomin al operations following a re storation from system 
+backups. 
+3.7.5 Integrity - Protect from Human Errors 
+The System shall be capable of protecting the inte grity of NDE data in th e event of human errors. 
+3.7.6 Integrity - Protect from Transmission Errors 
+The System shall be capable of protecting the inte grity of NDE data in the event of computer to 
+computer transmission errors. 
+3.7.7 Integrity - Protect from Software Bugs 
+The System shall be capable of protecting the integrity of NDE data from software bugs. 
+3.7.8 Integrity - Protect from Hardware Malfunction 
+The System shall be capable of protecting the integrity of NDE data in the event of a hardware 
+malfunction such as a disk crash. 
+3.7.9 Integrity - Protect from Natural Disasters 
+The System shall be capable of protecting the integrity  of NDE data in the event of a natural disaster. 
+3.7.10 ESPC Network Authorization 
+The NDE System can be accessed only with the authorization of the Government. 
+3.8 Computer Resource Requirements 
+3.8.1 Computer Hardware Requirements 
+3.8.1.1 Hardware Reuse 
+The System shall be constructed using existing hardware where it is possible, practical, and 
+approved by the Government.  Inventory will be provided to the Contractor by OSDPD IT Lead. 
+3.8.2 Computer software requirements 
+3.8.2.1 Software Reuse 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+20 The System shall be constructed using existing soft ware where it is possible, practical, and approved 
+by the Government.  Inventory will be provi ded to the Contractor by OSDPD IT Lead. 
+3.8.2.2 COTS and Open Source 
+The System shall be constructed using COTS a nd Open Source software where it is possible, 
+practical, and approved by the Government. 
+3.8.2.3 Reusability 
+The NDE System Elements shall be designed to be reused in other Satellite Data Processing 
+applications. 
+3.8.2.4 Modularity 
+The NDE System shall be designed so that Scientific Algorithms are invoked as objects. 
+3.9 Operator-Related requirements 
+3.9.1 Log and Track Events 
+The System shall provide the capability for operato rs to log and track events (i.e., MMC Service 
+Requests, MMC Service Request Responses). 
+3.9.2 Provide an Operator Log 
+The System shall provide the capability for operato rs to update a summary log for the purposes of 
+tracking the occurrence of significant events or activities. 
+3.9.3 Sort/Search Operator Log 
+The System shall provide the capability for operators  to sort and search on summary log events for 
+the purposes of identifying, troubleshooting, and reporting on significant activities. 
+3.9.4 Report on Events 
+The System shall be capable of reporting on summary log events. 
+3.9.5 Restart Procedures 
+The System shall provide the capability for operato rs to quiesce and restart the System.  This 
+capability should be designed to minimize interruptions of service. 
+3.9.6 Monitor Input Quality 
+The System shall im plement operational quality m onitoring procedures that will detect and report to 
+operators and management the acceptability of xDR metadata according to configurable thresholds. 
+3.9.7 Monitor Output Quality The System shall im plement operational quality m onitoring procedures that will detect and report to 
+operators and management the acceptability of out put product metadata according to configurable 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+21 thresholds. 
+3.9.8 Degraded Operations Notification 
+The System shall be capable of changing system status to reflect the condition of NPOESS (i.e., 
+Degraded Operations, Restricted Access). 
+3.9.9 Archive System Elements 
+The System shall provide the capability for operato rs to forward NDE System Elements to CLASS 
+for permanent archive. 
+3.10 Other Requirements 
+3.10.1 Availability Requirements 
+3.10.1.1 Ingest Availability 
+The NDE Ingest capability shall not be interrupted for more than 2 hours in any consecutive 24 hour 
+period and no more than 4 hours in any consecutive 30 day period. 
+3.10.1.2 Product Generation Availability 
+The NDE Product Generation capability shall not be  interrupted for more than 2 hours in any 
+consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period. 
+3.10.1.3 Distribution Availability 
+The NDE Distribution capability shall not be interrupted for more than 2 hours in any consecutive 
+24 hour period and no more than 4 hours in any consecutive 30 day period. 
+3.10.1.4 Operations Monitoring Availability 
+The NDE Operations Monitoring capability shall not be interrupted for more than 2 hours in any 
+consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period. 
+3.10.1.5 Interruptions to Development 
+The Development and Maintenance Environment shall be available to at least 25 developers 85% of 
+the time during normal business hours over any cons ecutive twelve month period.  Normal business 
+hours are 8am to 4pm Eastern Time, Monday through Friday. 
+3.10.2 Performance Requirements 
+3.10.2.1 IDPS Data Access Latency 
+The System shall be capable of accessing data deliv ered by IDPS within no more than ten seconds of 
+notification from IDPS. 
+3.10.2.2 SARSAT Telemetry 
+The System shall deliver SARSAT Telemetry da ta from IDPS to US Mission Control Center 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+22 (USMCC) within 1 minute of their receipt. 
+3.10.2.3 A-DCS Telemetry 
+The System shall deliver A-DCS Telemetry data from IDPS to the US Global Processing Center 
+within 1 minute of their receipt. 
+3.10.2.4 A-DCS Data 
+The System shall deliver A-DCS Data Products from IDPS to the US Gl obal Processing Center 
+within 1 minute of their receipt. 
+3.10.3 Capacity Requirements 
+3.10.3.1 NPP Era Product Volumes 
+During the NPP mission, the System shall be capable of supporting product volumes of 4 Terrabytes 
+per day of input and 8 Terabytes per day of output. 
+3.10.3.2 NPOESS-C1 Era Product Volumes 
+During the NPOESS-C1 mission, the System shall be capable of supporti ng product volumes of 8 
+Terabytes per day of input and 16 Terrabytes per day of output. 
+3.10.3.3 NPOESS-C2 Era Product Volumes 
+During the NPOESS-C2 mission, the System shall be capable of supporti ng product volumes of 8 
+Terabytes per day of input and 16 Terabytes per day of output. 3.10.4 Federal Enterprise Architecture 
+The System shall be compliant with the OMB Fe deral Enterprise Architecture (FEA) according to 
+the documents dated December 2006, and available from http://www.whitehouse.gov/omb/egov/a-2-
+EAModelsNEW2.html .  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+23 4 REQUIREMENTS TRACEABILITY 
+4.1 NDE Contract Section J  
+The Section J portion of the NDE C ontract specifies NDE System requirements in terms of Desired 
+Outcomes, Required Services, Performance St andards, and Monitoring Methods.   These 
+requirements have been used as a basis for the SR S items in the Section 4.2 Traceability Table.  All 
+applicable portions of NDE Contract Section J are located in Appendix C. 
+4.2 Traceability Table 
+ 
+ID Object 
+Number Object Heading Sec J 
+Reqt Subsystem 
+SRS79 3.1.1 Open Mode SM12 Infrastructure 
+SRS80 3.1.2 Degraded System Mode SM15 Infrastructure 
+SRS95 3.1.2.1 Degraded Data Notification SM16 Infrastructure 
+SRS81 3.1.3 Restricted Access Mode SM13 Infrastructure 
+SRS96 3.1.3.1 Restricted Access Notification SM14 Customer 
+Services 
+SRS76 3.2.1 Define Data Products PG8 Ingest 
+SRS77 3.2.2 Integrate System Elements PG8 Product 
+Management 
+SRS99 3.2.3 Test Support SE3 Production 
+SRS100 3.2.4 Maintain Records of Data and 
+System Elements DA7 Production 
+SRS73 3.2.5 Control Algorithm Execution PG8 Production 
+SRS74 3.2.6 Data Product Generation PG8 Production 
+SRS306 3.2.6.1 Data Product Priorities   
+SRS101 3.2.6.2 Platte Carre Projection PG5 Production 
+SRS254 3.2.6.3 Mercator Projection PG5 Production 
+SRS255 3.2.6.4 Polar Stereographic Projection PG5 Production 
+SRS102 3.2.6.5 Available Data Product 
+Aggregations PG6 Production 
+SRS256 3.2.6.6 Time-Averaged Data Products PG6 Production 
+SRS103 3.2.6.7 Available Grid Spacing PG7 Production 
+SRS105 3.2.6.8 BUFR Data Format PG1 Production 
+SRS257 3.2.6.9 GRIB2 Data Format PG1 Production 
+SRS258 3.2.6.10 GeoTIFF Data Format PG1 Production 
+SRS259 3.2.6.11 HDF5 Data Format PG1 Production 
+SRS260 3.2.6.12 netCDF Data Format PG1 Production 
+SRS108 3.2.6.13 GZIP Compression Format PG3, Production 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+24 ID Object 
+Number Object Heading Sec J 
+Reqt Subsystem 
+PG4 
+SRS262 3.2.6.14 ZIP Compression Format PG3, 
+PG4 Production 
+SRS264 3.2.6.15 RICE Compression Format PG3, 
+PG4 Production 
+SRS261 3.2.6.16 JPEG Compression Format PG3, 
+PG4 Production 
+SRS263 3.2.6.17 MPEG Compression Format PG3, 
+PG4 Production 
+SRS114 3.2.6.18 Data Product Recovery DA9 Production 
+SRS117 3.2.7 Data Product Availability CD6 Distribution 
+SRS209 3.2.7.1 User Subscription Requests CD6 Distribution 
+SRS265 3.2.7.2 Approve Subscription Requests CD6 Distribution 
+SRS119 3.2.7.3 Archive NOAA-Unique Data 
+Products DA6, 
+XF5 Distribution 
+SRS246 3.2.7.3.1 Provide Manifest and File 
+Reports to CLASS XF5 Distribution 
+SRS210 3.2.7.4 Receipt from CLASS XF7 Distribution 
+SRS118 3.2.8 Data Delivery I2 Distribution 
+SRS120 3.2.9 Order Status Notification SM19 Distribution 
+SRS266 3.2.10 System Status Notification SM19 Monitoring and 
+Control 
+SRS186 3.2.11 Data Authorization Procedures SM10 Monitoring and 
+Control 
+SRS212 3.2.12 Customer Registration SM10 Customer 
+Services 
+SRS128 3.2.13 Health and Status SM5 Monitoring and 
+Control 
+SRS87 3.2.14 Provide Automatic Failover DD5 Monitoring and 
+Control 
+SRS130 3.2.14.1 OPS Failover to Test I2 Monitoring and 
+Control 
+SRS131 3.2.15 Monitor Input Data Integrity SM18 Monitoring and 
+Control 
+SRS307 3.2.15.1 Define Data Integrity Checks SM17, 
+SM18  
+SRS268 3.2.15.2 Execute Data Integrity Checks SM18 Monitoring and 
+Control 
+SRS133 3.2.16 Data Product Latency CD9 Monitoring and 
+Control 
+SRS134 3.2.17 Capture Performance Statistics SM23 Monitoring and 
+Control 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+25 ID Object 
+Number Object Heading Sec J 
+Reqt Subsystem 
+SRS303 3.2.17.1 Performance Log Retention SM24 Monitoring and 
+Control 
+SRS302 3.2.18 Generate Custom Reports SM24 Monitoring and 
+Control 
+SRS56 3.3.1 Receive from IDPS  PG8 Ingest 
+SRS57 3.3.1.1 xDR Ingest from IDPS PG8 Ingest 
+SRS62 3.3.1.2 SARSAT Telemetry from 
+IDPS XF1 Ingest 
+SRS63 3.3.1.3 A-DCS Data and Telemetry 
+from IDPS XF1 Ingest 
+SRS58 3.3.1.4 Product Subscriptions to the 
+IDPS XF1 Ingest 
+SRS59 3.3.1.5 Ad Hoc Requests to the IDPS XF1 Ingest 
+SRS60 3.3.1.6 Data Delivery Notifications XF1 Ingest 
+SRS61 3.3.2 Ancillary Data Product 
+Acquisition PG9 Ingest 
+SRS191 3.3.3 Process Archived Data DA9 Product 
+Generation 
+SRS65 3.3.4 Receive from CLASS XF7 Ingest 
+SRS66 3.3.4.1 Data Products from CLASS XF7 Ingest 
+SRS70 3.3.4.2 Send CLASS Data Receipt XF7 Ingest 
+SRS140 3.3.5 MMC Interface Through ESPC XF9 Infrastructure 
+SRS142 3.3.6 NPOESS Trouble Ticket 
+Interface XF11 Infrastructure 
+SRS235 3.3.7 ESPC Trouble Ticket Interface SM16 Infrastructure 
+SRS143 3.4.1 Schedule Tasks SM2 Production 
+SRS282 3.4.2 Event Driven Tasks SM2 Production 
+SRS283 3.4.3 Reliability of Scheduled Tasks SM2 Production 
+SRS284 3.4.4 Reliability of Event Driven 
+Tasks SM2 Production 
+SRS145 3.4.5 Adjust Priorities of Tasks SM3 Production 
+SRS285 3.5.1 Test Data Capacity DA2 System 
+SRS286 3.5.2 Metadata Standards Validation DA10 Monitoring and 
+Control 
+SRS287 3.5.3 Record Quality Information DA11 Monitoring and 
+Control 
+SRS154 3.5.4 NOAA-Unique Product Shelf 
+Life  DA1 Distribution 
+SRS158 3.6.1 Technology Updates I1 Infrastructure 
+SRS159 3.6.2 Scalability I1 Infrastructure 
+SRS160 3.7.1 Follow ESPC Security 
+Procedures SA5 Documentation 
+Security 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+26 ID Object 
+Number Object Heading Sec J 
+Reqt Subsystem 
+SRS162 3.7.2 Generate System Backups SM7 Infrastructure 
+SRS183 3.7.3 Identify Automated Backup 
+Procedures SM7 Infrastructure 
+SRS163 3.7.4 Restore from System Backups SM9 Security 
+SRS288 3.7.5 Integrity - Protect from Human 
+Errors SM9 Monitoring and 
+Control 
+SRS289 3.7.6 Integrity - Protect from 
+Transmission Errors SM9 Monitoring and 
+Control 
+SRS290 3.7.7 Integrity - Protect from 
+Software Bugs SM9 Monitoring and 
+Control 
+SRS291 3.7.8 Integrity - Protect from 
+Hardware Malfunction SM9 Monitoring and 
+Control 
+SRS198 3.7.9 Integrity - Protect from Natural 
+Disasters SM9 Infrastructure 
+SRS164 3.7.10 ESPC Network Authorization CD4 Networks 
+SRS166 3.8.1.1 Hardware Reuse SE9 Infrastructure 
+SRS167 3.8.2.1 Software Reuse SE9 Infrastructure 
+SRS93 3.8.2.2 COTS and Open Source SE10 Infrastructure 
+SRS168 3.8.2.3 Reusability SE2 Infrastructure 
+SRS169 3.8.2.4 Modularity SE5 Infrastructure 
+System 
+SRS177 3.9.1 Log and Track Events SM20 Monitoring and 
+Control 
+SRS293 3.9.2 Provide an Operator Log SM23 Monitoring and 
+Control 
+SRS294 3.9.3 Sort/Search Operator Log SM24 Monitoring and 
+Control 
+SRS178 3.9.4 Report on Events SM24 Monitoring and 
+Control 
+SRS184 3.9.5 Restart Procedures SM8 Infrastructure 
+SRS187 3.9.6 Monitor Input Quality SM17 Monitoring and 
+Control 
+SRS295 3.9.7 Monitor Output Quality SM18 Monitoring and 
+Control 
+SRS188 3.9.8 Degraded Operations 
+Notification SM16 Monitoring and 
+Control 
+SRS189 3.9.9 Archive System Elements DA4, 
+XF6 Distribution 
+Infrastructure 
+SRS193 3.10.1.1 Ingest Availability AS1 Distribution 
+Infrastructure 
+SRS296 3.10.1.2 Product Generation 
+Availability AS1 Distribution 
+Infrastructure 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+27 ID Object 
+Number Object Heading Sec J 
+Reqt Subsystem 
+SRS297 3.10.1.3 Distribution Availability AS1 Distribution 
+Infrastructure 
+SRS298 3.10.1.4 Operations Monitoring 
+Availability AS1 Distribution 
+Infrastructure 
+SRS91 3.10.1.5 Interruptions to Development SE3 Infrastructure 
+SRS194 3.10.2.1 IDPS Data Access Latency I2 Infrastructure 
+Ingest 
+SRS196 3.10.2.2 SARSAT Telemetry CD7 Distribution 
+Infrastructure 
+Ingest 
+SRS197 3.10.2.3 A-DCS Telemetry CD8 Distribution 
+Infrastructure 
+SRS301 3.10.2.4 A-DCS Data CD8 Distribution 
+Infrastructure 
+SRS86 3.10.3.1 NPP Era Product Volumes I2 Distribution 
+Infrastructure Ingest Monitoring and Control System 
+SRS299 3.10.3.2 NPOESS-C1 Era Product 
+Volumes I2 Distribution 
+Infrastructure Ingest Monitoring and Control 
+SRS300 3.10.3.3 NPOESS-C2 Era Product 
+Volumes I2 Distribution 
+Infrastructure Ingest Monitoring and Control 
+SRS92 3.10.4 Federal Enterprise Architecture SE1 Documentation 
+Infrastructure 
+  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+28  
+APPENDIX A: Glossary  
+ 
+The following table is from the NDE Glossary (D raft) dated 20-Mar-2007, with several additions.  
+The Terms below are reference in the System Re quirements Specification as well as other NDE 
+documents.  
+Term                   Definition 
+Activity Diagram An activity diagram represents the business and operational step-by-step 
+workflows of components in a system.  
+A-DCS  Advanced Data Collection System 
+Application Server An application server is a software engine that delivers applications to 
+client computers. Moreover, an appli cation server should handle most, if not 
+all, of the business logic and data access of the application. 
+CASE  Computer-Aided Software Engineering 
+CLASS Comprehensive Large Array-data Stewardship System 
+Component Hardware, equipment, and licensed software products (i.e., Operating 
+Systems, DBMS, middleware, COTS or  GOTS products, CASE tools, etc.), 
+used by NDE as general term in discu ssions of infrastructure (See Contract 
+Section J, Figure 38.) 
+Continuance of Operations Plan (COOP) A conducted thr ee months study starting in February 2007 to evaluate 
+options for a NDE backup facility. 
+Critical Infrastructure Protection (CIP) Infrast ructure necessary to backup the NDE system. 
+Delivered Algorithm Package (DAP) The DAP is a single compressed tar file which contains all information 
+necessary so that an algorithm can be built from scratch and tested 
+independently of other algorithms in the NDE development and test environments. 
+Drop Box A file directory or set of director ies located on a system within a designated 
+public security zone on the network wh ich is configured to segregate access 
+and provide a place to deliver and recei ve files necessary for other systems 
+to process.  The drop box sometimes refers to the hosting system or hosting system’s file system. 
+Element NOAA-developed system capabilities (e.g., the source code for algorithms, 
+programs, utilities, control tables, calle d procedures, etc.), used by NDE as 
+general term in discussions of archiving and configuration management 
+(See Contract Section J, Figure 38.) 
+Enterprise Service Bus 
+(ESB) An ESB refers to a software architecture construct that provides 
+foundational services for more complex architectures via an event-driven and standards-based messaging engine (the bus). The ESB is in the category of middleware infrastructure products. 
+Gazetteer A gazetteer is a geographical dic tionary: Short-form gazetteers, often used 
+in conjunction with computer mapping and Geographic Information Systems (GIS), may simply contain a list of place-names together with their locations in latitude and longitude or other spatial referencing systems (eg. 
+British National Grid reference). 
+Middleware Middleware is computer software  that connects software components or 
+applications. It is used most often to support complex, distributed applications. It includes web servers, application servers, content management systems, and similar tools that support application 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+29 Term                   Definition 
+development and delivery.  
+Near Real-Time Process Software process designed to  satisfy a latency requirement that calls for the 
+process to be completed within 30 minutes or less time that all input data 
+becomes available for that process. 
+NOFORN  Not Releasable to Foreign Nationals/Governments/Non-US Citizens 
+Production Rule  Production Rules define the activation conditions necessary for an 
+algorithm to be run.  
+Product Latency The point in time when all of the required xDRs needed to create a product 
+are successfully ingested and the point  in time where the product is made 
+available for distribution to customers. 
+SARSAT  Search and Rescue Satellite-aided Tracking 
+Science Algorithm Development and 
+Integration Environment (SADIE) The SADIE is a computing environment where algorithms are integrated 
+with the Data Handling System (DHS).  It contains all the tools and libraries 
+necessary to design, develop, and do unit testing on algorithms.  It also can 
+receive algorithms that were developed in other environments (e.g., the STAR Collaborative Environment) via the delivery of a Delivered 
+Algorithm Package (DAP). 
+Service A service is a unit of work done by a service provider for a service 
+consumer. 
+Service Oriented Architecture (SOA)  SOA is an architectural style whos e goal is to achieve loose coupling 
+among interacting software agents. 
+ (Source: from Wikipedia) An architecture that relies on service- orientation as its fundamental design 
+principle. Service-orientation describe s an architecture that uses loosely 
+coupled services to support the requirements of business processes and 
+users. Resources on a network in an SOA environment are made available 
+as independent services that can be accessed without knowledge of their 
+underlying platform implementation. These concepts can be applied to business, software and other types of producer/consumer systems. 
+STAR Center for Satellite Applications and Research 
+Subsystem A subsystem is a set of elements, which is a system itself, and a part of the 
+whole system. 
+System  A system is an assemblage of  entity/objects comprising a whole with each 
+and every component/element interacting or related to at least one other 
+component/element. Any object which has no relationship with any other 
+element of the system is not a component of that system.  
+Tool Component used by NDE developmen t staff in the process of creating, 
+testing, organizing, or tracking NDE el ements, but not incorporated into the 
+architecture of the operational or test systems (e.g. a requirements 
+management tool). 
+Use Case A use case is a technique for capturing functional requirements of systems. 
+Each use case provides one or more s cenarios that convey how the system 
+should interact with the users, calle d actor, to achieve a specific business 
+goal or function.  
+Use Case Actors End users or other systems. 
+Use Case Diagram Use Case Diagrams model the behavior of a system, subsystem, or class. 
+Virtual Private Network (VPN) A VPN is a private communications network  often used within a company, 
+or by several companies or organizations, to communicate confidentially 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+30 Term                   Definition 
+over a publicly accessible network. VPN message traffic can be carried over 
+a public networking infrastructure (e.g. the Internet ) on top of standard 
+protocols, or over a service provider's private network with a defined 
+Service Level Agreement  (SLA) between the VPN customer and the VPN 
+service provider. (Source: Wikipedia)   For NDE, the VPN is used to 
+authorize roles and access to each user , encrypt the traffic between the 
+user’s system and the NDE systems accessed, and provide strong authentication capabilities for the users. 
+Web Server/HTTP Server Software accepting HyperText Transfer Protocol (HTTP) requests from 
+clients, which are known as Web browsers, and serving them HTTP responses along with optional data contents, which usually are Web pages such as HTML documents and linked objects (images, etc.). 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+31  
+ 
+APPENDIX B: Acronyms and Abbreviations 
+  The following table is from the NDE Concept of  Operations (Draft) document dated 7-Nov-2007.  
+The acronyms below are reference in the CONOPS document as well as other NDE documents. 
+ 
+ADA (IDPS) Algorithm Development Area 
+A-DCS Advanced Data Collection System 
+AFWA Air Force Weather Agency  
+API Application Program Interface 
+APS Aerosol Polarimeter Sensor  
+ATMS Advanced Technology Microwave Sounder   
+AWIPS Advanced Weather Interactive Processing System  
+C1 Converged Satellite 1 (First NPOESS Satellite) 
+C2 Converged Satellite 2 (Second NPOESS Satellite) 
+C3 Converged Satellite 3 (Third NPOESS Satellite) 
+C3S Command, Control, and Communications Segment 
+CASE Computer Assisted Software Engineering 
+CDR Climate Data Records  
+CDR Critical Design Review  
+CE Capital Expenses 
+CLASS Comprehensive Large Array-data Stewardship System  
+CM Configuration Management 
+CMIS Conical Scanning Microwave Imager/Sounder 
+CO Contract Officer  
+CONOPS Concept of Operations  
+COOP Continuity of Operations Plan  
+COR Contract Officer Representative  
+COTS Commercial off-the-shelf 
+CM Configuration Management 
+CrIS Cross-Track Infrared Sounder    
+CrIMS Cross-Track Infrared Sounder + Advance Technology Microwave Sounder   
+DBA Data Base Administrator 
+DBMS Data Base Management System 
+DCS Data Collection System  
+DHS Data Handling System 
+DMSP Defense Meteorological Satellite Program  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+32 DoA Department of Agriculture  
+DOC Department of Commerce  
+DoD Department of Defense  
+DOS Department of State  
+DRO Direct Readout 
+ECMWF European Center for Medium-range Weather Forecasting 
+EDR Environmental Data Record  
+EOS Earth Observing System (NASA) 
+ERD Entity Relationship Diagram 
+ESPC Environmental Satellite Processing Center  
+EUMETSAT European Organisation for the Exploitation of Meteorological Satellites  
+FAA Federal Aviation Administration  
+FGDC Federal Geographic Data Committee 
+FNMOC Fleet Numerical Meteorology and Oceanography Center 
+FOC Final Operational Capability  
+GOTS Government off-the-shelf 
+HDF Hierarchical Data Format  
+HDF5 Hierarchical Data Format version 5 
+I&T Integration and Test 
+IDPS Interface Data Processing Segment  
+IORD-II Integrated Operational Requirements Document  
+IPO Integrated Program Office  
+IPP Integrated Program Plan  
+ITAT Information Technology Architecture Team  
+JARG Joint Agency Requirements Group  
+JCSDA Joint Center for Satellite Data Assimilation  
+KPP Key Performance Parameter 
+LTA Long-term Archive  
+LUT LUT (Local User Terminal) 
+METOP Meteorological Operational  
+MMC Mission Management Center  
+NAVOCEANO Naval Oceanographic Office 
+NCDC National Climatic Data Center 
+NCEP National Centers for Environmental Prediction  
+NDE NPOESS Data Exploitation  
+NEB  NOAA Executive Board  
+NGDC National Geophysical Data Center 
+NIC National Ice Center  
+NMFS National Marine Fisheries Service  
+NOAA National Oceanic and Atmospheric Administration  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+33 NODC National Oceanographic Data Center 
+NOS National Ocean Service  
+NPOESS National Polar-orbiting Operational Environmental Satellite System  
+NPP NPOESS Preparatory Project  
+NSOF NOAA Satellite Operations Facility  
+NU NOAA Unique 
+NUP NOAA Unique Product 
+NWS National Weather Service  
+O&M Operations and Maintenance 
+OAR Office of Oceanic and Atmospheric Research  
+OMB Office of Management and Budget  
+OPC Ocean Prediction Center  
+OSD Office of Systems Development  
+OSDPD Office of Satellite Data Processing and Distribution  
+PAL Product Area Lead 
+PD Product Development  
+PDR Preliminary Design Review  
+PIR Post Implementation Review  
+POES Polar-orbiting Operational Environmental Satellite  
+POP Product Oversight Panel  
+PPBES Project Planning, Budgeting, and Evaluation System  
+PPI Plan For Product Implementation  
+PPI Program Planning and Integration  
+PSDI Product Systems Development and Implementation  
+R2O Research To Operations  
+RDBMS Relational Data Base Management System  
+RDR Raw Data Record  
+RTS Requirements Tracking System  
+SADIE Science Algorithm Development and Integration Environment (SADIE) 
+SARSAT Search and Rescue Satellite Aided Tracking  
+SDLC System Development Life Cycle  
+SDR Sensor Data Record  
+SDS Scientific Data Stewardship  
+SDS Science Data Segment (NASA) 
+SMB Senior Management Board  
+SMD Stored Mission Data 
+SPSRB Satellite Product and Services Review Board 
+SRR System Requirements Review  
+SST Sea-Surface Temperature  
+STAR Center for Satellite Applications and Research  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+34 STI Science and Technology Infusion  
+SUAG Senior Users Advisory Group  
+TBC To Be Confirmed 
+TDR Temperature Data Record  
+UKMetO United Kingdom Meteorology Office 
+USMCC United States Mission Control Center  
+VIIRS Visible/Infrared Imager Radiometer Suite  
+WBS Work Breakdown Structure  
+xDR any NPOESS Data Record 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+35  
+APPENDIX C: Section J Contract Matrices     
+ 
+Table 3. NDE Software Engineering Outcomes Matrix 
+ 
+ Desired Outcomes  Required Service  Performance 
+Standard  Monitoring 
+Method  
+SE1 The ESPC will have 
+an IT Architecture 
+compliant with government standards and that meets NESDIS requirements. The contractor shall develop an IT Enterprise Architecture (EA) that is cons istent with 
+“Table 1 Federal Enterprise 
+Architecture (FEA).” 
+ (NOTE: Guidance on applying the FEA to NDE Design is available at the FEA web site:  
+http://www.whiteho
+use.gov/omb/egov/a-
+1-fea.html  The IT Enterprise Architecture (EA) will be compliant with the OMB Federal Enterprise Architecture (FEA).  The EA will also be 
+compliant with guidance from the NESDIS CIO's Office.  EA will include documentation in Table 1. ~Analysis of 
+designs 
+SE2 Lower the cost and 
+risks of operating  
+the systems that will 
+generate and 
+distribute NPOESS-
+derived products to customers  Design Requirement 
+A: Design an Operational 
+Environment The 
+contractor shall 
+design and provide a reliable cost estimate 
+of an NDE product 
+processing system (develop a set of diagrams and supporting text) with an open architecture, such that its capabilities can be executed by other satellite data processing applications and can easily be operated on Open 
+Architecture:  
+During the first 
+year of the contract, prior to coding, the contractor shall develop a set of 
+diagrams and 
+supporting text that describes NDE product processing in the context of all NESDIS data processing 
+missions. Reusabi
+lity: During the 
+first year of the 
+contract, prior to ~Analysis of 
+designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+36 other platforms.  
+Capabilities that must be specified in this design include, but are not limited to:- Database management systems 
+(DBMS)- Work 
+management and scheduling systems- Libraries - Object repositories- Object repository content Shared data objects (i.e., lookup tables, ancillary data) Shared procedural objects (i.e., utilities, called-modules, subroutines, etc.) coding, the 
+contractor shall provide a set of diagrams and supporting text that describes an NDE product 
+processing 
+system in which the maximum number of system elements are accessible by the greatest possible number of product processing 
+applications. Reli
+ability:  The 
+NDE operational 
+environment will be designed for a high degree of reliability- maintain full operational status 98% of the time over any 12 
+month 
+period. Performa
+nce:   The NDE 
+operational 
+environment will be designed for optimal resource 
+utilization Securit
+y:  The NDE 
+operational 
+environment will be designed for a high degrees of confidentiality, integrity, and availability  
+SE3 Lower the cost and Design Requirement Open ~Analysis of 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+37 risks of developing, 
+maintaining, and 
+enhancing  the 
+system's data 
+processing and scientific capabilities B: Design a 
+Development Environment Specify 
+and provide a reliable 
+cost estimate of a 
+shared, scalable infrastructure for use 
+by developers and 
+maintainers of  data processing functions and of scientific algorithms that replicates, to the greatest extent possible, the system described as fulfillment of Design Requirement A (above). As well, the Development Environment Design will specify a suite of proven development 
+life cycle tools to 
+enhance NESDIS 
+capabilities  in 
+performing 
+developmental and 
+software maintenance 
+tasks.  Technologies in this category are: CASE tools, modeling tools,  4th Generation Languages, Testing Tools, requirements tracking tools, etc..  Architecture : 
+During the first 
+year of the contract, prior to coding, the contractor shall develop a set of 
+diagrams and 
+supporting text that describes NDE development capabilities  in the context of all NESDIS data processing missions. 
+Reusability:  
+During the first 
+year of the contract, prior to coding, the contractor shall provide a set of diagrams and supporting text that describes a developmental IT infrastructure in which developmental resources (tables, CASE tools, 4GLs, utilities, compilers, the maximum number of system elements can be accessed by environmental satellite product developers. 
+Performance:   
+The NDE 
+development designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+38 environment will 
+be designed for optimal resource utilization 
+     Maintainability: 
+Thecontractor 
+provides a set of recommendations for the most appropriate development tools 
+demonstrating that they are:~ widely supported in the remote sensing software industry ~ the most likely to be known by future NESDIS support staff  
+Reliability:  The 
+NDE 
+development environment will be designed for a high degree of reliability - accessible to no less than 100 developers 95% 
+of the time over 
+any 12 month 
+period Securit
+y:  
+The NDE 
+development environment will be designed for a high degrees of confidentiality, 
+integrity, and 
+availability 
+Partitioning: 
+The NDE   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+39 development 
+environment will be designed to support segregated domains to support different 
+levels of testing 
+(e.g.; unit, string,  etc.) 
+SE4 Lower the cost and 
+risks of transitioning 
+system elements into 
+operations  Design 
+Requirement C: Design a System 
+Test Environment  
+Specify and provide a 
+reliable cost estimate of a segregated test 
+capability that replicates, to the greatest extent possible, the system described as fulfillment of Design Requirement A (above).   The System Test Environment must support the following: Provide a capability for products to be generated and distributed to customers throughout the NPP mission.  (NOTE: The System Test environment will be used to generate NPP 
+products for 
+customers as “quasi-operational.”) Evaluate candidate system elements for operational fitness, performing Ease of Use, 
+Efficiency, Manageability:  
+During the first 
+year of the contract, prior to coding, the 
+contractor shall 
+provide a set of diagrams, supporting text, and procedures that describe a System Test Environment to be administered and operated in such a way that all elements submitted to them for testing and review can be evaluated for operational fitness in less than five working days after submission by developers. ~Analysis of 
+System Test Designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+40 appropriate   - 
+Analysis of documentation in terms of conformity to Configuration Management Standards (tbd)    - 
+Parallel tests   - 
+Stress Tests   - Regression Tests Cooperate with NESDIS algorithm developers to identify System Test procedures, standards, and the criteria to be applied in determining a system element's fitness for operational status 
+    Provide a reliable, 
+easily accessible 
+source of information to developers about the criteria that will be applied by the System Test team to 
+determine a system 
+element's fitness for operational status. This information will include, at a minimum: system test submission procedures, documentation requirements, test script requirements, test scenario requirements,  and test data requirements.        
+SE5 Ability to isolate, 
+alter, and test the The contractor shall 
+develop the data Modularity: 
+During the ~Analysis of 
+designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+41 system functions processing elements 
+of the future system 
+in such a way that algorithms are invoked as objects with hidden information. project, prior to coding, the contractor shall provide a set of diagrams and supporting text that describes 
+how algorithms 
+are to be invoked as objects 
+ 
+  
+SE6 The 
+contractor's 
+design shall meet IT security 
+standards (see System Management Requirements G through J) The contractor shall 
+provide documentation needed for Information System Certification and Accreditation. Documentation is complete and high quality.  Documentation 
+includes IT 
+Security Plan, Risk Assessment, Security Test and Evaluation Plan, and Contingency Plan. ~Analysis of 
+designs 
+SE7 ESPC is built 
+according to government standards and Maturity Models. The contractor shall use Government Maturity Models for Configuration Control of documentation, Information System components, EA, and IT Security. CM, EA, and IT Security conform with accepted Government Level 4 Maturity Models. ~Analysis of designs 
+SE8 Costs are 
+reduced and system transition is easier. The contractor shall design and build the NDE Information System using NOAA IT Best Practices provided by NDE Project Manager. Technical Reference Model is compared to NDE collection of NOAA Best Practices. ~Analysis of designs 
+SE9 The use of 
+existing hardware and software reduces cost. The contractor shall use existing hardware and software where it is possible, practical, and approved by the Government.  Inventory will be provided to the contractor by OSDPD IT Design documentation identifies existing hardware and software used. ~Analysis of designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+42 Lead. 
+SE10 Vendor-
+supported 
+COTS and Open Source software is used to reduce development 
+costs. The contractor shall use 
+Commercial-Off-the-Shelf (COTS) and Open Source software packages where practical, possible, and approved by the Government.  Design documentation identifies COTS used. ~Analysis of designs 
+SE11 Ability to 
+make system 
+management 
+decisions  on 
+the basis of 
+system-generated 
+metrics  The contractor shall 
+identify standard measures 
+of automated system component performance that can be captured during run-time and retrieved for analysis Measurability:  
+During the project, 
+prior to coding, the 
+contractor shall provide diagrams and supporting text describing:~ numerical data 
+elements of execution performance (time, volume, number of invocations, etc.)~ how the performance metrics are to be stored and used for reporting ~Analysis of 
+designs 
+SE12 Effectively 
+manage design and development of the system's data processing 
+capabilities Project Management 
+Requirement: The 
+contractor shall plan and 
+control the NDE project in a manner that is consistent with a widely accepted software engineering methodology. Manageability: 
+The contractor:~ 
+Shall identify the 
+widely accepted software engineering methodology to be 
+used on the 
+project~ Shall develop and maintains Work Breakdown Structures and Project Plans consistent with the Methodology ~ Shall create work products consistent ~Status 
+Reporting 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+43 with those described by the methodology 
+with those 
+described by the 
+methodology ~ Shall report project status in terms of the likelihood that 
+methodology-defined deliverables will be provided on schedule. 
+SE13 Effectively 
+maintain the 
+system's data processing components with a pool of readily 
+available 
+software engineers. The contractor shall 
+develop the data processing elements of the future NDE system using the latest proven technologies (programming languages, 
+CASE tools, object repositories, data base management systems, etc.) that are appropriate for remote sensing data processing. Maintainability: 
+As early as possible during 
+the Design 
+Project, t he 
+contractor shall 
+provide a set of recommendations 
+for the most 
+appropriate development tools demonstrating that they are:~ widely supported in the remote sensing software industry ~ the most likely to be known by future NESDIS support staff   ~Analysis of 
+Recommendations 
+SE14 Effectively 
+manage maintenance and enhancements of the system's data 
+processing 
+capabilities  The contractor shall 
+develop the data processing elements of the future NDE system using tools that will support the ability to alter executable components without 
+altering source code. Maintainability: 
+Prior to coding, the 
+contractor shall 
+develop a set of recommendations for the development tools 
+(4
+th generation 
+programming 
+languages, integrated CASE tools, object ~Analysis of designs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+44 repositories, data 
+base management systems, etc.) that will promote, to the greatest extent possible, the ability to alter executable 
+elements without 
+altering source code. 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+45  
+ 
+Table 4. NDE System Management Outcomes Matrix 
+ 
+ Desired 
+Outcomes   
+Required Service   
+Performance Standard  
+NOTE:  Unless specifically named as applicable  to one or two environments (Operations, 
+Development, or System Test ) all System Ma nagement requirements a re applicable to each 
+of the 3 environments described in Software Engineering Design Requi rements A, B, and C.
+SM 1 The system 
+management processes will improve continuously System Management 
+Requirement A: The 
+contractor's system 
+management capabilities shall be evaluated in terms of Software Engineering Institute's (SEI) Capability Maturity Model (CMM) Software 
+Management Capability:  
+Certified CMM 
+Level 2 during proposal evaluation, 
+Certified CMM 
+Level 3 three years after contract award and thereafter Software 
+Management Capability: Evalu
+ation by an 
+independent 
+agency every three years. 
+SM 2 Work, both 
+automated and manual, is performed according to a predetermined schedule. System Management 
+Requirement B: The 
+contractor shall schedule 
+tasks Completeness: 
+Automated tasks 
+associated with 
+temporal events will be initiated by an automated scheduler. 
+Completeness: 
+Manual tasks 
+necessary to 
+achieve NESDIS objectives are planned 
+Reliability : 99% of 
+scheduled tasks 
+will execute on time Completeness: 
+NESDIS 
+inspection of 
+scheduler reports 
+Reliability : 
+NESDIS 
+inspection of 
+Performance Logs 
+SM 3 NOAA 
+priorities and 
+processing dependencies influence the level of effort System Management 
+Requirement C: The 
+contractor shall prioritize 
+tasks Completeness: All 
+predecessor and successor relationships of system elements are documented Quality: 
+NESDIS 
+inspection of 
+design documents and performance logs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+46 and sequence 
+of tasks Quality 
+(Measurability): 
+The relative 
+importance of tasks to each other is represented numerically. 
+Quality: Necessary 
+predecessor tasks 
+provide input and/or control information to dependent tasks     
+SM 4 Contractor 
+staff is 
+assigned to perform tasks System Management 
+Requirement D: The 
+contractor shall allocate 
+resources to perform planned tasks Quality : Project 
+Plans  identify 
+separate tasks and 
+their associated schedule, resource, and effort estimate Quality: 
+NESDIS 
+inspection of 
+project plans 
+SM 5 The state of 
+the system is always known. System Management 
+Requirement E: The 
+contractor shall monitor 
+performance Quality:  The 
+contractor is able to report on the status of all scheduled tasks at all times   Quality:  
+NESDIS analysis 
+of system 
+performance logs
+Quality:  
+NESDIS analysis 
+of  project 
+management 
+status reports 
+SM 6 The contractor 
+reports on the 
+cost and schedule status of  tasks  System Management 
+Requirement F: The 
+contractor shall report 
+system performance Quality:  The 
+contractor produces reports on the status of all scheduled tasks  Quality:  
+NESDIS analysis 
+of system 
+performance logs
+Quality:  
+NESDIS analysis 
+of  project 
+management 
+status reports 
+SM 7 The NDE 
+System can 
+recover from unexpected failures   System Management 
+Requirement G: The 
+contractor shall develop 
+and implement automated backup procedures for all NDE data and procedures for each of the 3 Data Currency: 
+The NDE system 
+stores all data 
+necessary to commence normal operations of each of the 3 
+environments using Data Currency: 
+Analysis of 
+System Test logs 
+for recovery and restart scenarios of each of the 3 environments 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+47 environments: Operations, 
+Development, System Test data that was current at the time a system failure took place 
+Data Integrity:  
+Backed-up versions 
+of NDE 
+operational, developmental, and System Test data are identical to versions of the data in use at the time of the backup 
+Conformance to 
+Standards :  NDE's 
+automated backup 
+of data and procedures conforms to NESDIS standards 
+User Need: The 
+priority of system 
+recovery procedures are based on user community (i.e., end users, 
+developers, non-
+subscribers, etc.) needs as determined by management decision Data Integrity:  
+Analysis of 
+System Test logs 
+of automated data backup  of each of the 3 environments 
+Conformance to 
+Standards:   
+Comparison of 
+the written descriptions of NDE's automated backup capabilities with NESDIS standards 
+SM 8 The NDE 
+System can 
+recover from unexpected failures   System Management 
+Requirement H: The 
+contractor shall develop 
+and implement procedures to restart each of the 3 NDE environments (Operations, Development, System 
+Test) using backed-up, current data. Data Currency: 
+Each of the 
+restarted NDE 
+systems commence normal operations using data that was current at the time a 
+system failure took 
+place 
+Reliability:  After 
+restart, automated Data Currency: 
+Analysis of 
+System Test logs 
+for recovery and restart scenarios of each of the 3 environments 
+Reliability:   
+Analysis of 
+System Test logs 
+of automated 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+48 procedures in each 
+of the 3 environments perform their functions as they did prior to system failure 
+Conformance to 
+Standards :  NDE's 
+automated recovery 
+procedures conform to NESDIS standards 
+User Need: The 
+priority of system 
+recovery procedures are based on user community (i.e., end users, developers, non-subscribers, etc.) needs as determined by management decision 
+Recovery Time:  
+Each of the NDE 
+systems can be 
+restarted to satisfy a Recovery Time Objectives (RTO) tbd by NESDIS Management  recovery of each 
+of the 3 environments 
+Conformance to 
+Standards:   
+Comparison of 
+the written descriptions of 
+NDE's automated 
+backup capabilities with NESDIS standards 
+SM 9 NDE data 
+assets are valid System Management 
+Requirement I: The 
+contractor shall implement 
+secure procedures and 
+technologies to protect the 
+integrity of NDE's data in the event of:~ human 
+errors when data is 
+entered, ~ errors that occur when data is transmitted from one Data Integrity:  
+Conformance to 
+NESDIS, DOC, 
+and other relevant government security standards Data Integrity: 
+Analysis of  
+System Test logs 
+of  scenarios that threatened data validity 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+49 computer to another, ~ 
+software bugs or viruses, ~ hardware malfunctions, such as disk crashes, and ~ natural disasters, such as fires and floods  
+SM 10 NDE data 
+assets are confidential System Management 
+Requirement J: The 
+contractor shall implement 
+procedures and technologies to ensure that 
+NDE information is accessible only to those authorized to have access Confidentiality: 
+Conformance to 
+NESDIS, DOC, 
+and other relevant government security standards Confidentiality:  
+Analysis of  
+System Test logs 
+of scenarios that threatened NDE confidentiality 
+SM 11 NDE data 
+assets are available see System Operations Requirement G & H (above):  Availability: see System Management Requirement H (above) Availability: see System Operations Requirement G & H (above) 
+SM 12 The 
+Operational system operates in an Open Mode System Operations 
+Requirement A: The 
+contractor shall develop 
+and implement procedures to make data available to all users in Open Mode. ~ Completeness & Accuracy: In Open mode, all data is available to all customers and developers  ~ Completeness & Accuracy:  Analysis of System Performance logs
+SM 13 The 
+Operational system operates in a Data Denial mode System Operations 
+Requirement B: The 
+contractor shall develop 
+and implement procedures to make data available only to authorized users in  Data Denial mode ~ Completeness & Accuracy:  In Data Denial mode, data is available only to authorized customers and developers   ~ Completeness & Accuracy:  Analysis of System Performance logs
+SM 14 The 
+Operational system operates in a Data Denial mode System Operations 
+Requirement C: The 
+contractor shall develop 
+and implement procedures to notify all authorized customers when the system is in Data Denial mode ~ Completeness & Accuracy: In Data Denial mode, notifications are sent to authorized customers and developers  ~ Completeness & Accuracy:  Analysis of System Performance logs
+SM 15 The 
+Operational system operates in a System Operations 
+Requirement D: The 
+contractor shall develop 
+and implement procedures ~ Quality:  In NPOESS Degraded Operations mode, products are ~ Completeness & Accuracy: : Analysis of communication 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+50 Degraded 
+Operations  mode to consult with the government (e.g., will NCEP models be adversely affected?) in 
+order to determine 
+whether to alter distribution of products 
+when NPOESS is in a 
+Degraded Operations mode. distributed only if 
+they will have no adverse affect on customer observations  logs between ESPC and NPOESS~ Completeness & Accuracy: : Analysis of System Performance logs
+SM 16 The 
+Operational system operates in a Degraded Operations  mode System Operations 
+Requirement E: The 
+contractor shall develop 
+and implement procedures to consult with the government and notify affected customers when 
+NPOESS is in a Degraded 
+Operations mode. ~ Completeness: In 
+Open mode, all data is available to all users ~ Quality:  In NPOESS Degraded Operations mode, 
+customers are 
+notified of operational impacts of affected products    ~ Completeness: 
+Analysis of communication logs between ESPC and NPOESS, System Performance 
+logs, and Trouble 
+Tickets originating from affected customers 
+SM 17 Operational 
+products are 
+delivered to customers only if they conform to predetermined 
+standards of 
+quality System Operations 
+Requirement F: The 
+contractor shall  develop 
+and implement procedures to control operational product quality by identifying deficiencies of ingested data or metadata 
+received from the IDPS  Quality:  
+Recognition and 
+reporting of all 
+Quality Flags received from IDPS 
+Quality: Detection 
+of xDR and 
+metadata attributes 
+that are below 
+agreed NDE thresholds of acceptability  ~ Analysis of 
+Performance Logs~ Analysis of Trouble Tickets of product problems~ 
+Analysis of 
+Service Requests for product quality improvement    
+SM 18 Operational 
+products are 
+delivered to customers only if they conform to predetermined 
+standards of 
+quality System Operations 
+Requirement G: The 
+contractor shall  develop 
+and implement procedures to control operational product quality by supporting any quality control of NDE output 
+(e.g., products or 
+metadata) performed within each of the NDE Standards: 
+Maintenance of 
+information 
+concerning actions to be taken in the event of quality deficiencies 
+Quality: 
+Invocation of all 
+previously agreed 
+procedures and ~ Analysis of 
+Performance Logs~ Analysis of Trouble Tickets of product problems~ 
+Analysis of 
+Service Requests for product quality 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+51 product processing 
+applications. notifications to address the consequences of low quality (containing attributes below agreed NDE 
+thresholds of 
+acceptability) xDRs, NOAA-unique products, NDE tailored products, and metadata.    improvement    
+SM 19 Customers 
+(including 
+developers) are provided with information about their 
+orders and 
+system conditions of concern to them. The contractor shall  
+develop and implement procedures to support notification of users Customer 
+Satisfaction:  
+Customers are 
+satisfied with their 
+ability to obtain 
+information about the status of their 
+orders Customer 
+Satisfaction:  
+Analysis of 
+Customer Satisfaction Surveys. 
+SM 20 NESDIS 
+requests changes to NPOESS products and services through the 
+NPOESS 
+Change Control Board. The contractor shall 
+develop and implement procedures to submit Service Requests to NPOESS (both the MMC and the IPO CCB), to log and track these Service 
+Requests, and to log and track all NPOESS responses  Customer 
+Satisfaction:  
+Customers are 
+satisfied with NDE procedures to request product changes  Customer 
+Satisfaction:   
+Analysis of 
+Service Requests, tracking logs, and Customer Satisfaction Surveys. 
+SM 21 All 
+correspondence regarding the ESPC is kept The contractor shall develop and implement procedures to log and track all correspondence Completeness: All 
+electronic and written correspondence is retained and accessible for inspection.  Completeness: 
+Inspection of 
+correspondence 
+by date, author, and subject 
+SM 22 Requests for 
+changes are The contractor shall develop and implement Customer 
+Satisfaction:  Customer Satisfaction:   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+52 saved procedures to log and 
+track Requests for NDE 
+Service, including product enhancement requests, and NDE responses   Customers are satisfied with NDE procedures to request product changes  Analysis of Service Requests and Customer Satisfaction Surveys. 
+SM 23 Information 
+about system performance will be kept The contractor shall develop and implement procedures to log performance data Completeness:  
+Statistics of 
+execution 
+performance  (time, volume, number of invocations, etc.) are logged and 
+maintained for analysis (see Software Engineering Design Requirement D) ~ Analysis of 
+System Performance Logs and Reports   
+SM 24 System 
+performance reports are produced The contractor shall develop and implement scheduled and on-demand procedures to report 
+performance data Completeness:  
+Reports of system 
+performance (time, 
+volume, number of invocations, etc.) are generated on demand and 
+according to a schedule  ~ Analysis of 
+System Performance Logs and Reports   
+ 
+ 
+Table 5. NDE Infrastructure Outcomes Matrix 
+ 
+  
+Desired 
+Outcomes   
+Required Service   Performance 
+Standard   
+Monitoring 
+Method  
+NOTE:"Component" refers to hardware, equi pment, and licensed software products (i.e., 
+Operating Systems, DBMS, middleware, COTS or  GOTS products, CASE tools, etc.) and is used 
+by NDE as a general term in discussions of in frastructure.   "Element" refers to NOAA-developed 
+system capabilities (e.g., the source code for al gorithms, programs, utilities, control tables, 
+called procedures,  etc.) and is used by NDE as a general term in discussions of archiving and 
+configuration management.   
+I 1 Establish an 
+infrastructure 
+for System 
+Testing that is Implement key components of the NDE 
+System Test capability to 
+process and distribute data ~ Throu
+ghput:  
+For NPP alone, 
+4TB/day ~ 
+Quality:  System ~ Quality: 
+Analysis of 
+System 
+Performance 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+53 consistent with 
+Software Engineering Requirement C  and products from NPP according to a schedule consistent with  Table 2: Timetable of NDE 
+Infrastructure Tasks~ 
+Acquire or lease all System Test  
+infrastructure elements 
+required: hardware, COTS software, telecommunications, middleware, etc.~ Install and integrate all primary System Test  infrastructure components ~ Operate and administer the System Test  infrastructure~ Execute all necessary upgrades to System Test  infrastructure components in accordance with vendor changes and NESDIS standards ~ Manage multiple versions of source code and other reusable objects elements placed in 
+the operational environment perform without degrading the performance of other operational 
+elements. ~ 
+Quality: 95% of 
+system elements 
+placed in the operational environment perform for three cycles (i.e., orbital, daily, weekly, etc.) without failing or causing other system elements to fail or perform less 
+effectively ~ 
+Efficiency a: 
+System Test 
+Environment to be administered and operated by a permanent team of no more than five IT professionals in such a way that all elements submitted to them for testing and review can be evaluated for operational fitness in less than five working days after submission by developers. 
+~Efficiency b:  
+System elements 
+and components that are placed in the operational environment can be logs~ Efficiency:  
+Analysis of  
+System Test activity reports~  
+Business 
+Continuity:  
+Analysis of 
+System 
+Performance 
+logs~ 
+Scalability:  
+Analysis of 
+upgrade activity 
+logs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+54 executed 
+immediately without failing or causing other system elements to fail or perform less 
+effectively . ~ 
+Business 
+Continuity: In the 
+event of an 
+emergency failure of the operational environment, the System Test Environment will be able to deliver products to the operational community within the same throughput and latency parameters as the operational system.  (See Performance Standards for 
+Operations above) ~ 
+Scalability: 
+Additional capacity 
+(throughput, latency, performance) 
+I 2  Establish a 
+scalable 
+infrastructure for 
+operational 
+product generation and distribution , 
+beginning with 
+NPP, that is consistent with Software Implement the  NDE 
+Operational capability  
+according to a schedule 
+consistent with Table 2: Timetable of NDE Infrastructure Tasks:~ Acquire or lease all operational infrastructure 
+elements required: hardware, COTS software, telecommunications, middleware, etc.~ Install and integrate all the ~ Throughput:   
+For NPP alone, 
+4TB/day  For NPP and NPOESS C1, 8 TB/day  For NPOESS C1 and C2, 8 TB/day  For 
+NPOESS C1, C2, and C3, 12 
+TB/day~ Latency: 
+products available 
+to customers less than 5 minutes after Throughput, 
+Latency: ~ 
+Analysis of 
+System Test Logs generated no later than October 1 2008 (or 18 months prior to 
+NPOESS C1 launch if launch date slips).~ After NPP LEOP, NOAA 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+55 Engineering 
+Design Requirement A,  in order to provide telecommunications, data 
+management, 
+storage, and processing capabilities to support the NPP satellite mission.   necessary operational  
+infrastructure components~ Operate and administer the operational infrastructure~ Execute all necessary upgrades to infrastructure components 
+in accordance with vendor 
+changes and NESDIS standards  final receipt of all 
+necessary data elements (standard to be applied for 98% of all 
+products) ~ 
+Scalability: 
+Additional capacity 
+(throughput, latency, performance) can be created without redesign of the operational infrastructure 
+~Interoperability: 
+Able to receive 
+data from IDPS in real time 
+~Interoperability : 
+Able to 
+send/receive messages to/from the NPOESS Mission Management Center (MMC) in real-time.  
+~Interoperability:  
+Able to deliver 
+(push) products to customer systems in the event that customers choose this method of delivery   inspection of 
+Product Generation Control Logs  
+Scalability: 
+~Interoperability: Analysis of 
+System 
+Performance Logs 
+I 3 Establish an 
+infrastructure 
+for use by developers of NDE data processing capabilities 
+and by 
+developers of Implement key 
+components of the NDE 
+Development capability  
+according to a schedule 
+consistent with  Table 2: Timetable of NDE Infrastructure Tasks~ Acquire or lease all 
+developmental ~Interoperability:  
+Ability to 
+send/receive data 
+and messages with the NPOESS ground system, particularly the 
+IDPS, is 
+demonstrated by ~ Efficiency:  
+Biannual 
+Evaluation of 
+Developer Satisfaction Surveys and monthly analysis 
+of  Trouble 
+Tickets and 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+56 science 
+algorithms (e.g., 
+development 
+environment) 
+that is 
+consistent with Software 
+Engineering 
+Requirement B infrastructure elements 
+required: hardware, COTS software, telecommunications, middleware, etc.~ Install  and integrate primary development 
+infrastructure components 
+~ Operate and administer the developmental infrastructure~ Execute all necessary upgrades to development infrastructure components in accordance with vendor changes and NESDIS standards ~ Manage multiple versions of source code and other reusable objects December 2006 ~ 
+Efficiency: 
+Developers believe 
+that the environment supports them without interfering with their creativity 
+or productivity ~ 
+Capacity: 
+Algorithms and 
+system utilities can 
+be tested using high volumes (tbd) of stored historical, experimental, and 
+test  data ~ 
+Reliability:  
+Historical datasets 
+are stored and administered in order to guarantee their integrity and 
+currency ~ 
+Reusability : 
+Developers install 
+system elements (i.e., data, procedures, objects) into their programs that have been extracted from controlled "libraries" to create 
+functionality ~ 
+Reusability:  
+Developers perform 
+tests using previously developed elements (test scripts, test data, test scenarios, 
+etc.) ~ Scalability: 
+Additional capacity 
+(throughput, Service Requests 
+received from developers. 
+~Capacity: Tests 
+using historical 
+data execute in no more than 
+50% of the clock 
+time of an equivalent product generation execution in the operational environment 
+~Reusability: 
+Design 
+Inspections, Code Inspections 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+57 latency, 
+performance) can be created without redesign of the Development infrastructure 
+  
+Table 6. NDE Data Retention & Archive Outcomes Matrix 
+ 
+  
+Desired 
+Outcomes   
+Required Service   Performance 
+Standard   
+Monitoring 
+Method  
+NOTE:  Unless specifically named as applicable to one or two environments (Operations, 
+Development, or System Test) all Data Retenti on & Archive requirements are applicable to each 
+of the 3 environments described in Software Engineering Design Requirements A, B, and C. 
+NOTE: "Element" refers to NOAA-developed system capabilities (e.g., the source code for 
+algorithms, programs, utilities, control tables, ca lled procedures, utilities, etc.) and is used by 
+NDE as a general term in discussions of ar chiving and configuration management.  "Component" 
+refers to hardware, equipment, and licensed softw are products (i.e., Operating Systems, DBMS, 
+middleware, COTS or GOTS products, CASE tools, etc.) and is used by NDE as a general term 
+when referring to the infrastructure.  
+DA 1 Data 
+Retention: 
+Recently generated products are available for additional 
+processing  The contractor shall 
+develop and implement procedures to retain NOAA-unique Products for 72 hours ~ Quality  - 
+Minimal (tbd) retrievals from CLASS of NOAA-unique products that are less than 72 hours old    
+DA 2 Data assets 
+will be managed at the system level in all three environments The contractor shall provide resources and implement procedures to add, update, and delete shared data resources in a controlled manner according to agreed user (either developer, tester, 
+or customer) needs in each of the three environments. Data Integrity:  
+Data resources 
+(including test, 
+historical, and experimental data and metadata) are maintained with a 
+minimum of 
+duplication. 
+Data Inte
+grity:  
+Data resources 
+(including test, 
+historical, and Data Integrity: 
+Analysis of 
+performance logs 
+of system utilities routinely performed to detect duplication and eliminate wasted data storage space   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+58 experimental data 
+and metadata) are deleted after a reasonable (tbd) interval of disuse 
+DA 3 Data 
+Retention: Users, both customers and developers,  can obtain the same 
+operational 
+product more than once within 72 hours.  The contractor shall 
+develop and implement procedures to manage and retain data if requested by a user ~ Completeness, 
+Latency -  All 
+requested products 
+are retained for up to 72 hours Analysis of Service Requests for product retention 
+DA 4 Archive: All 
+system elements necessary for NDE operational product 
+generation are 
+archived. The contractor shall 
+develop and implement procedures to deliver to NOAA's Long Term Archive (CLASS) all data and system elements required by NDE for 
+processing tailored 
+products or NOAA-unique products.  These include, minimally: o Metadatao Ancillary data o Processes used to create products, including system configurations, software processes, and necessary parameterso TBD intermediate products per process ~ Completeness  - 
+Evidence of  
+receipt by CLASS ~ Inspection of CLASS receipts 
+DA 5 Archive: All 
+system elements necessary for NDE product generation in the 
+development 
+environment The contractor shall 
+develop and implement procedures  to store and manage all data and system elements required by NDE developers for testing.  These include, 
+minimally:   o Metadatao 
+Ancillary data o Processes ~ Completeness  - 
+Evidence of  
+receipt by CLASS ~ Inspection of CLASS receipts 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+59 are archived. used to create products, 
+including system 
+configurations, software processes, and necessary parameterso TBD intermediate products per process 
+DA 6 Archive: All 
+operational NOAA-unique products are archived. The contractor shall develop and implement procedures to deliver all NOAA-unique products generated by the NDE system NOAA's Long Term Archive (CLASS) ~ Completeness  - 
+Evidence of  receipt, by CLASS, of all NOAA-unique products generated by the NDE system ~ Inspection of CLASS receipts 
+DA 7 Archive: A 
+catalog of NDE's archived material is available The contractor shall develop and implement procedures to provide catalog information for archived data Completeness, 
+Accuracy  -The 
+contractor shall 
+provide catalog information for archived data ~ Ability to retrieve any cataloged item from CLASS~ Inspection of catalog 
+DA 8 Archive: 
+Archived data is used by NDE product processing The contractor shall develop and implement procedures to retrieve archived data Reliability - The 
+contractor retrieves archived data 
+Timeliness -  The 
+contractor retrieves 
+archived data as quickly as allowed 
+by CLASS 
+performance capabilities ~ Observation 
+DA 9 Archive: 
+Archived data 
+is used by NDE product processing The contractor shall develop and implement procedures to process archived data Timeliness, 
+Quality  - The 
+contractor shall 
+process archived data ~ Demonstration 
+DA 10 Information 
+about NDE's products and NPOESS observations shall be retained for 
+future use.    The Contractor shall 
+develop and implement procedures to conform to metadata standards Completeness, Accuracy - The Contractor reports on violations of 
+metadata standards 
+(e.g., FGDC Content Standard 
+for Digital 
+Geospatial  Inspection of 
+metadata reports 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+60 Metadata) .  
+DA 11 Users of 
+archived NDE 
+products will be provided with information about whether 
+the data values 
+are outside of agreed, standard ranges. The Contractor shall 
+develop and implement procedures to provide notification of data anomalies of archive data to customers ~ Accuracy - The Contractor identifies all instances of anomalous data values~ Timeliness, Customer Service - Prior to archiving, 
+the Contractor links a notification of anomalous data values to all instances of any product containing the detected anomaly   ~ Inspection of 
+data quality logs~ Inspection of user notifications 
+DA 12 NDE can 
+replace products that it has previously archived with  instances of the products in 
+which 
+anomalies have been repaired. The Contractor shall 
+develop and implement procedures to change archived products through version control ~ Conformance to Standards - The Contractor shall be knowledgeable of archiving standards~ Completeness - The Contractor shall 
+report all instances 
+of archived product replacements to management     Inspection of  
+reports detailing changes to archived data. 
+ 
+ 
+Table 7. NDE Interface Outcomes Matrix 
+ 
+XF 1 Receipt of data 
+and products from NPOESS Interface Data Processing Segment 
+(IDPS) (Note: 
+"Data and 
+products" refers to, at a ~ The contractor shall 
+provide a capability for receiving data and products from IDPS.~ The contractor shall provide a capability for determining whether the data and 
+products ingested by NDE 
+from IDPS are the same as the data and products that Completeness, 
+Reliability, Timeliness: 100% 
+of the data sent by 
+the IDPS is received in real time NESDIS inpection of Performance logs
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+61 minimum, 
+products [including SARSAT & A-DCS], ancillary data, auxiliary data, and 
+metadata, ) were sent. 
+XF 2 Data is made 
+available to 
+customers and 
+developers (NO
+TE: 
+"Customers" 
+are defined in 
+Section 2 of the 
+NDE Project Plan.) The contractor shall 
+provide a capability for ensuring that NDE's tailored products and NOAA-unique products are made available to authorized customers and 
+developers Completeness, 
+Reliability, Timeliness: 100% 
+of the products sent 
+are received in real 
+time NESDIS inpection of Performance logs
+XF 3 Products are 
+made available for customer retrieval The contractor shall provide a capability for ensuring that NDE's tailored products and 
+NOAA-unique products 
+are placed in locations from which they can be 
+retrieved by customers in 
+real time Reliability: 100% 
+of the products 
+placed for retrieval can be extracted NESDIS inpection of Performance logs
+XF 4 Products are 
+made available for retrieval by developers in NOAA and Cooperative Institutes The contractor shall provide a capability for ensuring that NDE's tailored products and NOAA-unique products are placed in locations from which they can be 
+retrieved by developers Reliability: 100% 
+of the products 
+placed for retrieval can be extracted NESDIS inpection of Performance logs
+XF 5 Transmission 
+of product to Comprehensive Large Array-data Stewardship System 
+(CLASS)  The contractor shall send 
+NDE's NOAA-unique products  to CLASS. Completeness, 
+Reliability, Timeliness: 100% 
+of the data sent to 
+CLASS is received 
+in real time NESDIS inpection of Performance logs
+XF 6 Transmission The contractor shall send Completeness, NESDIS 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+62 of system 
+components to Comprehensive Large Array-data Stewardship System 
+(CLASS)( 
+NOTE: "System elements" is inclusive of all system objects invoked to create or tailor a product, including, but not limited to, time-stamped source code, time-stamped control tables such as those containing the actual correlation coefficients used for processing, and any associated time-stamped documentation.) NDE elements (Source 
+Code, Utilities, Algorithms, Control Tables, etc.) to CLASS. Reliability, 
+Timeliness: 100% 
+of the system 
+elements sent to CLASS are received in real time inpection of Performance logs
+XF 7 Receipt of 
+products from Comprehensive Large Array-data Stewardship System 
+(CLASS)  The contractor shall 
+receive xDRs and NOAA-unique products from CLASS. Completeness, 
+Reliability, Timeliness: 100% 
+of the data sent by 
+CLASS is received in real time NESDIS inpection of Performance logs
+XF 8 Receipt of 
+system elements from Comprehensive The contractor shall receive NDE elements from CLASS Completeness, 
+Reliability, Timeliness: 100% 
+of the system NESDIS 
+inpection of Performance logs
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+63 Large Array-
+data Stewardship System (CLASS)  elements sent by CLASS are received in real time 
+XF 9 Interface to the 
+NPOESS Mission Management Center (MMC) The contractor shall provide an interface for NDE to the MMC  Completeness, 
+Reliability, Timeliness: 
+~100% of the 
+inquiries to the 
+MMC and replies to MMC requests are received by the 
+MMC in real time~100% of the notifications and inquiries from the MMC are received by the MMC in real time NESDIS 
+inpection of Performance logs
+XF 10 Interface with 
+the IPO's Service Request System The contractor shall provide an interface for NDE Service Requests to the IPO  Completeness, 
+Reliability, Timeliness: ~ 
+100% of the NDE 
+Service Requests intended for the IPO's attention are 
+delivered to the 
+IPO~ 100% of the IPO's responses to the NDE Service Requests intended for the IPO's attention are received by the contractor NESDIS 
+evaluation of regular status reports 
+XF 11 Interface with 
+NPOESS' IDPS operations The contractor shall provide an interface for ESPC's operations to communicate with the 
+IDPS operations Completeness, 
+Reliability, Timeliness: ~ 
+100% of the NDE 
+communications intended for the IDPS operator's 
+attention are 
+delivered to IDPS NESDIS 
+evaluation of regular status reports 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+64 operations~ 100% 
+of the IDPS operator's responses to the NDE communications are received by the 
+contractor 
+XF 12 Customers and 
+developers 
+receive products in a desired format. The contractor shall provide a capability for receiving NDE Service 
+Requests  (SRs) from 
+customers. ~ Availabity 24 X 7~ Ease of Customer Use  TBD~ Ease of Operator Use TBD NOAA inspection  
+XF 13 Customers and 
+developers obtain tools to reformat products on their systems. The contractor shall provide a capability to respond to NDE service requests with Service 
+Responses . ~ Ease of Customer Use TBD~ Ease of Operator Use TBD Analysis of automated Help System Reports 
+ 
+ 
+Table 8. NDE Product Generation Outcomes Matrix 
+ 
+  
+Desired 
+Outcomes   
+Required Service   Performance 
+Standard   
+Monitoring 
+Method  
+PG 1 The customer 
+receives 
+products in a desired format. Product Format 
+Requirement: The 
+contractor shall provide 
+and implement software to reformat the HDF5 data records received from the Interface data Processing Segment (IDPS) into 
+customer-specified formats.  The requirement applies to both tailored and NOAA-unique NDE environmental satellite data products.  Anticipated formats include, but are not limited to,  the Accuracy & 
+Completeness -  
+Reformated 
+Products must have identical content to the HDF5 versions received from the IDPS ~ NESDIS Inspection of Products~ Customer Satisfaction Surveys 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+65 following: BUFR, GRIB, 
+FF, GIF, GeoTIF, McIDAS, HDF, SARAD, SATEM, NetCDF. 
+PG 2 The customer 
+obtains tools to reformat products on his system. HDF5 Data Conversion 
+Tools Requirement: The 
+contractor shall make 
+available, for use at customer sites, software that will convert the HDF5-format NPOESS xDRs into one of several, 
+specified (tbd) formats. System 
+Compatability -  
+Data Conversion 
+tools must be capable of execution by customers using "standard" 
+operating systems  (e.g., LINUX, AIX,) and telecommunications (e.g., FTP, Internet, API).   
+Accuracy & 
+Completeness -  
+The products 
+reformatted with the NOAA-supplied data conversion tools must have identical content to the HDF5 versions received from the IDPS ~ NESDIS 
+Inspection of Products~ Customer Satisfaction Surveys 
+PG 3 Product 
+Tailoring Requirement A: The products are received by customers in a compressed 
+state. Lossless Product 
+Compression Requirement: The 
+contractor shall provide 
+and implement software to 
+compress both tailored and NOAA-unique NDE 
+environmental satellite 
+data products, using customer specified compression formats.  Anticipated compression formats include, but are not limited to, the following: GZIP, ZIP. Accuracy & 
+Completeness - 
+De-compressed 
+product must have identical content to the pre-compressed versions.   ~ NESDIS Inspection of Products~ Customer Satisfaction Surveys 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+66 PG 4 Product 
+Tailoring 
+Requirement B: The products are received by customers in a compressed 
+state. Lossy Product 
+Compression Requirement: The 
+contractor shall provide 
+and implement software to 
+compress both tailored and NOAA-unique NDE 
+environmental satellite 
+data products, using customer specified, lossy compression formats.  Anticipated compression formats include, but are not limited to, the following: RICE, JPEG. Accuracy & 
+Completeness - 
+De-compressed 
+product must have acceptably similar content (tbd) to the pre-compressed versions.   ~ NESDIS Inspection of Products~ Customer Satisfaction Surveys 
+PG 5 Product 
+Tailoring Requirement C: The customer obtains different projection 
+views of the 
+same product. Product Projection 
+Requirement: The 
+contractor shall provide 
+and implement software to allow customers to choose specified (tbd), alternative projection views (i.e., platecarre, Mercator, polar 
+stereographic) of both 
+tailored and NOAA-unique NDE environmental satellite data products Accuracy & 
+Completeness - 
+Products that have 
+been repackaged using projection views (i.e., mercator, polar projection, etc.) 
+other than those of the original product received from the IDPS must contain the same information as the original, IDPS versions of the products. Quality:  Projection views provided must conform to standard projection specifications ~ NESDIS 
+Inspection of Products~ Customer Satisfaction Surveys 
+PG 6 Product 
+Tailoring Requirement D: The customer receives aggregated products in 
+different Product Frequency 
+Requirement: The 
+contractor shall provide 
+and implement software to deliver both tailored and NOAA-unique NDE environmental satellite data products at the Accuracy & 
+Completeness - 
+Aggregated 
+products must accurately represent the separate elements from which the ~ NESDIS Inspection of Products (Comparison of the separate components with the aggregated 
+product) ~ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+67 frequency 
+ranges. frequency specified by customers.  Anticipated frequencies include, but are not limited to, the following: Daily, weekly, orbital, etc.(tbd). product was assembled.   Customer Satisfaction Surveys 
+PG 7 Product 
+Tailoring Requirement E: The customer has a choice of the grid spacing of product Product Grid Spacing 
+Requirement: The 
+contractor shall provide 
+and implement software to deliver both tailored and NOAA-unique NDE environmental satellite 
+data products with 
+specified (tbd) grid spacing . Accuracy & 
+Completeness - 
+Re-gridded 
+products must contain no less data than the IDPS-supplied products from which they 
+were derived unless the end-user formally agrees to lower resolution ~ NESDIS 
+Inspection of Products~ Customer Satisfaction Surveys 
+PG 8 The customer 
+receives NOAA-unique products. NOAA-unique Product 
+Generation Requirement: The 
+contractor shall provide 
+and implement software to augment the data records received from the Interface 
+Data Processing Segment (IDPS) to generate NOAA-unique environmental satellite data products through application of  NOAA-supplied algorithms and utilization of NOAA-supplied data. Accuracy & 
+Completeness -  
+Each NOAA-
+unique product will be described in terms of explicit, expected test results prior to the 
+installation of the 
+NOAA-supplied algorithm on the product generation system.  The NOAA-unique products must satisfy these test requirements.  ~ NESDIS 
+Inspection of Products~ Customer Satisfaction Surveys 
+PG 9 NDE acquires 
+ancillary data from external sources Ancillary Acquisition 
+Requirement: The 
+contractor shall retrieve 
+control information necessary for product generation from sources such as NCEP, NAVOCEANO, 
+METOPS, and other external systems. ~ Completeness:  
+100% of the 
+ancillary data 
+required for product generation 
+will be acquired ~ 
+Reliability : The 
+ancillary data 
+products obtained can be effectively ~Completeness:  
+~NESDIS 
+inspection of 
+Production logs 
+~ Qualility : 
+NESDIS analysis 
+of product 
+accuracy 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+68 applied in product 
+generation algorithms 
+PG 10 The ancillary 
+data delivered to NPOESS is the same as the ancillary data used by NESDIS Ancillary Data Quality 
+Requirement: The 
+contractor shall review 
+and certify Ancillary Data~ Completeness:  
+100% of the 
+ancillary data 
+requested by NPOESS will be distributed to 
+NPOESS ~ 
+Reliability : The 
+ancillary data 
+products provided can be effectively applied in product generation algorithms ~Completeness:  
+~NESDIS 
+inspection of 
+Production logs ~ 
+Reliability : 
+NESDIS 
+comparison of IDPS products 
+and algorithms 
+with NPOESS prodiucts and algorithms 
+PG 12 Customers will 
+request product 
+enhancements  Product Enhancement 
+Requirement: The 
+contractor shall provide 
+procedures for capturing the requirements for product enhancement requests Customer 
+Satisfaction: 90% 
+of customers 
+surveyed report that they were pleased with the procedures for defining their 
+product enhancement requirements Customer 
+Satisfaction Surveys 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+69  
+Table 9. NDE Communications & Distribution Outcomes Matrix 
+ 
+  
+Desired 
+Outcomes   
+Required Service   Performance 
+Standard   
+Monitoring 
+Method  
+CD 1 Customers 
+(e.g., NOAA 
+operational users) obtain NPOESS-based products  Product Delivery 
+Timeliness Requirement: The 
+contractor shall develop 
+and implement procedures 
+to make products available to customers. ~ Availability:  
+Products will be 
+made available  to 
+customers within one minute of their receipt from the NESDIS product 
+processing system ~ NOAA 
+Inspection of Daily, Weekly, and Monthly Product Distribution Logs
+CD 2 External 
+development organizations exchange very large (TBD), experimental datatsets with 
+NOAA. The contractor shall 
+provide communication pathways with sufficient bandwidth to allow the exchange of large (TBD), experimental datasets and products between the 
+ESPC and external NOAA 
+development partners such as the Cooperative Institutes.   ~ Throughput:  >4 
+(tbc) GB/s ~ 
+Demonstration~ 
+Analysis of 
+System test logs recording the results of scenarios designed to 
+determine 
+maximum throughput between ESPC and non-NOAA development partners~ Analysis of Performance Logs   
+CD 3 Customers 
+obtain 
+NPOESS-based products Product Delivery Cost 
+Requirement: The 
+contractor shall develop 
+and implement procedures to distribute products to customers at the optimal cost for performance desired.  ~ Cost  ~ NOAA will monitor/review 
+contract cost as 
+described in the required trade study every three years 
+CD 4 The NDE 
+network can be accessed only Product Delivery 
+Security Requirement: The ~ Security:  The 
+Contractor shall 
+provide to NESDIS ~  NOAA's 
+inspection of security standards 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+70 with the 
+authorization of ESPC  contractor shall develop and implement procedures to distribute products to customers ensuring 
+compliance to 
+DOC/NOAA security and data integrity policies. a trade study for the choice of the proposed technology.  imposed by the contractor. 
+CD 5 NDE adopts an 
+architecture that addresses NPOESS-based product distribution to customers. Product Delivery Design 
+Requirement: The 
+contractor shall undertake 
+a trade study and report on the costs and benefits of implementing feasible product communication 
+schemes and 
+communication infrastructure alternatives.  Among other ideas, the study must encompass providing Points of Presence (POPs) at each of the following customer sites to receive products transmitted from the NOAA Central at the NSOF: \ NESDIS, to Suitland's NSOF \ SARSAT, to Suitland's NSOF \ NWS to a customer-designated POP \ OAR to a customer-designated POP \ NMAO to a customer-designated POP \ NOS  to a customer-designated POP \ NMFS 
+to a customer-designated 
+POP \ NOAR to a customer-designated POP \ Academic/Universities Suitand  to customer-designated POP(s) \ International/EUMETSAT to a customer-designated POP ~ Availability:  
+Over the course of 
+each calendar year, 
+the NPOESS-derived product distribution capability at NSOF 
+will be operational more than 99% (tbc) of the time each month. ~ Prior to 
+selection, the contractor shall propose a networking infrastructure study plan to 
+meet 
+requirements. 
+CD 6 Customers Product Delivery ~ Availability:  ~ NOAA 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+71 obtain 
+NPOESS-based products Performance 
+Requirement: The 
+contractor shall develop 
+and implement procedures to make NPOESS-based products available to customers. Over the course of each calendar year, the NPOESS-derived product distribution capability at NSOF will be operational more than 99% 
+(tbc) of the time each month. Inspection of 
+Daily, Weekly, and Monthly Product Distribution Logs 
+CD 7 USMCC 
+receives SARSAT telemetry captured by NPOESS satellites SARSAT 
+Requirement: The 
+contractor shall distribute 
+SARSAT telemetry from IDPS to USMCC. ~ Timeliness:  
+SARSAT 
+Telemetry captured 
+by NPOESS satellites will be distributed to USMCC within 
+thirty seconds of their receipt by NESDIS. ~Prior to 
+selection, the contractor shall propose a networking infrastructure plan to meet 
+requirements. ~NOAA Inspection of Daily, Weekly, and Monthly SARSAT Product Distribution Logs
+CD 8 The US Global 
+Positioning 
+Center receives ADCS data and telemetry captured by NPOESS 
+satellites. ADCS Requirement: The 
+contractor shall route 
+ADCS Data from IDPS to the US Global Processing Center. ~ Timeliness:  
+ADCS signals 
+captured by 
+NPOESS satellites will be distributed to the US Global Processing Center within thirty 
+seconds of their receipt by NESDIS ~Prior to 
+selection, the contractor shall propose a networking infrastructure plan to meet 
+requirements. ~NOAA Inspection of Daily, Weekly, and Monthly ADCS Product Distribution Logs
+CD 9 The customer 
+receives 
+products in a timely manner Product Processing 
+Timeliness Requirement: The 
+contractor shall deliver 
+NPOESS-derived products to customers as quickly as possible. Timeliness: No 
+more than five minutes will elapse from the point-in-time when all of the required xDRs needed to create or ~ NESDIS Inspection of Production Logs~ Customer Satisfaction Surveys 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+72 to tailor a product 
+are received from the IDPS and the point-in-time when the tailored or NOAA-unique product is made 
+available for 
+distribution to customers 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+73  
+ 
+Table 10. NDE Inherited from ESPC Outcomes Matrices 
+ 
+_Desired 
+Outcomes  Required Service  Performance Standard Monitoring Method
+Recommended 
+CM Plan Contractor shall evaluate current process and generate a recommend plan, utilizing Software Engineering Institute’s (SEI) Capability Maturity Model (CMM) Recommended plan generated 4 months after Task Order award Weekly and monthly status reports 
+Level 2 CMM for developmental systems Implement CMM processes based on Government approved plan Implementation according to Government approved schedule, nominally 12-16 months Weekly and monthly status reports 
+  
+(ESPC Technical Documentation Outcomes Matrix) 
+Desired 
+Outcomes  Required Service  Performance 
+Standard  Monitoring 
+Method  
+Complete documentation library for all IPD documents The Contractor shall provide support for the identification, development, status 
+tracking, and delivery of 
+all IPD documentation. Coordinate all additions, 
+modifications, and 
+deletions of IPD documents with the NSOF Library Management System as identified in the CITS Concept of Operations document.  Manage and keep up to date the master list of IPD documents. 99% of the time the 
+Contractor shall complete the assigned tasks on or before mutually (GTM and Contractor) agreed upon milestones/due dates. Monthly and quarterly review with Contractor. 
+Generation of new documents. The Contractor shall create any new documents required in IPD to support All documentation shall be complete and meet specified NOAA Monthly and quarterly review with Contractor. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+74 facilities, infrastructure, 
+communications, all computer systems, system and application software documents  standards.  99% of the time the Contractor shall complete the assigned tasks on or before mutually (GTM and Contractor) agreed upon milestones/due dates. 
+Maintain multiple formats of IPD documentation. The Contractor shall maintain IPD documents in various standard electronic formats which 
+could fall into either 
+editable, fixed, or both.  Documents in production 
+will be maintained in an 
+editable/transferable format. An editable / transferable format ensures that IPD has the ability to revise and update documents as necessary. The Contractor shall work with several file formats including, but not limited to, WordPerfect Office, Microsoft Office, PDF, VISIO, and XML. Documentation shall be 
+complete and meet specified NOAA standards. Monthly and quarterly review with Contractor. 
+Support for the IPD documents provided on the web server. The Contractor shall publish and manage all the documents that are made available on the 
+IPD document web server  Publications and 
+documents shall meet specified NOAA standards.  99% of the time the Contractor shall complete the assigned tasks on or before mutually (GTM and 
+Contractor) agreed upon milestones/due dates. Weekly and/or 
+monthly status reports or briefings. 
+Configuration management of all IPD documentation. The Contractor shall manage and support the configuration management of all IPD 
+documentation using the 
+IPD CM tool specified by IPD management. All IPD documentation shall be included in the configuration management process and shall meet all NOAA specified standards. Monthly and quarterly status report and monthly briefing.
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+75 Management of 
+the various physical libraries in NSOF in support of the Information Processing 
+Division. The Contractor shall 
+manage the physical IPD library within the ESPC Data Processing Center, the Information Processing Division located on the first floor, 
+and coordinate 
+compliance with the NSOF Library Management System (LMS) where hardcopy documents are stored as well as original copies of software. Maintain an up to date listing of all items stored in the various libraries. Conduct yearly updates of all required IPD documents. All libraries will be 
+maintained to be in compliance with NOAA as well as NSOF LMS standards. Monthly review and quarterly report. 
+Documentation support for briefings and presentations. The Contractor shall provide generate, modify, and publish required briefing packages. All briefings, presentations, and publications shall be in compliance with NOAA and NESDIS standards.  99% of the time the Contractor shall complete the assigned 
+tasks on or before mutually (GTM and Contractor) agreed upon milestones/due dates. GMT review during 
+inception, development, and through final delivery.  
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+76  
+(ESPC ADP Security Outcomes Matrix) 
+Desired 
+Outcomes  Required Service  Performance 
+Standard  Monitoring 
+Method  
+Ensure ADP 
+Security Plans are kept up to date. The Contractor shall update the ADP Security Plans with assistance of the Government no more 
+frequently than semi-
+annually. This draft plan shall be completed within (30) calendar days of notification.  It shall be reviewed by the Government within fifteen (15) days, and the 
+Contractor shall finalize 
+the move plan within fifteen (15) calendar days of final government review. The Contractor shall 
+provide a weekly status report (oral and/or e-mail) and conduct a monthly Contractor status review.  
+Ensure responses to data calls from higher echelons prepared on an as needed basis. The Contractor shall respond to data calls from higher echelons on an as needed basis. The responses shall be completed in a stipulated time frames in order to give the Government 
+time to review them 
+prior replying to the higher echelon. The Contractor shall provide a weekly status report (oral and/or e-mail) and conduct a monthly status review. 
+Ensure all security regulations and policies are complied with. The Contractor shall make sure all ADP Security regulations and policies included in the above-mentioned documents are adhered to.Familiarize all employees with above-mentioned regulations. The Contractor shall provide a weekly status report (oral and/or e-mail) and 
+conduct a monthly 
+Contractor status review.  
+ESPC development, test, and operational systems will be secure The Contractor shall follow  (DOC/NOAA/NESDIS) procedures and policies for securing systems An ESPC system, or ESPC data, will never be compromised and the systems will be availableAnnual self-assessment of ESPC systems. 
+ESPC systems will be able to be certified and accredited The Contractor shall develop and deliver (DOC/NOAA/NESDIS) security documentation 
+(to include the System 
+Security Plan (SSP), Self Assessment, COOP, 
+Requirement Traceability 
+Matrix, and Test Plans Completeness: All 
+security documentation has been completed. Quality (Measurability): The information in the documentation accurately reflects the 
+conditions on the 
+system. Review of the ESPC 
+systems SSP, Self Assessment, COOP, Requirement Traceability Matrix, and Test Plans and Procedures 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+77 and Procedures) to 
+support certification and accreditation  See Figure 6 
+  
+ 
+ 
+Data Requirement List The below table identifies the documentation to be delivered in support of IT Security 
+requirements. 
+Deliverable  NIST ID  Title of Guideline  Delivery 
+Draft  Delivery Final  
+System Security 
+Plan  SP 800-18  Guide for Developing 
+Security Plans for 
+Information 
+Technology Systems, 
+December 1998  Proposal  120 Days prior 
+to IOC  
+Self Assessment  SP 800-26  Security Self-
+Assessment Guide for 
+Information 
+Technology Systems,
+November 2001  30 Days after 
+CDR  120 Days prior to IOC  
+Risk Assessment  SP 800-30  Risk Management 
+Guide for 
+Information 
+Technology Systems,
+July 2002  SRR, PDR  CDR  
+COOP  SP 
+800-34  Contingency 
+Planning Guide for 
+Information 
+Technology Systems,
+June 2002  30 DAC  90 Days After 
+draft comments provided by the 
+government  
+Requirement 
+Traceability Matrix, Test 
+Plans and 
+procedures, Test report, POA&M  SP 
+800-37  Guide for the 
+Security Certification 
+and Accreditation of 
+Federal Information Systems, 
+May 2004  As Specified 
+in SOW   
+Technical Control Checklist  SP 800-53  Recommended 
+Security Controls for 
+Federal Information 
+Systems, CDR  Earliest of 60 
+days after CDR or 120 days 
+prior to IOC  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+78 February 2005
+ 
+Incident 
+Response  SP 800-6  Computer Security 
+Incident Handling 
+Guide, 
+January 2004  PDR  CDR  
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+79  
+ 
+ Desired 
+Outcomes  Required Service  Performance 
+Standard  Monitoring 
+Method  
+(ESPC Computer Operations Outcomes Matrix) 
+CO1 All ingesting, 
+receiving, 
+processing and distribution of data will be done in a timely manner. The operators shall check schedules and wall clock for data latency and interface with the appropriate center  All systems shall not be interrupted for more than 2 hours per occurrence. Ingesting, receiving, processing and distribution logs 
+CO2 Problems on all 
+ingesting, receiving, processing and distribution systems will be resolved as soon as 
+possible. The operators shall 
+diagnose and resolve problems with the aid of programmers or systems personnel. All systems shall not be interrupted for more than 2 hours per occurrence. Ingesting, receiving, processing and distribution logs. 
+CO3 Administrative 
+tasks that are specific to operations are performed.  Operations staff shall load paper, 
+perform light 
+maintenance and distribute printouts from network printers located in Mission Control.   The operators shall 
+understand the tasks that are specific to the crew leader, and perform those tasks.  The operators shall respond to all requests 
+for printouts. All 
+requests shall be responded to correctly and completely. All tasks are 
+completed on time, and changes work as expected.  100% of all requests for assistance shall be completed Morning reports.  Reports generated from User Request Tracking Tool will be presented to the 
+government monthly. 
+CO4 Operations staff 
+shall respond in a 
+timely manner for requests for information on ESPC products and services.   The operators shall respond to all requests for information within 2 hours of receiving request.  All requests shall be responded to correctly and 
+completely. 100% of all 
+requests for information shall be completed or reassigned to subject experts. 90% of user 
+satisfaction 
+feedback entries shall be at the “satisfactory” or higher level. Reports 
+generated from User Request Tracking Tool will be presented to the government 
+monthly.   
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+80  
+(ESPC User Services/Help Desk Outcomes Matrix) 
+Desired Outcomes  Required Service  Performance 
+Standard  Monitoring Method  
+One-stop user 
+services/helpdesk suite of tools.  The Contractor shall develop the suite of tools. 99% of the time the Contractor shall complete the assigned tasks on or before mutually (GTM and Contractor) agreed upon milestones/due 
+dates. Established 
+milestones/due dates status reports. 
+All ingesting, receiving, processing and distribution of data will be done in a timely manner. The operators shall check schedules and wall clock for data latency and interface with the appropriate center  All systems shall not be interrupted for more than 2 hours per occurrence. Ingesting, receiving, processing and distribution logs 
+Problems on all ingesting, receiving, processing and distribution systems will be resolved as soon as possible. The operators shall diagnose and resolve problems with the aid of programmers or systems personnel. All systems shall not be interrupted for more than 2 hours per occurrence. Ingesting, receiving, processing and distribution logs. 
+Administrative tasks that are specific to operations are performed. The operators shall understand the tasks that are specific to the crew leader, and 
+perform those tasks. All tasks are 
+completed on time, and changes work as expected. Morning reports. 
+Operations staff shall respond in a timely manner for requests for information on ESPC products and services.   The operators shall respond to all requests for information within 2 hours of receiving request.  All requests shall be responded to correctly and 
+completely. 100% of all requests 
+for information shall be completed or reassigned to subject experts. 90% of user satisfaction feedback entries shall be at the 
+“satisfactory” or 
+higher level. Reports generated from 
+User Request Tracking Tool will be presented to the government monthly.   
+Operations staff shall load paper, perform light maintenance and distribute printouts from network printers The operators shall respond to all requests for printouts. All requests shall be 100% of all requests for assistance shall be completed  Reports generated from User Request Tracking Tool will be presented to the government monthly.
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+81 located in Mission 
+Control.   responded to correctly and completely. 
+All hardware equipment in equipment list shall be maintained to provide 24x7 support of ESPC The Contractor shall provide first echelon maintenance support of equipment, and facilitate through other vendors repair of all equipment. All critical systems equipment shall not be interrupted for more than 2 hours per occurrence.  Backup hardware shall be available. Morning reports and production logs. 
+All user calls for support or inquiry are directed to appropriate personnel for resolution. The Contractor shall provide help desk user services 24x7 to respond to user calls.All calls will be routed to appropriate personnel within 5 minutes. Customer surveys and morning reports. 
+Uses are notified on anomalies, extended outages, or significant changes to data, products or services. The Contractor shall notify, through established email list, users of significant changes to production, which have impact to users.Dissemination of appropriate information will occur within 10 minutes of identification of required notification.Morning reports, logs, and email receipt 
+Government management is kept informed of critical outages and interruptions to service. The Contractor shall notify appropriate predefined government contacts with defined time limit for service interruptions. Telephone notification shall occur within defined standards - some within 30 minutes some within 2 hours - depending on product and outage. Morning reports and meetings. 
+Electronic logs available for government review. The Contractor shall record all actions, phone calls, email contacts in daily logs 
+to be disseminated to 
+defined list of government and 
+contractor personnel.Logs shall be 
+disseminated by 7am local time and posted to secure web site. Log review 
+Establishment, maintenance, and updating of help trouble tickets. The Contractor shall maintain a searchable help ticket database for 
+use in tracking 
+problems and Database shall be updated as conditions warrant, access (read only) shall be granted to government Daily reviews of open help tickets by government. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+82 resolutions. personnel. 
+Creation of daily, 
+weekly, monthly, and quarterly logs and reports. The Contractor shall track key critical systems and communication 
+components for up 
+time, and product creation and 
+delivery. Logs and reports 
+shall be made available with metrics on an on going basis. Review of logs. 
+Remote monitoring of networks and computers. The Contractor shall monitor from one location the activity of networks and 
+computer, including 
+but not limited to: uptime, disk space, 
+CPU usage All critical 
+components shall be monitored 24x7 for properties, which may attribute to system failure or anomalies. Reviews of log and return to service time. 
+Support of key operating systems for operational products and support The Contractor shall maintain operating systems used in operational 
+production including 
+but not limited to: Linux, AIX, Unix, 
+Solaris, Windows, 
+McIDAS All critical systems 
+shall not be interrupted for more than 2 hours per occurrence Review of processing, distribution, and daily logs. 
+All operational software are to latest standards. The Contractor shall update baseline software to latest operational versions 
+in support of 
+operational product creations and 
+dissemination. Baseline software 
+shall be upgraded within 90 days of operational release if no impacts to production. Review of baseline software database. 
+Products creation and dissemination are verified. The Contractor shall monitor creation of products and dissemination of 
+products to ensure 
+product and services are delivered. Products and services shall not be interrupted for more than 2 hours. Review of check sheets, logs, and processing and distribution logs. 
+ 
+ (ESPC User Services/Help Desk/Customer Service Outcomes Matrix)  
+ Desired Outcomes  Required Service  Performance Monitoring Method
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+83 Standard  
+US1 Customers shall 
+have one point of 
+entry for requests for OSDPD products and services. The Contractor shall set up and staff a help desk during normal business hours (8:30 a.m. to 5:30 p.m. Eastern Time.   A draft staffing and operations plan shall be completed within thirty (30) calendar days of contract award.  It shall be reviewed by the 
+Government within 
+fifteen (15) calendar days, and the Contractor shall finalize the staffing plan within fifteen (15) calendar days of final government review.   The Contractor shall 
+provide a weekly status report (oral and/or email) and conduct a monthly  status review. 
+US2 Help desk staff 
+shall respond in a timely manner for requests for information on OSDPD products and services.  
+Customer 
+satisfaction shall be maintained at a level of at least 90%. The Contractor 
+shall respond to all requests for information within 5 days of receiving request.  All requests shall be 
+responded to 
+correctly and completely. 100% of all requests 
+for information shall be completed or reassigned to subject experts within 5 days of receipt date.  90% of customer 
+satisfaction feedback entries shall be at the “satisfactory” or higher level. Reports generated 
+from Customer Request Tracking Tool will be presented to the government monthly.   
+Customer 
+Satisfaction Feedback summaries shall be submitted to the government monthly. 
+US3 Help desk staff 
+shall route all 
+complicated and specialized requests to product experts to answer. The Contractor shall develop and maintain a directory of designated experts for each product and service, and shall have the 
+ability to route and track all requests forwarded to these experts through the web based customer service request tracking The Contractor shall 
+deliver a directory of products, services and associated “experts” to the government for approval within 60 
+days of contract 
+award.   The Government will approve or will identify substitutions within 30 days of receipt.  The Contractor shall Monthly status 
+reports shall be delivered by the Contractor to the Government. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+84 tool. return the completed 
+directory within 14 
+days of receiving substitutions. 
+US4 Customers: 
+- have available systems for placing requests for information interactively.   - shall receive 
+electronic 
+confirmation automatically when their request is received. - help desk staff and designated government employees have access to status information and metrics on all previously placed requests.   Help desk : - staff and designated government  - designated government employees shall have the ability to generate automated mailing lists, both email and street address based, by querying the system based on specific categories, including product and service, location, or other common fields.  The Contractor 
+shall deliver a web-based customer service request and tracking tool.  This tool shall provide for work order 
+generation and 
+forwarding, assigning of tasks to specific personnel and tracking of performance, and for standard querying and reporting capabilities. It is strongly recommended that the Contractor view 3 similar systems already in development or in place throughout NESDIS for potential use or incorporation: (1)  The Comprehensive Large Array-data Stewardship System (CLASS) (2)  The NOAA Virtual Data Center Online Store (3)  The DCS Automated Processing System (DAPS ii) The Contractor A design for a web 
+based customer service request tool shall be presented to the government within 90 days of contract award.  The 
+government will 
+review within 30 days of receipt of the preliminary design, and the Contractor shall implement all government required changes into the design within 30 days.   A completed system shall be delivered to the government within 180 days of approved system design.  The Contractor shall 
+present monthly status reports to the government. A Preliminary Design Review (PDR) shall be held within 60 
+days of Task Order 
+award. A Final Design Review (FDR) shall be held within 120 days of Task Order award.  
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+85 shall consider the 
+results of the OSDPD Customer Service Consolidation Study in developing and 
+implementing this 
+system.  
+US5 Customers shall 
+have access to a 
+“central” customer service web page, organized by subject category and product and 
+service name at a 
+minimum.   The Contractor 
+shall develop a series of customer service web pages, organized by subject category and product or 
+service name.  
+These pages shall link to official product and service web pages as designated by the products and services experts.  The Contractor shall identify deficiencies, or non-existent web pages for the government, and shall develop “place-holder” pages for the product or service until an official page is developed. The Contractor shall 
+deliver an outline of a web page design, including product and service categories to be covered, within 90 
+days of Task Order 
+award.  The Contractor shall deliver a prototype “shell” web page within 120 days of Task Order award. The Contractor shall deliver a completed web page, including all links to all product and services web pages, within 180 days of Task Order award.  Monthly reports shall 
+be submitted to the Government. A web page “outline” shall be submitted for government approval within 90 days of 
+Task Order award. 
+A “shell” web page shall be submitted for government approval within 120 days of Task Order award. A completed series of web pages shall be submitted to the government for approval within 180 days of Task Order award.  
+US6 Help desk staff and 
+designated 
+government employees have access to electronic or other feedback from OSDPD 
+customers. The Contractor 
+shall develop, for government approval, an online customer satisfaction feedback form.  
+The form shall A draft customer 
+satisfaction feedback form shall be presented for government approval within 120 days after Task 
+Order award.  The Monthly reports shall 
+be submitted to the Government. A draft feedback form will be submitted to the Government within 
+120 days after Task 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+86 Customers express 
+satisfaction with help desk service, and web page accuracy, helpfulness, and ease of use. include categories for help desk service, web page accuracy, helpfulness, and ease of use, and product and service 
+suitability and 
+quality.  The forms will be accessible, for viewing only, (except for an “action taken” category, if appropriate) by help desk staff and designated government employees. Government will 
+respond to draft within 30 days of receipt.  The revised form, including government feedback, shall be 
+presented for 
+government approval within 30 days of receiving revisions. Order award. 
+A revised feedback form will be submitted to the Government within 30 days after receiving government 
+revisions 
+ 
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+87  
+(ESPC Applications Support Outcomes Matrix) 
+ _Desired 
+Outcomes  Required Service  Performance 
+Standard  Monitoring Method
+AS1 Problems with 
+application support 
+functions, that disrupt production processing, will be resolved as soon as possible. The Contractor shall assist in diagnosing and resolving problems with the application support functions. - Production processing flow shall not be interrupted for more than 2 hours in a day, and no more than 4 hours in a month. 
+- Operator monitoring of production processing shall not be interrupted for more than 2 hours in a day, and no more than 4 hours in a month. - Distribution of production data shall not be interrupted for more than 2 hours in a day, and no more than 4 hours in a month. Operator logs 
+AS2 Application support 
+functions can be 
+modified to fix problems, or to implement new requirements. The Contractor shall assist in maintaining the application support functions.  Tasks to modify the software are completed on time, and the software changes work as expected. - Status reports and status meetings - Analysis of designs - Analysis of processing after change is made 
+AS3 ESPC will support 
+automated testing and reprocessing of data, when needed. The Contractor shall assist in implementing automated parallel 
+testing 
+environments, and automated 
+reprocessing of 
+data, when necessary, without impacting Automated testing 
+and reprocessing of data is performed successfully, without impacting production. Logs Feedback from GTMs and users 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+88 production 
+processing. 
+AS4 Users of ESPC 
+systems will receive assistance with problems and with the use of the systems. The Contractor shall assist users with program design, programming problems, integration of programs into the 
+production processing environment, and use of system facilities. Users are given 
+good direction on program design and are receiving the help they need. Programs are integrated properly 
+into the production 
+environment. Analysis of the 
+assistance and solutions being given to users Feedback from GTMs and users 
+ 
+(ESPC Systems and Network Administration Outcomes Matrix) 
+ Desired Outcomes  Required Service  Performance 
+Standard  Monitoring Method
+SA1 ESPC systems are 
+functional and 
+available for use The Contractor shall install and maintain system software and third 
+party software 
+listed in URL <http://projects.osd
+.noaa.gov/espc/doc
+umentations.htm> . Quality: Tasks 
+completed on time 
+and systems perform as expected Reliability: 99.9% tasks are scheduled and scheduled tasks are completed Quality: NESDIS 
+review of system 
+performance log, system log Reliability: NESDIS review of schedule tasks and syslog  
+SA2 ESPC is able to 
+plan for new systems, and for changes to existing systems The Contractor shall support technical planning for new systems, new interfaces to systems, new system requirements, and 
+relocation of systems   
+SA3 Problems with 
+production systems 
+will be resolved as soon as possible The Contractor shall analyze problems with productions 
+systems, and 
+propose solutions   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+89 or workarounds 
+that will allow production processing on the systems to continue
+SA4 The performance 
+utilization of ESPC system resources will be known The Contractor shall monitor and provide reports on the performance 
+and utilization of 
+ESPC system resources, and 
+make 
+recommendations for improvement   
+SA5 ESPC systems will 
+be secure The Contractor 
+shall follow ESPC (DOC/NOAA/NESDIS) procedures and policies for securing ESPC systems An ESPC system, or ESPC data, will never be compromised  
+SA6 ESPC systems will 
+be managed according to ESPC policies The Contractor shall implement ESPC policies for system 
+management, 
+including:  backup/recovery, 
+storage 
+management, data management, access control, and workload management   
+ 
+ Desired Outcomes  Required Service  Performance 
+Standard  Monitoring Method
+SA7 Reactive Software 
+Maintenance -All 
+unexpected software problems and networking problems will be The Contractor shall resolve problems in the receiving,  processing, monitoring, and During normal working hours, within 1 hour of problem discovery, the Contractor shall notify the GTM of Use Daily Monitoring Reports and recorded time of Contractor notification of GTMs 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+90 resolved as quickly 
+as possible delivery of satellite data to users the status of the problem resolution If problem is internal to application software systems and the problem is impacting product 
+delivery or product 
+quality then the problem shall be resolved within 24 hours of discovery GTM will verify that 
+the Contractor resolved the problem within 24 hours of discovery 
+SA8 User Support - 
+Time to resolve problems or respond to customer inquiries is as short as possible to 
+minimize impact on 
+user community The Contractor 
+shall respond to GTM within 24 hours of receiving customer inquiries with steps to be taken for resolutionContractor shall complete the agreed upon actions as identified NESDIS use of daily monitoring reports, weekly reports, and status meeting 
+reports 
+SA9 Assigned tasks are 
+completed on 
+schedule The Contractor shall complete assigned maintenance tasks 
+on or before the 
+mutually (GTM and Contractor) 
+agreed upon due 
+dates 100% of the time the 
+Contractor shall complete the assigned tasks on or before the due date Use of task manager system, regular status meetings, and weekly status reports
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+91  
+(ESPC Data Distribution Access Outcomes Matrix) 
+ Desired 
+Outcomes  Required Service  Performance 
+Standard  Monitoring 
+Method  
+DD1 Ability to maintain 
+ESPC TCP/IP 
+protocols for the systems and internal data and clock networks  The Contractor shall Manage and maintain ESPC TCP/IP protocols for the systems and internal data and clock networks Reliability: 99.9% networks uptime per week NESDIS inspection of system logs 
+DD2 Ability to maintain 
+network devices and servers The Contractor shall maintain network devices and servers, which are redundant 
+with spare units or 
+backup Reliability: 99.9% network devices and servers uptime per week NESDIS inspection of system logs 
+DD3 Ability to maintain 
+the ESPC external data networks The Contractor shall maintain the ESPC external data networks, domestic 
+and international 
+with backup circuits for some and 
+Internet fall back for 
+others Reliability: 99% 
+external networks uptime per week NESDIS inspection of system logs 
+DD4 Contractor shall 
+automate report gathering functions Syslog report highlight of desired areas (probes, intrusions, failures, 
+etc) formatted 
+similar to open source parsing tools 
+where incidents 
+types, number and percentages are reported in columnar order. Completeness: 
+automated tasks shall be initiated by an automated scheduler Reliability: 99.9% of scheduled tasks will execute on time. Completeness: NESDIS inspection of scheduler reports Reliability: NESDIS inspection of performance logs 
+DD5 Work to automate 
+system fail-over capability Analyze and implement automatic fail-over where is required Reliability:  99% of system fail overload capability has been automated. NESDIS analysis of system performance logs 
+DD6 Assigned tasks are 
+completed on The Contractor shall complete assigned 100% of the time the Contractor shall Use of task manager system, regular 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+92 schedule maintenance tasks 
+on or before the 
+mutually (GTM and Contractor) agreed upon due dates complete the assigned tasks on or before the due date status meetings, and weekly status reports
+ 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+93 (ESPC Product Systems Maintenance Desired Outcomes) 
+ Desired 
+Outcomes  Required Service  Performance  Monitoring 
+Method  
+PS1 Reactive Software 
+Maintenance. All 
+unexpected product systems (applications) software problems and networking 
+problems will be 
+resolved as quickly as possible.   The Contractor shall 
+resolve problems in the operational/ production processing, monitoring, and delivery of satellite 
+data to primary 
+users. During normal 
+working hours, within 1 hour of problem discovery, the Contractor shall notify the GTM of the status of the 
+problem resolution  
+Within 3 hours of problem discovery during non-normal working hours, the Contractor shall notify the GTM of the status of the problem resolution. If problem is internal to application software systems and the problem is impacting product delivery or product quality then the problem shall be resolved within 2, 12 or 24 hours of discovery, depending on assigned Tier. Use Daily 
+Monitoring Reports and recorded time of Contractor notification of GTMs.  GTM will verify that 
+the Contractor 
+resolved the problem within Tier Return to Service time limits. 
+PS2 Product 
+completeness. 
+All nominal quality level 2 and level 3 products are successfully produced from all 
+nominal input 
+data. The Contractor shall 
+ensure that all level 2 and level 3 products are successfully produced and of expected quality.  
+Contractor shall 
+provide means to measure product completeness. 98% of normal POES 
+input data and 99% of GOES input data shall be processed successfully and products of expected quality shall be 
+delivered to users.    Processing logs 
+(execution reports) and monitoring reports showing data in vs. data processed. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+94 PS3 Satellite Analysis 
+Branch (SAB) 
+support shall be provided 24x7. Response to SAB issues shall be immediate. The Contractor shall respond to SAB immediately upon receiving a problem report.  Normal operations shall be restored within 2 hours. Monitoring of SAB and problem report logs.  Customer feedback.  
+PS4 User Support - 
+Time to resolve problems or respond to customer inquiries is as short as possible to 
+minimize impact 
+on user community The Contractor shall 
+respond to GTM within 24 hours of receiving customer inquiries with steps to be taken for resolution. Contractor shall be expected to complete the agreed upon actions as identified. Use of daily monitoring reports, weekly reports, and status meeting 
+reports. 
+PS5 Assigned tasks are 
+completed on 
+schedule   The Contractor shall complete assigned maintenance tasks on or before the 
+mutually (GTM and 
+Contractor) agreed upon due dates 100% of the time the Contractor shall complete the assigned tasks on or before the due date Use of task manager system, regular status meetings, and weekly status reports. 
+PS6 Product systems 
+software meets operational and functional standards. The Contractor shall prepare software to comply with NESDIS standards.  100% of the Contractor written software systems shall comply with 
+NESDIS software 
+standards.  Non-compliant legacy 
+software will be identified to the COR and corrective action will be agreed upon. Review of project 
+reports and periodic inspection of software by GTM or designated representative.   
+PS7 Software 
+Configuration Management (CM) system are in place and followed. Software maintenance shall comply with CM procedures.   100% of operational software will be maintained under CM systems. Review of CM policies, procedures and software by GTM or designated representative.   
+PS8 Product systems 
+documentation meets operational The Contractor shall prepare documentation, 100% of the Contractor written documentation shall Review of system documentation by GTM or designated 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+95 and functional 
+standards. which is complete and accurate, properly stored, indexed and kept current. Documentation shall comply with 
+NESDIS standards.  be complete, 
+accurate, current, and comply with NESDIS standards.  Contractor shall store 100% of documentation in 
+online, indexed 
+system.  Non-compliant legacy documentation shall be identified to the COR and corrective action will be agreed upon. representative to 
+ensure compliance and ensure the documentation reflects the current state of the system.  
+PS9 Product systems 
+shall include FGDC compliant metadata with remote sensing extensions. The Contractor shall prepare metadata which is complete and accurate, and shall comply with FGDC standards with remote sensing extensions.   100% of the product systems shall as a minimum include static metadata, which shall be complete, accurate, current, and comply 
+with FDGC 
+standards.   Review of product 
+metadata by GTM or designated representative to ensure compliance and ensure the metadata reflects the 
+current state of the 
+system.   
+ 
+  
+(ESPC OSEI Desired Outcomes Matrix) 
+Desired Outcomes  Required Service  Performance 
+Standard  Monitoring  
+Operational 
+Significant Events Imagery (OSEI) created, provided to public and government officials, indexed and archived. 
+  The Contractor shall 
+create daily OSEI imagery with metadata of interesting environmental features, as well as 
+respond to 
+significant events as required by the government.     At least one OSEI 
+image will be created each workday.  The Contractor shall respond immediately during business hours, and within 2 hours 
+during non-business hours, to begin the creation of OSEI imagery during significant events.   Review of OSEI 
+indexed website and project reports and periodic inspection of image quality by GTM or designated representative.   
+   
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+96 (ESPC Shared Processing Outcomes Matrix) 
+Desired Outcomes  Required Service  Performance 
+Standard  Monitoring Method  
+Reactive Software 
+Maintenance - All unexpected software problems and networking problems will be resolved as quickly as possible. The Contractor shall provide staff to resolve problems in the receiving, processing, monitoring, and delivery of satellite 
+data to users. During normal 
+working hours, within 1 hour of problem discovery, the Contractor shall notify the GTM of the status of the problem 
+resolution. Use Daily Monitoring 
+Reports and recorded time of Contractor notification of GTMs.  
+If problem is internal to application software systems and the problem is impacting product delivery or product quality then the problem shall be resolved within 24 hours of discovery. GTM will verify that the Contractor resolved the problem within 24 hours of discovery               
+Daily Processing -All good data received should be processed and distributed to users so that it meets agreed upon timeliness 
+requirements The Contractor shall 
+monitor performance, produce statistics, and make appropriate system adjustments to meet 
+timeliness 
+requirements 100% of all good data 
+shall be processed through IPD systems Use daily processing statistics 
+User Support - Time to resolve problems or respond to customer inquiries is as short as possible to minimize impact on user community The Contractor shall respond to GTM within 24 hours of receiving customer inquiries with steps to be taken for resolution. Contractor shall be expected to complete the agreed upon actions as identified. Use of daily monitoring reports, weekly reports, and status meeting reports. 
+Shared Processing errors, or problems will be resolved such that the impact on the user community is avoided or minimized. The Contractor shall provide staff to monitor performance, produce statistics, and resolve operational/producti
+on processing of SPP 
+data. Within 1 hour during 
+normal working hours and within 3 hours of non-normal working hours of the problem discovery, the Contractor shall notify 
+the GTM of the status 
+of the problem. Use Daily Monitoring 
+Reports (oral and email) 
+Assigned tasks are completed on schedule   The Contractor shall complete assigned maintenance tasks 100% of the time the Contractor shall complete the assigned Use of task manager system, regular status meetings, and weekly 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+97 on or before the 
+mutually (GTM and Contractor) agreed upon due dates tasks on or before the due date status reports. 
+ 
+(ESPC Satellite Analysis and Hazards Support Outcomes Matrix) 
+Desired Outcome  Required Service  Performance 
+Standard  Monitoring Method  
+Support for Satellite 
+Analysis Branch in accordance with SAB Standard Operating Procedures The Contractor shall provide 24x7 support to the Satellite Analysis Branch by assisting in the routine product generation, daily operational 
+tasks and office support, and non-operational support tasks Operational product 
+generation will conform to the discipline-specific metrics published in the SAB procedures documentation. 
+Completion of  non-
+operational support tasks will adhere to schedules determined by SAB Team Leads and the GTM 80% of the time Performance of the 
+contractor will be reviewed monthly by the SAB GTM.  Daily functions of the Contractor will be monitored by the SAB 
+Shift Supervisor. 
+ 
+(ESPC CIP Outcomes Matrix) 
+Desired Outcomes  Required Service  Performance 
+Standard  Monitoring Method  
+Deliver a Business 
+Continuity Plan (BCP) utilizing the CIP at Wallops Island, VA as a backup site. The Contractor shall develop a BCP with assistance of the government utilizing the CIP site in Wallops Island, Virginia as the backup processing 
+center for the ESPC.  This plan shall include, but not be limited to cyclic maintenance of software and data repositories located at the Wallops Island site are synchronized with changes and This draft plan shall be 
+completed within six (6) calendar months of Task Order award.  It shall be reviewed by the government within thirty (30) calendar 
+days, and the 
+Contractor shall finalize the move plan within thirty (30) calendar days of final government review.   The Contractor shall 
+provide a weekly status report (oral and/or email) and conduct a monthly Contractor status review. 
+NOAA/NESDIS/OSDPD                                                                                                       NOAA-ES PC-018-2007 
+ESPC- CM1301-05-CT-0044                                                                                                   DCN 1 .0 (08/07/2007) 
+OSDPD/ESPC-NDE-008-018-005-V1.0    
+ 
+98 data residing in the 
+ESPC site in Suitland, Maryland at intervals stipulated in the BCP. 
+Update the Business Continuity Plan (BCP) to reflect any required changes at the direction of the government. The Contractor shall update the BCP with assistance of the government not more frequently than semi-annually. This updated BCP shall be completed within forth-five (45) calendar days of request by the government.  It shall be reviewed by the 
+government within fifteen (15) calendar days, and the Contractor shall finalize the move plan within fifteen (15) calendar days of final government review.   The Contractor shall 
+provide a weekly status report (oral and/or email) and conduct a monthly Contractor status review. 
+Exercise the activation of the Wallops Island, VA CIP site at the direction of the government. In accordance with the BCP and with the assistance of the government, the Contractor shall commence mission critical operations at the CIP site in 
+Wallops Island, VA.The CIP site in 
+Wallops Island, VA shall be ready to assume mission critical ESPC functions within twenty-four (24) hours of being notified to 
+activate the backup 
+site.    Checklists included in 
+the BCP and Continuity of Operations Plans (COOP) shall be utilized and annotated to ensure backup 
+activation procedures 
+are adequate and correct. 
+ 

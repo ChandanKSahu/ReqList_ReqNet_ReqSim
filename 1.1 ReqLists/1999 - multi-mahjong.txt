@@ -1,0 +1,92 @@
+4.1.1	The MultiMahjongServer will be designed to reside on a central computer (server) that is connected to a TCP/IP network and has a unique IP address.
+4.1.2	The MultiMahjongServer will allow connections from MultiMahjongClients and communicate with them using IP.
+4.1.3	The MultiMahjongServer will serve as a node for MultiMahjongClients. That is, it will be able to relay data received from one MultiMahjongClient to other MultiMahjongClients that request it.
+4.1.4	The MultiMahjongServer will automate the game initialisation functions (as opposed to the MultiMahjongClient doing them), such as: randomising tile order, randomising seating position and storing the "Game Info" database
+4.1.5	The MultiMahjongServer will contain a High Scores list with the names and scores of the top MultiMahjong players.
+4.1.6	The MultiMahjongServer will allow players on MultiMahjongClient programs to chat with each other in real time.
+4.1.7	The MultiMahjongServer will allow players on MultiMahjongClient programs to modify their own names and icons during gameplay (as opposed to only at the beginning).
+4.1.8	The MultiMahjongServer will support an architecture whereby all Computer Opponents (CO) required will reside on it instead of on the MultiMahjongClient programs.
+4.1.9	The MultiMahjongServer will have a graphical user interface with which the administrator of the server can get log information and change game settings.
+4.1.10	The MultiMahjongServer will be able to save preferences to a file and read from that file at start-up.
+4.2.1	When the user begins the MultiMahjongClient program, they will be able to choose to create a new multi-player game, to create a new single player game, to join an existing multi player game, or to quit the program. These options will be available at any stage while the program is running as long as there is no game currently being played by the user
+4.2.3	The MultiMahjongClient must send this game initialisation information to the MultiMahjongServer so that the MultiMahjongServer can create a new game.
+4.2.4	The processing for any Computer Opponents (CO) will be done by the MultiMahjongClient program. In a single player game, the MultiMahjongClient will need to process for 3 COs. In a multi-player game with 2 human players, each MultiMahjongClient will support 1 CO. In a multiplayer game with 3 human players, only 1 of the 3 MultiMahjongClients will support a CO. Obviously, in a multi-player game with 4 human players, no CO is required.
+4.2.6	When a user selects the option to join an existing game, the MultiMahjongClient will retrieve a list of any games that still require players from the MultiMahjongServer.
+4.2.8	The MultiMahjongClient must send this join information to the MultiMahjongServer.
+4.2.11	The MultiMahjongClient will save the user preferences in a file and read them in when the program begins.
+4.2.12	Users who create a new game will be able to change the ability level of any CO involved in the game. There will be 3 levels available: Beginner, Intermediate and Advanced.
+4.2.14	Any user who creates or joins a game will be able to upload their own JPEG or GIF image that they wish to have displayed above their name, if they do not wish to use a preset icon.
+4.3.1	The MultiMahjongClient must only allow players to make moves according to the Chinese rules of Mahjong as described in the rulebook
+4.3.2	The MultiMahjongClient will inform the user whose turn it is to pick up a tile.
+4.3.4	If the configurations of: the current discard, the tiles in a user's hand, and the player whose turn it is, would allow the user to Chow/Pung/Kong/Mahjong under the Chinese rules of Mahjong, the MultiMahjongClient will inform the user that they can do so. If they choose to take this action, then the MultiMahjongClient must send this information to the MultiMahjongServer.
+4.3.5	User's will be able to pick up a tile from the wall if it is their turn. If they choose to pick up, the MultiMahjongClient must send this information to the MultiMahjongServer.
+4.3.6	User's will be able to discard a tile if they have picked one up. When they choose to discard, the MultiMahjongClient must send this information to the MultiMahjongServer.
+4.3.7	The MultiMahjongClient must inform the user if another player is fishing.
+4.3.8	The MultiMahjongClient must inform the user if another player goes Mahjong. The wind of the round is also updated (if required).
+4.3.9	The MultiMahjongClient must inform the user if the hand has ended in a draw.
+4.3.10	The MultiMahjongClient will keep the user's tiles in order.
+4.3.11	The MultiMahjongClient will play sound effects associated with certain game actions.
+4.3.12	Users will be able to turn the sound on or off at any stage during the game.
+4.3.13	Users will have access to the User's Documentation online at any stage during the game.
+4.3.14	Users will be able to view the High Scores list that is located on the MultiMahjongServer.
+4.3.15	The MultiMahjongClient will automate the picking up of a tile from the wall if the user has no other option.
+4.3.16	User's will be able to Undo their last move if playing in single player mode.
+4.3.17	User's will be able to Save their game if playing in single player mode.
+4.3.18	User's will be able to chat with each other in real time.
+4.3.19	User's will be able to change their icons/pictures and names during the game.
+4.4.1	The game will end when all 4 rounds have been played or if the user chooses to end the game.
+4.4.2	The user will be able to end the game at any stage of the game. The user will then be able to quit the program or begin/join a new game.
+4.4.3	The MultiMahjongServer will inform all MultiMahjongClients connected to the game that the game has ended. Users of any MultiMahjongClient previously connected to the game will have the choice to quit the program or to begin/join a new game.
+4.4.4	If a user leaves the game prematurely, a new CO is created on another user's machine to fill their place. This CO will take over the user's current position and circumstance within the game. This CO will play at an ability level as defined in the Level 2 Requirements for the CO.
+4.4.5	If a user leaves the game prematurely, a new CO is created on another user's machine to fill their place. The user who created the game will decide at what level the CO will play at.
+4.5.1	The CO must play moves according to the Chinese rules of Mahjong.
+4.5.2	The CO will not have access to the data containing the faces of any tiles in the wall or any concealed tiles in any other players' hands.
+4.5.3	The CO will have access to the number of tiles in the wall or in a player's hand.
+4.5.4	The CO will be able to read any player's exposed or revealed hands.
+4.5.5	The CO will be able to pick up tiles off the wall, discard tiles, reveal Kongs, and Chow/Pung/Kong/Mahjong.
+4.5.6	The CO will be able to determine what tiles have not been played according to the tiles that have already been discarded, exposed or revealed.
+4.5.7	The CO will be able to recognise "almost finished" sets of tiles (i.e. 2 tiles in a sequence is an almost finished Chow) and will not discard tiles in such sets. This is to give the CO a basic level of strategy.
+4.5.8	The CO will be able to play at 3 different ability levels: Beginner, Intermediate and Advanced.
+4.5.9	The CO will be able to perform look ahead algorithms to determine its best move in the Intermediate and Advanced levels.
+4.5.10	The CO will be able to perform calculations at any stage of the game.
+4.5.11	The CO will be able to play any version of the rules that are specified by the user who creates the game.
+4.5.12	There will be CO's of different playing styles that the user can choose from.
+5.1.1.1	The potential users of the MultiMahjongClient product will be anyone who enjoys playing or is interested in the game of Mahjong.
+5.1.1.2	The product is aimed at users who have a basic knowledge how to operate a PC, Macintosh or Unix box
+5.1.1.3	Users who wish to play multi player Mahjong will not need to have advanced knowledge of TCP/IP networking. It is assumed however, that the computer has been configured correctly to connect to a TCP/IP network.
+5.1.1.4	Prior knowledge of Mahjong rules is not necessary, as the product will be designed for both players with some or no experience.
+5.1.2.1	The user of the MultiMahjongServer will most likely have general knowledge of a Web Server environment.
+5.1.2.2	The user will need to know how to set-up and operate a TCP/IP server.
+5.1.2.3	The user will understand the basic principles of networking and know any networking information associated with the server the MultiMahjongServer program is run on (hostname and IP address).
+5.2.1.1	If a nonfatal error occurs, a dialogue box reporting the nature of error will be displayed.
+5.2.1.2	As the error is classified 'nonfatal', the user will be able to continue the current game.
+5.2.1.3	An option to access the online troubleshooting guide is included in the error dialogue box.
+5.2.2.1	If a fatal error occurs, a dialogue box reporting the nature of error will be displayed.
+5.2.2.2	The only option to the user is to quit the game. All processes will be cleaned up (if possible) and the program execution will terminate.
+5.3.1	The MultiMahjong system is to be written using JDK 1.2
+5.3.2	The coding standard will be the same as that suggested by Sun Microsystems.
+5.3.3	Multiple languages will be supported using Java's Unicode standard.
+5.5.1	The CO must respond within 1 minute in both single and multi player modes.
+5.5.2	The MultiMahjongServer must be able to handle requests in multi player mode of up to 10 simultaneous games (max 40 players).
+5.5.3	The MultiMahjongClient must be able to calculate possible Chow/Pung/Kong/Mahjong moves within 5 seconds of being informed of the last discard.
+6.1.1	The MultiMahjongServer will have no graphical user interface and will be run using a command prompt.
+6.1.2	The MultiMahjongServer will have a graphical user interface with which the administrator of the server can get log information and change game settings. No requirements for this graphical user interface are set in this document.
+6.2.1	The MultiMahjongClient will have a graphical user interface that the user will be able to interact with using a mouse and a keyboard. Where it is appropriate, keyboard shortcuts will be provided for mouse based operations.
+6.2.2	The MultiMahjongClient will have sound effects associated with the game actions.
+6.2.3	The MultiMahjongClient will have animation also associated with game actions.
+6.3.2	The GUI is to be contained within a screen resolution of 800 x 600 pixels.
+6.3.3	All graphics will be in 16 bit colour.
+6.3.7	The list of available games will be presented to a user in a dialogue box with a scroll bar and selectable list items so that the user can select the game they wish to join.
+6.3.8	The Main Window will show the dead tiles.
+6.3.9	When a button becomes active, it will use animation to get the user's attention.
+6.3.10	When a player performs a Chow/Pung/Kong/Mahjong, the tiles involved will be animated.
+6.3.11	The user may click in the frame that contains the remaining wall and a frame showing the discarded tiles will be shown.
+7.1.1	An administrator's manual, explaining how to install and operate the MultiMahjongServer, will be provided.
+7.1.2	This manual will be provided as an electronic file.
+7.1.5	The administrator's manual will also be viewable from within the MultiMahjongServer program.
+7.2.1	A user's manual, explaining how to install and operate the MultiMahjongClient, will be provided.
+7.2.2	This manual will be provided in both a hard copy book and an electronic file.
+7.2.4	The user's manual will also be viewable from within the MultiMahjongClient program.
+7.3.1	All design documentation and coding documentation will be maintained thoroughly during the project and delivered to the client.
+7.3.2	This documentation will be available in electronic files, and, with the exception of source code, in hard copy format.
+7.3.4	The source code will be provided in hard copy format.

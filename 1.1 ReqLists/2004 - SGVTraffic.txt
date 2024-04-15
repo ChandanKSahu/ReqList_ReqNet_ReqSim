@@ -1,0 +1,84 @@
+3.2.1.1	Each User shall have a unique account (logon ID and password) within the IEN to be able to access IEN components and resources.
+3.2.1.2	User authentication shall be managed centrally, allowing administrators to control access to all systems within the IEN.
+3.2.1.3	Users shall only be able to access IEN systems and resources to which they have been given permission to do so.
+3.2.1.4	The IEN shall maintain a log of all operational change requests.
+3.2.2.1	A valid logon ID and password shall be required to gain access to the IEN system and User-accessible components.
+3.2.2.2	The IEN shall support the following User roles to provide different User access levels: • Administrator: Add, modify, and remove system Users, resources, and privileges. • Operator: Privilege-based access to system resources. • Guest: Read-only access to select system resources.
+3.2.2.3	The IEN shall support the ability to create groups of Users with similar access needs and levels and assign permissions to the group (e.g., Sub-Regional- or Agency-level permissions, etc.).
+3.2.2.4	The IEN shall support the following resource access levels: • Read: the ability to view data from a resource. • Command: the ability to issue commands to a resource.
+3.2.2.5	The IEN shall deny access to system resources by default.
+3.2.2.6	The IEN shall log the date, time, User, and command for each request to change the operational status of any traffic system component.
+3.2.2.7	All data records shall contain information regarding the last modification to that record (who and when).
+3.2.2.8	A record deleted by an authorized User shall not be removed from the database, but tagged for deletion and not referenced in general system queries.  A separate task/process run by an IEN Administrator will be required to actually remove these records from the database.
+3.3.1.1	The IEN shall maintain ATMS information in a COTS Database Management System (DBMS) within the system.
+3.3.1.2	The DBMS shall provide User-accessible data management tools.
+3.3.2.1	The DBMS shall have the ability to perform data archival.
+3.3.2.2	The DBMS shall have the ability to perform data backup and recovery.
+3.3.2.3	The DBMS shall have the ability to perform data manipulation (edit, delete, etc.) using standard SQL directives.
+3.3.2.5	The DBMS shall have the ability to perform ad-hoc and stored queries using standard SQL directives.
+3.3.2.6	The DBMS shall perform automated and ad-hoc system diagnostics and provide status reports.
+3.3.2.7	The DBMS shall notify selected Administrators when automated diagnostics show potential problem(s).
+3.3.2.8	The DBMS shall manage resource configuration data.
+3.3.2.9	The DBMS shall manage alarm condition data.
+3.3.2.10	The DBMS shall manage intersection controller communications statistics data.
+3.3.2.11	The DBMS shall manage detector volume, occupancy, and speed measurement data.
+3.3.2.12	The DBMS shall manage scenario response plan data.
+3.3.2.13	The DBMS shall allow automatic and ad-hoc operational reports.
+3.3.2.14	Administrators shall be able to specify the retention period for data stored in the DBMS.
+3.4.1.1.1	The CDI shall process/transfer traffic system equipment control and status data between an Agency ATMS and the IEN.
+3.4.1.2.1	The CDI shall process/transfer phase indication status data from an Agency ATMS to the IEN.
+3.4.1.2.2.1	The CDI shall process/transfer timing plan status data from an Agency ATMS to the IEN.
+3.4.1.2.2.2	The CDI shall process/transfer timing plan control data from the IEN to an Agency ATMS.
+3.4.1.2.3.1	The CDI shall process/transfer detector speed data from an Agency ATMS to the IEN.
+3.4.1.2.3.2	The CDI shall process/transfer detector volume data from an Agency ATMS to the IEN.
+3.4.1.2.3.3	The CDI shall process/transfer detector occupancy data from an Agency ATMS to the IEN.
+3.4.1.2.4	The CDI shall process/transfer video detection images from an Agency ATMS to the IEN (if the function is available through the ATMS).
+3.4.1.2.5.1	The CDI shall process/transfer CCTV images from an Agency ATMS to the IEN (if the function is available through the ATMS).
+3.4.1.2.5.2	The CDI shall process/transfer CCTV control data from the IEN to an Agency ATMS (if the function is available through the ATMS).
+3.4.1.2.6.1	The CDI shall process/transfer dynamic message sign status data from an Agency ATMS to the IEN (if the function is available through the ATMS).
+3.4.1.2.6.2	The CDI shall process/transfer dynamic message sign control data from the IEN to an Agency ATMS (if the function is available through the ATMS).
+3.4.1.2.7.1	The CDI shall process/transfer trailblazer status data from an Agency ATMS to the IEN (if the function is available through the ATMS (if the function is available through the ATMS).
+3.4.1.2.7.2	The CDI shall process/transfer trailblazer control data from the IEN to an Agency ATMS (if the function is available through the ATMS).
+3.4.1.2.8.1	The CDI shall process/transfer transit-related status data (LRT, BRT, etc.) from an Agency ATMS to the IEN (if the function is available through the ATMS)
+3.4.1.2.8.2	The CDI shall process/transfer transit control data from the IEN to an Agency ATMS (if the function is available through the ATMS).
+3.4.1.2.9	The CDI shall process/transfer Agency ATMS traffic detection and signal data to the IEN within one second of receiving a request for the data from the IEN (or as limited by the capabilities of the ATMS).
+3.4.1.2.10	The CDI shall process/transfer commands from the IEN to an Agency ATMS within 10 seconds of receiving the command (or as limited by the capabilities of the ATMS).
+3.4.2.1.2	The IEN shall manage the seamless and bi-directional transfer of traffic and incident management data and control information between member Agencies.
+3.4.2.1.3	The IEN Regional Server shall provide an interface that external (non-Traffic Forum) Agencies can use to access IEN traffic and incident management data.
+3.4.2.1.4	The IEN shall be able to manage the supported number of ITS devices within each Sub-Region.
+3.4.2.2.11	The IEN Regional Server shall process/transfer traffic signal monitoring and control data between IEN Corridor Servers.
+3.4.2.2.12	The IEN Regional Server shall process/transfer incident management data between IEN Corridor Servers.
+3.4.2.2.13	The IEN Regional Server shall process/transfer equipment status and control data between IEN Corridor Servers.
+3.4.2.2.14	The IEN Regional Server shall process/transfer traffic detection/congestion data between IEN Corridor Servers.
+3.4.2.2.15	The IEN Regional Server shall process/transfer signal coordination data between IEN Corridor Servers.
+3.4.2.2.16	The IEN Regional Server shall process/transfer event coordination data (planned and unplanned) between IEN Corridor Servers.
+3.4.2.2.17	The IEN Regional Server shall process/transfer signal timing plan data between IEN Corridor Servers.
+3.4.2.2.18	The IEN Regional Server shall process/transfer scenario response plan data between IEN Corridor Servers.
+3.4.2.2.19	The IEN Regional Server shall process/transfer CCTV images and control between IEN Corridor Servers.
+3.4.2.2.20	The IEN Corridor Server shall process/transfer data between all Local Agency IEN Site Servers within the Sub-Region for each of the data types described in INTG-OP-F11 through INTG-OP-F19.
+3.4.2.2.21	The IEN shall distribute requested real-time signal data at a rate of once per second.
+3.4.2.2.22	The IEN shall distribute requested intersection configuration data and detector data at a rate of once per minute.
+3.4.2.2.23	The IEN shall distribute scenario plan, incident, and planned event data at a rate of at least once per minute.
+3.4.2.2.24	The IEN Regional Server shall transfer Caltrans traffic and incident data, received through the external interface, to all requesting IEN Sub-Regions and Agencies, as per the Agency agreement.
+3.4.2.2.25	The IEN Regional Server shall transfer LADOT/ATSAC traffic and incident data, received through the external interface, to all requesting IEN Sub-Regions and Agencies, as per the Agency agreement.
+3.4.2.2.26	The IEN shall manage the following devices within each Sub-Region of the system: • Nine (9) ATMSs • 18 IEN Workstations • Nine (9) IEN Site Servers • One (1) IEN Corridor Server
+3.4.2.2.27	The IEN shall manage the following ITS devices within each Sub-Region of the system: • 2,000 intersection controllers • CCTV  • CMS  • HAR
+3.4.3.1.5	Network connectivity between IEN components (local and remote) shall provide near-real time access to required IEN-managed data.
+3.4.3.1.6	Network connectivity between IEN components (local and remote) and the local ATMS, if present, shall provide near-real time access to required ATMS-managed data.
+3.4.3.2.28	The network connection between an Agency and the IEN shall have a minimum committed information rate of 384kb/s.
+3.4.3.2.29	Network connections between the IEN servers and IEN workstations located at an Agency shall have a minimum bandwidth of 10Mb/s.
+3.4.3.2.30	IEN systems located at an Agency shall be isolated from all other systems and networks at the Agency with the exception of the CDI, which will require access to both the ATMS and IEN networks.
+3.5.1.1	The IEN shall be designed and built to minimize development, integration, and maintenance costs.
+3.5.1.2	The IEN shall be designed and built to maximize system availability and reliability.
+3.5.1.3	The IEN shall allow for the display and broadcasting of system messages (e.g., scheduled down time, system status, etc.).
+3.5.2.1	The IEN shall be developed using/supporting applicable ITS and IT standards (e.g., NTCIP, CORBA, TCP/IP, etc.) where practical.
+3.5.2.2	The IEN shall be built using COTS components (hardware, software, and networking) wherever feasible.
+3.5.2.3	The IEN interface shall be open and available to authorized developers needing to write an interface to an ATMS/TCS (with LACDPW approval and signed NDAs).
+3.5.2.4	The IEN shall be designed such that implementing new workstations and Sub-Regions (within the stated capacity of the system) will not adversely effect the operations of existing systems.
+3.5.2.5	The IEN shall be designed to promote graceful degradation at the workstations and servers when non-fatal system errors occur (i.e., a failure of a single component should not needlessly cause other components or systems to crash).
+3.6.1.1	The IEN shall maintain current operator and administrator training materials.
+3.6.1.2	The IEN shall maintain current system operation, administration, and maintenance manuals.
+3.6.2.1	IEN training materials shall be developed for all custom-built components.
+3.6.2.2	IEN support and maintenance training materials shall be developed for all custom-built components (e.g., User management, back-office systems/components, etc.).
+3.6.2.3	Training materials on the IEN user interfaces shall be developed. INTG-ST-F04 Documentation (training materials and system manuals) for all IEN components shall be updated as part of IEN configuration management.
+3.6.2.5	COTS documentation shall be distributed to Agencies as part of IEN component configuration management.

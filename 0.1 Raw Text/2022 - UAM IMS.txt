@@ -1,0 +1,1172 @@
+
+ 
+ 
+ 
+ 
+ 
+UAM/IMS Integration  
+ 
+ 
+ 
+ 
+ 
+UAM IMS Requirements 
+Specification  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Document Ref  Title External reference  
+UAM-SPC-001 UAM IMS Requirements Specification  
+  
+Version Date  Version #  Document Owner  Current Status  
+20 March 2012 4.0  Draft 
+ 
+  Experiment Code: ReqSpec20 22 
+Table of Contents  
+1 Summary  ................................ ................................ ................................ ..................  3 
+1.1 Background  ................................ ................................ ................................ ........  3 
+1.2 Scope  ................................ ................................ ................................ ................  3 
+1.3 Dependencies  ................................ ................................ ................................ ..... 3 
+1.4 References  ................................ ................................ ................................ .........  3 
+1.5 Glossary of terms  ................................ ................................ ................................  4 
+2 Solution Overview  ................................ ................................ ................................ .... 5 
+3 Functional Specification  ................................ ................................ ...........................  5 
+3.1 Process models  ................................ ................................ ................................ ... 5 
+3.1.1  Account Registration  ................................ ................................ .........................  5 
+3.1.2  Completing an Accommodation Application – IMS Identity Data ..............................  6 
+3.1.3  Synchronising Affiliation data  ................................ ................................ .............  6 
+3.1.4  Other Student Related dat a ................................ ................................ ...............  7 
+3.2 Business Rules / Regulatory Requirements  ................................ .............................  7 
+3.3 Assumptions  ................................ ................................ ................................ ....... 8 
+3.4 Functional Requirements  ................................ ................................ ......................  8 
+3.4.1  Account Registration (online St udent Applicants)  ................................ .................  10 
+3.4.2  Completing an Accommodation Application  ................................ .........................  15 
+3.4.3  Synchronising Other Personal Data  ................................ ................................ .... 24 
+3.4.4  Reports  ................................ ................................ ................................ ..........  26 
+3.5 Data Requirements and Transformations  ................................ ...............................  27 
+3.5.1  Personal Details ................................ ................................ ...............................  27 
+3.5.2  Address Details  ................................ ................................ ...............................  28 
+3.5.3  Emergency Contact Address  ................................ ................................ ..............  29 
+3.5.4  School Details and NCEA Results  ................................ ................................ ....... 30 
+3.5.5  Affiliations  ................................ ................................ ................................ ...... 31 
+3.5.6  Scholarship Information  ................................ ................................ ...................  31 
+3.5.7  Reports  ................................ ................................ ................................ ..........  32 
+3.5.8  Configuration Data  ................................ ................................ ...........................  33 
+3.5.8.1  IMS Relationship Values:  ................................ ................................ ..................  33 
+3.5.8.2  Ethnicity  ................................ ................................ ................................ .........  33 
+3.5.8.3  Citizenship & Residency  ................................ ................................ ....................  34 
+3.5.8.4  Address Regions  ................................ ................................ ..............................  35 
+3.6 Configuration Requirements  ................................ ................................ ................  36 
+3.7 Non-Functional Requirements  ................................ ................................ ..............  36 
+3.7.1  Security  ................................ ................................ ................................ .........  36 
+3.7.2  Performance  ................................ ................................ ................................ ... 36 
+3.7.3  Training ................................ ................................ ................................ ..........  36 
+3.7.4  User Documentation  ................................ ................................ ........................  36 
+3.7.5  On-going support and maintenance  ................................ ................................ ... 36 
+3.7.6 Technical Approach – API’s and Web Services  ................................ ........................  37 
+3.8 Testing  ................................ ................................ ................................ .............  37 
+3.8.1  Test Scenarios  ................................ ................................ ................................  37 
+4 Approval and Change Control  ................................ ................................ .................  39 
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 3 of 39 1 Summary  
+1.1 Background  
+The University Accommodation Management system, UAM, is a specialised student 
+housing solution. Applicants for student accommodation register by completing an 
+online application via a link from the University website.  
+The Identity Management System (IMS)  was introduced to the University in 2008 
+and is the University's system of record for identity information and primary web 
+authentication. There is currently no automated integration between UAM and the 
+IMS. 
+In order to bring some efficiency and provide a better user experience for students it 
+is desirable  to integrate the UAM system with the IMS – ensuring that a student only 
+needs to register and update personal data in one system. Additionally, it wo uld be 
+beneficial to pass various affiliation information from other University systems to 
+UAM to keep them informed of any student ’s status changes.  
+ 
+ 
+1.2 Scope  
+The following items are considered to be in scope;  
+ Integration with the IMS for the Accommodation Application process to eliminate 
+the need for students/applicants to register and enter personal details in more 
+than one system.  
+ UAM Integration with IMS for any changes or updates to personal details for 
+accommodation ap plicants or current students who have previously registered 
+online . 
+ The integration of relevant Affiliations a person has with the University to UAM as 
+they are up updated in  the various downstream systems.  
+ 
+1.3 Dependencies  
+This project is dependent upon:  
+ ITS resource being available to do the development  
+ The accommodation package ( UAM) being able to integrate suitably with the IMS 
+ 
+ 
+1.4 References  
+None 
+ 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 4 of 39 1.5 Glossary of terms  
+Term  Meaning  
+UAM 
+ University Accommodation Management (UAM) system is the 
+University’s specialised student housing solution . 
+SAP The Student Administration Platform . 
+IMS The Identity Management System (IMS)  is the University’s  master 
+repository for Personal Data. It stores and maintains details of all 
+persons that the University has a relationship with, inc luding 
+students, staff, visitors, alumni and contractors.  
+AfUE Application for University Entrance . This is an application for 
+recording applications for admission to programmes of study at the 
+University. It interfaces with the IMS for the Personal and Contact 
+details of the applicants.  
+ULN University Login  Name  – assigned to persons in the IMS when an 
+Identity becomes resolved.  
+ 
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 5 of 39 2 Solution Overview  
+When a prospective or current student wants to submi t an online Application for 
+Accommodation at the University  they will use the links currently provided on 
+various web pages, e.g. the University Home page  ‘Accommodation’ link , or via the 
+Application for University Entrance (Accommodation Services link) .  
+The solution for accommodation follows the pattern already established for similar  
+web forms like the Application for University Entrance . Applicants visiting the 
+Application for Acco mmodation for the first time will be required to register  
+themselves  in the IMS and provide all the  necessary  personal data.  The applicant 
+will then be transferred back to the accommodation form where their personal data 
+will be displayed ‘read only’. A link back to the IMS will be provided in order that 
+applicants can update personal data at any time.  
+Additionally, it would be usefu l for Accommodation staff to have basic student -
+related  information provide  to UAM from other systems , to assist them in process ing 
+an applicant’s request for accommodation.  
+ 
+3 Functional Specification  
+ 
+3.1 Process  models  
+3.1.1  Account  Registration  
+Under an Integrated systems  approach , the ‘Account Login’ section on the University 
+Accommodation Home  page  will direct the user to the IMS for Sign in . For someone 
+who has previously registered with the university, they can use their Univers ity ID (7 
+character number), ULN (if they are already a student) or the personal email address  
+they used to create their account . If they are new to the University then they will be 
+taken to the IMS registration screen (for Accommodation applicants).  They will be 
+required to enter the following;  
+1. Email Address  
+2. First Name  
+3. Last Name  
+4. Password  
+Following completion of this form and acceptance of the terms and conditions they 
+will be sent a confirmation email. They will be required to complete the verificati on 
+by clicking on the ‘Complete Your Registration’ link  and populating the following 
+information (some of which is compulsory) .  
+1. Title  
+2. Middle Name s  
+3. Preferred Name  
+4. Previous Name  
+5. Mobile Phone Number  (required)  
+6. Home Phone Number  (required)  
+7. Correspondence Address (required)  
+8. Gender (required)  
+9. Date of Birth  (required)  
+10. Citizenship  (required)  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 6 of 39 11. Residency (if not an NZ citizen)  
+12. Ethnicity  (required)  
+13. Emergency Contact details (required)  
+14. National Student Number (NSN)  
+Once this page is complete  the applicant can return to the Accommodation portal – 
+Home Page and lodge an application . 
+3.1.2  Completing an Acco mmodation Application  – IMS Identity Data   
+Once an Applicant has either logged in or registered (in the IMS) and completed 
+their verification they can begin a new Application , by selecting the ‘My Application’ 
+link from the home page – as they do tod ay. The UAM system will recognize them  as 
+being logged in, receiving their credentials from the IMS, using the 7 character  
+unique University ID as the link between the two systems.  
+The Select Application page of the UAM system will look no  different to how it is 
+currently and once an applicant  select s their application type and click s on ‘Save and 
+Continue’ - they will be transferred to the ‘Personal Details’ page. This page will be 
+modified from what they see today, as all fields (not just  ‘Family Name’ and ‘First 
+Name’) will be display only. A link will exist on the page to ‘Update Personal Details’ , 
+which will transfer the user to the IMS (in a new browser window)  where they can 
+maintain their own data. When they return to the ‘Personal Details’ page their 
+applicant information will be updated with whatever was saved in the IMS. This will 
+be a near real -time update.  
+Similarly, with the ‘Contact Details’ page in the Accommodation Application – all 
+fields will be read only with three separate buttons to link to different parts of the 
+IMS for adding and/or updating Address es, Phone  & Email and Emergency Contact s 
+details.  A new browser window will be opened in the  IMS on the appropriate page – 
+and when saved will push a near -real time message to the Accommodation system 
+to update anything that has changed.  
+   
+3.1.3  Synchronising Affiliation  data 
+Some affiliations ( which represent the relationships a person has with th e University ) 
+are displayed in the IMS. These are maintained in a number of University systems 
+and sent via messaging to University Login Management system and LDAP  (which is 
+where the IMS is reading these from). When these affiliations a re updated (or when 
+a user is initially sent to the Accommodation system) these will be sent via m essage 
+to the UAM database (for internal use only)  using an Application Programming 
+Interface (API) - supplied by UAM. This will enable  administrators to have up to date 
+information relating to an applicant’s (or current resident’s) status with the 
+University. The Affiliations of interest to UAM are;  
+a. Applicant  
+b. Undergraduate Student  
+c. Postgraduate Student  
+d. Doctoral Student  Note: Where a UAM administrator enters an application on behalf of an applicant, 
+they will need the ability to create the identity in the IMS first. Then they will enter 
+the IMS ID number into UAM manually and push the person message from the IMS 
+in order to populate the required personal data fields. This process for gathering 
+personal data would also be the same for non-student accommodation residents, 
+who are currently entered into UAM through the Administration pages. 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 7 of 39 e. Alumni  
+ 
+3.1.4  Other Student Related data  
+NCEA Test Results  
+When an applicant selects the ‘School Leaver’ option on the UAM application form 
+they will be prompted for their National Student Number (NSN) i f it is not already 
+stored against their IMS identity. Note : NSN will be included in the personal data 
+collection once an applicant verifies their email address, but will be optional at this 
+stage. When an applicant  proceed s to select their Accommodation Applicati on type, 
+and they select Option 1 (School  Leaver) , a check on the database will be made to 
+determine if their NSN number has been collected. If not, it will prompt t hem for it. 
+When it is entered , or on confirmation that it has been entered , a web service will 
+pull all relevant NCEA test data from the SAP database. Note: at this stage CIE and 
+IB results sent from the Ministry of Education do not contain the NSN number so it 
+will not be possible to collect these results automatically using the NSN number.  
+ 
+Scholarship Information  
+As part of the Education question in the Accommodation Application, information is 
+gathered on whether an applicant has applied for or intends to apply for a 
+scholarship. If an applicant has previously applied the information relating to this 
+applicati on is currently  stored in SAP (though in the future this will be in Scholarship 
+Management ) and could be retrieved by a web service and posted directly to the 
+UAM database  via an API . The current scholarship question will be left in place,  for 
+cases where applicants intend to apply or have applied for a scholarship that is not 
+centrally managed, i.e. some facultie s manage their own scholarships.  
+ 
+Photos  
+All students are required to have an ID card photo entered in the university ID card 
+system. A message is published from this system every  time a new photo is added 
+for a student. There is a requirement for the UAM system to subscribe to this 
+message where a student is a current accom modation applicant or resident . This will 
+update the UAM database directly  via an API . 
+3.2 Business Rules / Regulatory Requirements  
+Type of 
+Rule  Identifier  
+ Rule details  
+Regulation   All requirements of the Public Records Act 2004 must be 
+observed and adhered to.  
+Regulation   All requirements of the Privacy Act 1993 must be observed and 
+adhered to.  
+Regulation   All requirements of the University's Employment Code - Access to 
+Personal Information policy must be observed and adhered to.  
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 8 of 39  
+3.3 Assumptions  
+ Assumption  
+1. The Identity Management System  will be the master for all personal data and will be 
+responsible for sending any changes relating to people that the Accommodation 
+system is interested in as they are updated or added.  
+ 
+3.4 Functional Requirements  
+ 
+Requirement 
+# Requirement Description  Navigation  Dependencies  
+/ Traceability  
+ 
+1 An Accommodation Applicant should 
+only be required to register once with 
+the University  in order to apply for 
+Admission to a Programme of Study 
+and to stay in a University Residence. 
+A single ID should be used to access 
+both Applications and eventually be 
+used as their Student ID once they 
+are accepted into a Programme.    
+2 Personal and Contact Details required 
+for the Accommodation Application 
+should be created and maintained in 
+the IMS. A user should be able to 
+access the IMS to amend these details 
+directly from an Application within 
+UAM.   
+3 The UAM system should b e updated 
+automatically when a person (who is 
+either an Applicant, a current 
+University Accommodation  resident or 
+who has been offered a place in a 
+University residence) changes or 
+updates their personal or contact 
+details in the IMS.    
+4 The UAM system should be updated 
+automatically when a person’s (who is 
+either an Applicant, a current 
+University Accommodation resident or 
+who has been offered a place in a 
+University residence) affiliations with 
+the university change.    
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 9 of 39 5 A report is required to  identify persons 
+with current accommodation 
+applications who a re not current 
+students and who se application s for 
+admission have been declined.     
+6 A report is required to identify current 
+University residents who are no longer 
+active students (or w ere never 
+enrolled) .   
+7 Photos from a student’s id card are 
+required to be sent to UAM when they 
+are added or updated  in the ID card 
+system .   
+8 Secondary School details and NCEA 
+results (from Year 12 onwards) should 
+be sourced from SAP data (and 
+populated in the UAM database) if this 
+available at the ti me an applicant 
+completes the form  – and we have 
+received their NSN .   
+9 Scholarship information should be 
+pre-populated in the UAM database , 
+from SAP, if it exists at the time an 
+applicant completes the form .   
+10 Hard Copy Applications – for those 
+students that submit a hard -copy 
+application, Accommodation staff 
+require the ability to create user 
+accounts in the IMS (on their behalf).  
+They can then manually enter the IMS 
+ID into UAM and then push the 
+relevant person message from the 
+IMS.   
+11 Non-Student Applications – the 
+business require the ability to process 
+applications for non -students  also. 
+These persons will still require the 
+same IMS registration  (entered 
+manually by UAM staff)  and be pushed 
+from the IMS in the same way as is 
+the case with manually entered 
+student applicants .   
+ 
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 10 of 39  
+3.4.1  Account Registration  (online Student Applicants)  
+ 
+ 
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 11 of 39 From the ‘Sign up for a new account’ link:  
+ 
+ 
+Clicking on the register Button will invoke the following message;  
+ 
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 12 of 39 Confirmation Email from IMS 
+ 
+ 
+ 
+ 
+Clicking on the ‘Complete your registration’ link will bring up the following message;  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The University  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 13 of 39 Student (and potential student) Application  
+Clicking on the ‘Continue’ button opens up the Personal and Contact Details Page  (tbd) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Application for Accommodation  
+*Required fields  
+ 
+Your  name  
+Full legal name  
+Important: Please ensure the name reflects the legal name on passport or birth certificate  
+Title                                               
+*First name  
+Middle names  
+*Last name  
+Preferred name  
+Use this section to indicate other names  
+Do you have a preferred name that is different from your full legal name?  ☐Yes ☐No  
+Do you have a previous or maiden name?      ☐Yes ☐No 
+ 
+Your contact details  
+*Home phone   ☐ Preferred  Contact number  
+*Mobile phone   ☐ Preferred Contact number  
+*Mailing address  
+Start typing your address. If you have an overseas address select Enter Overseas Address, or if you can’t 
+find your NZ address, select Manually enter a NZ address.  
+ 
+        or     
+ 
+*Home address        ☐ Same as Mailing address  
+ 
+Your demographics  
+*Gender        ☐Male ☐Female  
+*Date of birth  
+*Citizenship  
+*Ethnicity  
+Emergency Contact  
+*Contact Name  
+*Relationship  
+Email  
+Home phone *  
+Mobile phone  
+Work phone  
+Address  
+ 
+Your National Student Number (NSN)  
+If you are applying as a New Zealand School Leaver then please provide your NSN  
+NSNs are the unique numbers used to identify students on the New Zealand National Student Index  
+ 
+Enter overseas address  
+ Manually  enter  a NZ Address  
+Next  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 14 of 39 If a person selects a citizenship other than ‘New Zealand’ , ‘Australia’ or ‘Cook Islands’  they 
+are presented with this question (per the current AfUE) 
+ 
+ 
+ 
+Click on Next once all Fields are populated and receive the following Confirmation message;  
+ 
+ 
+ 
+Clicking on Continue will take you into the ‘Welcome’ page (with Profile Summary in top left 
+hand corner) of the Accommodation Application.  
+ 
+  
+*Citizenship  
+ 
+*Are you a permanent resident of New Zealand?   ☐Yes ☐No 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 15 of 39 3.4.2  Completing an Accommodation Application  
+Once signed in  or immediately after completing the Registration steps in Section  3.4.1 an 
+applicant will be directed to the ‘Welcome’ page.  
+ 
+Using the ‘ My Application ’ link starts the Application process.  
+ 
+After selecting the type of applicant you are, and selecting ‘Save & Continue’ you are 
+presented with your personal details . Note: the Personal and Contact Details pages are the 
+same regardless of the Application type, e.g. School Leaver, International Student, or Other 
+Applicants.  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 16 of 39  
+For Type 1 Applications  (School Leavers) , the following additional question should be asked , 
+if the NSN is not already in the IMS for the applicant ; 
+ 
+This will enable the retrieval of any stored NCEA exam results in SAP (e.g. year 12 NCEA) for 
+Applicants. Given the sensitive nature of this data the results should be only populated in the 
+database tables and not displayed to the applicant.  
+ 
+ 
+This page would be pre -populated with data from the IMS. Click on Update per sonal details to 
+go to the IMS and change or ad d data (see below) .  
+Clicking on the ‘Confirm & Continue’ button will take the user to the Contact Details page.  
+ 
+Your National Student Number (NSN)  
+If you are applying as a New Zealand School Leaver then please provide your NSN  
+NSNs are the unique numbers used to identify students on the New Zealand National Student Index  
+ 
+Next  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 17 of 39  
+ 
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 18 of 39  
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 19 of 39 The Add/Update IMS buttons will take the applicant to the following IMS pages to maintain 
+their person data;  
+Add/Update Address Details – IMS 
+ 
+ 
+Click on Update Address  
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 20 of 39 Note: When Entering an Address you can enter a Contact Name (required by 
+Accommodation)  
+ 
+ 
+This is then displayed as a ‘care of’ (or c/o);  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 21 of 39 Add Update Email & Phone  – IMS 
+ 
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 22 of 39 Add / Update Emergency Contact Details – IMS 
+ 
+ 
+ 
+  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 23 of 39 Other Application Information  
+ 
+1. NCEA Test Results and School Details  
+ 
+Section 3 of the UAM Application (Section 4 for international  applicants) requires  Secondary 
+School  details and results, Proposed Tertiary Study and Scholarship information – some  of 
+which is asked for and stored in other Univer sity systems ; 
+ 
+This is the current page in the Accommodation Application  
+ 
+ 
+For NZ School Leavers who have NCEA results – they will no longer be required to fill out 
+section a) of this form – as we would have collected their NCEA result and school 
+information from SAP at the time that entered their NSN.  
+ 
+However, the section wi ll need to remain (and be re -worded accordingly ). See sample 
+below;  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 24 of 39   
+ 
+ 
+2. Scholarship Information  
+Section c) of this  application page should stay as it is. However, we will also be importing 
+any SAP scholarship information (i.e. whether an applicant has  applied for a scholarship , 
+and if so, the name of the scholarship) for accommodation applicants from the new 
+Scholarship Management  system . These will only relate to  centrally administered 
+scholarships and not those managed by the faculties . The Scholarship Management  online 
+application system is currently in development and is unlikely to be available to provide this 
+information at Go Live. Instead this integration will be turned on when Scholarship 
+Management  is implemented. Given that the above question will remain  in the application 
+form, UAM will continue to  capture this information manually from applicants.  
+ 
+ 
+3.4.3  Synchronising Other Personal Data  
+IMS Changes and Affiliation data  
+When an affiliation  (of interest to UAM) is added to or removed from a  person that exists in 
+the UAM database  (i.e. a current applicant , and past  or present University resident), a 
+message  should be published from the IMS and subscribed to by UAM to update the 
+person’s record . The IMS will send all Affiliation changes to UAM for all IMS identities, but  
+will update only  those persons that exist in the UAM database , via an API.  Note: UAM is 
+interested in any change to a pe rson’s identity record that is not captured by the processes 
+in Section 3.4.1 and 3.4.2 of this document.  
+The Affiliations of interest to UAM are;  
+
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 25 of 39 a. Applicant  
+b. Undergraduate Student  
+c. Postgraduate Student  
+d. Doctoral Student  
+e. Alumni  
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 26 of 39  
+Photos  
+Along with the affiliation data - photos should also be published to UAM, and re -sent 
+whenever they are updated  in the ID card system  – for students who are current 
+accommodation applicants or residents  (as with the affiliation messages).  Currently,  there 
+is an outbound message from the ID card system which UAM will subscribe to receive newly 
+added or updated photos.  
+Note: Given the size of the files in relation to photos it will be necessary for the UAM 
+administrators to clean out phot os that are not required on a regular basis, e.g. for those 
+applicants that never become residents . 
+ 
+3.4.4  Reports  
+Once Affiliation data is interfaced into UAM, the business will be able to better identify 
+persons who are either currently staying at a Uni versity residence and are not entitled to 
+(as they are no longer or never were a student) or have an outstanding accommodation 
+application but have been refused entry to a programme of study at the University. Reports 
+are required to be written that will u se the affiliation information of a person in the UAM to 
+determine their eligibility to accommodation.  
+Data required for the Report will be;  
+a. UAM ID number  
+b. University ID 
+c. Legal Name  
+d. Resident Status  
+e. Resident Year  
+f. Enrolment  Term 
+g. Enrolment  Status  
+h. Residence  
+i. Current Affiliations  
+ 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 27 of 39  
+3.5 Data Requirements  and Transformations  
+3.5.1  Personal Details  
+Field 
+Description  Field 
+Type  Req UAM Record 
+Name  UAM Field 
+Name  IMS Record 
+Name  IMS Field 
+Name  Comments  
+Surname  
+ Char 40  
+ Y Entry  NameLast  
+ PERSONNAME  LASTNAME  Where 
+NAMETYPE = PRI  IMS Legal last name  
+First Name  
+ Char 40  
+ Y Entry  NameFirst  
+ PERSONNAME  FIRSTNAME  Where 
+NAMETYPE = PRI   
+Middle Name  Char 40?  N Entry  NameOther?  PERSONNAME  MIDDLENAME Where 
+NAMETYPE = PRI   
+Preferred Name  Char 40  Y Entry  NamePreferred   FIRSTNAME 
+LASTNAME Where 
+NAMETYPE = PRF  IMS Preferred Names  
+University  ID Char 30  Y Entry  ID1? PERSONEXTERNAL  
+IDENTIFIER  IDENTIFIERVALUE  
+Where 
+.DENTIFIERTYPE =  
+'UniversityID'  Will be required  – and 
+automatically populated  
+Gender  Int? 
+ Y Entry  GenderEnum  
+(Edit Table)  PERSON  GENDER  F, M or U (Issue?)  
+Date of Birth  DateTime  Y Entry  DOB PERSON  DATEOFBIRTH   
+Citizenship Status  Int? 
+ Y Entry Detail  Citizenship_  
+CountryID?  (Edit 
+Table)  PERSON  CITIZENSHIP  Country in IMS 
+Residency  Char?  Y   PERSON  RESIDENCY   
+Ethnicity  Char 50 
+ Y Entry Detail  Ethnicity  
+(Edit Table)  PERSONETHNICITY  PERSONETHNICITY  Can have multiple in IMS 
+Mapping (Ethnic group Code)  
+Photo  Image   Entry Detail  PhotoImage  ID card System:  
+PHOTO  CONTENT  Subscribe to ID card photo 
+message – from ID card 
+system  (not IMS) 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 28 of 39  
+ 
+3.5.2  Address  Details  
+Field 
+Description  Field 
+Type  Req UAM Record 
+Name  UAM Field 
+Name  IMS Record 
+Name  IMS Field 
+Name  Comments  
+Mailing Address  (AddressTypeID = ’Mailing’ )    
+Contact Name  Char 80  
+ Y Entry  
+Address  Contact Name  PERSONPHYSICAL  
+ADDRESS  CAREOF  
+ Where ADDRESSTYPE = 
+‘Mailing’  
+Street Address  Char 80  Y Entry  
+Address  Street  
+(Note: Street2 also)  PERSONPHYSICAL  
+ADDRESS  LINE1 & LINE2 & 
+LINE3 & LINE4   
+Suburb  Char 80   Entry  
+Address  Street2?  PERSONPHYSICAL  
+ADDRESS  SUBURB   
+City/Town  Char 60  Y Entry  
+Address   PERSONPHYSICAL  
+ADDRESS  CITY  
+Region  Char 60  
+ Y Entry  
+Address  StateProvince? 
+(Edit Table)  PERSONPHYSICAL  
+ADDRESS  COUNTY or STATE   
+Country  Int  Y Entry  
+Address  Country_ID  
+(Edit table)  PERSONPHYSICAL  
+ADDRESS  COUNTRY   
+Postal Code  Char 10  
+ Y Entry  
+Address  ZipPostcode  PERSONPHYSICAL  
+ADDRESS  POSTALCODE   
+Phone and Email         
+Telephone  
+Number  Char 25 
+ Y Entry  
+Address  Phone  PERSONPHONE  AREACODE||  
+PHONENUMBER  Where PHONETYPE = 
+‘Semester ’? Or ‘Other’? or 
+‘Home’  
+Preferred Flag?      PERSONPHONE  ORDERPREFER ENCE Where PHONETYPE = 
+‘Semester’? Or ‘Other’? or 
+‘Home’ and ORDERPREFERENCE 
+= 1 
+Mobile Phone  Char 25   Entry  
+Address  PhoneMobileCell  PERSONPHONE  AREACODE||  
+PHONENUMBER  Where PHONETYPE = ‘Cellular’  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 29 of 39 Preferred Flag?      PERSONPHONE  ORDERPREFERENCE  Where PHONETYPE = ‘Cellular’  
+ORDERPREFERENCE = 1  
+Email  Char 100   Entry  
+Address  Email  PERSONEMAIL  
+ADDRESS  EMAIL  Where EMAILYPE = ‘ Home ’? 
+*** Allow it to be editable?  
+ 
+Home  Address (AddressTypeID = ’Home’ )    
+Contact Name  Char 80  
+ Y Entry  
+Address  Contact Name  PERSONPHYSICAL  
+ADDRESS  CAREOF  
+ Where ADDRESSTYPE = ‘Home’  
+Street Address  Char 80  Y Entry  
+Address  Street  
+(Note: Street2 also)  PERSONPHYSICAL  
+ADDRESS  LINE1 & LINE2 & 
+LINE3 & LINE4   
+Suburb  Char 80  Y Entry  
+Address  Street2?  PERSONPHYSICAL  
+ADDRESS  SUBURB   
+City/Town  Char 60  Y Entry  
+Address   PERSONPHYSICAL  
+ADDRESS  CITY  
+Region  Char 60  
+ Y Entry  
+Address  StateProvince? 
+(Edit Table)  PERSONPHYSICAL  
+ADDRESS  COUNTY or STATE   
+Country  Int  N Entry  
+Address  Country_ID (Edit 
+table)  PERSONPHYSICAL  
+ADDRESS  COUNTRY   
+Postal Code  Char 10  
+ Y Entry  
+Address  ZipPostcode  PERSONPHYSICAL  
+ADDRESS  POSTALCODE   
+ 
+3.5.3  Emergency Contact  Address     
+Contact Name  Char 80  
+ Y Entry  
+Address Contact Name  PERSONEMERGENCY 
+CONTACT  CONTACTNAME   
+Emergency Contact 
+Relationship  Char 50  Y Entry  
+Address Relationship  PERSONEMERGENCY 
+CONTACT  RELATIONSHIP  Mapping required?  
+See IMS Values below  
+Street Address  Char 80  Y Entry  
+Address Street  PERSONEMERGENCY 
+CONTACT  CONTACTCAREOF||  
+CONTACTBUILDING  
+CONTACTSTREET  Note: each field has 50 
+characters!  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 30 of 39 Suburb  Char 80  N Entry  
+Address Street2?  PERSONEMERGENCY 
+CONTACT  CONTACTSUBURB   
+City/Town  Char 60  Y Entry  
+Address  PERSONEMERGENCY 
+CONTACT  CONTACTCITY   
+Region  Char 60  
+ Y Entry  
+Address StateProvince? 
+(Edit Table)  PERSONEMERGENCY 
+CONTACT  CONTACTCOUNTY or 
+CONTACTSTATE   
+Country  Int  
+ Y Entry  
+Address Country_ID  
+(Edit Table)  PERSONEMERGENCY 
+CONTACT  CONTACTCOUNTRY  
+  
+Postal Code  Char 10  
+ Y Entry  
+Address ZipPostcode  PERSONEMERGENCY 
+CONTACT  POSTALCODE   
+Telephone  
+Number  Char 25  
+ Y Entry  
+Address Phone  PERSONEMERGENCY 
+CONTACT  PHONEAREACODE||  
+PHONENUMBER  Where PHONETYPE = ???  
+(Home or Work)  
+Mobile Phone  Char N Entry  
+Address PhoneMobileCell  PERSONEMERGENCY 
+CONTACT  PHONEAREACODE||  
+PHONENUMBER  Where PHONETYPE = 
+‘Mobile’  
+ 
+Email  Char N Entry  
+Address Email  PERSONEMERGENCY 
+CONTACT  EMAIL???   
+ 
+3.5.4  School Details and NCEA Results   
+Field 
+Description  Field 
+Type  Req UAM Record 
+Name  UAM Field 
+Name  SAP Record 
+Name  SAP Field Name  Comments  
+NSN 
+  Y   SAD_NCEA_S_NZL  SCC_NSN   
+School Name      EXT_ORG_TBL  DESCR   
+Last Year of 
+School      SAD_NCEA_S_NZL  SAD_UEBS_YEAR   
+NCEA level      SAD_NCEA_STDNZL  SAD_NCEA_LEVEL   
+Subject      SAD_NCEA_STDNZL  TEST_COMPONENT   
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 31 of 39 Standard?      SAD_NCEA_STDNZL  SAD_NCEA_STD_CODE   
+Result?      SAD_NCEA_STDNZL  SAD_NCEA_RESULT   
+ 
+3.5.5  Affiliations     
+Field 
+Description  Field 
+Type  Req UAM Record 
+Name  UAM Field 
+Name  LDAP Record 
+Name  LDAP Field 
+Name  Comments  
+Student ID  
+     ? EMPLID   
+Affiliation ?     ? GROUP?  Affiliation values such as 
+APPLICANT, ALUMNI, 
+DOCTORATE, POSTRAG, 
+UNDERGARD  
+ 
+3.5.6  Scholarship Information   
+Field 
+Description  Field 
+Type  Req UAM Record 
+Name  UAM Field 
+Name  SAP Record 
+Name  SAP Field Name  Comments  
+Student ID  
+     RSH_AWDSTAT_ANZ  EMPLID   
+Year     RSH_AWDSTAT_ANZ  RSH_OFFER_YEAR   
+Status      RSH_AWDSTAT_ANZ  RSH_SCHOLAR_STATUS  e.g. Applied, Active, Offer etc  
+Description      RSH_SCH_DTL_ANZ  RSH_DESCRFORMAL  Description of Scholarship  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 32 of 39  
+3.5.7  Reports  
+Field 
+Description  Field Type  UAM Record Name  UAM Field Name  Comments  
+Entry ID  Int 
+ Entry  EntryID  7 character code (sent from IMS) 
+Legal Name  Char 40 Entry  NameFirst|| NameOther 
+||NameLast  Concatenate Name fields (40 characters each)  
+Resident Status  Char 50 Entry Detail  ResidentStatus   
+Resident Year  Char 50 EntryDetail  ResidentYear   
+Enrolment Term Char 50 EntryDetail  EnrollmentTerm   
+Enrolment Status  Char 50 EntryDetail  EnrollmentStatus   
+Residence   ???  Current Residence  
+Affiliations  Char 12     
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 33 of 39 3.5.8  Configuration Data  
+3.5.8.1  IMS Relationship Values:  
+Currently the Acco mmodation application has a free text field for the description of an 
+applicant’s relationship to their Emergency Contact. The IMS Emergency Contact is validated 
+against the following ‘relationship’ values;  
+ 
+Relationship  Description s 
+1. Aunt 
+2. Brother  
+3. Daughter  
+4. Employee  
+5. ExSpouse  
+6. Father  
+7. Father -in-Law 
+8. Flatmate  
+9. Friend  
+10. Grandchild  
+11. Grandfather  
+12. Grandmother  
+13. Guardian  
+14. Mother  
+15. Mother -in-Law 
+16. Neighbour  
+17. Nephew  
+18. Niece  
+19. Non-Qualified Adult  
+20. Other  
+21. Other Relative  
+22. Partner  
+23. Self 
+24. Sister  
+25. Son 
+26. Spouse  
+27. Uncle  
+ 
+3.5.8.2  Ethnicity  
+Below is a comparison of the Ethnicity values in the IMS and the current UAM 
+application. UAM will be required to bring their values in line with the IMS. 
+ 
+IMS Value  UAM Value  Comments  
+Australian  Australian   
+British  and Irish  British  UAM has these listed  separate ly 
+Cambodian  Cambodian   
+Chinese  Chinese   
+Cook Island Maori  Cook Island Maori   
+Dutch  Dutch   
+Fijian  Fijian   
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 34 of 39 Filipino  Filipino   
+German  German   
+Greek  Greek   
+Indian  Indian   
+ Irish See above  
+Italian  Italian   
+Japanese  Japanese   
+Korean  Korean   
+Latin American/Hispanic  Latin American/Hispanic   
+ Malaysian  Not in IMS 
+Middle Eastern  Middle Eastern   
+Niuean  Niuean   
+North American  North American   
+NZ European/Pakeha  NZ European/Pakeha   
+NZ Maori  NZ Maori   
+No Response   Not in UAM 
+Other   Not in UAM 
+Other African  Other African   
+Other Asian  Other Asian   
+Other European  Other European   
+Other Pacific Island  Other Pacific Island   
+Other South East Asian  Other South East Asian   
+Polish  Polish   
+African  South African/African  No South African group in IMS 
+ South African/European  No South African group in IMS 
+Samoan   No Samoan group in UAM 
+South Slav  South Slav   
+Sri Lankan  Sri Lankan   
+Tokelauan  Tokelauan   
+Tongan  Tongan   
+Vietnamese  Vietnamese   
+ 
+3.5.8.3  Citizenship  & Residency  
+In UAM there are currently only 4 Citizenship Groups;  
+1. NZ Citizen  
+2. Australia Citizen  
+3. Permanent Resident  
+4. Overseas  
+In the IMS Citizenship equates to the Country Code on an individual’s passport – currently 
+there are 255 country codes (per SAP Country table) . The residency will be derived from the 
+Citizenship (in the IMS), i.e. New Zealand and Australian citizens will be given residency of 
+NZ and Australia. All other persons will be required to disclose whether or not they are 
+permanent residents or if not, they will be deemed to be ‘Overseas’.  
+ 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 35 of 39 3.5.8.4  Address Region s 
+In UAM there are currently only 16 Regions available ag ainst the physical address. These 
+are; 
+1. Auckland  
+2. Bay of Plenty  
+3. Canterbury  
+4. Gisborne  
+5. Hawkes Bay  
+6. International  
+7. Manawatu Wanganui  
+8. Marlborough  
+9. Nelson  
+10. Northland  
+11. Otago  
+12. Southland  
+13. Taranaki  
+14. Waikato  
+15. Wellington  
+16. West Coast  
+In the IMS there is no Region validation. Instead, for NZ address there is in -built validation 
+as you enter the address. For some foreign address there is State or County validation 
+based on the country selected.  
+ 
+  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 36 of 39  
+3.6 Configuration Requirements  
+ 
+3.7 Non-Functional Requirements  
+ 
+3.7.1  Security  
+With the change to have users sign in to the UAM Application  using their IMS 
+credentials , the sign -on security within UAM will have to be re -written to accept the 
+IMS ID and passwords. It will be no less secure than it is currently and there should 
+be no need for any change to roles and security profiles within UAM. This will be 
+detailed as part of technical specif ication.  
+3.7.2  Performance  
+A change to master login information and personal and contact data within the IMS 
+adds extra complexity and with it, potential for performance degradation. Any web 
+service or messaging from the IMS to UAM should happen in near-real time, as it 
+does with similar interfaces between the IMS and the AfUE or IMS and SAP. The 
+users should not notice that they are in fact in another system and any transferring 
+between the two should be seamless.  
+3.7.3  Training  
+Training will be required for UAM staff in regards to how the IMS should be used by 
+Accommodation Applicants. There may be additional affiliation functionality within 
+UAM that staff need to be trained in also.  
+3.7.4  User Documentation  
+This specification will provide the necessary information for staff to understand any 
+new functionality and how the Application process will work once integrated with the 
+IMS. 
+3.7.5  On-going  support and maintenance  
+The UAM system is currently and will continue to be supported by SMS. The 
+Integration with the IMS will be supported by IT Service . Given the difference in some of the values stored in the IMS for Countries, 
+Citizenship and Ethnicity, it will be necessary to change the current edit table values in
+ UAM to be in alignment. Additionally, if the affiliation is to be brought into UAM 
+there may be some configuration required to store these. 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 37 of 39 3.7.6 Technical Approach – API’s and Web Services  
+The UAM system has a number of Application Programming Interfaces (API) available to 
+load data fr om external systems. UAM will subscribe to the existing IMS Person message2 
+using the University’s Enterprise Service Bus (ESB) to create a web service to pass and filter 
+the data coming from the IMS, which will then be processed by the relevant API.  
+ 
+3.8 Testing  
+ 
+3.8.1  Test Scenarios  
+Req #  Test Scenario  Expected Outcome  
+1 Add a new Accommodation Application 
+for a new user – not previously 
+registered with the University  Accommodation Application submitted 
+– UAM and IMS are linked using the 
+University ID  
+2 Modify an Accommodation Application for 
+a new Applicant  using IMS credentials to 
+log in  Can access Accommodation A pplication 
+using IMS login credentials  
+2 Add an Accommodation Application for a 
+user who has previo usly filed a n 
+application in the AfUE – and does not 
+have all the necessary personal and 
+contact details in the IMS Can create an Accommodation 
+Application and required fields show up 
+on the personal and contact details 
+pages in the UAM application.  
+2 Add an Accommodation Application for a 
+user who was a Friend of the university  
+and already has an University ID and 
+password  Can create an Accommodation 
+Application and required fields show up 
+on the personal and contact details 
+pages in th e UAM application.  
+2 Change some personal details for an 
+Applicant while completing step1 of the 
+UAM application  Personal detail changes can be made 
+from using the link to the IMS. Upon 
+save the user is returned to the UAM 
+Accommodation A pplication where the 
+changes are reflected on the personal 
+Details Page.  
+2 Change some contact details for an 
+Applicant while completing step2 of the 
+UAM application  Contact detail changes can be made 
+from using the link to the IMS. Upon 
+save the user is returned to the UAM 
+Accommodation A pplication where the 
+changes are reflected on the Contact  
+Details Page.  
+3 Change some personal details for an 
+Applicant directly in the IMS Personal detail changes are sent to 
+UAM and update the database.  
+3 Change some contact details for an 
+Applicant directly in the IMS Contact detail changes are sent to UAM 
+and update the database.  
+4 Change an applicant’s affiliations from 
+applicant to student  Personal detail chang es are sent to 
+UAM and update the database.  
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 38 of 39 4,5 Remove an accommodation applicant’s 
+‘applicant’ affiliation in SAP, i.e. change 
+their Programme Status  to ensure it is 
+NOT one of the following;  
+AD(Approved ) 
+AP(Pending ) 
+PM(Prematriculant ) 
+WT(Waitlisted ) 
+Then run the Affiliation Report  Personal detail changes are sent to 
+UAM and update the database. The 
+report runs successfully and shows the 
+applicant whose  status has changed.  
+4,6 Drop a student (who is currently in a 
+University Residence) from their 
+programme of  study. Then run the 
+Affiliation Report   Personal detail changes are sent to 
+UAM and update the database. The 
+report runs successfully and shows the 
+applicant who ha s been dropped.  
+11 Create an application for a NCEA student  The Education page of the application 
+will not ask for secondary school 
+details  
+11 Create an application for a CIE student  The secondary school details and 
+results questions on the Education 
+page of the application will be 
+displayed  
+10 Upload a photo for an accommodation 
+applicant, in the ID card system  A photo will be sent to the UAM 
+database for an existing applicant  
+12 Enter a scholarship application in SAP for 
+a person who has an active 
+accommodation application.  Scholarship information will be passed 
+from SAP into the UAM database.  
+ 
+ 
+UAM IMS Requirements Specification  | Version : 4.0 | Status : Draft   Page 39 of 39 4 Approval and Change Control  
+ 
+Version #  Description of Change  Author  
+1.0 Initial draft   
+2.0 Update following meetings with Accommodation  staff  
+3.0 Update following meeting with Development and 
+Solutions Architects staff   
+4.0 Update following conversations with the Integration 
+Architecture office   
+Review  
+Date  Name and Position  
+  
+  
+  
+  
+  
+  
+  
+ Approval  
+Date  Name and Position  Signed  
+   
+ 

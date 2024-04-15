@@ -1,0 +1,150 @@
+D	Data Warehouse Requirements – Version 2.0 Copernicus Data Access Specifications of the space-based Earth Observation needs for the period 2014-2020
+3	NOTIONS AND CONVENTIONS
+3.2	Usage types (services)
+3.2.1	DISCOVERY Service
+3.2.2	VIEW Service
+3.2.3	DOWNLOAD Service
+5	DATASET REQUIREMENTS
+5.1	Overall dataset requirements
+5.1.1.1	Use of Sentinel data
+5.1.1.2 Data archiving and access to archives
+5.2	Overall requirements for CORE datasets
+5.2.1.1	Sensor transitions
+5.2.1.2	Consistency
+5.2.1.3	Formats, INSPIRE metadata and File naming
+5.3	Dataset requirements for Copernicus Land service over Europe
+5.3.1.1 Preserving spectral information
+5.3.1.2 Standard Formats
+5.3.1.3 Reference Year and Repetitiveness
+5.3.1.4 Harmonised Cloud Cover delineation
+5.3.1.5 Unique and single workflow monitoring tool
+5.3.1.6 Success criteria and remuneration
+5.3.2	Optical HR Pan Europe coverage (HR_IMAGE_2015)
+5.3.2.1	Sensor acquisition characteristics
+5.3.2.2	Areas of Interest (AOI)
+5.3.2.3	Tasking and Acquisition – Objectives
+5.3.2.4	Acquisition zones
+5.3.2.5	Acquisition windows
+5.3.2.6	Acquisition strategy
+5.3.2.7	Cloud Cover and Haze
+5.3.2.8	Illumination/Radiometry
+5.3.2.9	Selection and rejection of scenes
+5.3.2.10	Processing Levels
+5.3.2.11	Radiometric and atmospheric correction
+5.3.2.12	Ortho.rectification
+5.3.2.13	Data Products
+5.3.2.14	Delivery
+5.3.2.15	Licensing (for datasets with restrictive licensing conditions)
+5.3.3	Optical VHR multispectral and panchromatic coverage over Europe (VHR_IMAGE_2015)
+5.3.3.1	Sensor acquisition characteristics
+5.3.3.2	Areas of Interest (AOI)
+5.3.3.3	Tasking and Acquisition
+5.3.3.4	Acquisition windows
+5.3.3.5	Acquisition Strategy
+5.3.3.6	Cloud Cover and Haze
+5.3.3.7	Illumination/Radiometry
+5.3.3.8	Selection and rejection of scenes
+5.3.3.9	Processing levels
+5.3.3.10	Radiometric and atmospheric correction
+5.3.3.11	Ortho.rectification
+5.3.3.12	Data Products
+5.3.3.13	Delivery
+5.3.3.14	Licensing
+5.3.4	European optical MR1 composites (MR_IMAGE_2015)
+5.3.4.1	Sensor acquisition characteristics
+5.3.4.2	Areas of Interest (AOI)
+5.3.4.3	Tasking and Acquisition
+5.3.4.4	Acquisition windows
+5.3.4.5	Cloud Cover and Haze
+5.3.4.6	Illumination/Radiometry
+5.3.4.7	Selection and rejection of scenes
+5.3.4.8	Processing Levels
+5.3.4.9	Radiometric and atmospheric correction
+5.3.4.10	Ortho.rectification
+5.3.4.11	Products
+5.3.4.12	Delivery
+5.3.4.13	Licensing
+5.3.4.14	Miscellaneous
+5.4	Dataset Requirements for Copernicus Global land
+5.4.1.1	Sensor acquisition characteristics
+5.4.1.2	Areas of Interest (AOI)
+5.4.1.3	Tasking and Acquisition
+5.4.1.4	Processing Levels
+5.4.1.5	Data Products
+5.4.1.6	Delivery
+5.4.1.7	Licensing (for datasets with restrictive licensing conditions)
+5.4.2	Optical HR2 worldwide coverage (HR2_OPTICAL_GLOBAL)
+5.4.2.1	Sensor acquisition characteristics
+5.4.2.2	Areas of Interest (AOI)
+5.4.2.3	Tasking and Acquisition
+5.4.2.4	Processing Levels
+5.4.2.5	Data Products
+5.4.2.6	Delivery
+5.4.3	Optical MR2 worldwide coverage (MR_OPTICAL_GLOBAL)
+5.4.3.2	Sensor acquisition characteristics
+5.4.3.3	Areas of Interest (AOI)
+5.4.3.4	Tasking and Acquisition
+5.4.3.5	Processing Levels
+5.4.3.6	Data Products
+5.4.3.7	Delivery
+5.4.3.8	Licensing (for datasets with restrictive licensing conditions)
+5.4.4	Optical LR worldwide coverage (LR_OPTICAL_GLOBAL)
+5.4.4.2	Sensor acquisition characteristics
+5.4.4.3	Areas of Interest (AOI)
+5.4.4.4	Tasking and Acquisition
+5.4.4.5	Processing Levels
+5.4.4.6	Data Products
+5.4.4.7	Delivery
+5.4.4.8	Licensing (for datasets with restrictive licensing conditions)
+5.4.5	SAR MR1 Worldwide coverage (MR1_SAR_GLOBAL)
+5.4.5.1	Sensor acquisition characteristics
+5.4.5.2	Areas of Interest (AOI)
+5.4.5.3	Tasking and Acquisition
+5.4.5.4	Processing Levels
+5.4.5.5	Data Products
+5.4.5.6	Delivery
+5.4.5.7	Licensing (for datasets with restrictive licensing conditions)
+5.4.6	SAR LR Worldwide coverage (LR_SAR_GLOBAL)
+5.4.6.1	Sensor acquisition characteristics
+5.4.6.2	Areas of Interest (AOI)
+5.4.6.3	Tasking and Acquisition
+5.4.6.4	Processing Levels
+5.4.6.5	Data Products
+5.4.6.6	Delivery
+5.4.6.7	Licensing (for datasets with restrictive licensing conditions)
+5.4.7	SAR Altimetry MR2 Worldwide coverage (MR2_ALTIMETRY)
+5.4.7.1	Sensor acquisition characteristics
+5.4.7.2	Areas of Interest (AOI)
+5.4.7.3	Tasking and Acquisition
+5.4.7.4	Processing Levels
+5.4.7.5	Data Products
+5.4.7.6	Delivery
+5.5	Fixed / CORE Dataset requirements for marine, atmosphere, climate change applications
+5.5.1	Sea Ice Monitoring MR1 SAR (MR1_SAR_SEA_ICE)
+5.5.1.1	Sensor acquisition characteristics
+5.5.1.2	Areas of Interest (AOI)
+5.5.1.3	Tasking and Acquisition
+5.5.1.4	Processing Levels
+5.5.1.5	Data Products
+5.5.1.6	Delivery
+5.5.1.7	Licensing (for datasets with restrictive licensing conditions)
+5.5.2	Global/Regional Systematic Ocean Colour data (CORE_012)
+5.5.3	Systematic Global and Regional sea surface temperature data (CORE_013)
+5.5.4	Systematic Global and Regional Altimeter / Sea Level data (CORE_014)
+5.5.5	Data for aerosol monitoring and forecasting (CORE_017)
+5.5.6	Data for sulphur dioxide (SO2) atmospheric composition monitoring and forecasting (CORE_018)
+5.5.7	Data for formaldehyde (HCHO) atmospheric composition monitoring and forecasting (CORE_019)
+5.5.8	Data for Ozone (O3) atmospheric composition monitoring and forecasting (CORE_020)
+5.5.9	Data for Carbon Monoxide (CO) atmospheric composition monitoring and forecasting (CORE_021)
+5.5.10	Data for Carbon Dioxide (CO2) atmospheric composition monitoring and forecasting (CORE_022)
+5.5.11	Data for Methane (CH4) atmospheric composition monitoring and forecasting (CORE_023)
+5.5.12	Data for Nitrogen Dioxide (NO2) atmospheric composition monitoring and forecasting (CORE_024)
+5.6	Archived CORE Datasets
+5.7	Flexible / ADDITIONAL datasets requirements
+5.7.1	Overall requirements are:
+5.7.2	Archive rush retrieval
+5.7.3	New acquisitions in rush mode
+5.7.4	Archive standard retrieval
+5.7.5	New acquisitions in standard mode
+5.7.6	Quota management
+5.8	Already acquired ADDITIONAL datasets

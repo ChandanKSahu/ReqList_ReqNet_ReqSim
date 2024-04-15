@@ -1,0 +1,642 @@
+
+
+
+
+Software Requirements Specification
+
+for
+Virtual-ED
+
+Version 1.0 approved
+
+
+Prepared by: 
+Vickii Bacchetta, Udesh DeSilva, Celestino Francisco, 
+Danielle L. Green, Jose Saafigueroa, Slavica Pepovska 
+
+
+NJIT
+
+
+October 15, 2008
+ 
+ 
+Table of Contents
+1.	Introduction	4
+1.1.	Purpose	4
+1.2.	Document Conventions	4
+1.3.	Project Scope	5
+1.4.	References	5
+2.	Overall Description	6
+2.1.	Product Perspective	6
+2.2.	Product Features	6
+2.3.	User Classes and Characteristics	7
+2.4.	Operating Environment	7
+2.5.	Design and Implementation Constraints	8
+2.6.	User Documentation	8
+2.7.	Assumptions and Dependencies	9
+3.	System Features	9
+3.1.	Instant Messaging	9
+3.2.	Streaming Audio and Video	11
+3.3.	Customizable User Profile	13
+3.4.	Virtual-Space	15
+3.5.	Virtual-Space V2	17
+3.6.	Test Admin – Virtual-Exam	19
+3.7.	Test Admin - Virtual-Exam V2	21
+3.8.	Clean GUI	22
+3.9.	Clean GUI V2	24
+3.10.	Enhanced file sharing/transfer and document collaboration	25
+3.11.	Class lecture video/audio available as podcasts	27
+3.12.	Application sharing for whiteboards	28
+4.	External Interface Requirements	31
+4.1.	User Interfaces	31
+4.2.	Hardware Interfaces	34
+4.3.	Software Interfaces	34
+4.4.	Communications Interfaces	34
+5.	Other Nonfunctional Requirements	35
+5.1.	Performance Requirements	35
+5.2.	Safety Requirements	35
+5.3.	Security Requirements	36
+5.4.	Software Quality Attributes	36
+6.	Other Requirements	38
+7.	Appendix A: Glossary	39
+8.	Appendix B: Analysis Models	40
+
+ 
+
+Revision History
+Name	Date	Reason For Changes	Version
+Vickii Bacchetta
+Udesh DeSilva
+Celestino Francisco
+Danielle L. Green
+Jose Saafigueroa
+Slavica Pepovska	10/15/08	Creation	1.0
+
+
+ 
+1.	Introduction
+1.1.	Purpose 
+This highly detailed Software Requirements Specification document explains and describes all of the agreed upon requirements that will be implemented for the VIRTUAL-EDU system, designed for NJIT. The document will provide the underlining structure of VIRTUAL-EDU, in a manner that both the Developers and the Customer will have a clear understanding of its functions, interface, design and constraints. Once the documents are approved by NJIT, it will also serve as a contract between the developers and NJIT.   
+This document is intended to be read and utilized by the development team of VIRTUAL-EDU, including testers, programmers and project managers, the administrators of NJIT and any stockholder interested in seeing what NJIT is bringing forth to the university.
+1.2.	Document Conventions
+The outline of this document will follow the table of contents found on the second page of this document.
+The outline is split into 6 sections.
+Section 1 - Description of the purpose of the document and what it will contain.
+Section 2 - Overall description of the project
+Section 3 - Highly detailed description of the system functional requirements
+Section 4 - External interface requirements that affect the system
+Section 5 - Insight on other non-functional requirements
+Section 6 - Glossary and DFD model diagrams of entire system
+Each section is written with the intent that different users will read different sections.  The first two sections use universal language; while the next four sections use technical language.
+The requirements will be explained by their level of importance.  Meaningful requirements will be describe first and less meaningful requirements will be describe last.  Every requirement will be mentioned and explained with the same high level of detail. 
+
+The majority of the models showcased in this document will consist of data-flow diagram (DFD’s) 
+1.3.	Project Scope
+The project being developed for NJIT goes by the name of VIRTUAL-EDU. The requirements specified on this S.R.S. document coincide with the university’s  need for a new distance learning system which will enable professors to communicate more effectively with students via a Secure Application Platform that provides at the very least the following features (email, group chat, bulletin board, and audio/visual tools).  The proposed system will incorporate robust features such as audio and video capabilities, in which students within the same group or university can communicate via a portal that provides both visual & audio functionality, file hosting and file management, user profiles with pictures, better group collaboration tools, and online testing capabilities.
+The document will satisfy our project scope by delivering well documented specifications, along with highly detailed models. Furthermore, it will contain comprehensive explanations of the functionality and constraints of each of the following requirements.
+	Audio and video streaming capability/ podcasting (live and on-demand)
+	File hosting and file management tools
+	User profiles with pictures including integration with other campus resources
+	Chat and group collaboration tools (Instant messaging)
+	Online testing tools with instant grading
+1.4.	References
+	IEEE Std. 830-1984 (1993, 1998)
+	IEEE Guide to Requirements Specification (an annotated IEEE Std 830-1984) 
+	IEEE Std.830-1984 - Example "SRS: The AUTOTELLER Automatic Teller System" 
+	www.moodle.org
+	www.webboard.njit.edu
+	www.blackboard.com
+	www.oovoo.com//features/ 
+2.	Overall Description
+2.1.	Product Perspective
+Virtual-EDU consists of an online website that allows users to create a classroom like environment with the features that it contains. Once registered to the system, a user can create a profile sharing his or her information with the rest of the enrolled users. Users will be able to find commonalities with each other through the user profile. Virtual-EDU also gives users the ability to store data and/or important materials in a secure network location for future retrieval or present usage. This particular data as well as other files may be shared or worked on using Virtual-EDU extensive tools for file sharing and document collaboration. Users can work together on a single document in real time or send their work to other users via secure file sharing methods and protocols. If further communication is need between users, Virtual-EDU has features such as instant messaging, where users can hold single or group conversations via a secure real-time communication based on typed text. However, if more efficient means of communication are need, users have the ability to hold single or group video/audio conferences, whereby the users will be able to see other users streamed live in real-time.
+The top level diagram below shows all of the user features that will be implemented for the system.
+ 
+2.2.	Product Features
+	Streaming audio and video (both live and on-demand) will allow users to interact with faculty and fellow classmates over a streaming video and audio, one-to-one or one-to-many connection. Also, learning materials can be delivered through audio and video formats.
+	The instant messaging feature will allow users to interact with faculty and fellow classmates via text-based format, one-to-one or one-to-many connection.
+	File sharing and document collaboration tools allow users to efficiently share and develop documents and reports within a group.
+	User profiles containing contact information, pictures, and other related information on a student personal page.  This page will only be accessible to students and faculty enrolled in the same class. Only the owner of the profile may make changes to it.
+	Users will have the ability to manage a private temporary hosting space. Tools such as file uploading, directory creator, move, delete and rename will be accessible.
+2.3.	User Classes and Characteristics
+System Administrators: User class with domain system privileges which allows them to maintain the entire system, manage enrollment and create virtual classes. Users in this class have complete control and knowledge of the entire system.
+Administrative End User: User class with domain class privileges, which allows them to maintain and support the class they are enrolled in, along with the other enrolled users. Users in this class have zero knowledge of the back end of the system; however, they know the front end of the application. 
+Limited End User: User class with limited class privileges, which allows them to operate the front end of the system with limited read only permissions. Users in this class will only be able to make modifications to their profile section.
+2.4.	Operating Environment
+System Requirements - Hardware:
+	Platform: at least Microsoft Server 2003
+	CPU: at least Dual Core 3.6 MHz
+	Space:  Minimum of 2 gigabytes
+	Ram: Minimum of 4 gigabytes
+System Requirements - Software
+	Web Service: Apache server
+	Other services: IIS 6.0 or later, .Net Framework 2.0 or later, video and audio streaming.
+User Requirements – Hardware:
+	CPU: at least 500 MHz
+	Ram: at least 512 MB
+	Recommended Peripherals:  microphones, web camera, video and audio cards.
+User Requirements – Software
+	Browser:  Microsoft’s Internet Explorer or Apple’s Safari, or Mozilla’s Firefox.
+	Services: SSH client, FTP client, VPN client
+2.5.	Design and Implementation Constraints
+	The university will be in session during the development of the application. Since current system downtime needs to be maintained at low levels; system rollouts and system validation need to be scheduled during low usage periods. 
+	The current NJIT user database system required to run this application may be outdated or in need of maintenance. Therefore the current system may only house 250 concurrent users. 
+	Not allow languages will be represented for online system documentation.
+	Only browsers from Microsoft, Apple and Mozilla will have functional access to the application.
+2.6.	User Documentation
+Both the enrolled students and faculty will be provided with printable manuals through email and will have access to on-line tutorials.  The system will also provide an on-line help feature, providing the users with easy to read “how-to” instructions. NJIT’s administration will be given an in-depth manual of the entire system, so that they may support the system after development is complete.
+2.7.	Assumptions and Dependencies
+2.7.1	Current systems and databases will still be available for use and archive.
+2.7.2	Database will be modified to meet VIRTUAL-EDU‘s requirements. New entities and relationships for the user will need to be added.
+2.7.3	Staff is willing to accept, learn, and utilize the new system.
+2.7.4	Users should have an adequate computer, network connection, and webcam with microphone.
+2.7.5	Users will have access to common programs, such as media players for streaming.
+3.	System Features
+3.1.	Instant Messaging
+3.1.1	Description and Priority
+Instant Messaging is the feature allowing students and professors to interact with each other and talk in real time. Instead of leaving each other messages on boards and going to chat rooms where screens are not refreshed in less than 60 sec, students will be able to see who is online and talk to them immediately. If a professor is marked online, students will be able to ask questions and receive answers from the professor almost instantaneously. This feature is of High Priority and students will be able to benefit from this feature because it will give them the feeling of a real classroom, something that most students are complaining lacks when taking an online class.  
+3.1.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the messaging software tool – Instant-Edu
+Response: New pop up window shows up with list of contacts. Online users are marked green and offline users are marked red.
+--------------------------------------------------------------------------------------------------
+User action: Double click on the name of an online user
+Response: New window pops up, where real time conversion can be initiated between parties
+--------------------------------------------------------------------------------------------------
+User action: Click on the smiley button in the window
+Response: A list is shown containing all available emotions to be used in conversation
+--------------------------------------------------------------------------------------------------
+User action: Click on the plus button in the window
+Response: A list shows up that contains all other available online users that can be invited to join the conversation
+--------------------------------------------------------------------------------------------------
+User action: Double click on a name in that window
+Response: The new user joined the conversation and it’s now a conference between multiple people
+--------------------------------------------------------------------------------------------------
+User action: Click on the file button in the window
+Response: A new window pops up where the user will be able to browse and look for a file in his system that he wants to send to the other party
+--------------------------------------------------------------------------------------------------
+User action: Select the file
+Response: The selected file is marked blue
+--------------------------------------------------------------------------------------------------
+User action: Click on the send file button
+Response: The file begins transmitting to the other party
+3.1.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+	REQ-5 - Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.2.	Streaming Audio and Video
+3.2.1	Description and Priority
+Streaming Audio and Video allows students and professor to make audio and/or video calls between each other. The professor will have the ability to hold a video lecture for the whole class or have one on one meeting with the students. This is another feature that will give the students the feeling of a real classroom. Students will have the ability of attending an online class and be able to see the professor and colleagues and interact with each other. Professor will be able to ask questions to students and expect an answer immediately. Professor will be able to post the video lecture online and make it available for a later download. This feature is of Medium Priority. Despite the lack of audio and video students will still be able to interact in real time with the first feature – instant messaging.
+3.2.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the messaging software tool – Instant-Edu
+Response: New pop up window shows up with list of contacts. Online users are marked green and offline users are marked red.
+--------------------------------------------------------------------------------------------------
+User action: Double click on the name of an online user
+Response: New window pops up, where real time conversion can be initiated between parties
+--------------------------------------------------------------------------------------------------
+User action: Double click on the Audio Button
+Response: The software calls the other user’s computer and awaits for response
+--------------------------------------------------------------------------------------------------
+User action: The user on the other side clicks on accept button
+Response: The connection is established and the conversation between two parties begins.
+--------------------------------------------------------------------------------------------------
+User action: The user on the other side clicks on deny button
+Response: The connection is not established and the user that initiated the conversation will receive a message the other user is busy.
+--------------------------------------------------------------------------------------------------
+User action: Double click on Video Button
+Response: The software calls the other user’s computer and awaits for response.
+--------------------------------------------------------------------------------------------------
+User action: The user on the other side clicks on accept button
+Response: The connection is established and the video transmission along with audio transmission begins between two parties
+--------------------------------------------------------------------------------------------------
+User action: Click on the hang up button
+Response: The conversation between two users ends.
+--------------------------------------------------------------------------------------------------
+User action: Click on the host a conference button
+Response: New window pops up. User will be able to select online users and invite them to join the conference.
+--------------------------------------------------------------------------------------------------
+User action: Click on the accept button
+Response: User has become part of the video conference and be able to follow an online audio/video lecture from the professor.
+3.2.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+	REQ-5 - Users must be connected on a high speed internet (DSL, Cable)
+	REQ-6 - Users must have their computers equipped with microphone and web camera.
+3.3.	Customizable User Profile
+3.3.1	Description and Priority
+Customizable User Profile will be feature that will allow users to customize their profile to their taste. The user will be able to select/change their password, update information about themselves (phone number, address). Users will be able to change the background colors and menu layout on their profile page. Users will have couple of different options to use if they wanted to, for example leave a video and introduce themselves. Or put a link to a favorite book; give some more info about them. Users will also be able to choose their font as well as font color for their profile page. This feature will be of Medium priority. It will be up to the user to choose, and this will in no way impact the way the other user is setting up preferences. In other words, everyone’s profile page can look different for each student. 
+3.3.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the setting up preferences button 
+Response: New menu shows up with all the available features.
+--------------------------------------------------------------------------------------------------
+User action: Click on the Contact button
+Response: New text area will show up where users can put their contact information, phone numbers, address etc.
+--------------------------------------------------------------------------------------------------
+User action: Click on the button background color
+Response: A new menu shows up that shows all the available colors that the user can choose for background
+--------------------------------------------------------------------------------------------------
+User action: Click on the video button 
+Response: New pop up window shows up that will give them opportunity to start video recording and introduce themselves. The video will become part of their profile page. It will be easier for students to associate with each other when they actually meet the person on video. It will bring better team performance.
+--------------------------------------------------------------------------------------------------
+User action: Click on the info button
+Response: Text area shows up where users can put some more info about them, their strengths, and weaknesses, put favorite links etc.
+--------------------------------------------------------------------------------------------------
+User action: Click on the font button
+Response: New menu shows up that will give the choices for different fonts that can be used to display the info on their profile page
+--------------------------------------------------------------------------------------------------
+User action: Click on font size button
+Response: A new menu shows up that will have all different font sizes that the user can choose.
+--------------------------------------------------------------------------------------------------
+User action: Click on layout menu
+Response: A menu with different layout choices will show up.
+--------------------------------------------------------------------------------------------------
+User action: Click on password
+Response: A new window pops up that will give the user the ability to reset/change the password.
+3.3.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must have web cam and microphone if they want to be able to create an introducing video of themselves on their profile page
+3.4.	Virtual-Space
+3.4.1	Description and Priority
+Virtual-Space consists of folder space set aside for each student to upload files to.  An uploading feature would be the only component available in the first release, which would aid in handing in assignments.  This feature is of medium priority as email can still be used as a means for this type of document sharing.  The cost of implementing this feature would include insuring each class section a space on an FTP server.
+3.4.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the File Hosting software tool – Virtual-Space
+Response: Window displays file tree diagram of user’s uploaded files.
+--------------------------------------------------------------------------------------------------
+User action: A user clicks the Browse button
+Response:  Produce a window for the user to browse their machine to select a file.  Once file is selected, browse window would close and the path to the selected file would show in the text box. 
+User action: A user clicks the Upload button
+Response:  Should upload the selected file and produce a window letting the user know if the upload was successful.  If no file is selected, a window should let the user know they need to use the Browse button to select a file.  If the upload will cause the account to go over disk space quota, the file should be still be allowed and an email sent to the administrator and professor letting them know of the overage.  The file tree diagram should update with the new file name added to the list.
+3.4.3	Functional Requirements
+	Virtual-Space Req 1:  FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+a.	For the first release, each class needs a quota space of at least 1GB per student in that class.  If the upload will cause the account to go over disk space quota, the file should be still be allowed to upload and an email sent to the administrator and professor.  
+b.	Files causing the quota to be exceeded should not be allowed to upload.  
+c.	The students overall login should allow them access to the appropriate folder, and their account should only have Write privileges.  
+d.	The professor’s username should allow them access to the appropriate folder and have Read, Write, and Delete privileges.  
+e.	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+	Virtual-Space Req 2:  Users need Windows XP, Vista, or Mac OS 
+	Virtual-Space Req 3:  Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+	Virtual-Space Req 4:  Users must enable pop-up windows.
+3.5.	Virtual-Space V2
+3.5.1	Description and Priority
+In the second release of Virtual-ED’s Virtual-Space features would be added to include full file management for any uploaded files.  In this release, FTP space would be designated by student rather than by class section.  Disk space quotas would need to be implemented to preserve resources.  Each student would be able to upload files to share with team members or to turn in assignments.  Arranging by folders and deleting files would also be newly added capabilities.  
+This would incur a higher cost to accommodate more disk space, and would also require an administrator to spend more time managing the FTP accounts.  The first release version of this feature was of medium priority, so adding more capabilities to it would be of low priority as email is still a highly usable alternative.
+3.5.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the File Hosting software tool – Virtual-Space
+Response: Window displays file tree diagram of user’s files and the shared files of the classes’ other users.  Displays buttons to upload new files and share or download existing files.
+--------------------------------------------------------------------------------------------------
+User action: A user clicks the Browse button
+Response:  Produce a window for the user to browse their machine to select a file.  Once file is selected, browse window would close and the path to the selected file would show in the text box. 
+--------------------------------------------------------------------------------------------------
+User action: A user clicks the Upload button
+Response:  The program should provide a window for the user to select a folder in their file tree for the file to be stored.  Once selected, the program should upload the selected file and produce a window letting the user know if the upload was successful and the file name should be added in the appropriate folder of the file tree diagram.  If no file is selected, a window should let the user know they need to use the Browse button to select a file. If the addition of the new file would put the user about their disk space quota, a window should let the user know they cannot upload it without first deleting other files. 
+--------------------------------------------------------------------------------------------------
+User action: On file tree, a user selects a file name and clicks Delete button or presses Delete button on their keyboard.
+Response:  Window should ask user to verify the file deletion, if yes, then the file should be deleted from the server and the name removed from file tree diagram.
+--------------------------------------------------------------------------------------------------
+User action: On file tree, a user selects a file name and drags it to another folder
+Response:  The file should be moved to the new destination folder and removed from the previous folder. The file tree diagram should be updated to reflect the new structure.  
+--------------------------------------------------------------------------------------------------
+User action: On file tree, a user selects a parent folder and then clicks New Folder
+Response:  A window should ask the user to enter a name for the new folder.  Once entered and the user clicks OK, the new file should be created on the server and the file tree diagram should be updated to include the new folder.  
+--------------------------------------------------------------------------------------------------
+User action: On file tree, a user selects a file name and clicks Download button
+Response:  A window opens asking the user to select a folder on the computer in which to download the file.  Once selected, a copy of the file is placed in that folder on the user’s computer. 
+--------------------------------------------------------------------------------------------------
+User action: On file tree, a user selects a file name and clicks Open button
+Response:  The typical operating system prompt asks the user to Save or Open. If Save is selected, a window opens asking the user to select a folder on the computer in which to download the file.  If Open is selected, the document will open using the appropriate program or it will prompt the user to select a program to open the file with.  
+3.5.3	Functional Requirements
+	Virtual-Space Req 1:  FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+a.	For the first release, each student needs a quota space of 2GB.  Files causing the quota to be exceeded should not be allowed to upload.  
+b.	The students overall login should allow them access to the appropriate folder, and their account should only have Read, Write, and Delete privileges
+c.	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+	Virtual-Space Req 2:  Users need Windows XP, Vista, or Mac OSX
+	Virtual-Space Req 3:  Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+	Virtual-Space Req 4:  Users must enable pop-up windows.
+3.6.	Test Admin – Virtual-Exam
+3.6.1	Description and Priority
+Students who learn online still need to take quizzes and exams.  Providing them a real-time way to complete an exam is an excellent way to give it a more classroom-like feel.  Online exams can combine multiple choice, true/false, short answer, and essay questions, just like in a paper exam.  Using Virtual-Exam, students can download an Excel spreadsheet or editable PDF file and fill in their answers.  Mac users will use the Microsoft Office version for their operating system.  Then using the file management feature, they can upload the completed test within the allotted time period.
+3.6.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Testing software tool – Virtual-Exam
+Response: Window displays any untaken tests posted by their professors as links the user can click on to open the test in a new window.  For tests that have already been taken, the name and class are listed along with a score/grade.
+--------------------------------------------------------------------------------------------------
+User action: Click on an untaken test
+Response: Clicking on an untaken test will prompt the student to be sure they want to take the test.  If student selects Yes, a window will display prompting the user to download the test file.  Once download is complete, a timer will start for the amount of time allotted by the professor.  If the student selects No, they will be taken back to the home screen for Virtual-Exam.
+--------------------------------------------------------------------------------------------------
+User action: Click on an Upload Test
+Response: This button will show for the duration of the test, ensuring that the student can only use the time allotted by the professor.  Clicking this button will produce a browse window where the student can select the test file and then upload it to the professor’s FTP folder.  
+3.6.3	Functional Requirements
+	Virtual-Exam Req 1:  FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+a.	For the first release, each class needs a private folder with Write permissions only for student logins.
+b.	The professor’s username should allow them access to the class exam folder and have Read, Write, and Delete privileges. 
+c.	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+d.	Students need Excel installed and/or a PDF reader.  Professors need Excel and a PDF creator.
+	Virtual-Exam Req 2:  Users need Windows XP, Vista, or Mac OSX
+	Virtual-Exam Req 3:  Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+	Virtual-Exam Req 4:  Users must enable pop-up windows.
+	Virtual-Exam Req 5:  Users need Microsoft Office or the related Mac program set.
+3.7.	Test Admin - Virtual-Exam V2
+3.7.1	Description and Priority
+Students who learn online still need to take quizzes and exams.  Providing them a real-time way to complete an exam is an excellent way to give it a more classroom-like feel.  Online exams can combine multiple choice, true/false, short answer, and essay questions, just like in a paper exam.  Using this version of Virtual-Exam, students can download a file from any of the programs within Microsoft Office.  Mac users will use the Microsoft Office version for their operating system.  Then using the file management feature, they can upload the completed test within the allotted time period.
+3.7.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Testing software tool – Virtual-Exam
+Response: Window displays any untaken tests posted by their professors as links the user can click on to open the test in a new window.  For tests that have already been taken, the name and class are listed along with a score/grade.
+--------------------------------------------------------------------------------------------------
+User action: Click on an untaken test
+Response: Clicking on an untaken test will prompt the student to be sure they want to take the test.  If student selects Yes, a window will display prompting the user to download the test file.  Once download is complete, a timer will start for the amount of time allotted by the professor.  If the student selects No, they will be taken back to the home screen for Virtual-Exam.
+--------------------------------------------------------------------------------------------------
+User action: Click on an Upload Test
+Response: This button will show for the duration of the test, ensuring that the student can only use the time allotted by the professor.  Clicking this button will produce a browse window where the student can select the test file and then upload it to the professor’s FTP folder.  
+3.7.3	Functional Requirements
+Virtual-Exam Req 1: FTP management software on the server setup with quota space, user authentication, and appropriate user rights.
+a.	For the first release, each class needs a private folder with Write permissions only for student logins.
+b.	The professor’s username should allow them access to the class exam folder and have Read, Write, and Delete privileges. 
+c.	Firewall ports may need to be unblocked on both sides to accommodate file transfers.
+d.	Students need Excel installed and/or a PDF reader.  Professors need Excel and a PDF creator.
+	Virtual-Exam Req 2:  Users need Windows XP, Vista, or Mac OSX
+	Virtual-Exam Req 3:  Users need Internet Explorer, Mozilla Firefox, or Safari browser.
+	Virtual-Exam Req 4:  Users must enable pop-up windows.
+	Virtual-Exam Req 5:  Users need Microsoft Office or the related Mac program set.
+3.8.	Clean GUI
+3.8.1	Description and Priority
+This feature that will allow users to customize the online learning classroom to their taste. The user will be able to select background colors and toolbars that are viewed. Users will also be able to choose their font as well as font color. This feature will be of Medium priority. Giving the users the opportunity to change font’s size will give them a great benefit. Some like bigger font that is easier to read, some like to use the smaller font giving them the opportunity to show more features on the screen without having to scroll up and down. It will be up to the user to choose, and this will in no way impact the way the other user is setting up preferences. In other words, everyone’s classroom can look different for each student but still have the same features and functionalities. 
+3.8.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Preferences button 
+Response: New menu shows up with all the available features.
+--------------------------------------------------------------------------------------------------
+User action: Click on the Background Color menu within Preferences menu
+Response: A new menu shows up that shows all the available colors that the user can choose for background
+--------------------------------------------------------------------------------------------------
+User action: Click on the Font menu within Preferences menu
+Response: New menu shows up that will give the choice for the font
+--------------------------------------------------------------------------------------------------
+User action: Click on Font Size menu within Preferences menu
+Response: A new menu shows up that have all different font sizes that the user can choose.
+--------------------------------------------------------------------------------------------------
+User action: Click on Toolbar menu within Preferences menu
+Response: A menu with available toolbars will show.  Selecting a toolbar toggles if it shows or not.  Check marks should show next to toolbars that are currently selected for view.
+3.8.3	Functional Requirements
+	Clean GUI Req 1:  Users are limited to Windows XP, Vista or Mac- OS.
+	Clean GUI Req 2:  Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers.
+	Clean GUI Req 3:  Users must have pop-up windows enabled on their systems.
+3.9.	Clean GUI V2
+3.9.1	Description and Priority
+The updated version of this feature will allow the user to customize the sections of the page into different views.  For example, some users like to see a file tree on the left side and a file preview on the bottom of the page.  Other users might want to see both a file tree and messages without a preview pane.  
+3.9.2	Stimulus/Response Sequences
+User action: Log in to Virtual-ED
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Preferences button 
+Response: New menu shows up with all the available features.
+--------------------------------------------------------------------------------------------------
+User action: Click on the Background Color menu within Preferences menu
+Response: A new menu shows up that shows all the available colors that the user can choose for background
+--------------------------------------------------------------------------------------------------
+User action: Click on the Font menu within Preferences menu
+Response: New menu shows up that will give the choice for the font
+--------------------------------------------------------------------------------------------------
+User action: Click on Font Size menu within Preferences menu
+Response: A new menu shows up that have all different font sizes that the user can choose.
+--------------------------------------------------------------------------------------------------
+User action: Click on Toolbar menu within Preferences menu
+Response: A menu listing available toolbars show up.  Selecting a toolbar toggles if it shows or not.  Check marks should show next to toolbars that are currently selected for view.
+--------------------------------------------------------------------------------------------------
+User action: Click on Layout menu within Preferences menu
+Response: A menu with different layout choices will show up.  Options to select panes that show in users site, including file tree diagram for Virtual-Space, messages/post threads, class lecture pane, Instant-ED pane, file/message preview pane, and Virtual-Exam pane.  Suggested organization layouts are also selectable from this menu.  Panes will be added or removed as (de)selected from menu and organized according to selected layout.
+3.9.3	Functional Requirements
+	Clean GUI Req 1:  Users are limited to Windows XP, Vista or Mac- OS.
+	Clean GUI Req 2:  Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers.
+	Clean GUI Req 3:  Users must have pop-up windows enabled on their systems.
+3.10.	Enhanced file sharing/transfer and document collaboration
+3.10.1	Description and Priority
+Enhanced file sharing/ transfer and document collaboration will be a feature that will allow students to have a Virtual hard drive space in the Virtual-Edu classroom that they will be able to use for sharing files. Users will be able to upload their documents, and eventually transfer them between other users/computers. The files saved in the virtual hard drive space will be accessible to the user even if user is accessing Virtual-Edu from a different computer. Benefit from this feature will be that users that are constantly mobile and on the go can access the documents and projects from any place; they can update their documents and upload a revised version again. The latest version of the document will be always available with just a click of a button. Priority for this feature will be medium for the Second Release date.
+3.10.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Virtual-Hard Drive
+Response: New pop up window shows up with list of documents already uploaded in the Virtual Hard Drive. The bottom of the window will show how much space is available for use.
+--------------------------------------------------------------------------------------------------
+User action: Click on upload button
+Response: New window pops up, user can search for file that he wants to upload from his computer to the Virtual Hard Drive
+--------------------------------------------------------------------------------------------------
+User action: Click on the selected file
+Response: System will begin file transfer with first checking if file with the same name already   exists in the system, if not transfer will continue, if yes, user receives message:  “File already exist, do you want to replace”
+--------------------------------------------------------------------------------------------------
+User action: Click on the “yes” button
+Response: File continues to upload
+--------------------------------------------------------------------------------------------------
+User action: Click on “no” button
+Response: The file is not uploaded and the user has the option to rename the file and uploaded it under the new name. This way the user will have the option of keeping both old and new file.
+--------------------------------------------------------------------------------------------------
+User action: Click on the “send file” button
+Response: The other user will receive a message saying that someone is trying to send them a file. And a window pops up saying: “Do you accept?”
+--------------------------------------------------------------------------------------------------
+User action: User answer yes
+Response: The file begins transmitting to the other party
+--------------------------------------------------------------------------------------------------
+User action: User answer no
+Response: The file transmission will fail
+3.10.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+	REQ-5 - Users must have antivirus software installed so they can scan the incoming files from other users of the system
+3.11.	Class lecture video/audio available as podcasts
+3.11.1	Description and Priority
+This feature will enable professors to host their lectures as video and/or audio podcasts. Students will be able to download or view as live streaming videos/audios. This will be great feature that will give students the ability of rewind and play again in cases where the student didn’t really understand the lectures and feels that they need to listen/watch it again. This feature is not available in a real classroom as once the lecture is done, the professor leaves the classroom and students have to rely on the note that they were able to make during the lecture. Conclusion, this feature will not only meets the expectations of a real classroom but exceed them. Priority for this feature will be high for a second release cycle.
+3.11.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Podcast button
+Response: New window shows up with list of available lectures. Audio files will be in mp3 format and video lectures will be flash video format
+--------------------------------------------------------------------------------------------------
+User action: Double click on the audio or video file
+Response: Real player pops up and starts playing the lecture in live streaming
+--------------------------------------------------------------------------------------------------
+User action: Right click on the audio or video file
+Response: Option for save as will pop up that will give the user ability of downloading the lecture and being able to view/listen to it even when pc doesn’t have an internet connection
+3.11.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must enable java scripts on their systems to be able to install Instant-Edu messaging software
+	REQ-5 - Users must have Real Player installed on their systems
+3.12.	Application sharing for whiteboards
+3.12.1	Description and Priority
+This feature will enable the users to share programs enter meetings, share and edit documents at the same time. The professor will be able to host a network projector and hold a lecture almost the same as in a real classroom, projecting power point slide and all students currently logged in will be able to follow what’s going on in the class. Professor will be able to distribute documents to students (example syllabus) with the ability to lock the editing tools, so unauthorized change to the document will be impossible. If professor makes a change or ads to the syllabus or any other document the change will be instantly distributed to all students that have those documents in their space. The professor will have the ability to write on the whiteboard and students will be able to follow the classes and professors writing with no problem. Priority for this feature will be high for the second release cycle. Using network projectors will give a more realistic feel to our Virtual Classroom and students will benefit from this feature. Any user will be able to share a program on their computer with the rest of the users currently logged in. Students will be able to use this same feature when working on projects as teams, giving them the ability to all work on one document at the same time.
+3.12.2	Stimulus/Response Sequences
+User action: Log in to Virtual-Edu
+Response: The user is logged in and all available features in the system are shown in the menu
+--------------------------------------------------------------------------------------------------
+User action: Click on the Whiteboard-Edu button
+Response: New pop up window shows up. Users will be able to join a conference or host a new one. The user initiating the conference will setup username and password and distribute the password to all users that would like to join his/her conference. Once user has joined the conference he/she will be able to see and interact will all the participants. 
+--------------------------------------------------------------------------------------------------
+User action: Click on share a program button
+Response: New window pops up, that will show all the programs available for sharing. 
+--------------------------------------------------------------------------------------------------
+User action: Click on a certain program from available choice
+Response: This program will automatically be distributed to all the participants, and all users will see the same screen.
+--------------------------------------------------------------------------------------------------
+User action: Click on the file button in the window
+Response: A new window pops up where the user will be able to browse and look for a file in his system that he wants to send to all participants. Every participant will be able to make changes to the document and change will be implemented on each participants screen.
+--------------------------------------------------------------------------------------------------
+User action: Click on share button
+Response: The entire desktop will be shared and everyone will be able to see the whole shared desktop.
+--------------------------------------------------------------------------------------------------
+User action: Click on the sign out button
+Response: The user will leave the meeting conference.
+3.12.3	Functional Requirements
+	REQ-1 - Users are limited to Windows XP, Vista or Mac- OS
+	REQ-2 - Users are limited to Internet Explorer, Mozilla Firefox and Safari internet browsers
+	REQ-3 - Users must have pop-up windows enabled on their systems
+	REQ-4 - Users must enable java scripts on their systems to be able to install Whiteboard-Edu software
+	REQ-5 - Users must have antivirus software installed so they can scan the incoming files from other users of the system
+	REQ-6 - Users must accept the privacy statement prior to using the application sharing
+ 
+4.	External Interface Requirements
+4.1.	User Interfaces
+The user interface of the Virtual-ED system is designed with increased emphasis on the user Human-Machine interface. The interface is compartmentalized by competency to ensure that the user can easily navigate within the portal. Each compartment has a distinctive focus with a minimalist approach. The user has the capability to alter the interface as suited.
+ Welcome Screen 1
+The initial entry (Welcome Screen 1) has three separate quadrants; each quadrant has a specific function. 
+	Help Feature: Feature is linked with the help desk staff of the particular institution; anyone who has difficulty in logging on can choose this feature to contact the system administrator.
+	Contact Us Feature: Will enable the user to look up a list of pertinent e-mail addresses/phone numbers within the institution.
+	News Feature:  The administrator has the capability to post current news on this section as needed.
+
+ 
+Class Selection Screen 2
+Enables the user to select the pertinent class, each class is highlighted for ease of use.
+  Application Layout 3
+Enables the user to choose a specific application to be used. To launch an application click on the application icon, the application will open up on a separate screen
+
+ 
+ 
+ 
+ Web Conferencing 4  (Sample image from oovoo.com)
+Web conferencing feature enables the user to interact with multiple users within a given class. Each user can chat with one another while the session is open.
+ Video Conferencing with multiple users 4.1  (Sample image from oovoo.com)
+Instant messaging feature will allow users to interact with faculty and follow classmates over a text based one-to-one or one-to-many connection.
+ 
+ Web Chatting Screen 5
+(Sample image from oovoo.com)
+
+ 
+File Transfer Screen 6
+(Sample image from oovoo.com)
+This screen is an extension of the web conferencing feature; this screen enables the users to view all available chat sessions available at any given time.
+File transfer feature enables the user to have the ability to manage a private temporary hosting space. Tools such as file uploading, directory creator, move, delete and rename will be accessible
+ 
+ 
+4.2.	Hardware Interfaces
+	Display Monitor: It is recommended that a high resolution LCD or CRT monitor be used for best results. 
+	Input devices:   All hardware interfaces will be provided by the operating system, the system will require a keyboard and a mouse. In addition a properly configured sound card and a voice input device will be needed to utilize the conferencing feature.  
+	Visual Input:  The conferencing feature requires a high resolution video input device.  The device needs to be configured in accordance to manufacturer recommended settings and should be in operation before enabling the conferencing feature.
+4.3.	Software Interfaces
+	The Virtual-ED software has a seamless integration with the local operating/hardware system. Once the user logs on to the Virtual-ED system (screen.1), the interface will seamlessly manage the local input/output/operating system, devices as needed
+	When using “Test administering” feature (applicable to Administrators only), XL and PDF must be installed in the native machine to view the downloadable reports. By default the reports will be saved to the “C: Program files/Virtual-ED/Bin/My reports folder”, (Requires XL-2002 or higher and Adobe Acrobat Reader 8 or higher)
+4.4.	Communications Interfaces
+	Web Browser: The system requires the use of IE or Fire fox, Safari as the native web browser. It is recommended that current system performs optimally with the suggested browsers.
+o	The users must have pop-up windows enabled on their systems and must enable java scripts on their systems to be able to install Instant-Edu messaging software.
+	Communication Standards:  SSH client, FTP client, VPN client are used for connection between two computing endpoints.
+	Data Transfer Rates:  Recommended 1.5 MBPS Download speed (for any download activities) and upload speed of minimum 128 Kbps.
+	Security: Users must have antivirus software installed so they can scan the incoming files from other users of the system, any commercially available Antivirus is can be used scanning files. 
+5.	Other Nonfunctional Requirements
+5.1.	Performance Requirements
+	The web conferencing feature of the system requires the workstation utilized have at least the following minimum requirements: 
+o	A minimum of 500 MHz
+o	256 MB of available memory
+o	Mac-compatible Webcam and headset (preferred) or separate webcam, microphone, and speakers
+o	Broadband internet access (cable, DSL, etc.)
+	The system requires the use of Internet Explorer, Safari, or Firefox as the native web browser. It is recommended the current system performs optimally with the suggested two browsers. The use of other than the recommended browsers may cause performance issues that have not been addressed by the software vendor.
+	The reporting functionality utilizes the Microsoft Excel (.XLS) and Adobe Portable Document Format (.PDF) for report outputs. The following recommended software must be installed in the local machine to fully utilize the reporting functionality.
+o	Microsoft Excel Viewer or Microsoft Excel
+o	A PDF Reader such as Adobe Reader
+	System must be accessible on and off campus via broadband internet connection and using required ID/Password combination.
+	System may require users to download program updates to become compatible and compliant with system.
+5.2.	Safety Requirements
+	All users are responsible for securing a backup of any uploaded data/content to the system in the event of an outage.
+	The user is responsible for content uploaded. NJIT policy prohibits the use NJIT facilities/assets for personal use.
+	Users may not use the system to upload or post data which is discriminatory in regards to race, color, creed, religion, sex, age, handicap, marital status, or national origin.  Users may not upload or post data which is inflammatory or derogatory.
+	In the event, inflammatory/derogatory content has been identified, the content will be immediately removed and the appropriate authorities with be notified resulting in possible disciplinary action.
+5.3.	Security Requirements
+	User must comply with all local, state, and federal laws when using available resources.  Any infringements or violations including but not limited to:  unauthorized use, harassment, exploitation of any gaps in the portal, inflammatory/derogatory content, or defacing the system will result in the appropriate authorities being notified.
+	The user is responsible for maintaining the user account. Action must be taken by the user to prevent the user account from being compromised. 
+	The user ID and the password should not be shared with anyone (students/staff/or anyone else). 
+	User passwords should be between 8 and 12 characters including letters and numbers but excluding spaces.
+	The user should periodically change the password; currently the user policy requires a mandatory password change every three months.
+	The information within the system is regarded private, however in the event of an investigation by a legal authority, including by not limited to a subpoena or audit, the information will be released to the proper authorities for the purpose intended.
+	All archived chats, e-mail, file share, and IM Messages are governed by the NJIT E-mail use policy.  The user is encouraged to view the content at the NJIT homepage for detailed use of the policy and restrictions and limitations of the policy.
+	In the event your account has been compromised, notify the NJIT help desk immediately. Refrain from using the infected account to communicate with anyone else. 
+	The systems should adhere to the privacy policy set forth by NJIT and its administration and also state and federal guidelines.
+5.4.	Software Quality Attributes
+	The system has an estimated 99% up time, though in an event of an outage data loss can occur. 
+	The Web-Conferencing features’ performance depends on the availability of the bandwidth. The minimum of a broadband connection is recommended to fully utilize Web-Conferencing feature.
+	The content is the responsibility of the users of the system; NJIT is neither responsible nor liable for the accuracy or the correctness of the content.
+	The portal will be periodically unavailable due to necessary maintenance upgrades. In the event of scheduled maintenance, the students/staff will be notified at least 24 hours in-advance. 
+ 
+6.	Other Requirements
+	The system must be completed within the timeframe allotted for development.
+	Appropriate funding must be acquired to make required upgrades to existing systems, buy additional hardware and software, and acquire skilled personnel to develop project. 
+ 
+7.	Appendix A: Glossary
+SRS	Software Requirement Specification
+DFD	Data Flow Diagram
+Developers	Team D inc.
+Customer	NJIT
+EDU	Education
+VIRTUAL-EDU	Name of project to design for the customer.
+User	Enrolled student and university’s faculty.
+Protocols	 A convention or standard that controls or enables the connection, between two computing endpoints.
+FTP	File Transfer Protocol is a network protocol used to transfer data from one computer to another.
+MB	Megabyte = 1,000,000 bytes.
+GB	Gigabyte = 1,000,000,000 bytes.
+MZH	Megahertz is used to measure the clock speed in hertz of a CPU
+GZH	Gigahertz is used to measure the clock speed in hertz of a CPU
+Streaming	A technique for transferring data such that it can be processed as a steady and continuous stream.
+Platform	Systems operation software.
+Browser	Software  to browser online content
+On-Demand	A service or feature which addresses the user's need for instant gratification and immediacy of use
+Mac- OS	Macintosh Operating System
+Windows XP	an operating system by Microsoft released in 2001
+Vista	the version of the Microsoft Windows client operating system released in 2006.
+Whiteboard-Edu	Application sharing for whiteboards available within Virtual-ED.
+Virtual-Hard Drive	Application for file sharing/ distributing amongst users.
+Podcasts	Series of audio or video digital media which will be available for distributing over the classroom.
+Instant-Edu	messaging software tool available in Virtual–ED.
+DSL	Form of Broadband Internet Access. Digital subscriber line that uses high frequency, while regular phones uses low frequency on the same telephone line. This high frequency gives users the ability to transfer data with higher speeds.
+Cable Internet	Form of broadband internet access that uses cable television infrastructure. It gives users speeds up to 50 megabits per second for downloading and up to 384Kbit/s to more than 20Mbit/s for uploading.
+  
+8.	Appendix B: Analysis Models
+ 
+ 

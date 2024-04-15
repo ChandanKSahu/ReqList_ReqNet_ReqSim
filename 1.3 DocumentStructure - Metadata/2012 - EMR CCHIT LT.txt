@@ -1,0 +1,5 @@
+D	California Correctional Health Care Services (CCHCS) Emergency Medical Response (EMR) System 
+1.30	Medical Equipment
+1.32	Report Generation
+1.33	Health record output
+2	CCHIT LT Laboratory

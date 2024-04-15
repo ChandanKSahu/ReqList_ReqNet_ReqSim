@@ -1,0 +1,42 @@
+D	TECHNICAL REQUIREMENTS DOCUMENT MOBILE SURVEILLANCE SYSTEM
+3	CARRIER FUNCTIONAL REQUIREMENTS
+3.1	Main requirements for the vehicle
+3.2	Technical requirements for the body of the vehicle
+3.3	Engine
+3.4	Drive system
+3.5	Suspension
+3.6	Brake system
+3.7	Additional Equipment
+4	SENSORS SUITE REQUIREMENTS
+4.1	Requirements for the integrated electro-optical head
+4.1.1	Requirements for the PAN/TILT unit
+4.1.2	Requirements for the EO head drive system
+4.1.3	Requirements for the thermovision camera
+4.1.4	Requirements for the daylight camera
+4.1.5	Requirements for the laser rangefinder
+5	SYSTEM CONTROL REQUIREMENTS
+5.1	User Interface
+5.1.1	Requirements for the monitors
+5.1.2	Requirements for the operator’s consoles
+5.2	Terrain Cartography
+5.3	Requirements for sensor operation
+5.4	Data Management
+5.4.1	Requirements for the data recording system (include the video)
+5.4.2	Requirements for Data Transfer System
+5.5	Control System Support
+5.5.1	Requirements for the stabilization system
+5.5.2	Requirements for the GPS vehicle tracking set and North sensor
+5.5.3	Requirements for the power supply system
+6	COMMUNICATIONS
+6.1	Requirements of the TETRA mobile terminal (one per vehicle)
+6.2	Programming tool for radio terminals (one for all vehicles)
+6.3	LTE/3G Integrated Services Router (2pcs per vehicle)
+7	LOGISTIC, NON FUNCTIONAL REQUIREMENTS
+7.1	Documentation Requirements
+7.2	Maintenance Requirements
+7.3	Requirements for the warranty
+7.4	Endurance and Reliability Requirements
+7.5	Requirements for Training
+7.6	Transportability and Delivery Requirements
+7.7	Verification
+7.8	Software Copyright

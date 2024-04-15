@@ -1,0 +1,42 @@
+3.2.1.1	The MDT shall open a pair of Latent Friction Ridge Features Search (LFFS) EBTS files (i.e., *.lffs file format).
+3.2.1.2	The MDT shall display the fingerprint image.
+3.2.1.3	The MDT shall overlay associated minutiae to fingerprint in a graphical user interface (GUI).
+3.2.1.4	The MDT shall allow individual minutia to be selected to display details (e.g., x, y, angle, classification, etc.) and any associated annotations.
+3.2.2.1	The MDT shall calculate the spatial deviations between a pair of minutiae selected on the two fingerprints.
+3.2.2.2	The MDT shall allow the user to select a baseline minutia using the GUI and mouse pointer.
+3.2.2.3	The MDT shall allow the user to select a target minutia on the other fingerprint.
+3.2.2.4	The MDT shall calculate the spatial deviation.
+3.2.2.5	The MDT shall present deviation results to the user in the GUI window.
+3.2.3.1	The MDT may allow a user to filter minutiae.
+3.2.3.2	The MDT may graphically mark minutia pairs as they are selected for deviation calculations and maintain a running graphical display of selected pairs.
+3.2.3.3	The MDT may keep track of calculated minutia deviations and the associated minutia pairs during the active session.
+3.2.3.4	The MDT may allow a user to filter the minutiae based on the calculated deviations or other minutia features by entering a filter parameter through the GUI interface controls.
+3.2.3.5	The MDT may alter the displayed minutiae based on those pairs that satisfy the filter parameter(s).
+3.2.3.6	The MDT may write an EBTS file or pair of files with only minutiae that satisfy the entered filter parameter(s).
+3.3.1.1	The MDT shall provide a GUI.
+3.3.1.2	The MDT shall allow a user to manually open files from the local computer.
+3.3.1.3	The MDT shall allow a user to manually save a results file to the local computer.
+3.3.2.1	The MDT shall open a pair of LFFS EBTS files (i.e., *.lffs file format) for display within the GUI.
+3.3.2.2	The MDT shall open an LFFS file that contains a valid Type-9 and Type-13 record, in accordance to ANSI/NIST-ITL 1 -2011.
+3.3.2.3	The MDT shall open an LFFS file that contains a valid Type-9 record, in accordance with ANSI/NIST-ITL 1-2011,  and allow the user to then import an external image file (.bmp) for display .
+3.3.2.4	The MDT shall only be required to open LFFS files that contain Type-9 minutia records in one encoding standard; the specific minutia standard is Field Block 9.300-9.399 – Extended Feature Set (EFS) standard Profile 2: Quick Minutia Search.
+3.3.2.5	The MDT may allow a user to save an EBTS file that has had minutiae deleted from the originally opened file due to user interactions or deviation filtering.
+3.3.3.1	The MDT shall allow a user to save a text file containing a log of minutiae pairs with details and the resulting deviation calculations from the current user session.  The text file will be in a table structured format suitable for viewing in a common office spreadsheet software program.
+3.3.4.1	The MDT shall allow a user to save a session file containing all data from the LFFS files, Deviation Log file, and any actions taken within the session by the user that resulted in a change state.  The specific file data format and structure is to be left to the design.  "
+3.3.4.2	The MDT shall allow a user to open a session file and resume the viewing and/or analysis of fingerprint image and minutia data in accordance to the describe CSCI capabilities.
+3.8.1	MDT will not provide per-user security setting.
+3.8.2	MDT will be able to operate in a standard DoD Information System (IS) Environment.
+3.9.1	MDT will operate in an office environment.
+3.10.1.1	MDT shall operate on a standard Government desktop computer.
+3.10.2.1	MDT will require a minimum 100 Megabytes (MB) of RAM.
+3.10.2.2	MDT will require a minimum 200 MB hard drive.
+3.10.3.1	MDT will run in the Microsoft Windows 7 operating system.
+3.10.3.2	MDT will require Microsoft .Net Framework 4.
+3.10.4.1	MDT shall not provide any network functionality.
+3.11.1	Due in part to the prototype/research nature of this effort, the MDT will utilize a Spiral development methodology. This will provide the best methodology to support the development of the current version 1.0 (Beta) development, while still allowing for the capture, planning, and implementation of future revision of the MDT tool.
+3.12.1	The hardware/operating system for the MDT shall meet the following minimal system requirements: a. Microsoft Windows 7 or higher  b. X86 Dual Core Processor  c. 2 Gigabytes (GB) Memory  d. 30 GB Hard drive
+3.12.2.1	MDT will execute on a Windows 7 or higher compatible computer system.
+3.12.2.2	MDT will use a Windows Standard user interface.
+3.12.2.3	An effort will be made to develop all software for the MDT using C# computer language. If insurmountable problems occur interfacing C#, MDT, and Windows, the C/C++ computer languages will be used as an alternative.
+3.17.1	The MDT will be delivered on 2 compact discs (CDs).  One CD will contain the application.  The second CD will contain the source code and documentation for MDT tool delivered on disc one.  Upon sponsor written request the delivery can be made electronically as an alternative to the CD delivery.
+3.18.1	All requirements have equal weight.

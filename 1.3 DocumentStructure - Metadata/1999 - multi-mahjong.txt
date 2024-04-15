@@ -1,0 +1,24 @@
+D	single/multi player Mahjong computer game
+4	Functional Requirements
+4.1	The MultiMahjongServer
+4.2	Beginning the Game
+4.3	Playing the Game
+4.4	Ending the Game
+4.5	Computer Opponent (CO)
+5	Non-Functional Requirements
+5.1	Nature of the Users
+5.1.1	MultiMahjongClient
+5.1.2	MultiMahjongServer
+5.2	Error Handling
+5.2.1	Nonfatal errors
+5.2.2	Fatal errors
+5.3	Implementation Constraints
+5.5	Performance Constraints
+6	User Interface Requirements
+6.1	User Interface - MultiMahjongServer
+6.2	User Interface - MultiMahjongClient
+6.3	Graphical User Interface - MultiMahjongClient
+7	Document/Training Requirements
+7.1	MultiMahjongServer Documentation
+7.2	MultiMahjongClient Documentation
+7.3	Coding and Design Documentation

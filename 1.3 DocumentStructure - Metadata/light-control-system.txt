@@ -1,0 +1,9 @@
+D	light control system
+3	Informal Needs
+3.1	Functional Needs
+3.1.1	User Needs
+3.1.2	Facility Manager Needs
+3.2	Non-Functional Needs
+3.2.1	Fault Tolerance
+3.2.2	Safety and Legal Aspects
+3.2.3	User Interface

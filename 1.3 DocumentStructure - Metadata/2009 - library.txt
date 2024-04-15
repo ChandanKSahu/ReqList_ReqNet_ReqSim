@@ -1,0 +1,65 @@
+D	Software Requirements Specification for the System Administration of an Integrated Library System
+1	Introduction
+1.6	Operating Environment
+1.7	Design and Implementation Constraints
+1.8	User Documentation
+1.9	Assumptions and Dependencies
+1.10	Systems: General
+1.10.1	SQL-based database
+1.10.2	real-time processing
+1.10.3	field and record sharing
+1.10.4	record lock management
+1.10.5	individual and shared staff login accounts
+1.10.6	system documentation
+1.10.7	system upgrade guidelines
+1.10.8	configuration file access
+1.10.9	log file access
+1.10.10	root shell access
+1.11	Systems: Consoles and Dashboards
+1.11.1	dashboard configuration
+1.11.2	system monitoring
+1.11.3	record lock administration
+1.11.4	system performance dashboard
+1.11.5	server console
+1.11.6	application dashboard
+1.11.7	client management console
+1.11.8	circulation dashboard
+1.11.9	configuration file console
+1.11.10	log-file dashboard
+1.11.11	job scheduling console
+1.11.12	email configuration
+1.11.13	SMTP support
+1.12	Systems: Business Rules
+1.12.1	business rules
+1.12.2	suppression rules
+1.12.3	requesting rules
+1.12.4	loan rules
+1.12.5	data validation
+1.13	Systems: Data Recovery
+1.13.1	system backup
+1.13.2	data rollback
+1.13.3	server clustering
+1.14	Systems: Security
+1.14.1	patron data security
+1.14.2	user account privileges
+1.14.3	secure protocol support
+1.15	Systems: Maintenance
+1.15.1	MARC import/export
+1.15.2	record sets
+1.15.3	staff account setup
+1.15.4	patron account setup
+1.15.5	job scheduling
+1.15.6	job scheduling: management
+1.15.7	keyboard macros and shortcuts
+1.16	Systems: Client Management
+1.16.1	accounts independent from workstation
+1.16.2	client software updates
+1.16.3	client configurations
+1.17	Systems: Queries & Reports
+1.17.1	report format and output
+1.17.2	query tool
+1.17.3	report templates
+1.17.4	reports permissions
+1.17.5	record number report
+1.17.6	printer support
+1.17.7	multiple print output options

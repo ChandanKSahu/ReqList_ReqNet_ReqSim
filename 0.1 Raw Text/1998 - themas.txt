@@ -1,0 +1,1558 @@
+
+THEMAS 
+The Energy Management System  
+ 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION  
+ 
+ 
+DOCUMENT NUMBER  
+D_THEMAS_SRS_001  
+ 
+ 
+Version 1  
+ 
+ 
+October 14, 1998  
+ 
+ 
+Prepared By  
+THEMAS Team  
+ 
+ 
+ 
+ 
+Approvals  
+ 
+ 
+ 
+____________________________________  
+ 
+Principle Requirements Arc hitect 
+ 
+ 
+ 
+____________________________________  
+ 
+Principle Design Architect  
+ 
+ 
+ 
+____________________________________  
+ 
+Principle Implementation Architect
+D_THEMAS_SRS_001  
+   iTable of Contents  
+ 
+1.0 Introduction ................................ ............. 1-1 
+1.1 Purpose ................................ .................. 1-1 
+1.2 Scope ................................ .................... 1-1 
+1.3 Definitions, Acronyms, and Abbreviations ................. 1-1 
+1.4 References ................................ ............... 1-2 
+1.5 Overview ................................ ................. 1-2 
+2.0 General Description ................................ ......2-1 
+2.1 Product Perspective ................................ ......2-1 
+2.2 Product Functions ................................ ........ 2-1 
+2.2.1 Monitor Temperature ................................ .2-1 
+2.2.2 Determine Utilization ............................... 2-1 
+2.2.3 Initialize System ................................ ...2-2 
+2.2.4 System Reports ................................ ......2-2 
+2.3 User Characteristics ................................ .....2-2 
+2.4 General Constraints ................................ ......2-2 
+2.5 Assumptions and Dependencies ............................. 2-2 
+2.5.1 Operating System Assumptions ........................ 2-3 
+2.5.2 Thermostat Hardware Assumptions ..................... 2-3 
+2.5.3 Heating/Cooling Hardware Assumptions ................ 2-3 
+3.0 Engineering Requirements ................................ .3-1 
+3.1 Functional Requirements ................................ ..3-1 
+3.1.1 Initialize Operational Parameters ................... 3-1 
+3.1.1.1 Load H/C Unit Definitions (SRS -001)............. 3-1 
+3.1.1.1.1 Introduction ............................... 3-1 
+3.1.1.1.2 Inputs ................................ .....3-1 
+3.1.1.1.3 Processing ................................ .3-1 
+3.1.1.1.4 Outputs ................................ ....3-1 
+3.1.1.2 Load Thermostat Definitions (SRS -002)........... 3-1 
+3.1.1.2.1 Introduction ............................... 3-1 
+3.1.1.2.2 Inputs ................................ .....3-1 
+3.1.1.2.3 Processing ................................ .3-1 
+3.1.1.2.4 Outputs ................................ ....3-2 
+D_THEMAS_SRS_001  
+   iiTable of Contents  
+ 
+3.1.1.3 Load Utilization Parameters (SRS -003)........... 3-2 
+3.1.1.3.1 Introduction ............................... 3-2 
+3.1.1.3.2 Inputs ................................ .....3-2 
+3.1.1.3.3 Processing ................................ .3-2 
+3.1.1.3.4 Outputs ................................ ....3-2 
+3.1.1.4 Set Trigger Values (SRS -004).................... 3-2 
+3.1.1.4.1 Introduction ............................... 3-2 
+3.1.1.4.2 Inputs ................................ .....3-2 
+3.1.1.4.3 Processing ................................ .3-2 
+3.1.1.4.4 Outputs ................................ ....3-2 
+3.1.1.5 Set Overtemp Values (SRS -005)................... 3-2 
+3.1.1.5.1 Introduction ............................... 3-2 
+3.1.1.5.2 Inputs ................................ .....3-3 
+3.1.1.5.3 Processing ................................ .3-3 
+3.1.1.5.4 Out puts................................ ....3-3 
+3.1.1.6 Establish Valid Temperature Range (SRS -006).....3-3 
+3.1.1.6.1 Introduction ............................... 3-3 
+3.1.1.6.3 Processing ................................ .3-3 
+3.1.1.6.4 Outputs ................................ ....3-3 
+3.1.2 Initialize System (SRS -007)......................... 3-3 
+3.1.2.1 Introduction ................................ ....3-3 
+3.1.2.2 Inputs ................................ .......... 3-3 
+3.1.2.3 Processing ................................ ......3-3 
+3.1.2.4 Outputs ................................ ......... 3-4 
+3.1.3 Validate Temperature (SRS -008)...................... 3-4 
+3.1.3.1 Introduction ................................ ....3-4 
+3.1.3.2 Inputs ................................ .......... 3-4 
+3.1.3.3 Processing ................................ ......3-4 
+3.1.3.4 Outputs ................................ ......... 3-4 
+3.1.4 Monitor Temperature ................................ .3-4 
+3.1.4.1 Determine Temperature Status (SRS -009).......... 3-4 
+3.1.4.1.1 Introduction ............................... 3-4 
+3.1.4.1.2 Inputs ................................ .....3-5 
+D_THEMAS_SRS_001  
+   iiiTable of Contents  
+ 
+3.1.4.1.3 Processing ................................ .3-5 
+3.1.4.1.4 Outputs ................................ ....3-5 
+3.1.4.2 Determine H/C Mode (SRS -010).................... 3-5 
+3.1.4.2.1 Introduction ............................... 3-5 
+3.1.4.2.2 Inputs ................................ .....3-5 
+3.1.4.2.3 Processing ................................ .3-5 
+3.1.4.2.4 Outputs ................................ ....3-6 
+3.1.5 Determine Utilization ............................... 3-6 
+3.1.5.1 Determine Status of All H/C Units (SRS -011).....3-6 
+3.1.5.1.1 Introduction ............................... 3-6 
+3.1.5.1.2 Inputs ................................ .....3-6 
+3.1.5.1.3 Processing ................................ .3-6 
+3.1.5.1.4 Outputs ................................ ....3-6 
+3.1.5.2 Generate Unit Unavailable Event (SRS -012)....... 3-7 
+3.1.5.2.1 Introduction ............................... 3-7 
+3.1.5.2.2 Inputs ................................ .....3-7 
+3.1.5.2.3 Processing ................................ .3-7 
+3.1.5.2.4 Outputs ................................ ....3-7 
+3.1.5.3 Generate H/C Request (SRS -013).................. 3-7 
+3.1.5.3.1 Introduction ............................... 3-7 
+3.1.5.3.2 Inputs ................................ .....3-7 
+3.1.5.3.3 Processing ................................ .3-7 
+3.1.5.3.4 Outputs ................................ ....3-7 
+3.1.6 Generate H/C Signal (SRS -014)....................... 3-7 
+3.1.6.1 Introduction ................................ ....3-7 
+3.1.6.2 Inputs ................................ .......... 3-8 
+3.1.6.3 Processing ................................ ......3-8 
+3.1.6.4 Outputs ................................ ......... 3-8 
+3.1.7 Generate Alarm Data (SRS -015)....................... 3-8 
+3.1.7.1 Introduction ................................ ....3-8 
+3.1.7.2 Inputs ................................ .......... 3-8 
+3.1.7.3 Processing ................................ ......3-8 
+3.1.7.4 Outputs ................................ ......... 3-9 
+D_THEMAS_SRS_001  
+   ivTable of Contents  
+ 
+3.1.8 Generate Event Data (SRS -016)....................... 3-9 
+3.1.8.1 Introduction ................................ ....3-9 
+3.1.8.2 Inputs ................................ .......... 3-9 
+3.1.8.3 Processing ................................ ......3-9 
+3.1.8.4 Outputs ................................ ......... 3-9 
+3.1.9 Change Thermostat Setting (SRS -017)................. 3-9 
+3.1.9.1 Introduction ................................ ....3-9 
+3.1.9.2 Inputs ................................ .......... 3-9 
+3.1.9.4 Processing ................................ ......3-9 
+3.1.9.5 Outputs ................................ ........ 3-10 
+3.1.10 Generate Reports (SRS -018)........................ 3-10 
+3.1.10.1 Introduction ................................ ..3-10 
+3.1.10.2 Inputs ................................ ........ 3-10 
+3.1.10.3 Processing ................................ ....3-10 
+3.1.10.4 Outputs ................................ ....... 3-10 
+APPENDIX A - TRACEABILITY MATRIX ............................. A-1 
+APPENDIX B - DATAFLOW DIAGRAMS ............................... B-1 
+APPENDIX C - DATA DICTIONARY ................................ .C-1 
+D_THEMAS_SRS_001  
+ 1 - 11.0 Introduction  
+ 
+The following subsections of Section 1.0 provide an overview of 
+the entire Software Requirements Specification.  
+ 
+1.1 Purpose  
+ 
+This Software Requirements Specification (SRS) specifies the 
+qualification requirements for The Energy Management System 
+(THEMAS). It provides a technical description of all so ftware 
+requirements of the system, provides traceability of software 
+capability requirements to the Statement of Work, and identifies 
+external interfaces. This document is intended for use by the 
+Design Requirements team, Principle Software Architect, and other 
+parties interested in the development and progression of THEMAS.  
+ 
+1.2 Scope  
+ 
+The scope of this document is confined to only the software 
+requirements for the THEMAS system. Only those conditions 
+expressed with the imperative "shall" are to be interp reted as 
+binding requirements for this SRS. This document provides a 
+detailed definition of all requirements for the THEMAS system. It 
+does not provide a detailed definition of the exact systems that 
+will interface with THEMAS.  The SRS shall give a prototype of a 
+simulated thermostat for verification and validation of THEMAS 
+reliability. The requirements specified in this document are to 
+be used as the basis for software design of the THEMAS system.  
+ 
+1.3 Definitions, Acronyms, and Abbreviations  
+ 
+The follo wing section lists acronyms and abbreviations and their 
+meaning as used in this document:  
+ 
+ANSI  American National Standards Institute  
+ 
+C  Cooling 
+ 
+DB  Database  
+ 
+DD  Data Dictionary  
+ 
+DFD   Data Flow Diagram  
+ 
+H  Heating 
+ 
+IEEE  Institute of Electrical and Electronic Engineers  
+ 
+LO  Lower Overtemperature Value  
+ 
+LT  Lower Trigger Value  
+D_THEMAS_SRS_001  
+ 1 - 2 
+OD  Overtemperature Delta Value  
+ 
+SDD  Software Design Document  
+ 
+SRS   Software Requirements Specification  
+ 
+T  Current Temperature Value  
+ 
+TD  Trigger Delta Value  
+ 
+THEMAS  The Ener gy Management System  
+ 
+TSET  Current Temperature Setting  
+ 
+UT  Upper Trigger Value  
+ 
+UO  Upper Overtemperature Value  
+ 
+1.4 References  
+ 
+The following documents shown form a part of this specification. 
+In the event of conflict between the documents referenced and the 
+contents of this SRS, the contents of this document shall 
+overrule all others, with the exception of the Statement of Work.  
+ 
+Statement of Work  THEMAS_SOW_001  
+ 
+ANSI/IEE Guide to Software  ANSI/IEEE STD 830 -1984 
+Requirements Specification  
+ 
+ 
+Technical society and technical association specifications are 
+generally available for reference from libraries. Copies of other 
+specifications may be obtained from Barry Scott, THEMAS project 
+Manager.  
+ 
+1.5 Overview  
+ 
+This document is prepared in accordance with the American 
+National Standards Institute (ANSI) / Institute of Electrical and 
+Electronics Engineers (IEEE) Guide to Software Requirements 
+Specifications, ANSI/IEEE STD 830 -1984. Section 2.0 of this 
+document gives a general description of the THEMAS system. I t 
+provides product perspectives, product functions, user 
+characteristics, general constraints, and assumptions and 
+dependencies of the system. Section 3.0 contains all the details 
+the Design Requirements team needs to create a design. It will 
+contain functional and performance requirements, design 
+constraints, attributes and external interface requirements for 
+the THEMAS system.  
+D_THEMAS_SRS_001  
+ 1 - 3 
+Appendix A contains the Dataflow Diagrams.  
+ 
+Appendix B contains the Traceability Matrix.  
+ 
+Appendix C contains the Data Dictionary . 
+D_THEMAS_SRS_001  
+ 2 - 12.0 General Description  
+ 
+This section of this SRS describes the general factors that 
+effect the THEMAS system and its requirements.  This section does 
+not state specific requirements, it only makes these requirements 
+easier understood.  
+ 
+2.1 Product Perspective  
+ 
+The THEMAS system is a system that operates independent of any 
+other system, or any components of the heating and cooling system 
+to which it is attached.  The THEMAS system, however, is composed 
+mainly of a hardware and software portion.  This SRS  only 
+specifies the requirements dealing with the software portion of 
+the system.  If assumptions or dependencies about the hardware 
+were made, they are stated in this section of the SRS.  
+ 
+2.2 Product Functions  
+ 
+The THEMAS system is divided into four major sections:  Monitor 
+Temperature, Determine Utilization, Initialize System, and System 
+Reports.  All four sections have an associated software  
+configuration item;  all except the System Reports have an 
+associated hardware configuration item.  The hardware 
+requirements are contained in the system specification.  The 
+functions of the software for the system are contained in the 
+following paragraphs.  
+ 
+2.2.1 Monitor Temperature  
+ 
+The monitor temperature function receives the valid temperature 
+and system parameters.  The function then goes through the 
+process of determining temperature status.  After this process is 
+done, either temperature limit is exceeded or the temperature 
+change is requested.  If the temperature change is requested, 
+then the determine heating /cooling mode process is activated and 
+makes a heating/cooling request.  Some other processes that help 
+the monitor temperature function are:  validate temperature, 
+change thermostat setting, generate alarm, and system 
+initialization.  
+ 
+2.2.2 Determine Utilization  
+ 
+The determine utilization function receives the heating/cooling 
+request and utilization parameters.  The function then processes 
+the status of all heating/cooling units and sends out either unit 
+unavailable or heating/cooling unit needed.  The fun ction 
+generates either a unit unavailable event which goes into the 
+System Reports function or it generates a heating/cooling signal 
+to turn on/off the units.  The Monitor Temperature and Initialize 
+D_THEMAS_SRS_001  
+ 2 - 2System functions help the determine utilization to do its 
+processes.  
+ 
+2.2.3 Initialize System  
+ 
+The initialize system function receives the initialization data 
+for the THEMAS system.  The processes that are associated with it 
+are:  load heating/cooling unit definitions, turn off all 
+heating/cooling units, load th ermostat definitions, load 
+utilization parameters, set trigger values, set overtemperature 
+values, and establish valid temperature range.  The outgoing 
+information that starts the entire THEMAS system is:  clear all 
+heating/cooling signals, send thermostat definitions, send 
+utilization parameters, send trigger values, send overtemperature 
+values, and send valid temperature range.  
+ 
+2.2.4 System Reports  
+ 
+The system reports function receives event data from the THEMAS 
+system.  This function is a database that stores all the events 
+in the THEMAS system.  This function is mainly for the use of  
+the supervisor of the THEMAS system to maintain an efficient 
+heating and cooling system.  The only process that interacts with 
+the system reports function is the generate event data process.  
+ 
+2.3 User Characteristics  
+ 
+This system is intended to be used by people that maintain the 
+heating and cooling systems in a building.  The system should not 
+need intervention from outside users other than the supervisor to 
+maintain opera tion of THEMAS.  The system should provide warnings 
+to the supervisor about faulty temperatures.  The displaying of 
+the current status of the system to the supervisor should not 
+contain excessive information which could confuse the supervisor.  
+The system should provide information in the form of reports to 
+the supervisor so that the system can be run efficiently.  
+ 
+2.4 General Constraints  
+ 
+The general constraints of the THEMAS system focus on the 
+functionality provided by the external devices connected to i t.  
+The thermostats shall only provide temperature values and 
+temperature settings.  The heating and cooling units provide no 
+feedback to the THEMAS system.  When a signal is sent to a 
+heating or cooling unit, no signal shall be available to allow 
+the THEMAS system to determine if the signal sent to the unit was 
+realized by the unit.  
+ 
+2.5 Assumptions and Dependencies  
+ 
+D_THEMAS_SRS_001  
+ 2 - 3In developing the requirements for the THEMAS system, several 
+assumptions have been made about the thermostat hardware and the 
+heating/coolin g hardware.  These assumptions are stated in the 
+following paragraphs.  
+ 
+2.5.1 Operating System Assumptions  
+ 
+The THEMAS system shall be designed to run on the Microsoft® 
+Windows NT™ operating system.  All the internal process 
+communications shall be designed to operate on this operating 
+system.  Any communication with the thermostats and heating and 
+cooling units shall be done through the interface to these units.  
+These interfaces shall run on this operating system as well.  
+ 
+2.5.2 Thermostat Hardware Assump tions 
+ 
+It is assumed that the thermostat is capable of returning the 
+current temperature and the current desired temperature setting 
+to the THEMAS system.  The thermostat is constantly returning 
+these values with no real time delay in between the thermostat 
+and the THEMAS system.  The thermostat also has the capability of 
+being set and controlled by a user of the THEMAS system.  
+All data sent by the thermostat is in the correct format for the 
+THEMAS system to use.  
+ 
+2.5.3 Heating/Cooling Hardware Assumptions  
+ 
+It is assumed that the heating/cooling unit is incapable of 
+returning its current off/on status to the THEMAS system.  The 
+heating/cooling unit has no real time delay when sending these 
+statuses to the THEMAS system.  The heating/cooling unit shall 
+have the capability of being turned off and on by the supervisor 
+of the THEMAS system.  
+D_THEMAS_SRS_001  
+ 3 - 13.0 Engineering Requirements  
+ 
+3.1 Functional Requirements  
+This section is subdivided into ten main subsections: Initialize 
+Operational Parameters, Initialize System, Validate  Temperature, 
+Monitor Temperature, Determine Utilization, Generate H/C Signal, 
+Generate Alarm Data, Generate Event Data, Change Thermostat 
+Setting, and Generate Reports.  Each subsection describes the 
+software requirement for that individual software component of 
+the THEMAS system.  
+ 
+3.1.1 Initialize Operational Parameters  
+The following sections describe the Initialize System component 
+of the THEMAS system.  
+ 
+3.1.1.1 Load H/C Unit Definitions (SRS -001) 
+ 
+3.1.1.1.1 Introduction  
+The THEMAS system shall control t he heating and cooling units 
+that are defined as part of the THEMAS system.  The definitions 
+of the individual heating and cooling systems reside in an 
+initialization file.  The system shall read this file and the 
+definitions shall be derived from the initialization data in the 
+file. 
+ 
+3.1.1.1.2 Inputs  
+Initialization Data  
+ 
+3.1.1.1.3 Processing  
+The THEMAS system shall use the information contained in the 
+initialization data file to determine which heating and cooling 
+units are part of the THEMAS system.  Ther e is one heating and 
+cooling unit that corresponds to one thermostat in each of four 
+quadrants on each of three floors of the office building.  
+ 
+3.1.1.1.4 Outputs  
+Operational Parameters  
+ 
+3.1.1.2 Load Thermostat Definitions (SRS -002) 
+ 
+3.1.1.2.1 Introduction  
+Each thermostat shall have a unique identifier by which that 
+thermostat is identified in the THEMAS system. This procedure 
+will load these definitions into the THEMAS software.  
+ 
+3.1.1.2.2 Inputs  
+Initialization Data  
+ 
+3.1.1.2.3 Processing  
+Each quadrant of ea ch floor shall have a thermostat which is to 
+be used to provide temperature data to the THEMAS system.  The 
+D_THEMAS_SRS_001  
+ 3 - 2initialization file shall contain a unique identifier for each 
+thermostat that the system is to monitor.  These identifiers 
+shall be read from the initialization file and loaded into the 
+THEMAS system during the initialization process.  
+ 
+3.1.1.2.4 Outputs  
+Operational Parameters  
+ 
+3.1.1.3 Load Utilization Parameters (SRS -003) 
+ 
+3.1.1.3.1 Introduction  
+There shall be a maximum number of heating or cooling u nits that 
+can be on at any given time.  This procedure loads the maximum 
+number of concurrently running units allowed.  
+ 
+3.1.1.3.2 Inputs  
+Initialization Data  
+ 
+3.1.1.3.3 Processing  
+The maximum number of heating or cooling units that can run 
+concurrently shall reside in an initialization file.  The maximum 
+number of concurrently running units shall be read from the 
+initialization file and stored in the THEMAS system.  
+ 
+3.1.1.3.4 Outputs  
+Utilization Parameters  
+ 
+3.1.1.4 Set Trigger Values (SRS -004) 
+ 
+3.1.1.4.1 Int roduction  
+The trigger value is used in combination with the current 
+temperature to determine when a heating or cooling unit shall be 
+turned on or off.  
+ 
+3.1.1.4.2 Inputs  
+Initialization Data  
+ 
+3.1.1.4.3 Processing  
+The trigger values shall reside in an initialization file.  This 
+procedure shall read the initialization file and establish the 
+trigger value from the data in that file.  
+ 
+3.1.1.4.4 Outputs  
+Operational Parameters  
+ 
+3.1.1.5 Set Overtemp Values (SRS -005) 
+ 
+3.1.1.5.1 Introduction  
+The THEMAS system shall en sure the temperature reported by a 
+given thermostat shall not exceed a maximum deviation value of 3 
+degrees Fahrenheit.  
+D_THEMAS_SRS_001  
+ 3 - 3 
+3.1.1.5.2 Inputs  
+Initialization Data  
+ 
+3.1.1.5.3 Processing  
+The overtemperature values shall reside in an initialization 
+file.  This procedure shall read the initialization file and 
+establish the overtemperature value from the data in that file.  
+ 
+3.1.1.5.4 Outputs  
+Operational Parameters  
+ 
+3.1.1.6 Establish Valid Temperature Range (SRS -006) 
+ 
+3.1.1.6.1 Introduction  
+The THEMAS system shall onl y respond to temperatures that are 
+within a reasonable value.  
+ 
+3.1.1.6.2 Inputs  
+Initialization Data  
+ 
+3.1.1.6.3 Processing  
+The valid temperature range value shall reside in an 
+initialization file.  This procedure shall read the 
+initialization file and establish the valid temperature range 
+from the data in it.  
+ 
+3.1.1.6.4 Outputs  
+Operational Parameters  
+ 
+3.1.2 Initialize System (SRS -007) 
+ 
+3.1.2.1 Introduction  
+When the THEMAS system is initialized, it shall first turn off 
+all the heating and cooling units.  Then , it shall check all the 
+thermostats and determine if any thermostat’s settings require a 
+heating or cooling unit to be turned on back on.  
+ 
+3.1.2.2 Inputs  
+Operational Parameters  
+ 
+3.1.2.3 Processing  
+This process shall first determine a known state of all the 
+heating and cooling units by issuing a request to turn off all 
+the units.  It shall then read the current temperature values and 
+current temperature settings of each thermostat.  If the settings 
+reflect a need for a heating or cooling unit to be turned o n, the 
+process shall issue a request to turn on the appropriate unit.  
+This determination shall be made in accordance with the rules 
+outlined in section 3.1.4.1 and 3.1.4.2.  
+ 
+D_THEMAS_SRS_001  
+ 3 - 43.1.2.4 Outputs  
+H/C Request  
+3.1.3 Validate Temperature (SRS -008) 
+ 
+3.1.3.1 Introduction  
+The THEMAS system shall only respond to temperatures from the 
+thermostats that are within the specified valid range.  
+ 
+3.1.3.2 Inputs  
+Operational Parameters  
+Temperature Data  
+ 
+3.1.3.3 Processing  
+Two types of temperature data shall be recognized from th e 
+thermostats: 1) the temperature setting and 2) the current 
+temperature.  This module shall process both types of data.  
+ 
+A current temperature value that is received from an individual 
+thermostat shall be compared to the valid temperature range 
+values.  If the current temperature value is strictly less than 
+the lower value of the valid temperature range or if the received 
+temperature value is strictly greater than the upper value of the 
+valid temperature range, then the THEMAS system shall identify 
+the current temperature value as an invalid temperature and shall 
+output an invalid temperature status.  Otherwise, the THEMAS 
+system shall output a valid temperature status.  
+ 
+A temperature setting value that is received from an individual 
+thermostat shall be compared to the valid temperature range 
+values.  If the temperature setting value is strictly less than 
+the lower value of the valid temperature range or if the 
+temperature setting value is strictly greater than the upper 
+value of the valid temperature range,  then the THEMAS system 
+shall identify the temperature setting as an invalid temperature 
+and shall output an invalid temperature status.  Otherwise, the 
+THEMAS system shall realize the value for that thermostat’s 
+temperature setting.  
+ 
+3.1.3.4 Outputs  
+Invalid Temperature  
+Valid Temperature  
+ 
+3.1.4 Monitor Temperature  
+The following sections describe the Monitor Temperature component 
+of the THEMAS system.  
+ 
+3.1.4.1 Determine Temperature Status (SRS -009) 
+ 
+3.1.4.1.1 Introduction  
+The THEMAS system shall determine wh en a reported temperature or 
+a changed temperature setting exceeds the limits set by the 
+D_THEMAS_SRS_001  
+ 3 - 5overtemperature values.  Temperatures that exceed the 
+overtemperature limits shall be reported as such.  Temperatures 
+that do not exceed these limits shall be output for subsequent 
+processing.  
+ 
+3.1.4.1.2 Inputs  
+Valid Temperatures  
+Trigger Values  
+Overtemp Values  
+ 
+3.1.4.1.3 Processing  
+The THEMAS system shall compare the reported temperature value to 
+the temperature setting and detect when the temperature value 
+exceeds the specified limits.  To clarify these conditions, the 
+following definitions will be used:  
+ 
+ LO : Lower Overtemperature Value = TSET - OD 
+ UO : Upper Overtemperature Value = TSET + OD  
+ 
+If T < LO or UO < T then the THEMAS system shall recognize this 
+condition as the temperature limit has been exceeded.  In this 
+case this process shall output the condition of the temperature 
+limit having been exceeded.  
+ 
+If LO < = T < = UO, then this process shall output the 
+temperature status.  
+ 
+3.1.4.1.4 Outputs  
+Temperature Trig ger Exceeded  
+Temperature Limit Exceeded  
+ 
+3.1.4.2 Determine H/C Mode (SRS -010) 
+ 
+3.1.4.2.1 Introduction  
+When the current temperature value exceeds the current 
+temperature setting by a pre -defined amount, the THEMAS system 
+shall activate the appropriate heating or cooling unit.  
+ 
+3.1.4.2.2 Inputs  
+Temperature Trigger Exceeded  
+ 
+3.1.4.2.3 Processing  
+There are two conditions for each individual thermostat that 
+shall be tested for: 1) the thermostat’s settings are satisfied 
+and 2) the thermostat’s temperature indica tes it requires a 
+heating or cooling unit to be turned on.  To clarify these 
+conditions, the following definitions will be used:  
+ 
+ LT : Lower Trigger Value = TSET - TD 
+ UT : Upper Trigger Value = TSET + TD  
+ 
+D_THEMAS_SRS_001  
+ 3 - 6Condition 1:  LT < = T < = UT  
+This condition indicates the thermostat’s current temperature 
+setting is satisfied.  If this condition is true, then the module 
+shall output a request to turn off both the heating unit and the 
+cooling unit.  
+ 
+Condition 2:  LO < = T < LT or UT < T < = UO  
+This condition the nee d for a heating or cooling unit to be 
+turned on.  If this condition is true, then this module shall 
+output a request to turn on the heating unit if LO < = T < LT or 
+the cooling unit if UT < T < = UO.  
+  
+3.1.4.2.4 Outputs  
+H/C Request  
+ 
+3.1.5 Determine Utilization  
+ 
+3.1.5.1 Determine Status of All H/C Units (SRS -011) 
+ 
+3.1.5.1.1 Introduction  
+The THEMAS system shall control each of the heating and cooling 
+units that are defined for the system.  The THEMAS system shall 
+limit the number of heating or cooling units t hat may be running 
+simultaneously.  
+ 
+3.1.5.1.2 Inputs  
+Operational Parameters  
+H/C Request  
+ 
+3.1.5.1.3 Processing  
+The THEMAS system shall maintain the ON/OFF status of each 
+heating and cooling unit.  When a request to turn on or off a 
+heating or cooling unit, the following processing will occur.  
+ 
+When a request to turn on a heating or cooling unit is received, 
+the system shall determine if the request can be honored.  If the 
+maximum number of heating or cooling units is already running, 
+the request will be add ed to a LIFO queue.  If the maximum number 
+of heating or cooling units is not running, this process will 
+generate a request to turn on the requested unit.  
+ 
+When a request to turn off a heating or cooling unit is received, 
+this process shall check the queue of waiting heating and cooling 
+requests.  If the queue is not empty, this process shall remove 
+one request from the LIFO queue and check the current state of 
+the thermostat for which the queued request was made.  If that 
+thermostat still needs a heating o r cooling unit turned on, this 
+process shall submit a request to turn that unit on.  
+ 
+3.1.5.1.4 Outputs  
+Unit Unavailable  
+D_THEMAS_SRS_001  
+ 3 - 7H/C ON/OFF Request  
+ 
+3.1.5.2 Generate Unit Unavailable Event (SRS -012) 
+ 
+3.1.5.2.1 Introduction  
+When a request for a heating unit or cooling to be turned is 
+denied, an event shall be generated and the THEMAS system shall 
+record that event.  The information in these events will be used 
+for creating statistical reports.  
+ 
+3.1.5.2.2 Inputs  
+Unit Unavailable  
+ 
+3.1.5.2.3 Processing  
+This procedure sh all realize the thermostat and heating or 
+cooling information and use this information to generate a 
+specific system event.  This system event shall consist of a 
+description of the event type (a request denied event), a 
+designation of the thermostat that made the request, and a 
+designation of the heating or cooling unit that was not turned 
+on. 
+ 
+3.1.5.2.4 Outputs  
+System Event Data  
+ 
+3.1.5.3 Generate H/C Request (SRS -013) 
+ 
+3.1.5.3.1 Introduction  
+The THEMAS system shall control the heating and cooling units 
+that are designated as part of the THEMAS system.  
+  
+3.1.5.3.2 Inputs  
+H/C ON/OFF Request  
+ 
+3.1.5.3.3 Processing  
+When a request to turn on or off a heating or cooling unit is 
+made, this process shall generate the appropriate request to 
+carry out that request.  This request shall include the 
+designation of the heating or cooling unit and a flag to indicate 
+whether that unit is to be turned on or off.  
+ 
+3.1.5.3.4 Outputs  
+Approved H/C Request  
+ 
+3.1.6 Generate H/C Signal (SRS -014) 
+ 
+3.1.6.1 Introduction  
+Once a request t o turn on or off a heating or cooling unit, the 
+THEMAS system shall provide the necessary control signal for the 
+unit.  This control signal shall also provide an indication of 
+the unit’s status at the requesting thermostat.  
+D_THEMAS_SRS_001  
+ 3 - 8 
+3.1.6.2 Inputs  
+Approved H/C Request  
+ 
+3.1.6.3 Processing  
+This process shall recognize the values for the requested heating 
+or cooling unit and the ON or OFF status that is being requested.  
+The necessary signal to the heating or cooling unit will be 
+generated.  Since the interface to con trol the units has not been 
+defined, the part of this process that will issue the signal is 
+designated as TBD(to be determined).  
+ 
+In order to provide an indication of the status of the heating or 
+cooling unit back to the requesting thermostat, this procedure 
+shall output the status information of the heating or cooling 
+unit. 
+ 
+In order to provide an operational history and statistical 
+reports, this process shall generate an event each time a change 
+is made to the status of a heating or cooling unit.  This ev ent 
+shall contain the identification of the heating or cooling unit 
+whose status is being changed.  
+ 
+3.1.6.4 Outputs  
+Heating Unit Signal  
+Cooling Unit Signal  
+Unit Status  
+System Events  
+ 
+3.1.7 Generate Alarm Data (SRS -015) 
+ 
+3.1.7.1 Introduction  
+There are two events that shall result in an alarm condition: 1) 
+an invalid temperature value is reported from a thermostat, or 2) 
+the reported temperature has exceeded the defined limits.  This 
+process shall determine which alarm event is to be generated.  
+ 
+3.1.7.2 Input s 
+Invalid Temperature  
+Temperature Limit Exceeded  
+ 
+3.1.7.3 Processing  
+When the THEMAS system detects a request for an alarm, this 
+process shall detect which of the two alarms are being requested.  
+ 
+If the system detects an invalid temperature, this process shall 
+output a continuous series of alternating 500 Hz and 700 Hz beeps 
+on the supervisor’s computer.  Each beep shall have a three -
+quarter second duration.  This series of beeps shall continue 
+until the supervisor manually resets the alarm through the 
+supervisor’s interface window.  
+D_THEMAS_SRS_001  
+ 3 - 9 
+If the system detects a temperature limit has been exceeded, this 
+process shall output a continuous series of alternating 1000 Hz 
+and 1500 Hz beeps on the supervisor’s computer.  Each beep shall 
+have a one -half second duration.  This series of beeps shall 
+continue until the supervisor manually resets the alarm through 
+the supervisor’s interface window.  
+ 
+Each time an alarm is requested, an alarm event shall be 
+recorded.  This event shall be used to provide operational and 
+statisti cal reports about the system.  
+ 
+3.1.7.4 Outputs  
+Alarm Data  
+Alarm Events  
+ 
+3.1.8 Generate Event Data (SRS -016) 
+ 
+3.1.8.1 Introduction  
+For each event that is generated, the THEMAS system shall 
+identify each event and generate the appropriate event data.  
+  
+3.1.8.2 Inputs  
+Alarm Events  
+System Events  
+Denied H/C Request  
+ 
+3.1.8.3 Processing  
+When an event occurs, the THEMAS system shall identify the event 
+type and format an appropriate event message.  The THEMAS system 
+shall record each event by a description and the c urrent system 
+time for that event.  This information shall be recorded in a 
+Microsoft® Access® database that shall reside on the supervisor’s 
+computer.  
+ 
+3.1.8.4 Outputs  
+Event Data  
+ 
+3.1.9 Change Thermostat Setting (SRS -017) 
+ 
+3.1.9.1 Introduction  
+The THEMAS system shall provide the supervisor a mechanism to 
+change the temperature setting of any of the thermostats in the 
+system. 
+ 
+3.1.9.2 Inputs  
+Operational Parameters  
+ 
+3.1.9.4 Processing  
+The supervisor’s interface shall display the available 
+thermostats and the ir individual current temperature settings.  
+D_THEMAS_SRS_001  
+ 3 - 10The supervisor shall be able to select one of the thermostats and 
+select a value for the current temperature from a list of valid 
+temperatures.  
+ 
+3.1.9.5 Outputs  
+Temperature Data  
+ 
+3.1.10 Generate Reports (SRS -018) 
+ 
+3.1.10.1 Introduction  
+The THEMAS shall provide the ability for the supervisor to select 
+between two different types of reports: 1) the operational 
+history of the THEMAS system for the past twelve months and 2) a 
+statistical summary for any selected mont h. 
+ 
+3.1.10.2 Inputs  
+Event Data  
+ 
+3.1.10.3 Processing  
+The supervisor’s interface to the THEMAS system shall provide a 
+mechanism to select between an operational history report or a 
+statistical summary report.  Either report shall consist of an 
+ASCII file whose location and name shall be selectable by the 
+operator.  
+ 
+If the operational history report is selected, the THEMAS system 
+shall select all the events from the event database, sort the 
+events by date and time, and create the ASCII report file.  
+ 
+If the sta tistical report is selected, the THEMAS system shall 
+present the operator with a list of available months from which 
+to make a selection.  After selecting one of the months, the 
+system shall generate the ASCII report file.  The statistical 
+reports shall consist of the following statistics:  
+ 
+1.  The percentage of time each heating and cooling unit was on 
+for each day of that month.  
+ 
+2.  For each thermometer, the ratio of the number of requests for 
+a heating and cooling unit that was granted to the number of 
+requests for a heating or cooling unit that was denied.  
+ 
+3.1.10.4 Outputs  
+Report Data  
+D_THEMAS_SRS_001  
+ A - 1APPENDIX A - TRACEABILITY MATRIX  
+D_THEMAS_SRS_001  
+ A - 2 
+SRS Requirement  Statement of Work  
+Requirement  Description  Paragraph  
+SRS-001 Load H/C Unit Definitions   
+SRS-002 Turn off H/C Units  2.5 
+SRS-003 Load Thermostat Definition   
+SRS-004 Load Utilization Parameters   
+SRS-005 Set Trigger Values   
+SRS-006 Set Overtemp Values   
+SRS-007 Establish Valid Temperature Range   
+SRS-008 Validate Temperature  3.1 
+SRS-009 Determine Temperature Status  3.2 
+SRS-010 Determine H/C Mode   
+SRS-011 Determine Status of all H/C Units   
+SRS-012 Generate Unit Unavailable Event   
+SRS-013 Generate H/C Request  2.5 
+SRS-014  Generate H/C Signal  2.1,2.2,2.5  
+SRS-015 Generate Alarm Data  3.1 
+SRS-016 Generate Event Data  5.1, 5.2  
+SRS-017 Change Thermostat Setting  2.4 
+SRS-018 Generate Reports  5.2 
+D_THEMAS_SRS_001  
+ B - 1APPENDIX B - DATAFLOW DIAGRAMS  
+D_THEMAS_SRS_001  
+ B - 2Event
+Information
+Initializaton
+InformationEvent
+Information
+ReportsThermostats
+THEMAS
+SoftwareHeating
+Unit
+Cooling
+Unit
+Audible
+Alarm
+ThermostatsHeating Unit Signal
+Cooling Unit Signal
+Event Data
+Alarm DataTemperature Data
+Unit Status + Temperature Data
+Report DataEvent Data
+Initialization DataContext Diagram
+(Level 0 Dataflow Diagram)
+ 
+D_THEMAS_SRS_001  
+ B - 3Initialize
+Operational
+Parameters
+Generate
+ReportsMonitor
+TemperatureValidate
+Temperature
+Determine
+Utilization
+Change
+Thermostat
+SettingGenerate
+Event
+DataGenerate
+Alarm
+DataTemperature Data
+Initialization DataOperational Parameters
+Operational ParametersOperational Parameters
+Operational ParametersValid TemperatureInvalid Temperature Alarm Data
+Temperature Limit ExceededAlarm Events
+H/C Request
+System EventsEvent Data
+Heating Unit Signal
+Cooling Unit Signal
+Unit Status
+Temperature Data
+Event Data Report DataGenerate
+H/C
+SignalApproved H/C RequestDenied H/C Request
+Operational ParametersTHEMAS Software
+(Level 1 Dataflow Diagram)
+Initialize
+SystemH/C Request
+ 
+D_THEMAS_SRS_001  
+ B - 4Load
+Thermostat
+Definitions
+Set Trigger
+Values
+Set
+Overtemp
+Values
+Establish
+Valid
+Temperature
+RangeLoad
+H/C Unit
+Definitions
+Initialization DataLoad
+Utilization
+ParametersInitialize System
+(Level 2 Dataflow Diagram)
+Operational Parameters
+ 
+D_THEMAS_SRS_001  
+ B - 5Determine
+Temperature
+Status
+Determine
+H/C
+ModeValid Temperature
+Temperature Limit Exceeded
+H/C Request Trigger Values + Overtemp ValuesTemperature Status ReachedMonitor Temperature
+(Level 2 Dataflow Diagram)
+ 
+D_THEMAS_SRS_001  
+ B - 6Generate
+Unit
+Unavailable
+Event
+Generate
+H/C RequestUnit UnavailableSystem Event Data
+Determine
+Status of
+All H/C Units
+Approved H/C RequestH/C Request
+Utilization ParametersH/C ON/OFF RequestDetermine Utilization
+(Level 2 Dataflow Diagram)
+Stack
+RequestUnit Unavailable
+ 
+D_THEMAS_SRS_001  
+ C - 1APPENDIX C - DATA DICTIONARY  
+D_THEMAS_SRS_001  
+ C - 2Alarm Data  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines the various alarm types.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Generate Alarm Data  
+ THEMAS Context Diagram  
+ 
+Alarm Events  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Describes the event that caused an alarm to occur.  
+ 
+Input To Transforms  
+ Generate Event Data  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Generate Alarm Data  
+ 
+Approved H/C Request  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines the thermostat and heating or cooling unit to turn 
+on or off.  
+ 
+Input To Transforms  
+ Generate H/C Signal  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+D_THEMAS_SRS_001  
+ C - 3Output From Transforms  
+ Determine Utilization  
+ Generate H/C Request  
+ 
+Timestamp  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Denotes the current system date and time on the supervisor’s 
+computer.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Report Data  
+ 
+Output From Transforms  
+ (None) 
+ 
+Denied H/C Request  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines the thermostat that requested heating or cooling, 
+but was denied the request due to current system loading.  
+ 
+Input To Transforms  
+ Generate Event Data  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Determine Utilization  
+ 
+Event Data  
+ 
+Allowed Meanings  
+ String + Date  
+ 
+Notes 
+ Describes the entries that are written to the database that 
+are associated with each event that occurs in the system.  
+ 
+Input To Transforms  
+D_THEMAS_SRS_001  
+ C - 4 (None) 
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Generate Event Data  
+ Generate Unit Unavailable Event  
+ THEMAS Context Diagram  
+ 
+H/C Request  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ When the system detects a need for heating or cooling, this 
+defines the thermostat and heating or cooling unit to turn 
+on or off.  
+ 
+Input To Transforms  
+ Determine Utilization  
+ Determine Status of All H/C Units  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Initialize System  
+ Monitor Temperature  
+ 
+H/C ON/OFF Request  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines a request to generate the signal to turn on or off a 
+heating or cooling unit resulting from an approved request 
+for a heating or cooling unit.  
+ 
+Input To Transforms  
+ Generate H/C Request  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Determine Status of All H/C Units  
+ 
+D_THEMAS_SRS_001  
+ C - 5H/C Unit Definitions  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines each discrete heating and cooling unit in the 
+system. 
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Initialization Data  
+ 
+Allowed Meanings  
+ String + Integer  
+ 
+Notes 
+ Information from the initialization file that include the 
+thermostat definitions, heating and cooling definitions, 
+temperature limits, and trigger values.  
+ 
+Input To Transforms  
+ Establish Valid Temperature Range  
+ Initialize Operational Parameters  
+ Load H/C Unit Definitions  
+ Load Thermostat Definitions  
+ Load Utilization Parameters  
+ Set Trigger Values  
+ Set Overtemp Values  
+ THEMAS Context Diagram  
+ 
+Next Higher Dicti onary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ (None) 
+ 
+Invalid Temperature  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+D_THEMAS_SRS_001  
+ C - 6 Denotes the condition when an erroneous temperature is 
+reported from a thermostat.  
+ 
+Input To Transforms  
+ Generate Alarm Data  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Validate Temperature  
+ 
+Operational Parameters  
+ 
+Allowed Meanings  
+ Determine Status Of All H/C Units + H/C Unit Definitions + 
+Overtemp Values + Thermostat Definitions + Trigger Values + 
+Utilization Parameters +  Valid Temperatures  
+ 
+Notes 
+ Information from the initialization file that include the 
+thermostat definitions, heating and cooling definitions, 
+temperature limits, and trigger values.  
+ 
+Input To Transforms  
+ Change Thermostat Setting  
+ Determine Utilization  
+ Initialize System  
+ Monitor Temperature  
+ Validate Temperature  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ (None) 
+ 
+Overtemp Values  
+ 
+Allowed Meanings  
+ Integer 
+ 
+Notes 
+ Defines the delta value relative to the temperature setting 
+value.  A  temperature at or beyond this delta indicates the 
+thermostat has reached a critical value where the heating or 
+cooling unit cannot satisfy the temperature setting value.  
+ 
+Input To Transforms  
+ (None) 
+ 
+D_THEMAS_SRS_001  
+ C - 7Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Report Data  
+ 
+Allowed Meanings  
+ String + Timestamp  
+ 
+Notes 
+ Contains the formatted report information.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Generate Reports  
+ THEMAS Context Diagram  
+ 
+System Events  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Describes each normal operational event that occurs in the 
+system. 
+ 
+Input To Transforms  
+ Generate Event Data  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Generate H/C Signal  
+ 
+Temperature Data  
+ 
+Allowed Meanings  
+ String + Integer  
+ 
+Notes 
+ Temperature and thermostat information to and from the 
+thermostats.  
+D_THEMAS_SRS_001  
+ C - 8 
+Input To Transforms  
+ THEMAS Context Diagram  
+ Validate Temperature  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Change Thermostat Setting  
+ 
+Temperature Limit Exceeded  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Denotes the condition when the reported temperature has 
+exceeded the overtemperature value.  
+ 
+Input To Transforms  
+ Generate Alarm Data  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Determine Temperature Status  
+ Monitor Temperature  
+ 
+Temperature Trigger Exceeded  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Denotes the condition when the reported temperature has 
+exceeded the triggering value indi cating a heating or 
+cooling unit should be requested.  
+ 
+Input To Transforms  
+ Determine H/C Mode  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Determine Temperature Status  
+ 
+Thermostat Definitions  
+D_THEMAS_SRS_001  
+ C - 9 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ The unique identifier associated with each thermostat in the 
+system. 
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Trigger Values  
+ 
+Allowed Meanings  
+ Integer 
+ 
+Notes 
+ Defines the delta valu e relative to the temperature setting 
+value.  A temperature beyond this delta indicates the 
+thermostat is requesting a heating or cooling unit event to 
+occur. 
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Unit Status  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines the current on or off condition of the heating and 
+cooling units and the thermostat to which they are 
+associated.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+D_THEMAS_SRS_001  
+ C - 10 (None) 
+ 
+Output From Transforms  
+ Generate H/C Signal  
+ 
+Unit Unavailable  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Defines the heating or cooling unit that was denied a 
+request to be turned on.  Generated in response to a denied 
+request.  
+ 
+Input To Transforms  
+ Generate Unit Unavailable Event  
+ Stack Request  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Determine Status of All H/C Units  
+ Stack Request  
+ 
+Valid Temperatures  
+ 
+Allowed Meanings  
+ Integer 
+ 
+Notes 
+ Defines the upper and lower limits for a re ported 
+temperature value.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Utilization Parameters  
+ 
+Allowed Meanings  
+ Integer 
+ 
+Notes 
+D_THEMAS_SRS_001  
+ C - 11 Defines how many heating and cooling units that can run 
+simultaneously.  
+ 
+Input To Transforms  
+ (None) 
+ 
+Next Higher Dictionary Where Used  
+ Operational Parameters  
+ 
+Output From Transforms  
+ (None) 
+ 
+Valid Temperature  
+ 
+Allowed Meanings  
+ String 
+ 
+Notes 
+ Denotes the condition when an valid temperature is reported 
+from a thermostat.  
+ 
+Input To Transforms  
+ Monitor Temperature  
+ 
+Next Higher Dictionary Where Used  
+ (None) 
+ 
+Output From Transforms  
+ Validate Temperature  
+ 
+ 

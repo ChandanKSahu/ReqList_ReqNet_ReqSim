@@ -1,0 +1,8 @@
+D	Functional Specification and Architecture - User Centred Intelligence: BEYOND (the GUI)
+5	FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR DOMAIN HOME (2) (UI EDITOR FOR THE CONSUMER DOMAIN)
+5.1	Introduction
+6	FUNCTIONAL SPECIFICATIONS AND ARCHITECTURE FOR DOMAIN VETRONICS (VETRONICS UI EDITOR)
+6.1	Introduction
+6.1.2	High-level requirements
+6.4	Functional spec ifications
+6.4.1	General changing requirements and extensions

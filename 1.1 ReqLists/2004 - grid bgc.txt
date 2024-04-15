@@ -1,0 +1,218 @@
+2.1.1.1	The system shall provide a graphical user interface to all functions of the system.
+2.1.1.2	Grid technologies shall be utilized to provide secure and reliable communications to remote computing resources.
+2.2.1	Scientific users are the favored and primary user class for the system. Scientific users will use the system to manage input data, run simulations, visualize results, and manage output data.
+2.2.2.1	The portal administrator will be in charge of managing the day to day operations of the system. This user will be responsible for managing user accounts, managing user runs if needed, and general portal settings and monitoring.
+2.4.1.1	The web portal components shall integrate into the Dataportal Web Server at NCAR
+2.4.2.1	The compute node software shall be developed and deployed for the Hemisphere Linux cluster at CU
+2.4.3.1	The system shall provide a web based (portal) user interface for all aspects of the system.
+2.5.1.1	The system shall use the Globus toolkit.
+2.6.2.1	Each page will have a context sensitive link to the help system
+2.6.2.2	Each context sensitive help page will be displayed in a pop-up window.
+2.6.2.3	The link will display the topic relevant for the page.
+2.6.2.4	The TOC will not be displayed in the context sensitive view.
+2.7.1	The system will use the NCAR Mass Storage System for all file based storage.
+3.1.0.1	Access to the functional areas of the system will be controlled by user accounts.
+3.1.1.0.1	All GridBGC users shall be required to have valid NCAR Gatekeeper accounts to use the system.
+3.1.1.0.2	Not all Gatekeeper account holders will have access to the GridBGC system. Users must be approved by the GridBGC administrator(s) for access.
+3.1.1.1.1	NCAR Gatekeeper password policies will be governed by the NCAR Gatekeeper tools and policies. Enforcement of these policies and procedures will NOT be enforced through the GridBGC portal.
+3.1.1.1.2	Users must use the existing Gatekeeper tools to manage their passwords.
+3.1.2.0.1	The system shall retrieve all user information from the Gatekeeper account system.
+3.1.2.1	User accounts will have the following status states: 1. Pending Confirmation 2. Pending Approval 3. Active 4. Locked 5. Deleted (Place holder for deleted accounts but needed to maintain internal data structures)
+3.1.3.0.1	The system shall support the following user roles: User – General end user of the system; Administrator – Has additional permissions to administer the operation of the system.
+3.1.5.1	End users can apply for an account directly through the web portal.
+3.1.5.1.1	Users must enter all required fields
+3.1.5.1.2	The user must enter their NCAR Gatekeeper username.
+3.1.5.2	The user can view their current account details: 1. User must be logged in to the portal; 2. Display all the account properties 3. Password will not be displayed
+3.1.5.3.1	The system shall provide a means to request that the user account be deleted from the system.
+3.1.5.3.2	The system shall notify the portal admin(s) about the delete requests
+3.1.5.4	The system shall require the user to enter their username and password to login to the system.
+3.1.5.4.1	The user shall be prompted at the beginning of the session for their credentials, once logged in they will not be prompted for additional or different credentials.
+3.1.5.4.2	All login actions shall be protected by using secure data channels 3. The system shall lock the account after 3 login attempts. This will require portal admin action to unlock the account.
+3.1.5.4.4	Admin users will be authenticated against the portal database.
+3.1.5.4.5	Users will be authenticated against the NCAR Gatekeeper system.
+3.1.6.2	The system shall allow portal administrators the ability to control template submissions rights.
+3.1.6.3	The portal admin shall have the ability to list the user accounts in the system: 1. List all user accounts 2. List accounts pending approval 3. List all account deletion requests 4. List all locked accounts
+3.1.6.4	Delete a specific user account: The operation will not be reversible
+3.1.6.4.1	All user submitted templates will NOT be deleted from disk
+3.1.6.4.2	All shared object that have NOT been referenced by dependent projects will be deleted.
+3.1.6.4.3	All other objects/projects will be deleted completely from the system.
+3.1.6.5	The admin can lock accounts
+3.1.6.5.1.1	The user will be notified via e-mail
+3.1.6.5.1.2	Further logins will not be permitted until unlocked
+3.1.6.5.1.3	Currently executing jobs will continue to run until the job ends or terminated by the portal admin
+3.1.6.5.2	The admin can unlock accounts.
+3.1.6.5.2.1	Once unlocked the user can login to the system and resume use
+3.1.6.6.1	The portal admin will have a display of all running jobs sorted by user
+3.1.6.6.2	The status of each job and tile will be visible to the portal admin
+3.1.6.6.3	The portal admin shall have the ability to terminate any user’s running jobs.
+3.1.6.7.1	The system shall assign all user accounts to the scientist role by default.
+3.1.6.7.2	The system shall allow the portal admin to change a user’s role in the system.
+3.2.0.1	The system will organize the system in to types of logical grouping elements: 1. Objects 2. Projects
+3.2.1.1	Objects will be elements the group related data elements in the system. Objects will be the mechanism by which data is shared and reused throughout the system.
+3.2.2.1	Projects will be elements that group specific objects together to perform a unit of work.
+3.2.4.1	The system shall prevent the user from changing object/project values once that project has been used in a model run. This is to preserve the input values that produced a certain set of output values.
+3.2.4.2	Each object/project will have states which control when the user can change product values.
+3.2.4.3	The system shall support the following states: 3.1. Unlocked – The user can make changes as desired. 3.2. Locked – The user can not make any changes 3.3. Invalidated – A dependency has been modified in someway and object/project may no longer have valid inputs or outputs.
+3.3.0.1	Objects will manage datasets and references to other logically related datasets.
+3.3.1	The system shall support 3 types of objects: List Objects, Grid Objects, Parameterization Objects
+3.3.1.1.1	List objects will contain arbitrary points of data
+3.3.1.1.2	The system will NOT enforce any spatial constraints on list datasets
+3.3.1.2	Grid objects will contain rectangular grid datasets.
+3.3.1.3	Parameterization projects will contain model specific parameter data
+3.3.2.1	Users can select to share specific objects with other users.
+3.3.2.2	Users can specify which users to share the object with: 1. All users or 2. Select specific users within the system
+3.3.2.3	When a shared project is referenced in the system the underlying datasets will NOT be copied.
+3.3.2.4	Once a shared project has been referenced elsewhere in the system it will be in a locked state.
+3.3.3.0.1	Users can create new dataset project by merging existing objects
+3.3.3.1	Project must be of the same type, list or grid
+3.3.3.2	Merging operation will always be used to create new datasets from two existing datasets.
+3.3.3.3	Merge sources can be: 3.1. Current users existing projects 3.2. Other users projects that have been shared
+3.3.3.4	No data validation will be done at this stage: 4.1. Will not check for duplicate data; 4.2. Will not check for spatial relationships of data; 4.3. Will not check for missing values;
+3.3.3.5	Full copies of the source datasets will be made during the creation of the merged dataset.
+3.3.3.6	The system shall display dataset metadata to allow users to screen data prior to merging operations.
+3.4.1.1	The user shall specify the type of project during initial setup; either List or Grid
+3.4.1.2	The system shall only allow the user to reference datasets of the same type as specified in the project
+3.4.2.1	Projects cannot be shared or be templates.
+3.4.3.1	The user can create new projects: 1. List data projects 2. Grid projects
+3.4.4.1	The system shall allow the user to only select referenced objects that are of the appropriate type
+3.4.4.1.1	List and Grid types matching shall be enforced.
+3.5.0.1	System templates will provide a means of sharing expert knowledge within the portal.
+3.5.1.1	Not all Object types shall support template s, see specific object details for more details.
+3.5.3.1	Any user of the system shall be able to use a template.
+3.5.4.1	Only users with template submission privileges can submit new templates.
+3.5.5.1	Once a template has been submitted it can no longer be edited.
+3.5.6.1	The system shall allow the following users to delete templates from the system: Portal Admin(s) OR The user who originally created the template
+3.5.7.1	The system shall provide portal admin(s) with a list of all system templates by project type.
+3.5.7.2	The system shall provide users with a list of their templates in the system.
+3.5.8.1	Any time a template is used the user shall get their own full private copy of the data
+3.5.8.2	The user must supply a new project name when using a template before saving the project.
+3.5.8.3	If the template references a non-shared data resource the user must choose a new dataset before saving the project.
+3.6.2.1	The system shall support the following projection types 1. Geographic  2. UTM  3. Albers Conical Equal Area  4. Lambert Conformal Conic  5. Lambert Azimuthal Equal Area  6. Interrupted Goode Homolosine 7. Interrupted Mollweide
+3.6.5.1	The project must be in an unlocked state
+3.6.5.2	The user can change the parameter values
+3.6.5.3	The user can NOT change the projection type
+3.6.6.1	If the project is in an unlocked state, the project and all related data can be deleted.
+3.6.6.2	If the project is in a locked state, the user shall be prompted to delete all projects that reference this project following the candidate project deletion rules.
+3.6.7.1	This information will not be downloadable by the user.
+3.7.4.1	The project must be in an unlocked state
+3.7.4.2	The user can change the parameter values
+3.7.5.1	If the object is in an unlocked state, the project and all related data can be deleted.
+3.7.5.2	If the object is in a locked state, the user shall be prompted to delete all projects that reference this object following the candidate object deletion rules.
+3.7.6.1	This information will not be downloadable by the user.
+3.8.0.1	This dataset contains observed surface weather data. This is one the primary input data sets in the Daymet model.
+3.8.2.1	Projection Objects can be shared.
+3.8.4.1	User must upload data files to the system
+3.8.4.2	The user can combine 2 discrete objects into 1 new singular object
+3.8.4.2.1	The system shall not perform any checking or conversion
+3.8.4.3.1	The user can create a new object from a subset of a single existing object.
+3.8.5.1	The system shall display a list of all the objects the user currently has in the system
+3.8.5.2	The system shall display the object details, all metadata associated for the object
+3.8.5.2.1	The system shall display all the stations for object
+3.8.5.2.2	The system shall display all the data values for each station
+3.8.7	The system shall allow the user to delete an unlocked project.
+3.8.7.3	The system shall allow the user to delete a locked project under the condition that the user has selected to delete all associated projects that reference the project.
+3.8.7.4	The system shall delete all associated input and model output data for this project during deletion.
+3.9.3.1.3	The system shall extract the specified points from the dataset and store them in a new dataset in the system.
+3.9.5.1	The system shall display a list of all the objects the user currently has in the system
+3.9.5.2	The system shall display the object details: all metadata associated for the object
+3.9.6.1	The system shall provide user interface to manage the observation points
+3.9.6.2	The system shall allow a user to add new data points
+3.9.6.3	The system shall allow a user to edit existing data points
+3.9.6.4	The system shall allow a user to delete existing data points
+3.9.7.1	The system shall allow the user to delete an unlocked object.
+3.9.7.2	The system shall allow the user to delete a locked object under the following conditions: 2.1. The user has selected to delete all associated objects/projects that reference the project.
+3.9.7.3	The system shall delete all associated input and model output data for this project during deletion.
+3.10.2.1	The system shall provide a user interface to manage all parameterization values.
+3.10.3.1	The system shall display a list of all the objects the user currently has in the system
+3.10.3.2	The system shall display the object details: 2.1. Display all metadata associated for the object
+3.11.4.1	The system shall display a list of all the objects the user currently has in the system
+3.11.4.2	The system shall display the object details: 2.1. Display all metadata associated for the object
+3.12.4.1	The system shall display a list of all the objects the user currently has in the system
+3.13.8.1	The system shall allow user to start a new model run.
+3.13.8.1.1	The system shall display a list of computational resources to select from.
+3.13.8.1.2	The system shall provide the user with an approximate execution time estimate based on the computational resource selected.
+3.13.8.2	The system shall allow the user to monitor and control model runs
+3.13.8.2.1	The system shall display a list of runs currently active for the user
+3.13.8.2.2	The system shall display the overall run status 2.3. Daymet model runs shall be monitored on a tile by tile basis.
+3.13.8.2.3.1	The system shall display the list of tiles for a run.
+3.13.8.2.3.2	The system shall maintain the following information for each tile: Status – Queued, Running, Complete, Error
+3.13.8.2.3.2.2	The system shall save and display Stdout messages.
+3.13.8.2.3.2.3	The system shall save and display Stderr messages.
+3.13.8.3	The system shall allow the user to terminate a model run.
+3.13.8.3.1	The system shall delete all output data associated with the run: Cached input files, Temporary files, Output files
+3.13.8.4	The system shall allow a user to restart a model run.
+3.13.8.4.1	The system shall only permit a run to be restarted under the following conditions: 4.1.1: The previous instance has completed; 4.1.2: The previous instance has been terminated
+3.13.8.4.2	The system shall delete all previous model output prior to starting the run.
+3.14.2.1	The systems shall automatically create this object for completed simulation runs
+3.14.6.1	The system shall allow the user to download the output data from the portal.
+3.14.6.1.1	The system shall display a list of all the output tiles to the user.
+3.14.6.1.2	The system shall allow the user to download the data files on a tile by tile basis.
+3.14.6.1.3	The system shall allow the user to download the data in the native system formats and conventions only.
+3.15.7.1	The system shall allow the user to download the data in an EPC file format.
+3.17.2.1	The system shall provide a graphical user interface to manage the output parameters.
+3.17.2.1.1	The system shall provide 1 level of parameter categorization
+3.17.2.1.2	The system shall provide a list of all parameters for each category
+3.17.2.1.3	The system shall allow the user to select individual parameters as needed.
+3.17.2.2.1	The system shall provide a display of the categories a user currently has selected.
+3.17.2.2.2	The system shall provide a method to add new categories to the project.
+3.17.2.2.3	The system shall provide a method to remove categories from the project.
+3.17.4.1	The system shall display the list of objects the user currently has.
+3.17.4.2	The system shall allow the user to view the details of a specific object.
+3.17.5.1	The system shall allow the user to modify an unlocked object.
+3.17.6.1	The system shall allow users to delete unlocked objects.
+3.17.6.2	The system shall allow users to delete locked objects under the following conditions:
+3.17.6.2.1	The user shall be able to choose to delete all objects referencing this object.
+3.18.6.1	The system shall allow the user to delete unlocked objects.
+3.18.6.2	The system shall allow the user to delete locked objects.
+3.18.6.2.1	All dependent objects/projects shall be invalidated
+3.18.7.1	The system shall change the project to an unlocked state
+3.19.0.1	The system shall support the following types of events: 1. Fire 2. Deforestation
+3.19.0.2	The user shall specify the intensity value for the event
+3.19.2	The user shall be able to create a new disturbance object
+3.19.3.1	The system shall list the user’s objects in the system
+3.19.3.2	The system shall list the object details
+3.19.4.1.1	The system shall allow users to edit unlocked objects
+3.19.3.2.1	The system shall allow users to edit locked objects
+3.19.3.2.2	The system shall invalidate dependent objects
+3.19.5.1	The system shall allow the user to delete unlocked objects.
+3.19.5.2	The system shall allow the user to delete locked objects:
+3.19.5.2.1	All dependent objects/projects shall be invalidated
+3.20.2.1	The system shall allow the user to define a simulation topology
+3.20.2.2	The user shall be able to create the following topology options: 2.1. 1 Site x 1 PFT 2.2. 1 Site x all PFT’s 2.3. All Sites x 1 PFT’s 2.4. All Sites x All PFT’s 2.5. n Sites x 1 PFT 2.6. n Sites x All PFT’s 2.7. n Sites x n PFT’s 2.8. 1 Site x n PFT’s 2.9. All Sites x n PFT’s 2.10. Site Specific PFT List (number and weight)
+3.20.3.1	The system shall allow the user to create new blank projects
+3.20.4.2	The system shall list all the user’s projects in the system
+3.20.4.3	The system shall display all the project details
+3.20.5.1	The system shall allow the user to change the project details for unlocked projects.
+3.20.5.2	The system shall allow the user to ability to invalidate a locked project.
+3.20.6.3	The system shall allow the user to delete unlocked projects.
+3.20.6.4	The system shall allow the user to delete locked projects.
+3.20.6.4.1	All dependent objects/projects shall be invalidated
+3.20.7.1	The system shall allow user to start a new model run.
+3.20.7.1.1	The system shall display a list of computational resources to select from.
+3.20.7.2	The system shall allow the user to monitor and control model runs
+3.20.7.2.1	The system shall display a list of runs currently active for the user
+3.20.7.2.2	The system shall display the overall run status
+3.20.7.2.3	BiomeBGC model runs shall be monitored on a tile by tile basis.
+3.20.7.2.3.1	The system shall display the list of tiles for a run.
+3.20.7.2.3.2	The system shall maintain the following information for each tile: Status – Queued, Running, Complete, Error
+3.20.7.2.3.2.2	The system shall save and display Stdout messages.
+3.20.7.2.3.2.3	The system shall save and display Stderr messages.
+3.20.7.3	The system shall allow the user to terminate a model run.
+3.20.7.3.1	The system shall delete all output data associated with the run: Cached input files, Temporary files , Output files
+3.20.7.4	The system shall allow a user to restart a model run.
+3.20.7.4.1	The system shall only permit a run to be restarted under the following conditions: The previous instance has completed; The previous instance has been terminated
+3.20.8.3	The system shall change the project to an unlocked state.
+3.20.7.5	The system shall delete the output data project if created: Delete all the files from disk storage as well.
+3.21.3.2	The systems shall automatically create this object for completed simulation runs
+3.21.6.2	The system shall allow the user to download the output data from the portal.
+3.21.6.2.1	The system shall display a list of all the output tiles to the user.
+3.21.6.2.2	The system shall allow the user to download the data files on a tile by tile basis.
+3.21.6.2.3	The system shall allow the user to download the data in the native system formats and conventions only.
+3.25.2.1	The system shall provide the portal admin a function to validate file references in the system correspond to actual files on the storage system.
+3.25.2.2	The system shall generate a listing of any missing files.
+3.25.2.1.1	1. The system shall list all the compute nodes
+3.25.2.1.2	The system shall display the compute node resource details
+3.25.2.1.3	The system shall allow the admin to manage compute resources:3.1. Add new nodes 3.2. Lock a node 3.3. Unlock a node 3.4. Delete nodes
+3.25.2.1.4	The system shall allow the admin to change compute node settings
+3.25.2.2.1	The system shall allow the portal admin to control the following system settings
+5.1.1.1	The system shall allow users the ability to store data on the NCAR Mass Storage System.

@@ -1,0 +1,26 @@
+D	Security and Privacy Requirements Analysis Tool (SPRAT)
+3	MODULE REQUIREMENTS
+3.1	UAM: USER ACCESS MODULE
+3.1.1	Functional Requirements
+3.1.2	Non-Functional Requirements
+3.2	GSM: GOAL SPECIFICATION AND MANAGEMENT MODULE
+3.2.1	Functional Requirements
+3.3	PM: ANALYSIS DOCUMENT MANAGEMENT MODULE
+3.3.1	Functional Requirements
+3.4	FRE: FLESCH READABILITY MODULE
+3.4.1	Functional Requirements
+3.5	SSM: SCENARIO SPECIFICATION AND MANAGEMENT
+3.5.1	Functional Requirements
+3.6	RS: REQUIREMENTS SPECIFICATION MODULE
+3.6.1	Functional Requirements
+3.7	LC: LEGAL COMPLIANCE MODULE
+3.7.1	Functional Requirements
+3.8	RACAF: REQUIREMENTS-LEVEL ACCESS CONTROL ANALYSIS FRAMEWORK MODULE
+3.8.1	Data Analysis
+3.8.2	Task Analysis
+3.8.3	Organizational Structure Analysis
+3.8.4	Information Analysis
+3.8.5	Access Control Policy Specifications
+3.8.6	Formal Verification
+3.9	P3P: P3P MODULE
+4	SYSTEM REQUIREMENTS

@@ -1,0 +1,52 @@
+4.1.3.5	Maintenance Users and Service Technicians (UNICC) should be able to respond to users and customers reported incident or request for services without entering and manipulating the system .
+4.1.3.6	The project should release a sample client in the most common programming languages (.net, java and python ) to give practical examples to developers.
+4.1.3.7	The project should release an administration  tool that can be provided to 1st and 2nd support tiers in order to facilitate full-filling of services requests and troubleshooting .
+4.1.3.49	The HUB Portal must be released with the option to be translated.
+4.1.3.50	The HUB portal will be initially released in English .
+4.3.3.13	The HUB functionalities must be implemented as single SOAP web service
+4.3.3.18	The HUB service must record th e incoming messages and transactions preventing any data loss
+4.3.3.19	Communications between Client and HUB shall be atomic. Acknowledge of the receipt of a message is sent only when the message is correctly recorded
+4.3.3.24	The HUB will log transactions  and exchanges of messages to allow for any audit of the service by the connected parties
+4.3.3.37	The HUB will not process the envelope content. The importing NPPO client application must be responsible of handling the ePhyto certificate.
+4.3.3.38	The HUB must validate the envelope header and ensure compliance to business rules.
+4.3.3.46	Each envelope will contain only one certificate
+4.3.3.47	The envelope will contain only one destination country (single importing NPPO)
+4.4.3.19	Communications between Client and HUB shall be atomic. Acknowledge of the receipt of a message is sent only when the message is correctly recorded
+4.4.3.24	The HUB will log transactions and exchanges of messages to allow for any audit of the service by the connected parties
+4.4.3.31	NPPO client must be able to PULL incoming ePhytos from the HUB
+4.4.3.33	The HUB will re -send envelopes with a PUSH or PULL process only if not already under delivery
+4.4.3.37	The HUB will not process the envelope content.  The importing NPP O client application must be responsible of handling the ePhyto certificate.
+4.4.3.38	The HUB must validate the envelope header and ensure compliance to business rules.
+4.4.3.42	The HUB will delete messages upon confirmation of receipt of the importing  NPPO Client
+4.6.3.24	The HUB will log transactions and exchanges of messages to allow for any audit of the service by the connected parties
+4.6.3.29	The HUB must be able to receive one e-Phyto in a single SOAP PUSH message
+4.6.3.30	Importing NPPO client application must be able to receive ePhytos from the HUB on a dedicated service end point hosted in the NPPO infrastructure
+4.6.3.33	The HUB will re -send envelopes with a PUSH or PULL process only if not already under delivery
+4.6.3.34	The HUB PUSH tentative threshold must be configurable for each NPPO client
+4.6.3.35	the HUB should report to HUB support operators any messages that have been waiting for delivery for a long time
+4.6.3.37	The HUB will not process the envelope content. The importing NPPO client application must be responsible for handling the ePhyto certificate.
+4.6.3.41	The HUB orchestrator will try to push messages with a configurable schedule for each NPPO, that can be changed based on operational  needs
+4.6.3.42	The HUB will delete messages upon confirmation of the receipt of the importing  NPPO Client
+4.6.3.43	A pre -defined WSDL should be followed by NPPO Clients implementing the receiving web service for PUSH operations. Customization of such sending operation s may be done but with additional costs
+4.7.3.7	The project should release an administration tool that can be provided to 1st and 2nd support tiers in order to facilitate full -filling of services requests and troubleshooting
+5.1.1	The HUB system will not have a direct impact on user operations (NPPO systems) as communication mechanisms are completely asynchronous.
+5.1.2	The HUB may be slower in processing when there might be a sudden increase of traffic, resulting in a slower delivery of message s to the destination NPPO.  This will not result in any data loss.
+5.1.3	The system shall be designed with scaling capabilities in order to reduce the effects of a high load on internal operations. Client’s usage of the service may al so have an impact on the system.
+5.1.4	As a target performance metric,  not more than 2% of the overall traffic in a month should receive ‘connection timeout’ errors.
+5.2.1	Recovery Time Objective (RTO) 6: After a service disruption, maximum  amount of time before the normal service operation is restored .
+5.2.2	Recovery Point Objective (RPO) 7: It is the point in time (before service outage) to which data sent to the HUB will be restored after a disruptive incident occurs. Any data sent after this point has the potential  of being corrupted or lost. NPPOs will have to re-transmit ePhytos for this period (HUB’s Tracking operation – status EnvelopeNotExists will give information on envelopes corrupted due to service disruption).
+5.3	For the purpose of meeting Service Availability metrics, ICC will maintain back -up copies of the live system and its data. This implies that all ‘current’ envelops residing in the system will get backed up. All backup  shall be kept in ICC datacenters (under UN jurisdiction)  and encrypted.
+5.5.1	The primary security  constrain is that all NPPO data (ephyto certificates, information on destination country etc.) should be secure. To this end, the system will not keep any information longer than necessary (as described in the Data Lifecycle section of this document).
+5.5.2	NPPO Data Security during processing : ICC will ensure that the HUB application, as part of processing the envelop es, handles all sensitive data  to meet the primary security constrain ; particularly the ePhyto certificate which is only held by the system for the purpose of delivery to destination NPPO and in accordance with the data lifecycle.
+5.5.3	ICT operations access to the HUB: ICC will ensure that all access to the HUB system is adequately logged and monitored; including access at application developer/maintainer, Operating System, database and network levels. ICC will operate the service in compliance with internationally accepted security standard ISO 27001.
+5.5.4	Trusted CA:  The NPPO should get a client and/or server certificate from a trusted Certificate Authority. For the purpose of this project, any CA with its ‘root certificate’  in the  ‘root certificate store ’ of major browsers – Mozilla Firefox, Google Chrome , Microsoft or  Apple Browsers8 or desktop Operating Systems – MS Windows, Linux, Mac OSX; will be considered a Trusted CA.  The system will also use Certificate Revocation List (CRL) provided by the different CAs in order to avoid using invalid certificates . "
+5.5.14	The HUB web services must communicate using the HTTPS Protocol
+5.5.23	Information contained in the ePhyto is considered as restricted, only the destination NPPO can read the content  The HUB will only parse the envelope header.
+5.5.28	Authentication of the client must be performed using client TLS Certificates
+5.5.45	The service should be given adequate security  to protect it from being hacked or misused
+5.6.13	The HUB functionalities must be implemented as single SOAP web service s
+5.6.15	The HUB service must be available as per the agreed availability requirements.
+5.6.19	Communications between Client and HUB shall be atomic. Acknowledgement of the receipt of a message is sent only when the message is correctly recorded
+5.6.21	The HUB service must implement High Availability architecture
+6.12	There must be a testing version of the system available to countries joining the HUB
+6.44	The project must release the WSDL that must be implemented at NPPO premises for the PUSH receiving web service end point

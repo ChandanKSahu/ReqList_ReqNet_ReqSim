@@ -1,0 +1,157 @@
+3.0.1	Input Services provide the ability for DUAP to interact with any other system that might have data needed by DUAP.
+3.0.2	Administrative Services exist within the DUAP system to configure other services.
+3.0.3	Dynamic Data Services are the active memory of DUAP. Data obtained by the Input Services are stored here for use by other DUAP components.
+3.0.4	Computational Services apply logical algorithms to incoming vehicle and traffic observations in order to transform those observations into data  that are directly  applicable to transportation management and operations processes.
+3.0.5	Persistent Data Services are the long-term memory of DUAP.
+3.0.6	Output Services subscribe to data within DUAP Dynamic and Persistent Data Services and structure and format it for use by other services within and external to the DUAP system.
+3.0.7	Presentation Services support human interpretation of DUAP data.
+3.0.8	Design Constraint s are imposed by existing systems, standards, regulations, or  hardware limitations.
+3.0.9	Quality Characteristics provide requirements which address the general quality, usability, extensibility, flexibility, and maintainability of the system.
+3.0.10	External Requirements are not part of the DUAP system, but include institutional requirements necessary to support the DUAP system. These requirements are not testable and are the responsibility of MDOT.
+3.1.10	The DUAP System shall collect probe vehicle data.
+3.1.10.5	The DUAP data elements shall include probe vehicle data fields corresponding to the SAE J2735 format as enumerated in APPENDIX C -  SAE J2735 Probe Data Elements .
+3.1.10.10	The DUAP Input Services  shall be able to collect probe vehicle data from the VII Proof of Concept (POC) Probe Data Service (PDS) using the X-031 interface.
+3.1.10.15	The DUAP Input Services  shall be able to collect probe vehicle data from the Chrysler Fast Feedback (telematics demonstration) fleet using the Chrysler telematics interface.
+3.1.10.20	The DUAP Input Services  shall be able to collect probe vehicle data from Southeast Michigan Snow and Ice Management (SEMSIM) using the SEMSIM interface.
+3.1.10.30	The DUAP Input Services  shall be able to collect probe vehicle data from Suburban Mobility Authority for Regional Transportation (S MART) Transit using the SMART Transit interface.
+3.1.10.40	The DUAP Input Services  shall be able to collect probe vehicle data from The Rapid Transit using the “The Rapid Transit” interface.
+3.1.10.50	The DUAP Input Services  shall be able to collect probe vehicle data from Ann Arbor Transit using the Ann Arbor Transit interface.
+3.1.10.60	The DUAP Input Services  shall be able to collect probe vehicle data from Detroit Department of Transportation (DDOT) Transit using the DDOT interface.
+3.1.10.70	The DUAP Input Services  shall be able to collect probe vehicle data from the MDOT fleet using the MDOT probe vehicle data interface.
+3.1.10.80	The DUAP Input Services  shall be able to collect probe vehicle data from truck fleets using the truck fleets’ interfaces.
+3.1.10.90	The DUAP Input Services  shall be able to collect probe vehicle data from the car rental fleets using the car rental fleets’ interfaces.
+3.1.30	The DUAP System shall be able to collect weather data.
+3.1.30.22	The DUAP Input Services shall be able to collect weather data from the Road Commission for Oakland County (RCOC) Road Weather Information Systems (RWIS) using the RCOC RWIS interface.
+3.1.30.23	The DUAP Input Services shall be able to collect weather data from the MDOT RWIS using the MDOT RWIS interface.
+3.1.30.24	The DUAP Input Services shall be able to collect weather data from Michigan Department of Natural Resources (MDNR) weather information systems using the MDNR interface.
+3.1.30.26	The DUAP Input Services shall be able to collect weather data from MDOT Aeronautics Automated Weather Observing System (AWOS) using the AWOS  interface.
+3.1.30.30	The DUAP Input Services shall be able to collect Clarus  weather data as enumerated in APPENDIX D - Weather Data Elements from Clarus .
+3.1.30.40	The DUAP Input Services shall be able to include weather condition fields corresponding to the SAE J2354 WeatherInformation structure as enumerated in APPENDIX E - SAE J2354 Weather Information  Elements .
+3.1.40	The DUAP System shall be able to collect Origin/Destination (O/D) data.
+3.1.70	The DUAP System shall collect roadway traffic data.
+3.1.70.3	The DUAP data elements shall include roadway event information data fields corresponding to the SAE J2354 structure as enumerated in APPENDIX F -  SAE J2354 EventInformation Elements .
+3.1.70.5	The DUAP Input Services shall include roadway traffic data fields corresponding to the SAE J2354 structure as enumerated in APPENDIX G -  SAE J2354 LinkTrafficInformation Elements .
+3.1.70.10	The DUAP Input Services shall be able to collect roadway traffic data from the MITS Center using the MITS traffic data interface.
+3.1.70.20	The DUAP Input Services shall be able to collect roadway traffic data from the Western Michigan Traffic Management System (WMTMS) using the WMTMS interface.
+3.1.70.30	The DUAP Input Services shall be able to collect roadway traffic data from the RCOC system using the RCOC system interface.
+3.1.70.40	The DUAP Input Services shall be able to collect roadway traffic data from the Road Commission of Macomb County (RCMC) system using the RCMC system interface.
+3.1.70.50	The DUAP Input Services shall be able to collect roadway traffic data from NAVTEQ Corporation’s Traffic.com using the Traffic.com interface.
+3.1.70.60	The DUAP Input Services shall be able to collect roadway traffic data from the Traffic Monitoring System for Highways (TMS/H) using the TMS/H interface.
+3.1.70.70	The DUAP Input Services shall be able to collect traffic data from the Ann Arbor Traffic Management Center (TMC) system using the Ann Arbor TMC interface.
+3.1.70.80	The DUAP Input Services shall be able to collect traffic data from the Detroit TMC system using the Detroit TMC interface.
+3.1.70.90	The DUAP Input Services shall be able to collect traffic data from the Superior and Traverse City North Regions TMC system using the Superior and Traverse City North Regions TMC interface.
+3.1.70.100	The DUAP Input Services shall be able to collect traffic data from the Statewide TMC system using the Statewide TMC interface.
+3.1.110	The DUAP System shall be  able to collect traveler information.
+3.1.130	The DUAP System shall be able to collect road condition data.
+3.1.130.10	The DUAP Input Services  shall be able to collect road condition data from Traffic Management Systems (TMS) using the TMS interface.
+3.1.140	The DUAP System shall be able to collect work zone (lane closure) data.
+3.1.905	The DUAP System shall log Input Services data transactions.
+3.2.20	The DUAP System shall be able to organize the sequence of execution of computational modules.
+3.2.30	The DUAP System shall allow the system administrator to add, modify, and delete Input Services.
+3.2.40	The DUAP System shall allow the system administrator to add, modify, and delete Computational Services.
+3.2.50	The DUAP System shall allow the system administrator to add, modify, and delete Output Services.
+3.2.60	The DUAP System shall allow the system administrator to add, modify, and delete Presentation Services.
+3.2.200	The DUAP System shall restrict access to authorized users.
+3.2.210	The DUAP System shall keep records of user access.
+3.2.220	The DUAP System shall allow a system administrator to add, modify and delete user access rights.
+3.2.905	The DUAP System shall be able to log system operations.
+3.2.906	The DUAP System shall log Administrative Services data transactions.
+3.3.10	The DUAP System shall cache (both raw and derived) probe vehicle data.
+3.3.70	The DUAP System shall cache (both raw and derived) traffic data.
+3.3.30	The DUAP System shall cache (both raw and derived) road weather data.
+3.3.130	The DUAP System shall cache (both raw and derived) road condition data.
+3.3.100	The DUAP System shall cache data only if the data record associates the data with its source, a geo-referenced location, and a timestamp.
+3.3.50	The DUAP System shall cache data for 1 week.
+3.3.40	The DUAP System shall allow data to be accessed as soon as it is cached.
+3.3.905	The DUAP System shall log Dynamic Data Services data transactions.
+3.4.10	The DUAP System shall derive traffic data from probe vehicle data.
+3.4.10.10	The DUAP Computational Services shall be able to derive speed from probe vehicle data.
+3.4.10.20	The DUAP Computational Services shall be able to derive congestion level based on volume to capacity from probe vehicle data.
+3.4.10.30	The DUAP Computational Services shall be able to derive traffic counts from probe vehicle data.
+3.4.10.40	The DUAP Computational Services shall be able to derive traffic distribution (occupancy) from probe vehicle data.
+3.4.10.50	The DUAP Computational Services shall be able to derive freeway queue length from probe vehicle data.
+3.4.10.55	The DUAP Computational Services shall be able to derive arterial queue length from probe vehicle data.
+3.4.10.60	The DUAP Computational Services shall be able to derive travel time from probe vehicle data.
+3.4.10.70	The DUAP Computational Services shall be able to derive turning movements from probe vehicle data.
+3.4.20	The DUAP System shall be able to infer incidents from probe vehicle data.
+3.4.20.20	The DUAP Computational Services shall be able to infer incident locations from probe vehicle data.
+3.4.20.30	The DUAP Computational Services shall be able to infer incident type from probe vehicle data.
+3.4.20.40	The DUAP Computational Services shall be able to infer incident severity from probe vehicle data.
+3.4.40	The DUAP System shall be able to derive road surface weather observations from probe vehicle data.
+3.4.70	The DUAP System shall be able to derive travel demand from probe vehicle data.
+3.4.100	The DUAP System shall be able to derive roadway surface conditions from probe vehicle data.
+3.4.100.10	The DUAP Computational Services shall be able to derive pavement surface conditions from probe vehicle data.
+3.4.100.20	The DUAP Computational Services shall be able to derive bridge surface conditions from probe vehicle data.
+3.4.100.30	The DUAP Computational Services shall be able to derive pothole location from probe vehicle data.
+3.4.100.40	The DUAP Computational Services shall be able to derive pothole severity from probe vehicle data.
+3.4.120	The DUAP System shall be able to identify high risk locations.
+3.4.130	The DUAP System shall be able to calculate measures of effectiveness.
+3.4.140	The DUAP System shall be able to perform data quality checking.
+3.4.905	The DUAP System shall log Computational Services data transactions.
+3.5.20	The DUAP System shall store geo-references for Michigan roadways.
+3.5.30	The DUAP System shall store DUAP system configuration data.
+3.5.40	The DUAP System shall archive cached data.
+3.5.40.10	The DUAP Persistent Data Services shall be able to archive cached (raw and derived) probe vehicle data.
+3.5.40.20	The DUAP Persistent Data Services shall be able to archive cached (raw and derived) traffic data.
+3.5.40.30	The DUAP Persistent Data Services shall be able to archive cached (raw and derived) roadway weather data.
+3.5.40.40	The DUAP Persistent Data Services shall be able to archive cached (raw and derived) road condition data.
+3.5.905	The DUAP System shall log Persistent Data Services data transactions.
+3.6.10	The DUAP System shall publish data.
+3.6.10.10	The DUAP Output Services shall be able to publish traveler data in SAE J2354 format as enumerated in Appendix E.
+3.6.10.25	The DUAP Output Services shall be able to publish roadway traffic information in  Traffic Management Data Dictionary (TMDD) format.
+3.6.10.30	The DUAP Output Services shall be able to publish traffic data to TMS using the TMS interface format.
+3.6.10.20	The DUAP Output Services shall be able to publish data to SEMSIM using the SEMSIM interface format.
+3.6.10.50	The DUAP Output Services shall be able to publish traffic data in the VISSIM traffic analysis tool VISSIM interface format.
+3.6.10.60	The DUAP Output Services shall be able to publish traffic data in the Synchro traffic analysis tool Synchro interface format.
+3.6.10.70	The DUAP Output Services shall be able to publish traffic data in the Paramics traffic analysis tool Paramics interface format.
+3.6.10.75	The DUAP Output Services shall be able to publish traffic data in the SimTraffic traffic analysis tool SimTraffic interface format.
+3.6.10.80	The DUAP Output Services shall be able to publish traffic management data in TMS/H interface format.
+3.6.10.90	The DUAP Output Services shall be able to publish weather data elements as enumerated in APPENDIX D - Weather Data Elements from Clarus  output format.
+3.6.10.100	The DUAP Output Services shall be able to publish asset condition data using the asset condition data interface format.
+3.6.20	The DUAP System shall publish alerts.
+3.6.20.10	The DUAP Output Services shall be able to publish traffic condition alerts using the traffic condition alert interface format.
+3.6.20.20	The DUAP Output Services shall be able to publish weather condition alerts using the weather condition alert interface format.
+3.6.20.30	The DUAP Output Services shall be able to publish asset condition alerts using the as set condition alert interface format.
+3.6.20.40	The DUAP Output Services shall be able to publish alerts using the threshold exceeded alert interface format when thresholds have been exceeded.
+3.6.30	The DUAP System shall publish information for the MDOT MI Drive  presentation.
+3.6.905	The DUAP System shall log Output Services data transactions.
+3.7.10	The DUAP Presentation Services shall present data published by Output Services.
+3.7.20	The DUAP Presentation Services shall include a user interface for browsing traffic information.
+3.7.20.10	The traffic information browser shall allow a user to query traffic-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.20.20	The traffic information browser shall allow a user to view traffic-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.20.30	The information browsers shall provide a means for users to select between Metric and English units of measurement for display.
+3.7.20.40	The information browsers shall provide a map display which uses icons to identify the locations with associated data.
+3.7.20.50	The system map display shall provide a means to select which data layers are displayed.
+3.7.20.60	The system map display shall support each type of traffic item to be displayed in its own layer.
+3.7.20.70	The system map display shall support pan and zoom capabilities to allow a user to select the area to be displayed.
+3.7.20.80	The system map display shall support de-cluttering to reduce the number of icons displayed when large areas are displayed.
+3.7.20.90	The information browsers shall provide tabular information identifying locations with associated data.
+3.7.20.100	The tabular information display shall provide a means to select the data to be displayed.
+3.7.20.110	The tabular information display shall provide a means to select the area to be displayed.
+3.7.30	The DUAP Presentation Services shall include a user interface for browsing incident information.
+3.7.30.10	The incident information browser shall allow a user to query incident-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.30.20	The incident information browser shall allow a user to view incident-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.40	The DUAP Presentation Services shall include a user interface for browsing traveler information.
+3.7.40.10	The traveler information browser shall allow a user to query traveler-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.40.20	The traveler information browser shall allow a user to view traveler-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.50	The DUAP Presentation Services shall include a user interface for browsing asset condition information.
+3.7.50.10	The asset condition information browser shall allow a user to query asset condition-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.50.20	The asset condition information browser shall allow a user to view asset condition-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.80	The DUAP Presentation Services shall include a user interface for browsing weather information.
+3.7.80.10	The weather information browser shall allow a user to query weather-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.80.20	The weather information browser shall allow a user to view weather-related information using a web browser capable of supporting HTML 4.01, JavaScript (ECMA-262 edition 3), and XML 1.0.
+3.7.200	The DUAP System shall require users to log in for system access.
+3.7.200.10	The DUAP Presentation Services shall require users to uniquely identify themselves. MHI Could be implemented, for example, through a username.
+3.7.200.20	The DUAP Presentation Services shall require users to confirm their identity.
+3.7.905	The DUAP System shall log Presentation Services data transactions.
+3.8.10	The DUAP System shall conform to IT standards established by the Michigan Department of Information Technology (MDIT).
+3.8.10.10	The DUAP System shall use a Java software foundation.
+3.8.10.15	The DUAP system shall use Java Database Connectivity (JDBC) components to interact with databases.
+3.8.10.20	The DUAP System shall be able to use Oracle 10G as the relational database.
+3.8.10.30	The DUAP System shall handle database data requests through standard Structured Query Language (SQL). Commands.
+3.8.40	The DUAP System shall use Michigan Geographic Framework geo-references.
+3.9.20	The DUAP System shall be capable of adding new data sources.
+3.9.30	The DUAP System shall be capable of adding new computational algorithms.
+3.9.40	The DUAP System shall be capable of adding new output formats of published data.
+3.9.50	The DUAP System shall be capable of adding new presentations of published data.
+3.10.100	Access to the DUAP system shall be limited to users authorized by MDOT.

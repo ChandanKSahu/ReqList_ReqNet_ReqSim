@@ -1,0 +1,9 @@
+D	California Correctional Health Care Services (CCHCS) Emergency Medical Response (EMR) System 
+0	Pharmacy General Requirements
+1	Prescribe & Order
+2	Order Communication
+3	Dispensing
+4	Administration
+5	Monitoring
+6	Formulary
+7	Inventory

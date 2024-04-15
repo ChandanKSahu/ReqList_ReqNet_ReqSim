@@ -1,0 +1,228 @@
+2.2.2.101	The MOSAR technology shall allow repair and update of modular spacecraft by manipulation and repositioning of functional modules with a  robotic manipulator
+2.2.2.102	The modular spacecraft shall be reconfigurable and should be able to use new functionalities brought by additional functional modules, in order to perform new mission tasks.
+2.2.2.103	The robotic manipulator  shall be able to add and replace whole functional modules (ASM/APM) by using the interconnectors of these modules.
+2.2.2.104	The robotic manipulator shall be able to reposition itself by using the interconnectors/structure of the functional modules or the spacecraft
+2.2.2.105	A design software shall be able to create a robotic compatible servicing / reconfiguration plan for the modular spacecraft
+2.2.2.106	A simulation software shall be able to simulate the system with all related robotics elements following the execution plan
+2.2.2.107	The modular spacecraft shall perform the high -level control of the robot, by the execution and monitoring of the reconfiguration plan  (task level)
+2.2.2.108	The robotic manipulator shall ensure its low -level control for the execution of the high-level tasks
+2.2.2.109	The modular spacecraft shall be able to monitor the status of  essential parameters of each connected functional  module
+2.2.2.110	The system shall be able to reallocate resources (e.g. power, data, computational power, etc.) and assign different path automatically in case of a defect (e.g. interconnector of an APM)
+2.2.2.111	The system shall be able to handle the tasks even during a connection failure or a power interruption of defect modules/interconnectors.
+2.2.2.112	One or several modules options shall be available to implement for  electrical power supply enabling operation of the functional modules and the robot manipulator
+2.2.2.113	The modular spacecraft shall be able to shut down or command a stand -by mode of any non-critical module to reduce power consumption if needed.  Critical functions should not be affected by shutting down of non -critical modules.
+2.2.2.114	One or several modules options shall be available to implement a data handling system (that can be composed of one or more modules) that enables operation of the different modules and the manipulator.
+2.2.2.115	One or several modules options shall be available to implement heat management functions that allow thermal regulation of the different modules within its specific range of temperatures. The heat management system could be composed of one or more modules.
+2.2.2.116	One or several modules options shall be available to implement a propulsion subsystem with capacity to perform at least:   Station keeping maneuvers.   Orbit relocation.   De-orbiting.
+2.2.2.117	"One or several modules options shall be available to implement an attitude control subsystem, with capacity to perform at least:   Spacecraft reorientation.   Attitude control compatible with mission objectives.   Autonomous search of the Sun and the Earth
+2.2.2.118	Modules shall be able to connect mechanically to other modules or to the spacecraft through interconnectors.
+2.2.2.119	Any module should be able to act as a data relay for other modules or the robotic manipulator through their interconnector , also if the module is in safe mode
+2.2.2.120	The OBC shall be able to redirect telecommands to specific modules, for the spacecraft configuration or for instance upon detection of failure on any point of the network.  If an alternative path is not available, the OBC shall be able to isolate the faulty node and all the other nodes connected downstream.
+2.2.2.121	Module should be able to act as a power relay for other modules or the robotic manipulator  through their interconnector s, also if the module is in safe mode
+2.2.2.122	The OBC shall be able to redirect power to specific modules, for the spacecraft configuration or for instance upon detection of power failure on any point of the network.  If an alternative path is not available, the OBC shall be able to isolate the faulty node and all the other nodes connected downstream.
+2.2.2.123	Module should be able to act as a thermal relay for other modules through their interconnectors
+2.2.3.201	The modular spacecraft shall be able to withstand the loads expected on orbit with significant (TBD) safety margins.  In any case, the mechanical integrity of the ensemble should not be compromised.
+2.2.3.202	The robot manipulator and its connections to the modules or spacecraft shall be able to withstand the loads expected during modules operations with significant (TBC) safety margins.  In any case, the mechanical integrity of the robotic arm and its connection with the spacecraft or modules should not be compromised.
+2.2.3.203	The mechanical interfaces of the modular spacecraft shall provide the required alignment accuracy and stiffness required by the different modules to meet their respective performance requirements and to not constitute a harm to the rest of the spacecraft.
+2.2.4.301	The modular spacecraft shall have a redundant communication link with the ground segment for telemetry and telecommands.
+2.2.4.302	Every module shall have a communication link enabling to send telemetry to the spacecraft monitoring unit (OBC) and ultimately to the ground station. The link with the ground station could be done through a specific communication module implemented on the modular spacecraft.
+2.2.4.303	The ground segment shall know at any moment the status of the different modules of the modular spacecraft. This information is passed through two types of telemetries:  • Periodic telemetry with standardized packets.  • Asynchronous telemetry with error message.
+2.2.4.304	Any module of the modular spacecraft provided with an electrical power interface should have a connection to ground.
+2.2.5.401	The modular spacecraft shall be quantifiably more reliable by design than a monolithic system over the mission lifetime of the satellite, including (and as a specific advantage) under extensions of mission lifetime.
+2.2.5.402	The modular spacecraft shall be quantifiably more flexible in operation and responsive to mission changes than a traditional satellite with a similar mission.
+2.2.5.403	The modular spacecraft shall have quantifiable advantages in cost -effectiveness and economy of operation from a mission perspective over the projected lifetime of the satellite.  Otherwise, it should be demonstrated that the benefits (in terms of enhanced functionalities) compensate the additional costs.  "
+2.2.5.404	The modular spacecraft and modules assembly shall implement a minimum number of connection interfaces such as at least two of these interfaces are available at any moment and within the reach of the robotic manipulator.
+2.2.5.405	The assembly of modules on a modular spacecraft responds to a planning and design that has previously being verified on ground.
+2.2.6.501	The weight of all components associated with the concept of modular spacecraft shall be minimized (interconnectors, functional module structure, robotic manipulator)
+2.2.6.502	The size and volume of the interconnectors shall be minimized to offer more place inside the functional modules
+2.2.6.601	The functional modules shall be delivered to the modular spacecraft by a servicer satellite equipped with a robotic manipulator
+2.2.6.602	The modular spacecraft shall implement a physical interface for docking and/or berthing of a servicer satellite.
+2.2.6.603	The modular spacecraft shall be able to remain coupled to the servicer spacecraft without time limitation.
+2.2.6.604	The modular spacecraft should be able to communicate with the servicer and exchange data during and after rendezvous operation.
+2.2.6.605	The modular spacecraft shall be able to monitor operations during and after rendezvous and send reports to the ground segment.
+2.2.6.606	The components of the modular spacecraft: subsystems, interfaces and structures shall be able to withstand the space environment for the whole duration of the mission.
+2.2.6.607	The interconnectors design shall optimize launch load capabilities, to offer the wider range of possibilities regarding pre -assembled functional modules (on the initial spacecraft or the servicer) before launch
+2.2.8.701	The failure of any functional module shall not yield to the loss of the spacecraft.
+2.2.8.702	Any functional module providing a critical functionality (one that is needed for the safe mode of the functional platform) shall be redundant .
+2.2.8.703	Any module of the modular spacecraft shall be designed as to avoid failure propagation. In particular, the module shall prevent itself or any of its components from degrading performances of other modules or damaging the modular spacecraft.
+2.2.8.704	Any module that is considered critical (without this module the spacecraft loss one of its basic functionalities) can only be exchanged if:  1. Another module covering its functionality has already been added to the client spacecraft.  2. This second module is already operational.  3. The module to be substituted has already been isolated and switched off.  4. No anomaly has been detected between steps 2 and 3.
+2.2.8.705	Any module shall be able to withstand a sudden power loss without any damage to itself or to other modules. The module shall autonomously shut down or enter a standby mode of minimum power consumption.
+2.2.8.706	After a sudden power loss, any module of the modular spacecraft shall be able to restart and resume normal operation when power supply is restored.
+2.2.8.707	The modular spacecraft shall implement a redundant on-board computer. The two (or more) OBCs could be integrated in different modules or in the same module. If the OBCs are integrated in the same module, two different interfaces should be provided, ensuring that in any case a single failure does not yield to the loss of the spacecraft.  "
+2.2.8.708	The modular satellite shall be able to detect failure of any module, isolate the faulty equipment and perform recovery operations when possible.
+2.2.8.709	The modular spacecraft shall implement a safe mode that guarantees a stable condition of the spacecraft without time limitation. This mode should be fully autonomous (without any ground intervention).
+2.2.8.710	Any module of the modular spacecraft shall implement a safe mode. This mode minimizes hardware and software functions as to make minimal use of the modular spacecraft resources (power).
+2.2.8.711	The modular spacecraft should enter safe mode either by autonomous transition triggered by the on -board computer or through ground command.
+2.2.8.712	Any module of the modular spacecraft should enter in safe mode when commanded by the on -board computer of the modular spacecraft, by ground command or by autonomous triggering of the module itself.
+2.2.8.713	Any module considered as critical (needed for the safe mode of the modular platform, ensuring no loss of the spacecraft) shall have either:  a) A direct connection to the OBC.  b) Two independent paths to reach the OBC through other modules.
+2.2.8.714	Any module considered as critical (needed for the safe mode of the modular platform, ensuring no loss of the spacecraft) shall have either:  a) A direct connection to the power supply.  b) Two independent paths to reach the power supply through other modules.
+2.2.8.715	The design of the modular spacecraft shall minimize the number of single point of failures (failure that yields to loss of the spacecraft or its mission). Every single point of failure should be fully described, analyzed, and justified why any other implementation is not better than the selected one.
+2.2.9.801	A modular spacecraft implements identical modules in terms of structure shape and materials. Singularly, different shapes could be accepted provided that compatibility with the basic modules is ensured.
+2.2.9.802	The functional module orientation shall be adjustable as function of its function and position on the modular spacecraft
+3.3.1.101	The MOSAR demonstrator shall illustrate  the repair and update of modular spacecraft by manipulation and repositioning of SM with the WM.
+3.3.1.102	The MOSAR demonstrator shall include:  • A set of spacecraft modules (ASM/APM) to illustrate the scenarios and functionalities of modular spacecraft  • A robotic walking manipulator for the manipulation of the SM  • A servicer satellite  and client modular spacecraft mockup to support the demonstration scenarios  • A monitoring and control center that includes a design and simulation tool to create and simulate the  execution plan  and a monitoring interface
+3.3.1.103	The SVC OBC shall execute  autonomously  the assembly/ reconfiguration plan  prepared by the design and simulation tool
+3.3.1.104	The SVC OBC shall perform the high -level control of the WM, SM and SI for the execution of the assembly/ reconfiguration plan
+3.3.1.105	Low level control of the WM, SM and SI shall be performed locally by each component
+3.3.1.106	The WM shall be able to add and replace SM (ASM/APM) by using SI.
+3.3.1.107	The WM shall be able to reposition itself by using the SI of the functional modules or the platform
+3.3.1.108	The SVC OBC shall be able to monitor the parameters of the SM, WM and SI
+3.3.1.109	The system shall be able to reconfigure the CLT  (e.g. SM exchange)  in case of a defect (e.g. malfunction of a SM )
+3.3.1.110	The system shall be able to  reroute and  reallocate resources (e.g. power, da ta, computational power, etc.)  in case of a defect (e.g. interconnector of an APM)
+3.3.1.111	The SVC OBC shall be able to detect and use additional functional modules (plug & play principle)
+3.3.1.112	The SVC OBC shall be able to react to a faulty behavior detected by the SM, WM or SI
+3.3.1.113	A 3D reconstruction of the satellite could be produced from the observation by a camera mounted on the WM, with a maximum surface average error of 1cm
+3.3.1.114	A 3D reconstruction of the satellite could be produced from the observation by a camera mounted in a SM, with a maximum surface average error of 1cm
+3.3.1.115	The 3D pose estimation of the camera mounted on the WM could be computed based on the image stream, with a mean error not larger than 1 cm translation and 5° rotation, with a minimum of 30 frame/sec
+3.3.1.116	The 3D pose estimation of the SM could be computed based on the image stream obtained by the camera mounted on the WM, with a mean error not larger than 1 cm translation and 5° rotation, with  a minimum of 30 frame/sec  (first estimation of a new module 10 sec after appearance)  "
+3.3.2.201	TM/TC control of the WM and SM, including their SI, by the SVC OBC shall require a network supporting a data rate of 1Mbps or greater
+3.3.2.202	SVC OBC shall require a network supporting a data rate of 50Mbps or greater for SM service data.
+3.3.3.301	The SVC shall provide a mechanical docking connection to the CLT
+3.3.3.302	The SVC shall provide a data interface to the CLT to connect both internal networks
+3.3.3.303	The SVC shall provide a power interface to the CLT to be able to power CLT components
+3.3.2.304	The MCC shall provide a data link for upload of the execution plan and TM/TC services with the SVC
+3.3.2.305	The MCC shall provide a data link for monitoring and debugging purpose during the integration and testing of the demonstrator.
+3.3.2.306	The SVC and CTL shall provide SI to enable connection with the SM and the WM
+3.3.4.401	The platform shall implement ESROCOS from OG1 for the control of the system.
+3.3.4.402	The platform shall implement autonomy functions using OG2 (ERGO)
+3.3.4.403	The platform shall implement sensor data fusion techniques from OG3 (Infuse)
+3.3.4.404	The satellite shall be equipped with its own integrated R -ICU derived from the OG4 I3DS architecture and illustrate operations of functional modules equipped with selected sensors suite from I3DS
+3.3.4.405	The required H/W units in OG9 (platform, ASMs/APMs, robot) shall be equipped with standard interfaces from OG5.
+3.3.4.406	The SVC and CLT spacecraft shall have on OBC for the management of the different components associated with the spacecraft and the communications.
+3.3.4.407	The system shall implement a data technology network that support s data bus re -configuration and routing
+3.3.4.408	The demonstrator design should not be de -rated for demonstration use and be representative of an actual space system in terms of capabilities (e.g. mass movement capacity, speed of reconfiguration, processing capacity of on -board computing), while still retaining feasibility of operation in Earth’s gravity (so as to be functional)
+3.3.6.601	The demonstrator shall be able to work under laboratory conditions in a temperature range between 10  and 30 deg
+3.3.6.602	The demonstrator shall be able to work under 1g
+3.3.6.603	The demonstrator shall be able to be powered from standard power plugs
+3.3.7.701	Demonstrator shall be inherently safe during operation, considering the implementation in a laboratory environment with trained operators
+3.3.8.800	A test bench shall be designed and integrated to represent  the SVC satellite  to the CLT spacecraft, considering the gap existing between both the platform during docking condition
+3.3.8.801	The structure of the test bench shall be stable and able to carry the own mass and  the loads introduced by the SMs and WM
+3.3.8.802	The SVC and CTL test benches shall provide the required number of SI to cover the MOSAR scenario demonstration s
+3.3.8.803	The test bench shall include the internal and external harnessing of the SVC and CTL spacecraft and the connected SI
+3.4.1.101	The WM shall be able to connect to the SI of the SM or the spacecraft mockup, independently through one of its own SI
+3.4.1.102	The WM shall be able to move and assemble the functional modules in a 3 -dimensional way
+3.4.1.103	The WM shall provide local joint position control at minimum 500 Hz
+3.4.1.104	The WM shall provide local Cartesian position control of the free end -effector  at minimum 500 Hz
+3.4.1.104	The WM shall provide impedance control at minimum 500 Hz
+3.4.1.105	The WM shall be able to detect malfunction of its operations
+3.4.1.106	The WM shall be able to be powered on/off, keeping its current position
+3.4.1.107	The WM shall be able to start and initialize automatically after power -on, reaching a state ready for communication and operations
+3.4.1.106	The WM could have the ability to perceive the location of SMs in three dimensions to an error of 1cm using attached stereo vision sensors.
+3.4.2.201	The WM shall be able to manipulate a payload of 7kg all around his workspace
+3.4.2.202	The WM kinematic structure shall be compatible in size and joint configuration to support all MOSAR scenarios demonstrations
+3.4.2.203	The data interface of the WM shall support a data rate of 1Mbps or greater for TM/TC control.
+3.4.2.204	The data interface of the WM shall support a data rate of 50 Mbps or greater for service data.
+3.4.2.205	The power interface of the WM shall support 0.5kW [TBC] of power transfer
+3.4.3.301	The WM shall transmit telemetry and receive  high-level tele -command  with the SVC OBC, independently through  the data interface of one of  the connected SI
+3.4.3.302	The WM shall be able to transmit TM/TC and data from the SVC OBC  with the SM connected at its SI
+3.4.3.303	The WM shall get power from the spacecraft/modules through the power interface of the connected SI
+3.4.3.304	The WM shall be able to transmit power to the SM connected at its SI
+3.4.3.304	The WM shall be able to switch power and data interface between the two SI extremities
+3.4.3.305	The WM shall provide a local CAN network to interface and control the end -effectors SI
+3.4.3.306	The WM shall be able to parse information from/to its data interface through the two SI extremities and translate it in its own local bus for Real -Timer monitor and control of its joins.
+3.4.3.307	The WM shall provide a mechanical interface connection at each extremity to attach a SI
+3.4.4.401	The WM shall be equipped with a SI at each of its extremities.
+3.4.4.402	The WM shall have an embedded local controller to convert high -level control commands from the SVC OBC to low -level control of the joints
+3.4.4.403	The WM shall be equipped with Force/Torque sensors to support the implementation of the impedance control
+3.4.4.404	The design of the WM shall be such that it is able to withstand the test environmental conditions
+3.4.4.405	The design of the WM shall be such that the later product is able to withstand the harsh conditions in space
+3.4.5.501	The weight of the WM shall minimized with a targeted weight of 14kg [TBC] , including the SI .
+3.5.1.101	The SMs shall provide all required support functions to any embarked unit and guarantee the required operative profile during the lifetime.
+3.5.1.102	Each SM shall be able to host all the components needed to fulfill its functions.
+3.5.1.103	The baseline functionality of a Spacecraft Module shall include the ability to externally configure the SM’s data routing function between the Standard Interfaces and services provided by SM
+3.5.1.104	The baseline functionality of a Spacecraft Module shall include the ability to provide external TM/TC control and service data of the Spacecraft Module via the SM data interface once the routing function has been configured
+3.5.1.100	The baseline functionality of a Spacecraft Module shall include the ability to externally configure the SM’s power routing function between the  Standard Inter faces
+3.5.1.105	The assembled modules shall be able to switch to redundant data and power paths
+3.5.1.106	The SM shall be able to be powered on/off or put in stand-by mode, keeping its capability to transmit data and power to other SM
+3.5.1.107	The SM  shall be able to start and initialize automatically after power -on, reaching a state ready for communication and operations
+3.5.1.108	The SM shall be able to provide identification information including unique identifier number and list of capabilities
+3.5.1.109	The SM shall be able to detect malfunction of its operations
+3.5.2.201	The data interface of the Spacecraft Module shall support a data rate of 1Mbps or greater for TM/TC control.
+3.5.2.202	The data interface of the Spacecraft Module shall support a data rate of 50 Mbps or greater for service data.
+3.5.2.203	The power interface of the SM shall support [1-2kW] [TBC] of power transfer
+3.5.3.301	The SM shall get power from the power interface of one of the connected SI
+3.5.3.302	The Spacecraft Module’s R -ICU shall be powered up whenever external power is supplied to any of its Standard Interfaces.
+3.5.3.303	The R -ICU shall provide TM/TC control of the Standard Interfaces using CANbus
+3.5.3.304	The SM shall provide a mechanical interface connection to attach a SI
+3.5.4.401	The SM structure shall be composed by the following units:  • 6 lateral panels  • 12 beams  • 4 corners  • Connection items (to connect all the units of the SMs with the structural units of the SMs)
+3.5.4.402	All SM shall have a sufficient number of SI in order to manipulate them with the WM and to couple them with each other and to the SVC or CLT
+3.5.4.403	The structure of the modules shall be able to carry its own mass under the gravity force and the loads introduced by the “walking” robot -system during the manipulation of the SMs.
+3.5.4.404	The forces applied by the WM and the motion dynamics shall be provided for the design of the SMs in the worst case.
+3.5.4.405	The SMs physical layout shall allow the accommodation of all the equipment, by guaranteeing the proper mechanically assembly, the thermo -mechanical behavior, the SM mechanical/electrical integration and testing, as required by the test requirements
+3.5.4.406	The accommodation of the units shall take into account the following criteria:  • Need of assembly and disassembly  • Easy access to the electrical connectors, fixation points, grounding studs • Alignment requirements  • Mass distribution  • Envelope  • Harness routing  • FOV constraints (in the case of t he integration of optical sensors)
+3.5.4.407	The SMs structure shall be flexible in order to allow the accommodation of different kind of internal equipment
+3.5.4.408	Only the assigned faces of the SM shall host the standard interfaces.  While, only one customized face for each SM shall host all the other units needed to fulfill the SM functions.
+3.5.4.409	The SMs shall be design in order to guarantee the required thermal conditions to all the units mounted inside the SMs
+3.5.4.410	The design of the SM shall be such that it is able to withstand the test environmental conditions
+3.5.4.411	The design of the SM shall be such that the later product is able to withstand the harsh conditions in space
+3.5.5.501	The weight of the SM shall be minimized with a target mass of 7kg [TBC]
+3.5.5.502	The SM shall be cubical in shape in size 300 to 400 mm (TBD) per side
+3.5.7.701	The SM shall be able to be safely manipulated by hand
+3.5.8.801	A set of 7 SMs shall be developed, with the following functions:  ● 4 ASMs:  ○ Data Management Subsystem module (DMS): this ASM hosts the main Onboard Computer of the target spacecraft.  ○ Power Subsystem (PWS): is managing the electrical power on the TGT spacecraft.  ○ Battery ORU module (BAT): is an SM that comprises a set of Lithium-ion batteries and t he electronic to manage them.  ○ Thermal Subsystem module (THS): is responsible for the thermal management of the TGT SMs ● 2 APMs Optical Sensor Payload module (OSP): is an SM that exposes an optical lens on one of its faces.  ● 1 back -up SM
+3.6.1.101	The standard interface shall provide  • a mechanical interface to mechanically couple  two system components  • an electrical interface to transfer electrical energy (power) between two system components  • a data interface to allow exchange of data between two system components
+3.6.1.102	The standard interface shall provide a thermal interface to allow active transfer of thermal flow between two Spacecraft Modules
+3.6.1.103	The standard interface shall allow the mechanical, power, data and thermal coupling with another interface that cannot provide actuation
+3.6.1.104	The standard interface shall allow the mechanical, power, data and thermal de -coupling with another interface that cannot provide actuation
+3.6.1.105	The electrical interface shall have an overcurrent and overvoltage protection
+3.6.1.106	The electrical interface shall incorporate a bidirectional power switch to control current flow at the interface.
+3.6.1.107	"The electrical interface shall provide voltage and current telemetry  at the power bus  system  level, in both power transfer direction
+3.6.1.108	The data interface shall support at least one technology with capabilities of dynamic data bus re-configuration and routing
+3.6.1.109	The SI shall measure and store the following local SI parameters:  • Temperature (Power electronics if local, structure)  • Alignment / proximity status  • Locking status  • SI orientation (in relation with design symmetry)  • Data /Power  interface status  • Thermal interface status  • Motor position (incremental or absolute) / Mechanism position (absolute)  • Motor current  • Controller supply voltage
+3.6.2.201	The mechanical interface shall withstand, in connected mode, all mechanical loads induced by the demonstration operations:  • Axial Force:  250 / 160 N  • Radial Force: 250 / 160 N  • Bending Moment: 204 / 84 Nm  • Torsion: TBD Nm  As function of the gravity compensation of the SM (TBC).
+3.6.2.202	The mechanical interface shall maximize positioning tolerance for guidance and mating
+3.6.2.203	The electrical interface shall be capable of supporting  [1-2kW] (TBC)  of power transfer , as required by the MOSAR demonstration.  The power interface of the SM shall support [1 -2kW] [TBC] of power transfer
+3.6.2.204	The data interface shall allow a data rate of minimum 50Mbit/s
+3.6.2.205	The thermal interface shall allow a thermal flow rating of: TBD W
+3.6.3.301	The standard interface shall provide a mechanical connection to the modules, spacecraft bus or robotic base/end -effector manipulator, compatible with the mechanical loads transferred through the interface.
+3.6.3.302	The standard interface shall provide internal harnessing to connect power, data and control buses from the module, spacecraft or robotic base/end -effector manipulator
+3.6.3.303	The thermal interface shall enable thermal connection to the thermal module sub-system
+3.6.3.304	The SI shall be interfaced with a Power Distribution Unit (PDU) to provide low -level voltage power rails to supply the internal components of the SI (controller, sensors and motor drives)
+3.6.3.305	The SI shall be able to send/receive local TM/TC to/from the module or spacecraft OBC  TM: See FuncR_D109 list  TC:  • Coupling / de -coupling (TBC for intermediate states)  • Electrical power transfer on/off  • Low-level control (TBC)
+3.6.3.306	The SI shall feature redundant data, power and control interface
+3.6.4.401	The standard interface shall have an androgynous design, including mechanical, data, power and thermal interface
+3.6.4.402	The standard interface shall present a 90deg. rotational symmetry, including mechanical, data, power and thermal interface
+3.6.4.403	The standard interface shall allow diagonal engagement up to 55 deg
+3.6.4.404	The standard interface shall provide guidance form-fit features
+3.6.4.405	The design of the SI shall take into account optimization of the manufacturing and integration costs.
+3.6.5.501	The standard interface shall be optimized regarding the mass
+3.6.5.502	The standard interface shall be optimized regarding size and volume
+3.6.6.601	The standard interface (or a part of it)  shall be able to be switched off/on (behave as a passive plug), while ensuring data and power transfer.
+3.6.6.602	The power consumption of the standard interface shall be minimized.
+3.6.6.603	The coupling time between two standard interfaces shall be minimized
+3.6.7.801	The SI shall be safe to be manipulated during integration within SM, WM or Spacecraft Buses. If there exist potential risks, the y shall be well documented
+3.6.8.901	The standard interface shall be declined in different configurations that are:  • Active  • Passive (not active behavior but can be couple and transmit data and power)  • Mechanical (not active and can only be coupled)  • Thermal (including thermal interface connectors, either active or passive)
+3.7.1.101	The design and simulation software shall be able to simulate the system with all related robotic elements and tasks (e.g. reconfiguration) as well as create a robotic compatible servicing plan for the satellite platform
+3.7.1.102	The software shall support engineers developing new components and satellites and shall give system integrators the chance to test the entire satellite including all relevant aspects of on-orbit assembly and servicing operation.
+3.7.1.103	The software shall allow users to simulation and test high -modular building block space system architectures with regard to the requirements and constraints of robotics, structure and the entire system.
+3.7.1.104	The software shall be used to plan and to test the servicing task of the robot system
+3.7.1.105	The software shall allow to test and simulate the demonstration scenario regarding mechanical and thermal loads as well as distribution of resources.
+3.7.1.106	The software shall allow the addition of functional modules to the spacecraft, perform reconfiguration process, and simulate the servicing task considering dedicated robotic specifications.
+3.7.1.108	The simulation software shall be able to simulate the environmental conditions in LEO
+3.7.1.109	The simulation software shall be able to represent manipulator dynamics like motor dynamics and joint flexibilities, if relevant in the demonstrator scenario.
+3.7.2.201	The simulation software shall be able to compute the reconfiguration scenarios in real time as far as possible.
+3.7.2.202	The simulation software shall be able to process as many replaceable modules models as required according to the demonstration scenarios.
+3.7.3.301	The simulation software of the FES shall be able to receive joint control inputs from external joint controllers and planners.
+3.7.3.302	The simulation software of the FES shall be able to feedback sensor information from sensor models and simulation states to external controllers or a control console
+3.7.3.303	The simulation software shall be able to communicate with external entities via TCP/IP or UDP
+3.7.3.304	The ground instance of the ERGO Agent used to generate and validate the reconfiguration plan shall generate a static plan that can be transferred to and executed by the onboard ERGO Agent.
+3.7.5.501	The FES shall run on an individual single -purpose PC
+3.7.8.901	For each scenario to be demonstrated, an individual simulation model shall be provided
+3.8.1.101	The TASTE framework shall be extended to support modelling and code generation for software systems that can switch between different configurations known at design time.
+3.8.1.102	A middleware bridge generator that enables the communication between TASTE and DDS in runtime should be developed in order to assess the capabilities of the software and modelling environment needed to support the reconfiguration of an onboard system with configurations not known at design time.
+3.8.1.103	An existing open DDS implementation should be adapted to run over SpaceWire links so that it can be deployed in the MOSAR demonstrator.
+3.8.1.104	The software should provide a common mechanism to transfer large data messages (1KiB to 1MiB) over SpaceWire links, in order to transfer images from the camera sensor to the OBC and the  ground system.
+3.8.1.105	A robotic arm driver component shall be developed to execute the robot plan actions on the WM and return the observations needed by the Agent to manage the execution of the plan.
+3.8.1.106	An instance of the ERGO Agent shall be deployed on the OBC to command and monitor the execution of the robotic reconfiguration plan generated on ground.
+3.8.3.301	The monitoring and control from the ground system of the onboard system status and the execution of the robotic reconfiguration plan shall be done using the ESROCOS PUS services library, extended with mission -specific services.
+3.8.4.401	The data types used for the interface between the ERGO Agent and the Functional Layer shall be modelled in ASN.1. If a suitable data type is available from ESROCOS, it should be reused rather than defining a new data type.
+3.8.6.601	A graphical tool shall allow the operator to command and monitor the execution of the robotic reconfiguration plan, both simulated and onboard.
+3.8.8.801	The TASTE framework shall be used to model the software components running on the OBC. These components include:  - Functions related to robot autonomy (ERGO Agent and functional layer)  - Sample OBSW for the management of the reconfigurable system (monitoring and control of the SM)
+3.8.8.802	The development platform for the OBSW shall be Ubuntu Linux 18.04 LTS (64 bit) on x86. The ESROCOS framework, and in particular TASTE, shall be adapted to run on this platform.
+3.9.101	The MOSAR demonstrator shall allow to verify and validate  the following functionalities  relevant for future modular spacecraft missions : • Creation of a re -configuration execution plan ( FuncR_S105 ) • Simulation of the execution plan  ( FuncR_S106 ) • Manipulation and repositioning of SM ( FuncR_S101 ) • Control and re -location of the WM ( FuncR_S104 , FuncR_S107 ) • Update/upgrade of satellite functionalities ( FuncR_S102 ) • Data and power transfer between SM  • Heat management between SM ( FuncR_S115 ) • Failure detection and handling (FuncR_S111 ) • Resources re -allocation, data and power routing ( FuncR_S110 )
+3.9.102	The validation shall include the following sequence:  1. Calibrate/verify the simulation tool  2. Simulate the reconfiguration process and generate a valid robot execution plan  3. Execute the plan on the demonstrator setup
+3.9.103	The SM implemented in the MOSAR demonstrator should be representative of relevant modules for future modular spacecraft missions.
+3.9.104	The demonstrator shall be integrated in an orbital simulation facility to validate the MOSAR scenarios
+3.9.105	The test facility shall ensure a volume of 5 m (L)x 3.5 m (W)x 3 m (H) in order to allow the integration of the test bench  and all required components for the regular performance of the demonstration
+3.9.106	The test facility shall provide displays to support the design and monitoring of the execution plan
+3.9.107	The test facility shall provide the required power for the performance of the demonstration
+3.9.108	The test facility shall provide safety features to guarantee the safe operation of the demonstrator

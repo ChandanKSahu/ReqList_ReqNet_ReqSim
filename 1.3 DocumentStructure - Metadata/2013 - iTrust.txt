@@ -1,0 +1,62 @@
+D	iTrust Medical Care Requirements Specification
+3	Functional Requirements
+3.1	Use Case Diagram and Flow of Events
+3.2	Use Case Descriptions
+3.2.1	UC1 Create and Disable Patients Use Case
+3.2.2	UC2 Create, Disable, and Edit Personnel Use Case
+3.2.3	UC3 Authenticate Users Use Case
+3.2.4	UC4 Enter/edit Demographics Use Case
+3.2.5	UC5 Log Transaction Use Case
+3.2.6	UC6 View HCP; Designate/Undesignate Designated Licensed Health Care Professional Use Case
+3.2.8	UC8 View Access Log Use Case
+3.2.9	UC9 View records Use Case
+3.2.10	UC10 Enter/edit personal health records Use Case
+3.2.11	UC11 Document office visit Use Case
+3.2.12	UC12 Determine operational profile Use Case
+3.2.13	UC13 Declare/undeclare Personal Representative Use Case
+3.2.15	UC15 Maintain standards lists Use Case
+3.2.16	UC16 Identify risk of chronic disease Use Case
+3.2.17	UC17 Proactively Determine Needed Patient Care Use Case
+3.2.18	UC18 Maintain a hospital listing Use Case
+3.2.19	UC19 View prescription report Use Case
+3.2.21	UC21 View emergency electronic health record Use Case
+3.2.22	UC22 Flow of Events for the Schedule Appointments Use Case
+3.2.23	UC23 View Comprehensive Patient Report Use Case
+3.2.24	UC24 Take Satisfaction Survey Use Case
+3.2.25	UC25 View Physician Satisfaction Survey Results Use Case
+3.2.26	UC26 Manage Lab Procedures Use Case
+3.2.27	UC27 Alert Users by Email Use Case
+3.2.28	UC28 View Patients
+3.2.29	UC29 Find LHCPs with experience with a diagnosis
+3.2.30	UC30 Messaging between LHCP and patient
+3.2.31	UC31 Find LHCPs for prescription renewal Use Case
+3.2.32	UC32 Proactively Confirm Prescription-Renewal Needs Use Case
+3.2.33	UC33 Manage Patient Referrals Use Case
+3.2.34	UC34 Report Telemedicine Monitoring Details Use Case
+3.2.35	UC35 Report Adverse Event Use Case
+3.2.36	UC36 Monitor Adverse Event Use Case
+3.2.37	UC37 Safe Drug Prescription Use Case
+3.2.38	UC38 Maintain Drug Interaction Use Case
+3.2.40	UC40 View Schedule Calendar Use Case
+3.2.42	UC42 View Notifications Use Case
+3.2.43	UC43 View Activity Feed Use Case
+3.2.44	UC44 Patient Specific Instructions
+3.2.45	UC45 Flow of Events for the Request bio surveillance Use Case
+3.2.46	UC46 View Patient Group Reports Use Case
+3.2.47	UC47 Find an Expert Use Case
+4	Non-Functional Requirements
+4.1	HIPAA
+4.2	Exclusive Authentication
+4.3	Form Validation
+4.4	Reports
+4.5	Privacy Policy
+4.6	Security of MID
+5	Constraints
+5.1	Language
+5.2	Coding Standards
+5.3	Documentation
+5.4	Environment
+5.5	Testing
+5.6	Database
+5.7	Patterns
+5.8	Static Analysis

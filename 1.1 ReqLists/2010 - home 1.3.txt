@@ -1,0 +1,90 @@
+3.2.1.1	The general user shall be able to use the DH system capabilities to monitor and control the environment  in his/her home.
+3.2.1.2	The general user is familiar with the layout of his/her home and the location of sensor and control devices (for temperature, for humidity, and for power to small appliances and lighting units).
+3.2.1.3	Although the general user is not familiar with the technical features of the DH system, he/she is familiar with the use of a web interface and can perform simple web operations  (logging in and logging out, browsing web pages, and submitting information and requests via a web interface).
+3.2.1.4	A Master user will be designated, who shall  be able to change the configuration of the system. For example, a Master User shall be able to add a user account or change the default parameter settings. He/she will have the same right  as the DH Technician, described in section 3.2.2.4.
+3.2.2.1	A DH Technician is responsible for setting up and maintaining the configuration of a DH system.
+3.2.2.2	A DH Technician has experience with the type of hardware, software, and web services associated with a system  like the DH system.
+3.2.2.3	A DH Technician is specially trained by DigitalHomeOwner to be familiar with the functionality, architecture, and operation of the DH system product.
+3.2.2.4	A DH Technician will have rights beyond the  DH General User, capable of setting up and making changes in the configuration of the system (e.g., setting system parameters and e stablishing user accounts), and starting and stopping operation of the DH System.
+3.3.1	The “prototype” version of the DigitalHome System (as specified in this document) must be completed within twelve months of inception.
+3.3.2	The development team will consist of five engineers. The DigitalHomeOwner Director will provide management and communication support.
+3.3.3	The development team will use the development  process specified by the Digital HomeOwner Inc.
+3.3.4	Where possible, the DigitalHome project will employ widely used, accepted, and available hardware and software technology and standards, both for product elements and for development tools. See section 3.4 for additional detail.
+3.3.5	Because of potential market competition for DigitalHome products, the cost of DigitalHome elements (sensors, controllers,  server, tools, etc.), for this project should be minimized. As part of the final project report the development team will describe their efforts to  minimize costs, including price comparisons between DH elements and comparable/competitive elements.
+3.3.6	The DH system will be tested in a simulated environment. There will be no actual physical home and all sensors and controllers will be simulated. However, the simulated environment will be realistic and adhere to the physical properties and constraints of an actual home and to real sensors and controllers.
+3.3.7	Major changes to this document (e.g., changes  in requirements) must be approved by the Director of the DigitalHomeOwner  Division.
+3.4.1	The home system shall require an Internet Ser vice Provider (ISP). The ISP should be widely available (cable modem, high s peed DSL), such as Bright House or Bellsouth FastAccess.
+3.4.2.1	A DH System shall have the capability to establish an individual home web server hosted on a home computer. This server will provide  a. Interaction with and control of the DH elements b. Storage of DH plans and data. c. Ability to establish and maintain DH User Accounts d. Provide backup service for user account information, user plans and a home database
+3.4.3.1	The DH Gateway device shall provide communication with all the DigitalHome devices and shall connect with a broadband Internet connection.
+3.4.3.2	The Gateway shall contain an RF Module, which shall send and receive wireless communications between the Gateway  and the other DigitalHome devices (sensors and controllers).
+3.4.3.3	The Gateway device shall operate up to a 10 00-foot range for indoor transmission.
+3.4.4.1	The system shall include digital programmable thermostats, which shall be used to monitor and regulate the temperature of an enclosed space.
+3.4.4.1.1	The thermostat shall provide a reading of the current temperature in the space where the thermostat is located.
+3.4.4.1.2	The controller part of thermostat shall provides  a “set point” temperature that is used to control the flow of heat energy (by switching heating or cooling devices on or off as needed) to achieve the set point temperature.
+3.4.4.1.3	The sensor part of the thermostat has a sensitivity range between 14ºF and 104ºF (-10ºC and 40ºC).
+3.4.4.2	The system shall include digital programmable humidistats, which shall be used to monitor and regulate the humidity of an enclosed space.
+3.4.4.2.1	The humidistat shall provide a reading of the current humidity in the space where the humidistat is located.
+3.4.4.2.2	The humidistat shall provide a “set point” humidity that is used to control humidifiers and dehumidifiers achieve the set point humidity.
+3.4.4.3	The system shall include magnetic alarm con tact switches which shall be used to monitor entry through a door  or window when the switch is active.
+3.4.4.4	The system shall include security sound and  light alarms, which can be activated when DigitalHome senses a security  breach from a magnetic contact.
+3.4.4.5	The system shall include digital programmable power switches which shall be used to monitor the current state of  an appliance (e.g., a coffee maker is off or on).
+3.4.4.6	The system shall be able to use a power switch to change the state of the appliance (e.g., from “off” to “on”).
+4.1.1	The DigitalHome System shall allow a web-read y computer, cell phone or PDA to control a home's temperature, humidity, lights, security, and the state of small appliances.
+4.1.2	The communication center of the DH system shall be a DH home web server, through which a user shall be able to monitor and control home devices and systems.
+4.1.3	Each DigitalHome shall contain a master control device (the DH Gateway Device) that connects to the home’s broadband Internet connection, and uses wireless communication to send  and receive communication between the DigitalHome system and the home devices and systems.
+4.1.4	The DigitalHome shall be equipped with various environmental controllers and sensors (temperature controller-sensors: thermostats, humidity controller-sensors: humidistats, contact sensors, security sound and light alarms, and power switches).
+4.1.5	Using wireless communication, sensor values c an be read and saved in the home database.
+4.1.6	Controller values can be sent to controllers to change the DH environment.
+4.2.1	The DigitalHome programmable thermostat shall  allow a user to monitor and control a home’s temperature from any location, using a web ready computer, cell phone, or PDA.
+4.2.1.1	A DH user shall be able to read the temperature at a thermostat position.
+4.2.1.2	A DH user shall be able to set the thermostat temperatures to between 60 °  F and 80 °  F, inclusive, at one degree  increments.
+4.2.2	Up to eight thermostats shall be placed in rooms throughout the home.
+4.2.2.1	The thermostats may be controlled individually or collectively, so that temperature can be controlled at different levels in different home spaces.
+4.2.2.2	A single thermostat shall be placed in an enclosed space (e.g., a room in the house) for which the air temperature is to be controlled.
+4.2.2.3	For each thermostat, up to twenty-four one hour settings per day for every day of the week can be scheduled.
+4.2.2.4	If a thermostat device allows a user to make a manual temperature setting, the setting shall remain in effect until the end of the planned or default time period, at which  time the planned or default setting will be used for the next time period.
+4.2.3	A thermostat unit shall communicate, through wireless signals, with the master control unit.
+4.2.4	The system shall support Fahrenheit and Celsius temperature values.
+4.2.5	The system shall be compatible with a centralized HVAC (Heating, Ventilation and Air Conditioning) systems: gas, oil , electricity, solar, or a combination of two or more.
+4.2.5.1	The system shall adhere to the standards, policies and procedures of the American Society of Heating, Refrigerating and Air-Conditioning Engineers [ASHRA E 2010].
+4.3.1	The DigitalHome programmable humidistat shall  allow a user to monitor and control a home’s humidity from any location, using a web ready computer, cell phone, or PDA.
+4.3.1.1	A DH user shall be able to read the humidity at a humidistat position.
+4.3.1.2	A DH user shall be able to set the humidity  level for a humidistat, from 30% to 60%, inclusive a 1% increments.
+4.3.2	Up to eight humidistats shall be placed in rooms throughout the home.
+4.3.2.1	A single humidistat shall be placed in an enclosed space (e.g., a room in the house) for which the humidity is to be controlled.
+4.3.2.2	If a humdistat device allows a user to make  a manual temperature setting, the setting shall remain in effect until the  end of the planned or default time period, at which  time the planned or default setting will be used for the next time period.
+4.3.2.3	For each humidistat, up to twenty-four one hour settings per day for every day of the week can be scheduled.
+4.3.3	A DigitalHome system shall use wireless signa ls to communicate, through the master control unit, with the humidistats.
+4.4.1	The DigitalHome security system consists of contact sensors and a set security alarms.
+4.4.1.1	A DigitalHome system shall be able to manage up to fifty door and window contact sensors.
+4.4.1.2	A DigitalHome system shall be able to activate both light and sound alarms: one sound alarm and one light alarm subsystem, with multiple lights.
+4.4.2	When a security breach occurs and a contact sensor is set OPEN, the alarm system shall be activated.
+4.5.1	The DigitalHome programmable Appliance Manage r shall provide for management of a home’s small appliances, including  lighting units, by  allowing  a user to turn them on or off as desired.
+4.5.2	The Appliance Manager shall be able to manage  up to one hundred 115 volt, 10 amp power switches.
+4.5.3	The system shall be able to provide information about the state of a power switch (OFF or ON), indicating the whether an  appliance connected to the power switch is OFF or ON.
+4.5.4	The system shall be able to change the state of a power switch (OFF to ON, or ON to OFF), in turn changing the state of  an appliance connected to the power switch.
+4.5.5	If a user changes the state of power switch device manually, the device shall remain in that state until the end of the planned or default time period, at which time the planned or default setting will be used for the next time period.
+4.6.1	DigitalHome Planner shall provide a user with  the capability to direct the system to set various preset home parameters (temperature, humidity, security contacts, and on/off appliance/light status) for certain time periods.
+4.6.2	DigitalHome provides a monthly planner.
+4.6.2.1	For a given month and year, a user shall be  able to create or modify a month plan that specifies for each day, for up to four daily time periods, the environmental parameter settings (temperature, humidity, contact sensors and power s witches).
+4.6.2.2	A user shall be able to override planned parameter values, through the DH website, or if available, through manual switches on household devices
+4.6.3	For a given month and year, in the past two y ears, DigitalHome shall be able to provide a report on the management and control of the home.
+4.6.3.1	The month report shall contain daily average, maximum (with time) and minimum (with time) values of temperature  and humidity for each thermostat and humidistat, respectively.
+4.6.3.2	The month report shall provide the day and time for which any security breaches occurred, that is, when the security alarms were activated.
+4.6.3.3	The month report shall provide a section that indicates the periods of time when the DH System was not in operation..
+5.1.1	Displays of environmental conditions (temperature, humidity, contact sensors and power switches) shall be updated at least every two seconds.
+5.1.2	Sensor (temperature, humidity, contact sensor , power state) shall have a minimum data acquisition rate of 10 Hz.
+5.1.3	An environmental sensor or controller device shall have to be within 1000 feet of the master control device, in order to  be in communication with the system.
+5.2.1	The DigitalHome System must be highly reliable with no more than 1 failure per 10,000 hours of operation.
+5.2.2	The Digital Home System shall incorporate backup and recovery mechanisms.
+5.2.2.1	The DH System will backup all system data ( configuration, default parameter settings, planning, and usage data) on a daily basis, with the backup time set by the DH Technician at system set up.
+5.2.2.2	If the DH System fails (due to power loss, loss of internet access, or other software or hardware failure), the  system recovery mechanism shall restore system data (configuration, default parameter settings, planning, and usage data) from the most recent backup.
+5.2.3	All DigitalHome operations shall incorporate exception handling so that the system responds to a user with a clear, descriptive message when an error or an exceptional condition occurs.
+5.3.1	Although there are no specific safety requirements, high system reliability is important to insure there are no sys tem failures in carrying out user requests. Such failures might affect the safety of home dwellers (e.g., security breaches, inadequate lighting in dark spaces, inappropriate temperature and humidity for people w ho are in ill-health, or powering certain appliances when young children are present).
+5.4.1	Upon installation, a DigitalHome user account  shall be established. The DigitalHome web system shall provide for authentication and information encryption through a recognized reliable and effective security technology, such as Transport Layer Security.
+5.4.2	Log in to an account shall require entry of a n account name and a password.
+5.5.1	The development of the DH system shall use methods and techniques such as the following to support system maintenance :  - Documentation of requirements, design, and code - Use of abstraction, information hiding and module independence in system design; and - Use of IEEE standards [IEEE830, IEEE1008, I EEE1016, IEEE1028] and the HomeOwner Coding Standard  [HO4710].
+5.5.2	Although the product produced under this document will be a “prototype” version, all modules and components of this prototype version shall be designed and implemented in such a  manner that it may be incorporated in a fully specified commercial  version of the DigitalHome System.
+5.6.1	All system documents (Software Requirements Specification, Architectural Design Specification, Module Detailed  Design, Module Source Code, and all Test Plans) shall be up-to-date, use the Homeowner document format [HO2305] and reside in the HomeOwner Document Archive at completion of the project.
+5.6.2	HomeOwner has designated object-oriented development, using UML 2.0, as the preferred method for development of software for HomeOwner products. Exceptions to this rule must be  approved by the CIO.
+5.7.1	The DigitalHome System shall provide users with online documentation about the DigitalHome system installed in their home. The user documentation shall include the following:  - An FAQ section – a set of “Frequently Asked  Questions” about use and maintenance of the DigitalHome System (e.g. , “How do I change my password?”, “Where to I go to get DigitalHome support?”). - A section that explains how DH parameters a re set and sensor values are read. This shall include information on limitations and constraints on parameter settings and sensor reading accuracy. - A section that describes how to use the DH Planner.

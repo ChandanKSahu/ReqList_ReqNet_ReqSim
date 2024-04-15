@@ -1,0 +1,69 @@
+2.4.1	Web Store shall operate with the following internet browsers: Microsoft Internet Explorer version 6 and 7, Netscape Communicator Version 4 and 5.
+2.4.2	Web Store shall operate on an Intel based system with Slackware Linux 2.6 and Apache Web Server.  The operating system is designed by the Yoggie Corporation.  Although maintenance documentation will be supplied and the operating system will be tested, the developers of this Web Store are not responsible for the functionality of the operating system.
+2.4.3	The system shall use SQL based database to store inventory information.
+2.4.4	USB interface and divers are provided by Yoggie Corporation.
+2.5.1	Must use a SQL based database.  SQL standard is the most widely used database format.  Restricting to SQL allows easy of use and compatibility for Web Store.
+2.5.1	Compatibility is only tested and verified for Microsoft Internet Explorer version 6 and 7, Netscape Communicator Version 4 and 5.  Other versions may not be 100% compatible.  Also other browsers such as Mozilla or Firefox may not be 100% compatible.
+2.6.1	The user documentation shall install online help for users via the web interface
+2.6.2	The user documentation shall deliver Operations and Maintenance manual, Users Guide book, and Installation Instructions for the Administrator.
+2.7.1	Assume the delivery of development, test and evaluate samples of the USB system from Yoggie.
+2.7.2	Assume Yoggie will freeze the baseline of the USB system after delivery.
+3.1.1.1	Customers will be able to create accounts to store their profiles, contact information, purchase history, and confirm orders. This is a high priority system feature. Security methods will ensure that customer accounts remain confidential and resistant to tampering.
+3.1.2	Stimulus/Response Sequences: • Web Browser initiates request to Web Server via HTTPS  • Web Server parses request • Web Server submits request to Service • Service picks up request • Service runs task • Service returns results • Web Server checks for completion • Web Server returns results to Web Browser • Web Browser displays results
+3.1.3.1	Customers will be able to create accounts to store their customer profiles, configure contact information, view their purchase history, and confirm orders. Customers will be able to register, log in, and log out of their accounts. Furthermore, Customer profiles will also include payment information, such as the ability to store credit card information, and address information.
+3.2.1.1	Inventory management will allow for the placement of products into multi-tiered categories. This is a medium priority system feature.
+3.2.3.1	Products will be stored in multi-tiered categories; a category can contain subcategories or products. The inventory management will allow for administrators to update the categories, the products placed in categories, and the specific product details.
+3.3.1.1	Customers will be able to add and store products for purchase within the shopping cart. This feature is a medium priority system feature.
+3.3.3.1	Customers will also be able to add products into the shopping cart. The shopping cart will clearly display the number of items in the cart, along with the total cost. The customer will also be able to add to or remove products from the shopping cart prior to checkout and order confirmation.
+3.4.1.1	Order confirmation will allow the customer to review their order after checkout prior to confirmation. This is a medium priority system feature.
+3.4.3.1	Customers will be able to confirm the order after checkout. If the order is incorrect, the customer will be able to revise and update their order. The customer will then receive a confirmation email with the specific order details.
+3.5.1.1	The interface will be presented to the customer in a web browser. The interface must remain consistent among various web browsers and be intuitive to the customer. This is a medium priority system feature.
+3.5.3.1	Customers will be presented with an unambiguous interface to assist in browsing the categories and products. Customers will be able to search for products matching their search criteria. The interface will be compatible with all major web browsers such as Internet Explorer, Mozilla Navigator, Mozilla Firefox, Opera, and Safari.
+3.6.1.1	The system will feature an API to allow customers to build custom plug-ins to be able to meet their needs. This is a high priority system feature as it ensures the flexibility of the system to be tailored to specific needs.
+3.6.2	Stimulus/Response Sequences: • Web Browser initiates request to Web Server via HTTPS • Web Server parses request • Web Server submits request to API Service • API Service picks up request • API Service submits request to Plug-in • Plug-in picks up request • Plug-in runs tasks • Plug-in returns results • API Service validates results • API Service returns results • Web Server checks for completion • Web Server returns results to Web Browser • Web Browser displays results
+3.6.3.1	The system will implement an Application Interface to allow for various plug-ins to interact with the system. The plug-in API will be well documented and specifications will be provided to plug-in developers.
+4.3.1	The order database of WebOrder will communicate with the account system through a programmatic interface for the billing operations.
+4.3.2	Through programmatic interface, WebOrder will transmit information of items ordered by customers to the Inventory management system.
+4.4.1	The WebOrder system shall send an e-mail confirmation to the customer that the items they ordered will be delivered to the shipping address along with tracking number.
+4.4.2	The WebOrder system shall send an e-mail to System Administrator regarding any technical queries from customers or sales people.
+5.1.1	Upon the USB being plugged in the system shall be able to be deployed and operational in less than 1 minute.
+5.1.2	The system shall be able to handle 1000 customers logged in concurrently at the same time.
+5.1.3	The system shall be able to retrieve 200 products per second.
+5.1.4	The system shall be able to add product to shopping cart in less than 2ms.
+5.1.5	The system shall be able to search for a specified product in less than 1 second.
+5.1.6	The system shall be able to email customer and vendor in less than 1 second.
+5.1.7	The system shall be able to validate credit card in less than 2 seconds.
+5.1.8	The system shall be able to acquire shipping charges in less than 2 seconds.
+5.1.9	The system shall be able to restore 1000 records per second.
+5.2.1	The system will do periodic backups through a live internet connection.
+5.3.1	The system shall validate credit cards against fraud.
+5.3.2	The system shall encrypt all sensitive information via https.
+5.3.3	The system shall encrypt all customer data in database.
+5.3.4	The system shall auto detect IP DOS attacks and block IP automatically.
+5.3.5	The system shall detect consecutive failed login attempts.
+5.3.6	The system shall be protected by open source firewall called Firestarter. http://www.fs-security.com/
+5.4.1	The system shall have an availability of 99.99%.
+5.5.1	The system shall perform searches via Dijkstra's shortest path algorithm.
+5.5.2	For returning customers, the system shall validate 'existing' credit card in system after each log in.
+5.5.3	The system shall automatically compress image files that are too large in size.
+5.5.4	The system will employ on demand asynchronous loading for faster execution of pages.
+5.5.5	The system shall validate email address existence.
+5.6.1	The system shall be easy to use
+5.6.2	The system shall be easy to learn
+5.6.3	The system shall utilize help bubbles to assist managers, customers, and administrators
+5.6.4	The system shall employ easy to locate buttons
+5.6.5	The system shall prompt customer with friend easy to read error messages.
+5.6.6	The system shall utilize consistent symbols and colors for clear notifications.
+5.7.1	The system shall utilize interchangeable plugins.
+5.7.2	The system shall be easily updatable for fixes and patches.
+5.7.3	The system shall create logs of all changes, updates, or fixes that are done to the site.
+5.7.4	The system shall be easy to upgrade.
+5.8.1	The system shall be extremely portable via the usb drive.
+5.8.2	The system shall be easy to migrate or backed up via another usb drive.
+5.9.1	The system should be able to run under debug mode.
+5.9.2	The system should be able to run test credit card transactions.
+5.9.3	The system should be able to run test shipping orders.
+5.9.4	The system should be able to create test environment of weborder system.
+6.1	The system hardware shall be fixed and patched via an internet connection.
+6.2	Yoggie shall coordinate on future enhancement and features with our organization.
+6.3	The system shall adhere to the following hardware requirements: • 4GB Flash ram chip • 128MB SDRAM • Intel XScale PXA270 520-MHz chipset • OS: Apache web server • Database: MySQL

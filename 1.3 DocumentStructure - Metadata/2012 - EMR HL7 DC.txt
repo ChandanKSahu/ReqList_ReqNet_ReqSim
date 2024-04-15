@@ -1,0 +1,91 @@
+D	California Correctional Health Care Services (CCHCS) Emergency Medical Response (EMR) System 
+1	Care Management
+1.1	Record Management
+1.1.1	Identify and Maintain a Patient Record
+1.1.2	Manage Patient Demographics
+1.1.3	Data and Documentation from External Sources
+1.1.3.1	Capture Data and Documentation from External Clinical Sources
+1.1.3.2	Capture Patient-Originated Data
+1.1.3.3	Capture Patient Health Data Derived from Administrative and Financial Data and Documentation
+1.1.4	Produce a Summary Record of Care
+1.1.5	Present Ad Hoc Views of the Health Record
+1.2	Patient History
+1.3	Preferences, Directives, Consents, and Authorizations
+1.3.1	Manage Patient and Family Preferences
+1.3.2	Manage Patient Advance Directives
+1.3.3	Manage Consents & Authorizations
+1.4	Summary Lists
+1.4.1	Manage Allergy, Intolerance, and Adverse Reaction List
+1.4.2	Manage Medication List
+1.4.3	Manage Problem List
+1.4.4	Manage Immunization List
+1.5	Manage Assessments
+1.6	Care Plans, Treatment Plans, Guidelines, and Protocols
+1.6.1	Present Guidelines and Protocols for Planning Care
+1.6.2	Manage Patient-Specific Care & Treatment Plans
+1.7	Orders & Referrals
+1.7.1	Manage Medication Orders
+1.7.2	Non-Medication Orders & Referrals Management
+1.7.2.1	Manage Non-Medication Patient Care Orders
+1.7.2.2	Manage Orders for Diagnostic Tests
+1.7.2.3	Manage Orders for Blood Products & Other Biologics
+1.7.2.4	Manage Referrals
+1.7.3	Manage Order Sets
+1.8	Documentation of Care, Measurements, and Results
+1.8.1	Manage Medication Administration
+1.8.2	Manage Immunization Administration
+1.8.3	Manage Results
+1.8.4	Manage Patient Clinical Measurements
+1.8.5	Manage Clinical Documentation & Notes
+1.8.6	Manage Documentation of Clinician Response to Decision Support Prompts
+1.9	Generate & Record Patient-specific instructions
+2.	Clinical Decision Support
+2.1	Manage Health Information to Provide Decision Support
+2.1.1	Support for Standard Assessments
+2.1.2	Support for Patient-Driven Assessments
+2.1.3	Support for Identification of Potential Problems & Trends
+2.1.4	Support for Patient and Family Preferences
+2.2	Care and Treatment Plans, Guidelines and Protocols
+2.2.1	Support for Condition Based Care and Treatment Plans, Guidelines, Protocols
+2.2.1.1	Support for Standard Care Plans, Guidelines, Protocols
+2.2.1.2	Support for Context- Sensitive Care Plans, Guidelines, Protocols
+2.2.2	Support Consistent Healthcare Management of Patient Groups or Populations
+2.2.3	Support for Research Protocols Relative to Individual Patient Care
+2.2.4	Support Self-Care
+2.3	Medication & Immunization Management
+2.3.1	Support for Medication & Immunization Ordering
+2.3.1.1	Support for Drug Interaction Checking
+2.3.1.2	Support for Patient Specific Dosing & Warnings
+2.3.1.3	Support for Medication Recommendations
+2.3.2	Support for Medication and Immunization Administration
+2.4	Orders, Referrals, Results & Care Management
+2.4.1	Create Order Set Templates
+2.4.2	Support for Non-Medication Ordering
+2.4.3	Support for Result Interpretation
+2.4.4	Support for Referrals
+2.4.4.1	Support for referral Process
+2.4.4.2	Support for Referral Recommendations
+2.4.5	Support for Care Delivery
+2.4.5.1	Support for Safe Blood Administration
+2.4.5.2	Support for Accurate Specimen Collection
+2.5	Support for Health Maintenance: Preventative Care & Wellness
+2.5.1	Present Alerts for Preventative Services and Wellness
+2.5.2	Notifications and Reminders for Preventative Services and Wellness
+2.6	Support for Population Health
+2.6.1	Support for Epidemiological Investigations of Clinical Health Within a Population
+2.6.2	Support for Notification & Response
+2.6.3	Support for Monitoring Response Notifications Regarding a Specific Patient's Health
+2.7	Support for Knowledge Access
+2.7.1	Access Healthcare Guidance
+2.7.2	Patient Knowledge Access
+3.	Operations Management & Communication
+3.1	Clinical Workflow Tasking
+3.1.1	Clinical Task Assignment & Routing
+3.1.2	Clinical Task Linking
+3.1.3	Clinical Task Tracking
+3.2	Support Clinical Communication
+3.2.1	Support for Inter-Provider Communication
+3.2.2	Support for Provider - Pharmacy Communication
+3.2.3	Support for Communications between Provider and Patient and/or the Patient Representative
+3.2.4	Patient, Family and Care Giver Education
+3.2.5	Communication with Medical Devices

@@ -1,0 +1,20 @@
+D	Public Health Information Network (PHIN) Preparedness OUTBREAK MANAGEMENT
+2	OUTBREAK MANAGEMENT FUNCTIONAL REQUIREMENTS
+2.1	System  Architecture
+2.2	Data Requirements
+2.2.1	Entity Data
+2.2.2	Health Event Data
+2.2.3	Travel History and Conveyance Data
+2.2.4	Case Investigation and E xposure Contact Data
+2.2.5	Monitoring and Follow-up Data
+2.2.6	Specimen/Sample Collection and Laboratory Response Data
+2.2.7	Prophylaxis and Treatm ent Data
+2.2.8	Adverse Event Data
+2.2.9	Activity Logging Data
+2.3	System  Functions and Behaviors
+2.3.1	Case Investigation
+2.3.2	Linking
+2.3.3	Contact Exposure Tracing
+2.4	Analysis, Visualization, and Report Generation
+2.5	System  Integration and Data Exchange
+2.7	Operations

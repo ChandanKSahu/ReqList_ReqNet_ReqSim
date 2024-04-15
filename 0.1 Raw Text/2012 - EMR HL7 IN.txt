@@ -1,0 +1,223 @@
+Unique ID	Label	Requirement Statement	Solution Scope	Solution Approach
+	HL7 IN 1	Security		
+		HL7 IN 1.1 Entity Authentication		
+6256	HL7 IN 1.1.01	The solution should authenticate principals prior to accessing an EMR application or EMR data.	Unknown	Unknown
+6255	HL7 IN 1.1.02	The solution should prevent access to EMR applications or EMR data to all non-authenticated principals.	Unknown	Unknown
+5537	HL7 IN 1.1.03	The solution should provide the ability to implement a Chain of Trust agreement.	Unknown	Unknown
+6253	HL7 IN 1.1.04	If other appropriate authentication mechanisms are absent, then the solution should authenticate principals using at least one of the following authentication mechanisms: username/password, digital certificate, secure token or biometrics.	Unknown	Unknown
+		HL7 IN 1.2 Entity Authorization		
+6252	HL7 IN 1.2.01	The solution should provide the ability to create and update sets of access-control permissions granted to principals.	Unknown	Unknown
+6251	HL7 IN 1.2.02	The solution should conform to function IN.2.2 (Auditable Records) for the purpose of recording all authorization actions.	Unknown	Unknown
+6250	HL7 IN 1.2.03	The solution should provide EMR security administrators with the ability to grant authorizations to principals according to scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6249	HL7 IN 1.2.04	The solution should provide EMR security administrators with the ability to grant authorizations for roles according to scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6248	HL7 IN 1.2.05	The solution should provide EMR security administrators with the ability to grant authorizations within contexts according to scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6247	HL7 IN 1.2.06	The solution should provide the ability to define context for the purpose of principal authorization based on identity, role, work assignment, present condition, location, patient consent, or patient’s present condition.	Unknown	Unknown
+6246	HL7 IN 1.2.07	The solution should provide the ability to define context based on legal requirements or disaster conditions.	Unknown	Unknown
+		HL7 IN 1.3 Entity Access Control		
+6625	HL7 IN 1.3.01	The solution should conform to function IN.1.1 (Entity Authentication).	Unknown	Unknown
+6626	HL7 IN 1.3.02	The solution should conform to function IN.1.2 (Entity Authorization).	Unknown	Unknown
+6627	HL7 IN 1.3.03	The solution should provide the ability to define solution and data access rules.	Unknown	Unknown
+6628	HL7 IN 1.3.04	The solution should enforce solution and data access rules for all EMR resources (at component, application, or user level, either local or remote).	Unknown	Unknown
+		HL7 IN 1.4 Patient Access Management		
+6629	HL7 IN 1.4.01	The solution should conform to function IN.1.3 (Entity Access Control) in order for a healthcare delivery organization to manage a patient’s access to his or her healthcare information.	Unknown	Unknown
+		HL7 IN 1.5 Non-Repudiation		
+6630	HL7 IN 1.5.01	The solution should time stamp initial entry, modification, or exchange of data, and identify the actor/principal taking the action as required by users' scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6631	HL7 IN 1.5.02	The solution should provide additional non-repudiation functionality where required by users' scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6632	HL7 IN 1.5.03	The solution should conform to function IN.2.2 (Auditable Records) to prevent repudiation of data origination, receipt, or access.	Unknown	Unknown
+6633	HL7 IN 1.5.04	The solution should conform to function IN.1.8 (Information Attestation) to ensure the integrity of data exchange and thus prevent repudiation of data origination or receipt.	Unknown	Unknown
+		HL7 IN 1.6 Secure Data Exchange		
+6634	HL7 IN 1.6.01	The solution should secure all modes of EMR data exchange.	Unknown	Unknown
+6635	HL7 IN 1.6.02	The solution should conform to function IN.1.7 (Secure Data Routing).	Unknown	Unknown
+6636	HL7 IN 1.6.03	The solution should provide the ability to obfuscate data.	Unknown	Unknown
+6637	HL7 IN 1.6.04	The solution should encrypt and decrypt EMR data that is exchanged over a non-secure link.	Unknown	Unknown
+6638	HL7 IN 1.6.05	The solution should support standards-based encryption mechanisms when encryption is used for secure data exchange.	Unknown	Unknown
+		HL7 IN 1.7 Secure Data Routing		
+6639	HL7 IN 1.7.01	The solution should automatically route electronically exchanged EMR data only from and to known sources and destinations and only over secure networks.	Unknown	Unknown
+6640	HL7 IN 1.7.02	The solution should route electronically exchanged EMR data only to and from authenticated sources and destinations (conform to function IN.1.1 (Entity Authentication)).	Unknown	Unknown
+6641	HL7 IN 1.7.03	The solution should conform to function IN.2.2 (Auditable Records) to provide audit information about additions and changes to the status of destinations and sources.	Unknown	Unknown
+		HL7 IN 1.8 Information Attestation		
+6642	HL7 IN 1.8.01	The solution should conform to function IN.1.1 (Entity Authentication).	Unknown	Unknown
+6643	HL7 IN 1.8.02	The solution should conform to function IN.1.2 (Entity Authorization).	Unknown	Unknown
+6644	HL7 IN 1.8.03	The solution should provide the ability to associate any attestable content added or changed to an EMR with the content's author (for example by conforming to function IN.2.2 (Auditable Records).	Unknown	Unknown
+6645	HL7 IN 1.8.04	The solution should provide the ability for attestation of attestable EMR content by the content's author.	Unknown	Unknown
+6646	HL7 IN 1.8.05	The solution should indicate the status of attestable data which has not been attested.	Unknown	Unknown
+6647	HL7 IN 1.8.06	The solution should provide the ability for attestation of EMR content by properly authenticated and authorized users different from the author as required by users’ scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6648	HL7 IN 1.8.07	The solution should provide the ability to use digital signatures as the means for attestation.	Unknown	Unknown
+		HL7 IN 1.9 Patient Privacy and Confidentiality		
+6649	HL7 IN 1.9.01	The solution should provide the ability to fully comply with the requirements for patient privacy and confidentiality in accordance with a user's scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6650	HL7 IN 1.9.02	The solution should conform to function IN.1.1 (Entity Authentication).	Unknown	Unknown
+6651	HL7 IN 1.9.03	The solution should conform to function IN.1.2 (Entity Authorization).	Unknown	Unknown
+6652	HL7 IN 1.9.04	The solution should conform to function IN.1.3 (Entity Access Control).	Unknown	Unknown
+6653	HL7 IN 1.9.05	The solution should conform to function IN.1.5 (Non-Repudiation).	Unknown	Unknown
+6654	HL7 IN 1.9.06	The solution should conform to function IN.1.6 (Secure Data Exchange).	Unknown	Unknown
+6655	HL7 IN 1.9.07	The solution should conform to function IN.2.2 (Auditable Records).	Unknown	Unknown
+6656	HL7 IN 1.9.08	The solution should provide the ability to maintain varying levels of confidentiality in accordance with users' scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6657	HL7 IN 1.9.09	The solution should provide the ability to mask parts of the electronic health record (e.g. medications, conditions, sensitive documents) from disclosure according to scope of practice, organizational policy or jurisdictional law.	Unknown	Unknown
+6658	HL7 IN 1.9.10	The solution should provide the ability to override a mask in emergency or other specific situations according to scope of practice, organizational policy or jurisdictional law.	Unknown	Unknown
+	HL7 IN 2	Health Record Information and Management		
+		HL7 IN 2.1 Data Retention, Availability and Destruction		
+5521	HL7 IN 2.1.01	The solution should provide the ability to store and retrieve health record data and clinical documents for the legally prescribed time.	Unknown	Unknown
+6660	HL7 IN 2.1.02	The solution should provide the ability to retain inbound data or documents (related to health records) as originally received (unaltered, inclusive of the method in which they were received) for the legally organizationally prescribed time in accordance with users’ scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6661	HL7 IN 2.1.03	The solution should retain the content of inbound data (related to health records) as originally received for the legally prescribed time.	Unknown	Unknown
+5524	HL7 IN 2.1.04	The solution should provide the ability to retrieve both the information and business context data within which that information was obtained.	Unknown	Unknown
+5525	HL7 IN 2.1.05	The solution should provide the ability to retrieve all the elements included in the definition of a legal medical record.	Unknown	Unknown
+5526	HL7 IN 2.1.06	The solution should provide the ability to identify specific EMR data/records for destruction, review and confirm destruction before it occurs and implement  Auditable Records function.	Unknown	Unknown
+5527	HL7 IN 2.1.07	The solution should provide the ability to destroy EMR data/records so that all traces are irrecoverably removed according to policy and legal retentions periods.	Unknown	Unknown
+5528	HL7 IN 2.1.08	The solution should pass along record destruction date information (if any) along with existing data when providing records to another entity.	Unknown	Unknown
+		HL7 IN 2.2 Auditable Records		
+6289	HL7 IN 2.2.01	The solution should provide audit capabilities for recording access and usage of solutions, data, and organizational resources.	Unknown	Unknown
+6290	HL7 IN 2.2.02	The solution should conform to Entity Authentication.	Unknown	Unknown
+6291	HL7 IN 2.2.03	The solution should provide audit capabilities indicating the time stamp for an object or data creation.	Unknown	Unknown
+6292	HL7 IN 2.2.04	The solution should provide audit capabilities indicating the time stamp for an object or data modification in accordance with users' scope or practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6293	HL7 IN 2.2.05	The solution should provide audit capabilities indicating the time stamp for an object or data extraction in accordance with user's scope or practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6294	HL7 IN 2.2.06	The solution should provide audit capabilities indicating the time stamp for an object or data exchange.	Unknown	Unknown
+6295	HL7 IN 2.2.07	The solution should provide audit capabilities indicating the time stamp for an object or data view.	Unknown	Unknown
+6296	HL7 IN 2.2.08	The solution should provide audit capabilities indicating the time stamp for an object or data deletion in accordance with user's scope or practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6297	HL7 IN 2.2.09	The solution should provide audit capabilities indicating the author of a change in accordance with user's scope or practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6662	HL7 IN 2.2.10	The solution should provide audit capabilities indicating the viewer of a data set.	Unknown	Unknown
+6663	HL7 IN 2.2.11	The solution should provide audit capabilities indicating the data value before a change.	Unknown	Unknown
+6659	HL7 IN 2.2.12	The solution should provide audit capabilities to capture solution events at the hardware and software architecture level.	Unknown	Unknown
+5522	HL7 IN 2.2.13	The solution should conform to function IN.1.3 (Entity Access Control) to limit access to audit record information to appropriate entities in accordance with users’ scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+5523	HL7 IN 2.2.14	The solution should provide the ability to generate an audit report.	Unknown	Unknown
+6664	HL7 IN 2.2.15	The solution should provide the ability to view change history for a particular record or data set in accordance with users’ scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6665	HL7 IN 2.2.16	The solution should provide the ability to record system maintenance events for loading new versions of, or changes to, the clinical system.	Unknown	Unknown
+6666	HL7 IN 2.2.17	The solution should provide the ability to record solution maintenance events for loading new versions of codes and knowledge bases.	Unknown	Unknown
+6667	HL7 IN 2.2.18	The solution should provide the ability to record changing the date and time where the clinical solution allows this to be done.	Unknown	Unknown
+6668	HL7 IN 2.2.19	The solution should provide the ability to record solution maintenance events for creating and restoring of backup.	Unknown	Unknown
+6669	HL7 IN 2.2.20	The solution should provide the ability to record solution maintenance events for archiving any data.	Unknown	Unknown
+6670	HL7 IN 2.2.21	The solution should provide the ability to record solution maintenance events for re-activating of an archived patient record.	Unknown	Unknown
+6671	HL7 IN 2.2.22	The solution should provide the ability to record solution maintenance events for entry to and exit from the EMR solution.	Unknown	Unknown
+6672	HL7 IN 2.2.23	The solution should provide the ability to record solution maintenance events for remote access connections including those for solution support and maintenance activities.	Unknown	Unknown
+6673	HL7 IN 2.2.24	The solution should utilize standardized time keeping (for example using the IHE consistent time profile).	Unknown	Unknown
+6674	HL7 IN 2.2.25	The solution should provide the ability to record and report upon audit information using a standards-based audit record format (for example RFC 3881).	Unknown	Unknown
+		HL7 IN 2.3 Synchronization		
+6675	HL7 IN 2.3.1	The solution should conform to function IN.5.1 (Interchange Standards).	Unknown	Unknown
+6676	HL7 IN 2.3.2	The solution should conform to function IN.3 (Registry and Directory Services) to enable the use of registries and directories.	Unknown	Unknown
+6677	HL7 IN 2.3.3	The solution should provide the ability to link entities to external information.	Unknown	Unknown
+6678	HL7 IN 2.3.4	The solution should store the location of each known health record component in order to enable authorized access to a complete logical health record if the EMR is distributed among several applications within the EMR.	Unknown	Unknown
+		HL7 IN 2.4 Extraction of Health Record Information		
+6679	HL7 IN 2.4.01	The solution should provide the ability to extract health record information.	Unknown	Unknown
+6680	HL7 IN 2.4.02	The solution should conform to function IN.1.6 (Secure Data Exchange) to provide secure data exchange capabilities.	Unknown	Unknown
+6681	HL7 IN 2.4.03	The solution should provide the ability to de-identify extracted information.	Unknown	Unknown
+6682	HL7 IN 2.4.04	The solution should conform to function IN.5.1 (Interchange Standards) to enable data extraction in standard-based formats.	Unknown	Unknown
+6683	HL7 IN 2.4.05	The solution should provide the ability to perform extraction operations across the complete data set that constitutes the health record of an individual within the solution.	Unknown	Unknown
+6684	HL7 IN 2.4.06	The solution should provide the ability to perform extraction operations whose output fully chronicles the healthcare process.	Unknown	Unknown
+6685	HL7 IN 2.4.07	The solution should provide the ability to extract data for administrative purposes.	Unknown	Unknown
+6686	HL7 IN 2.4.08	The solution should provide the ability to extract data for financial purposes.	Unknown	Unknown
+6687	HL7 IN 2.4.09	The solution should provide the ability to extract data for research purposes.	Unknown	Unknown
+6688	HL7 IN 2.4.10	The solution should provide the ability to extract data for quality analysis purposes.	Unknown	Unknown
+6689	HL7 IN 2.4.11	The solution should provide the ability to extract data for public health purposes.	Unknown	Unknown
+		HL7 IN 2.5 Store and Manage Health Record Information		
+		HL7 IN 2.5.1 Manage Unstructured Health Record Information		
+6280	HL7 IN 2.5.1.01	The solution should capture unstructured health record information as part of the patient EMR.	Unknown	Unknown
+6281	HL7 IN 2.5.1.02	The solution should retrieve unstructured health record information as part of the patient EMR.	Unknown	Unknown
+6282	HL7 IN 2.5.1.03	The solution should provide the ability to update unstructured health record information.	Unknown	Unknown
+6283	HL7 IN 2.5.1.04	The solution should provide the ability to conform to Data Retention, Availability, and Destruction to provide the ability to inactivate, obsolete, or destroy unstructured health record information.	Unknown	Unknown
+6284	HL7 IN 2.5.1.05	The solution should provide the ability to report unstructured health record information.	Unknown	Unknown
+6285	HL7 IN 2.5.1.06	The solution should track unstructured health record information over time.	Unknown	Unknown
+6286	HL7 IN 2.5.1.07	The solution should provide the ability to append corrected unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+6287	HL7 IN 2.5.1.08	The solution should provide the ability to append unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+6288	HL7 IN 2.5.1.09	The solution should provide the ability to append augmented unstructured health record information to the original unstructured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+		HL7 IN 2.5.2 Manage Structured Health Record Information		
+6270	HL7 IN 2.5.2.01	The solution should capture structured health record information as part of the patient EMR.	Unknown	Unknown
+6271	HL7 IN 2.5.2.02	The solution should retrieve structured health record information as part of the patient EMR.	Unknown	Unknown
+6272	HL7 IN 2.5.2.03	The solution should provide the ability to update structured health record information.	Unknown	Unknown
+6273	HL7 IN 2.5.2.04	The solution should conform to Data Retention, Availability, and Destruction to provide the ability to inactivate, obsolete, or destroy structured health record information.	Unknown	Unknown
+6274	HL7 IN 2.5.2.05	The solution should provide the ability to report structured health record information.	Unknown	Unknown
+6275	HL7 IN 2.5.2.06	The solution should track structured health record information over time.	Unknown	Unknown
+6276	HL7 IN 2.5.2.07	The solution should provide the ability to retrieve each item of structured health care information discretely within patient context.	Unknown	Unknown
+6277	HL7 IN 2.5.2.08	The solution should provide the ability to append corrected structured health record information to the original structured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+6278	HL7 IN 2.5.2.09	The solution should provide the ability to append structured health record information to the original structured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+6279	HL7 IN 2.5.2.10	The solution should provide the ability to append augmented structured health record information to the original structured health record information. A specific type of implementation is not implied.	Unknown	Unknown
+	HL7 IN 3	Registry and Directory Service		
+6257	HL7 IN 3.1.01	The solution should provide the ability to use registry services and directories.	Unknown	Unknown
+6258	HL7 IN 3.1.02	The solution should provide the ability to securely use registry services and directories.	Unknown	Unknown
+6259	HL7 IN 3.1.03	The solution should conform to Interchange Standards to provide standard data interchange capabilities for using registry services and directories.	Unknown	Unknown
+6260	HL7 IN 3.1.04	The solution should communicate with local registry services through standardized interfaces.	Unknown	Unknown
+6261	HL7 IN 3.1.05	The solution should communicate with non-local registry services (that is, registry services that are external to an EMR) through standardized interfaces.	Unknown	Unknown
+6262	HL7 IN 3.1.06	The solution should provide the ability to use registries or directories to uniquely identify patients for the provision of care.	Unknown	Unknown
+6263	HL7 IN 3.1.07	The solution should provide the ability to use registries or directories to uniquely identify providers for the provision of care.	Unknown	Unknown
+6264	HL7 IN 3.1.08	The solution should provide the ability to use registries or directories to retrieve links to relevant healthcare information regarding a patient.	Unknown	Unknown
+6265	HL7 IN 3.1.09	The solution should provide the ability to use registries to supply links to relevant healthcare information regarding a patient.	Unknown	Unknown
+6266	HL7 IN 3.1.10	The solution should provide the ability to use registries or directories to identify payers, health plans, and sponsors for administrative and financial purposes.	Unknown	Unknown
+6267	HL7 IN 3.1.11	The solution should provide the ability to use registries or directories to identify employers for administrative and financial purposes.	Unknown	Unknown
+6268	HL7 IN 3.1.12	The solution should provide the ability to use registries or directories to identify public health agencies for healthcare purposes.	Unknown	Unknown
+6269	HL7 IN 3.1.13	The solution should provide the ability to use registries or directories to identify healthcare resources and devices for resource management purposes.	Unknown	Unknown
+	HL7 IN 4	Standard Terminologies and Terminology Services		
+		HL7 IN 4.1 Standard Terminologies and Terminology Models		
+6191	HL7 IN 4.1.1	The solution should provide the ability to use standard terminologies to communicate with other solutions (internal or external to the EMR).	Unknown	Unknown
+6192	HL7 IN 4.1.2	The solution should provide the ability to validate that clinical terms and coded clinical data exists in a current standard terminology.	Unknown	Unknown
+6193	HL7 IN 4.1.3	The solution should provide the ability to exchange healthcare data using formal standard information models and standard terminologies.	Unknown	Unknown
+6194	HL7 IN 4.1.4	The solution should provide the ability to use a formal standard terminology model.	Unknown	Unknown
+6195	HL7 IN 4.1.5	The solution should provide the ability to use hierarchical inference searches e.g. subsumption across coded terminology concepts that were expressed using standard terminology models.	Unknown	Unknown
+6196	HL7 IN 4.1.6	The solution should provide the ability to use a terminology service (internal or external to the EMR).	Unknown	Unknown
+6690	HL7 IN 4.1.7	If there is no standard terminology model available, then the solution should provide a formal explicit terminology model.	Unknown	Unknown
+		HL7 IN 4.2 Maintenance and Versioning of Standard Terminologies		
+6197	HL7 IN 4.2.1	The solution should provide the ability to use different versions of terminology standards.	Unknown	Unknown
+6198	HL7 IN 4.2.2	The solution should provide the ability to update terminology standards.	Unknown	Unknown
+6199	HL7 IN 4.2.3	The solution should relate modified concepts in the different versions of a terminology standard to allow preservation of interpretations over time.	Unknown	Unknown
+6200	HL7 IN 4.2.4	The solution should provide the ability to interoperate with solutions that use known different versions of a terminology standard.	Unknown	Unknown
+6201	HL7 IN 4.2.5	The solution should provide the ability to deprecate terminologies.	Unknown	Unknown
+6202	HL7 IN 4.2.6	The solution should provide the ability to deprecate individual codes within a terminology.	Unknown	Unknown
+6203	HL7 IN 4.2.7	The solution should provide the ability to cascade terminology changes where coded terminology content is embedded in clinical models (for example, templates and custom formularies) when the cascaded terminology changes can ge accomplished unambiguously.	Unknown	Unknown
+6204	HL7 IN 4.2.8	The solution should apply changes in terminology to all new clinical content (via templates, custom formularies).	Unknown	Unknown
+		HL7 IN 4.3 Terminology Mapping		
+6205	HL7 IN 4.3.1	The solution should provide the ability to use a terminology map.	Unknown	Unknown
+6206	HL7 IN 4.3.2	The solution should provide the ability to use standard terminology services for the purposes of mapping terminologies.	Unknown	Unknown
+6207	HL7 IN 4.3.3	The solution should provide the ability for a user to validate a mapping.	Unknown	Unknown
+6208	HL7 IN 4.3.4	The solution should provide the ability to create a terminology map.	Unknown	Unknown
+	HL7 IN 5	Standards-based Interoperability		
+		HL7 IN 5.1 Interchange Standards		
+6209	HL7 IN 5.1.1	The solution should provide the ability to use interchange standards as required by realm specific and/or local profiles.	Unknown	Unknown
+6210	HL7 IN 5.1.2	The solution should provide the ability to seamlessly perform interchange operations with other solutions that adhere to recognized interchange standards.	Unknown	Unknown
+6211	HL7 IN 5.1.3	The solution should conform to Standard Terminologies and Terminology Services to support terminology standards in accordance with a user's scope of practice, organizational policy, or jurisdictional law.	Unknown	Unknown
+6212	HL7 IN 5.1.4	If there is no standard information model available, then the solution should provide a formal explicit information model in order to support the ability to operate seamlessly with other solutions.	Unknown	Unknown
+6213	HL7 IN 5.1.5	The solution should provide the ability to exchange data using an explicit and formal information model and standard, coded terminology.	Unknown	Unknown
+		HL7 IN 5.2 Interchange Standards Versioning and Maintenance		
+6214	HL7 IN 5.2.1	The solution should provide the ability to use different versions of interchange standards.	Unknown	Unknown
+6215	HL7 IN 5.2.2	The solution should provide the ability to change (reconfigure) the way that data is transmitted as an interchange standard evolves over time and in accordance with business needs.	Unknown	Unknown
+6216	HL7 IN 5.2.3	The solution should provide the ability to deprecate an interchange standard.	Unknown	Unknown
+6217	HL7 IN 5.2.4	The solution should provide the ability to interoperate with other solutions that use known earlier versions of an interoperability standard.	Unknown	Unknown
+		HL7 IN 5.3 Standards-based Application Integration		
+6218	HL7 IN 5.3.1	The solution should provide the ability to support standards-based application integration.	Unknown	Unknown
+		HL7 IN 5.4 Interchange Agreements		
+6219	HL7 IN 5.4.1	The solution should use interchange agreement descriptions when exchanging information with partners.	Unknown	Unknown
+6220	HL7 IN 5.4.2	The solution should use interchange agreement description standards (when available).	Unknown	Unknown
+6221	HL7 IN 5.4.3	The solution should conform to Registry and Directory Services to interact with entity directories to determine the address, profile, and data exchange requirements of known and/or potential partners.	Unknown	Unknown
+6222	HL7 IN 5.4.4	The solution should provide the ability to automatically discover interchange services and capabilities.	Unknown	Unknown
+	HL7 IN 6	Business Rules Management		
+6223	HL7 IN 6.1.01	The solution should provide the ability to manage business rules.	Unknown	Unknown
+6224	HL7 IN 6.1.02	The solution should provide the ability to create, import, or access decision support rules to guide solution behavior.	Unknown	Unknown
+6225	HL7 IN 6.1.03	The solution should provide the ability to update decision support rules.	Unknown	Unknown
+6226	HL7 IN 6.1.04	The solution should provide the ability to customize decision support rules and their components.	Unknown	Unknown
+6227	HL7 IN 6.1.05	The solution should provide the ability to inactivate, obsolete, or destroy decision support rules.	Unknown	Unknown
+6228	HL7 IN 6.1.06	The solution should conform to Auditable Records to audit all changes to decision support rules.	Unknown	Unknown
+6229	HL7 IN 6.1.07	The solution should provide the ability to create diagnostic support rules to guide solution behavior.	Unknown	Unknown
+6230	HL7 IN 6.1.08	The solution should provide the ability to update diagnostic support rules.	Unknown	Unknown
+6231	HL7 IN 6.1.09	The solution should provide the ability to customize diagnostic support rules and their components.	Unknown	Unknown
+6232	HL7 IN 6.1.10	The solution should provide the ability to inactivate, obsolete, or destroy diagnostic support rules.	Unknown	Unknown
+6233	HL7 IN 6.1.11	The solution should conform to Auditable Records to audit all changes to diagnostic support rules.	Unknown	Unknown
+6234	HL7 IN 6.1.12	The solution should provide the ability to create workflow control rules to guide solution behavior.	Unknown	Unknown
+6235	HL7 IN 6.1.13	The solution should provide the ability to update workflow control rules.	Unknown	Unknown
+6236	HL7 IN 6.1.14	The solution should provide the ability to customize workflow control rules and their components.	Unknown	Unknown
+6237	HL7 IN 6.1.15	The solution should provide the ability to inactivate, obsolete, or destroy workflow control rules.	Unknown	Unknown
+6238	HL7 IN 6.1.16	The solution should conform to Auditable Records to audit all changes to workflow control rules.	Unknown	Unknown
+6239	HL7 IN 6.1.17	The solution should provide the ability to create access privilege rules to guide solution behavior.	Unknown	Unknown
+6240	HL7 IN 6.1.18	The solution should provide the ability to update access privilege rules.	Unknown	Unknown
+6241	HL7 IN 6.1.19	The solution should provide the ability to customize access privilege rules and their components.	Unknown	Unknown
+6242	HL7 IN 6.1.20	The solution should provide the ability to inactivate, obsolete, or destroy privilege rules.	Unknown	Unknown
+6243	HL7 IN 6.1.21	The solution should conform to Auditable Records to audit all changes to privilege rules.	Unknown	Unknown
+6244	HL7 IN 6.1.22	The solution should conform to Auditable Records to audit all changes to other business rules.	Unknown	Unknown
+6245	HL7 IN 6.1.23	The solution should support the ability to selectively export business rules.	Unknown	Unknown
+	HL7 IN 7	Workflow Management		
+5529	HL7 IN 7.1.01	The solution should use workflow-related business rules to direct the flow of work assignments.	Unknown	Unknown
+5530	HL7 IN 7.1.02	The solution should provide the ability to create workflow (task list) queues.	Unknown	Unknown
+5531	HL7 IN.7.1.03	The solution should provide the ability to manage workflow (task list) queues.	Unknown	Unknown
+5532	HL7 IN.7.1.04	The solution should provide the ability to manage human resources (i.e., personnel lists) for workflow queues.	Unknown	Unknown
+5533	HL7 IN.7.1.05	The solution should use solution interfaces that support the management of human resources (i.e., personnel lists).	Unknown	Unknown
+5534	HL7 IN.7.1.06	The solution should use solution interfaces that support the management of workflow (task lists) queues.	Unknown	Unknown
+5535	HL7 IN.7.1.07	The solution should provide the ability to distribute information to and from internal and external parties.	Unknown	Unknown
+5536	HL7 IN.7.1.08	The solution should provide the ability to route notifications and tasks based on solution triggers.	Unknown	Unknown
+6254	HL7 IN.7.1.09	The solution should dynamically escalate workflow according to business rules.	Unknown	Unknown
+5538	HL7 IN.7.1.10	The solution should dynamically redirect workflow according to business rules.	Unknown	Unknown
+5539	HL7 IN.7.1.11	The solution should dynamically reassign workflow according to business rules.	Unknown	Unknown

@@ -1,0 +1,61 @@
+D	Comms Software Requirements Specification for Defense Information Infrastructure Common Operating Environment
+3	Requirements
+3.2	Message Transfer Services Requirements
+3.2.1	General Requirements
+3.2.2	Input/Output Devices Requirements
+3.2.2.2	Serial Device Requirements
+3.2.2.3	Parallel Device Requirements
+3.2.2.4	Network Device Requirements.
+3.2.3	Input/Output Interfaces Requirements
+3.2.3.2	Serial Interface
+3.2.3.5	Network Interfaces
+3.2.3.6	Email Interface
+3.2.4	Input/Output Interface Control
+3.2.5	Message Management Requirements
+3.2.5.3	Message Logging
+3.2.5.5	Message Management APIs
+3.2.6	Message Distribution/Collection/Validation
+3.2.6.3	Addressee Database
+3.2.6.4	Message Validation
+3.2.6.5	Message Accountability
+3.2.6.6	Retrospective Search
+3.2.6.8	Multi-Sectioned Messages
+3.2.6.9	Core Incoming Message Management Requirements
+3.2.6.10	Message Routing/Auto Forward/Distribution
+3.2.6.11	Message Profiling
+3.2.6.12	Core Outgoing Message Management Requirements
+3.3	Voice Communications Requirements
+3.3.1	Core Voice Communications Requirements Overview
+3.3.2	Telephone Services
+3.3.3	Voice Communications Services
+3.3.4	Broadcast Services
+3.3.5	Visual Services Requirements
+3.3.5.1	Teleconferencing Requirements
+3.4	Information Technical Service Management Requirements
+3.5	Network Services
+3.5.2	Network Communications
+3.5.2.1	Local Area Network Communications
+3.5.2.2	Metropolitan Area Communications
+3.5.2.3	Wide Area Network Communications
+3.5.2.4	Dialup Network
+3.5.2.5	Other Network Communications
+3.5.3	Network Protocols
+3.5.4	Network Applications
+3.5.4.1	Electronic Mail (E-mail) Services
+3.5.4.2	Directory Services
+3.5.4.3	File Transfer
+3.5.4.4	Terminal Access
+3.5.4.5	Network Information Discovery and Retrieval
+3.5.5	Network Services Applications Defined in Other Requirements Specifications
+3.5.5.5	Personal/Microcomputer Network Support
+3.6	C4I Communications Services Requirements
+3.6.5	C4I Voice Communications Requirements
+3.6.6	Combat Net Radio
+3.6.7	C4I Interfaces
+3.6.7.1	TADIL-A
+3.6.7.2	TADIL-B
+3.6.7.3	TADIL-J
+3.6.7.4	TCIM
+3.6.7.5	TLC-10
+3.6.7.6	PLI
+3.6.7.7	C4I Interface Control

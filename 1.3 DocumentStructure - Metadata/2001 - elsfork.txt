@@ -1,0 +1,33 @@
+D	Functional Requirements on Communication system for Wind Turbine Applications 
+4	System 
+4.1	General 
+4.1.1	Data interchange for secondary systems 
+5	Communication 
+5.1	Basic Services 
+5.4	Mapping between functions and ways of communication 
+5.5	General Requirements for All Data Kinds 
+5.6	Security 
+5.6.1	Authentication 
+5.6.2	Data Integrity 
+5.6.3	Data confidentiality 
+5.7	Performance 
+5.7.1	Time Critical Functions 
+5.7.2	Reliability 
+5.8	Compatibility with Existing Systems 
+6	Plant data  
+6.1	Information structure 
+6.2	Naming convention 
+6.3	Analogue Signals 
+6.5	Binary Signals 
+6.6	Binary control commands 
+6.7	Alarms 
+6.8	Events 
+6.9	Counters 
+6.10	Timers 
+6.11	Grouped data 
+6.12	Local data storage and handling 
+6.12.1	Analogue values 
+6.12.2	Binary values 
+6.12.3	Alarm logging 
+6.12.4	Event log 
+6.12.5	Counters

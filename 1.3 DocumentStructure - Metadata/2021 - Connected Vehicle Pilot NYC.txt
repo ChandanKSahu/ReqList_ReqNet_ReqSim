@@ -1,0 +1,61 @@
+D	Connected Vehicle Pilot Deployment Program Phase 1 Systems Requirements Specification (SyRS) – New York City
+3	System Capabilities, Conditions, and Constraints  
+3.1	Physical  
+3.1.1	Construction  
+3.1.1.1	Mechanical Requirements  
+3.1.1.2	Electrical Requirements
+3.1.2	Durability   
+3.1.2.1	Back -up Power 
+3.1.2.2	Repair  
+3.1.3	Adaptability 
+3.1.4	Environmental conditions  
+3.2	System Performance Characteristics  
+3.2.1	Vehicle Performance Monitoring
+3.2.2	IE Performance Monitoring
+3.2.3	Event Data Recording
+3.2.4	Event Data Collection  
+3.2.5	Performance Data Collection  and Processing
+3.3	System Security 
+3.3.1	Security Management and Operations
+3.4	Information Management 
+3.5	System Operations
+3.5.1	System Human Factors
+3.5.2	System Maintainability
+3.5.2.1	Functional Safety Requirements  
+3.5.3	System Reliability
+3.6	Policy and Regulation  
+3.6.1	Maintenance
+3.7	System  Life Cycle Sustainment
+3.8	Application Requirements 
+3.8.1	Common Application
+3.8.2	V2V Application 
+3.8.2.1	Forward Crash Warning  
+3.8.2.2	Emergency Electronic Brake Light  
+3.8.2.3	Blind Spot Warning   
+3.8.2.4	Lane Change Warning
+3.8.2.5	Intersection Movement Assist   
+3.8.2.6	Vehicle Turning Right in Front of a Transit Vehicle  
+3.8.3	V2I Application 
+3.8.3.1	Speed Compliance  
+3.8.3.2	Curve Speed Compliance  
+3.8.3.3	Speed Compliance / Work Zone  
+3.8.3.4	Red Light Violation Warning
+3.8.3.5	Oversize Vehicle Compliance  
+3.8.3.6	Emergency Commun ications and Evacuation Information  
+3.8.3.7	Pedestrian in Signalized Intersection Warning  
+3.8.4	I2P Application 
+3.8.4.1	Mobile Accessible Pedestrian Signal System  
+4	System Interfaces 
+4.1	Global Navigation Satellite System (GNSS)
+4.2	Location Correction  
+4.2.1	Triangulation for ASD Location Accuracy
+4.3	Network Time Reference
+4.4	Security Credential Management System (SCMS)
+4.5	Object Registration and Discovery Service (ORDS)  
+4.6	Data Distribution System (DDS)  
+4.7	Research Data Exchange (RDE)
+4.8	National Weather Service
+4.9	Foreign Dedicated Short Range Communications
+4.10	Vehicle Data Bus
+4.11	Advanced Traffic Signal Controllers
+4.12	Traffic Signal System

@@ -1,0 +1,357 @@
+
+Copyright © 2002 by Karl E. Wiegers. Permission is granted to use, modify, and distribute this document.  
+Software Requirements 
+Specification 
+For 
+Video Search Engine 
+Version 1.0 approved 
+Prepared by Alan Woosnam, Da mien Holmes, Irshad, Mustapha 
+Sheriff, Will Josephy 
+X-ray 
+02/03/09 
+Software  Requirements Specification for x-ray   Page ii 
+  
+Contents  
+1. Introduction  ............................................................................................................................1  
+1.1 Purpose  .............................................................................................................................. ........ 1 
+1.2 Intended Audience and Reading Suggestions  ..................................................................... 1  
+1.3 Project Scope  ............................................................................................................................ 1  
+1.4 References  .............................................................................................................................. ... 2 
+2. Overall Description  ...............................................................................................................3  
+2.1 Product Perspective  ................................................................................................................. 3  
+2.2 Product Features  ...................................................................................................................... 3  
+2.3 User Classes and Characteristics  .......................................................................................... 3  
+2.4 Operating Environment  ............................................................................................................ 3  
+3. System Features  ....................................................................................................................4  
+3.1 Torrent Search  .......................................................................................................................... 4  
+3.1.1 Description and Priority  ....................................................................................................... 4  
+3.1.2 Stimulus/Response Sequences  ......................................................................................... 4  
+3.1.3 Functional Requirements  .................................................................................................... 4  
+3.2 Video Stream Search  ............................................................................................................... 5  
+3.2.1 Description and Priority  ....................................................................................................... 5  
+3.2.2 Stimulus/Response Sequences  ......................................................................................... 5  
+3.2.3 Functional Requirements  .................................................................................................... 5  
+4. External Interface Requirements  ......................................................................................7  
+4.1 User Interfaces  .......................................................................................................................... 7  
+4.2 Software Interfaces  ................................................................................................................... 7  
+4.3 Communications Interfaces  ..................................................................................................... 7  
+5. Other Nonfunctional Requirements  .................................................................................8  
+5.1 Performance Requirements  .................................................................................................... 8  
+5.2 Safety Requirements  ................................................................................................................ 8  
+5.3 Security Requirements  ............................................................................................................. 8  
+5.4 Legal Requirements  ................................................................................................................. 8  
+ 
+ 
+ 
+Revision History 
+Name Date Reason For Changes Version 
+Will 2/03/09 Creation of document 1.0 
+  
+Software  Requirements Specification for x-ray  Page 1 
+ 1. Introduction 
+1.1 Purpose 
+This document will give a detailed description of the Video Searching software. The 
+software will be used to search multiple web sites for streaming videos and torrents 
+and return these results to the user. 
+ 
+This document will cover the features of the software and include specifics on what 
+the system will do and any constraints and external factors that might affect the 
+system. 
+1.2 Intended Audience and Reading Suggestions 
+This document is intended for the developers of the system and project managers 
+as guide to building the software. It will also be used by the potential users of the 
+product to get their opinions on the software, this will help to revise and improve the 
+product. 
+ 
+The Overall Description will give an overview of the product functionality and 
+features. Also mentioned are the constraints that will affect the system and the 
+interface. This section will be used by the rest of the document and will give a better 
+understanding of the system. 
+ 
+The third section, the System Features, gives a full description of the actions 
+preformed by the system and gives details on the functions that are executed. All 
+the major services that will be provided by the product are documented here. 
+ 
+The fourth section, the External Interface Requirements, will give details on the 
+interaction between the user and the software through external interfaces. This 
+section will give a description on hardware and software interfaces that the Video 
+Searching software requires to perform an action. 
+ 
+Other requirements of the software will be described in the fifth section, Other 
+Nonfunctional Requirements. This will give the requirements for the software when 
+dealing with external entities and restrictions. 
+1.3 Project Scope 
+This Video Searching software will be a system that uses an active internet connection to search multiple websites for streaming videos or torrents. The system 
+will be used to aid the user when trying to locate a specific video or genre of video. 
+It will help them reduce searching time through various different websites by 
+searching all these websites with just one query. It provides tools to help when 
+navigating through search results which will save time and effort. 
+ 
+The software aims to help the user by providing a simple interface and a more 
+efficient way of finding the video they require. It will also provide the user with 
+Software  Requirements Specification for x-ray  Page 2 
+ various options and tools to help make their search more relevant to the content 
+that they need. The system will contain databases of the different websites that will 
+be used within the search. These databases can be easily updated to provide a 
+wider searching range. 
+1.4 References 
+Separate studies conducted by Damien C Holmes, William J Josephy, Alan 
+Woosnam, Mustapha A Sherrif, and Irshad A Qabool on video distribution within the 
+home. All studies based on private homes of the authors’ choosing, all studies 
+created on Feb 2009. 
+ 
+http://www.youtube.com   
+http://www.megavideo.com  
+http://www.facebook.com  
+http://www.surfthechannel.com  
+http://www.bbc.co.uk/iplayer/  
+http://www.google.com   
+ 
+ 
+Software  Requirements Specification for x-ray  Page 3 
+ 2. Overall Description 
+2.1 Product Perspective 
+The program is a new self-contained product. It has come about due to the demand 
+for such a product being identified in a series of Ethnography studies. From these 
+studies we saw that the main activity people used video for was the watch content 
+found online. These people would regularly spend periods of time searching 
+websites to try and find the videos they wanted to watch, either somewhere to 
+stream the video from or the files to download the video. This was especially true of 
+the studies by Alan Woosnam, Irshad Qabool and Will Josephy. Our system will aim 
+to speed up this process. 
+2.2 Product Features 
+The main feature of the system will be a search engine for finding the location of 
+torrents and streaming sites for videos on the internet. The user can specify which 
+of the 2 or both to look for. The results will be divided into the types that were 
+specified using different tabs, and then the results will be orderable by different 
+categories, such as name, size, site, etc. The user will have the option to filter out 
+videos containing certain content depending on age restrictions, for example adult 
+content. In addition the user will have the option to filter out or only search certain 
+websites; for example a user may only want to look at videos on YouTube. They will 
+have the facility for users to store their favorite videos, so that they can come back 
+to the video at another time. 
+2.3 User Classes an d Characteristics 
+There will be two levels of user for our system. The first will be the general user that 
+will be using our software to find their videos. They will only see the front end of the 
+system. The second level will be the system developers. They will be able to edit 
+which sites the system will search, depending on whether they think the site is safe, 
+compatible with our software, the speed at which the site can be searched, and how 
+useful the site is to us, i.e. how many results have come back from that site. 
+2.4 Operating Environment 
+The system will be portable; this means it will work across different operating 
+systems including Microsoft XP and Vista, Mac OS X and a range of Linux 
+platforms. Also it will work with different web browsers, for example Internet 
+Explorer, Firefox, and Safari. 
+ 
+The hardware needed for our system will be a reasonably up-to-date computer that 
+is connected to the internet via a modem. 
+Software  Requirements Specification for x-ray  Page 4 
+ 3. System Features 
+3.1 Torrent Search 
+3.1.1 Description and Priority 
+The user will give a search-term that will search through a database of compatible 
+torrent websites that are added by the development team. The results of this search 
+will be displayed as web links in a tab on the program’s main window. This is one of 
+the main features of the software and therefore has a high priority for development. 
+3.1.2 Stimulus/Response Sequences 
+User ticks torrent tick box – system will now query the torrent websites in its 
+database when a search is started. 
+User enters search term and starts search – system sends queries to the torrent 
+websites in its database based on the search term. Results for this query will then be 
+sent to the torrent tab in the program where they will display information such as 
+website, seeds, peers, size, date posted and a link for the webpage.  
+User sorts the search results by clicking once on a column header – system sorts all 
+results by descending/ascending order. 
+User clicks on next page button – system displays the next set of results for the 
+search. 
+3.1.3 Functional Requirements 
+REQ-1: Torrent search will share the same search bar with the streaming search. 
+REQ-2: Database of torrent sites can be updated via the internet. REQ-3: There will be a tick box to allow the user to choose to include torrent 
+searching in the search. 
+REQ-4: Query will retrieve the no. of seed and peers, size of the file, date posted 
+and a link to the webpage itself. 
+REQ-5: If no results are found on a search it will display a message “No results were 
+found for this search.” 
+REQ-6: Results will be arranged in size/date/alphabetical order by clicking on the 
+column headers. 
+REQ-7: There will be page button for the user to navigate the results. 
+Software  Requirements Specification for x-ray  Page 5 
+ 3.2 Video Stream Search 
+3.2.1 Description and Priority 
+This feature will search a term the user enters, through a database of compatible 
+video streaming websites that are added by the development team. The video 
+websites will range from sites that actually host video such as MegaVideo, 
+YouTube, etc as well as websites that show links to videos hosted on other sites 
+such as surfthechannel.com, alluc.org, etc. The results will be displayed in a tab on 
+the programs main window. This tab will be split horizontally into two sections, the 
+top half for the video hosting sites and the bottom half for the video link sites. This is 
+another of the main features of the software and also has a higher priority for 
+development. 
+3.2.2 Stimulus/Response Sequences 
+User ticks streaming host tick box – system will now query the video hosting sites in 
+its database when a search is started. Hosting sites will include the actual videos on 
+their servers, e.g. YouTube. 
+User ticks streaming links tick box – syst em will now query the video link sites in its 
+database when a search is started. The link sites will include external video links to 
+different video hosting sites, e.g. surfthechannel.com. 
+User enters search term and starts search – system sends queries to the video 
+websites in its database based on the search term. Results for this query will then be 
+sent to the video stream tab in the program. The hosting half of the tab displays the 
+website, full video name, length and date posted. The link half of the tab displays the 
+website and video name (e.g. combination of the show’s name and the episode 
+name). 
+User sorts the search results by clicking once on the column header – system sorts 
+all results by descending/ascending order. 
+User filters websites they want to be shown in the results – system removes 
+unselected websites from the results. 
+User clicks on next page button – system displays the next set of results for the 
+search. 
+3.2.3 Functional Requirements 
+REQ-1: Streaming search will share the same search bar with the torrent search. 
+REQ-2: Database of video hosting and video linking sites can be updated via the 
+internet. 
+REQ-3: There will be a tick box to allow the user to choose to include video host 
+searching in the search. 
+Software  Requirements Specification for x-ray  Page 6 
+ REQ-4: There will be a tick box to allow the user to choose to include video link 
+searching in the search. 
+REQ-5: Query to video hosting sites will retrieve full video name, length, date posted 
+and a link to the video itself. 
+REQ-6: Query to video link sites will retrieve the show’s name, episode name and a 
+link to the webpage itself. 
+REQ-7: If no results are found on a search it will display a message “No results were 
+found for this search.” 
+REQ-8: Results will be arranged in length/date/alphabetical order by clicking on the 
+column headers. 
+REQ-9: There will be page button for the user to navigate the results.  
+Software  Requirements Specification for x-ray  Page 7 
+ 4. External Interface Requirements 
+4.1 User Interfaces 
+The user Interface will consist of one main screen, allowing all the functionally to 
+come from this one screen. This allows the user to use the software with ease by 
+not flicking through a number of different screens. In addition to this the user can 
+always see the videos they are looking for. The main screen will be laid out as in 
+Appendix: B Diagram along with the description of the diagram. We decided on this 
+type of interface because we felt that it would be very simple for the user to 
+navigate. From our reports we found that the simpler the interface was, the more 
+people liked it. 
+ 
+With all these features complied into one screen it will give the software more 
+flexibility and allows for easy and simple usage. This will appeal to both naïve 
+computer users and experienced computer users with a higher selling market.  
+4.2 Software Interfaces 
+The software will use hyperlinks to allow the user to open websites in their default 
+web browser.  
+4.3 Communications Interfaces 
+Communication standards that will be used through the software will be PHP or other such languages. These will be used to query the different servers that the 
+websites use and will give us back  
+Software  Requirements Specification for x-ray  Page 8 
+ 5. Other Nonfunctional Requirements 
+5.1 Performance Requirements 
+REQ-1: Query times will take no longer than 5 seconds to any website. 
+REQ-2: Sending the hyperlink to the default browser will take less than 1 second. 
+REQ-3: Loading the program will take less than 10 seconds. 
+REQ-4: Any torrent result with 0 seeds will not be displayed. 1 
+REQ-5: Sorting results should take less than 0.1 seconds. REQ-6: A results page will display 100 results. 
+REQ-7: Any torrent result with a rating of less than 1 will not be displayed. 2 
+ 
+1 – Any torrent with 0 seeds cannot guarantee to be fully downloaded. 
+2 – Any torrent with a rating of less than 1 should not be fully trusted; this was one 
+of the main complaints from users in William Josephys ethnographic study. 
+5.2 Safety Requirements 
+Our development team must thoroughly investigate each website within our 
+database each month, to ensure that no illegal or harmful content is exposed to our 
+users.  
+5.3 Security Requirements 
+We don’t maintain any user data or host any content. 
+5.4 Legal Requirements 
+While all safety measures resulting from the site may not be fully identified, a recommendation of a full legal review of the software should be undertaken before 
+the site is available to the public. In doing so, the site will be subject to full 
+indemnification of liability. 
+ 
+The system we produce will stay within all the legal requirements on our behalf, as 
+our software is only listing links for video streams and video download, and this is 
+not illegal. Our system will not host any videos.  
+Software  Requirements Specification for x-ray  Page 9 
+ Appendix A: Glossary  
+Terminology taken from Google: 
+ 
+Peer: A peer is one instance of a BitTorrent client running on a computer on the 
+Internet that you connect to and transfer data. 
+ 
+Seed: a complete copy of the file being made available for download.  
+ 
+Torrent: A Torrent in the Internet world is a site that uses BitTorrent technologies to 
+host file for P2P file download and sharing. A torrent contains the location of data 
+files that can be download from the BitTorrent peer-to-peer network. ...   
+ 
+Software  Requirements Specification for x-ray  Page 10 
+ Appendix B: Diagrams 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1- The first feature of the software is a menu bar. This software includes the basic 
+features used in similar products such as new search, close, load etc. However with 
+our software there are two extra features. These being a filter option which allows the 
+user to set parental controls over the software. This enables the user to be able to 
+search for videos without getting explicit content. In addition to this there is a favorite’s 
+option. This feature gives the user the option of being able to store links to their favorite 
+videos in the software, and be able to go back to these websites after restarting the 
+software. 
+ 
+2- This is the main engine behind the software. This is where the user enters the name of 
+the video they wish to search for. Once the user has typed in the name of their desired 
+video they can either press the enter key or the search button to run the query.  
+ 
+3- These tick boxes tell the software to search for either torrents or streaming videos, 
+depending on what type of video the user wishes to view.  
+ 
+4- These are the tabs which bring up the different pages of the search results. This allows 
+the user to run multiple searches and keep different search results stored at the same 
+time. 
+1
+2 3 4 
+5 
+Software  Requirements Specification for x-ray  Page 11 
+  
+5- This is where the actual search results will be displayed. Within these display fields the 
+user will be told the name of the video, the location of the video (which website the 
+video is on), the size of the video so the user can decide if they wish to download the 
+video or just to stream the video, the rating of the video with information on how safe 
+the website is, and finally comments on the video (what other user think of the video). 
+With this the user can then decide on how he wants the search results sorted using the 
+column headers at the top. 
+ 
+Software  Requirements Specification for x-ray  Page 12 
+ Appendix C: Issues List 
+In the next version we will consider adding a system to also search UseNet Binaries. 

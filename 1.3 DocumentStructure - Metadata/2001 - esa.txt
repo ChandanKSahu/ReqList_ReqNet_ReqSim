@@ -1,0 +1,20 @@
+D	Mars Express ASPERA-3 Processing and Archiving Facility (APAF) - Swedish Institute of Space Physics (IRF)
+2	REQUIREMENTS SPECIFICATION DESCRIPTIONS
+2.1	Requirement Identification
+3	REQUIREMENTS
+3.1	Capability or Functional Requirements
+3.3	Internal Interface Requirements
+3.4	Internal Data Requirements
+3.5	Security and Privacy Requirements
+3.6	Computer Resource Requirements
+3.7	Logistics-Related Requirements
+3.8	Delivery Requirements
+3.9	Other Requirements Considered
+3.9.1	Required States and Modes
+3.9.2	Adaptation Requirements
+3.9.3	Safety Requirements
+3.9.4	Software Quality Factors
+3.9.5	Design and Implementation Requirements
+3.9.6	Personnel-Related Requirements
+3.9.7	Training-Related Requirements
+3.9.8	Precedence and Criticality of Requirements

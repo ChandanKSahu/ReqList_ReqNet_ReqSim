@@ -1,0 +1,194 @@
+3.2.1.1	Whenever a power-on reset occurs, System Initialization shall [SRS194] perform the following functions.
+3.2.1.2	As part of System Initialization , the Boot ROM shall [SRS234] be configured to, after completing IBIT, call the manufacturer-supplied VxWorks Board Support Package (BSP) initialization software followed by a call to the FTSS System Initialization software.
+3.2.1.3	System Initialization shall [SRS014] initiate the watchdog timer.
+3.2.1.4	System Initialization shall [SRS292] enable and reset the processor’s watchdog timer such that, in the absence of a fault, the watchdog timer does not expire and reset the processor..
+3.2.1.5	System Initialization shall [SRS008] synchronize the FCP virtual group in the presence of a power on skew of 2.5 seconds.
+3.2.1.6	System Initialization shall [SRS010] configure the FCP virtual group to use all available synchronized processors, if at least 3 of the 5 FCRs are active.
+3.2.1.7	If any of the FCP processors are not synchronized, System Initialization in the surviving triplex shall [SRS177] attempt to sync with the failed FCP.
+3.2.1.8	If the failed FCP processor has not synced in 2.5 seconds after the surviving triplex has detected the loss of the FCP, then the surviving triplex shall [SRS178], within 1 second, send a single voted VMEbus reset through the NE to the failed FCP.
+3.2.1.9	System Initialization shall [SRS011] align processor state and congruent aligned memory locations.  Processor state includes all registers.  It also includes those timers used by FTSS.
+3.2.1.10	The FCP shall [SRS296] configure ICP simplex virtual groups for each channel in the FCP virtual group.
+3.2.1.11	The FCP shall [SRS297] wait up to 15 seconds, after configuring the ICP virtual groups, for communication to start from the ICP.  The application can use this time on the ICP to initialize I/O boards.
+3.2.1.12	System Initialization shall [SRS215] call an application initialization function to allow the application to (at least) create tasks, create communication sockets, initialize the vehicle mode, and initialize memory alignment allowance.
+3.2.1.13	The FCP shall [SRS221], after application initialization is complete, send an FCP Ready Sync message to the ICP
+3.2.1.14	The FCP shall [SRS189] wait up to 2.5 seconds (from the sending of the FCP Ready Sync) for the ICP Ready signal.  Note that FTSS will not fail the FCR if this signal is not received within this time.  FTSS will wait until the normal ICP presence test fails.
+3.2.1.15	The FCP shall [SRS243], if the NEFU ICP fails to send its ICP Ready signal, mask out that ICP, but continue to use the NE.
+3.2.1.16	System Initialization shall [SRS199], when all other activities are completed, start the 50 Hz timer and enable the timer interrupt.  This will allow the interrupt handler to initiate normal activities.
+3.2.1.17	System Initialization, from hardware reset to starting of the 50 Hz timer, shall [SRS015] take no longer than 1.5 minutes.
+3.2.2.1.1	The scheduler shall [SRS017] provide an API call to install a task into a rate group. The API call is invoked during system initialization.
+3.2.2.1.2	The scheduler shall [SRS196] support up to 20 tasks per rate group.
+3.2.2.1.3	The scheduler shall [SRS018] provide an API call to install a rate group into a vehicle mode at system initialization.
+3.2.2.1.4	The scheduler shall [SRS197] support up to 3 rate groups per vehicle mode.
+3.2.2.1.5	The scheduler shall [SRS195] support up to 5 vehicle modes.
+3.2.2.1.6	The FTSS software shall [SRS002] provide the identical services in all vehicle modes.
+3.2.2.1.7	The scheduler shall [SRS019] provide an API call for an FCP application task to alert the scheduler of a vehicle mode change.
+3.2.2.1.8	The scheduler shall [SRS020] complete the change from one vehicle mode to the next within 1.02 seconds. There is up to a full major frame from notification of an impending mode change to acting on it in minor frame 0 of the next major frame plus the time it takes during the next minor frame 0 to switch tasking.
+3.2.2.1.9	The scheduler shall [SRS021] process vehicle mode changes during minor frame 49.
+3.2.2.1.10	The scheduler shall [SRS022] execute cyclic tasks, providing an API call to allow the application to block until its next iteration.
+3.2.2.1.11	The scheduler shall [SRS024] execute as the highest priority FTSS or application task in the system.
+3.2.2.1.12	The scheduler shall [SRS025] keep a minor frame count from 0 to 49.
+3.2.2.1.13	The scheduler shall [SRS027] give tasks priority values according to their rate - the higher the rate, the higher the priority.
+3.2.2.1.14	The scheduler shall [SRS028] detect 50 Hz, 10 Hz and 1 Hz rate group over-runs.
+3.2.2.1.15	The scheduler shall [SRS029] report rate group over-runs to the application via an API service for incorporation in the telemetry data stream.
+3.2.2.1.16	The scheduler shall [SRS216] provide an API call to specify which task was running within the rate group which over-ran.
+3.2.2.1.17	The scheduler shall [SRS030] provide a mechanism to inform a task when it did not complete during the previous frame and restart it at the beginning of the task.
+3.2.2.1.18	The scheduler shall [SRS181] set the 50 Hz interval timer to a count down value so as to cause the next minor frame interrupt at 20 msec from the previous interrupt congruently in all operational FCPs.
+3.2.2.1.19	The scheduler shall [SRS032] issue a 50 Hz interrupt to the ICPs by means of a VMEbus IRQ5 interrupt.
+3.2.2.1.20	The scheduler shall [SRS191] issue the 50 Hz interrupt to all the ICPs with a skew no greater than 330 microseconds.
+3.2.2.1.21	The scheduler shall [SRS033] send the minor frame number, vehicle mode, mission elapsed time (MET), and separation elapsed time (SEP) to the ICP prior to the 50 Hz interrupt. Note: The NE unique identifier (NE ID) is available to the ICPs via the ftss_my_icp() API call.
+3.2.2.1.22	The scheduler shall [SRS034] take no longer than 1 millisecond to execute scheduler and Time Services FTSS overhead tasks in each rate group.  This means that the time from the 50 Hz timer interrupt to the start of the first task in the 50 Hz rate group will be less than or equal to 1 millisecond, assuming 27 packets of data need to be delivered.
+3.2.2.1.23	The FTSS software shall [SRS278] provide an API call that provides the application program the minor frame number.
+3.2.2.2.1	The scheduler shall [SRS035] provide rate groups that execute at 50 Hz, 10 Hz and 1 Hz., with a drift rate no greater than 50 microseconds per second, and with a jitter no greater than 330 microseconds.
+3.2.2.2.2	The scheduler shall [SRS037] provide a method to schedule tasks at a set rate and in a set order within the rate group.
+3.2.2.2.3	The scheduler shall [SRS198] execute all the tasks in each of the rate groups that have been installed in the current mode.
+3.2.2.2.4	The scheduler shall [SRS039] rely on the order used in adding tasks to a rate group to determine the task priorities.
+3.2.2.2.5	The scheduler shall [SRS042] provide a method for a task to be scheduled as a 50 Hz "helper" task for source congruency input exchanges and voted output exchanges that starts in a particular minor frame but runs only during every 5th or 50th minor frame, effectively running at a lower, sub-rate, 10 Hz or 1 Hz, respectively.
+3.2.2.2.6	The scheduler shall [SRS270] provide a task deadline capability that allows the application to specify which minor frame a task should start in and finish in.
+3.2.2.3.1	Upon the occurrence of an exception of either kind (hardware or software), the FCP shall [SRS172] make the error type available to the application, via an API service, for incorporation in the telemetry stream and include all context data relevant to the exception, namely the contents of the Machine State Register (MSR), and the machine status Save/Restore Registers (SRR0 & SRR1).
+3.2.2.3.2	The scheduler shall [SRS031] provide a mechanism for a task optionally to define a user written software-exception-handling routine that runs in the context of the task.
+3.2.2.3.3	For hardware exceptions and reserved exceptions, the FTSS shall [SRS276] make the error type and its context data available to the application, then return from the exception handler to the task that was running when the exception occurred.
+3.2.2.3.4	For software exceptions occurring within the FTSS, the FTSS shall [SRS277] make the error type and its context data available to the application, then restart the offending task at its beginning.
+3.2.2.3.5	For other software exceptions, regardless of whether or not a user written exception handling routine is invoked, if an exception occurs, the scheduler shall [SRS173], after making available the error type and context data to the application, resume processing (after the exception-handling routine runs, if provided) at the initialization point of the offending task.
+3.2.2.3.6	For software exceptions occurring during Startup, FTSS shall [SRS301] issue a VME reset to the FCR in which the exception occurred.
+3.2.4.0.1	Communication services shall [SRS047] provide "synchronous" message passing services in the form of "message queues".
+3.2.4.0.2	Communication services shall [SRS048] provide "immediate" message passing services in the form of "pipes". "Pipes" provide fast data throughput between virtual groups or within a virtual group when minimal data latency is necessary.
+3.2.4.0.3	Communication services shall [SRS049] provide the capability to "broadcast" messages to all virtual groups.
+3.2.4.0.4	Communication services shall [SRS050] restrict the use of "immediate" message passing services between virtual groups (from FCP to ICP) to tasks running in the highest rate group on the FCP. This restriction does NOT apply to the ICPs since they are running as simplex VGs.
+3.2.4.0.5	Communication services shall [SRS051] detect message passing between application tasks living on the same virtual group and bypass the usage of the network element.
+3.2.4.0.6	Communication services shall [SRS052] route messages to the proper virtual group(s) and socket.
+3.2.4.0.7	Communication services shall [SRS053] deliver messages in the same order at each member of a virtual group.
+3.2.4.0.8	Communication services shall [SRS054] perform synchronous message passing at rate group frame boundaries. This ensures that all redundant instantiations of a given rate group task have consistent messages throughout the rate group frame.
+3.2.4.0.9	Communication services shall [SRS235] detect a babbling NE or ICP within 20 milliseconds of the receipt of the first erroneous packet.
+3.2.4.0.10	FTSS shall [SRS255] mask out a babbling NE or ICP within 40 milliseconds after it is detected.
+3.2.4.1.0.1	Synchronous message passing sockets shall [SRS055] queue outgoing messages until they are transmitted at frame boundaries. The "create" and "open" API calls for synchronous sockets allow the application to specify the maximum message size and how many incoming messages the socket may buffer.
+3.2.4.1.0.2	If there is insufficient space to enqueue a message for transmission, Communication services shall [SRS059] return an error to the corresponding task. Sockets are non-blocking and place the burden of polling on the application task.
+3.2.4.1.1.1	Communication services shall [SRS062] provide a message queue communication mechanism that guarantees message delivery between a sending and receiving task.
+3.2.4.1.1.2	Communication services shall [SRS063] provide an API for "message queue" communication.
+3.2.4.1.1.3	Communication services shall [SRS064] provide the following error handling information as feedback to the "message queue" API calls: a)	notification of invalid or out of range application specified parameters on all operations, b)	notification of an attempt to create a broadcast message queue, c)	message queue "open" of end point ( SENDER/RECEIVER ) by non-assigned virtual group, d)	message queue is full when performing a send operation, e)	connection/transmission error, f)	FTSS unable to create/open message queue, and g)	notification that a received message was truncated to the buffer size provided.
+3.2.4.1.1.4	The message queue "create" API requires the application to specify the sending and receiving virtual group identifiers. Communication services shall [SRS066] only allow a single task living on each specified virtual group to "open" the respective end of the queue.
+3.2.4.1.2.1	Communication services shall [SRS067] provide a "pipe" communication mechanism allowing immediate message passing through the network and allowing a 50hz FCP transfer task to poll until it can read an immediate message from the ICP.
+3.2.4.1.2.2	Communication services shall [SRS068] provide an API for "pipe" communication.
+3.2.4.1.2.3	Communication services shall [SRS069] provide the capability to create "pipe"s which "broadcast" their messages to all virtual groups.
+3.2.4.1.2.4	Communication services shall [SRS070] provide the following error handling information as feedback to the "pipe" API calls: a)	notification of invalid or out of range application specified parameters on all operations, b)	notification of an attempt to create a broadcast pipe with an ICP as the sending virtual group, c)	pipe "open" of end point ( SENDER/RECEIVER ) by non-assigned virtual group, d)	notification upon receiving a message that the previous message was overwritten, e)	connection/transmission error, f)	FTSS unable to create/open pipe, and g)	notification that a received message was truncated to the buffer size provided.
+3.2.4.1.2.5	If the broadcast option is used, each virtual group should open the pipe and read from it to avoid flow control problems.
+3.2.4.1.2.6	The "pipe" "create" API requires the application to specify the sending and receiving virtual group identifiers. Communication services shall [SRS073] only allow a single task living on each specified virtual group to "open" the respective end of the pipe. In the case of a broadcast "pipe", communication services allows one task in each virtual group of the system to open the receiving end of the "pipe".
+3.2.5.1.1	The FTSS software shall [SRS237] configure the FCP to act as the Radstone IBIT master, with the exception that the ICP on the NEFU is the master.
+3.2.5.1.2	Requirement deleted.
+3.2.5.1.3	The FTSS shall [SRS260] configure each FCP to perform IBIT Minimum Processing Environment (MPE) Tests, Power-up Tests, and Initial BIT on each FCP, as shown inTable 3.2-2. .
+3.2.5.1.4	The FTSS shall [SRS261] configure each FCP to halt processing if any of the MPE tests fail.
+3.2.5.1.5	The FTSS shall [SRS262] configure each FCP to continue processing if any of the Power-up or Initial BIT tests fail.
+3.2.5.1.6	The FTSS shall [SRS287] configure each ICP to perform IBIT Minimum Processing Environment (MPE) Tests, Power-up Tests, and Initial BIT on each ICP, as shown inTable 3.2-3.
+3.2.5.1.7	The FTSS shall [SRS288] configure each ICP to halt processing if any of the MPE tests fail.
+3.2.5.1.8	The FTSS shall [SRS289] configure each ICP to continue processing if any of the Power-up or Initial BIT tests fail.
+3.2.5.1.9	The FTSS shall [SRS264] configure each ICP/PMC1553 to perform IBIT MPE Tests and Initial BIT as shown in Table 3.2-4.
+3.2.5.1.10	The FTSS shall [SRS265] configure each ICP/PMC1553 to halt processing if any of the MPE tests fail.
+3.2.5.1.11	The FTSS shall [SRS266] configure each ICP/PMC1553 to continue processing if any of the Initial BIT tests fail.
+3.2.5.1.12	The FTSS shall [SRS267] configure each MPCC to perform MPE Tests as shown in Table 3.2-5.
+3.2.5.1.13	Each MPCC is configured to halt processing if any of the MPE tests, listed in Table 3.2-5, fails.
+3.2.5.1.14	When the IBIT is complete, the FTSS in the channels that are part of the fault masking group shall [SRS239] report the results of IBIT for all Radstone boards to the application software for telemetry.
+3.2.5.1.15	In IBIT failure cases that cause processing to halt, the failure shall [SRS269] be handled as described in Section 3.2.6.2, Recovery.
+3.2.5.1.16	FTSS shall [SRS290], in ICP and FCP IBIT failure cases that allow processing to continue, after saving the results of IBIT for reporting to the application, in the first minor frame after Startup or recovery, consider the FCR to be failed, and start performing recovery actions for the FCR.
+3.2.5.2.1	Continuous BIT, in conjunction with Redundancy Management and Scheduler operations running in the 50 Hz rategroup after the application tasks, shall [SRS091] take less than 2 milliseconds under nominal no-fault conditions.
+3.2.5.2.2	Continuous BIT, in conjunction with Redundancy Management and Scheduler operations running in the 50 Hz rategroup after the application tasks, shall [SRS183] take less than 3 milliseconds while processing faults.
+3.2.5.2.3	Continuous BIT shall [SRS093] execute on the FCP virtual group.
+3.2.5.2.4	Continuous BIT shall [SRS094] reset the processor’s built-in watchdog timer at 50 Hz. A failure to reset the watchdog timer within the allotted time (nominally 1.6 seconds) will generate a processor reset.
+3.2.5.2.5	Continuous BIT shall [SRS095] exercise the presence test at 50 Hz to ensure that all processors in the FCP virtual group are synchronized.
+3.2.5.2.6	The presence test shall [SRS184] also ascertain that all processors are executing the same 50 Hz, 10 Hz and 1 Hz frames.
+3.2.5.2.7	Continuous BIT shall [SRS096] diagnose the faulty FCR within 1 second after detecting a failure.
+3.2.5.2.8	Continuous BIT shall [SRS097] detect a failed ICP processor by detecting the absence of a periodic message for 2 consecutive minor cycles.
+3.2.5.2.9	Continuous BIT shall [SRS098] report all diagnosed failures and recovery actions to the application for incorporation in the telemetry stream.
+3.2.5.3.1	RAM scrub shall [SRS043] actively trigger the EDAC function by cyclically reading (and writing back if an error is found) all used RAM.
+3.2.5.3.2	RAM scrub shall [SRS044] report detected errors to the application, congruently on all channels, via an API service for inclusion in the telemetry stream.
+3.2.5.3.3	RAM scrub shall [SRS187] be capable of scrubbing at least 10 megabytes every 8 minutes, given at least 1% of the CPU is available for this processing.
+3.2.5.3.4	RAM scrub shall [SRS275] not scrub the area used for telemetry data.
+3.2.6.0.1	Redundancy Management shall [SRS099] provide an API call to enable the application to retrieve the health status of the processors, network elements, network element links, MPCCs, and ICP controlled interfaces.
+3.2.6.0.2	Redundancy Management shall [SRS100] provide an API call to enable the application to request that the FTSS RM software initiate a voted reset of a channel.
+3.2.6.0.3	Redundancy Management shall [SRS201] be able to accommodate power up of all 5 channels and maintain all 5 NEs active, assuming no failures.
+3.2.6.1.1	Redundancy Management shall [SRS101] define an initial mapping of physical hardware to virtual group identifiers consisting of 1 quadruplex FCP virtual group and 5 ICP simplexes.
+3.2.6.1.2	If an FCR is diagnosed as faulty during Startup, Redundancy Management shall [SRS102] exclude the FCP in the faulty channel from the initial FCP virtual group configuration.
+3.2.6.2.0.1	Redundancy Management shall [SRS104] implement the following strategies to reconfigure hardware resources: a)	degrade the FCP virtual group, b)	re-integrate an FCP processor into the FCP virtual group, c)	re-integrate a Network Element, or d)	mask a Network Element.
+3.2.6.2.0.2	When the FCP virtual group is configured as a quadruplex and a failed FCR other than the NEFU has been diagnosed, Redundancy Management shall [SRS106] degrade the FCP virtual group to triplex, removing the FCR.  The NE and the processors on the failed FCR will be removed from the NEs’ Configuration Table (CT) and recovery of that channel will then take place, if alignment is permitted.  Note that a failed FCR could be diagnosed using any method, including (but not limited to) Continuous BIT, ICP presence test, or NE syndrome analysis.
+3.2.6.2.0.3	When the FCP virtual group is configured as a triplex, and if the NEFU is still active (4 NEs active total), and a failed FCR other than the NEFU has been diagnosed, Redundancy Management shall [SRS282] degrade the FCP virtual group to degraded triplex, removing the FCR.  The NE and the processors on the failed FCR will be removed from the NEs’ Configuration Table (CT) and recovery of that channel will then take place, if alignment is permitted.  Note that a failed FCR could be diagnosed using any method, including (but not limited to) Continuous BIT, ICP presence test, or NE syndrome analysis.
+3.2.6.2.0.4	If the FCP is configured as a triplex, and if the NEFU is not still active (3 NEs active total), and another failure in the FCP FCR is diagnosed, Redundancy Management shall [SRS284] mask out the processors on the failed FCR.  The NE will remain in the CT and no recovery will take place.  Note that a failed FCR could be diagnosed using any method, including (but not limited to) Continuous BIT, ICP presence test, or NE syndrome analysis.
+3.2.6.2.0.5	If a failure in an FCR other than the NEFU is diagnosed when the FCP is configured as a degraded triplex, no action shall [SRS254] be taken.  Note that a failed FCR could be diagnosed using any method, including (but not limited to) Continuous BIT, ICP presence test, or NE syndrome analysis.
+3.2.6.2.0.6	For the NEFU, if the first failure is diagnosed, Redundancy Management shall [SRS245] issue a configuration update to mask out the failed processor.  Note that the NE is allowed to remain in the configuration and no recovery will take place.  Note also that the failed NEFU could be diagnosed using any method, including (but not limited to) ICP presence test, or NE syndrome analysis.
+3.2.6.2.0.7	For the NEFU, if errors are identified after the processor has been masked out, and if at least 4 NEs are still active, the NE shall [SRS283] be removed from the configuration and recovery will be attempted.  Note that the NEFU recovery does not depend on whether alignment is permitted.
+3.2.6.2.0.8	If the configuration needs to be changed due to a fault, as specified above, Redundancy Management shall [SRS128] issue a configuration update to mask out the failed network element.
+3.2.6.2.0.9	Redundancy Management shall [SRS109] degrade the FCP virtual group within 3 minor frames of fault detection and isolation.
+3.2.6.2.0.10	Redundancy Management shall [SRS204] issue a voted reset to the failed channel, if alignment is permitted. (Note that NEFU recovery does not depend on whether alignment is permitted.)
+3.2.6.2.0.11	Redundancy Management shall [SRS129] initiate transient NE recovery to restore Byzantine-resilient communications, if alignment is permitted. (Note that NEFU recovery does not depend on whether alignment is permitted.)
+3.2.6.2.0.12	Redundancy Management shall [SRS110] reintegrate a failed FCP processor with the FCP virtual group when alignment is permitted and when the processor failure is not permanent.
+3.2.6.2.0.13	From the time that the FCR failure has been identified, if the components of the FCR are recoverable and alignment is permitted, to the time the FCR is recovered, shall [SRS205] be no more than 1.5 minutes.
+3.2.6.2.0.14	Redundancy Management shall [SRS208], within 60 milliseconds after 1.5 minutes has elapsed since the voted reset was sent to the failed channel, if the voted reset fails to recover the failed channel and alignment is still allowed, request from the application a power cycle of the channel. (Note that NEFU recovery does not depend on whether alignment is permitted.)
+3.2.6.2.0.15	Redundancy Management shall [SRS209], within 60 milliseconds after 1.5 minutes has elapsed since the first power cycle request, if the FCR has not been recovered and alignment is still allowed, issue another request to the application for a power cycle of the channel. (Note that NEFU recovery does not depend on whether alignment is permitted.)
+3.2.6.2.0.16	Redundancy Management shall [SRS211], if power cycle requests fail to result in a recovered channel, request the application to power down the channel and declare the channel to be permanently failed.  Note that the same result will occur if the application software ignores or fails to respond to power cycle requests.
+3.2.6.2.0.17	The application software shall [SRS285] have the capability to reset a permanently failed channel to its initial recovery state.
+3.2.6.2.0.18	Redundancy Management shall [SRS117] reintegrate a processor that is temporarily disabled during a time when alignment was not permitted, when alignment is subsequently permitted.  Redundancy Management picks up where it left off in these attempts.  For example, if Redundancy Management is at 1 minute in its 1.5 minute wait for a channel after the first power cycle request, and alignment is not allowed, when alignment is subsequently allowed Redundancy Management will wait another half minute and then try the next power cycle request.
+3.2.6.2.0.19	An API call shall [SRS274] be provided that allows the application to notify FTSS that an FCR is intentionally being powered down.
+3.2.6.2.0.20	Redundancy Management shall [SRS302] provide an API call to allow the application to specify whether recovery and alignment of failed FCRs is permitted.  Note that recovery of the NEFU is always considered to be permitted.
+3.2.6.2.1.2.1	While synchronization is being attempted, the FCP virtual group shall [SRS123] maintain synchronous operations.
+3.2.6.2.1.2.2	Only when memory alignment is permitted, Redundancy Management shall [SRS124] initiate periodic re-synchronization attempts on the FCP virtual group at a 1 second rate.
+3.2.6.2.1.2.3	Redundancy Management shall [SRS125] perform memory alignment on a major frame boundary upon successful synchronization of all members of the FCP virtual group.
+3.2.6.2.1.2.4	Redundancy Management shall [SRS281], during memory alignment, configure the NE to mask out the processor being re-synchronized.
+3.2.6.2.1.2.5	Redundancy Management shall [SRS271] notify the application that alignment and reintegration of a processor will take place in 1 second.
+3.2.6.2.1.2.6	Redundancy Management shall [SRS272] wait for the ICP to signal that it has completed initialization before suspending the application for memory re-alignment.
+3.2.6.2.1.2.7	During alignment, Redundancy Management shall [SRS126] update MET (and, by extension, SEP).
+3.2.6.2.1.2.8	Redundancy Management shall [SRS214], if alignment is permitted, incorporate a new channel within 1.5 minutes after power is applied to the channel.
+3.2.6.2.1.2.9	Redundancy Management shall [SRS236], if alignment is permitted, serially incorporate two new channels if they are powered on simultaneously.
+3.2.6.2.1.3.1	The FTSS API shall [SRS046] define a methodology for segregating and managing congruent aligned, congruent initialized, and non-congruent memory such that congruent aligned memory is aligned and congruent initialized memory is initialized during channel recovery.  Non-congruent memory is not modified during realignment.
+3.2.6.2.1.3.2	The FTSS API shall [SRS217] specify a memory map that provides the boundaries for congruent aligned memory, congruent initialized memory, and non-congruent memory.
+3.2.6.2.1.4.1	Memory alignment shall [SRS045] align processor state and congruent aligned memory locations.  Processor state includes all registers.  It also includes those timers used by FTSS.
+3.2.6.2.1.4.2	The re-align function shall [SRS186] write the voted value from the currently synchronized channels into the target channel.
+3.2.6.2.1.4.3	FTSS shall [SRS200] initialize congruent initialized memory locations from non-volatile memory.
+3.2.6.2.1.4.4	Memory alignment shall [SRS203] take no more than 1 second per Megabyte of data to be realigned.
+3.2.6.2.1.4.5	The FCP watchdog timer shall [SRS293] remain active during memory re-alignment.
+3.2.6.2.1.4.6	Memory alignment shall [SRS294] reset the watchdog timer such that, in the absence of a fault, the timer never expires and resets the processor.
+3.2.7.1	Time Services shall [SRS142] provide Mission Elapsed Time and Separation Elapsed Time, with resolution partitioned as follows according to rate group, in order to guarantee identical copies of time representation across all FCPs: a)	50 Hz Mission Elapsed Time	20 milliseconds, b)	10 Hz Mission Elapsed Time	100 milliseconds, c)	1 Hz Mission Elapsed Time	1 second, d)	50 Hz Separation Elapsed Time	20 milliseconds, e)	10 Hz Separation Elapsed Time	100 milliseconds, and f)	1 Hz Separation Elapsed Time	1 second.
+3.2.7.2	The Mission Elapsed Time shall [SRS218] have a drift rate of at worst 50 PPM.
+3.2.7.3	The Mission Elapsed Time shall [SRS144] not rollover for 30 days.
+3.2.7.4	The Separation Elapsed Time shall [SRS145] not rollover for 1 day.
+3.2.7.5	The Mission Elapsed Time shall [SRS165] be initialized to zero at the first 50 Hz frame.
+3.2.7.6	The Separation Elapsed Time shall [SRS161] be initialized to zero at startup, and start counting up in the next frame after being notified via an API call that the X-38 vehicle has been released from the Space Shuttle Remote Manipulator System.
+3.2.7.7	The Separation Elapsed Time shall [SRS219] have a drift rate of at worst 50 PPM.
+3.2.7.8	Time Services shall [SRS246] provide a utility timer to the application.  Note that this timer is not voted, and must be assigned to a variable defined using non-congruent memory.
+3.2.7.9	The utility timer shall [SRS247] have an accuracy equal to or better than 50 PPM.
+3.2.7.10	The utility timer shall [SRS256] have a resolution equal to or better than 60.6 nanoseconds.
+3.2.7.11	The utility timer shall [SRS248] shall be set to zero prior to the first application task running in the first minor frame of each major frame.
+3.2.8.1	If transmission status indicates an error in telemetry and/or remote commanding operations 10 consecutive times, the following actions shall [SRS298] be taken: 1. Support Services shall [SRS299] switch to the redundant MPCC device to continue telemetry and/or remote commanding operations.  Note that there are only two CTCs.  CTC1 is connected to FCC1 and FCC3.  CTC2 is connected to FCC2 and FCC4. 2.	Support Services shall [SRS242] continue to close and reopen a faulty MPCC device until status shows that the device has recovered. 3. In all error cases, Support Services shall [SRS222] attempt to choose an error-free FCC-MPCC path, switching back and forth between channels if necessary. 4. Support Services shall [SRS286] provide an API call which allows the application to specify which MPCC channels in a C&T FCR should be used for telemetry and/or command reception.
+3.2.8.1.1.5	The telemetry capability shall [SRS148] be capable of transferring 12,800 bytes within the 10 Hz frame from the FCP.
+3.2.8.1.1.6	The telemetry capability shall [SRS149] transfer the telemetry block from the FCP to the FCC-MPCC connected to the CTC.
+3.2.8.1.1.7	The telemetry capability shall [SRS150] signal the FCC-MPCC to transfer the telemetry block to the CTC.
+3.2.8.1.1.8	The telemetry capability shall [SRS300] provide status data to FTSS FDI about each FCC-MPCC RS-422 link to the CTC.
+3.2.8.1.1.9	Support Services shall [SRS151] provide an API call to specify the address and length of a telemetry buffer.
+3.2.8.1.1.10	Support Services shall [SRS257] use no more than 5.2 milliseconds of FCP processing time to move the telemetry data to the FCC-MPCC board and complete communication and error handling for the FCC-MPCC board.
+3.2.8.1.2.1	The Command Read capability shall [SRS152] check for the presence of a command and status message from each CTC on each FCC-MPCC at 10hz.
+3.2.8.1.2.2	The Command Read capability on each FCP shall [SRS153] read the command data received from each CTC via the FCC-MPCC.
+3.2.8.1.2.3	FTSS shall [SRS304] provide status data to the application about each FCC-MPCC RS-422 link to the CTC used for command data.
+3.2.8.1.2.4	Support Services shall [SRS156] provide an API call to provide the current command data.
+3.2.9.1	FTSS shall [SRS249] provide an API call which closes and deletes all rate groups, deletes all communication mechanisms (including any internal to FTSS), and then deletes all tasks.
+3.3.3.1	The Application Programmer’s Interface (API) to Fault Tolerant System Services (FTSS) shall [SRS164] be as defined in the Application Programmer’s Interface, Draper Document #297752.
+3.10.1.1	The FTSS shall [SRS158] execute on the Radstone Power PC 604R.
+3.10.2.1	The FTSS software and the VxWorks operating system, together shall [SRS193] utilize no more than 3 megabytes of ROM.
+3.10.2.2	The largest single block of data transmitted on the VME Bus by the FTSS shall [SRS223] transmit in no longer than 100 microseconds.
+3.10.2.3	All FTSS data provided for telemetry (as specified in the requirements) shall [SRS250] fit within the allocated budget of 5000 bits per second.
+3.10.2.4	In addition, the FTSS software shall [SRS280] provide up to 600 bits of start-up data that indicates the state of the FTPP system during start-up.
+3.10.3.1	The FTSS software shall [SRS159] be written in the C programming language.
+3.10.3.2	FTSS shall [SRS160] use the VxWorks Operating System version 5.4.
+3.10.3.3	The FTSS software and the VxWorks operating system shall [SRS258] utilize no more than 9 Megabytes of DRAM code and data space.
+3.10.3.4	Of the 9 Megabytes of DRAM allocation, only 4 Megabytes of FTSS/VxWork’s DRAM shall [SRS259] be re-aligned during any re-alignment attempts.
+3.10.3.5	FTSS shall [SRS253] be compiled, linked and downloaded using Tornado 2 for the NT environment prior to delivery, for all engineering and formal releases.
+3.10.3.6	FTSS object modules linked to the application on the four FCPs shall [SRS166] be identical.
+3.10.3.7	After initial synchronization, the FCPs shall [SRS168] remain synchronized until a hardware fault occurs.  For example, asymmetric I/O calls will not be allowed to induce a large enough skew to force the FCPs to desynchronize.
+3.16.1.1	FTSS shall [SRS303] provide an API call to allow the ICP application to determine on which channel it resides.
+3.16.1.2	FTSS shall [SRS225] provide an API call to allow applications to send a status message to FDIR running on the FCP.
+3.16.1.3	FTSS shall [SRS226] provide "immediate" message passing services in the form of "pipes". "Pipes" provide fast data throughput between virtual groups or within a virtual group when minimal data latency is necessary.
+3.16.1.4	FTSS shall [SRS227] route messages to the proper virtual group(s) and socket.
+3.16.1.5	If there is insufficient space to enqueue a message for transmission, FTSS shall [SRS228] return an error to the corresponding task. Sockets are non-blocking and place the burden of polling on the application task.
+3.16.1.6	FTSS shall [SRS229] provide the following error handling information as feedback to the "pipe" API calls: a)	notification of invalid or out of range application specified parameters on all operations, b)	pipe "open" of end point ( SENDER/RECEIVER ) by non-assigned virtual group, c)	notification upon receiving a message that the previous message was overwritten, d)	connection/transmission error, e)	FTSS unable to create/open pipe, and f)	notification that a received message was truncated to the buffer size provided.
+3.16.1.7	FTSS shall [SRS230] only allow a single task residing on each specified virtual group to "open" the respective end of the pipe.
+3.16.1.8	The presence or absence of an NEFU ICP shall [SRS220] not impact the FTSS software (i.e. the FTSS ICP load will not be different).
+3.16.1.9	The FTSS shall [SRS231] provide an API call to retrieve the current minor frame number sent from the FCP over the VME interface.  Note that the NEFU ICP will not have this information since it does not have an FCP processor.
+3.16.1.10	The FTSS shall [SRS232] provide an API call to retrieve the current MET value sent from the FCP over the VME interface.  Note that the NEFU ICP will not have this information since it does not have an FCP processor.
+3.16.1.11	The FTSS shall [SRS233] provide an API call to retrieve the current SEP value sent from the FCP over the VME interface.  Note that the NEFU ICP will not have this information since it does not have an FCP processor.
+3.16.1.12	The FTSS shall [SRS295] notify the application on the ICP, via an API call, 2 minor frames prior to an alignment.
+3.17.1	FTSS deliveries shall [SRS252] be made using CD ROM media.

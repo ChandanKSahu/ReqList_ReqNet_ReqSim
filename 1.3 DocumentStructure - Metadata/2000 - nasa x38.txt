@@ -1,0 +1,36 @@
+D	X-38 Fault Tolerant System Services - NASA
+3	REQUIREMENTS
+3.1	Required States and Modes
+3.2	CSCI Capability Requirements
+3.2.1	System Initialization
+3.2.2	Scheduling Services
+3.2.2.1	Scheduling Execution
+3.2.2.2	Task and Rate Group Execution
+3.2.2.3	Exception Handling
+3.2.4	Communication Services
+3.2.4.1	Sockets
+3.2.4.1.1	Message Queue Sockets
+3.2.4.1.2	Pipe Sockets
+3.2.5	Fault Detection and Isolation
+3.2.5.1	Initial BIT
+3.2.5.2	Continuous BIT
+3.2.5.3	RAM Scrub
+3.2.6	Redundancy Management
+3.2.6.1	Virtual Group Configuration
+3.2.6.2	Recovery
+3.2.6.2.1	Recovery from Processor Failure
+3.2.7	Time Services
+3.2.8	System Support Services
+3.2.8.1	CTC Requirements
+3.2.8.1.1	Telemetry Requirements
+3.2.8.1.2	Command Read Requirements
+3.2.9	Power Down Services
+3.3	CSCI External Interface Requirements
+3.3.3	API/FTSS Interfaces
+3.10	Computer Resource Requirements
+3.10.1	Computer Hardware Requirements
+3.10.2	Computer Hardware Resource Utilization Requirements
+3.10.3	Computer Software Requirement
+3.16	Other Requirements
+3.16.1	ICP Services
+3.17	Packaging Requirements

@@ -1,0 +1,34 @@
+2.3.1.20	CU2 will be responsible for the design and developing of GOG that will provide Catalogue, Main Database (MDB) and ﬁnal data.(in the sense of statistically equivalent to the ﬁnal mission data) data without the use GASS telemetry, GIBIS or the main ESAC database
+2.3.1.40	GOG will be fully integrated in the Gaia Simulator project. That is, it will use as other the other simulators the GaiaSimu library and the Gaia Tools library.
+2.3.1.60	For source generation GOG has 2 main options available : Universe Model from GaiaSimu or a Object Input Catalogue
+2.3.1.80	GOG has a source by source processing mechanism 2.3.1.100		GOG must consider noise effects. For noise generation those effects should be user-selectable (they can be added or not and the values should be given by users). We classify noises in two groups: 1.Instrumental noises: noises that come from observation process such as: on board detection and tracking or observation dead-time 2. reduction noise: noise added to the data when removing instrumental noise.
+2.3.1.120	GOG I/O Catalogue format is driven by [AD3]. Main Database format is deﬁned in [AD1].
+2.3.1.140	GOG must give the same result for identical input conﬁguration parameters.
+2.3.2.20	GOG must provide a way to be run from a command line or a shell script.
+2.3.2.40	GOG should be able to run in a cluster or grid environments
+2.3.2.60	GOG is built as a standalone java application that could be invoked from a command line and deployed as a jar ﬁle.
+2.3.2.80	GOG is designed to run on either in a single thread mode on grid environments.
+2.3.2.100	GOG runs on LINUX , UNIX and MAC computers (minimum). GOG results are platform independent
+2.3.2.120	GOG will have to generate data of a considerable amount of astrosources whose number could be a signiﬁcant part of the expected ﬁnal catalogue (20%).
+2.3.2.140	GOG must be able to process one complete source processing on 2 CPU seconds.
+3.2.1.20	GOGinitialisationModuleshouldbeabletoreadinformationoftheinputsources. Options are to use the Universe Model or a provided user sources
+3.2.1.40	The GOG catalogue module must include information on the universe model: • Galaxy model • SkyBackGroung model • Extinction Law model • DMS model
+3.2.1.60	GOG initialisation module must include information on the instrument model: • The selected scanning law • Dead time. •Noise models (including detection noise)
+3.2.1.80	The GOG catalogue module must include information on the reduction model: • Instrument effects substraction node bias substraction noises PPE residuals noise •Scientiﬁc content extraction noise substraction of close sources second FoV contamination noise background substraction.
+3.2.1.100	GOG initialisation module will deﬁne the output speciﬁcation output parameters (spectrum RPBP/RVS, astrometry, Vr, physical parameters and ﬂags) epoch and/or combined number of epochs
+4.2.1.20	Determine for epoch data the astrometric parameter (with instrumental and reduction errors): transit times and ﬁeld angles in each CCD mean transit time and ﬁeld angle for the transit. Gate activation and signal loss due to window cutoff must be taken into account.
+4.2.1.40	Determinetheepochdataphotometry(withinstrumentalandreductionerrors): Gmag(for each CCD and average for the transit), GRP, GBP, GRVS . Gate activation and signal loss due to window cutoff must be taken into account.
+4.2.1.60	Determine the epoch radial velocity (with instrumental and reduction errors)
+4.2.1.80	Determine the epoch ﬂags
+4.2.1.100	Determine the epoch physical parameters (Av, Teff, logg, FeH)
+5.2.1.20.1	Compute the astrometric combined data using all previous transits:
+5.2.1.20.2	Compute parallax and proper motion errors
+5.2.1.20.3	Determine de covariance matrix
+5.2.1.20.4	Determine estimated errors for the astrometric parameters at the mean epoch
+5.2.1.40	Determine the combined data photometry: mean G, GRP, GBP, GRVS
+5.2.1.60	Determine the mean radial velocity.
+5.2.1.80	Determine the ﬁnal ﬂags (variability, non-single star.)
+5.2.1.100	Determine the mean physical parameters (classiﬁcation, Av, Teff , logg, FeH).
+6.2.1.20	Noise consideration on: •Flux noise (Poisson noise, total detection noise,...) •CCD combination noise for (RVS) •Wavelength calibration •Multi-transit combination noise (only for combined data)should be added.
+7.2.1.20	The universe catalog output data of the simulation has to follow the universe model ICD document. Note: GaiaSimu library will allow to write and read this format.
+7.2.1.40	GOG output should be driven by the MDB data model. The output will be used to distribute extracts to the DPC’s.

@@ -1,0 +1,113 @@
+3.1.1.1	The System shall provide the capability to operate in an Open Mode , within which authorized customers shall be allowed read-only access to requested Data Products.  This is the nominal system mode.
+3.1.2.1	The System shall provide the capability to operate in a Degraded System Mode, within which the system generates a subset of products based upon priority and availability of system resources.
+3.1.2.1	The System shall provide the capability to notify customers upon the NPOESS Ground System entering and leaving a Degraded Operations Mode.
+3.1.3.0	The System shall provide the capability to operate in a Restricted Access Mode , within which only users meeting certain criteria will be authorized access to the data. Criteria will be defined in the TBD Data Denial Plan.
+3.1.3.1	The System shall provide the capability to send an electronic notification to authorized users when they receive restricted access data.
+3.2.1.1	The System shall be capable of defining Data Products for Ingest.
+3.2.2.1	The System shall be capable of integrating System Elements including Scientific Algorithms, Product Tailoring Tools, Data Format Translation Tools, and other pre-defined transformation utilities.
+3.2.3.1	The System shall provide the capability to support functional and performance tests of system elements without impacting operational product generation.
+3.2.4.1	The System shall be capable of maintaining records of at least 30 days (configurable) worth of Ingest history.
+3.2.5.1	The System shall provide the capability to control the execution of Scientific Algorithms.
+3.2.6.0	The System shall be capable of generating Data Products.
+3.2.6.1	The System shall provide the capability for an authorized user to adjust Product Generation priorities.
+3.2.6.2	The System shall be capable of rendering Platte Carre projections.
+3.2.6.3	The System shall be capable of rendering Mercator projections.
+3.2.6.4	The System shall be capable of rendering Polar Stereographic projections.
+3.2.6.5	The System shall be capable of aggregating Data Products up to and including one orbit.
+3.2.6.6	The System shall be capable of producing time-averaged Data Products.
+3.2.6.7	The System shall be capable of generating NOAA-Unique and Tailored Data Products with Government-specified grid spacing.
+3.2.6.8	The System shall be capable of reformatting Data Products into BUFR.
+3.2.6.9	The System shall be capable of reformatting Data Products into GRIB2.
+3.2.6.10	The System shall be capable of reformatting Data Products into GeoTIFF.
+3.2.6.11	The System shall be capable of reformatting Data Products into HDF5.
+3.2.6.12	The System shall be capable of reformatting Data Products into netCDF.
+3.2.6.13	The System shall be capable of compressing Data Products with the GZIP algorithm.
+3.2.6.14	The System shall be capable of compressing Data Products with the ZIP algorithm.
+3.2.6.15	The System shall be capable of compressing Data Products with the RICE algorithm.
+3.2.6.16	The System shall be capable of compressing images of Data Products with the JPEG algorithm.
+3.2.6.17	The System shall be capable of compressing animated images of Data Products with the  MPEG algorithm.
+3.2.6.18	The System shall be capable of generating Data Products within a time frame not to exceed the maximum user-specified shelf-life of the Data Product.
+3.2.7.0	The System shall be capable of making Data Products available to registered users.
+3.2.7.1	The System shall provide an online capability for registered users to request subscriptions to xDRs, Ancillary, NOAA-Unique, and Tailored Data Products.
+3.2.7.2	The System shall provide an online capability for the Government to approve subscription requests for xDRs, Ancillary, NOAA-Unique, and Tailored Data Products.
+3.2.7.3	The System shall be capable of distributing NOAA- Unique Data Products to  the CLASS Long-Term Archive (LTA).
+3.2.7.3.1	The System shall provide a list of files distributed to CLASS.
+3.2.7.4	The System shall provide the capability to receive  an electronic delivery acknowledgement  message from CLASS.
+3.2.8.1	The System shall be capable of delivering NDE Data Products to registered user's computer systems.
+3.2.9.1	The System shall be capable of notifying registered users of the status of their orders.
+3.2.10.1	The System shall be capable of notifying registered users of the status of the System.
+3.2.11.1	The System shall ensure that NDE information is accessible only to those authorized to have access.
+3.2.12.1	The System shall be capable of registering Users for the purpose of controlling their access to System Elements and Data Products.
+3.2.13.1	The System shall provide a mechanism for reporting performance related to resource utilization, communications, product latencies, and hardware.
+3.2.14.0	The System shall provide an automatic failover capability that will re-create a fully functioning configuration from a failed configuration.
+3.2.14.1	In the event of a failure of the Operational Environment during the NPOESS missions, the System Test Environment shall be capable of delivering products to the operational community within the same throughput and latency parameters as the operational system.
+3.2.15.0	The System shall be capable of monitoring the integrity of all data received from external sources.
+3.2.15.1	The System shall provide the capability for an authorized user to define data input integrity checks.
+3.2.15.2	The System shall be capable of executing and recording the results of data input integrity checks, and initiate actions based on those results.
+3.2.16.1	The System shall be capable of making products available for distribution according to customer-specified latencies.
+3.2.17.0	The System shall have the capability to monitor,  record statistics, and deliver reports on its performance.
+3.2.17.1	The System shall be capable of retaining logs of all performance data for no less than 90 consecutive calendar days.
+3.2.18.1	The System shall provide the capability to generate custom reports from data collected during data receipt, processing, and distribution.
+3.3.1.0	The System shall be capable of receiving data and products from IDPS.
+3.3.1.1	The System shall be capable of requesting and accepting all xDRs generated by the IDPS.
+3.3.1.2	The System shall be capable of receiving SARSAT Telemetry from the IDPS.
+3.3.1.3	The System shall be capable of receiving A-DCS data and telemetry from the IDPS.
+3.3.1.4	The System shall provide an operator console capable of utilizing IDPS client software for submitting subscriptions for Data Products to the IDPS.
+3.3.1.5	The System shall be capable of automatically submitting Ad Hoc Requests to the IDPS for retransmission of Data Products.
+3.3.1.6	The System shall be capable of receiving Data Delivery Reports (DDRs) from the IDPS.
+3.3.2.1	The System shall be capable of receiving Ancillary Data Products from the Environmental Satellite Processing Center (ESPC).
+3.3.3.1	The System shall be capable of ingesting and processing archived data.
+3.3.4.0	The System shall provide an operator console capable of requesting Data Products from the Comprehensive Large Array-data Stewardship System (CLASS).
+3.3.4.1	The System shall be capable of receiving Data Products delivered from CLASS.
+3.3.4.2	The System shall be capable of sending a Data Receipt to CLASS for each Data Product received from CLASS.
+3.3.5.1	ESPC Operations shall provide an interface between NDE and the NPOESS Mission Management Center (MMC) such that 100% of the NDE inquiries to the MMC and NDE replies to MMC requests are received by the MMC in a time not  to exceed that specified in the ICD, and that 100% of the notifications and inquiries from the MMC to NDE are received by NDE in a time not to exceed that specified by the ICD.
+3.3.6.1	The System shall provide an operator console capable of interfacing with the NPOESS trouble ticketing system.
+3.3.7.1	The System shall provide an operator console capable of interfacing with the ESPC trouble ticketing system.
+3.4.1.1	The System shall be capable of executing tasks according to a schedule.
+3.4.2.1	The System shall be capable of executing tasks initiated by events.
+3.4.3.1	The System shall be capable of executing 99% of  its scheduled tasks in any consecutive 30 day period.
+3.4.4.1	The System shall be capable of executing 99% of its event driven tasks in any consecutive 30 day period.
+3.4.5.1	The System shall be capable of adjusting the priorities of scheduled and event-driven tasks.
+3.5.1.1	The System shall have the capacity to store 4 Terabytes (TBs) of data for testing purposes.
+3.5.2.1	The System shall be capable of reporting on all ingested, generated, and distributed data according to the (Federal Geographic Data Committee (F GDC) Content Standard for Digital Geospatial Metadata (CSDGM), Vers. 2 (FGDC-STD-001-1998 <http://www.fgdc.gov/standards/projects/F GDC-standards-projects/metadata/base-metadata/index_html> ) and the CSDGM Remote Sensing Extensions (FGDC-STD-012-2002).
+3.5.3.1	The System shall be capable of storing product quality information in the metadata of products created.
+3.5.4.1	The System shall be capable of retaining Data Products for a configurable period of time not to exceed 96 hours.
+3.6.1.1	The System shall be capable of accepting technology updates without System downtime.
+3.6.2.1	The System shall be capable of adding additional capacity without redesign of it's infrastructure.
+3.7.1.1	The System shall comply with ESPC (DoC/NOAA/NESD IS) procedures and policies as stated in the NOAA IT Security Manual 212-1300, Version 3.3, dated May 15, 2007.
+3.7.2.1	The System shall be capable of generating backups for all NDE data, procedures, and software.
+3.7.3.1	The System shall be capable of implementing automated backup procedures.
+3.7.4.1	The System shall be capable of returning to nominal operations following a restoration from system backups.
+3.7.5.1	The System shall be capable of protecting the integrity of NDE data in the event of human errors.
+3.7.6.1	The System shall be capable of protecting the integrity of NDE data in the event of computer to computer transmission errors.
+3.7.7.1	The System shall be capable of protecting the integrity of NDE data from software bugs.
+3.7.8.1	The System shall be capable of protecting the integrity of NDE data in the event of a hardware malfunction such as a disk crash.
+3.7.9.1	The System shall be capable of protecting the integrity  of NDE data in the event of a natural disaster.
+3.7.10.1	The NDE System can be accessed only with the authorization of the Government.
+3.8.1.1	The System shall be constructed using existing hardware where it is possible, practical, and approved by the Government.  Inventory will be provided to the Contractor by OSDPD IT Lead.
+3.8.2.1	The System shall be constructed using existing soft ware where it is possible, practical, and approved by the Government.  Inventory will be provided to the Contractor by OSDPD IT Lead.
+3.8.2.2	The System shall be constructed using COTS and Open Source software where it is possible, practical, and approved by the Government.
+3.8.2.3	The NDE System Elements shall be designed to be reused in other Satellite Data Processing applications.
+3.8.2.4	The NDE System shall be designed so that Scientific Algorithms are invoked as objects.
+3.9.1.1	The System shall provide the capability for operators to log and track events (i.e., MMC Service Requests, MMC Service Request Responses).
+3.9.2.1	The System shall provide the capability for operators to update a summary log for the purposes of tracking the occurrence of significant events or activities.
+3.9.3.1	The System shall provide the capability for operators  to sort and search on summary log events for the purposes of identifying, troubleshooting, and reporting on significant activities.
+3.9.4.1	The System shall be capable of reporting on summary log events.
+3.9.5.1	The System shall provide the capability for operators to quiesce and restart the System.  This capability should be designed to minimize interruptions of service.
+3.9.6.1	The System shall implement operational quality monitoring procedures that will detect and report to operators and management the acceptability of xDR metadata according to configurable thresholds.
+3.9.7.1	The System shall implement operational quality monitoring procedures that will detect and report to operators and management the acceptability of out put product metadata according to configurable thresholds.
+3.9.8.1	The System shall be capable of changing system status to reflect the condition of NPOESS (i.e., Degraded Operations, Restricted Access).
+3.9.9.1	The System shall provide the capability for operators to forward NDE System Elements to CLASS for permanent archive.
+3.10.1.1	The NDE Ingest capability shall not be interrupted for more than 2 hours in any consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period.
+3.10.1.2	The NDE Product Generation capability shall not be  interrupted for more than 2 hours in any consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period.
+3.10.1.3	The NDE Distribution capability shall not be interrupted for more than 2 hours in any consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period.
+3.10.1.4	The NDE Operations Monitoring capability shall not be interrupted for more than 2 hours in any consecutive 24 hour period and no more than 4 hours in any consecutive 30 day period.
+3.10.1.5	The Development and Maintenance Environment shall be available to at least 25 developers 85% of the time during normal business hours over any consecutive twelve month period.  Normal business hours are 8am to 4pm Eastern Time, Monday through Friday.
+3.10.2.1	The System shall be capable of accessing data delivered by IDPS within no more than ten seconds of notification from IDPS.
+3.10.2.2	The System shall deliver SARSAT Telemetry da ta from IDPS to US Mission Control Center (USMCC) within 1 minute of their receipt.
+3.10.2.3	The System shall deliver A-DCS Telemetry data from IDPS to the US Global Processing Center within 1 minute of their receipt.
+3.10.2.4	The System shall deliver A-DCS Data Products from IDPS to the US Global Processing Center within 1 minute of their receipt.
+3.10.3.1	During the NPP mission, the System shall be capable of supporting product volumes of 4 Terrabytes per day of input and 8 Terabytes per day of output.
+3.10.3.2	During the NPOESS-C1 mission, the System shall be capable of supporting product volumes of 8 Terabytes per day of input and 16 Terrabytes per day of output.
+3.10.3.3	During the NPOESS-C2 mission, the System shall be capable of supporting product volumes of 8 Terabytes per day of input and 16 Terabytes per day of output.
+3.10.4.1	The System shall be compliant with the OMB Federal Enterprise Architecture (FEA) according to the documents dated December 2006, and available from http://www.whitehouse.gov/omb/egov/a-2-EAModelsNEW2.html.

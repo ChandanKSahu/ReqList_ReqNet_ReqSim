@@ -1,0 +1,66 @@
+3.1.1.0	In order to accomplish the above articulated need, the FDP Expanded Clearinghouse requires a community-wide data collection and management system that includes the following base functionality: (See Appendix B for system mock up)
+3.1.1.1.1	Entity profile information is publicly available via a searchable website
+3.1.1.1.2	Profile data is available for direct system-t o-system access via an HTTP API (read only)
+3.1.1.1.3	System will track the date and time of last API data pull
+3.1.1.1.4	Profile details for individual institutions can be downloaded in Excel or PDF format
+3.1.1.2.1	Entities may submit online requests to have their profile added to the clearinghouse
+3.1.1.2.2	Authorized users can update the entity’s profile directly on the website
+3.1.1.2.3	Date and user name are logged when profile is changed
+3.1.1.2.4	Designated entity representatives can delegate editing rights to other users at their institution
+3.1.1.3.1	User accounts are password protected (Utilization of InCommon Federation will be considered in future phases of development )
+3.1.1.3.2	Password reminders and resets are handled by the website
+3.1.1.3.3	With the exception of system administrators, a ll user accounts are tied to an institution
+3.1.1.4.1	At designated intervals (at least monthly), the system sends an email reminding en tities to update their profile
+3.1.1.4.2	System will also be able to send reminders on certain data elements when the data has become out of date (SAM expiration date, Audit date, etc) A list of these data elements will be developed by the ECWG and provided to the ECSDWG.
+3.1.1.4.3	If feasible, system will also provide aler t/notification upon sign-in by entity  user when any of the above dates or data elements requires updating
+3.1.1.4.4	Consideration will be given to requiring a Profile update at FDP Annual report time to help ensure Profiles are kept current
+3.1.1.4.5	 New profiles must be reviewed and approved by FDP designee before appearing online
+3.1.1.5.1	System provides designated FDP administrators with additional rights.
+3.1.1.5.2	FDP Administrators create new entities and approve new profiles
+3.1.1.5.3	FDP Administrators des ignate first primary user for entity
+3.1.1.5.4	FDP Administrators can create, edit, and disable user accounts.
+3.1.1.6.1	Public has read-only access via website
+3.1.1.6.2	API provides read-only data access
+3.1.1.6.3	Profile editing requires password-protected user account with manually-assigned rights
+3.1.1.6.4	Change log records details on data modification (date, username)
+3.1.1.6.5	Consideration will be given to potentially hiding of email address from public view to avoid collection by spam senders
+3.1.1.7.1	Future development  considerations include: o Links from each Entity Profile to Entity’s SAM.gov page.  Consideration will be given to a select set of fields in SAM that could be accessed to help “jump start” the profile creation (ECWG to compile list) o Assessment of feasibility of merging data from current FDP Institution Profile o A-133 data base integration o FCOI clearinghouse integration o Assessment of feasibility of utilizing data  in the Federal Audit Clearinghouse (FAC)
+4.1.1.1	The system will employ numerous data quality assu rance techniques, including but not limited to: • Input masks • Drop down lists with  standard responses • Record data completeness requirements • Basic data logic warnings  (e.g., Gender: Male with Pregnancy status: Y) • Manual review and validation of new draft entity profiles by a designated FDP administrator, prior to profiles being added to the system.
+4.1.2.1	The system is intended to be available on line 24 hours per day, 365 days per year with the exception of scheduled and pre-notified system maintenance downtimes, if needed.
+4.1.2.2	Data will become immediately available for use, except for new profiles, which will be pending in queue for validation by an FDP administrator.
+4.1.2.3	The ECSDWG will ensure that system reso urces are adequate for timely response ti mes and overall softwa re functionality.
+4.1.2.4	The ECSDWG will review ISP/hosting provider options and once the initial development is complete will move the clearinghouse over to this for hosting the system.
+4.1.2.5	The system  will be built and tested on Va nderbilt hardware and software and then transferred over based on agreement of ECSDWG.  The cost an ISP/hosting provider is estimated to be approximately $1,200 annually. The cost of this will be paid by the FDP.
+4.1.3.1	The system is non-critical.  Temporary inaccessibility, even up  to several days, will not create a substantial burden on any user.  The host site for the system will be chosen so as to in clude data backup capabilities and protocols.  VUMC will maintain a copy of the code on Vanderbilt’s network, which has daily backup protocols.  Additionally, should the ECSDWG believe it to be prudent, a copy could be kept at University of Washington or another backup site.  It is expected that with the use of an IPS/hosting provider that downtime will be minimal or non-existent.
+5.1.1	The proposed FDP Expanded Cl earinghouse system will consist of a web-bas ed, centralized database Entity Profile and reporting to be utilized in the support of ongoing subrecipie nt entity monitoring activities and responsibilities by the Entities.
+5.1.2	Generally, all users will provide direct input into the system and outputs (reports) will also be generated directly from the system.  However, to ensure growth ability, flexibilit y is also required for both input and output modes.
+5.1.3	Participating Pilot Entities will provide input (i.e., entity leve l data) and the ECSDWG, as an agent of the FDP, will provide system administration and support for report generation.
+5.1.4	The system is planned to be originally dev eloped principally by staff at Vanderbilt University Medical Center, in close consult with  the ECSDWG.  As feasible and agreed upon, David Wright and Jason Myers might also assist in components of the development.
+5.2.1	An additional desired functionality of the system is to integrate with other external systems.
+5.2.2	The FDP Expanded Clearinghouse system will be desired to have the capacity to import and export data without ongoing support by the ECSDWG.
+5.2.3	To this end, the system will expose a RESTful API via H TTP to provide data in JSON format for external consumer access.
+5.2.4	The clearinghouse system will also include the functionality to interface with the federal System for Award Management (SAM) web services to access certain data elements as defined in the functional requirements.
+5.2.5	In addition exploration of utilizing the bulk download capabilities currently available in the Federal Audit Clearinghouse will be explored to allow for the possibility  of utilizing that data for uploading entity profile data elements as well.
+5.3.1	The desirability for the ECSDWG to continually update and improve the system is a given.
+5.3.2	However, the FDP will also require that the system be flexible and customizable to suit their needs.
+5.3.3	The complexity of  the system will limit the customizations available via the administrative interface at the FDP level.  However, the code should be structured to make customizations a reasonably accessible task for a PHP programmer, and the FDP will have access to the code repository to make such changes as desired.
+5.3.4	Any tools that will be utilized, outside  of those discussed in this  proposal will be discussed and agreed upon among the ECSDWG prior to use.  No closed source or proprietary tools will to be used.
+5.4.1	The system will be developed under the le adership of Vanderbilt University Medi cal Center using in dustry standard web development tools and practices.
+5.4.2	VUMC commits to develop the initial application as described in this document, and to provide additional support and development services up to 5 hours per month on an ongoing basis, without charge to FDP.
+5.4.3	Either party may pursue a transfer of maint enance responsibilities at any time.
+5.4.4	The ECSDWG will perform at least an annual review of how the system is working and whether responsibilities need to be shifted or changed in any way.
+5.4.5	VUMC may, at its discretion, or as contracted by FDP in exchange for appropriate remuneration, provide additional support or development services beyond this commitment.
+5.4.6	The FDP and ECSDWG will have access to the source code for the software and may work with other parties to extend, enhance, or edit the system in colla boration with VUMC provided the changes  and enhancements are committed to the GitHub repository.  Source code will be stored on GitHub or in another mutually agreed repository.
+5.5.1	There is no anticipated need for an end-user guide as system will  include an intuitive user interface.
+5.5.2	VUMC will provide such documentation as necessary or as requested by the ECSDWG or FDP Executive Committee for technical requirements, including but not necessarily limited to  documentation of the system-to-system API.
+5.5.3	Any end-user help documentation will be developed by the ECWG.
+5.6.1	VUMC, as the primary developer, shall retain all right and ownership in the software product including but not limited to source code, including right to license the product (but not the data) to any third party.
+5.6.2	VUMC will grant to FDP a perpetual, worldwide, royalty-free, non-exclusive, non-transferable license to the software product and derivative works, without the right to sub-license, for FDP and its agent(s) to use the software product for its own purposes. This shall include no more than one production instance at any time, with unlimited backup, develo pment and test copies permitted to maintain, improve and test the software as necessary.
+5.6.3	FDP shall retain all right and ownership in its data.  VUMC shal l receive a perpetual, royalty-free license to the data strictly for the purposes of maintaining, improving and supporting FDP’s installation of the software product.
+5.7.1	The ECSDWG will work together to determine where the system ma y need to be configurable and ensure that all parties are in agreement and parameters are appropriately documented.
+5.8.1	Under the leadership of VUMC, the initial system will be developed in iterations.  As the developers complete portions of the application, they will make the updates available to ECSDWG for review.  These reviews are intended to keep the application development on course, addressing any miscommunications early and providing the ECSDWG with a clear understanding of how the work is progressing.
+5.8.2	The ECSDWG will review the submi tted product and provide a notice  of acceptance or notes on changes that need to be ma de in a timely manner.
+5.8.3	This iterative process will repeat until ECSDWG is satisfied with the software product.
+5.8.4	Once the parties agree that the software product is in a “Beta”, or near-final state, ECWG members be enlisted for private live testing, including entering new entity profiles, to flesh out remaining bugs and process issues to be fixed before go-live.
+5.8.5	Once the initial system is complete, the ECSDWG will submit the software product to ECWG fo r final review and approval.
+5.8.6	Additional timelines and documentation related to the go-live process will be developed, as need ed including potential review and approval process by the FDP Executive Committee.

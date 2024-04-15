@@ -1,0 +1,21 @@
+D	Software Requirements Specification of the IUfA's UUIS
+4	System Description 
+4.1	Permissions
+5	Functional requirements
+5.1	Transferring Assets  
+5.2	Editing Assets   
+5.3	Modifying assets   
+5.4	Adding inventory   assets   
+5.5	Creating request to borrow an asset  or a reserve a location   
+5.6	Retuning assets   D	
+5.7	Creating a new location   
+5.8	Approving requests   
+5.9	Authentication   
+5.10	Changing permission  
+5.11	Output reports   
+6	Non functional requirements   
+6.1	Usability  
+6.2	Availability  
+6.3	Portability  
+6.4	Security
+6.5	Maintainability

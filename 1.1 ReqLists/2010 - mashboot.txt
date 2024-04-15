@@ -1,0 +1,76 @@
+3.1.1.10	Purpose The external email system is to provide a messaging service from Mashbot to the Mashbot users.
+3.1.1.11	Input The input is generated automatically by the Mashbot system using settings configurable by the System Administrator.
+3.1.1.12	Output The output is in the form of an e-mail to an e-mail account, but it does not return any sort of message to Mashbot.
+3.1.1.13	Data Format The format uses SMTP protocol. The actual messages are provided by Mashbot.
+3.2.1.14	User Account Types and Permissions The system categorizes users on the basis of roles and privileges. Within these roles, the system also categorizes users based on the roles that they have within individual products. These are referred to as user account roles.
+3.2.1.13	Mashbot Campaigns supports the following account roles: - Contributor - Approver - Publisher
+3.2.1.18	A user may possess more than one role.
+3.2.1.19	Roles reflect actions that can be performed by a user.
+3.2.1.20	Roles can be assigned to a user account for individual products.
+3.2.1.21	Contributors may create new content, import existing content into the system, edit content, and delete it. They may also submit these actions for approval.
+3.2.1.22	Approvers can approve actions performed by contributors
+3.2.1.23	Publishers may schedule or immediately initiate actions put forth by contributors and those approved by approvers.
+3.2.1.24	User Account Creation - New user accounts can be created.
+3.2.1.25	The system may contain any number of user accounts.
+3.2.1.26	Certain pieces of information are required to create new accounts.
+3.2.1.27	The following information is required for any new user account: Username - Password - Name - Email Address - Group Membership - User Account Type
+3.2.1.33	The system allows users to modify their accounts once created.
+3.2.1.34	The system requires that a user have logged in before modifications can be made.
+3.2.1.35	The following user account information is modifiable by all user types: - Password  - Email Address  - Name
+3.2.1.38	User Account Deactivation The system allows user accounts to be deactivated.
+3.2.1.39	The system denies user who have been deactivated from accessing the system.
+3.2.1.40	If an account has any history associated with it, it can only be deactivated and not deleted.
+3.2.1.41	If an account has no history associated with it, it can be deleted from the system.
+3.2.1.42	A disabled account can be undisabled
+3.2.1.43	It is possible to disable all accounts except for the System Administrator account.
+3.2.1.45	The system gives users the ability to reset their password.
+3.2.1.46	Individual passwords can be reset.
+3.2.1.47	The system only allows users to change their own passwords.
+3.2.2.48	A campaign has the following components:  - Name - Pieces of content - Schedule - User/Group Permissions
+3.2.2.53	A schedule is a mapping of times to publishing actions. It may contain any actions a publisher can perform, and these actions are performed at the associated time.
+3.2.2.54	A piece of content may take the following forms: - Text - Image - Audio - Video
+3.2.3.59	Mashbot will allow for the association of Mashbot accounts with external service accounts.
+3.2.3.60	Mashbot will provide an interface for authenticating a user account to an external service account
+3.2.3.61	Mashbot will provide a standardized method of interacting with external service accounts.
+3.3.62	The system encrypts data over a direct connection between the web client and the server.
+3.3.63	The system allows for the backup of the data system to local or remote non-volatile storage systems. Incremental backups should not create outages and full backups do not interfere with user interaction for more than 10 minutes.
+3.3.64	The system is configurable to e-mail warnings about multiple failed login attempts from the same user. These warnings are sent to the System Administrator. Other security risks of this type are the responsibility of the System Administrator.
+3.3.65	The system allows only valid users to log into the system. A valid user is one which has not been disabled or deleted and exists on the system.
+3.3.66	To log onto the system, a user provides their valid username and password.
+3.3.67	The system uses the configured authentication module. The authentication method is configurable by the System Administrator.
+3.3.68	The system allows the System Administrator to configure a timeout after which a user is automatically logged out of Mashbot.
+6.1	A user should be able to register a new account
+6.2	A user should be able to log in
+6.3	A member should be able to log out
+6.4	A member should have a profile
+6.5	A member should be able to modify their profile
+6.6	A user's email should be verified when registering a new account.
+6.7	An admin should be able to modify accounts
+6.8	An admin should be able to suspend accounts
+6.9	An admin should be able to delete accounts
+6.10	A member should be able to monitor trending topics regarding their campaign
+6.11	A member should be able to monitor facebook groups related to campaigns
+6.12	A member should be able to view @replies to tweets related to their campaigns
+6.13	A member should be able to see responses to blog posts related to the campaign.
+6.14	An admin should be able to perform user account actions in bulk
+6.15	An admin should be able to see all campaigns
+6.16	An admin should be able to delete any campaign
+6.17	An admin should be able to edit all campaigns
+6.18	Mashbot campaigns! campaigns should allow multiple users to collaborate on a campaign
+6.19	Mashbot campaigns! should support multiple users
+6.20	A member should be able to store authentication for supported services
+6.21	A member should be able to add additional services to an existing campaign
+6.22	A member should be able to delete individual campaign elements
+6.23	Members should have hierarchical permissions
+6.24	A campaign should have workflow approval process
+6.25	A member should be able to "unpublish" a campaign
+6.26	A member should be able to delete a campaign
+6.27	A member should be able to schedule events in bulk
+6.28	A member should be able to schedule "live dates" for individual events.
+6.29	A member should be able to delete existing content from supported services
+6.30	A member should be able to see the content they have published in all supported services
+6.31	A member should be able to push to Facebook in a campaign
+6.32	A member should be able to post to a blog in a campaign
+6.33	A member should be able to post to Twitter in a campaign
+6.34	A member should be able to create a new campaign
+6.35	A member should get notified when activity occurs in a campaign they're working on.

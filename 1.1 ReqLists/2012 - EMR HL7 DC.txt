@@ -1,0 +1,385 @@
+1.1.1.1	The solution should create a single logical record for each patient.
+1.1.1.2	The solution should provide the ability to create a record for a patient when the identity of the patient is unknown.
+1.1.1.3	The solution should provide the ability to store more than one identifier for each patient record.
+1.1.1.4	The solution should associate key identifier information (e.g., solution ID, medical record number) with each patient record.
+1.1.1.5	The solution should provide the ability to uniquely identify a patient and tie the record to a single patient.
+1.1.1.6	The solution should provide the ability, through a controlled method, to merge or link dispersed information for an individual patient upon recognizing the identity of the patient.
+1.1.1.7	If health information has been mistakenly associated with a patient, then the solution should provide the ability to mark the information as erroneous in the record of the patient in which it was mistakenly associated and represent that information as erroneous in all outputs containing that information.
+1.1.1.8	If health information has been mistakenly associated with a patient, THEN the solution should provide the ability to associate it with the correct patient.
+1.1.1.9	The solution should provide the ability to retrieve parts of a patient record using a primary identifier, secondary identifiers, or other information which are not identifiers, but could be used to help identify the patient.
+1.1.1.10	The solution should provide the ability to obsolete, inactivate, nullify, destroy and archive a patient's record in accordance with local policies and procedures, as well as applicable laws and regulations.
+1.1.1.11	If related patients register with any identical data, then the solution should provide the ability to propagate that data to all their records.
+1.1.2.1	The solution should capture demographic information as part of the patient record.
+1.1.2.2	The solution should store and retrieve demographic information as discrete data.
+1.1.2.3	The solution should provide the ability to retrieve demographic data as part of the patient record.
+1.1.2.4	The solution should provide the ability to update demographic data.
+1.1.2.5	The solution should provide the ability to report demographic data.
+1.1.2.6	The solution should store historical values of demographic data over time.
+1.1.2.7	The solution should present a set of patient identifying information at each interaction with the patient record.
+1.1.3.1.1	The solution should provide the ability to capture external data and documentation.
+1.1.3.1.2	If lab results are received through an electronic interface, then the solution should receive and store the data elements into the patient record.
+1.1.3.1.3	If lab results are received through an electronic interface, then the solution should display them upon request.
+1.1.3.1.4	The solution should provide the ability to receive, store and display scanned documents as images.
+1.1.3.1.5	The solution should provide the ability to store imaged documents or reference the imaged documents via links to imaging solutions.
+1.1.3.1.6	The solution should provide the ability to receive, store and present text-based externally-sourced documents and reports.
+1.1.3.1.7	The solution should provide the ability to receive, store and display clinical result images (such as radiologic images) received from an external source.
+1.1.3.1.8	The solution should provide the ability to receive, store and display other forms of clinical results (such as wave files of EKG tracings) received from an external source.
+1.1.3.1.9	The solution should provide the ability to receive, store and present medication details from an external source.
+1.1.3.1.10	The solution should provide the ability to receive, store and present structured text-based reports received from an external source.
+1.1.3.1.11	The solution should provide the ability to receive, store and present standards-based structured, codified data received from an external source.
+1.1.3.2.1	The solution should capture and explicitly label patient-originated data.
+1.1.3.2.2	If the solution provides the ability for direct entry by the patient, then the solution should explicitly label the data as patient entered.
+1.1.3.2.3	The solution should capture and label the source of clinical data provided on behalf of the patient.
+1.1.3.2.4	The solution should present patient-originated data for use by care providers.
+1.1.3.2.5	The solution should provide the ability for a provider to verify the accuracy of patient-originated data for inclusion in the patient record.
+1.1.3.2.6	The solution should provide the ability to view or comment, but not alter, patient-originated data.
+1.1.3.3.1	The solution should provide the ability to capture and label patient health data derived from administrative or financial data.
+1.1.3.3.2	The solution should provide the ability to capture and link data about the source of patient health data derived from administrative and financial data with that patient data.
+1.1.3.3.3	The solution should provide the ability to present labeled patient health information derived from administrative or financial data and the source of that data for use by authorized users.
+1.1.3.3.4	The solution should provide the ability to view or comment on patient health information derived from administrative or financial data.
+1.1.3.3.5	The solution should provide the ability to request correction of the administrative or financial data.
+1.1.4.1	The solution should present summarized views and reports of the patient’s comprehensive EMR.
+1.1.4.2	The solution should include at least the following in the summary: problem list, medication list, allergy and adverse reaction list.
+1.1.5.1	The solution should provide the ability to create views that prohibit patients from accessing certain information according to organizational policy, scope of practice, and jurisdictional law.
+1.1.5.2	The solution should provide the ability to create customized views of summarized information based on sort and filter controls for date or date range, problem, or other clinical parameters.
+1.1.5.3	The solution should provide the ability to access summarized information through customized views based on prioritization of chronology, problem, or other pertinent clinical parameters.
+1.2.1	The solution should provide the ability to capture, update and present current patient history including pertinent positive and negative elements.
+1.2.2	The solution should provide the ability to capture and present previous external patient histories
+1.2.3	The solution should provide the ability to capture the relationship between patient and others.
+1.2.4	The solution should capture the complaint, presenting problem or other reason(s) for the visit or encounter.
+1.2.5	The solution should capture the reason for visit/encounter from the patient's perspective.
+1.3.0.2	The solution should to function IN.2.2 (Auditable Records).
+1.3.1.1	The solution should provide the ability to capture, present, maintain and make available for clinical decisions patient preferences such as language, religion, spiritual practices and culture.
+1.3.1.2	The solution should provide the ability to capture, present, maintain and make available for clinical decisions family preferences such as language, religion, spiritual practices and culture.
+1.3.2.1	The solution should provide the ability to indicate that advance directives exist for the patient.
+1.3.2.2	The solution should provide the ability to indicate the type of advance directives completed for the patient such as living will, durable power of attorney, preferred interventions for known conditions, or the existence of a "Do Not Resuscitate order”.
+1.3.2.3	The solution should provide the ability to capture, present, maintain and make available for clinical decisions patient advance directives documents and “Do Not Resuscitate” orders.
+1.3.2.5	The solution should provide the ability to indicate when advanced directives were last reviewed.
+1.3.2.6	The solution should provide the ability to indicate the name and relationship of the party completing the advance directive for the patient.
+1.3.2.7	The solution should time and date stamp advance directives.
+1.3.2.8	The solution should provide the ability to document the location and or source of any legal documentation regarding advance directives.
+1.3.3.1	The solution should provide the ability to indicate that a patient has completed applicable consents and authorizations.
+1.3.3.2	The solution should provide the ability to indicate that a patient has withdrawn applicable consents and authorizations.
+1.3.3.4	The solution should provide the ability to view and complete consent and authorization forms on-line.
+1.3.3.5	The solution should provide the ability to generate printable consent and authorization forms.
+1.3.3.6	The solution should display the authorizations associated with a specific clinical activity, such as treatment or surgery, along with that event in the patient's electronic chart.
+1.3.3.7	The solution should provide the ability to display consents and authorizations chronologically.
+1.3.3.8	The solution should provide the ability to document an assent for patients legally unable to consent.
+1.3.3.9	The solution should provide the ability to document the source of each consent, such as the patient or the patient’s personal representative if the patient is legally unable to provide it.
+1.3.3.10	The solution should provide the ability to document the patient’s personal representative’s level of authority to make decisions on behalf of the patient.
+1.4.1.1	The solution should provide the ability to capture true allergy, intolerance, and adverse reaction to drug, dietary or environmental triggers as unique, discrete entries.
+1.4.1.2	The solution should provide the ability to capture the reason for entry of the allergy, intolerance or adverse reaction.
+1.4.1.3	The solution should provide the ability to capture the reaction type.
+1.4.1.4	The solution should provide the ability to capture the severity of a reaction.
+1.4.1.5	The solution should provide the ability to capture a report of No Known Allergies (NKA) for the patient.
+1.4.1.6	The solution should provide the ability to capture a report of No Known Drug Allergies (NKDA) for the patient.
+1.4.1.7	The solution should provide the ability to capture the source of allergy, intolerance, and adverse reaction information.
+1.4.1.8	The solution should provide the ability to deactivate an item on the list.
+1.4.1.9	The solution should provide the ability to capture the reason for deactivation of an item on the list.
+1.4.1.10	The solution should present allergies, intolerances and adverse reactions that have been deactivated.
+1.4.1.11	The solution should provide the ability to display user defined sort order of list.
+1.4.1.12	The solution should provide the ability to indicate that the list of medications and other agents has been reviewed.
+1.4.1.13	The solution should provide the ability to capture and display the date on which allergy information was entered.
+1.4.1.14	The solution should provide the ability to capture and display the approximate date of the allergy occurrence.
+1.4.2.1	The solution should provide the ability to capture patient specific medication lists.
+1.4.2.2	The solution should display and report patient-specific medication lists.
+1.4.2.3	The solution should provide the ability to capture the details of the medication such as ordering date, dose, route, and SIG (description of the prescription, such as the quantity) when known.
+1.4.2.4	The solution should provide the ability to capture other dates associated with medications such as start and end dates.
+1.4.2.5	The solution should provide the ability to capture medications not reported on existing medication lists or medication histories.
+1.4.2.6	The solution should provide the ability to capture nonprescription medications including over the counter and complementary medications such as vitamins, herbs and supplements.
+1.4.2.7	The solution should present the current medication lists associated with a patient.
+1.4.2.8	The solution should present the medication history associated with a patient.
+1.4.2.9	The solution should present the medication, prescriber, and medication ordering dates when known.
+1.4.2.10	The solution should provide the ability to mark a medication as erroneously captured and excluded from the presentation of current medications.
+1.4.2.11	The solution should provide the ability to print a current medication list for patient use.
+1.4.2.12	The solution should provide the ability to capture information regarding the filling of prescriptions (dispensation of medications by pharmacies or other providers).
+1.4.3.1	The solution should capture, display and report all active problems associated with a patient.
+1.4.3.2	The solution should capture, display and report a history of all problems associated with a patient.
+1.4.3.3	The solution should provide the ability to capture onset date of problem.
+1.4.3.4	The solution should provide the ability to capture the chronicity (chronic, acute/self-limiting, etc.) of a problem.
+1.4.3.5	The solution should provide the ability to capture the source, date and time of all updates to the problem list.
+1.4.3.6	The solution should provide the ability to deactivate a problem.
+1.4.3.7	The solution should provide the ability to re-activate a previously deactivated problem.
+1.4.3.8	The solution should provide the ability to display inactive and/or resolved problems.
+1.4.3.9	The solution should provide the ability to manually order/sort the problem list.
+1.4.3.10	The solution should provide the ability to associate encounters, orders, medications, notes with one or more problems.
+1.4.4.1	The solution should capture, display and report all immunizations associated with a patient.
+1.4.4.2	The solution should record as discrete data elements data associated with any immunization given including date, type, lot number and manufacturer.
+1.4.4.3	The solution should prepare a report of a patient ‘s immunization history upon request for appropriate authorities such as Public Health organization.
+1.5.1	The solution should provide the ability to create assessments.
+1.5.2	The solution should provide the ability to use standardized assessments where they exist.
+1.5.3	The solution should provide the ability to document using standard assessments germane to the age, gender, developmental state, and health condition as appropriate to the EMR user’s scope of practice.
+1.5.4	The solution should provide the ability to capture data relevant to standard assessment.
+1.5.5	The solution should provide the ability to capture additional data to augment the standard assessments relative to variances in medical conditions.
+1.5.6	The solution should provide the ability to link data from a standard assessment to a problem list.
+1.5.7	The solution should provide the ability to link data from a standard assessment to an individual care plan.
+1.5.8	The solution should provide the ability to link data from external sources, laboratory results, and radiographic results to the standard assessment.
+1.5.9	The solution should provide the ability to compare documented data against standardized curves and display trends.
+1.6.1.1	The solution should provide the ability to present current guidelines and protocols to clinicians who are creating plans for treatment and care.
+1.6.1.2	The solution should provide the ability to search for a guideline or protocol based on appropriate criteria (such as problem).
+1.6.1.3	The solution should provide the ability to present previously used guidelines and protocols for historical or legal purposes.
+1.6.2.1	The solution should provide the ability to capture patient specific plans of care and treatment.
+1.6.2.3	The solution should provide the ability to use previously developed care plans as a basis for the creation of new plans of care and treatment.
+1.6.2.4	The solution should provide the ability to track updates to a patient’s plan of care and treatment including authors, creation date, version history, references, local sources and non-local sources in accordance with scope of practice, organizational policy and jurisdictional law.
+1.6.2.5	The solution should provide the ability to coordinate order sets with care plans.
+1.6.2.6	The solution should provide the ability to derive order sets from care plans.
+1.6.2.7	The solution should provide the ability to derive care plans from order sets.
+1.6.2.8	The solution should provide the ability to transfer plans of care and treatment to other care providers.
+1.7.0.1	The solution should to function IN.2.2 (Auditable Records).
+1.7.1.1	The solution should provide the ability to create prescription or other medication orders with the details adequate for correct filling and administration captured as discrete data.
+1.7.1.2	The solution should capture user and date stamp for all prescription related events.
+1.7.1.4	The solution should provide a list of medications to search, including both generic and brand name.
+1.7.1.5	The solution should provide the ability to maintain a discrete list of orderable medications.
+1.7.1.7	The solution should make common content available for prescription details to be selected by the ordering clinician.
+1.7.1.8	The solution should provide the ability for the ordering clinician to create prescription details as needed.
+1.7.1.9	The solution should make available common patient medication instruction content to be selected by the ordering clinician.
+1.7.1.10	The solution should provide the ability to include prescriptions in order sets.
+1.7.1.11	The solution should provide a list of frequently-ordered medications by diagnosis by provider which could include the full details of the medication, including SIG, quantity, refills, DAW, etc.
+1.7.1.12	The solution should provide the ability to select drugs by therapeutic class and/or indication.
+1.7.1.14	The solution should provide the ability to re-prescribe medication by allowing a prior prescription to be reordered without re-entering previous data (e.g. administration schedule, quantity).
+1.7.1.15	The solution should provide the ability to re-prescribe a medication from a prior prescription using the same dosage but allow for editing of details adequate for correct filling and administration of medication (e.g. dose, frequency, body weight).
+1.7.1.18	The solution should provide the ability to create prescriptions in which the weight-specific dose is suggested.
+1.7.2.1	The solution should provide the ability to capture nonmedication patient care orders for an action or item.
+1.7.2.1	The solution should provide the ability to capture adequate order detail for correct order fulfillment.
+1.7.2.3	The solution should track the status of the ordered action or item.
+1.7.2.4	The solution should provide the ability to capture patient instructions necessary for correct order fulfillment.
+1.7.2.5	The solution should provide the ability to present patient instructions necessary for correct order fulfillment.
+1.7.2.6	The solution should provide the ability to communicate the order to the correct recipient(s) for order fulfillment.
+1.7.2.4.1	The solution should provide the ability to capture orders for diagnostic tests.
+1.7.2.4.2	The solution should provide the ability to capture adequate order detail for correct diagnostic test fulfillment.
+1.7.2.4.3	The solution should provide the ability to track the status of diagnostic test(s).
+1.7.2.4.4	The solution should provide the ability to capture and present patient instructions relevant to the diagnostic test ordered.
+1.7.2.4.5	The solution should communicate orders to the service provider of the diagnostic test.
+1.7.2.4.6	The solution should communicate supporting detailed documentation to the correct service provider of the diagnostic test.
+1.7.2.3.1	The solution should provide the ability to interface with solutions of blood banks or other sources to manage orders for blood products or other biologics.
+1.7.2.3.2	The solution should provide the ability to capture use of such products in the provision of care.
+1.7.2.4.1	The solution should provide the ability to capture and communicate referral(s) to other care provider (s), whether internal or external to the organization.
+1.7.2.4.2	The solution should provide the ability to capture clinical details as necessary for the referral.
+1.7.2.4.3	The solution should provide the ability to capture administrative details (such as insurance information, consents and authorizations for disclosure) as necessary for the referral.
+1.7.2.4.4	The solution should present captured referral information.
+1.7.2.4.5	The solution should provide the ability to capture completion of a referral appointment.
+1.7.2.4.6	The solution should provide diagnosis based clinical guidelines for making a referral.
+1.7.2.4.7	The solution should provide order sets for referral preparation.
+1.7.2.4.8	The solution should provide the ability to document transfer of care according to organizational policy, scope of practice, and jurisdictional law.
+1.7.3.1	The solution should provide the ability to present order set(s).
+1.7.3.2	The solution should provide the ability to order at the patient level from presented order sets.
+1.7.3.3	The solution should provide the ability to record each component of an order set that is ordered.
+1.8.1.1	The solution should present the list of medications to be administered.
+1.8.1.2	The solution should display the timing, route of administration, and dose of all medications on the list.
+1.8.1.3	The solution should display instructions for administration of all medications on the list.
+1.8.1.4	The solution should notify the clinician when specific doses are due.
+1.8.1.7	The solution should provide the ability to capture medication administration details: including timestamps, observations, complications, and reason if medication was not given - in accordance with organizational policy, scope of practice, and jurisdictional law.
+1.8.1.8	The solution should securely relate interventions to be administered to the unique identity of the patient.
+1.8.2.1	The solution should provide the ability to recommend required immunizations, and when they are due, during an encounter based on widely accepted immunization schedules.
+1.8.2.2	The solution should provide the ability to recommend required immunizations based on patient risk factors.
+1.8.2.3	The solution should perform checking for potential adverse or allergic reactions for all immunizations when they are about to be given.
+1.8.2.4	The solution should provide the ability to capture immunization administration details, including date, type, lot number and manufacturer.
+1.8.2.5	The solution should provide the ability to capture other clinical data pertinent to the immunization administration (e.g. vital signs).
+1.8.2.6	The solution should record as discrete data elements data associated with any immunization.
+1.8.2.7	The solution should provide the ability to associate standard codes with discrete data elements associated with an immunization.
+1.8.2.8	The solution should provide the ability to update the immunization schedule.
+1.8.2.9	The solution should provide the ability to prepare a report of a patient‘s immunization history upon request for appropriate authorities such as Public Health departmetn.
+1.8.2.11	The solution should transmit required immunization information to a public health immunization registry.
+1.8.3.1	The solution should provide the ability to present numerical and non-numerical current and historical test results to the appropriate provider.
+1.8.3.2	The solution should provide the ability to filter results for a unique patient.
+1.8.3.3	The solution should provide the ability to filter results by factors that supports results management, such as type of test and date range.
+1.8.3.4	The solution should indicate normal and abnormal results depending on the data source.
+1.8.3.5	The solution should provide the ability to filter lab results by range, e.g. critical, abnormal or normal.
+1.8.3.6	The solution should display numerical results in flow sheets, graphical form, and allow comparison of results.
+1.8.3.7	The solution should the ability to group tests done on the same day.
+1.8.3.8	The solution should notify relevant providers (ordering, copy to) that new results have been received.
+1.8.3.9	The solution should provide the ability for the user, to whom a result is presented, to acknowledge the result.
+1.8.3.10	The solution should provide the ability to route results to other appropriate care providers, such as nursing home, consulting physicians, etc.
+1.8.3.11	The solution should route results to patients by methods such as phone, fax, electronically or letter.
+1.8.3.12	The solution should provide the ability for providers to pass on the responsibility to perform follow up actions to other providers.
+1.8.3.13	The solution should provide the ability for an authorized user to group results into clinically logical sections.
+1.8.3.14	The solution should trigger decision support algorithms from the results.
+1.8.3.15	The solution should link the results to a specific order.
+1.8.3.16	The solution should provide the ability for providers to annotate a result.
+1.8.3.17	The solution should display a link to an image associated with results.
+1.8.4.1	The solution should capture patient vital signs such as blood pressure, temperature, heart rate, respiratory rate, and severity of pain as discrete elements of structured or unstructured data.
+1.8.4.2	The solution should capture psychiatric symptoms and daily functioning as structured or unstructured data
+1.8.4.3	The solution should capture other clinical measures such as peak expiratory flow rate, size of lesions, oxygen saturation, height, weight, and body mass index as discrete elements of structured or unstructured data.
+1.8.4.4	The solution should compute and display percentile values when data with normative distributions are entered.
+1.8.4.5	The solution should provide normal ranges for data based on age and other parameters such as height, weight, ethnic background, gestational age.
+1.8.5.1	The solution should provide the ability to capture clinical documentation (henceforth "documentation") including original, update by amendment in order to correct, and addenda.
+1.8.5.2	The solution should provide the ability to capture free text documentation.
+1.8.5.3	The solution should present documentation templates (structured or free text) to facilitate creating documentation.
+1.8.5.4	The solution should provide the ability to view other documentation within the patient's logical record while creating documentation.
+1.8.5.5	The solution should provide the ability to associate documentation for a specific patient with a given event, such as an office visit, phone communication, e-mail consult, lab result, etc.
+1.8.5.6	The solution should provide the ability to associate documentation with problems and/or diagnoses.
+1.8.5.7	The solution should provide the ability to update documentation prior to finalizing it.
+1.8.5.8	The solution should provide the ability to finalize a document or note.
+1.8.5.9	The solution should provide the ability to attribute record and display the identity of all users contributing to or finalizing a document or note, including the date and time of entry (see appropriate criteria in IN.2.2 (Auditable Records)).
+1.8.5.10	The solution should present captured documentation.
+1.8.5.11	The solution should provide the ability to filter, search or sort notes.
+1.8.5.12	The solution should provide documentation templates for data exchange.
+1.8.6.1	The solution should provide the ability to capture clinical decision support prompts and user decisions to accept or override those prompts.
+1.8.6.2	The solution should provide the ability to record the reason for variation from the decision support prompt.
+1.8.6.3	The solution should provide the ability to display recorded variances upon request by authorized users of the EMR.
+1.9.1	The solution should provide the ability to generate instructions pertinent to the patient for standardized procedures.
+1.9.2	The solution should provide the ability to generate instructions pertinent to the patient based on clinical judgment.
+1.9.3	The solution should provide the ability to include details on further care such as follow up, return visits and appropriate timing of further care.
+1.9.4	The solution should provide the ability to record that instructions were given to the patient.
+1.9.5	The solution should provide the ability to record the actual instructions given to the patient or reference the document(s) containing those instructions.
+2.1.1.1	The solution should provide the ability to access the standard assessment in the patient record.
+2.1.1.2	The solution should provide the ability to access to health standards and practices appropriate to the EMR user’s scope of practice.
+2.1.1.3	The solution should provide the ability to compare elements of assessments captured by the clinician and those available as best practices and/or evidence based resources.
+2.1.1.4	The solution should provide the ability to derive supplemental assessment data from evidence based standard assessments, practice standards, or other generally accepted, verifiable, and regularly updated standard clinical sources.
+2.1.1.5	The solution should provide prompts based on practice standards to recommend additional assessment functions.
+2.1.1.7	The solution should provide the ability to create standard assessments that correspond to the problem list.
+2.1.2.1	The solution should provide the ability to access health assessment data in the patient record.
+2.1.2.2	The solution should provide the ability to compare assessment data entered during the encounter and the accessed health evidence based standards and best practices.
+2.1.2.3	The solution should provide the ability to compare health data and patient context-driven assessments to practice standards in order to prompt additional testing, possible diagnoses, or adjunctive treatment.
+2.1.2.4	The solution should provide the ability to correlate assessment data and the data in the patient specific problem list.
+2.1.3.2	The solution should provide the ability to access health standards and practices appropriate to the EMR user’s scope of practice at the time of the encounter.
+2.1.3.3	The solution should provide the ability to compare patient context-driven assessments and additional health information to best practices in order to identify patient specific growth or development patterns, health trends and potential health problems.
+2.1.3.4	The solution should provide the ability to configure rules defining abnormal trends.
+2.1.3.5	The solution should prompt the provider with abnormal trends.
+2.1.3.6	The solution should prompt the provider for additional assessments, testing or adjunctive treatment.
+2.1.3.8	The solution should provide the ability to integrate health information contained in the record with appropriate teaching materials.
+2.1.4.2	The solution should provide for the ability to capture and manage patient and family preferences as they pertain to current treatment plans.
+2.1.4.3	The solution should provide the ability to update care guidelines and options relating to documented patient and family preferences, including standards of practice e.g. treatment options for individuals who refuse blood transfusions.
+2.1.4.4	The solution should provide the ability to compare care guidelines and options relating to documented patient and family preferences, including standards of practice.
+2.1.4.5	The solution should prompt the provider for testing and treatment options based on patient and family preferences and provide the ability to compare to standard practice
+2.1.4.6	The solution should provide the ability to integrate preferences with appropriate teaching materials.
+2.1.4.7	The solution should provide the ability to integrate necessary documentation of preferences, such as living wills, specific consents or releases
+2.2.1.1.2	The solution should provide the ability to create and use site specific care plans, protocols, and guidelines.
+2.2.1.1.3	The solution should provide the ability to make site-specific modifications to standard care plans, protocols, and guidelines obtained from outside sources.
+2.2.1.1.4	The solution should identify, track and provide alerts, notifications and reports about variances from standard care plans, guidelines and protocols.
+2.2.1.2.1	The solution should provide the ability to access care and treatment plans that are sensitive to the context of patient data and assessments.
+2.2.1.2.2	The solution should provide the ability to capture care processes across the continuum of care.
+2.2.1.2.3	The solution should present care processes from across the continuum of care.
+2.2.1.2.4	The solution should provide the ability to document the choice of action in response to care plan suggestions.
+2.2.1.2.5	The solution should identify, track and provide alerts, notifications and reports about variances from standard care plans, guidelines and protocols.
+2.2.2.2	The solution should provide the ability to identify patients eligible for healthcare management protocols based on criteria identified within the protocol.
+2.2.2.3	The solution should provide the ability to include or exclude a patient from an existing healthcare management protocol group.
+2.2.2.4	The solution should provide the ability to audit compliance of selected populations and groups that are the subjects of healthcare management protocols.
+2.2.3.1	The solution should provide the ability to present protocols for patients enrolled in research studies.
+2.2.3.2	The solution should provide the ability to maintain research study protocols.
+2.2.3.4	The solution should provide the ability to identify and track patients participating in research studies.
+2.2.3.5	The solution should provide the ability to capture appropriate details of patient condition and response to treatment as required for patients enrolled in research studies.
+2.2.4.2	The solution should provide the ability to manage and/or develop patient guidance and reminders related to specific clinical conditions.
+2.3.1.1.1	The solution should check for and alert providers to interactions between prescribed drugs and medications on the current medication list.
+2.3.1.1.5	The solution should provide the ability to set the severity level at which warnings should be displayed.
+2.3.1.1.6	The solution should provide the ability to check for duplicate therapies.
+2.3.1.2.9	The solution should provide the ability to specify an alternative “dosing weight” for the purposes of dose calculation.
+2.3.1.2.10	The solution should perform drug dosage functions using any component of a combination drug (e.g., acetaminophen-hydrocodone).
+2.3.1.2.11	The solution should provide the ability to record the factors used to calculate the future dose for a given prescription.
+2.3.1.3.2	The solution should present recommendations for medication regimens based on findings related to the patient diagnosis.
+2.3.1.3.3	The solution should present alternative treatments in medications on the basis of practice standards, cost, formularies, or protocols.
+2.3.1.3.4	The solution should present suggested lab monitoring as appropriate to a particular medication.
+2.3.2.1	The solution should present information necessary to correctly identify the patient and accurately administer medications and immunizations such as patient name, medication name, strength, dose, route and frequency.
+2.3.2.2	The solution should alert providers to potential administration errors such as wrong patient, wrong drug, wrong dose, wrong route and wrong time as it relates to medication and immunizations administration.
+2.3.2.3	The solution should alert providers to potential medication administration errors at the point of medication administration.
+2.3.2.4	The solution should provide the ability to capture all pertinent details of the medication administration including medication name, strength, dose, route, time of administration, exceptions to administration, and administrator of the medication.
+2.3.2.6	The solution should generate documentation of medication or immunization administration as a by-product of verification of patient, medication, dose, route and time.
+2.3.2.7	The solution should prompt or remind providers regarding the date/time range for timely administration of medications.
+2.3.2.8	The solution should suggest alternative administration techniques based on age, developmental stage, weight, physiological status, mental status, educational level, and past physical history of the patient.
+2.4.1.1	The solution should provide the ability to create order set templates.
+2.4.1.2	The solution should provide the ability to maintain order set templates, including version control.
+2.4.1.4	The solution should capture order sets based on patient data that should be provided by the provider or that should be in accordance with preferred standards.
+2.4.1.5	The solution should provide the ability to create order set templates for known conditions for a particular disease.
+2.4.1.6	The solution should present the order set templates to the provider.
+2.4.1.8	The solution should provide the ability to relate order set templates to aid decision support for certain diseases.
+2.4.2.1	The solution should identify required order entry components for non-medication orders.
+2.4.2.2	The solution should present an alert at the time of order entry, if a non-medication order is missing required information.
+2.4.2.3	The solution should present an alert via warnings of orders that should be inappropriate or contraindicated for specific patients at the time of provider order entry.
+2.4.3.1	The solution should present alerts for a result that is outside of a normal value range.
+2.4.3.2	The solution should provide the ability to trend results.
+2.4.3.3	The solution should provide the ability to evaluate pertinent results at the time of provider order entry (such as evaluation of lab results at the time of ordering a radiology exam).
+2.4.4.1.1	The solution should to include clinical and administrative data (e.g. insurance information) as part of the referral process.
+2.4.4.1.3	The solution should to include standardized or evidence based protocols with the referral.
+2.4.4.1.4	The solution should allow clinical, administrative data, and test and procedure results to be transmitted to the referral clinician.
+2.4.4.2.1	The solution should present recommendations for potential referrals based on diagnosis(es).
+2.4.4.2.2	The solution should present recommendations for potential referrals based on patient condition (e.g. for smoking cessation counseling if the patient is prescribed a medication to support cessation).
+2.4.5.1.1	The solution should present information necessary to correctly identify the patient and accurately administer blood products including patient name, blood product number, amount, route, product expiration date and time of administration.
+2.4.5.1.2	The solution should capture validation of the correct matching of the patient to the blood product.
+2.4.5.1.3	The solution should capture the blood product number, amount, route and time of administration.
+2.4.5.2.1	The solution should provide the ability to present information necessary to correctly identify the patient and accurately identify the specimen to be collected including, but not limited to, patient name, specimen type, specimen source, means of collection, date and time.
+2.4.5.2.3	The solution should preesent the details of specimen collection.
+2.4.5.2.5	The solution should notify the provider in real-time of a variation between the type of specimen order placed and the actual specimen received.
+2.5.1.1	The solution should provide the ability to establish criteria for the identification of preventive care and wellness services based on patient demographics (e.g. age, gender).
+2.5.1.3	The solution should present recommended preventative or wellness services needed based upon clinical test results.
+2.5.1.4	The solution should present alerts to the provider of all patient specific preventive services that are due.
+2.5.1.5	The solution should provide the ability to produce a list of all alerts along with the scheduled date and time for the preventive service.
+2.5.1.6	The solution should provide the ability to produce a history of all alerts that were generated for the patient in the record.
+2.5.2.1	The solution should generate timely notifications to patients including services, tests or actions that are due or overdue.
+2.5.2.2	The solution should capture a history of notifications.
+2.5.2.3	The solution should provide the ability to track overdue preventive services.
+2.5.2.5	The solution should provide the ability to configure patient notifications (such as repetitions or timing of the activity).
+2.5.2.6	The solution should provide the ability to update content of notifications, guidelines, reminders and associated reference materials.
+2.6.1.1	The solution should provide the ability to to aggregate patient information based on user-identified criteria.
+2.6.1.4	The solution should present aggregate data in the form of reports for external use.
+2.6.1.5	The solution should provide the ability to save report definitions for later use.
+2.6.1.6	The solution should present aggregate data in an electronic format for use by other analytical programs.
+2.6.2.5	The solution should provide the ability to notify patients, directly or indirectly, who are described by the health risk alert.
+2.6.2.6	The solution should present suggestions to the care provider indicating an appropriate course of action.
+2.6.2.7	The solution should provide the ability to to notify public health authorities or other external authoritative sources of a health risk within a cared for population in accordance with scope of practice, organizational policy and jurisdictional law.
+2.6.3.1	The solution should present specific actions to be taken at the patient level for a health risk alert.
+2.6.3.2	The solution should notify appropriate care providers of specific patient actions required by a health risk alert.
+2.6.3.3	The solution should provide the ability to identify those patients who have not received appropriate action in response to a health risk alert.
+2.6.3.4	The solution should provide the ability to to report on the omission of an appropriate response to the health risk alert in specific patients.
+2.7.1.1	The solution should provide the ability to access evidencebased healthcare recommendations, with documentation of sources
+2.7.1.2	The solution should provide the ability to access evidenced-based documentation appropriate for the care provider to render a timely judgment.
+2.7.1.3	The solution should provide the ability to access external evidence-based documentation.
+2.7.2.1	The solution should provide the ability to access information about wellness, disease management, treatments, and related information that is relevant for a specific patient.
+2.7.2.2	The solution should provide the ability to access information related to a health question directly from data in the health record or other means such as key word search.
+2.7.2.3	The solution should provide the ability to access patient educational information from external sources.
+2.7.2.4	The solution should provide the ability to identify links specific to information if the information is external-based.
+3.1.1.1	The solution should provide the ability for users to create manual clinical tasks.
+3.1.1.2	The solution should provide the ability to automate clinical task creation.
+3.1.1.3	The solution should provide the ability to manually modify and update task status (e.g. created, performed, held, canceled, pended, denied, and resolved).
+3.1.1.3	The solution should provide the ability to manually modify and update task status (e.g. created, performed, held, canceled, pended, denied, and resolved).
+3.1.1.4	The solution should provide the ability to automatically modify or update the status of tasks based on workflow rules.
+3.1.1.5	The solution should provide the ability to assign, and change the assignment of, tasks to individuals or to clinical roles.
+3.1.1.6	The solution should provide the ability to manage workflow task routing to multiple individuals or roles in succession and/or in parallel.
+3.1.1.7	The solution should provide the ability to prioritize tasks based on urgency assigned to the task.
+3.1.1.8	The solution should provide the ability to restrict task assignment based on appropriate role as defined by the entity.
+3.1.1.9	The solution should provide the ability to escalate clinical tasks as appropriate to ensure timely completion.
+3.1.1.0	The Clinical Task Assignment & Routing capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.1.2.1	Thesolution should provide the ability to link a clinical task to the component of the HER required to complete the task.
+3.1.2.2	The Clinical Task Tracking capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.1.3.1	The solution should provide the ability to track the status of tasks.
+3.1.3.2	The solution should provide the ability to notify providers of the status of tasks.
+3.1.3.3	The solution should provide the ability to sort clinical tasks by status.
+3.1.3.4	The solution should provide the ability to present current clinical tasks as work lists.
+3.1.3.5	The solution should provide the ability to define the presentation of clinical task lists.
+3.1.3.6	The Clinical Task Tracking capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.2.1.1	The solution should provide the ability to document in the patient record verbal/telephone communication between providers.
+3.2.1.2	The solution should leverage the CCHCS eUHR solution to incorporate scanned documents from external providers into the patient record.
+3.2.1.3	The solution should provide the ability to communicate using real-time messaging.
+3.2.1.4	The solution should provide the ability to communicate clinical information (e.g. referrals) via email or other electronic means.
+3.2.1.5	The solution should provide the ability to transmit electronic multi-media data types representing pictures, sound clips, or video as part of the patient record.
+3.2.1.6	The Inter-Provider Communication capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.2.2.1	The solution' Provider - Pharmacy Communication capability should support DC 1.7.1 Manage Medication Orders requirements and provide the ability to order medications.
+3.2.2.2	The solution should electronically communicate orders between the prescriber, provider and pharmacy, as necessary, to initiate, change, or renew a medication order.
+3.2.2.3	The solution should receive any acknowledgements, prior authorizations, renewals, inquiries and fill notifications provided by the pharmacy or other participants in the electronic prescription and make it available for entry in the patient record.
+3.2.2.4	The solution should provide the ability to electronically communicate current realm-specific standards to pharmacies.
+3.2.2.5	The solution should provide the ability for providers and pharmacies to communicate clinical information via e-mail or other electronic means, on both general and specific orders.
+3.2.2.6	The solution should provide the ability to use secure realtime messaging.
+3.2.2.7	The solution should provide the ability to include workflow tasks as part of communication to the provider.
+3.2.2.8	The Provider - Pharmacy Communication capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.2.3.1	The solution should provide the ability to capture documentation of communications between providers and patients and/ or the patient representatives.
+3.2.3.2	The solution should leverage the CCHCS eUHR solution to incorporate scanned documents.
+3.2.3.3	The solution should provide the ability to document communication originating with the patient or patient representative (e.g. date, entity, details of communication).
+3.2.3.4	The solution should provide the ability to communicate between providers and patients or their representative using a secure internet connection.
+3.2.3.5	The solution should provide the ability to manage documentation regarding family member or patient representative authorizations to receive patient related health information.
+3.2.3.6	The solution should alert providers to the presence of patient or patient representative originated communications.
+3.2.3.7	The solution should provide the ability to to alert patients or patient representative to provider absences (e.g. vacations) and recommend rerouting of the information or request.
+3.2.3.8	The solution should provide the ability to to notify providers of events and new treatment options.
+3.2.3.9	The solution should provide the ability to remind the patient or patient representative of events related to their care (e.g. upcoming appointments) as agreed upon by the patient and/or the patient representative.
+3.2.3.11	The Support for Communications between Provider and Patient and/or the Patient Representative capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.2.4.1	The solution should provide the ability to access to a library of educational material for health concerns, conditions, and/or diagnosis.
+3.2.4.2	The solution should provide the ability to to communicate applicable educational materials to the patient and/or patient representative.
+3.2.4.3	The solution should provide the ability to deliver multilingual educational material.
+3.2.4.4	The solution should provide the ability to to deliver patient educational materials using alternative modes to accommodate patient sensory capabilities.
+3.2.4.5	The solution should provide the ability to access to external educational materials.
+3.2.4.6	The solution should provide the ability to use rules-based support to identify the most pertinent educational material, based on the patient health status, condition and/or diagnosis.
+3.2.4.7	The solution should provide the ability to to document who received the educational material provided, the patient, or the patient representative.
+3.2.4.8	The solution should provide the ability to to document that the educational material was reviewed with the patient and/or patient representative and their comprehension of the material.
+3.2.4.9	The solution should provide the ability to identify age appropriate and/or reading-ability appropriate educational materials for the patient and/or patient representative.
+3.2.4.10	The solution should provide the ability for direct access to the educational material available, by patients and/or patient representatives.
+3.2.4.12	The Patient, Family, & Care Giver Education capability should provide non-repudiation requirements (IN 1.5) that guarantees that the sources and receivers of data cannot deny that they entered/sent/received the data.
+3.2.5.1	The solution should provide the ability to collect accurate electronic data from medical devices according to realm-specific applicable regulations and/or requirements.
+3.2.5.2	The solution should provide the ability to present information collected from medical devices as part of the medical record as appropriate.

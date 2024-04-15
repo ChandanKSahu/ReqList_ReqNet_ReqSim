@@ -1,0 +1,13 @@
+D	Clarus Weather System Design - Federal Highway Administration
+4	SPECIFIC REQUIREMENTS
+4.1	Configuration & Administra tion Service (CAS)
+4.2	Configuration & Administrati on User Interface (CAUI)
+4.3	Collector Serv ices (CS)
+4.4	Watchdog (DOG)
+4.5	Environmental Metada ta Cache (EMC)
+4.6	Environmental Metadata  Services (EMS)
+4.7	Manual Entry User Interface (MEUI)
+4.8	Qualified Environmen tal Data (QEDC)
+4.9	Qualified Environmental Da ta Services (QEDS)
+4.10	Quality Checking Services (QChS)
+4.11	Schedule Service (SS)

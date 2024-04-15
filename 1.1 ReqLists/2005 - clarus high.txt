@@ -1,0 +1,140 @@
+3.1.1.100	The Clarus system shall collect, quality control, and disseminate environmental data.
+3.1.1.201	The Clarus system shall be able to access in-situ environmental observations from data collectors.
+3.1.1.205	The Clarus system shall be able to access remotely sensed environmental observations from data collectors.
+3.1.1.207	The Clarus system shall calculate derived environmental data from observations.
+3.1.1.211	The Clarus system shall be able to receive roadway weather measurements derived from VII data.
+3.1.1.213	The Clarus system shall allow access to new surface transportation related observed environmental data.
+3.1.1.214	The Clarus system shall accept environmental data derived from images.
+3.1.1.216	Clarus system shall accept surface condition data derived from surface images.
+3.1.1.217	The Clarus system shall accept atmospheric condition data derived from atmospheric images.
+3.1.1.215	The Clarus system shall accept weather hazard reports containing the hazard type, location, and timeframe.
+3.1.1.218	The Clarus system shall acquire and disseminate National Weather Service (NWS) watches, warnings, and advisories.
+3.1.1.221	The Clarus system shall be able to retrieve environmental data directly from environmental sensor stations.
+3.1.1.222	The Clarus system shall minimize the time for data acquisition.
+3.1.1.223	The Clarus system shall process data as they are received.
+3.1.1.231	The Clarus system shall collect pavement-related observations.
+3.1.1.241	The Clarus system shall accept environmental data from railway systems or in situ ESS along tracks.
+3.1.1.245	The Clarus system shall accept environmental data from railroad vehicles.
+3.1.1.251	The Clarus system shall accept environmental data from (roadway) vehicles.
+3.1.1.255	The Clarus system shall accept environmental data from maintenance and construction vehicles.
+3.1.1.261	The Clarus system shall accept environmental data from service patrol vehicles.
+3.1.1.271	The Clarus system shall accept environmental data from transit vehicles.
+3.1.1.275	The Clarus system shall accept environmental data from emergency vehicles.
+3.1.1.281	The Clarus system shall be able to receive weather data from weather service providers.
+3.1.1.101	The Clarus system shall implement continuous quality control processes.
+3.1.1.111	The Clarus system shall provide environmental data quality flags.
+3.1.1.115	The Clarus system shall provide notification of data quality conditions to data collectors.
+3.1.1.121	The Clarus system shall detect out of range values.
+3.1.1.125	The Clarus system shall not modify original observations.
+3.1.1.135	The Clarus system shall apply appropriate quality checks based on the completeness of received sensor station metadata.
+3.1.1.141	The Clarus system shall allow human intervention to override automatically applied quality assessment.
+3.1.1.151	The Clarus system shall record the methods applied when deriving quality control information.
+3.1.1.155	The Clarus system shall be able to implement quality control rules for each environmental parameter.
+3.1.1.161	The Clarus system shall be able to implement quality control rules for specific environmental situations.
+3.1.1.163	The Clarus system shall be able to implement quality control rules specific to observation locations.
+3.1.1.165	The Clarus system shall be able to base its quality control process on values from multiple observations.
+3.1.1.171	The Clarus system shall be able to base its quality control process on historical environmental data.
+3.1.1.175	The Clarus system shall be able to use multiple algorithms for its quality control process.
+3.1.1.200	The Clarus system shall be able to detect data submission errors.
+3.1.1.401	The Clarus system shall be able to provide sensor equipment data in response to a request.
+3.1.1.501	The Clarus system shall minimize the time for data dissemination.
+3.1.1.505	The Clarus system shall be able to disseminate data based on spatial queries.
+3.1.1.521	The Clarus system shall maintain a dynamic library of data for at least seven days.
+3.1.1.801	The Clarus program shall alert users to system modifications.
+3.1.1.805	The Clarus system shall not require approval to request environmental data.
+3.1.1.806	The Clarus system shall enable system administrators to manage security groups.
+3.1.1.811	The Clarus system shall be able to restrict environmental data publication based on source.
+3.1.1.901	The Clarus system shall record statistics about its operation.
+3.1.1.905	The Clarus system shall log data transactions.
+3.1.2.11	The Clarus system baseline data types shall be defined by the NTCIP ESS 1204 standard for data collection.
+3.1.2.12	The Clarus system data definitions shall be consistent with the ITE TM 1.03 standard, Functional Level Traffic Management Data Dictionary (TMDD).
+3.1.2.21	The Clarus system shall acquire, process, and disseminate atmospheric data.
+3.1.2.22	The Clarus system shall acquire, process, and disseminate surface data.
+3.1.2.23	The Clarus system shall acquire, process, and disseminate hydrologic data.
+3.1.2.121	The Clarus system shall acquire, process, and disseminate atmospheric metadata.
+3.1.2.122	The Clarus system shall acquire, process, and disseminate surface metadata.
+3.1.2.123	The Clarus system shall acquire, process, and disseminate hydrologic metadata.
+3.1.2.151	The Clarus system shall accept only observations that include location, timeframe, and source metadata.
+3.1.2.155	The Clarus system shall accept only observations of known measurement types and units.
+3.1.2.201	The Clarus system shall acquire, process, and disseminate environmental sensor station metadata.
+3.1.2.301	The Clarus system shall be able to acquire, process, and disseminate environmental data from across North America.
+3.1.3.11	The Clarus system shall accept data through a Clarus standard interface.
+3.1.3.12	The Clarus system shall be able to communicate with environmental sensor stations using the NTCIP ESS 1204 standard for data collection.
+3.1.3.13	The Clarus system shall be able to communicate with RWIS databases through their native interfaces.
+3.1.3.14	The Clarus system shall be able to communicate with an individual ESS through its native interface.
+3.1.3.15	The Clarus system shall be able to collect environmental data that are manually entered.
+3.1.3.16	The Clarus system shall transfer data as efficiently as possible.
+3.1.3.17	The Clarus system shall employ industry standards to minimize implementation impact to users and providers.
+3.1.3.21	The Clarus system shall allow service providers to select specific desired data sets.
+3.1.3.22	The Clarus system shall respond to queries for environmental data from the available data.
+3.1.3.25	The Clarus system shall enable environmental data queries by timestamp.
+3.1.3.26	The Clarus system shall enable environmental data queries by location reference.
+3.1.3.27	The Clarus system shall enable environmental data queries by quality.
+3.1.3.28	The Clarus system shall enable environmental data queries by source.
+3.1.3.31	The Clarus system shall provide a user interface for system administration.
+3.1.3.32	The Clarus system shall manage system user privileges according to the Clarus data sharing agreements.
+3.1.3.33	The Clarus system shall allow users to create a data subscription request.
+3.2.1.11	The Clarus system shall be able to be hosted at one or more physical locations.
+3.2.1.21	The Clarus system shall use hardware that implements industry accepted standard interfaces.
+3.2.1.31	The Clarus system shall use software that implements industry accepted standard interfaces.
+3.2.1.41	The Clarus system shall be able to operate on redundant hardware.
+3.2.1.51	The Clarus system shall disseminate data in response to a scheduled request.
+3.2.1.61	The Clarus system shall disseminate data in response to polling.
+3.2.1.71	The Clarus system shall disseminate data in response to a change notification request.
+3.2.1.81	The Clarus system shall be able to notify subscribers when data sets become available.
+3.2.1.91	The Clarus system shall disseminate data using standard Internet protocols.
+3.2.1.101	All HTML coding shall meet FHWA requirements for web sites.
+3.2.1.111	The Clarus system shall support modular components.
+3.2.1.121	The Clarus system shall be able to use latitude, longitude, and elevation (standard GPS) coordinates to specify location to the nearest fifty feet.
+3.2.1.126	The Clarus system shall use Coordinated Universal Time (UTC) for all timestamps.
+3.2.1.131	The Clarus system shall have a minimum of one system administrator.
+3.2.2.11	The Clarus system shall be able to mitigate communication denial-of-service attacks.
+3.2.2.12	The Clarus system shall be able to automatically recover from an unexpected shutdown.
+3.2.2.13	The Clarus system shall be able to respond to 95% of all requests for environmental data 95% of the time.
+3.2.3.11	The Clarus system shall be able to publish environmental data at three times the volume rate that it collects it.
+3.2.3.12	The Clarus system shall be able to prioritize data handling for time-critical data.
+3.2.3.13	The Clarus system shall support 470 million current observations.
+3.2.3.21	The Clarus system shall be able to collect data from sources within 5 minutes of them becoming available.
+3.2.3.22	The Clarus system shall be able to receive all reported environmental data during a fifteen minute time interval.
+3.2.3.23	The Clarus system shall be able to complete an automated quality control check of environmental data within ten seconds of data receipt.
+3.2.3.24	The Clarus system shall be able to publish new data within twenty minutes of data receipt.
+3.2.3.25	The Clarus system shall respond to a request for information within one minute.
+3.2.3.31	The Clarus system shall be able to handle three hundred simultaneous requests for environmental element data.
+3.2.3.41	The Clarus system shall be able to support six hundred concurrent users.
+3.2.3.42	The Clarus system shall be able to support six thousand registered users.
+3.3.101	The Clarus system shall accept data only from approved sources.
+3.3.201	The Clarus program shall establish data sharing agreements with all participating sources of environmental data.
+3.3.205	The Clarus program shall maintain continuous 24x7 operations.
+3.3.207	The Clarus program shall provide an environment that has uninterruptible power for the Clarus system.
+3.3.209	The Clarus program shall provide an environment that has redundant communication for the Clarus system.
+3.3.211	The Clarus program shall provide network management tools.
+3.3.215	The Clarus program shall provide setup support.
+3.3.221	The Clarus program shall provide for customer service.
+3.3.225	The Clarus program shall provide a trained support staff.
+3.3.231	The Clarus program shall define data quality assurance methods and criteria.
+3.3.232	The Clarus program shall define quality control rules for environmental observations.
+3.3.233	The Clarus program shall define data retention standards.
+3.3.235	The Clarus program shall provide documentation of Clarus standards.
+3.3.237	The Clarus program standards shall accommodate contributions of new sensor technologies to the Clarus system.
+3.3.239	The Clarus program standards shall support multiple methods of data delivery to users.
+3.3.305	The Clarus program shall maintain a comprehensive Clarus system test environment.
+3.3.311	The Clarus program shall test all software changes in the designated test environment before deployment to production.
+3.3.315	The Clarus program shall test all hardware changes in the designated test environment before deployment to production.
+3.3.601	The Clarus program shall operate the Clarus system according to its published IT Security Plan.
+3.3.605	The Clarus program shall operate according to Government IT security requirements as outlined in OMB Circular A-130, Management of Federal Information Resources, Appendix III, Security of Federal Automated Information Resources.
+3.3.611	The Clarus program shall operate according to Government IT security requirements as outlined in the National Institute of Standards and Technology (NIST) Guidelines, Departmental Information Resource Management Manual, and associated guidelines.
+3.3.615	The Clarus program shall operate according to Government IT security requirements as outlined in DOT Order 1630.2B, Personnel Security Management.
+3.3.805	Weather service providers shall be able to use Clarus data to provide localized special weather products.
+3.3.811	Public agency maintenance and construction personnel shall be able to use the Clarus system to obtain environmental conditions.
+3.3.815	Rail system personnel shall be able to use the Clarus system to obtain environmental conditions.
+3.3.821	Traffic management personnel shall be able to use the Clarus system to obtain environmental conditions.
+3.3.823	Transit personnel shall be able to use the Clarus system to obtain environmental conditions.
+3.3.825	The freight community shall be able to use the Clarus system to obtain environmental conditions.
+3.3.827	Emergency management and public safety personnel shall be able to use the Clarus system to obtain environmental conditions.
+3.3.905	The Clarus program shall maintain information about data providers.
+3.3.910	The Clarus program shall maintain metadata about each data provider's network.
+3.3.915	The Clarus program shall maintain information about data provider redistribution restrictions.
+3.3.921	The Clarus program shall maintain information about service providers.
+3.3.925	The Clarus program shall maintain information about service provider communications.
+3.3.931	The Clarus program shall maintain information about service provider access to data.
+3.3.935	The Clarus program shall allow potential weather element data providers to request permission to submit weather information.

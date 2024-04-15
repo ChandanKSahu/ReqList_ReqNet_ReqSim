@@ -1,0 +1,513 @@
+
+GOG Software Requirements
+Speciﬁcation
+prepared by: Y. Isasi, P. Sartoretti, C. Babusiaux, X. ˜Luri,
+E. Masana
+approved by: CU2 CCB
+reference: GAIA-C2-SP-UB-YI-002-2
+issue: 2
+revision: 1
+date: 2009-03-31
+status: issued
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+Abstract
+This is the GOG Software Requirements Speciﬁcation Document.
+Software Requirement Speciﬁcation 2
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+Document History
+IssueRevision Date Author Comment
+2 12009-03-31 XL Version for CDR (very minor changes)
+1 420-MAY-2008 YI Modiﬁcations from SRR RID actions
+1 315-MAY-2008 YI Version for DPACE review. Non-Funcional require-
+ments added
+1 328-OCT-2007 YI Comments from DPACE taken into account
+1 328-OCT-2007 YI Comments from DPACE taken into account
+1 28-OCT-2007 XL Version for DPACE review
+1 128-SEP-2007 XL Version for internal review
+D 327-SEP-2007 YI First complete version
+D 202-JUL-2007 YI SRS Review Issued
+D 120-OCT-2006 YI Initial Issued Version
+Software Requirement Speciﬁcation 3
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+Contents
+1 Introduction 6
+1.1 Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+1.2 Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.3 Assumptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.4 Applicable Documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.5 References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1.6 Deﬁnitions, acronyms, and abbreviations . . . . . . . . . . . . . . . . . . . . 10
+2 General description and requirements 11
+2.1 Context . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.2 Decomposition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.2.1 Initialisation module . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+2.2.2 Epoch Parameters Module . . . . . . . . . . . . . . . . . . . . . . . 13
+2.2.3 Combined Parameters Module . . . . . . . . . . . . . . . . . . . . . 13
+2.2.4 Spectrum simulation module . . . . . . . . . . . . . . . . . . . . . . 16
+2.2.5 Output module . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+2.3 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3 Initialisation Module 20
+3.1 Description and Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+3.2 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Software Requirement Speciﬁcation 4
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+3.3 Input / Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+4 Epoch Parameters module 22
+4.1 Description and Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+4.2 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+4.3 Input / Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+5 Combined Parameters module 24
+5.1 Description and Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+5.2 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+5.3 Input / Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+6 Spectrum Simulation Module 26
+6.1 Description and Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+6.2 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+6.3 Input / Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+7 Output Module 27
+7.1 Description and Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+7.2 Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+7.3 Input / Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+A Traceability to upper level requirements 28
+Software Requirement Speciﬁcation 5
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+1 Introduction
+This is the Software Requirement Speciﬁcation for GOG, which describes in detail the objec-
+tives of the software simulator and the requirements to be considered on its design and con-
+struction.The document is organized in a hierarchical way going from a higer level perspective
+to a more detailed view on GOG operational ﬂows.
+1.1 Objectives
+GOG is a tool to directly get Catalogue, Main Database (MDB) data and ﬁnal (in the sense of
+statistically equivalent to the ﬁnal mission data) data without the use GASS telemetry, GIBIS
+or the main ESAC database The Gaia Object Generator (GOG) is expected to simulate catalog
+data, auxiliary data and intermediate main database data (including mission ﬁnal data) for all
+the Gaia instruments. It will use error models to provide rapid simulations of large amount of
+data. The realism of the simulations depends on the realism of the available error models. The
+schema shown in ﬁgure 1 depicts from a high level perspective where GOG will produce its
+data on the overall current data ﬂow for Gaia:
+GOG is based on the Universe and spacecraft & payload models of the GaiaSimu library
+(GAIA-C2-TN-OPM-FC-001)anduseserrormodelstoproviderapidsimulationsoflargeamount
+of data. The realism of the simulations depends on the realism of the available error models.
+The implementation of the instrumental error models is planned to be a gradual process that
+will be based on the study of the detailed pixel-level simulated data produced by GIBIS. The
+simulation of processed data requires models of the calibration errors that will be provided by
+theCUsinchargeofthecalibrationalgorithmsdevelopment. Inordertosimulatedataatapre-
+cisestepoftheprocessing,theadditionofthecalibrationerrorsisplannedtobeuser-selectable.
+TheoutputformatofGOGsimulateddatawillbeaccordingtotheInterfaceControlDocument
+fortheGaiaMaindatabase(GAIA-C3-SP-ESAC-JH-002inpreparation). Notethatsomeofthe
+steps and options described here will have to be revised when the actual ICD will be available.
+GOG is expected to be in continuous evolution depending on the availability of the error mod-
+els. To allow satisfying all the needs to access speciﬁc data, GOG will be entirely modular and
+conﬁgurablethroughaninputconﬁgurationﬁle. Forthesourcegeneration,2mainoptionswill
+be available:
+1.Generation of the data from the Universe model of the GaiaSimu library: the user
+will specify a sky region (e.g. an HTM, square, circle). This sky region can also be
+deﬁned as the region scanned by Gaia during a given time interval.
+2.Generation of the data for an input object catalog: this catalog is generated by the
+user and provides all the necessary information of the objects to simulate (with or
+without spectra as input).
+Software Requirement Speciﬁcation 6
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE1: GOG global overview diagram
+Software Requirement Speciﬁcation 7
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+Note that the relative positions of the sources with each other will not be used by GOG to add
+overlapping effects, GOG only works source by source. Only the density at the source position
+couldbeusedtoadjusttheerrormodels(iftheyareprovidedasafunctionofdensity). However,
+we consider the possibly, for a GOG version close to launch, to work also per sky regions (in
+addition of working source by source), and to accurately model the overlapping effects (TBC).
+Three main outputs will be available:
+•universe model catalog data, according to the universe model ICD.
+•main data base data epoch data: this is the data as observed and reduced for each
+transit of the source. The user can ask for only one typical epoch data or for all the
+transits of the source. Those outputs contain the ﬁeld angles, epoch radial velocity,
+G magnitude, spectra, etc.
+•maindatabasedatacombineddata: thisistheoutputproducedbycombiningallthe
+availableepochdata,e.g. thederivedparallax,propermotions,meanradialvelocity,
+G magnitude, spectra, etc. The combined data can be queried for a given reduction
+stage (6 months, 12 months, etc. from the mission start) or for all transits (thereby
+providing the end-of-mission data). There is also the possibility, especially used
+when the sources are generated from an input object catalog with no information
+on the object position implying that the number of transits can not be derived, to
+specify the number of transits (for end-of-mission data) instead of the reduction
+stage.
+For the noise generation, the noise effects will be user-selectable: they can be added or not and
+their values may also be given by the user (depending on the noise). Two main types of noises
+will be simulated:
+1.Instrumentalnoise: noisethatwillcomefromtheobservationprocess,e.g. on-board
+detection and tracking or observation dead-time.
+2.Reduction noise: Noise that will be added to the data when trying to remove the
+instrumentalnoise(seeabove)andextractthescientiﬁccontent,e.g. residualsfrom
+cosmic rays removal, background subtraction, subtraction of close sources or sec-
+ond FoV contamination.
+This will depend on the availability of the models.
+Note that GOG aim will not be to produce raw data but pre-processed data so that GOG will
+put more effort on simulating how the instrumental noise will be removed (or not) than on
+Software Requirement Speciﬁcation 8
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+simulating the instrumental noise itself. The user interested on the simulation of the details of
+theinstrumentalnoise(includingcrowdingissues)should useGIBISinstead. Notethat spectra
+can be considered as close to the instrumental noise as the PSF in particular will never be
+removed from the raw spectra.
+1.2 Scope
+The present document is address to all the Cu’s members that require an understanding of the
+software requirements,restriccions and assumptions considered to design and build GOG. To
+help on this, several SADT diagrams of the main and alternate execution ﬂows are provided.
+1.3 Assumptions
+The following requirements have been capture thinking on a GOG generic operational be-
+haviour. At this stage some spectations for GOG might changed.The main hurdle GOG has,
+is that the contents of the main database are not fully completed. For this reason the initial
+versions of Gog will consider the current speciﬁcations and will be based on the restrictions
+described in section 11.
+1.4 Applicable Documents
+JH-001 Interface Control Document for the Gaia Main Database
+CR-001 Gaia Universe Model Interface Control Document
+TL-001 DPAC Product Assurance Plan
+XL-005 Software Development Plan for CU2
+1.5 References
+Hernandez, J., 2008, Main Database Interface Control Document ,
+GAIA-C1-SP-ESAC-JH-001 ,
+URLhttp://www.rssd.esa.int/llink/livelink/open/2786145
+Levoir, T., Damery, J., Hoar, J., et al., 2007, DPAC Software Product Assurance Plan ,
+GAIA-C1-PL-CNES-TL-001 ,
+URLhttp://www.rssd.esa.int/llink/livelink/open/2439085
+Luri, X., Babusiaux, C., Wallut, J., 2009, CU2 Software development plan ,
+GAIA-C2-PL-UB-XL-005 ,
+URLhttp://www.rssd.esa.int/llink/livelink/open/2785388
+Software Requirement Speciﬁcation 9
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+Reyle, C., Robin, A., Arenou, F., et al., 2008, Universe model ICD ,
+GAIA-C2-SP-LAOB-CR-001 ,
+URLhttp://www.rssd.esa.int/llink/livelink/open/2732832
+1.6 Deﬁnitions, acronyms, and abbreviations
+The requirements set out in this SRS follow the labeling scheme:
+CU2-GOG-module-X-SCOPE-xxx
+whereGOGis the Software Product Label , moduleidentiﬁes the GOG module. Xis either S
+(forScientiﬁc), T(forTechnical), Q(forQuality Assurance), or M(forManagement). SCOPE
+is a three or four letter scope speciﬁcation of the requirement following the identiﬁed list of
+possiblevaluesofTL-001wheneverfeasible. xxxisamonotonicallyincreasingcounterstarting
+at 20 for every unique combination of module-SCOPE.
+Each requirement is presented with its unique label and a number of attributes in accordance
+with TL-001 in the following form:
+GOG-module-X-SCOPE-020 C.v Veriﬁc. Status
+Description
+Parent: Parent
+with (see TL-001 for lists of allowed values, meanings and valid ranges):
+GOG-module-X-SCOPE-xxx
+The unique identiﬁer of the requirement (see above)
+C.vVersion number of the requirement composed of major ( C) and minor
+(v) part
+Priority Priority of the requirement
+VeriﬁcationEnvisaged validation method of requirement - this will be either AUT
+for automated or MAN for Manual. The Software Test Plan deﬁnes
+precisely how the requirement is veriﬁed.
+Status Status identiﬁer
+Parent Higher level requirement or requirements, comma separated list
+SCOPEis a three character scope speciﬁcation of the requirement one of :
+REQ: concerning requirements,
+Software Requirement Speciﬁcation 10
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+SPC: concerning speciﬁcation activities,
+DES: concerning design activities,
+IMP: concerning implementation activities,
+INT: concerning integration activities,
+VAL: concerning validation activities,
+ACP: concerning acceptance activities,
+MNT: concerning maintenance activities,
+OPS: concerning operation activities,
+FUN: concerning functional requirements,
+PLN: concerning organisational requirements (including planning, phases, reviews, etc.),
+SUP: concerning support requirements,
+PRF: concerning performance requirements (including dimensioning, resource estimation, etc.),
+RSK: concerning risk management requirements,
+CTL: concerning veriﬁcation and control activities,
+CNF: concerning conﬁguration management activities,
+DIM: concerning dimensioning activities.
+The following is a complete list of acronyms used in this document.
+List of acronyms used in this document:
+Acronym Description
+CU Coordination Unit (in DPAC)
+DPAC Data Processing and Analysis Consortium
+DU Development Unit (in DPAC)
+GASS GAia System-level Simulator
+GIBIS Gaia Instrument and Basic Image Simulator
+GOG Gaia Object Generator
+I/O Input/Output
+QA Quality Assurance
+SADT Structured Analysis and Design Technique
+SRS System Requirement Speciﬁcation
+UM Universe Model
+WP Work Package
+2 General description and requirements
+Software Requirement Speciﬁcation 11
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+2.1 Context
+On this overview we see GOG as a unique software product. From the high level perspective it
+can be decomposed on the SADT diagram as follows:
+FIGURE2: GOG general i/o context diagram
+Exploding the central box, looking one level deeper, we could distinguish the following main
+blocks of execution. The following pictures shows how the problem is depicted.
+2.2 Decomposition
+AccordingtoTL-001a’SoftwareProduct’iscomposedofseveral’Modules’. Inthissectionwe
+describe how the system is logically decomposed and mention the modules which will appear
+from Sect. 3 onward and how they interact.
+GOG as a software product can be decomposed in software modules. We have identiﬁed the
+following main conceptual modules
+•Initialisation Module
+•Epoch parameters Module
+•Combined parameters Module
+•Spectrum simulation Module
+•I/O Module
+Software Requirement Speciﬁcation 12
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE3: GOG data simulation general view
+2.2.1 Initialisation module
+Figure 4 shows how the initialization module is decomposed
+2.2.2 Epoch Parameters Module
+If epoch data is requested a transit calculation takes place. The transit (epoch) parameters are
+described in ﬁgure 5.
+The epoch astrometry is decomposed as shown in ﬁgure 6.
+2.2.3 Combined Parameters Module
+If combined data are requested the combined parameters are computed for every requested
+mode (see ﬁgure: 7).
+Thecombinedastrometryparameterscomputationﬂowisdifferentfromtheepochoneasshown
+in ﬁgure 8
+Software Requirement Speciﬁcation 13
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE4: GOG initialisation module general view.
+FIGURE5: GOG epoch data computation ﬂow.
+Software Requirement Speciﬁcation 14
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE6: GOG astrometric epoch data generation ﬂow.
+FIGURE7: GOG combined data computation ﬂow.
+Software Requirement Speciﬁcation 15
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE8: GOG astrometric combined data ﬂow.
+2.2.4 Spectrum simulation module
+Figure 9 depicts the alternate simulation ﬂow for spectra processing.
+2.2.5 Output module
+GOG output module has the responsability to write the ﬁnal results. Figure 10 shown its de-
+composition.
+Software Requirement Speciﬁcation 16
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+FIGURE9: GOG spectra simulation ﬂow.
+FIGURE10: GOG output generation ﬂow.
+Software Requirement Speciﬁcation 17
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+2.3 Requirements
+This is for high level requirements which apply to all modules. These requirements may be
+removed from this document and appear in a higher level requirements document for CU2or at
+the DPC level. If this section is empty mention the higher documents - they should be in the
+applicable document list.
+GOG-GEN-S-FUN-020 1.1 AUTO Issued
+CU2willberesponsibleforthedesignanddevelopingofGOGthatwillprovideCatalogue,
+Main Database (MDB) and ﬁnal data.(in the sense of statistically equivalent to the ﬁnal
+mission data) data without the use GASS telemetry, GIBIS or the main ESAC database
+Parent: DPAC-CU2-S-FUN-320
+GOG-GEN-S-FUN-040 1.1 MAN Issued
+GOG will be fully integrated in the Gaia Simulator project. That is, it will use as other the
+other simulators the Gaia Simu library and the Gaia Tools library.
+GOG-GEN-S-FUN-060 1.1 MAN Issued
+ForsourcegenerationGOGhas2mainoptionsavailable: UniverseModelfromGaiaSimu
+or a Object Input Catalogue
+GOG-GEN-S-FUN-080 1.1 MAN Issued
+GOG has a source by source processing mechanism
+GOG-GEN-S-FUN-100 1.1 MAN Issued
+GOG must consider noise effects. For noise generation those effects should be user-
+selectable (they can be added or not and the values should be given by users).We classify
+noises in two groups:
+1.Instrumental noises: noises that come from observation process such as:on
+board detection and tracking or observation dead-time
+2.reduction noise: noise added to the data when removing instrumental noise
+GOG-GEN-S-FUN-120 1.1 MAN Issue
+GOGI/OCatalogueformatisdrivenby[AD3]. MainDatabaseformatisdeﬁnedin[AD1]
+Software Requirement Speciﬁcation 18
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+GOG-GEN-S-FUN-140 1.1 MAN Issued
+GOG must give the same result for identical input conﬁguration parameters
+GOG-GEN-T-NFUN-020 1.1 MAN Issued
+GOG must provide a way to be run from a command line or a shell script.
+GOG-GEN-T-NFUN-040 1.1 MAN Issued
+GOG should be able to run in a cluster or grid environtments
+GOG-GEN-T-NFUN-060 1.1 MAN Issued
+GOG is built as a standalone java aplication that could be invoked from a command line
+and deployed as a jar ﬁle.
+GOG-GEN-T-NFUN-080 1.1 MAN Issued
+GOG is designed to run on either in a single thread mode on grid environments.
+GOG-GEN-T-NFUN-100 1.1 MAN Issued
+GOG runs on LINUX , UNIX and MAC computers (minimum).GOG results are platform
+independent
+GOG-GEN-T-NFUN-120 1.1 MAN Issued
+GOG will have to generate data of a considerable amount of astrosources whose number
+could be a signiﬁcant part of the expected ﬁnal catalogue (20%).
+GOG-GEN-T-NFUN-140 1.1 MAN Issued
+GOG must be able to process one complete source processing on 2 CPU seconds.
+Software Requirement Speciﬁcation 19
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+3 Initialisation Module
+3.1 Description and Objectives
+Theinitialisationmodulesis inchargeofloadingandstoring thereadconﬁgurationinaproper
+way. T he module has to offer a common interface to get values from the conﬁguration in an
+easy manner.
+3.2 Requirements
+Listherealloftherequirementsonthemoduleincludingfunctionalandnon-functionalrequire-
+ments
+GOG-CON-T-FUN-020 1.1 MAN Issued
+GOGinitialisationModuleshouldbeabletoreadinformationoftheinputsources. Options
+are to use the Universe Model or a provided user sources
+Parent: DPAC-CU2-S-FUN-380
+GOG-CON-T-FUN-040 1.1 MAN Issued
+The GOG catalogue module must include information on the universe model:
+•Galaxy model
+•SkyBackGroung model
+•Extinction Law model
+•DMS model
+Parent: DPAC-CU2-S-FUN-380
+Software Requirement Speciﬁcation 20
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+GOG-CON-T-FUN-060 1.1 MAN Issued
+GOG initialisation module must include information on the instrument model:
+•The selected scanning law
+•Dead time.
+•Noise models (including detection noise)
+Parent: DPAC-CU2-S-FUN-380
+GOG-CON-T-FUN-080 1.1 MAN Issued
+The GOG catalogue module must include information on the reduction model:
+•Instrument effects substraction node bias substraction noises PPE residuals
+noise
+•Scientiﬁc content extraction noise substraction of close sources second FoV
+contamination noise backgound substraction.
+Parent: DPAC-CU2-S-FUN-380
+GOG-CON-T-FUN-100 1.1 MAN Issued
+GOGinitialisationmodulewilldeﬁnetheoutputspeciﬁcationoutputparameters(spectrum
+RPBP/RVS,astrometry,Vr,physicalparametersandﬂags)epochand/orcombinednumber
+of epochs
+Parent: DPAC-CU2-S-FUN-380
+.
+3.3 Input / Output
+Input: an XML conﬁguration ﬁle
+Output: a memory properties-like structure loaded ready to be used
+For further descrption on the inputs refer to GOG ICD input parameters section
+Software Requirement Speciﬁcation 21
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+4 Epoch Parameters module
+4.1 Description and Objectives
+Theepochparametersmoduleisinchargeofalltheepochparameterssettingsandcalculations
+of the GOG simulation
+4.2 Requirements
+List here all of the requirements on the module including functional. This includes non-
+functional requirements
+GOG-EPCH-S-FUN-020 1.1 MAN Issued
+Determine for epoch data the astrometric parameter (with instrumental and reduction er-
+rors): transit times and ﬁeld angles in each CCD mean transit time and ﬁeld angle for the
+transit.Gate activation and signal loss due to window cutoff must be taken into account.
+GOG-EPCH-S-FUN-040 1.1 MAN Issued
+Determinetheepochdataphotometry(withinstrumentalandreductionerrors): Gmag(for
+each CCD and average for the transit), GRP, GBP, GRVS . Gate activation and signal loss
+due to window cutoff must be taken into account.
+GOG-EPCH-S-FUN-060 1.1 MAN Issued
+Determine the epoch radial velocity (with instrumental and reduction errors)
+GOG-EPCH-S-FUN-080 1.1 MAN Issued
+Determine the epoch ﬂags
+GOG-EPCH-S-FUN-100 1.1 MAN Issued
+Determine the epoch physical parameters (Av, Teff, logg, FeH)
+4.3 Input / Output
+The input is the source itself that has a particular transit
+Software Requirement Speciﬁcation 22
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+The output is the epoch data bean
+Software Requirement Speciﬁcation 23
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+5 Combined Parameters module
+5.1 Description and Objectives
+The combined parameters module is in charge of all the combined parameters settings and
+calculations of the GOG simulation
+5.2 Requirements
+GOG-CMB-S-FUN-020 1.1 MAN Issued
+•Compute the astrometric combined data using all previous transits:
+•Compute parallax and proper motion errors
+•Determine de covariance matrix
+•Determine estimated errors for the astrometric parameters at the mean epoch
+GOG-CMB-S-FUN-040 1.1 MAN Issued
+Determine the combined data photometry: mean G, GRP, GBP, GRVS
+GOG-CMB-S-FUN-060 1.1 MAN Issued
+Determine the mean radial velocity
+GOG-CMB-S-FUN-080 1.1 MAN Issued
+Determine the ﬁnal ﬂags (variability, non-single star.)
+GOG-CMB-S-FUN-100 1.1 MAN Issued
+Determine the mean physical parameters (classiﬁcation, Av, Teff , logg, FeH)
+5.3 Input / Output
+The input is the source itself
+Software Requirement Speciﬁcation 24
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+The output is the combined data bean
+Software Requirement Speciﬁcation 25
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+6 Spectrum Simulation Module
+6.1 Description and Objectives
+The spectrum module is in charge of all the spectrum settings and calculations of the GOG
+simulation. This module covers both RP/BP and RVS spectrum simulation.
+6.2 Requirements
+GOG-SPCT-S-FUN-020 1.1 MAN Issued
+Noise consideration on:
+•Flux noise (Poisson noise, total detection noise,...)
+•CCD combination noise for (RVS)
+•Wavelength calibration
+•Multi-transit combination noise (only for combined data)should be added
+6.3 Input / Output
+The input is the source itself.The output is the epoch and or combined data bean
+Software Requirement Speciﬁcation 26
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+7 Output Module
+7.1 Description and Objectives
+The output module comunicates GOG ﬂow execution with the ﬁlesystem. When the ﬂow re-
+quest a ﬁle it obtains it from the system and also it writes the ﬁles requested as GOG outputs
+7.2 Requirements
+GOG-IO-T-FUN-020 1.1 MAN Issued
+The universe catalog output data of the simulation has to follow the universe model ICD
+document.Note: GaiaSimu library will allow to write and read this format.
+GOG-IO-T-FUN-040 1.1 MAN Issued
+GOGoutputshouldbedrivenbytheMDBdatamodel.Theoutputwillbeusedtodistribute
+extracts to the DPC’s
+Parent: DPAC-CU2-S-FUN-340,DPAC-CU2-S-FUN-360
+7.3 Input / Output
+The output data of the simulation has to follow the universe model ICD document.
+Software Requirement Speciﬁcation 27
+CU2-DU7GOG SRS
+GAIA-C2-SP-UB-YI-002-2
+A Traceability to upper level requirements
+The traceability between this SRS and CU or DPC SRS or the SIRD is given here.
+Parent Requirement Requirements in this document
+DPAC-CU2-S-FUN-320 CU2-GOG-GEN-S-FUN-20
+DPAC-CU2-S-FUN-340 CU2-GOG-IO-T-FUN-40
+DPAC-CU2-S-FUN-360 CU2-GOG-IO-T-FUN-40
+DPAC-CU2-S-FUN-380 CU2-GOG-CON-T-FUN-20, CU2-GOG-CON-T-FUN-
+40, CU2-GOG-CON-T-FUN-60, CU2-GOG-CON-T-
+FUN-80, CU2-GOG-CON-T-FUN-100
+Software Requirement Speciﬁcation 28

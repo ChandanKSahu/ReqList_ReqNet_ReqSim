@@ -1,0 +1,13 @@
+D	GOG Software Requirements Specification - tool to directly get Catalogue, Main Database (MDB) data and final data without the use GASS telemetry, GIBIS or the main ESAC database
+2	General description and requirements
+2.3	Requirements
+3	Initialisation Module
+3.2	Requirements
+4	Epoch Parameters module
+4.2	Requirements
+5	Combined Parameters module
+5.2	Requirements
+6	Spectrum Simulation Module
+6.2	Requirements
+7	Output Module
+7.2	Requirements

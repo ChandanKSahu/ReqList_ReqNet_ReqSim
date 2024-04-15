@@ -1,0 +1,281 @@
+
+Journal of Universal Computer Science
+Special Issue on
+„Requirements Engineering:
+The Light Control Case Study“
+Problem Description
+J.UCS Special Issue: Problem Description “ Light Control System” Page 2
+Introductory Note
+This document gives an informal description of the problem „light control system“, that is the
+subject of the proposed case study. It is based on a previous version reported in [1] that hasbeen used in the Sonderforschungsbereich 501 „Development of Large Systems with GenericMethods“, a large project at the Computer Science Department of the University of Kaiserslau-tern. The previous version was also used in a Dagstuhl Seminar on „Requirements Capture,Documentation, and Validation“ that took place in June 1999.
+Based on input received from Daniel Berry, Vincenzo Gervasi, Martin Kronenburg, Julio Leite,
+Christian Peper, and Vinicius da Silva Almendra, the previous version has been repeatedlyrevised in agreement with Rolf Merz and Jürgen Schäfer from the Electrical EngineeringDepartment of the University of Kaiserslautern, who are acting as customers in the projectmentioned above. Thus, the basic intention of providing a customer document as the basis forthe case study has been preserved. However, we expect that the revisions made should reducethe need for customer feedback during the case study substantially, and lead to solutions thatare better comparable.
+The problem description „Light Control“ is divided into 4 parts. Part 1 is a brief introduction.
+Part 2 describes the architecture of the 4th ﬂoor of a university building in Kaiserslautern,which is the subject of the informal needs given in Part 3. Finally, Part 4 lists and explains tech-nical terms that are used in the document.
+[1] R. L. Feldmann, J. Münch, S. Queins, S. Vorwieger, G. Zimmermann: Baselining a
+Domain-Speciﬁc Software Development Process , Technical Report SFB501 TR-02/99,
+University of Kaiserslautern, 1999
+J.UCS Special Issue: Problem Description “ Light Control System” Page 3
+Problem Description “Light Control”
+Part 1: Introduction
+1The main motivation for the development of a new light control system are the disadvan-
+tages of the currently existing system. Since all lights are controlled manually, electricalenergy is wasted by lighting rooms which are not occupied and by little possibilities to adjustlight sources relative to need and daylight.
+2In the following document, keywords  are marked at their ﬁrst occurrence and listed in the
+additional dictionary (Part 4).
+3Words written in emphasis are names of physical sensors/actuators.
+4Paragraphs are numbered for easier reference.
+J.UCS Special Issue: Problem Description “ Light Control System” Page 4
+Part 2:Floor Description
+5In this part, the architecture  and theinstallation  of the given sensors andactuators of
+Building 32, 4th ﬂoor is described.
+6The fourth ﬂoor of Building 32 consists of three sections and shares two  staircase s,
+staircase east (SCE) and staircase west (SCW), with other ﬂoors of the building, as shown inFigure 1.Each section is divided into some hallway section s (H) and rooms, each of which
+may be an ofﬁce (O), acomputer lab  (CL), ahardware lab  (HL), aperipheral room  (P), orO435
+O433
+O431
+O429
+M427
+O425CL426
+O424
+CL422
+P420
+CL418
+O416O423
+O421
+O419
+O417
+O415
+P413O414
+O412
+HL410 HL411ols2
+ols3ols1
+ols4
+ols6ols5H3H2H1
+Figure 1: Architecture of the 4th Floor of Building 32SCWSE
+section1
+section2
+section3SCE
+Wd1
+d2
+d3
+d4
+J.UCS Special Issue: Problem Description “ Light Control System” Page 5
+a meeting room  (M). All rooms in a section are accessible via a connected hallway section.
+There are three hallway sections and 22 rooms to control. Figure 1 shows also the six outdoor
+light sensor s (ols1 - ols6 ) and the major compass directions. The sensors cover the six direc-
+tions of the different walls. The label in a room indicates the type of the room and gives aunique number, see Figure 1.
+2.1 Ofﬁce Description
+7Each ofﬁce (shown in Figure 2) has one door (d1) to the hallway section and can have up
+to two doors (d2, d3) leading to its adjacent rooms. Each door is equipped with a door closed
+contact, nameddcc<n>, where n is the number of the door in the room.
+8Each ofﬁce is equipped with
+1.onemotion detector (imd), so that the room is fully covered.
+2.twoceiling light group s (window and wall). The luminaries in a ceiling light
+group in any room are turned on or off only as a group.Each ceiling light group is controlled by one push button  on the wall ( pb1 and
+pb2, respectively), which toggles the ceiling light group if pushed.
+A ceiling light group in a room shows the following behavior if the correspondingpush button is pushed:(i) if the ceiling light group is completely on, it will be switched off(ii) otherwise it will be switched on completely.
+3.Each ceiling light group can be dimmed with its own dimmer-actuator.
+4.twostatus line s (sll1 and sll2 ) each of which shows the status of one ceiling light
+group.
+2.2 Computer Lab Description
+9Same as ofﬁce.
+2.3 Hardware Lab Description
+10Same as ofﬁce, but with more than one door leading to the hallway section.
+2.4 Meeting Room Description
+11Same as ofﬁce.
+2.5 Peripheral Room Description
+12The peripheral rooms will not be controlled by the control system , and thus they are not
+described here!
+2.6 Hallway Section Description
+13Each hallway section is limited by two doors, each of which is leading to an adjacent
+hallway section or to an adjacent staircase. The associated names of the doors (d1, d2, d3, d4)are shown in Figure 1. Each door is equipped with a door closed contact, named dcc<n>,
+wheren is derived from the label of the door.
+14Each hallway section is equipped with
+1.two motion detectors ( imd1 andimd2), placed above the doors at each end of the
+hallway section to determine the presence of a person near a door,
+J.UCS Special Issue: Problem Description “ Light Control System” Page 6
+2.one motion detector to cover the whole section ( imd3),
+3.onehallway section ceiling light group. The luminaries in a hallway section ceil-
+ing light group are turned on or off only as a group.Each ceiling light group is controlled by several push buttons ( pb<i>) each of
+which toggles the ceiling light group if pushed.A hallway section ceiling light group shows the following behavior if a push buttonis pushed:(i) if the hallway section ceiling light group is on, then it will be switched off(ii) otherwise it will be switched on
+4.one status line ( sll1) that shows the status of the hallway section ceiling light
+group.
+2.7 Staircase Description
+15Each staircase connects several ﬂoors.
+16At the landing of each staircase at each ﬂoor, the staircase is equipped with
+1.one motion detector ( imd1) above the door of the landing that leads to the adjacent
+hallway section to detect motion in the staircase near the door.
+ofﬁce adjacent
+ofﬁceadjacent
+ofﬁce
+imdd1d2 d3
+Hallway
+ceiling light group
+Figure 2:  Ofﬁce Architecture
+J.UCS Special Issue: Problem Description “ Light Control System” Page 7
+2.8 Sensor Description
+17Analog sensor s typically have an exponential response time. Conversion time is the
+time to convert the analog value to a digital one that can be accessed by the control system.Reaction time is the time from a change of the sensed property to the time when the sensor hasreached 90% of the change, excluding conversion time.
+2.9 Actuator Description
+18Actuators have a linear response time. Reaction time is therefore deﬁned as the time to
+change from 0 to 100% respectively 100 to 0%, if different.Table 1: Sensors
+TypeReso-
+lutionRangeReaction
+Time Conver-
+sion TimeDescription
+door closed
+contact0, 1 10 msIt is placed above the door and is 1 if
+the door is fully closed, 0 otherwise
+motion
+detector0, 1 1 sIf set to 1, a person is moving, even
+very slowly, in the range of thedetector.
+status line 0, 1 10 msSenses if the light voltage is turned
+on (1) or off (0).
+outdoor
+light sensor1 lux1-10000
+lux10 ms 1 sMounted perpendicular to facade,
+measures the illumination  of the
+facade for the calculation of lightﬂow through a window.
+Table 2: Actuators
+Type Range ControlReaction
+TimeDescription
+control system
+active0, 1 10 msIf the control system sends a 1 within every
+60 s, the control system is still alive.
+dimmer 0-100% 10 msControls light between 0 (off) and 10-
+100% (on).
+pulse 0, 1 10 msIf the value changes from 0 to 1, the light
+changes from on to off or from off to on.
+push button 0, 1 10 ms 1 as long as pushed
+J.UCS Special Issue: Problem Description “ Light Control System” Page 8
+2.10 Dimmable Light
+19The structure of a dimmable light  is shown in Figure 3. Inputs to a dimmable light are
+created by a pulseto toggle the light, by a dimmer to set the current dim value, and by control
+system active  to show the status of the control system. If this signal is not sent every 60 s, the
+dimmable light switches to fail safe mode, i.e. dim value is assumed to be 100%. Outputs of adimmable light are generated by a status line to show the current state (on or off) of the light.
+Figure 3: Dimmable Lightpush
+button
+controlsystempulse
+status linephase
+control system active
+dimmabledimmer
+light
+J.UCS Special Issue: Problem Description “ Light Control System” Page 9
+Part 3: Informal Needs
+20This part contains the needs for a new light control system for the fourth ﬂoor of Building
+32 of the University of Kaiserslautern.
+21In Section 3.1, functional needs are listed and in Section 3.2 non-functional needs are listed.
+3.1 Functional Needs
+22The functional needs are split into two groups, user needs and facility manager  needs,
+depending on the person who has expressed them.
+3.1.1 User Needs
+23The user needs are labelled by U<number>.
+24At ﬁrst, general user needs are listed, which are demanded for each kind of room:
+U1 If a person occupies a room, there has to be safe illumination , if nothing else is
+desired by the chosen light scene .
+U2 As long as the room is occupied, the chosen light scene has to be maintained.U3 If the room is reoccupied within T1 minutes after the last person has left the room,
+the chosen light scene has to be reestablished.
+U4 If the room is reoccupied after more than T1 minutes since the last person has left
+the room, the default light scene  has to be established.
+U5 For each room, the chosen light scene can be set by using the room control panel .
+U6 For each room, the default light scene can be set by using the room control panel.U7 For each room, the value T1 can be set by using the room control panel.U8 If any outdoor light sensor or the motion detector of a room does not work correctly,
+the user of this room has to be informed.
+U9 The room control panel for an ofﬁce should contain at least:
+(i) a possibility to set each ceiling light group(ii) a possibility to set the chosen and the default light scene(iii) a possibility to set T1
+25The user needs concerning the ofﬁces are:
+U10 The ceiling light groups should be maintained by the control system depending on
+thecurrent light scene .
+U11 A room control panel in an ofﬁce should be movable as is a telephone.
+26The user needs for the remaining rooms are:
+U12 In all other rooms, the room control panel should be installed near a door leading to
+the hallway section.
+27The user needs for the hallway sections are:
+U13 When a hallway section is occupied by a person, there has to be safe illumination.
+U14 Before a person enters one hallway section from another one or from a staircase, the
+hallway section ceiling light group in the section being entered has to be on.
+J.UCS Special Issue: Problem Description “ Light Control System” Page 10
+3.1.2 Facility Manager Needs
+28The facility manager needs are labelled by FM<number> .
+FM1 Use daylight to achieve the desired light setting  of each room and each hallway
+section whenever possible.
+FM2 The ceiling light group in each hallway section has to be off when the hallway sec-
+tion has been unoccupied for at least T2 minutes.
+FM3 The ceiling light groups in a room have to be off when the room is unoccupied for at
+least T3 minutes.
+FM4 For each hallway section, the value T2 can be set by using the facility manager
+control panel .
+FM5 For each room, the value T3 can be set by using the facility manager control panel.FM6 The facility manager can turn off the ceiling light groups in a room or hallway sec-
+tion that is not occupied.
+FM7 If a malfunction  occurs, the facility manager has to be informed.
+FM8 If a malfunction occurs, the control system supports the facility manager in ﬁnding
+the reason.
+FM9 The system provides reports on current and past energy consumption.FM10 All malfunctions and unusual conditions are stored and reported on request.FM11 Malfunctions that the system cannot detect can be entered manually.
+3.2 Non-Functional Needs
+29The non-functional needs are split into several groups according to the aspect they are deal-
+ing with. They are labelled by NF<number>.
+3.2.1 Fault Tolerance
+30In any case of failure, the system shall provide a stepwise degradation of functionality down
+to manual operability.
+31Needs in the case of a malfunction of the outdoor light sensor:
+NF1 If any outdoor light sensor does not work correctly, the control system for rooms
+should behave as if the outdoor light sensor had been submitting the last correctmeasurement of the outdoor light constantly.
+NF2 If any outdoor light sensor does not work correctly, the default light scene for all
+rooms is that all ceiling light groups are on.
+NF3 If any outdoor light sensor does not work correctly and a hallway section is occu-
+pied, the ceiling light group in this hallway section has to be on.
+32Needs in the case of a malfunction of the motion detector:
+NF4 If any motion detector of a room or a hallway section does not work correctly, the
+control system should behave as if the room or the hallway section were occupied.
+33Needs in a worst-case failure of the control system:
+NF5 If the ceiling light group in a hallway section is controllable neither automatically
+nor manually, the ceiling light group of this hallway section has to be on.
+J.UCS Special Issue: Problem Description “ Light Control System” Page 11
+3.2.2 Safety and Legal Aspects
+NF6 All hardware connections are made according to DIN standards.NF7 No hazardous conditions for persons, inventory, or building are allowed.
+3.2.3 User Interface
+NF8 The control panels are easy and intuitive to use.NF9 The system issues warnings on unreasonable inputs.
+J.UCS Special Issue: Problem Description “ Light Control System” Page 12
+Part 4: Dictionary of Terms
+Table 3: Dictionary of terms of the application domain
+Keyword Description
+actuatordevice that can be used by the control system to control an
+environmental quantity
+ambient light level illumination in a roomanalog sensor a sensor that measures an analog valuearchitecture structure of a building, ﬂoor, or roomceiling light group luminary under or in the ceiling,
+chosen light scenealight scene chosen by a user using the room control panel for the
+case that a room is occupied
+computer labroom with a pool of terminals and workstations, open to all users and
+temporarily to students of a class
+control panelsmall device with a keyboard, LEDs for important states, and a sim-
+ple display for textual messages
+control systemhard- and software system that controls indoor climate, lighting,
+safety and security
+current light scene the light scene currently established by the control systemdefault light scene a light scene for the case that a room is not occupied
+desired light settingthe setting of a ceiling light group in a room or a hallway section
+desired by the control system
+dimmable light luminary that can be dimmeddimmer-actuator actuator controlling the output of a luminarydoor connection between rooms and hallway sectionsdoor closed contact electrical or magnetic gadget to determine the state of a doorfacility manager person responsible for running a building on a daily basisfacility manager
+control panela control panel for the facility manager
+ﬂoor part of a buildinghallway sectionpart of a section between several rooms to connect them to each
+other
+hallway sections
+ceiling light groupceiling light group in a hallway section
+hardware lab room with terminals and other electronic devices
+illumination amount of light falling on a surface, measured in lux
+J.UCS Special Issue: Problem Description “ Light Control System” Page 13
+installation equipment belonging to a building
+light scenea light scene is a predeﬁned setting of the ambient light level and a
+prescription that determines in which way the ceiling light groupsshould be used to achieve this ambient light level. A light scene isgiven by:1. name of the light scene2. the desired ambient light level in a room3. one of the following three options: window,wall,both
+window means that at ﬁrst the ceiling light group near the window
+should be used to achieve the desired ambient light level and thenthe other ceiling light groupwall means that at ﬁrst the ceiling light group near the wall should
+be used to achieve the desired ambient light level and then theother ceiling light groupboth means that both ceiling light groups should be used equally
+to achieve the desired ambient light level
+malfunction incorrect behavior of a devicemeeting room a room open to all users
+motion detectorsensor detecting motion of a person or animal in its range, state is on
+during positive detection
+ofﬁce room for one or two users with terminals and/or workstations
+outdoor light sensorsensor measuring the illumination in a half sphere perpendicular to
+it’s ﬂat bottom
+peripheral room room for computer peripherals, copy machines; open to all users
+push buttonan actuator for switching on and off a ceiling light group; it is on, as
+long as pushed manually
+room part of a sectionroom control panel a control panel in a roomsafe illumination illumination greater than 14 luxsection part of a ﬂoorsensor device that can sense somethingstaircase part of a building connecting several ﬂoorsstatus line wire that has the status of a device as valueuser person occupying a room or a hallway sectionTable 3: Dictionary of terms of the application domain
+Keyword Description

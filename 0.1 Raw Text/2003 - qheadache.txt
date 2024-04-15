@@ -1,0 +1,396 @@
+
+Qheadache, Version 1.0
+Software Requirements Specification 
+draft A
+September 29, 2003
+Jean­Philippe Br ossat
+Index
+1  Introduction......................................................................................................................3
+1.1  Purpose.....................................................................................................................3
+1.2  Scope........................................................................................................................3
+1.3  Definitions, Acronyms, and Abbreviations..............................................................3
+1.4  References................................................................................................................3
+1.5  SRS Document Overview........................................................................................4
+2  GENERAL DESCRIPTION............................................................................................4
+2.1  Product Perspective..................................................................................................4
+2.1.1  User Interfaces .................................................................................................4
+2.1.2  Hardware Interfaces .........................................................................................4
+2.1.3  Software Interfaces...........................................................................................4
+2.1.4  Communications Interfaces..............................................................................4
+2.1.5  Memory Constraints.........................................................................................4
+2.1.6  Site Adaptation Requirements..........................................................................4
+2.2  Product Functions.....................................................................................................5
+2.2.1  Undo et Redo Actions......................................................................................5
+2.2.2  Time passed to play..........................................................................................5
+2.2.3  Count of action number....................................................................................5
+2.2.4  Score.................................................................................................................5
+2.2.5  Score windows..................................................................................................5
+2.3  User Characteristics..................................................................................................5
+2.4  Start Up Requirements.............................................................................................5
+2.5  Apportioning of Requirements.................................................................................5
+3  SPECIFIC REQUIREMENTS........................................................................................5
+3.1  External Interfaces....................................................................................................5
+3.1.1  User Interfaces..................................................................................................6
+3.1.1.1   Introduction..............................................................................................6
+3.1.1.2  M ain window............................................................................................6
+3.1.2  Software Interfaces...........................................................................................6
+3.1.3   Communications Interfaces.............................................................................6
+3.2  Functional Requirements.........................................................................................6
+3.2.1  Actions..............................................................................................................6
+3.2.1.1  P resentation of the board..........................................................................6
+3.2.1.2  B lock selection..........................................................................................7
+3.2.1.3  B lock deselection......................................................................................7
+3.2.1.4  B lock movement.......................................................................................7
+3.2.1.5  U ndo Action..............................................................................................8
+3.2.1.6  R edo Action..............................................................................................8
+3.2.2  End of the game management..........................................................................9
+3.2.2.1  E nd of the game .......................................................................................9
+3.2.2.2  F inish Windows with Statistics................................................................9
+3.2.2.3  S imple Finish Windows..........................................................................10
+3.2.3  Statistics Management....................................................................................10
+3.2.3.1  P layer Statistics management.................................................................10
+3.2.3.2  G ame Statistics management..................................................................10
+3.2.3.3  S tatistics erasing.....................................................................................11
+3.2.3.4  S tatistic Window.....................................................................................11
+3.2.4  File management............................................................................................12
+3.2.4.1  O pen game..............................................................................................12
+3.2.4.2  S ave game...............................................................................................12
+3.2.4.3  S ave game as...........................................................................................13
+3.2.4.4  E xit..........................................................................................................13
+3.2.5  Menu bar.........................................................................................................14
+3.2.5.1  G ame menu.............................................................................................14
+3.2.5.2  A ction menu............................................................................................14
+3.2.5.3  S tatisctis menu........................................................................................15
+3.2.5.4  H elp menu...............................................................................................15
+3.3  Performance Requirements....................................................................................15
+3.4  Software System Attributes....................................................................................15
+1Introduction
+1.1Purpose
+This specific ations  establishes th e requireme nts for the prod uct named
+Qheadache. The int ended  audience is the analyst, progr amme r and  tester of
+Qheadache.
+1.2Scope
+The prod uct is a compu terized  game that displays an interface used to solve a
+specific headache.
+1.3Definitions, Acronyms, and Abbreviations
+Not appli cable.
+1.4References
+Not appli cable.
+1.5SRS Document Overview
+The re maining se ctions of this document  provide a general descriptio n, including
+characterist ics of the users of this project, the product's  hardware, and the
+functional and data require ments of the product.  General  description  of the
+project  is discusse d in section 2 of this document. Se ction 2 gives the functional
+requireme nts, data requirements and constraints a nd assumpt ions made  while
+designin g the game. It also gives the user  viewpoi nt of product use. Section 3
+gives the specific  requireme nts of the prod uct. Section 3.0 also discusses the
+external  interface require ments and  gives detailed descriptio n of functional
+requireme nts.
+2GENERAL DESCRIPTION
+2.1Product Perspective
+2.1.1User Interfaces 
+The prod uct runs as  a stand­ alone appli cation.
+Its user interface  uses  menus, graphics and sounds.
+2.1.2Hardware Interfaces 
+The prod uct requires t he use of a keyboa rd and a mouse t o interface  with the
+user. It requires  a graphical display of at least 800*600 resolution.
+2.1.3Software Interfaces
+The prod uct uses  the Qt graphical  librar y. It must run with all the operating
+system s that Qt suppor ts.
+2.1.4Communications Interfaces
+Not appli cable.
+2.1.5Memory Constraints
+Not appli cable.
+2.1.6Site Adaptation Requirements
+Not appli cable.
+2.2Product Functions
+2.2.1Undo et Redo Actions.
+The use r must undo and redo  its last t housand actions.
+2.2.2Time passed to play.
+The prod uct must count and  display  the time that the user uses  to play.
+2.2.3Count of action number.
+The prod uct must count and  display  the number  of the user's action.
+2.2.4Score.
+The prod uct must record the score (tim e and  num ber of counts) of a play
+assoc iated  with the name of  a user.
+2.2.5Score window.
+The prod uct must display a window with all the player's  scores.
+2.3User Characteristics
+No qualification is necessary .
+2.4Start Up Requirements
+Not appli cable.
+2.5Apportioning of Requirements
+Not appli cable.
+3SPECIFIC REQUIREMENTS
+3.1External Interfaces
+The prod uct generall y requires a  mouse and  a keyboa rd for input. Other poin ting
+and inpu t devices  are allowable, provided they provide similar functions to  a
+mouse and keybo ard, namely  the ability to move a cursor  onscree n to select
+buttons and  the ability to type names.  
+The prod uct uses  menus, graphics and  sounds.  The hardware  and operatin g
+system  must provide an 800x60 0 scree n resoluti on. Sound is not required to play
+the game.
+3.1.1User Interfaces
+3.1.1.1 Introduction
+The use rs consist o f anyone who wants to  play a simple game who kn ows how to
+operate a compu ter, with a beginning level player  starting at age 8, up through an
+advanced level player who could be an adult.  
+3.1.1.2Main window
+The main window  shall prov ide the following parts : 
+–A board,  see cha pter 3.2.1.1.
+–a menu bar,  see chapter 3.2.5.
+3.1.2Software Interfaces
+Not appli cable.
+3.1.3 Communications Interfaces
+Not appli cable.
+3.2Functional Requirements
+3.2.1Actions.
+3.2.1.1Presentation of the board.
+The boa rd is a rectangular zone where the user  could  move some b locks.  Let x be
+the mesure uni t. The h eight of the board  game is 5x, its wid th is 4x : x can't be
+less t han 50  pixels and  greater  than 100 pixels. The  blocks  are separa ted by a
+marge of 0.1x.
+There are  four square  blocks  with a side of x.
+There are  four rectangular  blocks with the follow ing dimensions : a height of 2x
+and a width of x.
+There is one  block with the following dimensions : a  height of x and a widt h of
+2x.
+There is one  square block  with a side of 2x.
+The boa rd is blac k and the blocks are yellow.
+3.2.1.2Block selection
+3.2.1.2.1Description
+See above  chapter  3.2.1.1.
+3.2.1.2.2Input
+Left­clicked down on a bloc k.
+3.2.1.2.3Processing
+The ga me state becomes "Block depla cement".
+3.2.1.2.4Output
+None.
+3.2.1.3Block deselection
+3.2.1.3.1Description
+See above  chapter  3.2.1.1.
+3.2.1.3.2Input
+Left­clicked up on  a sele cted bloc k.
+3.2.1.3.3Processing
+The ga me state becomes "Block selection".
+3.2.1.3.4Output
+None.
+3.2.1.4Block movement
+3.2.1.4.1Description
+See above  chapter  3.2.1.1.
+3.2.1.4.2Input
+Mouse movement during the "Block movement" state. 
+3.2.1.4.3Processing
+The sele cted block  follow s the mouse movement without overlapp  the other
+blocks and exit of the game zone. The selected block can't  move near  other blocks
+at least 0.05x from the others blocks.
+3.2.1.4.4Output
+None.
+3.2.1.5Undo Action
+3.2.1.5.1Descritption
+The use r can cancel a moveme nt. 
+3.2.1.5.2Input
+Menu selection.
+3.2.1.5.3Processing
+The ga me displays the block positions at t he places where they were b efore the
+last mo vement . This  action  is consider like a movement. The "undo" action is
+unvailable if there was no previous  movement.
+3.2.1.5.4Output
+New game board displa y.
+3.2.1.6Redo Action
+3.2.1.6.1Descritption
+The use r can redo  a movement that has been can celed.
+3.2.1.6.2Input
+Menu selection.
+3.2.1.6.3Processing
+The ga me displays the block positions at t he places where they were b efore the
+last mo vement  was canceled. This  action  is consider like a movement. The redo
+action is unvailable, if the previous action wasn't a n "undo"  action.
+3.2.1.6.4Output
+New game board displa y.
+3.2.2End of the game management
+3.2.2.1End of the game 
+3.2.2.1.1Description
+How the user finish s the gam e.
+3.2.2.1.2Input
+The g reat square is moved at the bottom of  the board.
+3.2.2.1.3Processing
+All the player statistics are freezed.
+3.2.2.1.4Outputs
+If the number of  block movements of the current player  is lower than t he highest
+number of block movement recorde d in the statistic file, the The "Finish Window
+with Statistcs" is displayed, see chapter 3.2.2.2. If not the "Simple finis h Window"
+is displa yed, see ch apter 3.2.2.3.
+3.2.2.2Finish Window with Statistics.
+3.2.2.2.1Description
+The F inish Window  with Statisctis contains a the followin g text : "You win !  Enter
+your name : ", an  Edit Box that can contain 20 characters and a pus hbutton with
+the labe l "OK".
+3.2.2.2.2Input
+The ga mes is ove r, see chapt er 3.2.2.1.
+3.2.2.2.3Processing
+The pla yer clicks on the pushbutton "OK". The player statistics are recorde d in th e
+statistic file of the software,  according to the require ment  of the chapter 3.2.3.2.
+3.2.2.2.4Outputs
+The "finish" window  is closed.  The statistic window  is displaye d, see chapter
+3.2.3.4.
+3.2.2.3Simple Finish Window
+3.2.2.3.1Description
+The Si mple Finish  Wind ow contains  a the following  text : "You  win ! " and a
+pushbutton with the label "OK".
+3.2.2.3.2Input
+The ga mes is ove r, see chapt er 3.2.2.1.
+3.2.2.3.3Processing
+The pla yer clicks on the pushbutton "OK".
+3.2.2.3.4Outputs
+The Simple Finish Window  is closed. The statistic window is displayed, see
+chapter 3.2.3.4.
+3.2.3Statistics Management.
+3.2.3.1Player Statistics management
+3.2.3.1.1Desciption
+The fo llowing statistics are recorded during t he game :
+–number of block movements sinc e the start.
+–time since  the start.
+3.2.3.1.2Input
+A block movement.
+3.2.3.1.3Processing
+The numb er of block movement in incremen ted of 1. The di fference of time of the
+block movement and the previous recorde d time is recorded .
+3.2.3.1.4Output
+None.
+3.2.3.2Game Statistics management
+3.2.3.2.1Desciption
+The ga me statistics is composed of 10 player  statistics.
+3.2.3.2.2Input
+The F inish Window  with Statistics is complet ed by the player,  see chapter 3.2.2.2.
+3.2.3.2.3Processing
+The s tatistics of the player  (its name, the block  movement numb er, the time
+passed  to solv e the headache) is recorded  in the statistic file. I f 10 player  statistics
+are alrea dy recor ded, the player  statistics of the file wi th the greates t number of
+block movements is erased.
+3.2.3.2.4Output
+If the file was  correctly updated,  there is no o uput. If not, like wrong pemissions
+or disk full, an  error message is displa yed.
+3.2.3.3Statistics erasing
+3.2.3.3.1Descritption
+The use r could  erase all the statistics.
+3.2.3.3.2Input
+Menu selection.
+3.2.3.3.3Processing
+The data  stored  in the statistic file ar e erased .
+3.2.3.3.4Output
+If the file was  correctly updated,  there is no o uput. If not, like wrong pemissions
+or disk full, an  error message is displa yed.
+3.2.3.4Statistic Window.
+3.2.3.4.1Descritption
+The P layer Statis tics Window  is composed of a listbox of 10  lines. Each line is
+composed  of the name of a pla yer, the number of block moveme nt, the time used
+by the player to solve the headache. 
+This statistcs are read from the statistic file of the game.
+3.2.3.4.2Input
+End of the game (see chapter  3.2.2.1) or me nu se lection.
+3.2.3.4.3Processing
+Window  display.
+3.2.3.4.4Output
+None.
+3.2.4File management
+3.2.4.1Open game
+3.2.4.1.1Description
+Open  a previous saved game.
+3.2.4.1.2Input
+Menu selection.
+3.2.4.1.3Processing
+A dialog box is open : t he user c ould choose a  file that contains all the data of the
+game previously  save d.
+3.2.4.1.4Ouput
+The boa rd game is re­draw  according to the file d ata. The playe r statistics are set
+to the player  statistics of the file data.
+3.2.4.2Save game
+3.2.4.2.1Description
+Save the current game.
+3.2.4.2.2Input
+Menu selection.
+3.2.4.2.3Processing
+If the game was never saved,  the processing is ide ntiqual  to the action  "Save as...".
+If not, the followin g internal data are save d into the previous  file that was used to
+to save  the the game : the curren t positions of t he blocks, their last 10000
+previo us posi tions, the number of t he prev ious movements and  the time passed  by
+the user t o solv e the headache.
+3.2.4.2.4Ouput
+None.
+3.2.4.3Save game as
+3.2.4.3.1Description
+Save the current game.
+3.2.4.3.2Input
+Menu selection.
+3.2.4.3.3Processing
+A dialog box is open : t he user c ould choose a  file that will contain all the data of
+the current game. N ext, the followin g internal data  are save d into the file : t he
+current positions of the blocks,  their prev ious posi tions, th e number  of the
+previo us m ovements and  the time passed  by the user to solve the headache.
+3.2.4.3.4Ouput
+None.
+3.2.4.4Exit
+3.2.4.4.1Description
+Stop the game
+3.2.4.4.2Input
+Menu selection.
+3.2.4.4.3Processing
+If the game is not save d, a dialog  box is displa yed that asks  to the player if he
+wants to  save th e game. Two  choices  are po ssible : "Yes" and "No". If  "Yes" is
+selected, the action "Save" is processed  and the main wind ow disappe ared. If "No"
+is selec ted, the main window disappeare d.
+3.2.4.4.4Ouput
+None.
+3.2.5Menu bar
+3.2.5.1Game menu
+3.2.5.1.1Description
+Contains "Open gam e ...", "Save Game ...", "Save Game As..." and "Exit". In this
+order. 
+3.2.5.1.2Input
+Menu selection.  
+3.2.5.1.3Processing
+Action in question is perfo rmed  :
+–"Open ga me ..." ­> action "Open g ame", se e chapter 3.2.4.1.
+–"Save  Game ..." ­>  action "Save  Game", see chapter 3.2.4.2.
+–"Save  Game As ..." ­>  action "Save  game as",  see chapter 3.2.4.3.
+–"Exit" ­> action "Exit", see chapter 3.2.4.4.
+3.2.5.1.4Output
+Menu disappe ars. Requireme nts of the action  determines th e continuation. 
+3.2.5.2Action menu
+3.2.5.2.1Description
+Contains "Undo" and "Redo".  In this order.  The  menu selection is un vailable  if the
+assoc iated  action is unvai lable.
+3.2.5.2.2Inputs
+Menu selection.  
+3.2.5.2.3Processing
+Action in question is perfo rmed  :
+–"Undo"  ­> action  "Undo",  see chapter 3.2.1.5.
+–"Redo"  ­> action  "Redo", see c hapter 3.2.1.6.
+3.2.5.2.4Outputs
+Menu disappe ars. Requireme nts of the action  determines th e continuation. 
+3.2.5.3Statisctis menu
+3.2.5.3.1Description
+Contains "Display"  and "Erase". In this order.  
+3.2.5.3.2Inputs
+Menu selection.  
+3.2.5.3.3Processing
+Action in question is perfo rmed  :
+–"Displa y" ­> displa ys the statistic window,  see chapter 3.2.3.4.
+–"Erase"  ­> erase  the statistics, see chapter 3.2.3.3.
+3.2.5.3.4Outputs
+Menu disappe ars. Requireme nts of the action  determines th e continuation. 
+3.2.5.4Help menu
+3.2.5.4.1Description
+Contains "About". 
+3.2.5.4.2Inputs
+Menu selection.  
+3.2.5.4.3Processing
+"About  Window" is displa yed. The "Abo ut Wind ows" is composed of the follow ing
+text "Qhead ache 1.0 by Jean­ Philippe  Brossat jp_b rossat@yahoo.fr"
+3.2.5.4.4Outputs
+Menu disappe ars. Requireme nts of the action  determines th e continuation.
+3.3Performance Requirements
+There can  be only one user per mach ine.
+3.4Software System Attributes
+The soft ware must be portable  to the Windows  OS.

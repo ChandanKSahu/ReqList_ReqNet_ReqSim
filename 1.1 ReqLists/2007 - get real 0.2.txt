@@ -1,0 +1,5 @@
+4.1.1	The Get Real site should work and be tested against IE, Firefox and Netscape.
+4.2.1	There are no special hardware interface requirements.
+5.1.1	The Get Real site should be hosted on a server that can provide adequate response time.  High school students tend to have short attentions spans, so a slow server would not be satisfactory for this application.  The current OUS (www.ous.edu) site is a good example of rapid response time.
+5.2.1	Copyright and other security measures for Get Real should be the same as the OUS site.  5.3 There is a need to track and evaluate the “hits” and time spent on the student-focused website over time; and make content, design, and navigation changes as needed based on evaluation of hits.
+5.3.1	Web design conventions should be consistent with the standards and conventions used on the OUS site.

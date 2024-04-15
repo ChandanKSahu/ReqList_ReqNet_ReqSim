@@ -1,0 +1,10 @@
+D	Software Requirements Specification for PDF Split and Merge
+3	System Features
+3.1	System Feature 1 -  Split
+3.2	System Feature 2 -  Merge/Extract
+3.3	System Feature 3 -  Alternate Mix
+3.4	System Feat ure 4 -  Rotate
+3.5	System Feature 5 -  Visually reorder
+3.7	System Feature 7 -  Working Environment
+3.8	System Feature 8 -  Log Panel
+3.9	System Feature 9 -  Settings

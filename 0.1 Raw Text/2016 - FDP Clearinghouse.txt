@@ -1,0 +1,781 @@
+
+ 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal. V.7 Page 1 
+  
+  
+ 
+   FUNCTIONAL and TECHNICAL  
+REQUIREMENTS 
+DOCUMENT  
+ 
+ 
+FDP Expanded Clearinghouse Pilot 
+Phase 2 – Web-based System  
+ 
+ 
+DEVELOPMENT & IMPLEMENTATION COLLABORATION 
+BETWEEN: 
+The Federal Demonstration Partnership (FDP) Vanderbilt University Medical Center (VUMC) 
+University of Washington (UW) 
+FDP Expanded Clearinghouse Pilot Entities 
+ 
+DRAFT 6.8.2016 
+ 
+Developed by: 
+Neal Hunt Contract Manager, VUMC 
+Chris Renner Senior Application Developer, VUMC 
+Bryce Embry Application Developer, VUMC Mark Sweet Co-Chair, FDP ERA Committee and member, FDP Executiv e  
+  C o m m i t t e e  David Wright FDP Executive Directo r and member, FDP Executive  
+  C o m m i t t e e  
+Jason Myers Associate Director, IT Operations UW Office of Rese arch 
+  Information Services, U of Washington 
+Lynette Arias Co-Chair, FDP Ex panded Clearinghouse Working Grou p 
+Jennifer Barron Co-Chair, FDP Ex panded Clearinghouse Working Gr oup 
+Pamela Webb Co-Chair, FDP Expa nded Clearinghouse Working Group 
+ 
+Robert Prentiss FDP Expanded Clea ringhouse Working Group / UT A ustin 
+Jennifer Rodis FDP Expanded Clearinghouse Working Group / Unive rsity of 
+Wisconsin
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 0 
+  
+TABLE OF CONTENTS  
+Table of Contents 
+1.0 GENERAL INFORMATION  .................................................................................................................. 1  
+1.1 Purpose  .............................................................. ............................................................... ................ 1  
+1.2 Scope  .............................................................. ............................................................... ................... 1  
+1.3 Project References  .............................................................. .............................................................. 1 
+1.4 Acronyms and/or Definitions  .............................................................. ............................................... 2  
+1.5 Points of Contact  .............................................................. ............................................................... .. 3 
+1.5.1 Information & Coordination  .............................................................. ........................................................... 3  
+1.5.2 Roles and Responsibilities  .............................................................. ........................................................... 3  
+1.5.3 Administrative Support and Oversight  .............................................................. ........................................... 4  
+2.0 CURRENT SYSTEM SUMMARY  .......................................................................................................... 4  
+3.0 FUNCTIONAL REQUIREMENTS AND IMPACTS  .................................................................................. 4  
+3.1 Summary of Functions ............................................................... ........................................................ 4  
+3.1.1 Functional Requirements  .............................................................. ............................................................. 5  
+3.2 Summary of Impacts  .............................................................. ............................................................ 6  
+3.2.1 FDP Organizational Impacts  .............................................................. ......................................................... 6  
+3.2.2 FDP Operational Impacts  .............................................................. ............................................................. 6  
+3.2.3 FDP Expanded Clearinghouse System Development Working Group Impacts  ................................................ 6  
+4.0 PERFORMANCE REQUIREMENTS  ..................................................................................................... 7  
+4.1 Specific Performance Requirements  .............................................................. .................................... 7  
+4.1.1 Accuracy and Validity  .............................................................. ............................................................... ... 7 
+4.1.2 Timing and Capacity  .............................................................. ............................................................... ..... 7 
+4.1.3 Failure Contingencies  .............................................................. ............................................................... ... 7 
+5.0 ADDITIONAL SYSTEM REQUIREMENTS  ............................................................................................ 7  
+5.1 System Description  .............................................................. ............................................................. 7  
+5.2 Systems Integration  .............................................................. ............................................................. 8  
+5.3 Customization and Flexibility  .............................................................. ............................................... 8  
+5.4 Sustainability and Open Source Plans  .............................................................. ................................. 8  
+5.5 System Documentation  .............................................................. ........................................................ 8  
+5.6 Rights to Code and Da ta / Data Ownership  .............................................................. .......................... 8  
+5.7 Configurable System Parameters ............................................................... ........................................ 9  
+5.8 System Development and Go -live Approval Process  .............................................................. ........... 9  
+6.0 EQUIPMENT AND SOFTWARE  ........................................................................................................... 9  
+6.1 Equipment  .............................................................. ............................................................... ............ 9  
+6.2 Software  .............................................................. ............................................................... ............... 9  
+ 
+  
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 1 
+ 1.0 GENERAL INFORMATION  
+1.1 Purpose 
+ 
+The purpose of this document is to provide information to the FDP Executive Committee sufficient to allow their endorsement 
+of the development, maintenance, hosting, and use of  an on-line FDP Expanded Clearinghouse system [see 
+http://sites.nationalacademies.o rg/PGA/fdp/PGA_171520].  This document explains the high-le vel technical and functional 
+requirements, and provides information about the roles and re sponsibilities needed to support such a system, including the 
+obligations of FDP and the obligations of other parties.  The document also includes a cost estimate for developing and 
+maintaining this type of system for FDP members.  It does not in clude details about ex panding access to the system to non-
+FDP members, though the system will be designed in such a way to permit such an expansion.    
+1.2 Scope 
+ 
+This Functional and Technica l Requirements Document outlines the functi onal, performance, security and other system 
+requirements identified by the FDP Expanded Clearinghous e System Development Working Group (EC-SDWG) as the 
+proposed information system solution for the Expanded Clearinghouse.    
+The On-line-Expanded Clearinghouse will  
+• House on-line profiles of FDP member institutions documen ting the static/annual information needed by pass-through 
+entities for routine subaward issuance and subrecipient monitoring activities, such as annual audit results, F&A and 
+fringe benefit rates, and key contacts.  The content of on-line  profiles is expected to mirror the content currently found 
+in the Expanded Clearinghouse pilot profiles found at: http://sites.nationalacademi es.org/PGA/fdp/PGA_171219 .  
+• Allow secure access by FDP member institution representatives to create and maintain their on-line profiles, 
+including deployment of real-time data validation mechanisms where practical. 
+• Provide notifications to profile-holders when time-sensitive data are obsolete (e.g, expired audit information, outdated 
+SAM record, etc.)  
+• Import data from secure government systems needed fo r the On-Line profiles (e.g., SAM, Federal Audit 
+Clearinghouse) to expedite profile completion and increase timeliness of data (FUTURE) 
+• Allow FDP member institutions to manage (add, change, delete) user rights for profile maintenance within their 
+institution  
+• Allow FDP members and non-members to view published profiles, and download copies of individual profiles  
+• Allow FDP members (only) to export On-Line Expanded Clearinghouse profile data via an Application Program 
+Interface (API) for use in th eir local subaward or contra ct and grant management systems 
+• Provide data for use in discussions with the federal government about reducing administrative burden and wise 
+stewardship of federal funds.  
+ 
+The scope of this work includes the initial development of t he web based system, based on information and feedback 
+gathered during the Phase 1 Pilot.  References to future development considerations are included in this proposal for 
+information purposes only. 
+1.3 Project References 
+ 
+Key documents supporting this proposal are listed below as reference: 
+• Original FDP Expanded Clearinghouse Phase 1 Pilot Proposal  to FDP Executive Committee 
+• Initial proposal for system development from Vanderbilt (Appendix A)  
+• Notes from initial system development working group meeting   
+• Entity Profile  currently in use 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 2 
+  
+1.4 Acronyms and/or Definitions 
+ 
+API Application Programming Interface, a set of protocols or standards for communicating with 
+web-based applications 
+ 
+Community  FDP member institutions 
+ 
+CSS3  Cascading Style Sheets; language used to describe the presentation of a document 
+written in markup language, e.g., HTML 
+ 
+Composer package manager  Tool for PHP development 
+ ECWG  FDP Expanded Clearinghouse Working Group 
+ 
+EC-SDWG   FDP Expanded Clearinghouse System Development Working Group  
+ 
+Entity   An FDP member institution or organization participating in the pilot, identified by DUNS 
+number 
+ 
+FAC Federal Audit Clearinghouse, a public database of single audit results maintained by the 
+Office of Management and Budget 
+ 
+Git version control  Free and open-source version control system  
+ 
+HTML 5  HyperText Markup Language; the fifth and current version of the HTML standard 
+ 
+InCommon Federation  A consortium providing a service enabling users to use single sign-on (their 
+institutional/organization account) to access on-line resources that take part in the federation 
+ 
+ISP Internet Service Provider 
+ 
+JavaScript  Programming language used extensively in website development 
+ 
+jQuery for Javascript   Javascript library  
+ JSON format  Data-interchange format 
+ 
+MySQL  Open-source database management system 
+ 
+PHP General-purpose scripting language especially suited to web development 
+ PHP Symfony  PHP framework to create websites and web applications 
+ 
+RESTful API  An API that uses a standard set of HTTP requests 
+ 
+SAM System for Award Management, searchable online database of entities and their eligibility 
+to receive federal funds 
+ 
+  
+ 
+ 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 3 
+ 1.5 Points of Contact 
+1.5.1 Information & Coordination 
+ 
+Points of Contact relevant to this project are listed on the first page of this proposal.  Once the project has received Execut ive 
+Committee approval, this document will serve as a formal MOU detailing the agreed upon responsibilities and requirements.  
+A representative from each organization will be asked to sign t he document documenting their organization’s acceptance of its 
+roles and responsibilities.  
+1.5.2 Roles and Responsibilities 
+VUMC VUMC will serve as the lead devel oper for this Phase as well as be the lead on ongoing maintenance and 
+support until such time as any of the parties and/or t he FDP Executive Committee wish to transfer duties to 
+another party 
+EC-SDWG The system development working grou p will support VUMC in the deve lopment and maintenance of this 
+system and provide review, fe edback and approval during all stages of development.  
+ECWG This working group will be re sponsible for the administra tive oversight and operati ons of the Clearinghouse 
+system as detailed in the next section. 
+UW UW will serve as part of the system development group and provide back-up development and technical 
+support should it be needed.  
+FDP The FDP will serve as the ultimate oversight, in the form of the FDP Executive Committee to ensure 
+appropriate review, support and approval is provided throughout Phase 2. 
+ 
+Pilot Entities - Requirements of FD P Member Institution Subscribers 
+ 
+FDP Members who subscribe to the system will sign a business use agreement committing to the following:  
+• Subscribers will prepare, submit and certify their initial prof ile within 60 days of their logon ID being created (the 
+subscriber’s profile will not be publically viewable until this step is complete) 
+• Subscribers agree to have internal processes in place to ensure their profile data are maintained and kept current, as 
+follows; 
+o Must be updated within 5 business days after a change in status: 
+ Suspension and Debarment status  
+o Must be updated within 30 days after a change: 
+ Audit information  
+ F&A Rate agreement  
+ Fringe Benefit ra te information 
+ Key Contact information 
+ Addition or loss of a standard accreditation or change in its status (e.g. AAHRP, AALAC) 
+ Expiration dates of approved system s (e.g. Purchasing System, etc.) 
+• All other information must be reviewed at least annually.  
+• Subscribers routinely not adhering to profile maintenance standards may be suspended at the sole discretion of 
+the FDP.  No subscriber will be suspended with out having first had an opportunity to cure.  
+• Pass-through entity subscribers agree to use Subscriber’ profiles to obtain static/annual information for their 
+subawards, and to not request this  same information is other form ats from fellow subscribers.  
+• Subscribers agree to participate in standardized subaward tracking during the Pilot time period, and to furnish 
+their data as requested by the FDP Expanded Clearinghouse Co-Chairs. 
+• Subscribers who use the API agree to refresh their local data at least weekly, or at each time a profile is 
+downloaded for use, whichever they prefer.   
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 4 
+ 1.5.3 Administrative Support and Oversight 
+ 
+The ECWG will operate as the support team for the Online Clearinghouse preforming the following tasks: 
+• Develop and maintain all necessary user documentation, FAQs, surveys and reports 
+• Provide EC-SDWG necessary list of values or detailed functional requirement for areas such as data elements to 
+base alerts on, key fiel ds for validation, etc 
+• Review each profile when submitted or modified and review all profiles regularly to ensure data integrity remains high 
+• Monitor use of the clearinghouse including dates of API downloads by users, frequency of updates by users and 
+other functionality to monitor the needs of the clearinghouse 
+• Maintain awareness of needs related to changes in data elements, additions, deletions or modifications 
+• Coordinate communication among the users and provide users regular updates and status reports on the Pilot 
+• Receive and track ongoing feedback from the users 
+• Maintain all user required resource documents on clearinghouse webpage 
+• Maintain clearinghouse webpage overall 
+• Coordinate review of overall clearinghouse at least annually on an ongoing basis 
+2.0 CURRENT SYSTEM SUMMARY 
+ 
+There is currently no single, on-line electronic database contai ning all information needed for pass-through entities to perfor m 
+risk assessments and to do ongoing monitoring of static or annualized data related to subrecipient monitoring.  Select data are  
+instead housed in certain federal govern ment systems, such as the System for Award Management (SAM) or the Federal 
+Audit Clearinghouse (FAC) with the remainder retained by the individual entities themselves.  Certain data expected under the 
+Uniform Guidance to be used for this purpose are as yet unavailable nationally to pass-through entities, including copies of A-
+133/Single Audits or federal management decisions.  This la ck of data and dispersion of data led to research institutions 
+creating data collection documents used with each other at time of subaward issuance or updating.  The plethora of forms coupled with most institutions collecting data on a per-subaward basis rather than on a per-entity basis has led to significant  
+administrative burden without commensurate benefit from a risk management perspective.    
+ The FDP Expanded Clearinghouse Phase 1 Pilot created a process whereby each pilot entity could provide a standard set of 
+data and answers to questions in the form of an Entity Profile.   These Entity Profiles are currently maintained in excel and 
+converted to pdf for to a centralized web site repository .  Data relative to administrative burden relief is being captured and will 
+be reported quarterly beginning Fall 2016; early data suggest the relief will be meaningful.   The current process, however, 
+relies on limited data validation opportunities on the prof ile form itself, as well as significant manual review, 
+approval/certification and loading of documents by multiple individuals involved in the process (institutional representatives,  
+FDP Expanded Clearinghouse volunteers, and FDP staff.) The profiles themselves g enerally require updat ing at least twice 
+per year, resulting in significant ongoing burden.   In additi on, download of data for use in lo cal systems is not available.   
+These results, along with the remarkable success of the origin al FDP Financial Conflict of Interest Clearinghouse that was 
+eventually opened to non-FDP members and now includes more than 1000 entities, signified a need to change to a more 
+automated and electronically robust process for the longer term.  This proposal reflects the FDP’s efforts to build that electronically robust system.  
+3.0 FUNCTIONAL REQUIREMENTS AND USER IMPACTS 
+3.1 Summary of Functions 
+ 
+The FDP Expanded Clearinghouse requires a technology based solution for a community-wide data collection and 
+management system whose primary functions include: 
+• Data Accessibility 
+• Entity Profile Administration 
+• User Accounts 
+• Data Integrity 
+• FDP Administration Panel 
+• System Security 
+• Links to related systems/exte rnal compliance databases 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 5 
+ 3.1.1 Functional Requirements 
+ 
+In order to accomplish the above articulated need, the FDP Expanded Clearinghouse requires a community-wide data 
+collection and management system that includes the following base functionality: (See Appendix B for system mock up) 
+ 
+• Data Accessibility 
+• Entity profile information is publicly available via a searchable website 
+• Profile data is available for direct system-t o-system access via an HTTP API (read only) 
+• System will track the date and time of last API data pull 
+• Profile details for individual institutions can be downloaded in Excel or PDF format 
+ 
+• Entity Profile Administration 
+• Entities may submit online requests to have their profile added to the clearinghouse 
+• Authorized users can update the entity’s profile directly on the website 
+• Date and user name are logged when profile is changed 
+• Designated entity representatives can delegate editing rights to other users at their institution 
+ 
+• User Accounts 
+• User accounts are password protected (Utilization of InCommon Federation will be considered in future 
+phases of development ) 
+• Password reminders and resets are handled by the website 
+• With the exception of system administrators, a ll user accounts are tied to an institution  
+ 
+• Data Integrity   
+• At designated intervals (at least monthly), the system sends an email reminding en tities to update their 
+profile 
+• System will also be able to send reminders on certain data elements when the data has become out of date 
+(SAM expiration date, Audit date, etc) A list of these data elements will be developed by the ECWG and 
+provided to the ECSDWG. 
+• If feasible, system will also provide aler t/notification upon sign-in by entity  user when any of the above dates 
+or data elements requires updating 
+• Consideration will be given to requiring a Profile update at FDP Annual report time to help ensure Profiles 
+are kept current  
+• New profiles must be reviewed and approved by FDP designee before appearing online 
+ 
+• FDP Administration Panel 
+• System provides designated FDP administrators with additional rights. 
+• FDP Administrators create new entities and approve new profiles 
+• FDP Administrators des ignate first primary user for entity 
+• FDP Administrators can create, edit, and disable user accounts.  
+ 
+• System Security 
+• Public has read-only access via website 
+• API provides read-only data access 
+• Profile editing requires password-protected user account with manually-assigned rights 
+• Change log records details on data modification (date, username) 
+• Consideration will be given to potentially hiding of email address from public view to avoid collection by 
+spam senders 
+ 
+• Links to related systems/external compliance databases 
+• Future development  considerations include: 
+o Links from each Entity Profile to Entity’s SAM.gov page.  Consideration will be given to a select set of 
+fields in SAM that could be accessed to help “jump start” the profile creation (ECWG to compile list) 
+o Assessment of feasibility of merging data from current FDP Institution Profile 
+o A-133 data base integration 
+o FCOI clearinghouse integration 
+o Assessment of feasibility of utilizing data  in the Federal Audit Clearinghouse (FAC) 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 6 
+ 3.2 Summary of Impacts 
+3.2.1 FDP Organizational Impacts 
+ 
+The FDP Expanded Clearinghouse Web-based system will require an initial team of developers and testers.  These roles will 
+be filled by the EC-SDWG on a volunteer basis. The project will require ad ministrative, project ma nagement, and training 
+duties that will be performed by the ECWG.  Any financial manage ment needs of this project will be coordinated through David 
+Wright, Mark Sweet and Pamela Webb with the FDP Executive Committee. 
+ To support the ongoing ne eds of this system the FDP will require an over sight committee to overse e and manage the system 
+and the community’s data to ensure ongoing re liability and integrity of the system (ECW G).  It is expected that once built, thi s 
+system will exist on an ongoing basis with at least an annual re view process build in to dete rmine effectiveness, needs for 
+updating or changes, potential need for termination, or other circumstances. 
+ 
+Entities will have access to their data and reporting, but publication of community-wide data will be authorized by the FDP 
+Executive Committee. 
+3.2.2 FDP Operational Impacts 
+ 
+In anticipation that the web-based FDP Expanded Clearinghouse will eventually re place the various data collection 
+components currently maintained by or through FDP we expect the long-term overall impact to FDP to streamline the type of 
+data currently being housed on the FDP webpage.  We anticipate an eventual time savings for FDP staff and members, since 
+there will one combined and centralized location to house what is currently: 
+• FDP member institution profile 
+• A-133 data base 
+• FCOI clearinghouse 
+• FDP Expanded Clearinghouse excel/pdf repository 
+ 
+Users will interact with the system in real-time via the web.  FDP members will be expected to acquire and maintain a secure 
+and reliable internet co nnection adequate to facilitate data entry by thei r staff.  Questions on the system in general, data en try, 
+reporting and use will be facilitated by the FDP Expanded Clearinghouse Working Group.  FDP pilot institutions are required to 
+alter their current subrecipient entity forms and internal processes to accommodate the expected data collection and data 
+entry, including timeliness.   All user information, guidance and FAQ’s will be developed by the ECWG and EC-SDWG and maintained on the FDP webpage.  All Pilot entities will have acce ss to instructions and training materials to access to the 
+system, including FAQ’s regarding the system. 
+ 
+The FDP Expanded Clearinghouse will be maintained in the current Excel spreadsheet / PDF repository fashion until such 
+time as a web-based system has been develop ed, testing and fully adopted.   Pilot en tities will be required to assist in the 
+transition between methods/systems. 
+3.2.3 FDP Expanded Clearinghouse Syst em Development Working Group Impacts 
+ 
+The FDP Expanded Clearinghouse System De velopment Working Group will commit ti me and work together to accomplish 
+the development and ongoing maintenance of the clearinghouse system in  the following ways: 
+• Communication between and among group members 
+• Regular conference calls to review status and discuss open issues 
+• Establish and maintain up to date project timeline & status reports 
+• Functional and operational business side of the team will be represented by: Lynette, Jennifer, Pamela and ECWG 
+• Technical side of the team is represented by:  Neal, Chris, Jason, Mark and David 
+• Lynette will operate as key point of contact for ECWG and UW’s involvement 
+• Neal will operate as key point of contact for technical group at Vanderbilt 
+• A central location will be developed to maintain working group documents (Dropbox or similar) 
+o Functional and technical specifications 
+o Action lists and notes 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 7 
+ 4.0 PERFORMANCE REQUIREMENTS 
+4.1 Specific Performance Requirements 
+4.1.1 Accuracy and Validity 
+ 
+The system will employ numerous data quality assu rance techniques, including but not limited to: 
+• Input masks 
+• Drop down lists with  standard responses 
+• Record data completeness requirements 
+• Basic data logic warnings  (e.g., Gender: Male with Pregnancy status: Y) 
+• Manual review and validation of new draft entity profiles by a designated FDP administrator, prior to profiles being 
+added to the system. 
+4.1.2 Timing and Capacity 
+ 
+The system is intended to be available on line 24 hours per day, 365 days per year with the exception of scheduled and pre-
+notified system maintenance downtimes, if needed.  
+ 
+Data will become immediately available for use, except for new profiles, which will be pending in queue for validation by an 
+FDP administrator.  
+ 
+The ECSDWG will ensure that system reso urces are adequate for timely response ti mes and overall softwa re functionality. 
+ 
+The ECSDWG will review ISP/hosting provider options and once the initial development is complete will move the 
+clearinghouse over to this for hosting the system.  The system  will be built and tested on Va nderbilt hardware and software 
+and then transferred over based on agreement of ECSDWG.  The cost an ISP/hosting provider is estimated to be 
+approximately $1,200 annually.  The cost  of this will be paid by the FDP. 
+4.1.3 Failure Contingencies 
+ 
+The system is non-critical.  Temporary inaccessibility, even up  to several days, will not create a substantial burden on any 
+user.  The host site for the system will be chosen so as to in clude data backup capabilities and protocols.  VUMC will maintain  
+a copy of the code on Vanderbilt’s network, which has daily backup protocols.  Additionally, should the ECSDWG believe it to 
+be prudent, a copy could be kept at University of Washington or another backup site.  It is expected that with the use of an 
+IPS/hosting provider that downtime will be minimal or non-existent. 
+5.0 ADDITIONAL SYSTEM REQUIREMENTS 
+5.1 System Description 
+ 
+The proposed FDP Expanded Cl earinghouse system will consist of a web-bas ed, centralized database Entity Profile and 
+reporting to be utilized in the support of ongoing subrecipie nt entity monitoring activities and responsibilities by the Entiti es.  
+Generally, all users will provide direct input into the system and outputs (reports) will also be generated directly from the 
+system.  However, to ensure growth ability, flexibilit y is also required for both input and output modes.  
+ 
+Participating Pilot Entities will provide input (i.e., entity leve l data) and the ECSDWG, as an agent of the FDP, will provide 
+system administration and support for report generation.  The system is planned to be originally dev eloped principally by staff  
+at Vanderbilt University Medical Center, in close consult with  the ECSDWG.  As feasible and agreed upon, David Wright and 
+Jason Myers might also assist in components of the development. 
+ 
+ 
+ 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 8 
+ 5.2 Systems Integration 
+ 
+An additional desired functionality of the system is to integrate with other external systems.  The FDP Expanded 
+Clearinghouse system will be desired to have the capacity to import and export data without ongoing support by the 
+ECSDWG. To this end, the system will expose a RESTful API via H TTP to provide data in JSON format for external consumer 
+access.  
+ 
+The clearinghouse system will also include the functionality to interface with the federal System for Award Management (SAM) 
+web services to access certain data elements as defined in the functional requirements.  In addition exploration of utilizing t he 
+bulk download capabilities currently available in the Federal Audit Clearinghouse will be explored to allow for the possibility  of 
+utilizing that data for uploading entity profile data elements as well. 
+5.3 Customization and Flexibility 
+ 
+The desirability for the ECSDWG to continually update and improve the system is a given.  However, the FDP will also require 
+that the system be flexible and customizable to suit their needs.  The complexity of  the system will limit the customizations 
+available via the administrative interface at the FDP level.  However, the code should be structured to make customizations a 
+reasonably accessible task for a PHP programmer, and the FDP will have access to the code repository to make such 
+changes as desired.  
+ Any tools that will be utilized, outside  of those discussed in this  proposal will be discuss ed an agreed upon among the 
+ECSDWG prior to use.  No closed source or proprietary tools will to be used. 
+ 
+5.4 Sustainability and Open Source Plans 
+The system will be developed under the le adership of Vanderbilt University Medi cal Center using in dustry standard web 
+development tools and practices.  VUMC commits to develop the initial application as described in this document, and to 
+provide additional support and development services up to 5 hours per month on an ongoing basis, without charge to FDP.  
+Either party may pursue a transfer of maint enance responsibilities at any time.  The ECSDWG will perform at least an annual 
+review of how the system is working and whether responsibilities need to be shifted or changed in any way.  VUMC may, at its 
+discretion, or as contracted by FDP in exchange for appropriate remuneration, provide additional support or development services beyond this commitment.  
+ 
+The FDP and ECSDWG will have access to the source code for the software and may work with other parties to extend, enhance, or edit the system in colla boration with VUMC provided the changes  and enhancements are committed to the 
+GitHub repository.  Source code will be stored on GitHub or in another mutually agreed repository. 
+5.5 System Documentation 
+There is no anticipated need for an end-user guide as system will  include an intuitive user interface.  VUMC will provide such 
+documentation as necessary or as requested by the ECSDWG or FDP Executive Committee for technical requirements, 
+including but not necessarily limited to  documentation of the system-to-system API.  Any end-user help documentation will be 
+developed by the ECWG. 
+5.6 Rights to Code and Data / Data Ownership 
+ VUMC, as the primary developer, shall retain all right and ownership in the software product including but not limited to sourc e 
+code, including right to license the product (but not the data) to any third party.  VUMC will grant to FDP a perpetual, 
+worldwide, royalty-free, non-exclusive, non-transferable license to the software product and derivative works, without the righ t 
+to sub-license, for FDP and its agent(s) to use the software product for its own purposes. This shall include no more than one 
+production instance at any time, with unlimited backup, develo pment and test copies permitted to maintain, improve and test 
+the software as necessary. 
+ 
+FDP shall retain all right and ownership in its data.  VUMC shal l receive a perpetual, royalty-free license to the data strictl y for 
+the purposes of maintaining, improving and supporting FDP’s installation of the software product. 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 9 
+ 5.7 Configurable System Parameters 
+ 
+The ECSDWG will work together to determine where the system ma y need to be configurable and ensure that all parties are 
+in agreement and parameters are appropriately documented. 
+5.8 System Development and Go-live Approval Process 
+ 
+Under the leadership of VUMC, the initial system will be developed in iterations.  As the developers complete portions of the 
+application, they will make the updates available to ECSDWG for review.  These reviews are intended to keep the application development on course, addressing any miscommunications early and providing the ECSDWG with a clear understanding of 
+how the work is progressing.  The ECSDWG will review the submi tted product and provide a notice  of acceptance or notes on 
+changes that need to be ma de in a timely manner.   
+ 
+This iterative process will repeat until ECSDWG is satisfied with the software product.  
+Once the parties agree that the software product is in a “Beta”, or near-final state, ECWG members be enlisted for private live  
+testing, including entering new entity profiles, to flesh out remaining bugs and process issues to be fixed before go-live.    
+Once the initial system is complete, the ECSDWG will submit the software product to ECWG fo r final review and approval.  
+Additional timelines and documentation related to the go-live process will be developed, as need ed including potential review 
+and approval process by the FDP Executive Committee. 
+6.0 EQUIPMENT AND SOFTWARE 
+6.1 Equipment 
+ 
+The ECSDWG will be responsible for utilizing currently existing eq uipment either at VUMC or the FDP, or for contracting with 
+a web hosting service for server space.  No additional equipment is anticipated at this time.   
+6.2 Software 
+ The clearinghouse application w ill be built with PHP version 7, an open-source w eb scripting language.  Data will be stored in 
+a MySQL database, also open source.  The user interface will be developed in HTML5, CSS3, and JavaScript.   VUMC will be 
+employing components from standard and commonly accepted libraries such as PHP Symfony and jQuery for Javascript.  PHP dependencies will be managed via the Composer package manager.  The application will be able to run on any web 
+server that supports PHP 7 and has a MySQL database.  The ECSDWG will be responsible for securing the necessary server 
+space.  
+ 
+The application code will use Git version control, and all co mmits will be archived in a designated repository which can be 
+made available to other ECSDWG members.  Source code will be stored on a mutually agreed platform. 
+ 
+  
+  
+F
+ A
+V
+p
+t
+f
+a
+V
+w
+A
+h
+1
+b
+ 
+  
+FDP Expande dAppendix A  
+- Prop
+Vanderbilt p
+profiles. Thi s
+to log in and
+format, and 
+available. W e
+- Feat
+Vanderbilt wi
+with the follo w
+- Onlin
+- Onlin
+o
+o
+o
+- Onlin
+- User a
+o
+o
+- Relia b
+o
+o
+o
+A non-functi o
+http://www.t
+ 
+-Tim
+1st phase wo u
+be integrated
+• Web v
+• Expo r
+• Expo r
+• Syste
+d Clearingho uposal Su m
+roposes to b
+s clearingho u
+ edit their o
+for membe r
+e estimate w
+tures 
+ll work FDP t o
+wing feature s
+e entry of inf
+e retrieval of 
+ Web-base
+ PDF and E x
+ A system- t
+e modificati o
+account man
+ Rights for 
+ Online ad m
+bility for mon
+ Rapid upd
+ Review/a p
+ Reminder 
+onal mock-up 
+hornview.co m
+eline 
+uld be focuse d
+ into a datab a
+view 
+rted to Excel 
+rted as pdf 
+m to system, 
+use – Phase 2 FDP E x
+We
+Va
+mmary 
+build and ho
+use will be w
+wn profile i n
+rs with elect
+we can deliv e
+o determine s
+s: 
+ormation cu r
+organization
+d lookup 
+xcel exports  
+to-system int
+on of data by a
+agement sys t
+organization a
+ministrative i n
+itoring entit y
+ates from da t
+pproval queu e
+system to ke
+of these pro p
+m/fdp 
+d on straight f
+ase.  The inf o
+via API inter f
+Proposalxpand e
+b Dat a
+ander b
+st the onlin e
+web accessi b
+nformation. 
+ronic syste m
+er the com p
+specific featu
+rrently in the 
+al data in m u
+erface for di r
+authorized u s
+tem with 
+al entry and m
+nterface to c r
+y 
+ta entry 
+e for FDP to d
+ep data curr e
+posed featur e
+forward data 
+ormation in t h
+face  
+ed Cle a
+abase P
+bilt Uni v
+e database f
+ble, with use
+ The profile
+ms, a system
+plete featur e
+res for the a p
+completed E x
+ultiple format
+rect electroni c
+sers 
+modification a
+reate, verify, 
+double check 
+ent 
+es (except th e
+access for m e
+he database waringh o
+Propos
+versity
+for the FDP E
+er accounts/ p
+s would be d
+-to-system o
+e set in appr o
+pplication.  I n
+xcel spreads h
+s:  
+c access 
+assigned per 
+expire, and r e
+changes 
+e user accou n
+embers.  The
+would be acc eouse 
+al 
+y 
+Expanded Cl
+passwords f
+downloada b
+option will a
+oximately 4 
+nitially, we e n
+heets 
+user 
+eset user acc
+nt managem e
+ Entity Profil e
+essible onlin eearinghous e
+or each inst
+ble in Excel o
+also be mad e
+months. 
+nvision an ap p
+ounts 
+ent) is availa b
+e spreadshee
+e in four way s
+Page 10 e 
+itution 
+or PDF 
+e 
+plication 
+ble at: 
+ts would 
+s: 
+ 
+FDP Expanded Clearinghouse – Phase 2 Proposal Page 11 
+ 2nd phase would improve data entry and ensure all members have con trol over their own prof ile.  Security is, of 
+course, a concern. 
+• Password protected profiles 
+• Tracking changes, i.e. date last modified, person who last modi fied 
+• Institutions designate their own  editors, not wait on a central ized process 
+- Responsibilities 
+ 
+- Vanderbilt 
+o Will communicate with the FDP lea dership to assure that the app lication meets the 
+organization’s objectives.  
+o Will provide the manpower to desig n and develop the web-based a pplication.  Given other 
+concurrent commitments, we estim ate the development of this sys tem will take approximately 
+4 months.  
+o Will provide ongoing technical support for the application (bug s, enhancements, etc).  
+o If FDP so desires, Vanderbilt will provide server space for hos ting the application.  If FDP decides 
+to have the application hosted on a third-party’s servers, Vand erbilt will work with the hosting 
+provide to assure that it meets the needs of the application de velopers. 
+- FDP 
+o Will communicate with the Vanderb ilt software development team to assure that the 
+application meets the organization’s objectives. 
+o Will purchase a domain name unique  for this project, such as ww w.fdpclearinghouse.org, or 
+provide a routable sub-domain.  This domain will be configured to point to the web servers used 
+for this project. 
+o Will be responsible for routine u ser administration on the webs ite (adding users, resetting 
+passwords, etc.). We anticipate this will be a minimal time com mitment (less than 1 hour per 
+week). 
+ 
+F
+ A
+ 
+S
+ 
+ 
+ 
+ 
+FDP Expande dAppendix B 
+Screen shots o
+d Clearingho uof mock up 
+use – Phase 2 
+ Proposal
+ 
+Page 12  
+ 
+
+F
+  
+FDP Expande d
+d Clearingho u
+use – Phase 2 
+ Proposal
+ 
+Page 13  
+ 
+
+F
+  
+FDP Expande d
+d Clearingho u
+use – Phase 2 
+ Proposal
+ 
+Page 14  

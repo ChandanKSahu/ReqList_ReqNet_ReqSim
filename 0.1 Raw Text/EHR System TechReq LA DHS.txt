@@ -1,0 +1,324 @@
+		 															
+		Yes															
+		No															
+																	
+																	
+																	
+																	
+Requirement #	Requirement	Yes / No															
+																	
+Platform																	
+T-1	"The system shall be based upon proven state-of-the-art technologies. This includes browser-based, server-side architectures, configurable, and a range of industry-standard database, operating system, and programming platforms. "																
+T-2	"The Web-enabled portions of the application shall meet state-of-the-art Internet standards for graphics and design and for speed, reliability, and security for dynamic content and user interaction."																
+T-3	"The system shall provide the ability to maintain multiple operating environments for development, test, training and production."																
+Scalability & Flexibility																	
+T-4	"The system, including programs, database, and ancillary hardware and related software systems shall be able to retain its performance levels when adding additional users, functions, and data."																
+T-5	The system shall be scalable and adaptable to meet future growth and expansion needs.																
+T-6	"The solution functionality and associated business rules shall be configured and re-configured (through tools that do not require ""code"" modifications)."																
+T-7	"The screens shall be highly re-configurable, providing ability to reposition and rename field labels, remove or ?turn-off? unused fields, maintain data, and allow addition of custom-defined fields."																
+T-8	The system shall provide the ability to create and/or modify edits and business rules which determine The acceptance/correctness of data.																
+T-9	The system shall provide the ability for on-line access by any site connected to the organization WAN.																
+T-10	The system shall provide the ability for remote access by authorized individuals (i.e. web based VPN access).																
+Database Management & Architecture																	
+T-11	The system shall use an open relational database management system (RDBMS) to store all organization data.																
+T-12	The database system shall provide Structured Query Language (SQL) capabilities for database queries.																
+T-13	"The system shall allow the database information exchange using current commonly accepted industry formats (e.g. HL7, XML)."																
+T-14	The system shall support common database connectivity protocols such as ODBC.																
+T-15	The system shall provide an automated test script to validate the data after modifications or upgrades.  The tool will support the ability to customize the script and provide a final report to document the validation.																
+T-16	The system shall provide data import functionality to receive standard format data from external parties.																
+T-17	"The system shall provide data export functionality that creates common export file format (e.g. comma delimited, tab delimited, space delimited, quotation delimited, etc.)."																
+T-18	The system shall provide the database backup and recovery tools required to support organization database recovery plan and procedures (note: if a DRP is in place).																
+T-19	"The database system shall provide the following features:
+- Simultaneous access to data by concurrent users
+- Row level Locking
+- Automatic Query Optiomization
+- Views
+- Multiprocessor query execution"																
+T-20	"The system shall support an online data dictionary and table relationships that describe and maintain information on each data element including: data element name and type, description of the data element, and the format of each data element."																
+T-21	"The system shall utilize naming conventions and standards for data elements, entities and tables, programs, report names, etc."																
+T-22	"The system shall utilize utilities for database performance monitoring and tuning that comply with industry standards, including but not limited to tools for table & file maintenance."																
+T-23	"The system shall lock database records based on organization parameters (e.g., at row level, field level, or at the application level)."																
+T-24	The system shall accommodate separate instances of databases.																
+T-25	The system shall support online modifications to database structures with minimal user downtime.																
+T-26	"The system shall allow for data replication including, but not limited to, copying an instance of any database to other organization specified locations (e.g., SAN)."																
+T-27	"The system shall have the ability to roll back any system, database, or any other component(s) impacted within 15 minute increments up to 24hrs, any day in the month, any month in the year, and any year in 30 years."																
+T-28	The system shall provide the ability for the administrator to track user behavior as well as database utilization.																
+T-29	The system shall provide standard data extraction Application Program Interface (API) to allow import and export of data.																
+Data Conversion and Interface																	
+T-30	"The proposer shall provide all services needed to transform, standardize, migrate and load external legacy electronic data in order to establish an initial database suitable for live organization operations."																
+T-31	"The system shall provide the ability to extract required data from organization to produce file(s) that can be sent by FTP to external agencies, including a system automated process of generating, encrypting, and delivering data to external agencies."																
+T-32	The system shall provide the ability to load information from standard file(s).																
+T-33	The system shall provide the ability to perform real-time updates.																
+T-34	The system shall have the capability to queue outbound messages in case a receiving system is down temporarily.																
+T-35	The system shall monitor timeliness of messages and alert users if certain time limits have been exceeded.																
+T-36	"The system shall have the ability to evaluate interface messages for accuracy and completeness, and reject messages that are not constructed properly as well as the capability to generate reports of failed messages."																
+T-37	"The system shall have the capability to analyze, correct and resend messages that have been rejected."																
+System Security Requirements																	
+System Access																	
+T-38	The system shall provide ability to use a single user sign-on for all modules with security configured for each module.																
+T-39	The system shall have the ability for security module to be maintained by an in-house System Administrator																
+T-40	The system shall provide expiration dates for passwords.																
+T-41	The system shall automatically notify users and force them to change passwords on a pre-defined frequency.																
+T-42	"The system shall provide an efficient, flexible way to control and administer multiple levels of user access."																
+T-43	"The system shall have the ability to support web based client access or other internet based client access technologies, with appropriate security access controls."																
+T-44	"System must support password complexity that meets the following requirements:
+- Must contain at least 1 upper and 1 lower case alpha, 1 numeric, and 1 special character each
+-  Minimum password length ? 8 characters
+- Minimum password age ? 2 days
+- Maximum password age ? 90 days
+- Password expire warning ? 14 days
+- Different from the previous 6 passwords used
+- Must not be an English dictionary word
+- Disable accounts after 90 days of inactivity"																
+T-45	"System provides the following password change rules for user accounts:
+-  Passwords can only be changed by the authorized County System Administrator or the associated user 
+- Passwords can be changed by the associated user only once in a 2-day period 
+-  Passwords can be changed by the associated user only once in a 2-day period 
+- Users are re-authenticated before changing passwords
+"																
+T-46	The system shall provide lock-out capability after a pre-defined number of unsuccessful user sign-on attempts.																
+T-47	The password is not displayed as clear text (Password Masking)																
+T-48	System provides integrated security managed in a central accounts database																
+T-49	System allows viewing of list of Users logged on to System in real-time																
+T-50	System allows addition of user-defined messages to logon screen																
+T-51	System integrates with Microsoft Active Directory for authentication and has the capability of notifying the end user of near domain account password expiration date as well as the ability to reset the password through the system?s user interface																
+T-52	System performs secure and seamless logon for all third party integrated systems.																
+T-53	System encrypts passwords before being stored or transmitted.																
+T-54	System has the ability to disallow more than one active session per sign-on identification.																
+T-55	System allows users to re-authenticate and remotely log out of an active user session before logging in at another location.																
+T-56	System requires password re-entry before user is allowed to perform functions predefined as ?high security?.																
+T-57	"System encrypts sensitive data transmitted between clients and servers using Secure Socket Layer (SSL) Certificates, Transport Layer Security (TLS), or by other means "																
+T-58	System provides a web (HTTPS) interface and provides an SSL configuration mechanism.																
+T-59	System restricts users from directly accessing the database.																
+T-60	System allows secure password resets in case passwords are forgotten.																
+T-61	The system shall have the ability to assign application access rights across entire suite of applications at a single point of entry.																
+T-62	System provides reminder alerts to users to reset passwords.																
+T-63	The time for passwords to be changed is predefined as per user?s role and access level. The County standard for users is 90 days.																
+T-64	System provides administrative ability to block users? access during pre-defined off-hours.																
+T-65	System provides the option for multi-factor authentication for users with higher security access.																
+User Profiles/Administration																	
+T-66	"System provides the ability for users to define and store user profile information, including but not limited to, the user?s name, user ID, employee ID, professional designation, etc."																
+T-67	"The system shall have the ability to link the user logon ID to his/her employee number or contractor social security number, as well as to the location or group of locations to which the user is assigned."																
+T-68	"The system shall have the ability to identify the type of single enterprise authentication used for system access, e.g. MS Active Directory."																
+T-69	System provides the ability to define user roles and user groups and associate these with user accounts.																
+T-70	System allows authorized site-specific users to manage site-specific user groups and user accounts up to and including their level of authority.																
+T-71	"Ability for an administrator to delegate authority, by user group, to reset password"																
+T-72	"Ability for an administrator to delegate authority, by user group, to restore system access of locked out user  "																
+T-73	System provides the ability to restrict access based on users? accounts? privileges																
+T-74	System provides the ability to specify roles and privileges based on login locations																
+T-75	"System allows restriction of rights, privileges or access at the user and group level"																
+T-76	"System allows restricting the rights, privileges or access of processes to the minimum required for authorized tasks"																
+T-77	"System allows authorization of administrators to manage restrictions or privileges associated with Users, groups, and processes including:
+- Defining levels of access
+- Assigning levels of access
+- Modifying a level of access
+- Removing a level of access
+- Viewing access levels, privileges and memberships"																
+T-78	"The system shall have the ability to specify roles and control access by role to:
+- Database
+- Module
+- Field
+- Inquirey
+- Report
+- Approval
+- Transaction
+- Table
+- User Site (i.e. location) across all functional areas
+- Period"																
+T-79	The system shall have the ability to display the last date and time the user logged onto the system at the time of logon.																
+T-80	"The system shall have the ability to suspend user access based on a table-driven parameter (i.e., employment status)."																
+T-81	The system shall have the ability to suspend user access based on a pre-set date or based on hospital policy requiring renewal of access approval on a variable basis for non-County employees.																
+T-82	"The system shall have the ability to suspend user-access after an organization defined inactivity period (i.e., 90 days)."																
+T-83	"System allows revocation of the access privileges of a user without requiring deletion of the user:
+- User-based (i.e., access rights assigned to each user)
+-  Role-based (i.e., Users are grouped and access rights assigned to these groups)
+- Context-based (i.e., role-based with additional access rights assigned or restricted based on the context of the transactions, such as time-of-day, workstation-location, emergency-mode, etc.)"																
+T-84	"The system shall have the ability to limit user functionality based on the following access rights:
+- Full
+- Read
+- Write
+- Delete
+- Modify
+- Delete"																
+T-85	System shall allow assigning multiple roles to one user.																
+Input Validation																	
+T-86	"System insures that input validation is applied whenever input is received through user or external data interfaces. The validation approach is to constrain, reject, and then sanitize input.  "																
+T-87	System does not rely on client-side validation. The System design assumes that user input is malicious.																
+T-88	"Data is validated for type, length, format, and range. Data validation is consistent across the System."																
+T-89	"System avoids un-trusted input of file name and file paths.
+- System does not accept file names or file paths from calling functions.
+- Security decisions are not made based on user-supplied file names and paths."																
+T-90	System does not use parent paths when data within the System is being accessed. Attempts to access resources using parent paths are blocked.																
+T-91	"The web server always asserts a character set: a locale and a country code, such as en_US."																
+Authentication																	
+T-92	All system and user accounts are identified.																
+T-93	Web sites are partitioned into un-restricted and restricted areas using separate folders.																
+T-94	System uses least-privileged accounts.																
+T-95	System insures that minimum error information is returned in the event of authentication failure.																
+T-96	"The system shall have the ability to support biometrics and biometrics plus passwords (e.g., fingerprint scan and fingerprint scan plus password)."																
+T-97	"System authenticates the user before any access is allowed to protected resources (e.g., Protected Health Information)"																
+T-98	System authenticates standalone devices before access is allowed to protected resources.																
+T-99	"If Structured Query Language (SQL) authentication is used (e.g., communication between the application server and the database server) credentials are secured in storage and over the wire via Secure Socket Layer (SSL) or IP Security (IPSec)."																
+Authorization																	
+T-100	"Measures are in place to prevent, detect and log unauthorized attempts to access the System."																
+T-101	Rights and privileges are assigned based on authorization roles.																
+T-102	Database restricts access to stored procedures to authorized accounts only.																
+T-103	Direct access to database tables is prohibited.																
+T-104	All account IDs that are used by the System are identified and the resources accessed by each account is known.																
+T-105	Roles are mapped to user and data interfaces. Role rights and privileges are identified and maintained in an access control list.																
+T-106	System resources are mapped to System roles and allowed operations for each role.																
+Configuration Management																	
+T-107	Administration interfaces require strong authentication and authorization.																
+T-108	"Administrator privileges are separated based on roles (e.g., site content developer, system administrator)."																
+T-109	"Remote administration channels are secured (e.g., SSL, VPN)"																
+T-110	Configuration stores are secured from unauthorized access and tampering.																
+T-111	"Configuration credentials and authentication tokens are not held in plain text in configuration files. (e.g., ssh client config file with remote login ID and password.)"																
+T-112	User accounts and service accounts used for configuration management have only the minimum privileges required for the task.																
+Integrity Controls																	
+T-113	Measures are in place to detect unauthorized changes to information.																
+T-114	Measures are in place to protect information from being accidentally overwritten.																
+T-115	"System supports integrity mechanisms for transmission of both incoming and outgoing files, such as parity checks and cyclic redundancy checks (CRCs)."																
+T-116	"Measures are in place to prevent the upload of unauthorized files (e.g., executable files)."																
+"Sensitive Data (e.g., ePHI, Personally Identifiable Information)"																	
+T-117	Sensitive data and secrets are not incorporated in  code.																
+T-118	"Secrets are stored securely using a one-way hash. Database keys, connections, passwords, or other secrets are not stored in plain text."																
+T-119	Sensitive data is not logged in clear text by the System. 																
+T-120	"Database/file encryption for protection of sensitive data fields while the data is at rest (i.e., stored data) is provided."																
+T-121	Protection mechanisms are in place for sensitive data that is sent over the network.																
+T-122	"Sensitive data is not transmitted using insecure protocols, such as FTP, telnet, tftp etc., unless tunneled through an authenticated encrypted connection (e.g. VPN)."																
+T-123	Sensitive data is not stored in persistent cookies.																
+T-124	"Measures are in place to prevent, detect and log unauthorized attempts to access sensitive or confidential data."																
+T-125	System restricts transactions involving financial or sensitive data to authorized user sessions originating on the County Intranet WAN only. Access to such transactions from the Internet is blocked.																
+T-126	System restricts access to financial transactions and other sensitive data by authorized users outside the County Intranet to Read Only mode.																
+T-127	All user sessions involving financial transactions or sensitive data are encrypted using SSL/HTTPS.																
+T-128	System provides administrative ability to block users? access to individual patient records  for privacy reasons																
+Session Management																	
+T-129	SSL is used to protect authentication cookies.																
+T-130	"The system shall provide automatic logout of users when there has been no activity for a pre-defined period, maintaining transaction integrity."																
+T-131	Session lifetime is limited to a pre-specified and configurable duration.																
+T-132	Session state is protected from unauthorized access.																
+T-133	Session identifiers are not passed in query strings.																
+T-134	"Temporary objects are removed from the system, database connections are closed, and memory is released."																
+Timeouts																	
+T-135	System provides an automatic timeout if the session is idle for a pre-specified and configurable duration.																
+T-136	System warns the user before the timeout and prompts the user to re-enter their password.																
+Encryption																	
+T-137	"The system shall have the ability to support 128-bit SSL encryption, or higher, between the client browser and the application tier for any or all modules or sub-modules at organization discretion. Identify security standard (SSL/FIPS encryption). "																
+T-138	Encryption capability for certain data transmissions that require security protection.																
+T-139	Platform-level cryptography is used with no custom implementations.																
+T-140	System provides secure information delivery over the Internet via encryption by using triple-DES (Data Encryption Standard) or the Advanced Encryption Standard (AES)																
+T-141	"Encrypted data delivered over the Internet is transmitted via open protocols (e.g., SSL, XML encryption)"																
+T-142	Cryptographic algorithm and key size for the System?s data encryption requirements is AES 256 bit or stronger.																
+T-143	Encryption keys are secured.																
+T-144	Key management procedure to secure and manage the encryption keys is defined.																
+Parameter Manipulation																	
+T-145	"All input parameters are validated (including form fields, query strings, cookies, and HTTP headers)."																
+T-146	Cookies with sensitive data (e.g. authentication cookies) are encrypted.																
+T-147	Sensitive data is not passed in query strings or form fields.																
+T-148	Security decisions do not rely on HTTP header information.																
+Exception Management/ Error Handling																	
+T-149	System exception handling minimizes information disclosure in case of an exception.																
+T-150	"System returns generic error messages to the client, to avoid disclosure of sensitive information."																
+T-151	System code does not rely on internal system generated error handling. The System provides error-handling processes.																
+T-152	System errors are logged to the error log.																
+T-153	"Private and sensitive data (for example, passwords) are not logged."																
+Audit Trails and Logging																	
+T-154	"Auditing and logging in the System  includes, at a minimum, authenticated access, configuration changes, privileged access such as use of administrative rights, and change of rights and privileges. The parameters logged includes user or system account ID, date/time stamp, event source, IP address, error/event code and type."																
+T-155	"The system shall have the ability to record or capture information about each authorized and/or unauthorized access attempt such as: User ID, workstation, date, time, transaction (menu, screen, file, object), and attempted type of access (read, modify, etc.)."																
+T-156	"System generates an audit record for all activity of a given user (i.e., a trail of all user activity within the System)"																
+T-157	"System generates an audit record for activity associated with a transaction, from creation to completion, including logging of data additions, changes, and deletions   "																
+T-158	"System provides an audit trail and viewable history of all transactions including but not limited to, user?s login ID, date, and time stamp."																
+T-159	System allows selection of transactions to be logged																
+T-160	System allows selection of data elements to be logged in audit records																
+T-161	System allows logging of all user IDs that has used a given function																
+T-162	System allows logging of all user IDs that has updated a given field																
+T-163	"System logs the following information in each audit record:
+- Date and time of the event
+- Component of the System (e.g., software, hardware) where the event occurred
+-  User device or peripheral device involved in transactions
+- Type or transaction
+- User Identity
+- Outcome (success or failure) of the event"																
+T-164	The System tracks the before and after record of modified data elements 																
+T-165	The System restrict system administrator from changing log activity																
+T-166	"The System secures audit records in the following ways:
+-  Allows read access to authorized Users only
+- Protects stored audit records from unauthorized deletion
+- Prevents modifications to the audit records"																
+T-167	"System monitors user audit logs via an automated process, and reports on irregular activity. Irregular activities are identified based on County departments? rules and regulations. The irregular activity reports are customizable."																
+T-168	"System provides the ability to archive records, reports and historic information for predefined timeline based on rules and regulation."																
+T-169	System prevents deleted records from being purged until they have been archived.																
+T-170	System maintains an audit trail of errors and exceptions.																
+T-171	All changes to the System hosting environment are logged and tracked. Reports are available for significant and critical changes and sent for review by a responsible person.																
+Synchronization with Applications or Devices Used in Offline Mode																	
+T-172	"Data collection devices (e.g. ? handheld devices, etc.) synchronize with the System securely using authentication, authorization and encryption mechanisms."																
+Reporting																	
+T-173	"The system shall provide summarized and detailed reports on user access, usage logs, etc."																
+T-174	System provides online reporting capability to authorized County system managers for necessary review and accountability.																
+T-175	System provides error and exception reports.																
+T-176	System provides usage reports.																
+T-177	"System provides configuration, user accounts, roles and privileges reports."																
+T-178	System provides a listing of privileged account holders within the System hosting environment.																
+Reporting and Data Warehouse																	
+T-179	The system shall generate charts and graphs based on report data within the system.																
+T-180	"The system shall generate reports directly to MS Office, Hypertext Markup Language (HTML) or PDF formats, Open Doc, Open XML, etc."																
+T-181	The system shall provide ad hoc and standard query capabilities (with and without input parameters).																
+T-182	"The system shall provide ability to create and maintain a report distribution mechanism with predefined reports (e.g., monthly reports that are specific by role, organization, and location via portal or Web)."																
+T-183	The system shall provide the ability to view previously generated reports by all users or by specific users.																
+T-184	The system shall provide capability to schedule reports to run automatically.																
+T-185	The system shall allow for reporting by exception.																
+T-186	The system shall allow print preview of all reports before printing and have print screen and selective page(s) print functionality.																
+T-187	The system shall be capable of utilizing MS-Excel to download information from the application and upload information into the application.																
+T-188	The system shall allow for user-friendly end-user report creation without requiring technical staff or expertise to create and publish reports within the modules.																
+T-189	The proposer shall provide an Ad Hoc reporting tool. 																
+T-190	The Ad Hoc reporting tool shall be able to access any delivered or added fields in the database.																
+End-user Interface																	
+T-191	The user interface shall integrate information from multiple components into a unified display by business area or work type.																
+T-192	The system shall provide:																
+T-193	"The system shall have a customizable online documentation and training materials such as context-specific help, search capability, organization-specific business process documentation and process maps."																
+T-194	"The Proposer shall allow for field level edit checks for transactions during data entry and provide immediate user feedback, including error messages and possible corrective actions "																
+T-195	The system shall have the ability to design a preferred sequence to make data-entry columns and fields match the order of information in organization source documents.																
+T-196	The system shall allow for the option of auto-fill capability per transaction/field entry throughout all modules																
+T-197	"The system shall have the ability to restrict free form entry (e.g., provide drop down calendar for date field)"																
+T-198	The system shall have the ability to accept mass data entry from an external source																
+T-199	"On-line, interactive help with support for hyperlink technology and industry standard formats (e.g.,ÿHTML file formats)"																
+T-200	Intelligent spell checking of text fields																
+T-201	The system shall have the ability to minimize the necessity of the mouse when user performs data entry tasks																
+T-202	"The system shall present data to users such that a minimum of navigational effort is required, including:"																
+T-203	"The data elements required to complete a job function, whether to inquire/read only or data entry must be readily available."																
+T-204	The user interface shall integrate information from multiple components into a unified display by business area or work type.																
+Content and Document Management																	
+T-204	Capture system-generated documents and store them in virtual property or licensee folders.																
+T-205	The system shall store electronic forms.																
+T-206	The system shall scan and store imaged documents and electronic files.																
+T-207	The system shall enable indexing and searching of documents by a variety of user-defined metadata attributes.																
+T-208	The system shall support for full text search																
+T-209	The system shall have built-in viewers/converters for a wide variety of file types.																
+T-210	The system shall enable attachment of documents to e-mails and e-mail distribution lists.																
+T-211	"The system shall store location identification of paper documents (attributes shall minimally include folder, box, and physical location)."																
+Redundancy & Business Continuity																	
+T-212	The Proposer shall provide a recovery environment to maintain business continuity																
+System Capacity & Performance																	
+T-213	The system shall be able to handle an average transaction load with an average CPU utilization of no more than 35%-40% of the CPU capacity. The peak CPU utilization shall never exceed 70% of CPU capacity at any given time. 																
+T-214	The system shall have a response time where the average transaction on the server needs to occur on average less than 1 second. The response time for the most common requests to reach a user shall not exceed 3 seconds.																
+T-215	The solution shall maintain 99.9% availability ? including planned maintenance.																
+T-216	The solution shall track system uptime and transaction response times in order to demonstrate operation within acceptable levels.																
+T-217	"The solution shall complete 100% of simple, single-screen online inquiry transactions in under one second, during peak usage."																
+T-218	"The solution shall complete an average of 99% of all online update transactions in under 5 seconds over any 60-minute period, during peak usage."																
+Hosting																	
+T-219	"The Proposer shall provide the facility required to host the computing and network environment, including appropriate physical security, required third-party software, and 24x7 staff support and monitoring environmental conditions (e.g. HVAC, port, fire detection, suppression, moisture, humidity and temperature."																
+T-220	"The Proposer shall provide and manage all required infrastructure and network equipment within the data center, such as servers, routers, switches, load balancers and consoles."																
+T-221	Allow access to the EMH solution over the Internet and provide secure and confidential storage of all information transmitted to and from the LA DHS.																
+T-222	"The Proposer shall monitor the computing systems (24 x 7) and communications circuits to report and alert on compromised system health, security, availability and capacity. "																
+T-223	"The Proposer shall review security notifications and alerts relevant to the hosting platform (e.g., notifications of bugs, attacks, patches), and apply as appropriate to maintain the highest level of defense."																
+T-224	The Proposer shall provide adequate firewall protection in order to secure Personal Data and other Confidential Information users of the EHR from unauthorized access by third parties.																
+T-225	"The Proposer shall test application enhancements, fixes, and upgrades and assure the integrity of the resulting data."																
+T-226	"The Proposer shall provide and maintain a method for proper escalation of issues and log all incidents, problems and error corrections as agreed to with LA DHS."																
+T-227	"The Proposer shall adhere to service levels defined with LA DHS germane to availability, response time based on severity level, credits and other key hosting metrics."																
+T-228	The Proposer shall meet performance requirements detailed in System Capacity & Performance (Requirements T-213 through T-218).																
+Systems Operations Support and Error Handling																	
+T-229	The EHR System shall provide complete audit features for all transactions in all modules of the software solution.																
+T-230	The EHR System shall be able to perform real-time data redundancy on independent storage devices																
+T-231	simultaneously and switch over to the mirror database(s). 																
+T-232	The system shall take advantage of network HA and redundancies and switch over to mirror databases without impact on the user.																
+T-233	The system shall provide system failovers or database redundancies.

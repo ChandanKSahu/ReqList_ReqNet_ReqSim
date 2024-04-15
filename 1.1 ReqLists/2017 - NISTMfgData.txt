@@ -1,0 +1,59 @@
+3.1.1	The UI for the VDS must comply with the requirements of the application that executes the MTConnect Agent as deﬁned by the standard documentation [1].
+3.1.2.1	All pages of the QDR UI should employ an organizational method that separates the major sections of the application for easy access.
+3.1.2.2	The user should be able to determine the sections of the QDR UI currently being viewed using visual cues, such as bold fonts, arrows, and highlighting.
+3.1.2.3	The application’s major sections should be available from any page of the QDR and include the following pages: Query, Help, Introduction, Administration, Login, and Logout.
+3.1.2.4	The user must be presented with a login page when accessing any page, expect a landing or front page, as an anonymous user. Administrative tasks and running queries must have a UI.
+3.1.2.5	The UI for administrative tasks must included the ability to manage Users, manage Groups, manage permissions, manage data templates, manage group assignments, and manage query templates.
+3.1.2.6	The UI for running queries may include the ability to query the database using query templates deﬁned by the administrator.
+3.1.2.7	All pages should use a consistent visual theme. Pop-ups displaying notiﬁcations, error messages, or warnings should use the same theme and template as the rest of the application.
+3.2.1	All server-side components must execute on server-class computers. All client-side components must execute on workstation-class and personal-class computers.
+3.3.1.1	The software interface should follow the Model-View-Controller (MVC) model for rendering and modeling data objects.
+3.3.2	The interface must be able to connect to a database to store XML schema deﬁned using XSD and data streams.
+3.3.3	Source and destination formats for data must include XML and may also include: Extensible Stylesheet Language Transformation (XSLT), JavaScript Object Notation (JSON), Comma Separated Value (CSV), and American Standard Code for Information Interchange (ASCII).
+4.1.1.1	The VDS component of the software system must comply with all enumerated requirements for an application to execute an MTConnect Agent in the standard documentation [1].
+4.1.2.1	The QDR component of the software system must retrieve data from an indexed database based on a user-deﬁned query request via a template-driven web-based user interface, an endpoint query, and/or a RESTful API call.
+4.1.2.2	The QDR must provide the administrator with the ability to predeﬁne queries for use by non-administrator users.
+4.1.2.3	The QDR must enable the administrator to limit query results by date ranges and/or number of records.
+4.1.2.4	When conﬁgured in a query by the administrator, the QDR must provide the user a list of all available devices in the database and all available associated data elements for that device.
+4.1.2.5	The user may be provided the ability to select what data elements to retrieve via the predeﬁned query.
+4.1.2.6	The user must have the ability to select the time range and/or number of records for the data to retrieve via the query.
+4.1.2.7	The user must have the ability to retrieve and view data as formatted ASCII CSV, JSON, or XML.
+4.1.2.8	The user must have the ability to download retrieved data as ASCII CSV, JSON, or XML.
+4.2.1.1	The software system must provide a function to store and manage data in a database according to a data-structure template (e.g., schema, ontology).
+4.2.2.1	The software system must provide a RESTful API for curating data in the database.
+4.2.2.2	The software system must provide the data curator with the ability to add data to the database in accordance with a stored data-structure template.
+4.2.2.3	The software system may provide all curation functionality via a web-based user interface.
+4.3.1.1	The software system must provide a function to manage user accounts and data-structure templates (e.g., schemas, ontologies).
+4.3.1.2	The minimum user account types must be: (1) data explorer, (2) data curator, and (3) administrator.
+4.3.1.3	The data-explorer account type will grant access to end-users for the purpose of interacting with the QDR component of the software system.
+4.3.1.4	The data-curator account type will grant access to a user for the purpose of storing and managing data in the database.
+4.3.1.5	The administrator account type will grant super user access to a user for the purpose of managing the software system.
+4.3.1.6	The administration function of the software system is a medium priority.
+4.3.2.1	The software system must provide a web-based UI to CRUD manage users.
+4.3.2.2	The software system must provide the administrator with the ability to CRUD manage users.
+4.3.2.3	The software system must provide the administrator with the ability to CRUD manage groups.
+4.3.2.4	The software system must provide the administrator with the ability to CRUD manage user group assignments.
+4.3.2.5	The software system must provide the administrator with the ability to CRUD manage permissions assigned to users and groups.
+4.3.2.6	The software system must provide a web-based user interface for CRUD manage data templates.
+4.3.2.7	The software system must provide the administrator with the ability to CRUD manage data-structure templates using the XSD format.
+4.3.2.8	The software system may provide all administration functionality via a RESTful API.
+4.3.2.9	The software system must allow the administrator to create a Universally Unique Identiﬁer (UUID) associated with a device.
+4.3.2.10	The software system must require a UUID to be provided with any data streams uploaded.
+5.1.1	The VDS must provide available fresh data to the requesting client at a rate of no less than 1 Hz.
+5.1.2	The response-time for the QDR should be minimized using industry recommended practices.
+5.1.3	All other performance related to storage, memory, and processing should follow industry recommended practices to ensure resource requirements are minimized.
+5.2.1	There are no requirements for Mean Time between Failures (MTBF) or Mean Time to Failures (MTTF) for this version of the software system deﬁned in this SRS.
+5.2.2	However, in accordance with industry recommended practices, the software system should undergo feature testing, load testing, and regression testing prior to release and/or deployment.
+5.3.1	Reasonable eﬀorts should be made to ensure the software system is available with an uptime of 95%. The uptime is calculated as the percentage of time during the year in which the software system was available to the public. A 95% uptime percentage allows for an average of 18.25 days per year, 36 hours per month, or 8.4 hours per week of downtime.
+5.4.1	The software system deﬁned in this SRS must follow industry recommended practices for secure software development.
+5.4.2	At a minimum, the software development must practice the principle of least privilege for deﬁning access-level requirements of the software system and its associated services.
+5.4.3	The production-release version of the software system must pass an automated dynamic application security testing tool (e.g., HP WEBINSPECT).
+5.5.1	The architecture, design, implementation, and documentation of the application must minimize the maintenance costs of the software system.
+5.5.2	The maximum person-time required to ﬁx a security defect (including regression testing and documentation update) must not exceed two person days.
+5.5.3	Otherwise, the software system must be taken oﬄine or the oﬀending feature disabled.
+5.5.4	The average person-time required to make a minor enhancement (including testing and documentation update) must not exceed one person week.
+5.6.0.1	The system must have at least a Super-User role and a User role deﬁned for accessing and interacting with the system. Additional roles may be deﬁned for the system as long as the business rules for the administrator and user roles are satisﬁed.
+5.6.0.2	At a minimum, the Super-User role must account for the data explorer , data curator , and administrator account-type requirements described in Section 4.3.
+5.6.0.3	At a minimum, the User role must account for the data explorer account-type requirements described in Section 4.3.
+5.6.1	The following business rules must apply to the administrator and user roles. SuperUserRole/001 Maintains all VDS and QDR back-end system conﬁgurations; SuperUserRole/002 Maintains all VDS and QDR schemas and templates; SuperUserRole/003 Maintains all user groups and user accounts; SuperUserRole/004 Maintains all QDR predeﬁned queries
+5.6.2	Connects to and retrieves and reads data from VDS and QDR in conformance with the maintained VDS and QDR schemas and templates

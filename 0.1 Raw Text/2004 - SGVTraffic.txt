@@ -1,0 +1,472 @@
+
+ 
+December 23, 2004
+Integration System 
+User Requirements  
+(Deliverable 2.3.6.1)  
+& 
+Integration System 
+Functional Requirements  
+(Deliverable 2.3.7.1)  
+Draft
+Prepared by:
+ 
+ 
+ 
+SAN GABRIEL VALLEY TRAFFIC FORUM 
+ 
+ 
+Deliverables 2.3.6.1 – Integration System User Requirements (Draft) 
+Deliverable 2.3.7.1 – Integration System Functional Requirements (Draft)  
+ 
+ 
+ 
+ 
+DRAFT 
+   
+ 
+Prepared for: 
+Los Angeles County Department of Public Works 
+ 
+ 
+  
+Prepared by: 
+ 
+ 
+ 
+626 Wilshire Blvd. 
+Suite 818 
+Los Angeles, California 90017 
+ 
+  
+December 23
+rd, 2004
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page i  December 23rd, 2004    
+ TABLE OF CONTENTS PAGE# 
+1. INTRODUCTION............................................................................................................. 1-1  
+1.1 LA County Traffic Forums .................................................................................................... 1-1  
+1.2 San Gabriel Valley Traffic Forum ......................................................................................... 1-1  
+1.3 Countywide Information Exchange Network (IEN).............................................................. 1-1  
+1.4 Project areas & Agencies Involved........................................................................................ 1-3  
+2. OVERVIEW...................................................................................................................... 2 -1 
+2.1 Purpose of Document............................................................................................................ .2 - 1 
+2.2 Referenced Documents.......................................................................................................... 2 -1 
+2.3 Review of the Requirements Process..................................................................................... 2-1  
+2.4 Definitions .................................................................................................................... ......... 2-2  
+3. INTEGRATION SYSTEM REQUIREMENTS ............................................................ 3-1  
+3.1 Implementation of Requirements........................................................................................... 3-1  
+3.2 Security Requirements.......................................................................................................... .3 - 2 
+3.3 Database....................................................................................................................... .......... 3-3  
+3.4 Operational Requirements ..................................................................................................... 3- 3 
+3.4.1 Command/Data Interface ............................................................................... 3-3  
+3.4.2 IEN Servers ................................................................................................. 3-5  
+3.4.3 Networking .................................................................................................. 3-7  
+3.5 Maintenance Requirements.................................................................................................... 3-7  
+3.6 Training Requirements .......................................................................................................... 3-8 
+APPENDIX A – ACRONYMS/DEFINITIONS..................................................................... A-1  
+ 
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page 1-1  December 23rd, 2004  1. INTRODUCTION 
+1.1 LA COUNTY TRAFFIC FORUMS 
+The Los Angeles County Department of Public Works (County) Traffic Forum Program has 
+proven successful in creating institutional infrastructure to coordinate the activities of the Agencies responsible for traffic signal operations in LA County.  These Traffic Forums allow groups of bordering Agencies to work together to promote inter-Agency cooperation.  The Traffic Forums have enabled funding to be targeted at infrastructure improvements along arterial and arterial/freeway corridors in the County’s sub-regions.  Such projects are a critical part of what will eventually be a network of integrated Intelligent Transportation Systems (ITS) projects in LA County and in Southern California. 
+1.2 SAN GABRIEL VALLEY TRAFFIC FORUM 
+The San Gabriel Valley Traffic Forum (SGVTF) is one such project that will result in arterial 
+infrastructure improvements within the project boundaries.  The SGVTF project area ranges from Cities bordering the CA SR 110 and I-710 freeways to the west, I-210 freeway to the north, CA SR 57 freeway to the east, and the CA SR 60 freeway to the south.  It encompasses 24 municipalities as well as unincorporated portions of LA County.  The traffic signals in the Region are operated by many of the individual Agencies, the County, and Caltrans District 7. 
+The goal of the SGVTF is to design, develop, and deploy an Advanced Traffic Management 
+System (ATMS) specifically tailored to each Agency’s operations in the Corridor so that traffic signals can be synchronized and ITS systems integrated across jurisdictional boundaries.  The SGVTF project focuses on the specific needs of each Agency to manage their ATMS and recommends improvements to field infrastructure (e.g., controllers, detection systems, communications, etc.) and centralized Traffic Control Systems (TCSs) and/or Transportation Management Centers (TMCs) to meet those requirements.  When the SGVTF is successfully completed, each of the Agencies responsible for traffic signal operations will have full access to an ATMS that monitors and controls the traffic signals within their jurisdiction.  In addition, Agencies will be able to synchronize their signals and exchange traffic information in real-time with neighboring Agencies.  This will allow the Agencies to respond to recurrent and non-recurrent congestion in a coordinated fashion across jurisdictional boundaries. 
+1.3 COUNTYWIDE INFORMATION EXCHANGE NETWORK (IEN) 
+Developed by the County, the Countywide Information Exchange Network (IEN) is the 
+integrated system framework that connects all of the individual Agency ATMSs into a Regional network to support the operational goals identified above.  As shown in Exhibit 1.1, the Countywide IEN supports traffic signal operations in three (3) levels: 
+• Local Level 
+• Comprises day-to-day traffic signal operations and maintenance (O&M) activities 
+carried out by the individual Agency 
+• Includes activities such as signal timings, equipment monitoring, response to local traffic conditions and events, etc. 
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page 1-2  December 23rd, 2004  Exhibit 1.1 – Countywide IEN 
+ 
+• Corridor Level 
+• Supports inter-Agency coordination and joint signal operations within the 
+particular Traffic Forum (or Sub-Region) 
+• Includes activities such as signal coordination across jurisdictional boundaries, 
+monitoring and exchange of local traffic data throughout the Corridor, joint response to traffic conditions, incidents, and events that affect more than one 
+jurisdiction, etc. 
+• Regional Level 
+• Permits arterials of Regional significance to be monitored, managed, and controlled as a single entity 
+• Supports multi-Agency, cross-Corridor data exchange permitting a Countywide response to traffic conditions and major events 
+• Facilitates communications between systems/Agencies not part of a Traffic Forum (e.g., Caltrans, LADOT, etc.). 
+The SGVTF assumes the availability of the Countywide IEN at the Corridor and Regional levels.  
+Therefore, the SGVTF project is focused on the selection of TCSs and the integration of those systems to the Countywide IEN at the local level.  The eventual ATMS design for the SGVTF will take into account the interface to the IEN and its requirements at the Local level and encompass the following six (6) core components: 
+
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page 1-3  December 23rd, 2004   
+• ATMS and/or TCS (Individual Agency) 
+• Detection and Surveillance 
+• TMC and/or W/S Layouts (ATMS and/or IEN) 
+• Communications Network 
+• SGVTF Participation/Coordination (City-specific and/or SGVTF-Regional integration) 
+• Operations & Maintenance (O&M) 
+The Countywide IEN comprises the series of computer servers, communications, networks, 
+graphical user interface (GUI) displays, etc. that integrates these components for the collection/transfer of data to support Corridor and Regional functions throughout LA County. 
+1.4 PROJECT AREAS & AGENCIES INVOLVED 
+The SGVTF Project encompasses several jurisdictions.  Furthermore, it will be integrated, or 
+have the ability to integrate with other projects and existing systems in the Region through the Countywide IEN.  SGVTF Project Stakeholders include 24 local Agencies, the County, and Caltrans District 7 as the table below indicates: 
+City of Arcadia City of Alhambra 
+City of Azusa City of Baldwin Park 
+City of Bradbury City of Covina City of Duarte City of El Monte 
+City of Glendora City of Irwindale 
+City of La Puente City of Monrovia City of Montebello City of Monterey Park 
+City of Pasadena City of Rosemead 
+City of San Dimas City of San Gabriel City of San Marino City of Sierra Madre 
+City of South El Monte City of South Pasadena 
+City of Temple City City of West Covina LA County Dept. of Public Works Caltrans District 7 
+ 
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page 2-1  December 23rd, 2004  2. OVERVIEW 
+2.1 PURPOSE OF DOCUMENT 
+This document represents the following deliverables: 
+• Deliverable 2.3.6.1 – Integration System User Requirements (Draft) 
+• Deliverable 2.3.7.1 – Integration System Functional Requirements (Draft) 
+The above sub-tasks within the SGVTF’s Task 2.3 – Operational Concept and System 
+Requirements were performed in parallel due to the close nature of the work activities involved 
+within each.  Due to the fact that Functional requirements are inter-related with User requirements, both have been combined into a single document. 
+The objective of this report is to identify integration system User and Functional requirements 
+for the SGVTF.  The focus of these requirements is on back-end functionality supporting Center-to-Center (i.e., inter-jurisdictional) operations.  The intent is that these requirements will form the basis for the detailed design and implementation of the ATMS improvements within the SGVTF.  The success of the Project will be dependent upon each involved Agency's active participation in identifying critical issues and implementing systems to respond to these issues.  In previous tasks, the TransCore Team investigated/analyzed the existing ITS system inventory, identified operational objectives and system needs, developed the concept-of-operations for the SGVTF Project Stakeholders, and documented various ATMS User, Functional, and Facility requirements.  Building upon these findings, this document defines the integration system User and Functional requirements for the SGVTF Agencies so that systems can be designed and implemented that will support and address these needs. 
+2.2 REFERENCED DOCUMENTS 
+The following documents have been used as reference material in the preparation of this report: 
+• San Gabriel Valley Traffic Forum Project 
+• Deliverable 2.1.2 – Operational Objectives 
+• Deliverable 2.2.2 – System Needs 
+• Deliverable 2.3.1.1 – Concept-of-Operations 
+• Deliverables 2.3.2.1 & 2.3.3.1 – ATMS User & Functional Requirements 
+• Deliverable 2.3.4.1 – Typical Local City Traffic Signal Control Site Facility and 
+Computer System Requirements Report 
+• I-5/Telegraph Road Corridor Project 
+• Deliverable 3.3.2 – Integration System User Requirements 
+• San Gabriel Valley Pilot Project  
+• System Design Report (Final, Version 1.0) 
+2.3 REVIEW OF THE REQUIREMENTS PROCESS 
+The User Requirements represent the first layer of requirements for the SGVTF Project.  The 
+User Requirements specify the capabilities of the system from the User’s perspective in terms a User can understand.  This generates a common understanding of the systems by both the Users as well as developers. 
+Integration System Requirements – Draft  
+  
+ San Gabriel Valley Traffic Forum  Page 2-2  December 23rd, 2004  Once the User Requirements have identified the desired capabilities of the system (with respect 
+to integration), the second layer of requirements is the development of the Functional Requirements.  Typically, the Functional Requirements identify the elements of the system that are required to implement the User requirements.  This procedure enables a systematic approach to the first level of system architecture. 
+The Functional Requirements describe the major system functions for each of the core system 
+integration components.  In addition, all required system capabilities are expressed using “shall” statements to further indicate what the system must do and/or accomplish. 
+The Functional Requirements presented in this report comprise a combination of the 
+requirements for the Agencies in the SGVTF area.  Preparing the Functional Requirements for a specific system usually comprises the selection of the relevant requirements based upon the information contained in the User Requirements that detail Agency-specific features. 
+2.4 DEFINITIONS 
+Within this document, the following definitions are used: 
+• LCCS (Local City Control Site) 
+• All of the IEN and ATMS (if any) system components located at the local Agency 
+• IEN (Information Exchange Network) 
+• The hardware, software, and networking elements/components that facilitate the 
+data collection, transfer, and management to support multi-jurisdictional traffic 
+and incident management in the SGV and throughout LA County 
+• ATMS System 
+• The SGVTF ATMS elements/components that are controlled and operated by a centralized computer system 
+• Users 
+• SGVTF ATMS Project Stakeholder Agencies that use the System 
+• Includes operators, maintenance technicians, operational supervisors, etc. 
+• It should be noted that not all Users will have the same operational responsibilities or authority for control or operations of the ATMS 
+• Administrators 
+• Users who maintain ultimate authority on system control, operations, and maintenance of the system and system elements over their own jurisdictions 
+• Other Users 
+• Users who have no operational responsibilities and authority for control and operations of the system and the system elements 
+The control and operations of the ATMS and/or IEN must be governed by system hierarchy 
+levels, priorities, standard operating policies and procedures, and Memoranda of Understandings (MOUs).  These issues must be addressed during detail design for final agreement by all Project Stakeholders. 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-1  December 23rd, 2004  3. INTEGRATION SYSTEM REQUIREMENTS 
+The following sub-sections identify the key User and Functional requirements for achieving 
+traffic signal synchronization within the SGVTF Project area with respect to the back-end operations.  (Requirements describing the front-end functionality of the ATMS and IEN systems have been developed in previous documents [see Section 2.2] and communications will be addressed in Deliverable 2.3.8  - Communications User and Functional Requirements Report .) 
+Each sub-section is made-up of relevant User requirements and derived Functional requirements.  
+Functional requirements have been derived from the documents identified in Section 2.2, the Countywide IEN program, and current industry standards and best practices. 
+The following numbering convention is adopted in this document with regards to the 
+requirement numbers.  The alpha-numeric system by which the requirements are listed will be “type (INTG) “subject”-“requirement”, such as “INTG-DB-U01”, for integration requirements, database management, User requirement #1.  The first Functional requirement in the same section will be listed as “INTG-DB-F01 and so on. 
+The requirements have been grouped into the classifications that follow in order to provide better 
+ease of reference for the reader as well as to co-locate similar and/or associated requirements: 
+• Security Requirements  – Groups together requirements controlling who can use the 
+IEN, and what they can do once in.  
+• Database Requirements  – Groups together requirements that describe what 
+functionality the IEN database(s) need to provide. 
+• Operational Requirements  – Groups together requirements describing how the IEN will 
+support its inter-jurisdictional goals via the Command/Data Interface (CDI) & Site 
+Server, network(s), and servers. 
+• Maintenance Requirements  – Groups together requirements pertaining to the on-going 
+maintenance of the IEN components.  
+• Training Requirements  – Groups together IEN training-related requirements.  
+3.1 IMPLEMENTATION OF REQUIREMENTS 
+Please note that the timeframe in which a requirement is implemented is not addressed in this 
+document.  Many components of the IEN have already been built and deployed within the San Gabriel Valley Pilot Project (SGVPP).  Not all of the requirements in the sections that follow have been implemented in the SGVPP version of the IEN or TCS systems/components, but should be realized in subsequent rollouts.  Those future requirements will be shown in italics  
+and the timing of the implementation of the future requirements has not yet been determined. 
+ 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-2  December 23rd, 2004  3.2 SECURITY REQUIREMENTS 
+User Requirements 
+INTG-SE-U01 Each User shall have a unique account (logon ID and password) within the 
+IEN to be able to access IEN components and resources. 
+INTG-SE-U02 User authentication shall be managed centrally, allowing administrators to 
+control access to all systems within the IEN. 
+INTG-SE-U03 Users shall only be able to access IEN systems and resources to which they 
+have been given permission to do so. 
+INTG-SE-U04 The IEN shall maintain a log of all operational change requests. Functional Requirements INTG-SE-F01 A valid logon ID and password shall be required to gain access to the IEN 
+system and User-accessible components. 
+INTG-SE-F02 The IEN shall support the following User roles to provide different User 
+access levels: 
+• Administrator: Add, modify, and remove system Users, resources, and privileges. 
+• Operator: Privilege-based access to system resources. 
+• Guest: Read-only access to select system resources. 
+INTG-SE-F03 The IEN shall support the ability to create groups of Users with similar 
+access needs and levels and assign permissions to the group (e.g., Sub-Regional- or Agency-level permissions, etc.). 
+INTG-SE-F04 The IEN shall support the following resource access levels: 
+• Read: the ability to view data from a resource. 
+• Command: the ability to issue commands to a resource. 
+INTG-SE-F05 The IEN shall deny access to system resources by default. 
+INTG-SE-F06 The IEN shall log the date, time, User, and command for each request to 
+change the operational status of any traffic system component. 
+INTG-SE-F07 All data records shall contain information regarding the last modification 
+to that record (who and when). 
+INTG-SE-F08 A record deleted by an authorized User shall not be removed from the 
+database, but tagged for deletion and not referenced in general system queries.  A separate task/process run by an IEN Administrator will be required to actually remove these records from the database. 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-3  December 23rd, 2004  3.3 DATABASE 
+User Requirements 
+INTG-DB-U01 The IEN shall maintain ATMS information in a COTS Database 
+Management System (DBMS) within the system. 
+INTG-DB-U02 The DBMS shall provide User-accessible data management tools. Functional Requirements INTG-DB-F01 The DBMS shall have the ability to perform data archival. INTG-DB-F02 The DBMS shall have the ability to perform data backup and recovery. INTG-DB-F03 The DBMS shall have the ability to perform data manipulation (edit, 
+delete, etc.) using standard SQL directives. 
+INTG-DB-F05 The DBMS shall have the ability to perform ad-hoc and stored queries 
+using standard SQL directives. 
+INTG-DB-F06 The DBMS shall perform automated and ad-hoc system diagnostics and 
+provide status reports. 
+INTG-DB-F07 The DBMS shall notify selected Administrators when automated 
+diagnostics show potential problem(s). 
+INTG-DB-F08 The DBMS shall manage resource configuration data. INTG-DB-F09 The DBMS shall manage alarm condition data. INTG-DB-F10 The DBMS shall manage intersection controller communications statistics 
+data. 
+INTG-DB-F11 The DBMS shall manage detector volume, occupancy, and speed 
+measurement data. 
+INTG-DB-F12 The DBMS shall manage scenario response plan data. INTG-DB-F13 The DBMS shall allow automatic and ad-hoc operational reports. INTG-DB-F14 Administrators shall be able to specify the retention period for data stored 
+in the DBMS. 
+3.4 OPERATIONAL REQUIREMENTS 
+3.4.1 Command/Data Interface 
+The requirements that follow describe the major desired functionality of the Command/Data 
+Interface (CDI), the software interface between a local Agency's ATMS/TCS and the IEN.   
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-4  December 23rd, 2004  User Requirements 
+INTG-OP-U01 The CDI shall process/transfer traffic system equipment control and status 
+data between an Agency ATMS and the IEN. 
+Functional Requirements INTG-OP-F01 The CDI shall process/transfer phase indication status data from an Agency 
+ATMS to the IEN. 
+INTG-OP-F02a The CDI shall process/transfer timing plan status data from an Agency 
+ATMS to the IEN. 
+INTG-OP-F02b The CDI shall process/transfer timing plan control data from the IEN to an 
+Agency ATMS. 
+INTG-OP-F03a The CDI shall process/transfer detector speed data from an Agency ATMS 
+to the IEN. 
+INTG-OP-F03b The CDI shall process/transfer detector volume data from an Agency 
+ATMS to the IEN. 
+INTG-OP-F03c The CDI shall process/transfer detector occupancy data from an Agency 
+ATMS to the IEN. 
+INTG-OP-F04 The CDI shall process/transfer video detection images from an Agency 
+ATMS to the IEN (if the function is available through the ATMS). 
+INTG-OP-F05a The CDI shall process/transfer CCTV images from an Agency ATMS to the 
+IEN (if the function is available through the ATMS). 
+INTG-OP-F05b The CDI shall process/transfer CCTV control data from the IEN to an 
+Agency ATMS (if the function is available through the ATMS). 
+INTG-OP-F06a The CDI shall process/transfer dynamic message sign status data from an 
+Agency ATMS to the IEN (if the function is available through the ATMS). 
+INTG-OP-F06b The CDI shall process/transfer dynamic message sign control data from 
+the IEN to an Agency ATMS (if the function is available through the ATMS). 
+INTG-OP-F07a The CDI shall process/transfer trailblazer status data from an Agency 
+ATMS to the IEN (if the function is available through the ATMS (if the function is available through the ATMS). 
+INTG-OP-F07b The CDI shall process/transfer trailblazer control data from the IEN to an 
+Agency ATMS (if the function is available through the ATMS). 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-5  December 23rd, 2004  INTG-OP-F08a The CDI shall process/transfer transit-related status data (LRT, BRT, etc.) 
+from an Agency ATMS to the IEN (if the function is available through the ATMS). 
+INTG-OP-F08b The CDI shall process/transfer transit control data from the IEN to an 
+Agency ATMS (if the function is available through the ATMS). 
+INTG-OP-F09 The CDI shall process/transfer Agency ATMS traffic detection and signal 
+data to the IEN within one second of receiving a request for the data from the IEN (or as limited by the capabilities of the ATMS). 
+INTG-OP-F10 The CDI shall process/transfer commands from the IEN to an Agency 
+ATMS within 10 seconds of receiving the command (or as limited by the capabilities of the ATMS). 
+3.4.2 IEN Servers 
+The requirements that follow describe the major desired functionality by the IEN Servers to 
+support inter-jurisdictional operations utilizing the IEN. 
+User Requirements INTG-OP-U02 The IEN shall manage the seamless and bi-directional transfer of traffic 
+and incident management data and control information between member Agencies. 
+INTG-OP-U03 The IEN Regional Server shall provide an interface that external (non-
+Traffic Forum) Agencies can use to access IEN traffic and incident management data. 
+INTG-DB-U04 The IEN shall be able to manage the supported number of ITS devices 
+within each Sub-Region. 
+Functional Requirements INTG-OP-F11 The IEN Regional Server shall process/transfer traffic signal monitoring 
+and control data between IEN Corridor Servers. 
+INTG-OP-F12 The IEN Regional Server shall process/transfer incident management data 
+between IEN Corridor Servers. 
+INTG-OP-F13 The IEN Regional Server shall process/transfer equipment status and 
+control data between IEN Corridor Servers. 
+INTG-OP-F14 The IEN Regional Server shall process/transfer traffic detection/congestion 
+data between IEN Corridor Servers. 
+INTG-OP-F15 The IEN Regional Server shall process/transfer signal coordination data 
+between IEN Corridor Servers. 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-6  December 23rd, 2004  INTG-OP-F16 The IEN Regional Server shall process/transfer event coordination data 
+(planned and unplanned) between IEN Corridor Servers. 
+INTG-OP-F17 The IEN Regional Server shall process/transfer signal timing plan data 
+between IEN Corridor Servers. 
+INTG-OP-F18 The IEN Regional Server shall process/transfer scenario response plan 
+data between IEN Corridor Servers. 
+INTG-OP-F19 The IEN Regional Server shall process/transfer CCTV images and control 
+between IEN Corridor Servers. 
+INTG-OP-F20 The IEN Corridor Server shall process/transfer data between all Local 
+Agency IEN Site Servers within the Sub-Region for each of the data types described in INTG-OP-F11 through INTG-OP-F19. 
+INTG-OP-F21 The IEN shall distribute requested real-time signal data at a rate of once 
+per second. 
+INTG-OP-F22 The IEN shall distribute requested intersection configuration data and 
+detector data at a rate of once per minute. 
+INTG-OP-F23 The IEN shall distribute scenario plan, incident, and planned event data at 
+a rate of at least once per minute. 
+INTG-OP-F24 The IEN Regional Server shall transfer Caltrans traffic and incident data, 
+received through the external interface, to all requesting IEN Sub-Regions and Agencies, as per the Agency agreement. 
+INTG-OP-F25 The IEN Regional Server shall transfer LADOT/ATSAC traffic and incident 
+data, received through the external interface, to all requesting IEN Sub-Regions and Agencies, as per the Agency agreement. 
+INTG-OP-F26 The IEN shall manage the following devices within each Sub-Region of 
+the system: 
+INTG-OP-F26a 
+• Nine (9) ATMSs 
+INTG-OP-F26b • 18 IEN Workstations 
+INTG-OP-F26c • Nine (9) IEN Site Servers 
+INTG-OP-F26d • One (1) IEN Corridor Server 
+INTG-OP-F27 The IEN shall manage the following ITS devices within each Sub-Region 
+of the system: 
+INTG-OP-F27a • 2,000 intersection controllers 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-7  December 23rd, 2004  INTG-OP-F27b • 2,000 detectors 
+INTG-OP-F27c • CCTV 
+INTG-OP-F27d • CMS 
+INTG-OP-F27e • HAR 
+3.4.3 Networking 
+The requirements that follow describe the major networking requirements for the IEN 
+components.  (ATMS-specific networking requirements will be determined in subsequent tasks.) 
+User Requirements INTG-OP-U05 Network connectivity between IEN components (local and remote) shall 
+provide near-real time access to required IEN-managed data. 
+INTG-OP-U06 Network connectivity between IEN components (local and remote) and the 
+local ATMS, if present, shall provide near-real time access to required ATMS-managed data. 
+Functional Requirements INTG-OP-F28 The network connection between an Agency and the IEN shall have a 
+minimum committed information rate of 384kb/s. 
+INTG-OP-F29 Network connections between the IEN servers and IEN workstations 
+located at an Agency shall have a minimum bandwidth of 10Mb/s. 
+INTG-OP-F30 IEN systems located at an Agency shall be isolated from all other systems 
+and networks at the Agency with the exception of the CDI, which will require access to both the ATMS and IEN networks. 
+3.5 MAINTENANCE REQUIREMENTS 
+User Requirements INTG-OM-U01 The IEN shall be designed and built to minimize development, integration, 
+and maintenance costs. 
+INTG-OM-U02 The IEN shall be designed and built to maximize system availability and 
+reliability. 
+INTG-OM-U03 The IEN shall allow for the display and broadcasting of system messages 
+(e.g., scheduled down time, system status, etc.). 
+Functional Requirements 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page 3-8  December 23rd, 2004  INTG-OM-F01 The IEN shall be developed using/supporting applicable ITS and IT 
+standards (e.g., NTCIP, CORBA, TCP/IP, etc.) where practical. 
+INTG-OM-F02 The IEN shall be built using COTS components (hardware, software, and 
+networking) wherever feasible. 
+INTG-OM-F03 The IEN interface shall be open and available to authorized developers 
+needing to write an interface to an ATMS/TCS (with LACDPW approval and signed NDAs). 
+INTG-OM-F04 The IEN shall be designed such that implementing new workstations and 
+Sub-Regions (within the stated capacity of the system) will not adversely effect the operations of existing systems. 
+INTG-OM-F05 The IEN shall be designed to promote graceful degradation at the 
+workstations and servers when non-fatal system errors occur (i.e., a failure of a single component should not needlessly cause other components or systems to crash). 
+3.6 TRAINING REQUIREMENTS 
+User Requirements 
+INTG-ST-U01 The IEN shall maintain current operator and administrator training 
+materials. 
+INTG-ST-U02 The IEN shall maintain current system operation, administration, and 
+maintenance manuals. 
+Functional Requirements INTG-ST-F01 IEN training materials shall be developed for all custom-built components. INTG-ST-F02 IEN support and maintenance training materials shall be developed for all 
+custom-built components (e.g., User management, “back-office” systems/components, etc.). 
+INTG-ST-F03 Training materials on the IEN user interfaces shall be developed. INTG-ST-F04 Documentation (training materials and system manuals) for all IEN 
+components shall be updated as part of IEN configuration management. 
+INTG-ST-F05 COTS documentation shall be distributed to Agencies as part of IEN 
+component configuration management. 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page A-1  December 23rd, 2004  APPENDIX A – ACRONYMS/DEFINITIONS 
+The following acronyms and terms are used within this and other SGV Traffic Forum project 
+documents: 
+Acronyms and Terms 
+ACRONYM/TERM DEFINITION 
+ATMS Advanced Transportation Management System 
+Caltrans State of California Department of Transportation 
+CCTV Closed Circuit Television 
+CDI Command/Data interface.  Software that implements a bi-directional interface 
+between a TCS and the IEN. 
+CMS Changeable Message Sign.  Fixed and mobile roadside signs that display 
+informational messages (used synonymously with Variable Message Sign and Dynamic Message Sign). 
+DMS Dynamic Message Sign (see CMS) 
+EDP Early Deployment Project.  A (relatively small-scale) project warranting 
+initiating/completing prior to the completion of the Traffic Forum due to its high 
+ROI or required to accomplish the goals of the Forum.  (For the East SGV Traffic 
+Signal Synchronization Project, the EDP was a Countywide intranet [on the IEN WAN] that disseminates I-210 traffic conditions from Caltrans and SGV IEN-related documentation to participating Agencies). 
+FMS Freeway Management System.  A system to operate and manage freeway ramp 
+meters and other ITS roadside devices on the freeway. 
+IEN Information Exchange Network.  Infrastructure (e.g., communications network, 
+standards, software, etc.) to facilitate the exchange of real-time arterial traffic 
+data/commands between participating jurisdictions’ TCSs and support incident 
+management activities/information between Agency operators. 
+IEN Workstation A workstation connected to the IEN that allows inter-jurisdictional monitoring and 
+control of traffic data/signals and the exchange of incident information. 
+ISP Information Service Provider.  A company or system that (re) distributes data 
+taken from one or more sources.  This data may be raw or processed. 
+ITS Intelligent Transportation System(s) 
+LACO DPW Los Angeles County Department of Public Works 
+LADOT (City of) Los Angeles Department of Transportation 
+LCCS Local City Control Site.  An area at each Agency that houses its IEN workstation 
+and, depending upon the Agency Level, a TCS workstation allowing inter-
+jurisdictional monitoring and control of traffic data/signals. 
+MOU Memorandum of Understanding 
+MPO Metropolitan area Planning Organization 
+MTA (Los Angeles County)  Metropolitan Transportation Authority – Transit Agency and 
+MPO for Los Angeles County 
+NIST National Institute of Standards and Technology 
+Integration System Requirements – Draft  
+  
+San Gabriel Valley Traffic Forum Page A-2  December 23rd, 2004  ACRONYM/TERM DEFINITION 
+OMP Operations Management Plan.  A document that describes the traffic and incident 
+management policies and procedures (e.g., when to use certain TIS devices, escalation management process/personnel, etc.) at a local, Corridor or Regional 
+level. 
+RC Regional Coordinator 
+RTCB Real Time Clock Broadcast 
+SGV San Gabriel Valley 
+SGVPP SGV Pilot Project.  Proof-of-concept implementation of the IEN in the SGV. 
+SGVTF SGV Traffic Forum 
+Signal System Roadside equipment to control/manage (one or more) intersection traffic signals.  
+(See TCS for centralized control.) 
+TCS Traffic Control System.  A centralized system to control/manage (at least some) 
+intersection traffic signals in the network.  (See Signal System for non-centralized control.). 
+TMC Traffic (or Transportation) Management Center 
+USDOT United States Department of Transportation 
+WAN Wide Area Network 
+W/S Workstation, usually a desktop computer. 
+WWV National Institute of Standards and Technology time broadcast used to ensure 
+traffic signal controllers are synchronized. 
+VDS Vehicle Detection System 
+VIDs Video Imaging Detection.  Video camera-based roadside equipment system for 
+vehicle detection and metrics. 
+VMS Variable Message Sign (see CMS) 
+ 

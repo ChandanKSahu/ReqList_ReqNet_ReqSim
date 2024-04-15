@@ -1,0 +1,76 @@
+D	Environmental Satellite Processing Center (ESPC) NPP and NPOESS Data Exploitation (NDE) NDE Configuration Management Plan 
+3	Requirements
+3.1	Required States and Modes
+3.1.1	Open Mode
+3.1.2	Degraded System Mode
+3.1.3	Restricted Access Mode
+3.2	Capability Requirements
+3.2.1	Define Data Products
+3.2.2	Integrate System Elements
+3.2.3	Test Support
+3.2.4	Maintain Records of Data and System Elements
+3.2.5	Control Algorithm Execution
+3.2.6	Data Product Generation
+3.2.7	Data Product Availability
+3.2.8	Data Delivery
+3.2.9	Order Status Notification
+3.2.10	System Status Notification
+3.2.11	Data Authorization Procedures
+3.2.12	Customer Registration
+3.2.13	Health and Status
+3.2.14	Provide Automatic Failover
+3.2.15	Monitor Input Data Integrity
+3.2.16	Data Product Latency
+3.2.17	Capture Performance Statistics
+3.2.18	Generate Custom Reports
+3.3	External interf ace requirements
+3.3.1	Receive from IDPS
+3.3.2	Ancillary Data Product Acquisition
+3.3.3	Process Archived Data
+3.3.4	Receive from CLASS
+3.3.5	MMC Interface Through ESPC
+3.3.6	NPOESS Trouble Ticket Interface
+3.3.7	ESPC Trouble Ticket Interface
+3.4	Internal Interface Requirements
+3.4.1	Schedule Tasks
+3.4.2	Event Driven Tasks
+3.4.3	Reliability of Scheduled Tasks
+3.4.4	Reliability of Event Driven Tasks
+3.4.5	Adjust Priorities of Tasks
+3.5	Internal data Requirements
+3.5.1	Test Data Capacity
+3.5.2	Metadata Standards Validation
+3.5.3	Record Quality Information
+3.5.4	NOAA-Unique Product Shelf Life
+3.6	Adaptation Requirements
+3.6.1	Technology Updates
+3.6.2	Scalability
+3.7	Security and Privacy Requirements
+3.7.1	Follow ESPC Security Procedures
+3.7.2	Generate System Backups
+3.7.3	Identify Automated Backup Procedures
+3.7.4	Restore from System Backups
+3.7.5	Integrity - Protect from Human Errors
+3.7.6	Integrity - Protect from Transmission Errors
+3.7.7	Integrity - Protect from Software Bugs
+3.7.8	Integrity - Protect from Hardware Malfunction
+3.7.9	Integrity - Protect from Natural Disasters
+3.7.10	ESPC Network Authorization
+3.8	Computer Resource Requirements
+3.8.1	Computer Hardware Requirements
+3.8.2	Computer software requirements
+3.9	Operator-Related requirements
+3.9.1	Log and Track Events
+3.9.2	Provide an Operator Log
+3.9.3	Sort/Search Operator Log
+3.9.4	Report on Events
+3.9.5	Restart Procedures
+3.9.6	Monitor Input Quality
+3.9.7	Monitor Output Quality
+3.9.8	Degraded Operations Notification
+3.9.9	Archive System Elements 
+3.10	Other Requirements
+3.10.1	Availability Requirements
+3.10.2	Performance Requirements
+3.10.3	Capacity Requirements
+3.10.4	Federal Enterprise Architecture

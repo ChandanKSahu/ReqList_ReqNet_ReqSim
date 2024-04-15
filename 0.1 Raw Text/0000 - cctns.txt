@@ -1,0 +1,595 @@
+
+E-G OVERNANCE  
+MISSION MODE PROJECT (MMP)   
+ 
+CRIME & CRIMINAL TRACKING 
+NETWORK AND SYSTEMS  
+(CCTNS) 
+ 
+ 
+ 
+FUNCTIONAL REQUIREMENTS 
+SPECIFICATION V1.0 
+(DRAFT ) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MINISTRY OF HOME AFFAIRS  
+GOVERNMENT OF INDIA  
+
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 2 of 19  
+TABLE OF CONTENTS  
+ 
+ 
+S.  NO. CONTENTS  
+1. INTRODUCTION  
+2. FUNCTIONAL OVERVIEW  
+3. D ESCRIPTION OF THE MODULES AND FUNCTIONAL REQUIREMENTS  
+4. NON -FUNCTIONAL REQUIREMENTS  
+5. FUNCTIONAL ARCHITECTURE RECOMMENDATIONS  
+A1 R EGISTRATION  
+A2 I NVESTIGATION  
+A3 P ROSECUTION  
+A4 S EARCH  
+A5 C ITIZEN INTERFACE MODULE 
+A6 N AVIGATION MODULE  
+A7 C ONFIGURATION MODULE  
+ 
+ 
+ 
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 3 of 19  
+1.  INTRODUCTION  
+ 
+The Functional Requirements Specifications (FRS) re port provides the detailed description 
+of the functionalities required for the first versi on of the CCTNS. The key guiding principle 
+behind the functional design of CCTNS V1.0 is to fo cus on the critical functionality that 
+provides value to the police personnel at the cutti ng edge which in turn can improve the 
+outcomes in the areas of “Investigation of Crime” a nd “Detection of Criminals”. 
+ 
+2.  FUNCTIONAL OVERVIEW  
+ 
+CCTNS V1.0 functionality is designed to focus on de livering value to IOs, records room 
+staff and citizens within the broad crime investiga tion area. Based on the guiding principles 
+stated above, nine different function blocks have b een identified and the detailed 
+functionality of each block was determined.  
+ 
+ 
+ 
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 4 of 19 3.  DESCRIPTION OF THE MODULES AND FUNCTIONAL REQUIREMENTS  
+ 
+The functionality of the CCTNS application is focus ed on providing value to the police 
+personnel, especially the officers operating at the  cutting edge and easing the day to day 
+operations of the police function.  
+ 
+Registration 
+Citizens can register their complaints with police and then based on the evidence, facts and 
+following investigation, police shall take the comp laint forward. The Registration module 
+acts as an interface between the police and citizen s and it eases the approach, interaction and 
+information exchange between police and complainant s. 
+ 
+Investigation 
+After a complaint is initiated, police initiates th e investigation process. The Investigation 
+module of the CCTNS facilitates the investigation p rocess and introduces operational 
+efficiencies by automating most of the tasks that t ake place after initial entries are made 
+during Registration. 
+ 
+Prosecution 
+Interfacing with the courts during the prosecution of cases is an integral part of the 
+responsibilities of police personnel. A designated constable from each police station 
+constantly interfaces with the courts. The Prosecut ion module of the CCTNS aids this 
+interfacing by providing a platform to record entri es of the court interactions. 
+ 
+Search 
+The Search module of the CCTNS gives police personn el the ability to execute a basic or 
+advanced search on cases. Using the search function ality, police personnel can search for a 
+particular person, type of crime, modus operandi, p roperty etc. It also gives the user the 
+ability to customize the results view by criminal/a ccused or by cases. It makes reporting easy 
+for police by enabling them to execute different ty pes of queries such as monthly reporting, 
+RTI related etc. 
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 5 of 19 Citizen Interface 
+The Citizen Interface module of the CCTNS acts as a  conduit for the information exchange 
+between citizens and police units/personnel. Citize ns can use it as a tool to get information 
+or acknowledgements from police. The police in turn  can use it to respond to citizens with 
+very little turnaround time. It improves overall pr oductivity by helping citizens and police to 
+cut short the drudgery of large amounts of paperwor k. 
+ 
+Navigation 
+The Navigation module of the CCTNS provides role ba sed landing pages which help in 
+navigating through the CCTNS application. It shows information such as cases assigned, 
+alerts, pending tasks etc hence helping police pers onnel to plan better and execute with 
+greater efficiency. 
+ 
+Application Configuration 
+The Configuration module of the CCTNS helps keep th e application configured according 
+to the states’ requirements in addition to keeping data elements/rules up to date. With a 
+proper configuration, information such as act and s ections, state specific data, castes, tribes, 
+property information etc. can be created updated an d deleted. 
+ 
+The functional requirements for each of the modules  are provided as A1 to A7 in separate 
+enclosures. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 6 of 19 4.  NON -FUNCTIONAL REQUIREMENTS  
+ 
+The non-functional requirements specify the qualita tive attributes such as user-friendliness 
+and performance of the system that are critical for  the increased user-acceptance of the 
+application.  
+ 
+Help Module 
+1.  The solution should provide detailed context-sensit ive help material for all the 
+possible actions and scenarios on all user interfac es in the application. 
+2.  The help should be accessible to the users both in the offline and online mode 
+ 
+Support Module 
+1.  The solution should provide an interface for the us er to log any defects or 
+enhancement requests on the application and track t hereafter. 
+2.  The solution should send alerts (e.g., email, SMS) to the user if the user chooses 
+to whenever any action has been taken on the alert 
+3.  The solution should enable the user to track the su bmitted defect or 
+enhancement request. 
+4.  The solution should enable the help-desk user to vi ew the reports on the 
+submitted defects or enhancement requests category- wise, status-wise, and age-
+wise. 
+5.  The support solution should be accessible to the us ers both from within the 
+application and also outside the application throug h a browser interface. 
+ 
+ Audit Module 
+1.  An audit trail is a record of actions taken by eith er the user or the system 
+triggers. This includes actions taken by users or A dministrators, or actions 
+initiated automatically by the system as a result o f system parameters. The 
+System must keep an unalterable audit trail capable  of automatically capturing 
+and storing information about: 
+• All the actions (create/read/update/delete) that ar e taken upon the critical 
+entities (case, suspect, property,…) in the system 
+• The user initiating and or carrying out the action;  
+• The date and time of the event. 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 7 of 19 • Administrative parameters 
+The word “unalterable” is to mean that the audit tr ail data cannot be modified 
+in any way or deleted by any user; it may be subjec t to re-department and 
+copying to removable media if required, so long as its contents remain 
+unchanged. 
+2.  Once the audit trail functionality has been activat ed, the System must track 
+events without manual intervention, and store in th e audit trail information 
+about them. 
+3.  The System must maintain the audit trail for as lon g as required, which will be at 
+least for the life of the case to which it refers. 
+4.  The System must ensure that audit trail data is ava ilable for inspection on 
+request, so that a specific event can be identified  and all related data made 
+accessible, and that this can be achieved by author ised external personnel who 
+have little or no familiarity with the system. 
+5.  The System must be able to export audit trails for specified cases (without 
+affecting the audit trail stored by the System). Th is functionality can be used by 
+external auditors who wish to examine or analyse sy stem activity. 
+6.  The System must be able to capture and store violat ions (i.e. A user’s attempts 
+to access a case to which he is denied access), and  (where violations can validly 
+be attempted) attempted violations, of access contr ol mechanisms. 
+7.  The System must at a minimum be able to provide rep orts for actions on cases 
+organised: 
+• By case; 
+• By user; 
+• In chronological sequence. 
+8.  The System should be able to provide reports for ac tions on cases organised by 
+workstation and (where technically appropriate) by network address. 
+ 
+The requirements specify the requirements to contro l the user access to correspondences, 
+files, and records and various functionalities prov ided within the system.  
+Access Module 
+1.  The System must allow the user to limit access to c ases to specified users or 
+user groups.  
+2.  The system should provide for role-based control fo r the functionality within 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 8 of 19 the system. 
+3.  The System must allow a user to be a member of more  than one group. 
+4.  The System must allow only admin-users to set up us er profiles and allocate 
+users to groups. 
+5.  The System should allow a user to stipulate which o ther users or groups can 
+access cases.  
+6.  The System must allow changes to security attribute s for groups or users (such 
+as access rights, security level, privileges, passw ord allocation and management) 
+to be made only by super-user. 
+7.  If a user requests access to, or searches for, a ca se which he does not have the 
+right to access, the System must provide one of the  following responses 
+(selectable at configuration time): 
+• display title and metadata; 
+• display the existence of a case but not its title o r other metadata; 
+• do not display any case information or indicate its  existence in any way. 
+These options are presented in order of increasing security.  Note that the 
+requirement in the third option (i.e. the most stri ngent) implies that the System 
+must not include such cases in any count of search results; this level of security 
+is normally appropriate for cases dealing with matt ers such as national security. 
+8.  If a user performs a quick or advanced search, the System must never include in 
+the search result list any record which the user do es not have the right to access.  
+9.  If the System allows users to make unauthorised att empts to access cases, it 
+must log these in the audit trail.  
+10.  Any access to cases, and all other activities invol ving the cases and related 
+documents or data should also need to be stored in the audit trail to ensure legal 
+admissibility and to assist in data recovery. 
+ 
+Ease of Use 
+1.  All error messages produced by the System must be m eaningful, so that they can be 
+appropriately acted upon by the users who are likel y to see them. Ideally, each error 
+message will be accompanied by explanatory text and  an indication of the action(s) 
+which the user can take in response to the error. 
+2.  The System must employ a single set of user interfa ce rules, or a small number of 
+sets to provide a familiar and common look and feel  for the application.  
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 9 of 19 3.  The System must be able to display several entities  (cases, suspects) simultaneously. 
+4.  The interfaces must be made customizable or user-co nfigurable to the extent 
+possible. (e.g., the displayed columns in the table , move, resize, modify the 
+appearance). Such configurations must be saved in t he user profile. 
+5.  The System user interface must be suitable for user s with special needs; that is, 
+compatible with specialist software that may be use d and with appropriate interface 
+guidelines 
+6.  The System must provide End User and Administrator functions which are easy to 
+use and intuitive throughout. 
+7.  The System must allow persistent defaults for data entry where desirable.  These 
+defaults should include: 
+• user-definable values; 
+• values same as previous item; 
+• values derived from context, e.g. date, file refere nce, user identifier; 
+8.  Frequently-executed System transactions must be des igned so that they can be 
+completed with a small number of interactions (e.g.  mouse clicks). 
+9.  Where the System employs a graphical user interface , it must allow users to 
+customise it. Customisation should include, but nee d not be limited to the following 
+changes: 
+• menu contents; 
+• layout of screens; 
+• use of function keys; 
+• on-screen colours, fonts and font sizes; 
+ 
+Usability 
+1.  The user interfaces should be designed to make them  user-intuitive. 
+2.  The user interfaces of the system should comply wit h Standard ISO 9241. 
+3.  ICT accessibility: ISO 9241-20 shall be the standar d for guidance on ICT 
+accessibility. Application user interfaces to meet its requirements and 
+recommendations. Software accessibility ISO 9241-17 1 shall be the standard for 
+guidance on software accessibility. User interfaces  should meet its requirements 
+and recommendations. Content accessibility WCAG 1.0  shall be the standard used 
+for guidance on content accessibility. The applicat ion logo to be available on all 
+pages as a link to the home page. 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 10 of 19 4.  Providing text equivalents for non-text media objec ts: All non-text media objects, 
+such as graphical images or video, should be provid ed with alternative equivalent 
+textual descriptions and/or with equivalent text-ba sed functionality. 
+5.  Making navigation self-descriptive: Navigation shou ld be designed to help users 
+understand where they are, where they have been and  where they can go next. 
+General guidance on achieving self-descriptiveness is given in ISO 9241-110.  
+6.  Showing users where they are: Each presentation seg ment (page or window) 
+should provide the user with a clear and sufficient  indication of where he or she is 
+in the navigation structure and of the current segm ent position with respect to the 
+overall structure. 
+7.  Offering alternative access paths: Alternative acce ss paths for navigating to a 
+specific unit of content should be offered to suppo rt different navigation 
+strategies.  
+8.  Minimizing navigation effort: The number of navigat ion steps needed to reach a 
+certain piece of content should be minimized as lon g as different mental models, 
+navigation strategies and tasks of the user are tak en into account.  
+9.  Splash screens should be avoided unless they provid e useful content or feedback 
+about the application state to the user. If a splas h screen is used, a navigation 
+option to skip it should be offered. 
+10.  Avoiding opening unnecessary windows: Additional wi ndows such as new browser 
+windows or pop-up windows should only be opened if this supports the user’s 
+task. Opening new windows can distract, confuse or impede users for a variety of 
+reasons. They can superimpose the primary window, h iding relevant information. 
+They could make it cognitively more difficult to un derstand the navigation 
+structure with negative effects on both usability a nd accessibility. They also require 
+additional user actions for closing unwanted window s. 
+11.  Vertical scrolling should be minimized. This may be  done by placing important 
+information at the top and providing links to infor mation that is further down the 
+page. Horizontal scrolling should be avoided wherev er possible. 
+12.  Designing for input device independence: User inter faces should be designed to 
+allow activation of controls by a variety of input devices. The ability to choose 
+between different input devices for activating cont rols such as links, fields and 
+buttons is important both for users who prefer a ce rtain input mode, mobile users 
+and users with disabilities. In general, device ind ependence can be achieved if the 
+functionality is operable via a keyboard. 
+13.  Making user interfaces robust: User interfaces shou ld be designed to be as robust 
+as possible in the face of changing technology. Thi s encompasses being able to 
+present content containing newer technologies by ol der user agents as well as 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 11 of 19 designing content to be usable with future technolo gies. 
+14.  Acceptable opening / download times: Application pa ges should be designed and 
+implemented so that there are acceptable opening ti mes and download times for 
+the expected range of technical contexts of use (e. g. bandwidth between the 
+application and the user). This is particularly imp ortant for frequently accessed 
+pages or pages that are important for user navigati on and exploration, such as the 
+home page. 
+15.  Minimizing user errors:  Potential user errors as w ell as the effort needed to 
+recover from errors should be minimized.  
+16.  Providing clear error messages: The content of erro r messages shown on the pages 
+or special error pages should clearly state the rea son why the error occurred and, if 
+possible, actions the user can take to resolve the error. Users expect error messages 
+to be in the same language as the user interface. 
+17.  Using appropriate formats, units of measurement or currency:  When designing 
+user interfaces for use by diverse groups, input an d output of information 
+elements such as currency, units of measurement, te mperatures, date and time, 
+phone numbers, address or postal codes should be de signed so that they are 
+usable. 
+18.  Making text resizable by the user: Text should be a ble to be resized by the user, 
+using functions provided by the user agent or other  appropriate means i.e. see ISO 
+9241-171.  
+19.  Text quality: The quality of textual content with r espect to spelling and grammar 
+should be sufficient so as not to impede readabilit y. 
+20.  Writing style: The reading and understanding of the  textual content on the screen 
+should be supported by suitable means, including th e use of short sentences, the 
+division of the text into shorter chunks or the pre sentation of content items in the 
+form of bullet points. 
+21.  Supporting text skimming: Fast skimming of text sho uld be supported by the 
+provision of clear links, bulleted lists, highlight ed keywords, logical headings, and 
+short phrases and sentences. 
+22.  Readability of text: Text presented on the pages sh ould be readable taking into 
+account the expected display characteristics and sp atial arrangement. ISO 9241-303 
+shall be consulted for screen text legibility requi rements. 
+23.  Distinguishable within-page links: Within-page link s should be clearly 
+distinguishable from other links that lead to a dif ferent page. EX. Within-page 
+links are shown with dashed rather than solid under lines 
+24.  Avoiding link overload:  Text pages containing larg e proportions of links should 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 12 of 19 be formatted so that the presence of links does not  impede the readability of the 
+text.  
+25.  Using familiar terminology for navigation links: Na vigation links — particularly 
+links representing the main navigation structure — should be labelled with terms 
+that are familiar to the user, based on his/her gen eral knowledge, prior experience 
+in the application domain or experience of using ot her systems. 
+26.  Using descriptive link labels: The target or purpos e of a link should be directly 
+indicated by its label, avoiding generic labels suc h as “go” or “click here” except 
+where the purpose of the link is clear from its con text on the page or the labels 
+have commonly understood semantics in the particula r application domain. Using 
+appropriate terminology specific to the user’s task s and information needs is 
+important for making the content easy to understand . 
+27.  Marking links opening new windows: Links that open new browser windows or 
+pop-up windows should be clearly marked. 
+28.  Distinguishing navigation links from controls: Navi gation links should be clearly 
+distinguishable from controls activating some actio n.  Typical action types in user 
+interfaces include manipulating application data, p erforming searches, 
+communication actions, such as opening a new e-mail  window or starting a chat 
+function, and □presentation-related actions, such a s sorting a list of search results.  
+29.  Providing printable document versions: If a documen t is either too long, dispersed 
+over several pages or in a specific layout that is not suitable for online reading, a 
+printer-friendly version of the document should be provided that prints the 
+content in a form acceptable to the user (e.g. in t he expected layout, paper format, 
+or orientation). 
+30.  Use of “white space”:  “White space” on a page i.e.  space filled only with the 
+background color should be used in such a way that it does not impair the visual 
+skimming of the page. While white space is an impor tant means of visually 
+organizing the different content elements on a page , if the distance between the 
+blocks of information displayed becomes too large, rapid skimming of the page 
+can be impeded. 
+31.  Selecting appropriate page lengths The length of a page should be selected so as to 
+support the primary purpose and use of the page. Sh ort pages are generally more 
+appropriate for homepages, navigation pages, or ove rview pages that need to be 
+read quickly. Longer pages can be more appropriate when users want to read the 
+content without interruptions or when the page need s to match a paper 
+counterpart. 
+32.  Using colour: Colour should be used with care, taki ng into account human 
+capabilities and restrictions in perceiving colour,  and not as the only means of 
+conveying information. Color should never be the on ly means of coding. Some 
+users may have difficulties in perceiving certain c olors or color combinations 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 13 of 19 (color-blindness). 
+33.  Using frames with care: If frames are used, care sh ould be taken to avoid possible 
+problems, for example, those involving the use of t he back button, bookmarking 
+of pages, or scrolling of information. When frames are used, it is important to title 
+each frame, and to describe its purpose and how fra mes relate to one another 
+other. 
+34.  Providing alternatives to frame-based presentation:  If frames are used, an 
+alternative way of presenting relevant information without frames should be 
+provided. Providing alternative text-only pages: Wh en style sheets and/or frames 
+are turned off it should be possible for the user t o read and understand the page; 
+alternatively, the user should be provided with an equivalent alternative text-only 
+page. 
+35.  Consistent page layout: Pages should be designed us ing consistent layout schemes, 
+supporting the user in finding similar information at the same position on different 
+pages. Overall layout schemes apply to all pages an d are preferable when all pages 
+have a similar structure. Frequently, however, diff erent pages have different 
+purposes and types of content. In such cases, pages  can usually be grouped in 
+different categories, using one layout scheme for e ach category consistently. 
+36.  Placing title information consistently: Page titles  should be placed in a consistent 
+location on the different pages. 
+37.  Observing principles of human perception When desig ning application pages, the 
+general principles of human perception should be ta ken into account. The 
+International Standards mentioned below shall be co nsulted for guidance. Practical 
+guidelines for presenting information to the user a re to be found in ISO 9241-12. 
+Guidance on selecting and using different forms of interaction techniques is to be 
+found in ISO 9241-14 to ISO 9241-17. ISO 9241-14 gi ves guidance about menus, 
+ISO 9241-15 about command dialogues, ISO 9241-16 ab out direct manipulation 
+and ISO 9241-17 about forms. In addition, when desi gning multimedia 
+information presentations, the design principles an d recommendations described 
+in ISO 14915-1 to ISO 14915-3 should be taken into account. Appropriate content 
+presentation also plays a key role in accessibility .  
+38.  Linking back to the home page or landmark pages: Ea ch page should contain a 
+link leading to the home page of the application or  to a landmark page that is easy 
+to recognize for the user. 
+39.  Providing a site map: A separate navigation overvie w such as a site map should be 
+provided for application showing the structure of t he site in an overview form.  
+40.  Consistency between navigation components and conte nt: If navigation 
+components (or overviews) are shown in conjunction with associated content, 
+consistency between the navigation component and th e content shown should be 
+maintained by indicating in the navigation  compone nt (e.g. highlighting) the topic 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 14 of 19 currently visible in the content area.  
+41.  Placing navigation components consistently: Navigat ion components should be 
+placed consistently on the pages or in the frameset s in the pages of the application.  
+42.  Individualization and user adaptation : Adapting th e content and the navigation of 
+a user interface to individual users or user groups  can be a useful mechanism for 
+providing information that is of interest to the us ers and for making access to 
+relevant information more efficient. User adaptatio n can also be important for 
+making the user interface more accessible. Differen t approaches can be used for 
+achieving these goals, like providing users with me ans for customizing the user 
+interface to their personal needs i.e. individualiz ation designing content and 
+navigation differently for varying user groups or r oles i.e. such as employees of 
+different levels, citizens etc, monitoring the user ’s behaviour and adapting to the 
+user’s goals that are inferred from the behaviour o bserved, recommending 
+information that is potentially more relevant or in teresting to the specific user, 
+based on the behaviour of all users or a user group . 
+43.  Taking account of the users’ tasks and information needs: When providing 
+different access paths or navigation structures for  different user groups, the tasks 
+and information needs of these user groups should b e taken into consideration. 
+44.  Making individualization and adaptation evident: It  should be made evident to the 
+user when individualization and/or adaptation are u sed.  
+45.  Making user profiles evident: If predefined user pr ofiles or user-specified profiles 
+are used for individualizing or adapting content, t he profile currently used should 
+be made evident. If profiles are used, it is import ant to provide users with 
+information about this concept and its implications . 
+46.  Allowing users to see and change profiles: If user- specified profiles are used, users 
+should be able to see, modify and delete that profi le on demand.  
+47.  The user interfaces of the system should follow the  guidelines specified under 
+www.usability.gov 
+ 
+ 
+System Availability 
+1.  The System must be available to users: 
+• from <xx:00> to <xx:00>; 
+• on <all weekdays/xxx days per year>. 
+2.  The planned downtime for the System must not exceed  <xx> hours per <rolling 
+three month period>. 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 15 of 19 The System is considered to be down if any user is unable to perform any normal 
+System function and if this failure is attributed t o any component of the System 
+other than the workstation. 
+3.  Unplanned downtime for the System must not exceed < xx hours/minutes> per 
+<rolling three month period>. 
+4.  The number of incidents of unplanned downtime for t he System must not exceed 
+<x> per <rolling three month period>. 
+5.  In the event of any software or hardware failure, i t must be possible to restore the 
+System (with inline synchronization) within no more  than <xx> hours. 
+ 
+ 
+Performance and Scalability 
+1.  The System must provide adequate response times for  commonly performed 
+functions under both standard and peak conditions  
+2.  The System must be able to perform a simple search within 5-8 seconds and a 
+advanced search (multiple search criteria) within 1 0-15 seconds regardless of the 
+storage capacity or number of cases in the system. In this context, performing a 
+search means returning a result list.  It does not include retrieving the records 
+themselves. 
+3.  The System must be able to retrieve and display wit hin 5-8 seconds the case which 
+has been accessed within the previous 2 months, reg ardless of storage capacity or 
+number of cases in the system. This requirement is intended to allow for rapid 
+retrieval of frequently-used cases, on the understa nding that frequency of use is 
+typically correlated with recent use.  
+4.  The System must be able to retrieve and display wit hin 20 seconds the case which 
+has not been accessed within the previous 2 months,  regardless of storage capacity 
+or number of cases in the system. This requirement is intended to allow for cases 
+where cases used infrequently are stored on slower media than more active 
+records. 
+5.  The System be scaleable and must not have any featu res which would preclude use 
+in small or large police stations, with varying num bers of cases handled. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 16 of 19 5.  FUNCTIONAL ARCHITECTURE RECOMMENDATIONS  
+ 
+The proposed functional architecture is modeled aro und centralized deployment to facilitate 
+ease of maintenance and leverage advancement in ope n standards and web technologies. 
+ 
+The 3 C’s (Core-Configuration-Customization) forms the guiding principle for the 
+architecture. The functional architecture of the CC TNS solution is given in the figure below. 
+The functional architecture is composed of 4 major components based on SOA principles. 
+Each of the components contains multiple services a s defined by Service Definition.  The 
+core services, support layer and security and acces s control components can be deployed as 
+standard components with necessary configuration ch anges. The customization layer can 
+override and add to the core services based on the specific state requirements and can be 
+plugged with the core services. 
+ 
+CCTNS Functional Architecture Overview  
+ 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 17 of 19 The deployment of the application will be at state level and will be configured and 
+customized as per the state specific extensions.  
+ 
+The systems should be designed with the following b road guidelines: 
+ 
+System Functionality 
+1)   The system should support multilingual interface 
+2)   The system should be designed in manner that operat ional data is not lost in case of any 
+failure of equipment or communication network. 
+3)   The system should work even in an offline mode with  the critical functionality 
+4)   The system should be designed to have satisfactory performance even in Police Stations 
+connected on low-bandwidth 
+5)   The system should be implemented using Service Orie nted Architecture (SOA) and have a 
+modular design 
+6)   The system should be developed on Open Standards 
+7)   The system should be built on a common User Access and Authentication Service to 
+ensure Single-Sign on for the end-user 
+8)   The system should be developed for a centralized de ployment and maintenance 
+9)   The system should be developed to be deployed in a 3-tier datacenter architecture 
+10)   The system should be designed to have a n-tier arch itecture with the presentation logic 
+separated from the business logic that is again sep arated from the data-access logic 
+11)   The system should be extensible to provide access t o the interfaces through PDA’s and 
+mobile data terminals 
+12)   The system should adopt standardized formats and co mmon metadata elements 
+13)   The system should be designed for access through br owser-based systems and must 
+impose minimal requirements on the client device 
+14)   The system must support multiple types of communica tion services for remote access 
+15)   The system should have capability to support public  access to a subset of data and 
+functionality 
+16)   The system should support multi-tier authentication  where required 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 18 of 19 17)   The system should support SSL encrypted connections  
+18)   The system should support secure virtual private ne twork connections 
+19)   The system should use HTTPS as the communication pr otocol, i.e., HTTP over an 
+encrypted secure socket layer (SSL) 
+20)   The system should run on multiple browsers 
+21)   The system should support selective encryption of t he stored data 
+22)   The system should ensure secure transmission of dat a over the network and utilize SSL 
+and 2-way digital signatures 
+23)   The system should ensure high standards of security  and access control through: 
+a)  Prevent cross-site scripting  
+b)  Validate the incoming data / user request  
+c)  Encode the incoming data / user request  
+d)  Prevent SQL Injection 
+e)  Utilize parameterized queries 
+f)  Sanitize the user-inputs 
+g)  Validate the data both at the client and server 
+h)  Do not allow hard delete and perform only soft tagg ing the row for deletion 
+24)   The system should ensure high scalability and perfo rmance through: 
+a)  Use of cache for storing frequent data  
+b)  Use of AJAX based technology to improve user experi ence. Aggressive page loading to 
+be considered based on the screen and estimate usag e pattern  
+c)  Leverage Asynchronous HTTP socket capabilities of we b server for scalability and 
+performance  
+d)  Host all the static content (documents, images) on t he web server  
+e)  The search results should be fetched from the datab ase in batches of 10 or 20 maximum 
+as configured within the application  
+f)  Display of records on the screen in batches/paged m anner 
+g)  The search should fetch only the fields that need t o be displayed to the user. Only when 
+the user clicks on a particular record to view its f urther details should a query be fired to 
+fetch the additional details for this particular re cord only  
+h)  A hierarchical cache should be configured and used for caching of results of most 
+E-Governance Mission Mode Project: Crime & Criminal s Tracking Network and Systems 
+Ministry of Home Affairs                               Draft Core Scope Document                                 Page 19 of 19 frequently used searches 
+i)  Database Indexes should be applied on the key column s used for searching  
+ 

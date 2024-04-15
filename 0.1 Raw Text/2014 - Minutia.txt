@@ -1,0 +1,543 @@
+
+ 
+  
+ 
+The author(s) shown below used Federal funds provided by the U.S. 
+Department of Justice and prepared the following final report:  
+ 
+ 
+Document Title:  Minutia Deviation Tool: Software Requirements 
+Specification (SRS), (Version 1.1)  
+ 
+Author(s):  Lars Ericson, Ph.D., St ephen Shine  
+ 
+Document No.:    249556  
+ 
+Date Received:   December  2015  
+ 
+Award Number:   2010 -IJ-CX-K024  
+ 
+This report has not been published by the U.S. Department of Justice.  
+To provide better customer service, NCJRS has ma de this federally 
+funded grant  repor t available electronically.  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Opinions or points of view expressed are those 
+of the author(s) and do not necessarily reflect 
+the official position or policies of the U.S. 
+Department of Justice.  
+UNCLASSIFIED 
+This project was supported by Award No. 2010- IJ-CX-K024, awarded by the National 
+Institute of Justice, Office of Justice Programs, U.S. Department of Justice. The opinions, 
+findings, and conclusions or recommendations expressed in this publication are those of the 
+author(s) and do not necessarily reflect those of the Department of Justice.  Minutia Deviation Tool:  
+Software Requirements Specification (SRS)  
+(Version 1.1) 
+ 
+June 12, 2014 
+ 
+DOJ Office of Justice Programs 
+National Institute of Justice 
+Sensor, Surveillance, and Biometric Technologies (SSBT) 
+Center of Excellence (CoE) 
+ 
+ 
+ 
+Prepared for 
+Defense Biometrics & Forensics 
+OSD AT&L, ASD(R&E) 
+ 
+ 
+Prepared by 
+ 
+ManTech Advanced Systems International 
+1000 Technology Drive, Suite 3310 
+Fairmont, West Virginia  26554  
+Telephone:  (304) 368-4120  
+Fax:  (304) 366-8096  
+ 
+Dr. Lars Ericson, Director 
+ 
+Steve Shine (Azimuth, Inc.) 
+ 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+ii 
+TABLE OF CONTENTS 
+ 
+LIST OF FIGURES ................................ ................................................................ .......................  iii 
+LIST OF TABLES ................................ ................................................................ .........................  iv 
+CHANGE HISTORY................................ ................................................................ ....................... v 
+1.0 SCOPE ................................ ................................ ................................................................ .......1 
+1.1 Identification ................................ ................................................................ .................. 1 
+1.2 System Overview ................................ ................................................................ ........... 1 
+1.3 Document Overview ................................................................ ................................ ......1 
+1.3.1 Thresholds and Objectives  ................................................................ .............. 1 
+2.0 REFERENCED DOCUMENTS ................................................................ ................................ 3 
+3.0 REQUIREMENTS ................................ ................................................................ ..................... 4 
+3.1 Required States and Modes ................................................................ ............................ 4 
+3.2 CSCI Capability Requirements ................................................................ ...................... 4 
+3.2.1 Display Fingerprint Image and Minutiae [T] ................................ .................. 4 
+3.2.2  Calculate Minutiae Deviations [T] ................................ ................................ ..4 
+3.2.3 Filter Minutia Deviations [O] ................................................................ ......... 4 
+3.3 CSCI External Interface Requirements ................................................................ .......... 5 
+3.3.1 Interface Identification and Diagrams ................................ ............................ 5 
+3.3.2 EBTS Files ................................................................ ................................ ......5 
+3.3.3 Deviation Log File ................................................................ .......................... 5 
+3.3.4 Session File  ................................................................ ................................ .....5 
+3.4 CSCI Internal Interface Requirements ................................................................ ........... 6 
+3.5 CSCI Internal Data Requirements ................................................................ ................. 6 
+3.6 Adaptation Requirements................................................................ ............................... 6 
+3.7 Safety Requirements ................................................................ ................................ ......6 
+3.8 Security and Privacy Requirements  ................................................................ ............... 6 
+3.9 CSCI Environment Requirements ................................................................ .................. 6 
+3.10 Computer Resource Requirements ................................................................ .............. 6 
+3.10.1 Computer Hardware Requirements ................................ ............................... 6 
+3.10.2 Computer Hardware Resource Utilization Requirements ............................. 6 
+3.10.3 Computer Software Requirements ................................ ................................ 6 
+3.10.4 Computer Communications Requirements ................................ ................... 6 
+3.11 Software Quality Factors ................................................................ ............................. 7 
+3.12 Design and Implementation Constraints  ................................ ................................ ......7 
+3.12.1 Hardware Design Constraints  ................................................................ .......7 
+3.12.2 Software Constraints ................................................................ ..................... 7 
+3.13 Personnel-Related Requirements ................................................................ ................. 7 
+3.14 Training-Related Requirements ................................................................ ................... 7 
+3.15 Logistics -Related Requirements ................................................................ .................. 7 
+3.16 Other Requirements ................................................................ ................................ .....7 
+3.17 Packaging Requirements ................................................................ .............................. 7 
+3.18 Precedence and Criticality of Requirements ................................ ................................ 8 
+4.0 QUALIFICATION PROVISIONS ................................................................ ............................ 9 
+5.0 REQUIREMENTS TRACEABILITY ................................................................ ..................... 10 
+6.0 NOTES ................................ ................................ ................................................................ .....11 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+iii 
+ 
+LIST OF FIGURES 
+ 
+Figure 1: MDT External Interface Diagram ................................................................ ...................  5 
+ 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+iv 
+LIST OF TABLES 
+ 
+Table 1: Listing of Requirements and Sources ................................................................ .............  10 
+Table 2: Acronyms and Abbreviations ................................................................ .........................  11 
+  
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+v 
+CHANGE HISTORY 
+Version/  
+Revision  Revision  
+Date  Description of Change  
+1.0 
+ 06/05/14 Final Draft for Customer Review  
+1.1 06/12/14 Final Revised Document 
+ 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+1 
+1.0 SCOPE 
+1.1 Identification 
+Minutia Deviation Tool (MDT), version 1.0  (beta) 
+ 
+1.2 System Overview 
+The MDT is a prototype Computer Software Configuration Item (CSCI) (i.e., software utility) 
+that shall aid a user in designating equivalent minutia pairs across two fingerprint biometric 
+images and calculating the pai r’s minuti a spatial deviations.   MDT shall serve as a tool to 
+support research and analysis of contactless and contact-based fingerprint data.  
+ 
+No prior software development exists for the MDT. 
+ 
+The tool shall be used by biometrics researchers in academia, government, and industry, as 
+designated and distributed by the sponsors, in an independent manner without operations or 
+maintenance support from the developer.  The MDT version being developed shall be in a Beta 
+state, not suitable for general release, but possessing suitable stability for use by knowledgeable 
+and experienced researchers. 
+ 
+MDT development is part of the Contactless Fingerprint Research (Phase 2) project.  The effort 
+is sponsored by the Director, Defense Biometrics and Forensics in partnership with the National 
+Institute of Justice (NIJ). 
+ 
+The MDT is being developed by ManTech Advanced Systems International, Inc. (and its 
+subcontractor, Azimuth, Inc.) under the National Institute of Justice (NIJ) Sensor, Surveillance, 
+and Biometric Technologies (SSBT) Center of Excellence (CoE) cooperative agreement 
+(Award# 2010- IJ-CX-K024).  The NIJ SSBT CoE is a center within the National Law 
+Enforcement and Corrections Technology Center (NLECTC) System. The Center provides 
+scientific and technical support to NIJ’s R&D efforts. The Center also provides technology 
+assistance, information, and support to criminal justice agencies. The Center supports the sensor 
+and surveillance portfolio and biometrics portfolio. The CoEs are the authoritative resource 
+within the NLECTC System for both practitioners and developers in their technology area(s) of 
+focus. The primary role of the CoEs is to assist in the transition of law enforcement technology 
+from the laboratory into practice by first adopters.  
+ 
+1.3 Document Overview 
+The Software Requirements Specification (SRS) document specifies the required functionality, 
+capabilities, computer interfaces, and usability for the MDT.  
+ 
+1.3.1 Thresholds and Objectives 
+Each requirement shall have a threshold value or an objective value.  Requirements labeled [T] 
+indicate Threshold requirements.  Requirements labeled [O] indicate Objective requirements. 
+ 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+2 
+For requirements , “threshold” shall mean the minimum acceptable value that, i n the user's 
+judgment, is necessary to satisfy the need. 
+ 
+The “objective” value is the value desired by the user, and the value the software tries to obtain.   
+The objective value represents an incremental, operationally meaningful, time-critical, and/or 
+cost-effective improvement to the threshold value of software requirements.  
+ 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+3 
+2.0 REFERENCED DOCUMENTS 
+ Department of Defense (DOD), DI-IPSC-81433A Software Requirements Specification 
+Data Item Description (SRS DID)  (December 15, 1999)  
+ 
+ National Institute of Standards and Technology (NIST), ANSI/NIST -ITL 1-2011 Data 
+Format for the Interchange of Fingerprint, Facial & Other Biometric Information  
+(January 2012) 
+ 
+ Federal Bureau of Investigation (FBI), IAFIS- DOC-01078-9.3 Electronic Biometric 
+Transmission Specification (EBTS) Version 9.3 (December 9, 2011) 
+ 
+ ManTech Advanced Systems International (MASI), Contactless Fingerprint Research 
+(Phase 2) Program Narrative – Draft V7 (January 15, 2014) 
+ 
+ MASI and Azimuth, Inc.; Evaluation of Contact versus Contactless Fingerprint Data 
+(Final Report v2)  (January 23, 2014) 
+ 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+4 
+3.0 REQUIREMENTS 
+3.1 Required States and Modes 
+No states or modes are required. [T] 
+ 
+3.2 CSCI Capability Requirements 
+3.2.1 Display Fingerprint Image and Minutiae [T] 
+a. The MDT shall open a pair of Latent Friction Ridge Features Search (LFFS) EBTS files 
+(i.e., *.lffs file format).  [T] 
+b. The MDT shall display the fingerprint image.  [T] 
+c. The MDT shall overlay associated minutiae to fingerprint in a graphical user interface 
+(GUI).  [T] 
+d. The MDT shall allow individual minutia to be selected to display details (e.g., x, y, angle, 
+classification, etc.) and any associated annotations. [T] 
+ 
+3.2.2 Calculate Minutiae Deviations [T] 
+a. The MDT shall calculate the spatial deviations between a pair of minutiae selected on the 
+two fingerprints. [T] 
+i. The MDT shall allow the user to select a baseline minutia using the GUI and 
+mouse pointer.  [T] 
+ii. The MDT shall allow the user to select a target minutia on the other fingerprint. 
+[T] 
+iii. The MDT shall calculate the spatial deviation.  [T] 
+b. The MDT shall present d eviation results to the user in the GUI window. [T] 
+ 
+3.2.3 Filter Minutia Deviations [O] 
+a. The MDT may allow a user to filter minutiae. [O] 
+a. The MDT may graphically mark minutia pairs as they are selected for deviation 
+calculations and maintain a running graphical display of selected pairs. [O] 
+b. The MDT may keep track of calculated minutia deviations and the associated 
+minutia pairs during the active session. [O] 
+c. The MDT may allow a user to filter the minutiae based on the calculated 
+deviations or other minutia features by entering a filter parameter through the GUI 
+interface controls. [O] 
+b. The MDT may alter the displayed minutiae based on those pairs that satisfy the filte r 
+parameter(s). [O] 
+c. The MDT may write an EBTS file or pair of files with only minutiae that satisfy the 
+entered filter parameter(s). [O] 
+ 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+5 
+3.3 CSCI External Interface Requirements 
+3.3.1 Interface Identification and Diagrams 
+a. The MDT shall provide a GUI. [T] 
+b. The MDT shall allow a user to manually open files from the local computer. [T] 
+c. The MDT shall allow a user to manually save a results file to the local computer. [T] 
+ 
+ 
+Figure 1 : MDT External Interface Diagram 
+ 
+3.3.2 EBTS Files 
+a. The MDT shall open a pair of LFFS EBTS files (i.e., *.lffs file format) for display within 
+the GUI. [T] 
+b. The MDT shall open an LFFS file that contains a valid Type-9 and Type-13 record, in 
+accordance to ANSI/NIST-ITL 1 -2011.  [T] 
+c. The MDT shall open an LFFS file that contains a valid Type-9 record, in accordance with 
+ANSI/NIST-ITL 1-2011,  and allow the user to then import an external image file (.bmp) 
+for display [O]. 
+d. The MDT shall only be required to open LFFS files that contain Type-9 minutia records 
+in one encoding standard; the specific minutia standard is Field Block 9.300-9.399 – 
+Extended Feature Set (EFS) standard Profile 2: Quick Minutia Search.  [T] 
+e. The MDT may allow a user to save an EBTS file that has had minutiae deleted from the 
+originally opened file due to user interactions or deviation filtering.  [O] 
+ 
+3.3.3 Deviation Log File 
+a. The MDT shall allow a user to save a text file containing a log of minutiae pairs with 
+details and the resulting deviation calculations from the current user session.  The text file 
+will be in a table structured format suitable for viewing in a common office spreadsheet 
+software program.  [T] 
+ 
+3.3.4  Session File 
+a. The MDT shall allow a user to save a session file containing all data from the LFFS files, 
+Deviation Log file, and any actions taken within the session by the user that resulted in a 
+change state.  The specific file data format and structure is to be left to the design. [T] 
+b. The MDT shall allow a user to open a session file and resume the viewing and/or analysis 
+of fingerprint image and minutia data in accordance to the describe CSCI capabilities. [T]  
+ 
+ 
+Local 
+ComputerOpen File
+MDT GUI User
+Save File
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+6 
+3.4 CSCI Internal Interface Requirements 
+No internal interface requirements for the MDT. 
+ 
+3.5 CSCI Internal Data Requirements 
+No internal data requirements for the MDT.  
+ 
+3.6 Adaptation Requirements 
+No adaptation requirements for the MDT.  
+ 
+3.7 Safety Requirements 
+No safety requirements for the MDT. 
+ 
+3.8 Security and Privacy Requirements 
+a. MDT will not provide per-user security setting. [T] 
+b. MDT will be able to operate in a standard DoD Information System ( IS) Environment. 
+[T] 
+ 
+3.9 CSCI Environment Requirements 
+a. MDT will operate in an  office environment.  [T] 
+ 
+3.10 Computer Resource Requirements 
+3.10.1 Computer Hardware Requirements 
+a. MDT shall operate on a standard Government desktop computer.  [T] 
+ 
+3.10.2 Computer Hardware Resource Utilization Requirements 
+a. MDT will require a minimum 100 Megabytes (MB) of RAM . [T] 
+b. MDT will require a minimum 200 MB hard drive.  [T] 
+ 
+3.10.3 Computer Software Requirements 
+a. MDT will run in the Microsoft Windows 7  operating system. [T] 
+b. MDT will require Microsoft .Net Framework 4.  [T] 
+ 
+3.10.4 Computer Communications Requirements 
+a. MDT shall not provide any network functionality. [T] 
+ 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+7 
+3.11 Software Quality Factors 
+a. Due in part to the prototype/research nature of this effort, the MDT will utilize a Spiral 
+development methodology. This will provide the best methodology to support the 
+development of the current version 1.0 (Beta) development, while still allowing for the 
+capture, planning, and implementation of future revision of the MDT tool. [O] 
+ 
+3.12 Design and Implementation Constraints  
+3.12.1 Hardware Design Constraints 
+The hardware/operating system for the MDT shall meet the following minimal system 
+requirements: 
+ 
+a. Microsoft Windows 7 or higher [T] 
+b. X86 Dual Core Processor [T] 
+c. 2 Gigabytes (GB) Memory [T] 
+d. 30 GB Hard drive [T] 
+ 
+3.12.2 Software Constraints 
+a. MDT will execute on a Windows 7 or higher compatible computer system. [T] 
+b. MDT will use a Windows Standard user interface. [T] 
+c. An effort will be made to develop all software for the MDT using C# computer language.  
+If insurmountable problems occur interfacing C#, MDT,  and Windows, the C/C++ 
+computer languages will be used as an alternative. [O] 
+ 
+3.13 Personnel-Related Requirements 
+No personnel-related requirements for the MDT. 
+ 
+3.14 Training-Related Requirements 
+No training-related requirements for the MDT.  
+ 
+3.15 Logistics-Related Requirements 
+No logistics-related requirements for the MDT.  
+ 
+3.16 Other Requirements 
+No other requirements for the MDT. 
+ 
+3.17 Packaging Requirements 
+a. The MDT will be delivered on 2 compact discs (CDs).  One CD will contain the 
+application .  The second CD will contain the source code and documentation for MDT 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+8 
+tool delivered on disc one.  Upon sponsor written request the delivery can be made 
+electronically as an alternative to the CD delivery. [T] 
+ 
+3.18 Precedence and Criticality of Requirements 
+All requirements have equal weight. 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+9 
+4.0 QUALIFICATION PROVISIONS 
+a. The MDT shall be demonstrated to representatives of the government sponsors to 
+verifying the CSCI capabilities. [T] 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+10 
+5.0 REQUIREMENTS TRACEABILITY 
+ 
+Table 1 : Listing of Requirements and Sources 
+ID No.  Section  Requirement  Source / Reference  
+1 
+ 3.2.1  Display Fingerprint Image and Minutiae  Program Narrative  
+2 
+ 3.2.2  Calculate Minutiae Deviations  Program Narrative  
+3 
+ 3.2.3  Filter Minutia Deviations  Program Narrative  
+4 
+ 3.3.2  EBTS F iles ANSI/NIST -ITL 1 -2011  
+5 
+ 3.3.3  Deviation Log File  Program Narrative  
+6 3.3.4  Session File  Program Narrative  
+ 
+  
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.
+ Minutia Deviation Tool: SRS (v. 1.1) 
+NIJ SSBT CoE  12 June 2014  
+ 
+UNCLASSIFIED 
+11 
+6.0 NOTES 
+Table 2 : Acronyms and Abbreviations 
+ACRONYM  DESCRIPTION  
+ASD(R&E)  Assistant Secretary of Defense for Research and Engineering  
+AT&L  Acquisition, Technology, and Logistics  
+  
+CD Compact Disc  
+CoE  Center of Excellence  
+CSCI  Computer Software Configuration Item  
+  
+DOD  Department of Defense  
+DOJ  Department of Justice  
+  
+EBTS  Electronic Biometrics Specification Transmission  
+EFS Extended Feature Set  
+  
+FBI Federal Bureau of Investigation  
+  
+GB Gigabyte  
+GUI  Graphical User Interface  
+  
+IS Information System  
+  
+LFFS  Latent Friction Ridge Features Search  
+  
+MASI  ManTech Advanced Systems International  
+MB Megabyte  
+MDT  Minutia Deviation Tool  
+  
+NIJ National Institute of Justice  
+NIST  National Institute of Standards and Technology  
+NLECTC  National Law Enforcement and Corrections Technology Center  
+  
+OSD  Office of the Secretary of Defense  
+  
+SRS Software Requirements Specification  
+SSBT  Sensor, Surveillance, and Biometric  Technologies  
+ 
+This document is a research report submitted to the U.S. Department of Justice. This report has not 
+been published by the Department. Opinions or points of view expressed are those of the author(s) 
+and do not necessarily reflect the official position or policies of the U.S. Department of Justice.

@@ -1,0 +1,731 @@
+
+  APAF-SRS-15-03561-V1.0 
+ 
+April 24, 2001 
+ 
+ 
+ 
+SOFTWARE REQUIREMENTS 
+SPECIFICATION 
+Version 1.0 
+ 
+ 
+For The 
+  
+Swedish Institute of Space Physics (IRF) 
+ 
+Mars Express 
+ASPERA-3 Processing and Archiving Facility 
+(APAF) 
+  
+SwRI Project No. 15-03561 
+  
+Prepared by: 
+Sandee Jeffers 
+ 
+SOUTHWEST RESEARCH INSTITUTE 
+Space Science and Engineering Division  
+Post Office Drawer 25810, 6220 Culebra Road 
+San Antonio, Texas 78228-0510
+  APAF-SRS-15-03561-V1.0 
+ 
+April 24, 2001 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION 
+Version 1.0 
+For The 
+ 
+ASPERA-3 Processing 
+and Archiving Facility 
+(APAF) 
+ 
+SwRI Project No. 15-03561 
+ 
+ 
+ 
+Approved by: _______________________________________________ _____  ___________________ 
+P r o f .  R i c k ar d  L u n d i n       D at e  
+  IRF Principal Investigator    Approved by: ____________________________________________________  ___________________ 
+H e r m an  A n d e r s s o n       D at e  
+  IRF Project Manager    Approved by: ____________________________________________________  ___________________ 
+Dr. J. David Winningham      D at e  
+  SwRI Principal Investigator    Prepared by: ____________________________________________________  ___________________ 
+S an d e e  J e f f e r s        D at e  
+  SwRI Software Project Manager    
+Reviewed by: ___________________________________________________  ___________________ 
+C ar r i e  G o n z al e z        D at e  SwRI Software Team Member
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     i REVISION NOTICE 
+ 
+Document Revision History 
+Revision Date Section Description of Changes 
+Initial Review  (Draft) Feb-28-2001   
+Initial Release  (1.0) Apr-24-2001  Changes made to draft based on APAF Software 
+Requirements Review to prepare for delivery. 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     ii  
+TABLE OF CONTENTS 
+ 
+ACRONYMS ............................................................................................................................... ...............iii 
+1.0 SCOPE ...................................................................................................................... ........................ 1 
+1.1 Project Identification ..................................................................................................... ................. 1 
+1.2 Data System Overview....................................................................................................... ............ 1 
+1.3 Goals and Objectives....................................................................................................... ............... 2 
+1.4 Document Overview.......................................................................................................... ............. 2 
+1.5 Related Documents.......................................................................................................... ............... 2 
+2.0 REQUIREMENTS SPECIFICATION DESCRIPTIONS ........................................................... 3 
+2.1 Requirement Identification................................................................................................. ............ 3 
+2.2 Qualification Provisions................................................................................................... .............. 3 
+2.3 Rationale.................................................................................................................. ....................... 3 
+2.4 Requirements Traceability.................................................................................................. ............ 3 
+3.0 REQUIREMENTS............................................................................................................... ............ 4 
+3.1 Capability or Functional Requirements...................................................................................... .... 4 
+3.2 External Interface Requirements ............................................................................................ ........ 5 
+3.3 Internal Interface Requirements ............................................................................................ ......... 6 
+3.4 Internal Data Requirements................................................................................................. ........... 6 
+3.5 Security and Privacy Requirements.......................................................................................... ...... 6 
+3.6 Computer Resource Requirements............................................................................................. .... 7 
+3.7 Logistics-Related Requirements............................................................................................. ........ 7 
+3.8 Delivery Requirements...................................................................................................... ............. 7 
+3.9 Other Requirements Considered.............................................................................................. ....... 9 
+3.9.1 Required States and Modes................................................................................................ ..... 9 
+3.9.2 Adaptation Requirements.................................................................................................. ...... 9 
+3.9.3 Safety Requirements ...................................................................................................... ......... 9 
+3.9.4 Software Quality Factors................................................................................................. ........ 9 
+3.9.5 Design and Implementation Requirements ............................................................................. 9 
+3.9.6 Personnel-Related Requirements ........................................................................................... .9  
+3.9.7 Training-Related Requirements ............................................................................................ .. 9 
+3.9.8 Precedence and Criticality of Requirements ......................................................................... 10 
+4.0 NOTES...................................................................................................................... ...................... 11 
+ 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     iii ACRONYMS 
+ 
+APAF ASPERA-3 Processing and Archiving Facility 
+ASPERA-3 Analyzer of Space Plasma and Energetic Atoms (3rd Version) 
+Co-I Co-Investigator DDID Data Disposition system Interface control Document 
+DDS Data Disposition System 
+DPU Data Processing Unit (of the ASPERA-3 instrument package) DSID Data System Interface Document 
+ELS Electron Spectrometer (of the ASPERA-3 instrument package) 
+E/PO Education and Public Outreach ESA European Space Agency 
+ESOC European Science Operations Center (Darmstadt, Germany) 
+FMI Finnish Meteorological Institute (Helsinki, Finland) GIF Graphics Interchange Format 
+ICD Interface Control Document 
+IDFS Instrument Data File Set or Instrument Description File Set IMA Ion Mass Analyzer (of the ASPERA-3 instrument package) 
+IRF Swedish Institute of Space Physics (Kiruna, Sweden) 
+MEX Mars Express NASA National Aeronautics and Space Administration 
+NISN NASA Integrated Services Network 
+NPD Neutral Particle Detector (of the ASPERA-3 instrument package) NPI Neutral Particle Imager (of the ASPERA-3 instrument package) 
+OA Orbit/Attitude (information from the Mars Express spacecraft) 
+OPD Operations Procedures Document PDMP Project Data Management Plan 
+PDS Planetary Data System 
+PI Principal Investigator PIDF Plot Interface Definition File 
+PM Project Manager 
+SDD Software Design Document SDDAS Southwest Data Display and Analysis System 
+SDP Software Development Plan 
+SPM Software Project Manager SU Scanning Unit (of the ASPERA-3 instrument package) 
+SwRI Southwest Research Institute (San Antonio, Texas USA) 
+UMU Umeå Univeristet (University in Umeå, Sweden) VIDF Virtual Instrument Description File 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     1 1.0 SCOPE 
+This Software Requirements Specification (SRS) identifies the requirements for the ASPERA-3 
+Processing and Archiving Facility (APAF) ground data system for the Mars Express mission. 
+ 
+1.1 Project Identification 
+Project Title: ASPERA for Mars Express 
+Project Number: 15-02853 / 15-03561 
+Contract Number: NASW-99030 / NASW-00003 
+Principal Investigator: Winningham, John D. 
+Project Manager: Scherrer, John R. 
+Software Project Manager: Jeffers, Sandee J. 
+Start Date: June 14, 1999 
+End Date: September 30, 2007 
+ 
+1.2 Data System Overview 
+The ASPERA-3 instrument package (or ASPERA-3 experiment) will be flown on the Mars Express 
+mission of the European Space Agency (ESA) and will be launched in June 2003 according to the current 
+schedule. ASPERA-3 contains a number of different sensors that will measure the particles, neutral 
+atoms, and fields in the near Martian environment. Southwest Research Institute is providing the data 
+system to produce data products in a form suitable for analysis and archiving. These data products will be put into a form known as the Instrument Data File Set (IDFS). 
+The ASPERA-3 Processing and Archiving Facility (APAF) is a ground data system responsible for 
+processing all of the ASPERA-3 telemetry.  The APAF data system acquires the telemetry data via NISN, 
+processes the data into IDFS data sets, distributes the IDFS data sets to the ASPERA-3 team, provides 
+web-based displays of the most current data for public view, stores the telemetry and IDFS data sets on a local SwRI archive, and submits the ASPERA-3 IDFS data sets to PDS for long-term archival. 
+The first step in defining the IDFS data sets is to identify the physical instruments that make up the 
+ASPERA-3 experiment and any ancillary data necessary for scientific analysis.  There are six components 
+of the ASPERA-3 package, plus the orbit and attitude data from the spacecraft: 
+1. Data Processing Unit (DPU) 2. Electron Spectrometer (ELS) 
+3. Ion Mass Analyzer (IMA) 
+4. Neutral Particle Detector (NPD) 
+5. Neutral Particle Imager (NPI) 
+6. Scanning Unit (SU) 7. Orbit/Attitude (OA)  
+Each of the physical components will be divided into logical groups (called virtual instruments) in which 
+each logical group will be formatted as an IDFS data set.  Each of the seven components described above 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     2 will have an associated Software Design Document (SDD) that will define and fully describe all of the 
+data products contained within each individual virtual instrument. 
+ 
+1.3 Goals and Objectives 
+The APAF ground data system is to provide data processing algorithms and support to IRF for the 
+ASPERA-3 science team (including Co-I’s) in preparation for the Mission Operations and Data Analysis (MO&DA) phase of the Mars Express mission.  In addition, validation and archiving of all ASPERA-3 
+scientific data in the NASA Planetary Data System (PDS) within 6 months of receipt in a form useable by 
+the general scientific community is to be provided by the APAF. 
+ 
+1.4 Document Overview 
+Section 2 is an overview of the descriptions of requirement determination, qualification procedures, 
+rationale, and traceability that are used in the identification and the definitions of the requirements. The 
+requirements of the APAF data system are categorized and defined in Section 3. Section 4 contains 
+general information to aid in the understanding of this specification. 
+ 
+1.5 Related Documents 
+Program-Level Requirements for the ASPERA-3 Mission of Opportunity Project: approved Nov. 1999 
+APAF Software Development Plan: APAF-SDP-15-02853, Version 1.2 released November 27, 2000 
+APAF Project Data Management Plan: APAF-PDMP-15-03561, Version 1.1 released December 29, 2000 
+APAF Data System Interface Document: APAF-DSID-15-03561, Version 1.0 released August 18, 2000 
+ESA Mars Express Space / Ground Interface Control Document (SGICD): ME-ESC-IF-5001, 
+Issue 1, May 1999 
+ESOC Data Disposition system Interface control Document (DDID): to be released sometime 2000 
+ASPERA-3 Packet Definitions: from FMI and UMU, preliminary document from FMI issued July 2000 ELS Software Design Document: ELS-SDD-15-03561, Version 1.0 to be released December 15, 2001 
+IMA Software Design Document: IMA-SDD-15-03561, Version 1.0 to be released December 15, 2001 
+NPD Software Design Document: NPD-SDD-15-03561, Version 1.0 to be released December 15, 2001 
+NPI Software Design Document: NPI-SDD-15-03561, Version 1.0 to be released December 15, 2001 
+DPU Software Design Document: DPU-SDD-15-03561, Version 1.0 to be released September 1, 2002 SU Software Design Document: SU-SDD-15-03561, Version 1.0 to be released September 1, 2002 
+OA Software Design Document: OA-SDD-15-03561, Version 1.0 to be released September 1, 2002 
+APAF System Design Document: APAF-SDD-15-03561, Version 1.0 to be released December 4, 2002 
+APAF Operations Procedures: APAF-OPD-15-03561, Version 1.0 to be released May 23, 2003 
+ 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     3 2.0 REQUIREMENTS SPECIFICATION DESCRIPTIONS 
+2.1 Requirement Identification 
+Each requirement shall be: 
+• Necessary: It states a condition for the acceptance of the system.  
+• Verifiable: It is stated in such a way that an objective test can be defined for it. 
+• Attainable: It is technically feasible and can be accomplished within schedule and budget. 
+• Clear: It is singular, concise, and simple.  
+Each requirement shall be: 
+• assigned a project-unique identifier. 
+• annotated with associated qualification (verification) methods (see section 2.2). 
+• annotated with rationale (see section 2.3). 
+• annotated with associated traceability to their source (see section 2.4). 
+2.2 Qualification Provisions 
+For each requirement in Section 3, the method(s) to be used to verify that the requirement has been met is 
+annotated. Qualification methods included in this specification are: 
+• Demonstration: observing function of the system without requiring instrumentation, special test 
+equipment, or subsequent analysis. 
+• Analysis: processing accumulated data obtained during characterization, calibration, or testing of 
+the instrumentation. For example, simulated instrument data sets can be created from the accumulated calibration and test data by putting this data into the expected telemetry format that 
+will be input into the APAF data system. These simulated data sets can then be processed into 
+IDFS data sets and the Southwest Data Display and Analysis System (SDDAS) can be used to 
+analyze the output from the APAF data system. 
+2.3 Rationale 
+The rationale behind each requirement is documented, if applicable, in Section 3 along with each 
+requirement. Rationale may include: 
+• assumptions 
+• why a requirement is needed 
+• how a requirement is related to expected operations 
+• design decisions made at higher system levels 
+2.4 Requirements Traceability 
+The relationship between each requirement and the project item(s) that it addresses is documented along 
+with each requirement identified in Section 3. A requirement may address any number of project items 
+including a system-level requirement, a customer request document (e.g., an RFP), a proposal, or other documentation. A requirement may also address a higher-level design element. For proper traceability, 
+the following information is provided for each requirement: 
+• Requirement Identifier 
+• Requirement Description 
+• Requirement Source (e.g. RFP, proposal, SRS, etc): Source of the requirement 
+• Verification Method (what method will be used to verify the requirement) 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     4 3.0 REQUIREMENTS 
+The APAF ground data system requirements are categorized according to functional areas and are defined 
+in the following sections in table format. 
+3.1 Capability or Functional Requirements 
+The requirements associated with the functionality of the APAF ground data system are itemized in the 
+table below.  The mnemonic, FR, is used in the requirement identifiers to show that these requirements 
+are Functional Requirements unless otherwise specified. 
+Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-FR-01 The APAF system shall acquire 
+from ESOC the telemetry data of 
+the ASPERA-3 Experiment and 
+Mars Express Orbit/Attitude. Demonstration ESOC Data 
+Disposition system 
+Interface Document To automatically 
+process the data on 
+a daily basis. 
+APAF-FR-02 The APAF system shall process all 
+ASPERA-3 science data into IDFS data sets. Demonstration 
+and Analysis Proposal, NASA 
+Discovery Office 
+Program-Level 
+Requirements Section 4.1.1 of 
+Program-Level 
+Requirements, 
+Baseline Science 
+Requirements. 
+APAF PDMP 
+APAF-FR-03 The APAF system shall process the 
+engineering and ancillary 
+information necessary for calibration and science validation 
+into IDFS data sets. Demonstration 
+and Analysis NASA Discovery 
+Office Program-
+Level Requirements Section 4.5.1, 
+Science Data 
+Management 
+APAF-FR-04 Intermediate files of cleaned-up 
+ASPERA-3 and MEX OA 
+telemetry shall be generated in the event that cleaned-up telemetry is 
+not provided by ESOC. Demonstration 
+and Analysis APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-FR-05 The ASPERA-3 and MEX OA 
+telemetry data shall be stored on a 
+local SwRI archive. Demonstration APAF Project Data 
+Management Plan For data availability 
+and re-processing 
+APAF-FR-06 The ASPERA-3 and MEX OA 
+IDFS data sets shall be stored on a local SwRI archive. Demonstration APAF Project Data 
+Management Plan For data availability 
+and analysis 
+APAF-FR-06a Any APAF-generated intermediate 
+files of ASPERA-3 and MEX OA 
+cleaned-up telemetry shall be stored 
+on a local SwRI archive. Demonstration APAF Software 
+Requirements 
+Review Minutes For data availability 
+and re-processing, 
+and to support the 
+ASPERA-3 team 
+APAF-FR-07 Web-based displays of the most 
+current ASPERA-3 data shall be 
+provided for public view. Demonstration APAF Project Data 
+Management Plan E/PO and monitor 
+instrument 
+performance 
+APAF-FR-08 Web-based displays defined by the 
+ASPERA-3 team shall be provided 
+where any available ASPERA-3 
+data (as opposed to just the most current) can be used for science 
+analysis. Demonstration APAF Software 
+Requirements Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     5 Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-FR-08a The web-based displays defined by 
+the ASPERA-3 team to be used for 
+science analysis shall be password protected until the ASPERA-3 data is made public. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-FR-09 The APAF ground data system shall 
+have built-in error handling. Demonstration APAF Project Data 
+Management Plan For better data 
+integrity 
+APAF-DR-01 
+(Listed as a 
+Delivery 
+Requirement) ASPERA-3 and MEX OA IDFS 
+data and any APAF-generated 
+intermediate files of ASPERA-3 
+and MEX OA cleaned-up telemetry 
+shall be provided to all ASPERA-3 
+Co-I’s. Demonstration NASA Discovery 
+Office Program-
+Level Requirements 
+APAF Software 
+Requirements 
+Review Minutes Section 4.1.1, 
+Baseline Science 
+Requirements; 
+To support the 
+ASPERA-3 team in 
+meeting MEX mission goals and objectives 
+APAF-DR-05 
+(Listed as a 
+Delivery 
+Requirement) IDFS data access software 
+developed by SwRI shall be made 
+available to the ASPERA-3 Co-I’s. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-DR-06 
+(Listed as a 
+Delivery 
+Requirement) Science analysis software 
+developed by SwRI to analyze 
+IDFS-formatted data shall be made 
+available to the ASPERA-3 Co-I’s. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+ 
+3.2 External Interface Requirements 
+The requirements associated with external interfaces of the APAF data system are identified and 
+described in the APAF Data System Interface Document (APAF-DSID-15-03561-V1.0) . For ease of 
+reference, they are listed in the following tables. 
+The external interface identifiers (ID) begin with APAF-DS to denote the APAF Data System. The next 
+two characters refer to the category of the interface – either II for Input Interface or OI for Output 
+Interface. Sequential numbers starting at 1 follow to uniquely identify the interfaces. 
+The input interfaces are identified in the following table. 
+Interface ID Interface Description Document Reference 
+Programmers Guide to the ASPERA-3.org 
+Web Server 
+This document describes the configuration of 
+phobos.space.swri.edu, which is the computer 
+to be used for the development of the APAF data system APAF-DS-II-1 System Parameters 
+ESOC Data Disposition system Interface 
+control Document (DDID) 
+ME-ESC-IF-5001 Mars Express Space / Ground Interface Control 
+Document (SGICD) (ESA Document) APAF-DS-II-2 ASPERA-3 and Mars Express 
+Orbit/Attitude Telemetry Data 
+Packet Definitions (from FMI and UMU) 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     6 Interface ID Interface Description Document Reference 
+APAF-SRS-15-03561 
+APAF Software Requirements Specifications 
+Program-Level Requirements for the ASPERA-3 Mission of Opportunity Project 
+The Software Design Documents shall fully document the instrument parameters, 
+spacecraft parameters, and science information 
+necessary for IDFS descriptions. APAF-DS-II-3 Virtual Instrument Descriptions for 
+the ASPERA-3 Experiment Data 
+and the Mars Express 
+Orbit/Attitude Data 
+The www.ASPERA-3.org web site is used for 
+obtaining and reviewing IDFS information. 
+APAF-DS-II-4 Operator I nput APAF-OPD-15-03561 
+APAF Operations Procedures Document 
+ 
+The output interfaces are identified in the following table. 
+ 
+Interface ID Interface Description Document Reference 
+APAF-PDMP-15-03561 
+APAF Project Data Management Plan APAF-DS-OI-1 Distribution of ASPERA-3 and 
+MEX OA IDFS Data Sets APAF-OPD-15-03561 
+APAF Operations Procedures Document 
+APAF-DS-OI-2 System Logs APAF-OPD-15-03561 
+APAF Operations Procedures Document 
+APAF-OPD-15-03561 APAF Operations Procedures Document 
+APAF-DS-OI-3 Local Archive of ASPERA-3 and 
+MEX OA Telemetry & IDFS Data Local Archive Configuration Files 
+www.ASPERA-3.org 
+APAF-DS-OI-4 Web-based Displays APAF-OPD-15-03561 
+APAF Operations Procedures Document 
+ 
+3.3 Internal Interface Requirements 
+All internal interfaces are left to the design. The Software Design Documents of each of the seven 
+components (see section 1.2) shall contain the detailed information of the internal interfaces. 
+3.4 Internal Data Requirements 
+All internal data requirements are left to the design. The Software Design Documents of each of the seven components (see section 1.2) shall contain the detailed information of the virtual instrument data items. 
+3.5 Security and Privacy Requirements 
+There are no security requirements associated with the APAF ground data system. However, there are privacy issues related to intellectual property and sensitive information and data. The requirement associated with the privacy of the APAF ground data system is in the table below.  The mnemonic, PR, is 
+used in the requirement identifier to show that this requirement is a Privacy Requirement. 
+ 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     7 Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-PR-01 The APAF system web server shall 
+be password protected where 
+appropriate to allow only pertinent 
+ASPERA-3 team members access. Demonstration APAF Software 
+Development Plan Section 10.0, 
+Security Plan 
+ 
+3.6 Computer Resource Requirements 
+The requirements associated with computer resources are listed in the table below. Computer resources 
+include computer hardware, computer software, and computer communication. The mnemonic, CR, is 
+used in the requirement identifiers to show that these requirements are Computer resource Requirements. 
+Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-CR-01 There shall be a UNIX-based APAF 
+system development computer. 
+(Done: phobos.space.swri.edu) Demonstration APAF Software 
+Development Plan Section 4.1.1, 
+Hardware 
+Resources 
+APAF-CR-02 There shall be a UNIX-based APAF 
+system production computer with 
+an archival system. Demonstration APAF Software 
+Development Plan Section 4.1.1, 
+Hardware 
+Resources 
+APAF-CR-03 There shall be a web server for the 
+APAF system. 
+(Done: www.aspera-3.org) Demonstration APAF Project Data 
+Management Plan For web-based 
+displays, and for 
+information 
+exchange 
+APAF-CR-04 There shall be a network connection 
+between SwRI and NISN. Demonstration Proposal 
+APAF Project Data 
+Management Plan For data transfers 
+and distribution 
+ 
+3.7 Logistics-Related Requirements 
+The SwRI software team shall provide system maintenance and software support. 
+The logistics-related requirements of the APAF ground data system are itemized in the following table.  
+The mnemonic, LR, is used in the requirement identifiers to show that these requirements are Logistical 
+Requirements. 
+Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-LR-01 SwRI shall provide APAF system 
+maintenance. Demonstration NASA Discovery 
+Office Program-Level Requirements Section 4.4 – to 
+satisfy mission needs 
+APAF-LR-02 SwRI shall provide software 
+support for the APAF system. Demonstration NASA Discovery 
+Office Program-
+Level Requirements Section 4.4 – to 
+satisfy mission 
+needs 
+ 
+3.8 Delivery Requirements 
+The APAF data system requirements for delivering the ASPERA-3 IDFS data, Mars Express 
+Orbit/Attitude IDFS data, and software are described in the following table. The mnemonic, DR, is used 
+in the requirement identifiers to show that these requirements are Delivery Requirements. 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     8 Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-DR-01 
+(Also Listed in 
+Functional 
+Requirements) ASPERA-3 and MEX OA IDFS 
+data and any APAF-generated 
+intermediate files of ASPERA-3 and MEX OA cleaned-up telemetry 
+shall be provided to all ASPERA-3 
+Co-I’s. Demonstration NASA Discovery 
+Office Program-
+Level Requirements 
+APAF Software 
+Requirements 
+Review Minutes Section 4.1.1, 
+Baseline Science 
+Requirements; 
+To support the 
+ASPERA-3 team in 
+meeting MEX mission goals and objectives 
+APAF-DR-01a ASPERA-3 IDFS data that are 
+electronically distributed shall be 
+provided to the ASPERA-3 Co-I’s within 24 hours of acquiring ASPERA-3 telemetry as long as the transmission and processing are error-free. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-DR-01b MEX OA IDFS data that are 
+electronically distributed shall be 
+provided to the ASPERA-3 Co-I’s within 24 hours of acquiring MEX 
+OA telemetry as long as the 
+transmission and processing are 
+error-free. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-DR-01c Any APAF-generated intermediate 
+files of ASPERA-3 and MEX OA 
+cleaned-up telemetry that are 
+electronically distributed shall be 
+provided to the ASPERA-3 Co-I’s within 24 hours of acquiring ASPERA-3 and MEX OA telemetry as long as the 
+transmission and processing are 
+error-free. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission goals and objectives 
+APAF-DR-02 ASPERA-3 IDFS data and MEX 
+OA IDFS data shall be provided to 
+NASA PDS. Demonstration 
+and Analysis NASA Discovery 
+Office Program-
+Level Requirements Section 4.1.1, 
+Baseline Science 
+Requirements 
+APAF-DR-02a ASPERA-3 data shall be provided 
+to NASA PDS in PDS-compliant 
+form. Analysis NASA Discovery 
+Office Program-
+Level Requirements Section 4.5.1, 
+Science Data 
+Management 
+APAF-DR-02b ASPERA-3 data shall be calibrated 
+and validated prior to depositing in the NASA PDS. Analysis NASA Discovery 
+Office Program-Level Requirements Section 4.5.1, 
+Science Data Management 
+APAF-DR-02c ASPERA-3 data shall be provided 
+to NASA PDS no later than 6 
+months after acquisition. Demonstration NASA Discovery 
+Office Program-
+Level Requirements Section 4.5.1, 
+Science Data 
+Management 
+APAF-DR-03 SwRI shall provide IDFS data 
+processing algorithms to IRF. Demonstration NASA Discovery 
+Office Program-
+Level Requirements Section 4.4, Ground 
+System 
+Requirements 
+APAF-DR-04 Science analysis software shall be 
+integrated into the NASA approved 
+data repository. Demonstration NASA Discovery 
+Office Program-
+Level Requirements Section 4.5.2, 
+Analysis Software 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     9 Requirement  
+Identifier Requirement Description Verification 
+Method(s) Source Rationale & 
+Comments 
+APAF-DR-05 
+(Also Listed in 
+Functional 
+Requirements) IDFS data access software 
+developed by SwRI shall be made 
+available to the ASPERA-3 Co-I’s. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-DR-06 
+(Also Listed in 
+Functional 
+Requirements) Science analysis software 
+developed by SwRI to analyze 
+IDFS-formatted data shall be made 
+available to the ASPERA-3 Co-I’s. Demonstration APAF Software 
+Requirements 
+Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+APAF-DR-07 How the ASPERA-3 and MEX OA 
+data and exactly what data sets are 
+to be distributed to each Co-I shall 
+be determined by the needs and resources available six months prior to MEX launch.  The distribution mechanisms shall be clearly defined/described in the APAF Operation Procedures Document. Demonstration APAF Software 
+Requirements Review Minutes To support the 
+ASPERA-3 team in 
+meeting mission 
+goals and objectives 
+ 
+3.9 Other Requirements Considered 
+This section identifies the requirements considered but not part of the APAF ground data system 
+requirements. 
+3.9.1 Required States and Modes 
+The APAF data system is not required to operate in more than one state or mode. 
+3.9.2 Adaptation Requirements 
+There are no installation-dependent requirements for the operation of the APAF data system.  However, if any are identified, they shall be documented in the APAF Operations Procedures Document. 
+3.9.3 Safety Requirements 
+The APAF data system will not impose hazards to personnel, property, or the environment.  Therefore, there are no safety requirements of the APAF ground data system. 
+3.9.4 Software Quality Factors 
+Although the APAF data system and associated software will be developed with the highest quality 
+possible, there are no requirements concerned with software quality. Some of the software quality factors 
+that will be considered when developing the APAF data system include: reliability, maintainability, 
+availability, flexibility, portability, testability, and usability. 
+3.9.5 Design and Implementation Requirements 
+There are no requirements that constrain the design and implementation of the APAF software. 
+3.9.6 Personnel-Related Requirements 
+There are no identified requirements related to personnel that will use the software. However, the APAF Operations Procedures Document will aid personnel in the operational use of the APAF system. 
+3.9.7 Training-Related Requirements 
+Since the members of the SwRI software team are experienced with data system and IDFS processing software development, there are no training-related requirements for developers of the APAF data system. 
+In addition, the APAF Operations Procedures Document shall provide installation and operations 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     10 procedures of the APAF system in enough detail where there are no training-related requirements for 
+users and operators of the APAF data system. 
+3.9.8 Precedence and Criticality of Requirements 
+There are no requirements of the APAF data system that need special treatment or consideration at this time. 
+ 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     11 4.0 NOTES 
+To aid in the understanding of this specification, the requirements imposed on SwRI for the development 
+and operation of the ASPERA-3 Mission of Opportunity (MO) of the NASA Discovery Program as they are relevant to the APAF ground data system are documented here. These are taken directly from the 
+Program-Level Requirements for the ASPERA-3 Mission of Opportunity Project  which is an appendix to 
+the NASA Discovery Program Plan. 
+In Section 4.1.1, Baseline Science Requirements,  it states: 
+“…the ASPERA-3 MO shall provide the complete data set of the integrated ASPERA-3 
+investigation to all ASPERA-3 Co-I’s and the NASA Planetary Data System (PDS). The specific 
+measurements delivered shall be as follows: 
+4.1.1.1 Measure integral ENA fluxes in the energy range of 0.1 to 60 keV. 
+4.1.1.2 Measure mass/energy resolved neutral hydrogen and oxygen atom spectra in the energy 
+range of 0.1 to 100 keV. 
+4.1.1.3 Measure ion energy/mass/angle resolved spectra in the energy range of 0.001 to 40 keV; 
+1-1e6 atomic mass units per unit charge (amu/q); with 4pi steradian coverage. 
+4.1.1.4 Measure the electron spectra in the energy range of 0.001 to 20 keV, with 4pi steradian 
+coverage. 
+4.1.1.5 Measure ions and electrons in the energy range of 0.001 to 40 keV; 1-1e6 amu/q.”  
+In Section 4.3, Launch Requirements,  it states: 
+“…data processing software shall meet the delivery requirements of the IRF in order to support 
+the launch date and operation of the ESA Mars Express mission.” 
+ 
+In Section 4.4, Ground System Requirements,  it states: 
+“SwRI shall develop the ASPERA-3 data reduction system and software to be used during 
+instrument integration, test, calibration and mission operations for the full ASPERA-3 
+experiment. This task will include interfacing with all ASPERA-3 sensor teams to determine and 
+effect data packetization and storage strategies. This system shall be available on a schedule to 
+satisfy the mission needs per agreement with IRF, and to satisfy the data availability requirements 
+established in Section 4.5.1. 
+SwRI shall provide processing algorithms to IRF in preparation for the mission operations and 
+data analysis phase of Mars Express on a schedule to satisfy the mission needs per agreement 
+with IRF.” 
+ 
+In Section 4.5.1, Science Data Management,  it states: 
+“…the ASPERA-3 MO PI shall be responsible for collecting engineering and ancillary 
+information necessary to validate and calibrate the scientific data prior to depositing it in the 
+NASA PDS in a PDS-compliant form. The time required to complete this process shall be the 
+minimum necessary to provide accurate scientific data to the science community and the general 
+public, but it shall not exceed six months after acquisition.” 
+ 
+April 24, 2001  APAF-SRS-15-03561-V1.0 
+ 
+SOFTWARE REQUIREMENTS SPECIFICATION                                     12 In Section 4.5.2, Analysis Software,  it states: 
+“Science analysis software developed by the ASPERA-3 MO PI team for this project shall be 
+integrated into the NASA approved data repository. The PI team and the science community shall 
+have equal on-line access to this software.” 
+ In Section 4.5.3, Data Management Plan,  it states: 
+“The ASPERA-3 MO Project shall develop a project data management plan to address the total 
+activity associated with the flow of science data, including planning, acquisition, processing, data 
+product generation and validation, archiving, and preservation. The plan shall identify science 
+and supplementary data products, systems associated with handling the data, and the roles, responsibilities, and operational interfaces affecting those data and systems.” 
+Note: This Program-Level requirement has been met with the generation and delivery of the 
+APAF Project Data Management Plan (PDMP). 
+ 

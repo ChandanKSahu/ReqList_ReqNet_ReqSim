@@ -1,0 +1,27 @@
+D	Minutia Deviation Tool: Software Requirements Specification (SRS) - a prototype Computer Software Configuration Item (CSCI) (i.e., software utility) to aid a user in designating equivalent minutia pairs across two fingerprint biometric images and calculating the pair’s minutia spatial deviations
+3	REQUIREMENTS
+3.2	CSCI Capability Requirements
+3.2.1	Display Fingerprint Image and Minutiae
+3.2.2	Calculate Minutiae Deviations
+3.2.3	Filter Minutia Deviations
+3.3	CSCI External Interface Requirements
+3.3.1	Interface Identification and Diagrams
+3.3.2	EBTS Files
+3.3.3	Deviation Log File
+3.3.4	Session File
+3.8	Security and Privacy Requirements
+3.9	CSCI Environment Requirements
+3.10	Computer Resource Requirements
+3.10.1	Computer Hardware Requirements
+3.10.2	Computer Hardware Resource Utilization Requirements
+3.10.3	Computer Software Requirements
+3.10.4	Computer Communications Requirements
+3.11	Software Quality Factors
+3.12	Design and Implementation Constraints
+3.12.2	Software Constraints
+3.13	Personnel-Related Requirements
+3.14	Training-Related Requirements
+3.15	Logistics-Related Requirements
+3.16	Other Requirements
+3.17	Packaging Requirements
+3.18	Precedence and Criticality of Requirements

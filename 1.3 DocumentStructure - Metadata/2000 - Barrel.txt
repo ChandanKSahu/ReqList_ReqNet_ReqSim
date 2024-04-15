@@ -1,0 +1,8 @@
+D	Barrel LVL1 Muon Trigger Coincidence Matrix ASIC
+3	Speciﬁc requirements
+3.1	Capability requirements
+3.2	Constraints requirements
+3.1.1	Requirements on the Readout Blocks
+3.1.3	Requirements on the Trigger Blocks
+3.5	Requirements on External Systems Connected to the CMA
+3.6	Requirements to the design pr ocess and tools used

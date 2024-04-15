@@ -1,0 +1,12 @@
+D	Identity Management System (IMS) in a University Accommodation Management system (UAM) - specialised student housing solution
+3.4	Functional Requirements
+3.4.1	Account Registration (online Student Applicants)
+3.4.2	Completing an Accommodation Application
+3.4.3	Synchronising Other Personal Data
+3.4.4	Reports
+3.7	Non-Functional Requirements
+3.7.1	Security
+3.7.2	Performance
+3.7.3	Training
+3.7.4	User Documentation
+3.7.5	On-going support and maintenance

@@ -1,0 +1,28 @@
+D	Electronic Health Record (EHR) System Technical Requirements - Los Angeles County Department of Health Services (DHS)
+1	Platform		
+2	Scalability & Flexibility		
+3	Database Management & Architecture		
+4	Data Conversion and Interface	
+5	System Access
+6	User Profiles/Administration	
+7	Input Validation	
+8	Authentication	
+9	Authorization	
+10	Configuration Management	
+11	Integrity Controls	
+12	Sensitive Data (e.g., ePHI, Personally Identifiable Information)	
+13	Session Management	
+14	Timeouts	
+15	Encryption	
+16	Parameter Manipulation	
+17	Exception Management/ Error Handling	
+18	Audit Trails and Logging	
+19	Synchronization with Applications or Devices Used in Offline Mode
+20	Reporting	
+21	Reporting and Data Warehouse	
+22	End-user Interface	
+23	Content and Document Management	
+24	Redundancy & Business Continuity	
+25	System Capacity & Performance	
+26	Hosting	
+27	Systems Operations Support and Error Handling

@@ -1,0 +1,589 @@
+
+April 2011
+Knowledge Management 
+System Requirements
+Version 1.0
+CIO-01598-05 United  StateS   
+Office  Of PerSOnnel  ManageMent
+Chief Information Officer
+1900 E Street, NW 
+Washington, DC 20415
+OPM Knowledge Management System  Requirements 
+ 
+Page i 
+ Revision Sheet 
+ 
+1. Revision Release 
+Number  2. Date  3. Scope  4. Revision Description  
+Version 1  April 15 , 2011  Requirements  Initial Draft  
+Version 1  April 15, 2011  Requirements  Final  
+Version 1  Jan, 30, 2013  Alt Text for web posting  Final  
+    
+    
+ 
+Roles 
+ 
+1. Role/Name/Address  
+ 2. Phone  
+Project Owner, Open Government Flagship Team   
+Project Manager,  TBD  
+Project Team Member,  TBD  
+Project Team Member,  TBD  
+Project Team Member,  TBD  
+OPM Knowledge Management System  Requirements 
+ 
+Page ii 
+ Table of Contents 
+ 
+Revision Sheet ......................................................................................................................................  i 
+Roles .....................................................................................................................................................  i 
+Table of Contents ................................................................................................................................  ii 
+1.0 Background ...................................................................................................................................  1 
+2.0 How the Requirements Were Developed .....................................................................................  2 
+3.0 Overview of the Knowledge Management System ......................................................................  2 
+4.0 System Diagram ............................................................................................................................  5 
+5.0 Assumptions ..................................................................................................................................  6 
+6.0 Requirements ................................................................................................................................  6 
+6.1 Platform Requirements: ........................................................................................................  6 
+6.2 User Requirements: ...............................................................................................................  7 
+6.3 Administrative Requirements: ..............................................................................................  8 
+6.4 Search Requirements: ...........................................................................................................  8 
+6.5 Document Management Requirements: ...............................................................................  9 
+6.6 Learning Management System Requirements: .....................................................................  9 
+6.7 Content Management System Requirements: .................................................................... 10 
+6.8 Data Management Requirements: ...................................................................................... 10 
+6.9 Knowledge Management Requirements: ............................................................................ 11 
+7.0 Additional Requirements for Electronic Document and Records Management System ........... 11 
+8.0 Additional Requirements for Business Analytics and Business Intelligence .............................. 12 
+9.0 Additional Requirements for Migrating Retirement Portal ........................................................ 13 
+10.0 Funding ..................................................................................................................................... 13 
+11.0 Implementation Plan ................................................................................................................ 13 
+12.0 Points of Contact (POCs) ........................................................................................................... 14 
+Appendix: Existing Systems That Should Be Integrated Into The KMS ............................................. 15 
+OPM Knowledge Management System  Requirements 
+ 
+Page 1 
+ 
+ 1.0 Background 
+ 
+The Open Government Memorandum (M- 10-06) of December 8, 2009, commonly known as the 
+Open Government Directive, sets an unprecedented standard for a more transparent, 
+participatory, and collaborative form of Government. In response to the Directive, OPM has 
+established a governance structure comprising members of the Executive Board and their 
+respective cross-agency representatives on the Core Team and Component Teams. The 
+Component Teams are composed of members from OPM, academia, nonprofits, other agencies 
+and the union with the purpose of providing information and ideas to the Core Team. The Core 
+Team then synthesizes the information from the Component Teams and makes recommendations 
+on implementing Open Government at OPM. All of the teams are developing and implementing 
+actions to ensure accountability and a culture that supports the sustainability of transparency, 
+participation and collaboration at OPM. 
+ 
+ 
+ 
+Specifically, the Knowledge Management System (KMS) is a product from the Flagship Initiative 
+Team that was charged with the following:  
+ 
+OPM Knowledge Management System  Requirements 
+ 
+Page 2 
+ 
+ Flagship Initiative  – Knowledge Management and Collaboration Tools – will 
+provide easy access to and sharing of agency information (data, policies, 
+procedures, processes, and training) for internal and external stakeholders alike, 
+wherever they may be working.  Thus, collaborative learning within and outside of 
+OPM will be ongoing. 
+ 
+ 
+2.0 How the Requirements Were Developed 
+ 
+The Flagship Team started the process by requesting requirements documents for the existing 
+systems in OPM such as the DMS, the Learning Connect program, Serena Business Mashup 
+applications, and the SharePoint pilot project. The requirements documents were analyzed to 
+determine what requirements were common to all systems and to develop requirements for the 
+KMS to ensure that it integrates all of the existing systems if applicable. 
+ 
+ 
+3.0 Overview of the Knowledge Management System 
+ 
+This document sets out the requirements for the KMS . We propose redesigning Theo (OPM’s 
+intranet) to serve as a portal for the tools that will provide various knowledge management and 
+collaboration tools. OPM has several existing knowledge management tools such as Drupal, 
+Moodle, Serena Business Mashups. Currently these tools are limited to small groups within OPM. 
+Each of these tools has useful features for some knowledge management activities but no single 
+tool can fulfill all of the required knowledge management features. Thus, we suggest a federated 
+approach in which a redesigned Theo will serve as a common entry point to various knowledge 
+management solutions.  
+ 
+The federated approach works much like smartphones and apps. Each knowledge management 
+application (current or future) will provide a user-friendly interface accessible through the 
+common platform of Theo 2.0 (or, with some apps, integrated into current desktop applications 
+such as Microsoft Word). The knowledge management apps (KMA) will also share their data with 
+other applications so that existing data sources such as EHRI can be leveraged across several 
+applications so as to prevent data redundancy and input errors. How a specific KMA works 
+internally can be different from other KMAs but how the KMA shares data and provides the user 
+experience will be similar to other KMAs. This streamlines the learning curve and allows for more 
+effective integration with OPM’s IT environment.  
+ 
+OPM Knowledge Management System  Requirements 
+ 
+Page 3 
+ 
+ Another advantage of the KMAs is that users can customize their view of Theo 2.0 so that they 
+can choose the KMAs that they use. This will increase their productivity as the user can better 
+integrate what they need in their particular work processes. Each of the sections below briefly 
+describes the various core components of Theo 2.0 that will be provided to all users: 
+ 
+FAQs - OPM established interactive FAQs in 2010 which have proven to be successful with the 
+public. We want to expand the use of the FAQs so that they can better serve as an internal 
+knowledge resource and provide better stakeholder engagement. 
+ 
+Enhanced Directory  - Along with OPM’s FAQs we currently have an organizational directory 
+available on OPM’s public web site. There are plans to enhance the  directory of functional points 
+of contact and connect it with the organizational directory. This will also be available internally. 
+ 
+Document Management / Records Management  - The current document management system is 
+the DMS which is a stand-alone system. The plan is to replace the existing DMS with a solution 
+that will integrate into the document creation workflow. For example, a user will create a Word 
+document and then use the new document management system to automatically tag and route 
+the document through the appropriate workflow. At the same time, the document will be stored 
+in an approved area with an organizationally-approved common naming convention and 
+automatically managed in accordance with OPM’s Records Schedule.  
+ 
+Learning Connection  - Learning Connection was introduced in 2011 as an agency-wide training 
+platform. It is currently available through Theo. In Theo 2.0 Learning Connection will be expanded 
+to support the training necessary to support the communities of practice ( COPs ) in becoming 
+collaborative and using Action Learning. 
+ 
+IdeaFactory  - IdeaFactory was introduced in 2011 and will be available through Theo 2.0. Some 
+COPs will be formed to collaborate around the more complex ideas introduced through 
+IdeaFactory. 
+ 
+Mentor Connect  - Mentor Connect is a planned tool to support OPM’s mentoring program. The 
+requirements have yet to be specified but preliminary discussions have called for a tool that 
+allows for matching mentors and mentees based on career interests and managing the 
+administrative details for mentoring interactions. There will also be features that will support 
+online mentoring from mentors external to OPM. 
+ 
+OPM Knowledge Management System  Requirements  
+ 
+Page 4 
+ 
+ Content Management  - The current practice of posting to OPM’s public web site is a long and 
+involved process that requires numerous interactions. In Theo 2.0 we will automate the process of 
+publishing to the public web  site so that program offices can be more responsive in engaging with 
+external stakeholders. The content management system will be accessible through Theo 2.0.  
+ 
+Process Mapping and  Inventory  - Theo 2.0 will support performance management efforts by 
+providing a centralized repository where program offices can document  their various business 
+processes. We will have COPs that will discover, inventory, and record the business processes for 
+discovering best practices and provid ing transparency on OPM’s business practices.  
+ 
+Collaboration Platform for COPs  - A major component of Theo 2.0 will be as an online 
+collaboration platform for OPM’s COPs. The tool will allow the C OPs to maintain their documents, 
+rosters, and lessons learned. The collaboration platform will also offer online synchronous 
+meetings, discussions boards, blogs, and a wiki to contain the body of knowledge created by the 
+COP. Theo 2.0’s COPs collaboration platform will support internal and external COPs.
+OPM Knowledge Management System  Requirements 
+ 
+Page 5 
+ 
+  
+4.0 System Diagram 
+ 
+ 
+Enhanced 
+Directory  FAQs  Document Mgmt 
+/ Record Mgmt  Learning 
+Connection  Idea 
+Factory  Mentor 
+Connect  Content 
+Mgmt  Process 
+Mapping and 
+Inventory  Applications appear as add -ons to desktop applications  
+or as a link in Theo 2.0  
+Data is exchanged 
+through APIs or XML  THEO 2.0  
+(Or integrated with desktop applications)  
+Collaborati on 
+Platform for 
+Communities of 
+Practice  
+Shared Databases  
+OPM Knowledge Management System  Requirements 
+ 
+Page 6 
+ 
+ 5.0 Assumptions 
+ 
+Knowledge Management System Project Assumptions  
+ 
+1 This requirements document captures the requirements associated with the KMS Project.  
+2 The programming expert ise and technological resources are readily available for this project.  
+3 A Learning and Knowledge Sharing Strategy for OPM is in effect.  
+4 Effective controls will be in place to prevent disclosure of PII and to safeguard the security of 
+OPM personnel.  
+5 Ongoing process to evaluate suitable future technology for integration into KMS.  
+6 The KMS will pass approval by Security.  
+7 All or most of the KMS will be cloud -based.  
+8 OPM employees will be trained on effective collaboration and working with extern als in 
+communities of practice.  
+ 
+ 
+6.0 Requirements 
+ 
+6.1 Platform Requirements:  
+1. All or most of the KMS will be based in an approved cloud environment. 
+2. Software as a service hosted delivery model that is interoperable with other 
+modules/applications. 
+3. System shall be web- based, conform to OPM’s IT Enterprise Architecture Vision, use 
+OPM’s standards for the shared databases  and web servers, support distributed 
+processing, reside on an Intel platform, operate in a MS Windows environment, support 
+OPM’s approved  applications, support VPN, server-based fax pool, data encryption/PKI, 
+Assistive Technology, interface with MS Outlook/Exchange, and common file formats. 
+4. System shall integrate with different functional applications such as document 
+management, correspondence tracking, reporting tools, documenting imaging, knowledge 
+OPM Knowledge Management System  Requirements 
+ 
+Page 7 
+ 
+ management, IVR systems, executive dashboard, OCPL’s web publishing platform, and 
+electronic forms. 
+5. System shall support e-authentication/e-signature technology according to Federal 
+security regulations. 
+6. System shall support automated notifications regarding unavailability and availability. 
+7. System can be easily upgraded. 
+8. System will follow OPM Business Continuity Policies. 
+9. System can support expected increase in annual growth and a TBD number of users in 
+different geographic locations. 
+10. System shall have a correspondence tracking system including logging, tracking, time-
+stamping, notification, reporting, close-out, and routing based on business rules, 
+workflow, and prioritizing.  
+11. System shall have an answering request system that is secure, provides tracking, supports 
+e-authorization/e-signature, and workflow management. 
+12. Twenty-four hour help desk support such as a wiki. 
+13. Feeds into HRIS/ERP systems. 
+14. ADA Section 508 compliant. 
+15. System is modular with ability to deploy and activate/deactivate functionality. 
+16. Plug-In Installation Center. 
+17. Fully integrated live web casting, live chat, and virtual meeting capabilities along with 
+WebEx events. 
+18. All system actions shall be date/time stamped and tracked. 
+19. System actions are to be stored in a secured database, searchable, and can trigger alerts. 
+20. Records of system actions cannot be deleted. 
+21. Whenever appropriate, system will use look-up lists to streamline routine operations. 
+22. Dashboard reporting and analytics. 
+23. Automated reminder system by email.  
+24. Integration with Outlook. 
+25. System can prioritize requests, projects, documents, and electronic communications. 
+26. System can deliver alerts and documents through email clients including OPM standard 
+handhelds. 
+27. System shall support inquiry management with integration to an OPM Customer 
+Relationship Management tool. 
+ 
+6.2 User Requirements: 
+1. User-configurable home page. 
+2. Role-based login capabilities that provides encryption and lost password recovery. 
+3. Single sign-on to all parts of the KMS. 
+4. Authorized users can create, edit, and delete email or in-system alerts that are 
+automatically triggered by an event or date. 
+5. Only authorized users can view system actions. 
+OPM Knowledge Management System  Requirements 
+ 
+Page 8 
+ 
+ 6. The system shall have a new user’s tutorial.  
+7. System shall provide standard navigation aids with the ability for users to skip through 
+repetitive or unnecessary navigation. 
+8. The system will have interactive on-line help that tells the user how to use the program 
+and knowledge-management related information with access to constantly updated online 
+user manuals. 
+9. On-demand ability to fax requested documents to an authorized user’s workstation.  
+10. The system will allow for collaboration with external users. 
+ 
+6.3 Administrative Requirements: 
+1. Built-in Administrative Task wizards. 
+2. Ability to manage look-and-feel of entire site along with branding. Ability can be 
+automated via business rules. 
+3. User administrator can create new user(s), configure permissions/roles, edit profiles, 
+enroll users in courses, create user groups/domains, and search for users. 
+4. Real-time reporting on demand that appear in application and can be printed without 
+having to be exported. 
+5. Standard reports and wizard-driven ability to create custom reports that can be exported 
+to xls, csv, doc, rtf, pdf, etc.). 
+6. Report is filterable by domain and user groups with the ability to drill down. 
+7. New reports can be created, saved, and shared. 
+8. Administrator can mass-distribute notifications, edit content of notifications, notify 
+specific users, manage notification events, and determine who receives what notifications. 
+9. Alerts can be customized by user or group level and can be sent to multiple users. 
+10. Variety of alert messages depending on urgency. 
+11. Alerts can be saved for re-use and can be stratified or sent as digests to avoid email box 
+clutter. 
+12. Alerts can be protected from user modification. 
+13. Administrator can customize error messages. 
+ 
+6.4 Search Requirements: 
+1. Searches can be saved, modified, deleted, and shared. 
+2. Ability to search within a search. 
+3. Searches can be by full-text, keywords, and metatags. 
+4. The ability to search different file types (.doc, .xls, .mdb, etc.), scanned files (PDFs), and 
+text within graphics. 
+5. Searches can be by index, Boolean (simple and multiple), wild card, near spell, proximity, 
+synonyms, exact phrase, and exclusion of terms. 
+6. Search terms will be highlighted in the document or web page. 
+7. Search can be canceled at any time. 
+OPM Knowledge Management System  Requirements 
+ 
+Page 9 
+ 
+ 8. Search results can provide a list of hits along document object histories, progress through 
+workflow routes, summaries of documents, or profile data of documents. 
+9. Searches can be limited by time frame. 
+10. List of most often requested results for a specified search term. 
+11. Searches can be exported into common document formats (.doc, .xls, .pdf, etc.). 
+ 
+6.5 Document Management Requirements: 
+1. Document management is available for documents in different file formats and scanned 
+documents. 
+2. The system shall have a library of standard documents and templates, version control, 
+document storage, and ability to create customized documents or sort documents based 
+on a FOIA request. 
+3. The system shall use agency naming conventions, can link documents, support meta-
+tagging/profiling of documents, annotation of documents, package documents of different 
+file-types together, and previewing of files in HTML format.  
+4. System shal l allow protection of documents as “permanent” and allow for auto -population 
+of document/profile fields from correspondence system. 
+5. Documents will have their own audit trail system with alerts and notifications when 
+actions are taken with the documents. 
+6. System shall be able to capture documents in various sizes and thicknesses and convert 
+these captured documents to PDFs while also allowing for Optical Character Recognition 
+(OCR). 
+7. System shall be able to modify and redact sections of scanned documents. 
+8. The system shall offer an ability to manage and respond to Freedom of Information Act 
+requests. 
+9. The ability to freeze destruction automation for emails and documents relevant to an 
+impending e-Discovery request. 
+10. The ability to forward documents to the National Archives and Records Administration 
+electronically. 
+11. The ability to track retention periods for documents  
+12. Ability to route documents through workflow for approvals/electronic signatures 
+ 
+6.6 Learning Management System Requirements: 
+1. Able to assign learning activities to an entire domain and have LCMS functionality. 
+2. Integrated analytics tools, Product Library, performance/talent management tools, virtual 
+meeting/classroom tools, and link to other training sites and resources. 
+3. Calendar for instructor led courses. 
+4.  Integrate EHRI and provide support for Certifying Official Approver. 
+5.  Develop a workflow that automates the approval process for the learner and provides 
+ability for administrators to handle approval proposal. 
+OPM Knowledge Management System  Requirements 
+ 
+Page 10 
+ 
+ 6. Learners can create account without approval, change user name, access eHelp, toggle 
+between role types, create/edit individual learning plan, modify calendar view, and view 
+dashboard data. 
+7. Filter views based on learning plan. 
+8. SCORM and AICC compliant. 
+9. Ability to upload thousands of SCORM, AICC, or non-compliant courses without vendor 
+assistance. 
+10. Administrator can mark course complete for learner, manage course properties, set course 
+access by date, manage gradebook, assign instructors to courses/sessions, disable a 
+course, assign resources, manage waitlist, set/waive course prerequisites, request/reserve 
+rooms and equipment, edit/manage learning plans, certification/CEU tracking and test 
+administration. 
+11. Learners can self-register and unregister for courses. 
+12. E-commerce support (with Verisign) for purchase of course(s). 
+13. Online access to supplemental materials. 
+14. Leadership and Development Program Tracking, Competency Management, Performance 
+Management, and Informal Learning.  
+15. Individual portfolio storage in LMS 
+16. Reporting of mandatory courses attendanc e. 
+ 
+6.7 Content Management System Requirements: 
+1. The CMS shall allow user creation of online groups to support communities of practice. 
+2. The CMS will support asynchronous discussion boards, synchronous chat sessions, 
+document repository, RSS feeds, Twitter feeds, and notification of new system activities. 
+3. Users can be a member of multiple CMS groups. 
+4. Groups can install and activate OPM-approved modules to extend their specific online 
+groups. 
+ 
+6.8 Data Management Requirements: 
+1. Consistent data entry formats (including pop-up calendar for dates), data validation, ability 
+to cut and paste into data fields. 
+2. System shall allow definition of custom fields including calculated fields with customizable 
+error messages. 
+3. Validating messages for deletion. 
+4. Fields can be locked for read-only views. 
+5. All electronic data shall be kept under conditions to prevent degradation, periodically 
+spot- checked for data integrity, comply with OPM’s Record Management policies, and 
+have a back-up in an off-site facility. 
+6. Personal retirement documentation must be available in hard copy up to 100 years after 
+person is deceased. 
+7. Ability to exempt specific documents from regular scheduled destruction date. 
+OPM Knowledge Management System  Requirements 
+ 
+Page 11 
+ 
+ 8. All electronic documents shall be immediately available and metatags shall be updated at 
+least yearly by document owners. 
+9. Data security shall comply with all OPM and Federal security regulations. 
+10. Data access will be by group or user-based roles and follow OPM guidance on passwords. 
+11. Security access can be customized by metadata, document, database column, and/or 
+database row to allow read, edit, or delete functions. 
+12. Data can be accessed securely from off-site and will apply to any information exchanged 
+between systems and based on workflow.  
+13. The KMS will provide an interface for data sharing with other government agencies.  
+ 
+6.9 Knowledge Management Requirements: 
+1. System shall store explicit knowledge and allow for self-service searches of a knowledge 
+repository. 
+2. System shall support a cross-agency lessons learned repository. 
+3. System shall support a cross-agency process mapping tool and repository. 
+4. System shall have a searchable audio and video library devoted to capturing tacit 
+knowledge. 
+5. System will record and display who posted what content and on what date/time. 
+6. Ability to track versions of content submissions. 
+7. Ability to roll-back to previous content submissions. 
+ 
+ 
+7.0 Additional Requirements for Electronic Document and 
+Records Management System 
+ 
+Currently OPM is using a document management system (DMS) to vet and store electronic and/or 
+images of paper documents to keep track of the different versions created by different users 
+(history tracking) through creating a final version that is then approved by the necessary parties.  
+It is not being used as an electronic recordkeeping system. The terms have some overlap with the 
+concepts of content management systems but a DMS is often viewed only as a single component 
+of enterprise content management within an electronic recordkeeping system.  
+ 
+OPM is seeking to acquire an Electronic Document and Records Management System (EDRM) that 
+will be used to manage all records regardless of format and location, over the entire record’s 
+lifecycle.  The primary recordkeeping functions will include categorizing, locating, identifying and 
+controlling record disposition requirements, including e-discovery and management of the 
+storage, retrieval, and disposition of the records; regardless of the repository. This type of 
+software includes the capabilities of both integrated document management and electronic 
+OPM Knowledge Management System  Requirements 
+ 
+Page 12 
+ 
+ recordkeeping. ERM systems commonly provide specialized security and auditing functionality 
+tailored to the needs of records managers. Controlling the lifecycle of all records requires 
+knowledge of the retention assigned to the record or its components, a required element that the 
+DMS does not recognize.  In RM it is important to distinguish the difference between an 
+“electronic document management system” and an “electronic recordkeeping system.” An 
+example of an electronic document management system is the DMS and OPM's "Team Track" 
+used by FOIA to store, share and track information processing ; whereas, an electronic 
+recordkeeping system is designed to not only manage documents, it also manages e-mail 
+reception, metadata and records creation, identification, storage, accessibility, and integrity of all 
+ records, but also the disposition of that information through an electronically integrated records 
+retention schedule and electronic tagging mechanism. Many products claim to perform electronic 
+records management or integrated document management, but they are not true electronic 
+recordkeeping systems unless they meet DoD 5015.2 specifications for electronic records 
+management software.  
+ 
+ 
+8.0 Additional Requirements for Business Analytics and 
+Business Intelligence 
+ 
+A major function of the KMS will be the ability to analyze and visualize the data that OPM has in 
+various databases, shared drives, and proprietary systems. We have many data systems 
+throughout OPM that currently do not share information and thus we are not realizing the 
+benefits of tying together disparate data sources to make better-informed decisions. The first step 
+is to virtually tie databases together through XML feeds so that we can cut down on data 
+redundancy.  
+ 
+The second step is to integrate business analytic tools into the KMS. We have several business 
+analytic tools in the agency that we are not currently using to their full potential. For example, 
+Microsoft Excel 2007 has a robust set of data analysis and dashboard creation tools that can be 
+used for real-time reporting and decision support. Several program offices have SAS that can be 
+extended for more effective data mining while other offices possess ArcGIS that can be effective 
+geographic analysis of personnel policies. 
+ 
+Once the KMS is implemented and begins to grow, it will produce more data from the various 
+applications and information from the COPs. The KMS needs to be scalable which is why we 
+advocate a cloud- based platform. We also need to plan for future “Big Data” analysis tools and 
+OPM Knowledge Management System  Requirements 
+ 
+Page 13 
+ 
+ support tools when the accumulated data reaches a certain size. We will also have to consider the 
+impact of providing APIs and XML feeds on the KMS because these will also impact KMS 
+performance. 
+ 
+9.0 Additional Requirements for Migrating Retirement 
+Portal 
+ 
+Using RoboHelp, Retirement Services has created an HTML/Javascript portal for their shared 
+drive. A separate migration plan should be developed so that all of the content and functionality 
+of the Retirement Services portal is transferred to an application in Theo 2. In addition, an analysis 
+should be performed to determine whether to keep Retirement Systems existing phpKB 
+application or migrate it to another application in Theo 2. 
+ 
+10.0 Funding 
+ 
+The cost benefits of the federated approach is that we leverage the existing systems we have now 
+while providing for an effective way of integrating current disparate systems and future 
+knowledge management applications. We will also realize savings because sharing between 
+databases means fewer database systems to manage and the prevention of data errors due to 
+maintaining redundant data systems. The KMS will be funded from the Common Services budget. 
+ 
+ 
+11.0 Implementation Plan 
+ 
+The implementation of the KMS functionality is the responsibility of the Open Government Team 
+and the OCIO (with assistance from OCPL). Each Associate Director and Office Head for the 
+organizations listed below is responsible for providing a POC to monitor and coordinate the 
+content provided to the various components of the KMS. 
+OPM Knowledge Management System  Requirements 
+ 
+Page 14 
+ 
+ 12.0 Points of Contact (POCs) 
+ 
+The setup and maintenance of the KMS functionality becomes the responsibility of all 
+organizations within OPM under the guidelines established by the Open Government Team with 
+the OCIO providing ongoing administrative supervision.  The names of POCs for each organization 
+responsible for monitoring, coordinating and updating the database will be provided by Associate 
+Directors (ADs) and Office Heads for the organizations listed below: 
+ 
+ Healthcare and Insurance 
+ Communications and Public Liaison  
+ Congressional and Legislative Affairs  
+ Office of the General Counsel  
+ Executive Secretariat and Ombudsman  
+ Planning and Policy Analysis  
+ Chief Financial Officer  
+ Chief Information Officer  
+ Employee Services  
+ Equal Employment Opportunity  
+ Facilities, Security and Contracting  
+ Federal Investigative Services  
+ HR Solutions  
+ Internal Oversight and Compliance  
+ Merit System Audit and Compliance  
+ Office of the Inspector General 
+ Retirement Services 
+OPM Knowledge Management System  Requirements 
+ 
+Page 15 
+ 
+  
+Appendix: Existing Systems That Should Be Integrated Into 
+The KMS 
+ 
+ DMS 
+ Serena Business Mashups 
+ Learning Connection 
+ IdeaFactory 
+ CBIS Reports 
+ CPDF and EHRI 
+ FAQs 
+April 2011
+Knowledge Management 
+System Requirements
+Version 1.0
+CIO-01598-05 United  StateS   
+Office  Of PerSOnnel  ManageMent
+Chief Information Officer
+1900 E Street, NW 
+Washington, DC 20415

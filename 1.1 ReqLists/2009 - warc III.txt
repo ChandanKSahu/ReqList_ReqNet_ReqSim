@@ -1,0 +1,54 @@
+1.1	The tools shall be able to process a set of multiple WARC files at the same time. For this purpose, the tools will allow you to choose/group them by: • explicit naming • wildcard name matching • size limitation • number of items
+1.2	The tools shall be able to scale to process large collections using distributed processing and data transport (see FRS 10 and 11).
+1.3	The tools shall offer best possible performance to correctly process large collections (I/O bound).
+1.4	The tools shall be able to run on multiple machines but will not provide functionality for dealing with hardware failures (out of scope).
+1.5	Implementation of the tools shall avoid unnecessary technology dependencies and shall not include development of partner-specific integration technologies.
+1.6	The tools shall be compliant with Java development environments, by using web services, RESTful API’s, etc.
+1.7	The tools shall provide logging facilities, for example, to follow command progression, i.e. process duration, output levels, etc.
+1.8	The tools shall provide enhanced usability by providing easy to adapt shell script wrappers for the major commands.
+1.9	It shall be possible to operate the tools in modes that restrict their effects to selected collection subsets. For example, select by name (see NFR1), random sampling, etc.
+1.10	The workflow system shall have a configurable management strategy for migration from ARCs to WARCs.
+1.11	The migration workflow system will be driven by command line tools and scripts.
+1.11.1	Migration configurations can be built with a Web User Interface.
+1.11.2	Active migrations can be monitored, paused, and restarted (a console application) with a Web User Interface.
+1.12	Pre and post conversion actions will be provided for at each level of the migration, e.g. record, WARC, job.
+2.1	The migration workflow shall provide a clear Application Programming Interface  (API) to handle the migration process and default configuration.
+2.2	The migration API will require inclusion of only one header file.
+2.3	A configuration must be provided explicitly, errors should be generated in the absence of a configuration.
+2.4	The user shall be able to provide metadata related to the conversion that will be stored in the converted files (e.g., institution, context, crawler, collection name, ...).
+2.5	It shall be possible to request that automatically generated migration metadata be stored in the converted files (e.g., OS/Kernel type,  original ARC name,  ARC size, ARC digests, conversion timestamp, ARC record offset, ...).
+1.13	IIPC members should provide us with the default METADATA they want to be included for migration.
+2.6	The migration workflow shall be able to call external tools and services (e.g., database queries, shell commands, web service).
+2.7	The migration process shall use persistent, opaque, unique, and global identifiers for records access.
+2.8	A (default) external tool (e.g., ClamAV) will be used to scan files before conversion (pre-conversion step).
+2.9	The API should be flexible enough to allow external tools such as JHOVE, DROID to be used for file format identification.
+2.10	The ARC to WARC migration should be able to run on multiple machines that will be easy to deploy. This may be achieved by using a simple messaging infrastructure.
+2.11	Logging during the migration may be turned on/off at any time.
+2.12	Software checkpoints (such as start-trans, end-trans) may be added during processing for managing atomic transactions (e.g., operations on a /file, these must start and complete to be accepted in the migration), except where operating system limitations would prohibit it.
+2.13	It shall be possible to perform a “dry-run migration”. That is, a blank conversion to generate useful reports (performance issues, bad ARCs, time estimation ...) without writing real WARC data (i.e. simulating only). Dry run is defined entirely by the configuration.
+1.14	Deduplication may be run before migration, inside a batch process.
+2.14	Duplicate detection shall find and report WARC records with the same checksums. A centralised database will be used to store previously processed records, against which new ones will be compared.
+2.15	To validate that the migration succeeded, arc_warc_verify will use the METADATA included in the newly generated WARC files to match records with their corresponding ARC files (see FR4, and FR5).
+2.15.1	Core validation shall use payload checksum comparisons.
+2.16	Sampling will be provided where applicable to quickly validate the conversions (FR 15.1 and FR 18 for example).
+2.17	Validation shall use Heritrix’s arcreader to double check that the original ARC record was correctly converted to WARC.
+2.18	It shall be possible to perform a round trip validation: migrate the newly created WARC file back to ARC and compare both checksums (NFR 5)
+2.19	It shall be possible to repackage WARC files by filtering records based on URL (regular expressions)
+2.20	It shall be possible to repackage WARC files by filtering records based on MIME-Types.
+2.21	It shall be possible to repackage WARC files by filtering records based on size.
+2.22	It shall be possible to repackage WARC files by filtering records based on timestamp (e.g., dates interval).
+2.23	It shall be possible to repackage WARC files by filtering on any field in the WARC specification.
+2.24	Repackaging will allow pre and post record, file and job operations
+2.24.1	Pre operation can prevent a file or record being processed by returning  value
+2.25	Each repackaged WARC file shall include a user-defined METADATA record which will describe the extraction context (e.g., filter used, involved WARC files, ... - see also FR4).
+2.26	The migration framework shall provide tools to build reports from WARC files
+1.16	Repackaging filters can be used by the summary module
+2.27	It shall be possible to export summaries in various formats (e.g., XML, CSV)
+2.28	Enhance the WARC browser to display aggregated WARCs summaries in its UI
+2.29	Enhance the WARC browser to display a manifest of WARC files and their locations
+2.30	Provide a ‘‘diff‘‘ tool to compare WARC sets based on defined criteria (e.g., timestamp, hostname, etc.)
+2.31	Provide a tool to draw difference graphs between WARC collections (see FR 30)
+2.32	Provide a way to view crawls deltas for quality assurance
+2.33	Implement WARC browser server side rewriting
+2.34	Integrate a proxy mode inside the WARC browser
+2.35	Integrate the full-text search (search-tools project) module with the WARC browser to provide users with WARC indexing/searching capabilities.

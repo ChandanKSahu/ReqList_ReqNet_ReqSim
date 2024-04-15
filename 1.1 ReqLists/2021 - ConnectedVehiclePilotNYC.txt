@@ -1,0 +1,395 @@
+3.1.1.1.1	The RSU shall provide evidence of tampering (e.g. opening of the case) through tamper -evident seals on media ports (e.g. USB) and screw holes.
+3.1.1.1.2	The ASD shall provide evidence to detect tampering (e.g. opening of the case) through tamper -evident seals on all media ports and screw holes.
+3.1.1.1.3	Connected Vehicle equipment mounted externally to the vehicle shall be contained within the envelope defined by the ASD vendor specification.
+3.1.1.1.4	The RSU size dimensions shall not exceed 13” h x 13” w x 4” d exclusive of mounting hardware.
+3.1.1.2.1	The ASD shall operate on the voltage supplied by the host vehicle.
+3.1.1.2.2	The current drawn by the ASD shall not exceed with the maximum allowable amperage specified by the ASD vendor.
+3.1.1.2.3	The RSU shall not overload the power supplies provided by the RSU vendor based on maximum allowable power consumption. (During operation, turn off, turn on, etc. per NEMA TS2 environmental testing.)
+3.1.1.2.4	All connections to the RSU shall be protected from lightening and power surges on the Ethernet.
+3.1.1.2.5	The ASDs shall withstand electromagnetic interference (EMI) from external sources and electrical distribution.
+3.1.1.2.6	The ASD shall withstand electrostatic discharge (ESD) from extern al sources and electrical distribution.
+3.1.1.2.7	The RSU shall withstand electrostatic discharge (ESD) from external sources and electrical distribution. (Provide ESD definitions/specifications.)
+3.1.1.2.8	The ASD design shall prevent battery drain.
+3.1.1.2.9	The RSU shall be able to resume normal function within 2 minutes of restoration of power.
+3.1.2.1.1	Back office servers shall have their power source augmented by an Uninterruptable Power Supply (UPS).
+3.1.2.2.1	The NYC CVPD maintenance personnel shall replace the ASD damaged by improper maintenance, tampering, or mishap.
+3.1.2.2.2	The NYC CVPD maintenance personnel shall replace the RSU damaged by improper maintenance, tampering, or mishap.
+3.1.2.2.3	The NYC CVPD maintenance personnel shall be able to reboot the ASD after a disruptive software glitch.
+3.1.2.2.4	The NY C CVPD maintenance personnel shall be able to reboot the RSU after a disruptive software glitch.
+3.1.3.1	The NYC CVPD applications shall have modifiable algorithms and software parameters for tuning the system ’s operation.
+3.1.3.2	The ASD shall have upgradable hardware components for improving the device performance upon expansion of the NYC CVPD system.
+3.1.3.3	The RSU shall have upgradable hardware components for improving the device performance upon expansion of the NYC CVPD system.
+3.1.4.1	The audible message volume in the ASD shall be distinguishable from other sounds.
+3.1.4.2	The audible message volume in the ASD shall be developed and tested in a real traffic environment.
+3.1.4.3	The RSU shall be designed to operate properly in the outdoor environment. (e.g. temperature, humidity, rain, fog, sun, snow, shock, vibration, etc.) {Ref augmented NEMA TS2 -20XX}
+3.2.0.1	All NYC CVPD ASDs shall utilize the same GPS time source and common accuracy configuration as the NYC CVPD Infrastructure.
+3.2.0.2	The ASD shall provide the alerts to the driver without ambiguity.
+3.2.0.3	The ASD shall process all radio messages at a minimum rate of 10 Hz.
+3.2.1.1	The ASD shall broadcast the BSM of host vehicles per SAE standards J2945/1 and J2735.
+3.2.1.2	All NYC CVPD ASDs shall utilize the same GPS time source and common accuracy configuration as the NYC CVPD Infrastructure.
+3.2.1.3	The Vehicle Performance Monitoring application shall collect/log vehicle operational data (e.g. hard break, steering turns, accelerations based on accelerometers).
+3.2.1.4	The fleet manager shall be able to solicit and collect feedback from the anonymous vehicle operators on the operation of the system.
+3.2.1.5	The ASD shall monitor the delivery of the audio alert and any audio instructions to the driver.
+3.2.1.6	The ASD shall include an accelerometer for each of the three axes.
+3.2.1.7	The ASD shall be able to process (and authenticate and/or encrypt) the DSRC messages at a minimum rate of 10 Hz. This includes all messages on all channels: BSM, TIM, MAP, SPaT, etc. in addition to IP communications traffic for management applications.
+3.2.1.8	The Host Vehicle ASD shall begin aural alerts within 250 milliseconds of being triggered by the application.
+3.2.1.9	The ASD shall have sufficient computing power to authenticate messages on the Safety Applications defined in Table C-1 in time for the individual Safety Applications to meet their individual performance requirements.
+3.2.1.10	The RSU shall interface with signal controllers, NYCWiN, and DSRC messages from vehicles and pedestrians. (Note: this will be expanded into multiple requirements for each interface.)
+3.2.2.1	The NYC CVPD performance monitoring subsystem shall normalize, obfuscate, aggregate, and analyze the performance measurement data specified in the Task 5 Performance Measurement Plan.
+3.2.2.2	The NYC CVPD performance monitoring subsystem shall utilize the post -processed data and transmit it to the RDE.
+3.2.2.3	The NYC CVPD performance monitoring subsystem shall collect and post -process the volume counts from temporary automatic traffic recording (ATR) machines.
+3.2.2.4	The NYC CVPD performance monitoring subsystem shall compare and post -process the travel time from MiM RFID tag readers.
+3.2.2.5	The NYC CVPD performance monitoring subsystem shall compare and post -process the travel time from MTA bus GPS datasets.
+3.2.2.6	The NYC CVPD performance monitoring subsystem shall generate system performance reports on the number of active, inactive, and offline ASDs and RSUs in the field by time of day.
+3.2.2.7	The NYC CVPD performance monitoring subsystem shall generate system performance reports on the number of CV applications in operation and warnings produced by time of day.
+3.2.2.8	The NYC CVPD performance monitoring subsystem shall generate system performance reports on the network -wide system safety and mobility measurements. (Note: the reports shall include the crash frequencies and average speeds by peak period.)
+3.2.2.9	The NYC CVPD performance monitoring subsystem shall provide obfuscated datasets without PII to the USDOT Independent Evaluator for additional evaluation.
+3.2.2.10	The ASD shall have the capability of operating in active mode and recording normal driver behaviors and reactions while notifying the user of the perceived warnings.
+3.2.3.1	The ASD shall include a general purpose event recording application.
+3.2.3.2	The ASD shall include a rotating 5 minute log of the raw data listed in Table G-4.
+3.2.3.3	Once the log has accumulated 5 minutes of data, it shall replace the oldest data with new data such that it always keeps the most recent 5 minutes of data to a 100 ms accuracy.
+3.2.3.4	Each log entry shall include a UTC time stamp accurate to 10 milliseconds.
+3.2.3.5	Each log entry shall include the BSM data for the host vehicle regardless of whether the data has changed.
+3.2.3.6	Each log entry shall include the peak accelerometer values since last entry. Clarification: accelerometer entries are ad ded to the log whenever the value changes or at 1 second intervals whichever is shorter but not more rapidly than 10 times per second. Thus, the accelerometer entries show the times at which the value changed with a time stamp but no values are lost to th e resolution of 1 second.
+3.2.3.7	Each log entry shall include the BSM data for all vehicles that are within a configurable distance (VDIS) from the host vehicle. (Clarification: typical values are expected to be 0-50 meters.)
+3.2.3.8	A log entry shall be made for each SPaT and MAP message received from two nearest RSUs.
+3.2.3.9	The ASD shall continuously monitor the location of the host vehicle as described in SAE J2945/1.
+3.2.3.10	The ASD shall collect log entries into an event record to describe vehicle actions surrounding a CV application event.
+3.2.3.11	The ASD shall log the SAE J2735 BSMs received at 100 millisecond interval before and after an event.
+3.2.3.12	The ASD shall log the information 5-300 seconds (configurable by type of event, time period, and resolution) before and 20- 50 after the event.
+3.2.3.13	The ASD shall collect less detailed CV probe data for mobility data collection.
+3.2.3.14	The durations shall have the capability of being modified by the CV application that triggers the warning.
+3.2.3.15	The safety applications listed in Table C-1 shall implement the most recent event recording parameters supplied externally to the application based on their own recording criteria in Table E-3.
+3.2.3.16	A safety application shall record events based on the most recently received recording parameters set.
+3.2.3.17	An application shall trigger an event recording when an alert is triggered.
+3.2.3.18	The event recording application shall collect pre - and post - trigger information using the host application’s trigger recording times.
+3.2.3.19	The safety applications shall collect trigger information (event recording data) listed in Table G-1.
+3.2.4.1	When the event recording receives a triggering input, it shall start the creation of an event record.
+3.2.4.2	Each event record shall indicate the application and the reason that the alarm was created; (Clarification: each triggering event (alarm) will notify the ASD logging system to initiate the creation of an event record a nd will provide some application specific (e.g. application ID, value which caused the trigger) information (up to XX bytes indicating the reason for the event); this data shall be included in the “header” for the event record.)
+3.2.4.3	The event record data shall be included in the “header” for the event record.
+3.2.4.4	The before and after times shall be configurable for each different application ID.  (Note: different applications may request that the pre and post incident collection times be different from the default.)
+3.2.4.5	The ASD shall accept downloaded parameters to specify the number of seconds to be included in the event record prior to and after the occurrence of the event for each application ID. (Note that the pre -event and post -event collection times may be different values).
+3.2.4.6	The event recording application shall be able to simultaneously create and collect event records for up to 10 concurrent or staggered events. Clarification: as one event is concluded, it makes space f or additional events.
+3.2.4.7	The ASD shall be able to upload the event records to (through) an RSU when the service is available. (Clarification: this is expected to use IP communications – but is not specified at this time. The RSU’s located in the ba rn and at choke points are intended to accomplish this upload process, although this could also be added to any or all of the RSU’s.)
+3.2.4.8	Event records shall be automatically purged whenever the power is applied to the ASD and the time last log entry is more than a configurable number of hours (example: 96 hours).
+3.2.4.9	Log entries shall be inserted in the event log whenever the vehicle engine is running.
+3.2.4.10	The NYC CVPD performance monitoring subsystem shall count the number of events after the events of applications listed in Table C-1 in the Before and After periods.
+3.2.5.1	The NYC CVPD performance monitoring subsystem shall post -process the mobility data from the I -SIGCVDATA application Before and After periods.
+3.2.5.2	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure t he average speed from NYC CVPD for comparison to the legacy detection system.
+3.2.5.3	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the average travel time from NYC CVPD for comparison to the legacy detection system.
+3.2.5.4	The RSUs shall collect the s elected mobility data in accordance with Appendix I, section I.3.2 in the NYC CVPD RSU Procurement Specification shall be collected and transmit this data to the TMC for traffic signal timing pl an optimization and analysis for new timing plan development.
+3.2.5.5	The RSU shall record the BSM data from the Host Vehicle (HV) in accordance with Appendix I, Section I.3.1, Number 12, in the NYC CVPD RSU Procurement Specification.
+3.2.5.6	The BSM data shall be recorded based on distance traveled and time in accordance with Appendix I, Section I.3.1, Number 12, in the NYC CVPD RSU Procurement Specification.
+3.2.5.7	The BSM data time and distance parameters shall be configurable in accordance with Appendix I, Section I.3.2 in the NYC CVPD RSU Procurement Specification.
+3.2.5.8	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the average number of stops.
+3.2.5.9	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the average speeds of the vehicles.
+3.2.5.10	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the reduction in s peed limit violations Before and After periods.
+3.2.5.11	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the speed variations of the vehicles.
+3.2.5.12	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the driver actions in response to warnings and vehicle trajectories.
+3.2.5.13	The NYC CVPD performance monitoring subsystem shall evaluate the change in speed limit adherence, speed variability, and t he average segment speed for each vehicle fleet on a given roadway segment for a given time period (cycle length basis) from the Before period to the After period.
+3.2.5.14	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the crash counts and rates of speed -related crashes from police crash databases.
+3.2.5.15	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the lateral collision.
+3.2.5.16	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the vehicle speeds at curve entry from the Host Vehicle BSM in the event records.
+3.2.5.17	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the number of warnings generated Before and After period.
+3.2.5.18	The NYC CVPD performance monitoring subsystem shall evaluate whether the number of curve speed violations on each applicable studied roadw ay segment decreases from the Before period to the After period.
+3.2.5.19	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the average speed of triggered events at work zone compared to posted speeds.
+3.2.5.20	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the vehicle speed limit violations in variable speed zone areas Before and/or After periods or with/without CV.
+3.2.5.21	The NYC CVPD performance monitoring subsystem shall utilize the data from the crash databases and measure the work zone related crash counts and rates in reduced speed zones.
+3.2.5.22	The NYC CVPD performance monitoring subsystem shall utilize the post -processed even t data and measure time to collision for instantaneous safety in reduced speed zones.
+3.2.5.23	The NYC CVPD performance monitoring subsystem shall evaluate whether the number of work zone speed violations on each applicable studied roadway segment decrease from the Before period to the After period and with/without CV.
+3.2.5.24	The NYC CVPD performance monitoring subsystem shall post -process the data surrounding the V2V application events.
+3.2.5.25	The NYC CVPD performance monitoring subsystem shall utili ze the post -processed event data and measure the fatality, injury, and property damage only (PDO) crash rates from external crash database sources.
+3.2.5.26	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number of reportable vehicle -to-vehicle crashes from the Before period to the Pilot period.
+3.2.5.27	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the bus / right -turn related crash counts and rates.
+3.2.5.28	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure right -turn related conflicts between a bus and another vehicle.
+3.2.5.29	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number of bus / right -turn vehicle crashes from the Before period to the Pilot period.
+3.2.5.30	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the red light violation counts and rates.
+3.2.5.31	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the crash counts and rates related to red light violation.
+3.2.5.32	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number and severity of red light violations at each studied intersection from the Before period and the Pilot period.
+3.2.5.33	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the pedestrian related cras h counts and rates.
+3.2.5.34	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure pedestrian- related conflicts/hard braking events.
+3.2.5.35	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number of reported vehicle -to-pedestrian crashes from the Before period to the Pilot period.
+3.2.5.36	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the number of pedestrian crossing violation reductions.
+3.2.5.37	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the visually -impaired pedestrian -related crash counts and rates.
+3.2.5.38	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the conflicts with visually -impaired pedestrians.
+3.2.5.39	The NYC CVPD performance monitoring subsystem shall utilize the post-processed event data and measure the wait time for crossing at the intersections.
+3.2.5.40	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number of reported crashes involving visually -impaired pedestrians from the Before period to the Pilot period.
+3.2.5.41	The NYC CVPD performance monitoring subsystem shall uti lize the post-processed event data and measure the reduction in truck route violations Before and After period.
+3.2.5.42	The NYC CVPD performance monitoring subsystem shall evaluate the change in the number of reported crashes decrease from the Before peri od to the Pilot period.
+3.3.1.1	If the ASD determines that it has no valid certificates , it shall cease transmission of BSMs.
+3.3.1.2	The ASD shall prevent incoming messages with invalid conditions per criteria in the IEEE 1609.2 from being acted on.
+3.3.1.3	The ASD Vehicle Communications wireless link shall have communications security to ensure the authenticity of all its messages in accordance to the standards prescribed by the overall USDOT connected vehicle program.
+3.3.1.4	The A SD shall carry out plausibility checking on the remote vehicle BSM data.
+3.3.1.5	The ASD shall sign its event log file entries using its BSM signing keys.
+3.3.1.6	The ASD operating system (OS) shall prevent the log file signing application from sending messages on any channel other than those that are identified by by the PSID or WSA for particular service.
+3.3.1.7	The ASD shall indicate successful receipt of the pseudonym certificates.
+3.3.1.8	The SCMS supplier shall track the expected expiry times of ASD enrollment certificates.
+3.3.1.9	When the ASD has no valid BSM signing certificates, it shall store the log file entries as IEEE 1609.2 data of type unsecured.
+3.3.1.10	The ASD vendor shall replace the ASDs that need to be re -enroll ed with newer ASDs.
+3.3.1.11	The RSU supplier shall provide the serial number and its enrollment certificate for each RSU.
+3.3.1.12	The RSU -SCMS interface shall allow the RSU to request application certificates with different contents from the current ones during the lifetime of the current ones.
+3.3.1.13	If a device misbehaves, the SCMS shall blacklist the device and its enrollment certificates and prevent it from obtaining more authorization certificates.
+3.3.1.14	The ASD shall obtain certificates via IPv6 connectivity through the RSU.
+3.3.1.15	The RSU shall broadcast the WSA for certificate download on control channel 178 and indicate IPv6 connectivity and the IP address on a service channel other than channel 172 or 178.
+3.3.1.16	The RSU shall implement a firewall blocking all IP access from devices to any IP address other than those approved for specific applications.
+3.3.1.17	The RSUs shall support IPv6 tunneling over IPv4.
+3.3.1.18	Communication between the ASD and the SCMS shall operate in an encrypted, end -to-end connection in accordance with the published SCMS interface. (Note: The SCMS interface should not need any further security.)
+3.3.1.19	The information security manager shall investigate and monitor the data traffic usage to detect unapproved use of the IP connection.
+3.3.1.20	Communication between the RSU and the SCMS shall operate in an encrypted, end -to-end connection in accordance with the published S CMS interface. (Note: The SCMS interface should not need any further security.)
+3.3.1.21	The NYCDOT IT shall address any denial of service (DoS) attacks within each NYC network using its existing practices.
+3.3.1.22	The information security manager shall monitor the DSRC communications performance to detect DoS attacks.
+3.3.1.23	The RSU shall report over a management interface if channel busy ratios go above a configurable threshold.
+3.3.1.24	The ASD shall log an event report every second for which channel busy ratios go above a configurable threshold.
+3.3.1.25	The RSU shall operate client -side transport layer security (TLS) and accept only TLS server ce rtificates with specific URLs.
+3.3.1.26	The RSU shall protect root certificates for client -side TLS against modification and provide other certificates in the chain, which shall not make a separate query to the internet to obtain the entire chain.
+3.3.1.27	Devices shall communicate using SNMPv3 with SNMP messages protected by being sent over TLS.
+3.3.1.28	Devices shall support establishment of a standard TLS -based VPN with client authentication for communication to the TMC, with a long -term client cert and a single CA cert trusted to authorize connections from the TMC.
+3.3.1.29	Devices shall verify received messages per IEEE 1609.2 and per the relevant security profiles before using them for operations in any application.
+3.3.1.30	Devices shall s tore RF Monitoring log file entries encrypted with an encryption key belonging to the TMC.
+3.3.1.31	The host processor on the device shall perform and pass integrity checks as specified in requirements 401.14.6 - 401.14.9.
+3.3.1.32	The integrity checks performed at boot shall use a hardware- protected value such that the integrity cannot be successfully compromised unless the hardware -protected value is modified.
+3.3.1.33	Until all integrity checks on the software and firmware configuration of the host have passed, the device shall not allow a privileged application (as defined in Security Management Operating Concept section 6.1.1) to sign a message.
+3.3.1.34	If any integrity check on the software and firmware configuration of the host fails, the device shall not allow any application to have access to locally stored private keys.
+3.3.1.35	If any integrity check on the software and firmware configuration of the host fails, the device shall not allow any privileged application (as defined in Secur ity Management Operating Concept section 6.1.1) to operate.
+3.3.1.36	The OS on the device shall maintain an Access Control List (ACL) for which applications on the host may use each private key in the HSM.
+3.3.1.37	The OS shall not permit keys designat ed as private to be read from the HSM.
+3.3.1.38	The validation of signed software shall require use of a verification key that is protected by local hardware to a level equivalent to FIPS 140- 2 at the level appropriate for the device.
+3.3.1.39	All cryptographic software and firmware for the HSM shall be developed and installed in a form that protects the software and firmware source and executable code from unauthorized disclosure and modification.
+3.3.1.40	The HSM operating system shall prevent a ll operators and executing processes from modifying executing cryptographic processes (i.e., loaded and executing cryptographic program images). In this case, executing processes refer to all non- operating system processes (i.e., operator -initiated), crypt ographic or not.
+3.3.1.41	The HSM operating system shall prevent operators and executing processes from reading cryptographic software stored within the cryptographic boundary.
+3.3.1.42	The device shall provide tamper evidence to detect tampering of the device (e.g. opening of the case).
+3.3.1.43	All unused media ports (e.g. USB) shall be sealed.
+3.3.1.44	There shall be no removable media.
+3.3.1.45	The certificate management service shall start requesting a new certificate or batch of pseudonym certificates a day before the expiry of the current certificate or batch.
+3.3.1.46	When verifying, the device shall require that 1609.2 signed messages are signed by a certificate that is protected from modification by, or chains back to a certificate that is protected from modification by, the secure boot process.
+3.3.1.47	A device shall not create or transmit messages for any usage scenario if the usage scenario requires it to use 1609.2 certificates and it does not c urrently have valid certificates for that usage scenario.
+3.3.1.48	A device shall verify a DSRC message when any of the following conditions is met: a) A device identifies the message as containing a new DE_TemporaryID value. b) The message results in the issua nce of issue either advisory, warning, or alert. c) The remote vehicle constitutes a potential threat (define potential threat as a vehicle that may collide with the host vehicle based on the both vehicle’s speeds and trajectories) d) The host vehicle constitutes a threat to a pedestrian using a DSRC equipped Personal Information Device. e) Other potential threat situations such as infrastructure size restrictions, speed compliance, red light violations , and other safety applications. f) Other situations as identified during the Phase 2 Design.
+3.3.1.49	The ASD shall support a secure sess ion protocol through VPN over TLS to the TMC for protecting the firmware download.
+3.3.1.50	The RSU shall support a secure session protocol through VPN over TLS to the TMC for protecting the firmware download.
+3.3.1.51	The ASD shall partition enough storag e space for its current and new firmware images.
+3.3.1.52	The ASD shall implement a download protocol that permits resumption of incomplete downloads instead of requiring an incomplete download to be restarted.
+3.3.1.53	The RSU shall implement a download protocol that permits resumption of incomplete downloads instead of requiring an incomplete download to be restarted.
+3.4.1	The ASD event recording shall encrypt each event record. (Clarification: this prevents vehicle identity and determination of whether the vehicle is from the control group or the treatment group.)
+3.4.2	Event records shall only be decrypted by the central performance analysis software.
+3.5.1.1	The system administrator shall be able to change the volume level of the audio output (e.g. speakers).
+3.5.1.2	The ASD shall have the ability to operate in either silent mode or active mode.
+3.5.1.3	The ASD shall record events* without audibly notifying the driver when operating in silent mode.
+3.5.1.4	The ASD shall record events* while audibly notifying the driver when operating in active mode.
+3.5.1.5	The ASD shall set the application alert mode to silent mode or active mode per the most recent parameters downloaded.
+3.5.2.0.1	The TMC staff shall be able to monitor the NYC CVPD system-wide RSU malfunctions.
+3.5.2.0.2	The ASD shall have configurable parameters for tuning alert thresholds.
+3.5.2.0.3	The Parameter Control functional entity at the TMC shall sign the Parameter Control messages per IEEE 1609.2.
+3.5.2.0.4	The Parameter Control functional entity shall meet the highest security requirements for a device of the appropriate class. (Note: this shall be derived via the Confidentiality/Integrity/Availability (CIA) analysis once the application specification is developed in detail.)
+3.5.2.0.5	The Parameter Control functional entity shall update the parameter control message signatures daily.
+3.5.2.0.6	The Parameter Control message version shall be based on the message payload.
+3.5.2.0.7	The ASDs from all suppliers shall implement the same Parameter Control protocol.
+3.5.2.0.8	The ASD software components shall accommodate failures in hardware or in adjacent software modules in a way that does not pose hazards.
+3.5.2.0.9	The TMC staff shall be able to monitor the NYC CVPD system -wide ASD malfunctions.
+3.5.2.0.10	All devices shall carry no more than two weeks' worth of operating certificates.
+3.5.2.0.11	The day before a new week becomes valid; the devices shall download the next week's worth of certificates.
+3.5.2.0.12	Mobile devices in need of certificate update shall switch to the advertis ed channel.
+3.5.2.0.13	A device with DSRC communications interfaces shall continue normal operations regardless of the number, rate, or content of the DSRC messages received.
+3.5.2.0.14	A device with DSRC communications interfaces shall continue normal operations regardless of the number, rate, or content of the DSRC messages transmitted.
+3.5.2.0.15	The NYC CVPD performance monitoring subsystem shall measure the RF received range of each ASD.
+3.5.2.0.16	The NYC CVPD performance monitoring subsystem shall measure the RF monitoring range of the RSU.
+3.5.2.0.17	The ASD shall include a threat arbitrator for advisories and alerts presented to the driver in cases where multiple safety advisories are indicated simultaneously.
+3.5.2.0.18	The ASD shall allow recording of the RF signal level for any message received. (For example, clarification: when the ASD hears a BSM from another vehicle, it will measure and record the RF level of the received message.)
+3.5.2.0.19	The ASD shall record the first BSM it hears from each unique ASD ID along with its own location (X,Y,Z) and RF level information.
+3.5.2.0.20	The ASD shall record the first MAP message it hears from each RSU ID along with the contents of its own location (X,Y,Z) at the time and the RF level.
+3.5.2.0.21	The ASD shall record the first SPaT message it hears from each RSU along with the contents of its own location (X,Y,Z) at the time and the RF level.
+3.5.2.0.22	The ASD shall record the last MAP message it hears from each RSU along with the contents of its own location (X,Y,Z) at the time and the RF level.
+3.5.2.0.23	The ASD shall record the last SPaT message it hears from each RSU along with the contents of its own location (X,Y,Z) at the time of receipt and the RF level.
+3.5.2.0.24	The ASD RF Log Entries shall be stored in the ASD local memory.
+3.5.2.0.25	The ASD RF log entries shall be purged after 7 days.
+3.5.2.0.26	The ASD RF log space shall be sufficient to store 7 days of interactions with 3,000 ASDs and 450 RSUs, equivalent to about 2,000 entries per day.
+3.5.2.0.27	If the ASD RF log files exceed the space allocated (Req 405.1.9), then the oldest data shall be written over without damaging newer log files. (Note: the ASD Ethernet port will be fully blocked after certification testing.)
+3.5.2.0.28	The following requirements shall apply to the ASD RF data monitoring, uploading, and purging.
+3.5.2.0.29	The ASD shall monitor the control channel (178) when the ASD encounters an RSU that supports the RF data upload.
+3.5.2.0.30	The ASD shall upload the contents of the RF logs to the back office systems.
+3.5.2.0.31	The ASD shall purge the logs after they have been acknowledged by the RSU.
+3.5.2.0.32	The ASD shall authenticate all transactions to retrieve the RF logs.
+3.5.2.0.33	The static RSU shall record the first BSM message it hears from each ASD along with the time and the RF level.
+3.5.2.0.34	The static RSU shall record the last BSM message it hears from each ASD along with the t ime and the RF level.
+3.5.2.0.35	The RSU shall upload the data to the back office system whenever its buffers are full or more th an 60 minutes old.
+3.5.2.0.36	Once the RF log data is received and acknowledged by the back office system, it shall be purged from the RSU.
+3.5.2.0.37	The RSU shall authenticate all transactions to retrieve its RF logs.
+3.5.2.0.38	The RSU shall allow recording of the RF signal level for any message received. (For example, clarification: when the RSU hears a BSM from any vehicle, it shall be able to measure and record the RF level of the received message.)
+3.5.2.0.39	The mobile RSU shall record the first BSM message it hears from each ASD along with the time and the RF level only when it is stopped.
+3.5.2.0.40	The mobile RSU shall record the last BSM message it hears from each ASD along with the time and the RF level only when it is stopped.
+3.5.2.1.1	The ASD shall have access to Intersection IDs where the Pedestrian Detection equipment exists.
+3.5.2.1.2	The ASD shall provide the alerts to the driver without ambiguity.
+3.5.2.1.3	The RSU shall broadcast the regulatory speed information to the ASD.
+3.5.2.1.4	The RSU shall broadcast the location of a curve and other details to support the CSPD -COMP application.
+3.5.2.1.5	The RSU shall broadcast the location of a static work zone to support the SPDCOMPWZ applicati on.
+3.5.2.1.6	The RSU shall broadcast the location of a moving work zone to support the SPDCOMPWZ application.
+3.5.2.1.7	The RSU shall broadcast the location of a school zone to support the SPDCOMPWZ application.
+3.5.2.1.8	The RSU shall broadcast the location of a roadway's vehicle size restriction to support the OVC application.
+3.5.2.1.9	The NYC CVPD HMI shall communicate alerts to the driver through auditory devices.
+3.5.2.1.10	The NYC CVPD HMI shall communicate evacuation information to the driver through auditory alerts.
+3.5.2.1.11	The ASD shall incorporate a prioritization scheme as defined in the current version of J2735 for messages such that safety -enhancing messages will have priority over non-safety-enhancing messages.
+3.5.2.1.12	The CV applicati ons in the ASD shall run concurrently.
+3.5.2.1.13	The CV applications shall prioritize alerts based on GPS location accuracy to prevent false and missed alarms from being triggered.
+3.5.2.1.14	The ASD shall determine the threat arbitration rules for addressing multiple events occurring nearly simultaneously by the specific vehicle type (light -duty, bus, truck/commercial vehicle).
+3.5.3.1	The ASD shall revert to a fail -safe mode as specified in Table F -2 when unable to perform its normal operations.
+3.5.3.2	The RSU shall revert to a fail -safe mode as specified in Table F -2 when unable to perform its normal operations.
+3.5.3.3	The ASD shall report a self -diagnosed failure of itself or one of its software modules (1) to an RSU attempting to install new firmware or parameters and (2) to a device connected to the ASD's maintenance port.
+3.5.3.4	The RSU shall report a self -diagnosed failure through NYCWiN at the TMC.
+3.6.1.1	The ASD interface design and test before production shall address poor choice of color, icon shape, location, or sound.
+3.6.1.2	The ASD installation procedure shall stipulate wire routing.
+3.6.1.3	The RSU shall meet the USDOT certification requirements as defined in TBD prior to September 15, 2016.
+3.7.1	The ASD shall meet pre-determined certification criteria based on procurement documents.
+3.8.1.1	The Safety Application shall function in vehicle classes in which it is to be installed in the NYC CVPD.
+3.8.1.2	The Safety Application shall function in weather (pavement and atmospheric) and lighting conditions anticipated for the NYC CVPD. (Note: NYC CVPD operational weather conditions are specified in the USDOT ASD Design Specification v3.1.)
+3.8.1.3	The Safety Application shall function on NYC CVPD roadways. (Note: NYC CV PD roadways are identified in the NYC CVPD ConOps.)
+3.8.1.4	The Safety Application shall obtain vehicle position data whose accuracy supports the application's calculations for issuing advisories and alerts.
+3.8.1.5	The Safety Application shall not interfere with other in- vehicle safety systems.
+3.8.1.6	The Safety Application shall use advisories and alerts that conform to human factors guidelines issued by the FHWA, NHTSA, and SAE.
+3.8.1.7	The Safety Application shall perform self -diagnostics upon power up and at TBD intervals when the vehicle is operating. (Note: Self -Diagnostics refers to the ability of the Safety Application to determine whether it is capable of performing its intended function. This will be detailed in the design phase.)
+3.8.1.8	The Safety Application shall determine the operating level/mode of operational, degraded, or failure based on the results of a self-diagnostic test.
+3.8.1.9	The Safety Application shall set the operational status corresponding to the operational l evel mode as follows: 1. Operational – online 2. Degraded – online 3. Failure – offline
+3.8.1.10	The Safety Application shall log self -diagnostic test failure which contains, at a minimum, the following information: 1. Date and time of test failure 2. Additional information to the nature of a failed test
+3.8.1.11	The Safety Application shall maintain historical information of self -diagnostic test failures for a predetermined period in non- volatile storage. (Note: Non -volatile storage refers to storage that remains intact even when there is no power. It is left up to the implementer to determine if the retention of data is a fixed window of time, if it is based on a fixed amount of storage, or if it is until cleared.)
+3.8.1.12	The Safety Application shall take itself off -line when the operating level/mode is failure.
+3.8.1.13	The Safety Application shall restore or maintain itself on- line when the operating level/mode is either operational or degraded.
+3.8.1.14	The Safety Application shall perform effective ly for all defined NYC CVPD functional classes of roadway and levels of service (LOS) where the application is installed or is being used. (Note: NYC CVPD functional classes of roadway and levels of service are specified in the NYC CVPD ASD Specification.)
+3.8.1.15	The Safety Application shall be able to receive and decode messages broadcast by NYC CVPD RSU. (Note: NYC CVPD RSU is specified in the NYC CVPD RSU Specification.)
+3.8.1.16	The V2I Safety Application alerts shall only be issued when the curren t inputs to the application warrants an advisory or alert.
+3.8.1.17	Safety Application Driver Training shall conform to human factors guidelines issued by the FHWA, NHTSA, and SAE.
+3.8.1.18	The Safety Application shall not provide information to the driver that conflicts with infrastructure roadside signage.
+3.8.1.19	The safety application shall provide its operational status (online, offline) to the ASD management system.
+3.8.1.20	An application shall receive intersection geometry information, e.g. Geometric Intersection Design (GID), from the closest MAP message based on the host vehicle’s current location.
+3.8.1.21	The application shall obtain vehicle speed from one of the sources available to the ASD. These sources include the CAN interface, GNSS interface, derivation from sequential GNSS location readings.
+3.8.1.22	The safety applications listed in Table C-1 shall acquire vehicle position accuracy, speed, and heading to the ASD.
+3.8.1.23	The safety application listed in Table C-1 shall determine if the ASD Position, speed and heading information provided is sufficiently accurate to support the ASD's advisory and alert calculations.
+3.8.1.24	The safety application s listed in Table C-1 shall only issue advisories and alerts if the ASD Position, speed and heading information provided is sufficiently accurate to support the ASD's advisory and alert calculations.
+3.8.1.25	The safety application s listed in Table C-1 shall acquire roadway geometry information for the roadway ahead from the ASD. (Note: roadway geometry information is expected to come from MAP messages acquired by the ASD from NYC CVPD DSRC Infrastructure.)
+3.8.1.26	The V2I safety applications listed in Table C-1 except for CSPD -COMP and SPDCOMPWZ applications shall acquire the roadway geometry information through the MAP message from the RSUs.
+3.8.1.27	The CSPD -COMP and SPDCOMPWZ applications listed in Table C-1 shall acquire the roadway geometry information through the TIM message from the RSUs.
+3.8.1.28	The safety application s listed in Table C-1 shall acquire the posted speed for the roadway ahead, including upcoming curve(s). (Note: Posted speed information is expected to come from MAP messages acquired by the ASD from NYC CVPD DSRC Infrastructure.)
+3.8.1.29	The V2I safety applications listed in Table C-1 except for CSPD -COMP and SPDCOMPWZ applications shall acquire the posted speed information through the MAP message from the RSUs.
+3.8.1.30	The CSPD -COMP application listed in Table C-1 shall acquire the posted speed for the upcoming curved section of a roa dway through the TIM message from the RSU.
+3.8.1.31	The SPDCOMPWZ application listed in Table C-1 shall acquire the posted speed for the upcoming work zone through the TIM message from the RSU.
+3.8.1.32	Issuance of the CSPD -COMP and SPDCOMPWZ application advisory of a reduced speed curve ahead to the driver shall coincide with driver visibility of roadside curve ahead signage. (Note: Location of roadside signage and sign visibility distances are described in the MUTCD.)
+3.8.1.33	The safety application shall acquire data from the ASD which includes the following: 1. Vehicle positioning information 2. Vehicle position accuracy 3. Vehicle speed 4. Vehicle acceleration 5. Vehicle heading
+3.8.1.34	The V2V safety applications shall set the message threshold at the proper level.
+3.8.1.35	The V2V safety applications shall formulate the decision algorithm properly to recognize the threat.
+3.8.1.36	The V2V safety applications shall ensure that all components of the system are functioning as intended.
+3.8.1.37	The V2I safety applications shall operate on cor rect, timely information.
+3.8.1.38	The NYC CVPD safety management subsystem shall verify the initial data entry from the V2I safety applications.
+3.8.1.39	The safety applications listed in Table C-1 shall implement the most recent application control parameters supplied externally to the application as described in Table E-1.
+3.8.1.40	The safety application shall allow the central system to modify the control parameters as defined in Table E-1.
+3.8.2.1.1	The FCW safety application shall warn drivers of impending rear -end collisions with other DSRC -equipped vehicles.
+3.8.2.2.1	The EEBL safety application shall warn drivers about DSRC -equipped vehicles braking.
+3.8.2.3.1	The BSW safety application shall warn drivers about DSRC -equipped vehicles in their blind spots.
+3.8.2.4.1	The LCW safety application shall warn drivers about DSRC -equipped vehicles changing lanes in the same direction.
+3.8.2.5.1	The IMA safety application shall warn drivers about DSRC -equipped vehicles that cross the intersection.
+3.8.2.6.1	The VTRW application shall detect whether a vehicle is turning right in front of transit vehicle via the position and heading data received in a basic safety message (from a remote vehicle) based on the PVT accuracy for positioning.
+3.8.2.6.2	The application alert mode in the VTRW application shall be active when the transit vehicle stops within a bus stop geographic zone.
+3.8.2.6.3	The application alert mode shall terminate when the transit vehicle stops within a bus stop geographic zone.
+3.8.2.6.4	The VTRW application shall only issue alerts to the driver when the transit vehicle indicates an impending crash.
+3.8.2.6.5	A VTRW application shall advise if a remote vehicle which originates directly behind the transit vehicle at a bus stop begins to pass to the left of the transit vehicle as the transit vehicle is departing a bus stop.
+3.8.2.6.6	A VTRW alert shall alert the driver if a remote vehicle which originates directly behind the transit vehicle at a bus stop passes to the left of the transit vehi cle as the transit vehicle is departing a bus stop and the remote vehicle’s position and heading indicates an intent to return to or cross the lane of the transit vehicle.
+3.8.2.6.7	The VTRW application shall present the alerts regardless of traffic signal status.
+3.8.2.6.8	The VTRW application shall have access to the transit vehicle's gear position.
+3.8.3.1.1	The SPDCOMP application shall obtain regulatory speed limits from the MAP message per SAE J2735- 201603 based on the host vehicle’s current location.
+3.8.3.1.2	The SPDCOMP application shall trigger an alert when either the vehicle speed exceeds the recommended speed by a configured amount or for a configured period of time by time of day.
+3.8.3.2.1	The CSPD -COMP application shall determine if there is a curve with reduced speed ahead.
+3.8.3.2.2	The CSPD -COMP application shall advise the driver of a curve with reduced speed ahead.
+3.8.3.2.3	The CSPD -COMP application shall determine the difference between the posted speed on the upcoming curve and the vehicle's current speed.
+3.8.3.2.4	If the vehicle speed is greater than the posted curve speed, the Vehicle CSPD -COMP Application shall advise the driver in time for the driver to reduce vehicle speed to the posted speed limit before the vehicle enters the curve.
+3.8.3.2.5	While the vehicle is in the curve, the CSPD -COMP application shall trigger a driver alert when the host vehicle speed exceeds the posted speed plus the Excessive Curve Speed Amount Threshold for a time period exceeding the Excessive Curve Speed Time Threshold.
+3.8.3.3.1	The SPDCOMPWZ application shall acquire the following from Speed Zone information for use in SPDCOMPWZ advisory and alert calculations: 1. Posted Reduced Speed Zone Speed Limit 2. Work Zone geometric information
+3.8.3.3.2	The SPDCOMPWZ application shall determine if there is a reduced speed zone ahead.
+3.8.3.3.3	The SPDCOMPWZ application shall advise the driver of a reduced speed zone ahead.
+3.8.3.3.4	The SPDCOMPWZ application shall determine the speed of the host vehicle based on accuracy and (configurable) threshold per J2945/1.
+3.8.3.3.5	The SPDCOMPWZ application shall determine the difference between the posted speed on the upcoming reduced speed zone and the vehicle's current speed.
+3.8.3.3.6	If the vehicle speed is greater than the reduced speed zone, the SPDCOMPWZ application shall advise the driver in time for the driver to reduce vehicle speed to the posted speed limit before the vehicle enters the zone.
+3.8.3.3.7	The SPDCOMPWZ application shall determine if the vehicle exceeds the Work Zone Posted Speed plus the Excessive Zone Speed Amount Threshold, for a period exceeding the Excessive Zone Speed Time Threshold.
+3.8.3.3.8	While the vehicle is in the speed zone, the SPDCOMPWZ application shall trigger a driver alert when the vehicle speed exceeds the Work Zone Posted Speed plus the Excessive Zone Speed Amount Threshold, for a period exceeding the Excessive Zone Speed Time Threshold.
+3.8.3.4.1	The RLVW Application shall receive the SPaT and MAP data sent by the RSUs to the vehicles deployed along the NYC CVPD corridors as per J2735.
+3.8.3.4.2	The RLVW application shall use the same time source as infrastructure SPaT applications.
+3.8.3.4.3	The RLVW application shall acquire SPaT information, through the Host Vehicle ASD, from the intersection RSU and signal controller at a signalized intersection within RSU's DSRC range and in the vehicle's direction of travel.
+3.8.3.4.4	The RLVW application shall acquire the location of the stop bars at signalized intersections at which RLVW is operating from the intersection MAP Message.
+3.8.3.4.5	The RLVW application shall acquire the following from Intersection SPaT messages for use in RLVW advisory and alert calculations: 1. Intersection geometric information 2. Signal Phase and Timing information of the traffic signal at the Intersection 3. Intersection status of the traffic controller 4. Traffic law restrictions for the intersection.
+3.8.3.4.6	The Vehicle RLVW Application shall be inactive if one or more of the following conditions occur: 1. Vehicle position and accuracy information is not available 2. Vehicle Speed is not available 3. Communication failure between Vehicle and Infrastructure 4. SPaT information is not available 5. MAP information is not available 6. Vehicle Heading information is not available
+3.8.3.4.7	The RLVW application shall calculate if a vehicle will violate the Red Light stop bar at a signalized intersection base d on its current speed, heading, acceleration, location, location of stop bars, stop bar tolerance and yellow duration tolerance.
+3.8.3.4.8	The RLVW application shall trigger a driver alert for a vehicle approaching a signalized intersection when it determ ines that a stop is required and the vehicle will violate the Red Light stop bar at a signalized intersection based on its current speed, heading, acceleration, location and the location of stop bars.
+3.8.3.4.9	The RLVW application shall alert drivers in t ime for the driver to take action for a required stop at a signalized intersection.
+3.8.3.4.10	The RLVW Application shall not alert the driver if the vehicle has safely stopped at the intersection and subsequently accelerates such that a violation occurs.
+3.8.3.4.11	The RLVW application shall acquire the following from Intersection MAP messages for use in RLVW advisory and alert calculations: 1. Intersection geometric information 2. Signal Phase and Timing information of the traffic signal at the Intersec tion 3. Intersection status of the traffic controller 4. Traffic law restrictions for the intersection
+3.8.3.5.1	The ASD shall advise the driver of a potential crash before the bridge, overpass, or tunnel to exit the restricted roadway and find an alternate route. (Note: Advisory Distance Threshold Parameter is defined in Table E -1 in the Appendix.)
+3.8.3.5.2	The ASD shall warn the driver of an impending crash before the over-height bridge, overpass, or tunnel to stop the vehicle completely and avoid the crash. (Note: Warning Distance Threshold Parameter is defined in Table E -1 in the Appendix.)
+3.8.3.5.3	The OVC application shall calculate whether or n ot the vehicle is at risk of crash by comparing the vehicle's height and the height of the roadway restriction.
+3.8.3.5.4	The OVC application shall utilize the host vehicle's pre -established height in determining whether to alert the driver.
+3.8.3.5.5	The OV C application shall determine the location of the vehicle relative to the location of the size -restricted or weight restricted roadway.
+3.8.3.5.6	The RSU shall contain the roadway's clearance height and communicate it to the ASD via DSRC.
+3.8.3.6.1	The NYC CVPD performance monitoring subsystem shall utilize the post -processed event data and measure the number of vehicles receiving emergency information Before and After periods.
+3.8.3.7.1	A PEDINXWALK alert shall be displayed if a pedestrian has been detected in a crosswalk that intersects the Transit Vehicle’s planned forward, left or right turn route at the intersection.
+3.8.3.7.2	The Pedestrian Detector shall send a pedestrian detected si gnal when a pedestrian is present in the crosswalk it monitors.
+3.8.3.7.3	The Pedestrian Detectors shall be pole mountable.
+3.8.3.7.4	The PEDINXWALK System Latency for pedestrian detection shall be no more than 2 seconds from detecting pedestrian to alert.
+3.8.3.7.5	The PEDINXWALK application shall receive Signal Phase and Timing for Pedestrian Lanes and Pedestrian presence detection from the SPaT system.
+3.8.4.1.1	The PED-SIG application shall correctly discern the pedestrian's position and intended crossing direction.
+3.8.4.1.2	The PED -SIG application shall provide status of the walk signal in the intended direction.
+3.8.4.1.3	The PED -SIG application shall advise (via audio) the pedestrian how to use the application.
+3.8.4.1.4	The PED -SIG application shall receive intersection geometry information from the RSU based on J2735-201603.
+3.8.4.1.5	The PED -SIG application shall use the intersection geometry information to determine the pedestrian's orientation.
+3.8.4.1.6	The PED -SIG application shall use the intersection geometry information provided by the MAP message to determine the crosswalk geometry of the intended crossing.
+3.8.4.1.7	The PED -SIG Applicati on shall determine the intended crossing time from the intersection geographic information (distance) and the expected pedestrian travel rate (configurable).
+3.8.4.1.8	The PED -SIG application shall collect data on the map error status notification . (partial, unable to detect).
+3.8.4.1.9	The PED -SIG application on the PID shall acquire credentials from the SCMS that will allow it to authenticate the SPaT and MAP messages received.
+3.8.4.1.10	The SCMS shall be able to set service specific permissions associated with the future support of pedestrian requests from the PID.
+3.8.4.1.11	Applications on the PID shall be able to sign messages transmitted to the RSU.
+104.4.11	Applications shall be capable of including a unique ID which shall remain stable (unchanged) throughout the PID's interaction with a single intersection.
+3.8.4.1.12	The PED -SIG application shall provide information to the pedestrian based on the content of the SPaT and MAP message at the nearest intersection.
+3.8.4.1.13	The Application on the PID shall assist the pedestrian in de termining his/her orientation. ( Note: Definition of orientation: to understand which street crossing the pedestrian is facing.)
+3.8.4.1.14	The PID application shall provide information to the pedestrian regarding the availability of PED support services at the intersection. (If there is an RSU)
+3.8.4.1.15	Application shall provide information to the pedestrian indicating the s tatus of the pedestrian signal for the intended crossing including walk time remaining, clearance time remaining, and time until the next walk signal is expected.
+3.8.4.1.16	The PED Applications shall allow the pedestrian to configure selected parameters and characteristics such as sound volume, voice commands, and walking speeds.
+3.8.4.1.17	The application shall notify the pedestrian if there is a preemption or priority change (TSP) operation taking place which may disrupt the signal timing.
+3.8.4.1.18	The PED application shall collect DSRC RF receive levels. (Note: this is for analysis of the reliability of the RSU to PED messages and the PED to RSU messages.)
+3.8.4.1.19	The Application shall calculate intersection crossing information based on pedestrian’s origin, destination, departure range, arrival range. (Note: this is for coordination of signal timing phase.)
+3.8.4.1.20	The PED -SIG Application shall collect the performance data listed in Table G-3.
+3.8.4.1.21	The Application shall collect metadata that includes the date and time when system information was generated.
+3.8.4.1.22	The PED -SIG application shall receive signal timing and controller status fr om the RSU through the SPaT message.
+3.8.4.1.23	Every PID shall be able to change signing keys per SAE J2945/9 Section 6.6. (Note: the signing will be static during interactions with a single intersection.)
+3.8.4.1.24	The PED -SIG application shall continuously notify the user that it is operating.
+3.8.4.1.25	The PED-SIG application shall be able to provide requested information within 10 seconds.
+3.8.4.1.26	If the delay will be longer than 10 seconds, then the PED-SIG application shall provide informa tion indicating how long it is expected to complete the operation.
+3.8.4.1.27	The applications shall be able to measure and log the time required to provide the pedestrian the information.
+3.8.4.1.28	The PID device shall be able to function in a communication -saturated environment.
+3.8.4.1.29	The PID system shall ensure geo -location information is used for PED-SIG application only.
+3.8.4.1.30	All data transmitted between the PID and the NYU server shall be encrypted to protect any personal information.
+3.8.4.1.31	Data stored by the NYU server or exported for independent evaluation shall be processed to remove any personal information and any attributes including exact location and exact time such th at the data cannot be associated with a particular person or event.
+3.8.4.1.32	The PID shall use the channel assignments defined in Table F-1.
+4.1.1	Each DSRC device shall obtain its time and position from the GNSS per the requirements of J2945/1 Section 6.2.
+4.2.1.1	RSUs shall exceed 802.11 ACK requirements in the following manner: Antenna referenced ACK turnaround time must be in (SIFS -12.5, SIFS+12.5) ns 95% for cable tested non- CSD signals. Note that any RSU employing the NXP based SAF5200 will support this by default. The position provided by the WSA shall be provided by the central system based on the 3D surveyed position.
+4.3.1	Devices unable to receive timing information per J2945/1 Section 6.2 shall set their time from an authenticated time reference using the Network Time Protocol Version 4 per Internet Engineering Task Force RFC 5905-5908.
+4.4.1	The device supplier shall provide devices provisioned with valid enrollment certificates.
+4.4.2	The device supplier shall provide devices that meet the interface requirements of the USDOT's certification program.
+4.4.3	The SCMS shall maintain the blacklist internally.
+4.4.4	The back office system shall acquire one SCMS certificate from each installed DSRC device and associate this certificate with the installed DSRC device. (Note: this requirement is temporary and will become obsolete after the SCMS deploys misbehavior detection and reporting features.)
+4.4.5	The back office system administrator shall provide a DSRC device’s acquired SCMS certificate when requesting that the SCMS regi stration authority add the associated DSRC device to the Certificate Revocation List (CRL). (Note: this requirement is temporary and will become obsolete after the SCMS deploys misbehavior detection and reporting features.)
+4.4.6	Devices shall impleme nt certificate download per the SCMS Interface (detailed requirements to be derived during Phase 2 as the final interface document is not yet published)
+4.4.7	The device supplier shall sign the firmware images and manage the certificate management proce ss for the firmware images.
+4.4.8	The SCMS certificate shall have a lifespan of 3 years instead of weeks.
+4.4.9	The SCMS signature scheme shall provide at least 128- bit security.
+4.7.1	The interface for transferring performance measurement information to the USDOT Research Data Exchange (RDE) shall be negotiated by the NYC CVPD project team and the USDOT RDE operators during the detailed design of the system in Phase 2.
+4.8.1	The NYC CVPD performance monitoring subsystem shall collect hourly weather data observations from the following National Weather Service (NWS) stations in NYC: • Central Park (KNYC) • Kennedy Internation al Airport (KJFK) • LaGuardia Airport (KLGA)
+4.8.2	The NYC CVPD performance monitoring subsystem shall obtain the weather data listed in Table G-2.
+4.9.1	Foreign light -duty vehicles shall transmit DSRC BSM messages in accordance with the J2945/1 standard.
+4.9.2	Foreign trucks shall transmit DSRC BSM messages in accordance with the J2945/1 and shall contain the following Part II SupplementalVehicleExtensions objects: classification, and vehicleData (height and mass) as defined in J2735 Section 6.133.
+4.10.1	The ASD shall have access to the host vehicle’s brake status.
+4.10.2	The ASD shall monitor the items in Table E-5 on the in-vehicle network.
+4.10.3	The ASD shall utilize the OBD-II port, J-bus, or CAN bus.
+4.10.4	The ASD shall conform to the associated SAE interface requirements for OBD -II port, J-bus, or CAN bus. (Clarification: the intent of this requirement is to prevent the ASD from interfering with other in -vehicle systems.)
+4.10.5	The application in the ASD shall collect and process vehicle -related information through a direct connection or a splitter cable. (Note: individual application data needs will be addressed through each application's requirement.)
+4.10.6	The ASD interface to the CAN bus shall not degrade or interfere with vehicle's normal operation.
+4.10.7	The ASD's interface to the CAN bus shall not interfere with the vehicle's passenger's safety systems (e.g., restraints and extrication).
+4.10.8	The ASD shall carry out plausibility checking on the internal CAN/J-Bus data.
+4.11.1	Advanced Traffic Signal Controllers shall use TAI time to issue security credentials.
+4.11.2	Advanced Traffic Signal Controllers shall issue messages to DSRC devices with security credentials that meet this document’s IEEE 1609.2 requirements.
+4.11.3	Advanced Traffic Signal Controllers shall maintain an authenticated NTP based time reference.
+4.11.4	Advanced Traffic Signal Controllers shall export their UTC times (Line Frequency referenced from the traffic signal system) as UTC times referenced from their authenticated NTP based time reference.
+4.12.1	The CV system shall export RSU status to the traffic signal system for display on the traffic signal system map.
+4.12.2	The CV system shall export RSU RF signal range information to the traffic signal system for display on the traffic signal system map.

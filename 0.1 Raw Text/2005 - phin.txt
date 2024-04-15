@@ -1,0 +1,623 @@
+
+ 
+PHIN Pr eparedness  
+ 
+  
+ 
+ 
+OUTBREAK MANAGEMENT 
+FUNCTIONAL REQUIREMENTS  
+Version 1.0 
+4/26/2005 
+ 
+ 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+TABLE OF CONTENTS 
+1 INTRODUCTION .................................................................................................................... 3 
+2 OUTBREAK MANAGEMENT F UNC TIONAL REQUIREMENTS ................................ 4 
+2.1 System  Architecture .................................................................................................. 4 
+2.2 Data Requirem ents.................................................................................................... 5 
+2.2.1  Entity Data ................................................................................................................. 5 
+2.2.2  Health Even t Data ..................................................................................................... 6 
+2.2.3  Travel History and Conveyance Data ....................................................................... 6 
+2.2.4  Case Investigation and E xposure Contact Data ........................................................ 7 
+2.2.5  Monitoring and Follow-up Data ................................................................................ 8 
+2.2.6  Specim en/Sam ple Collection and Laboratory Response Data .................................. 9 
+2.2.7  Prophylaxis and Treatm ent Data ............................................................................. 11 
+2.2.8  Adverse Event Data ................................................................................................. 11 
+2.2.9  Activity Logging Data ............................................................................................. 11 
+2.3 System  Functions and Behaviors ............................................................................ 11 
+2.3.1  Case Investigation ................................................................................................... 11 
+2.3.2  Linking .................................................................................................................... 12 
+2.3.3  Contact Exposure Tracing ....................................................................................... 12 
+2.4 Analysis, Visualization, and Report Generation ..................................................... 13 
+2.5 System  Integration and Data Exchange .................................................................. 14 
+2.6 Vocabulary Standards ............................................................................................. 15 
+2.7 Operations ............................................................................................................... 16 
+2.8 System  Security and Availab ility............................................................................ 16 
+2.9 Privacy ..................................................................................................................... 16 
+ 
+ 
+Revisio n Date: 4/28/2005  Page 2 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+1 INTRODUCTION 
+This document describes the Public Health  Infor mation Network (P HIN) functional 
+requirem ents for systems im plem ented to part icipate in th e manage ment of outbreaks and 
+other health events. Outbreak Managem ent (O M) is the P HIN functional area inte nded to 
+support the needs of investiga tion, monitoring, m anage ment, analysis, and reporting of a 
+health event or act of bioterro rism.  OM should aid in the colle ction and analysis  of data to 
+support identifying and containing the health event.  OM system s should be configurable 
+to m eet the needs of different types of health  events, and captur e data  rela ted to cases , 
+contacts, investigations, exposures, rela tionships, clinical  and environm ental 
+specim ens/samples, laboratory  resu lts, v accin ations and treatm ents, travel h istory, and 
+conveyance inform ation.  The application should  also allow for new objects to be defined 
+and created during the course  of an investigation. 
+ 
+Central to the functionali ty of a system  supporting OM is th e ability to collect data related 
+to cases and exposures and to create traceable  links between all appr opriate entities.  By 
+tracing the m echanism  of transm ission and iden tifying the s ource of  the health ev ent, the  
+appropriate response staff can more effectivel y contain the event.  System s supporting OM  
+should also be integrated with the sy stem s supporting early event detection, 
+counterm easure adm inistration, laboratory, and su rveillance to achieve the prim ary goal of  
+managing the response to and m itigating th e effects of an event.     
+ 
+This document provides m inimum operationa l requirem ents necessary to support an 
+outbreak m anagem ent system  and should in no way preclude a system  from  incorporating 
+additional functionality beyond what has been covered in this docum ent.  
+ 
+Revisio n Date: 4/28/2005  Page 3 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2 OUTBREAK MANAGEMENT FUNC TIONAL REQUI REMENTS  
+The following requirements describe baseline f unctionality for any system (s) im plemented 
+to support O utbreak Managem ent: 
+2.1 System Architecture : Broad system -level needs, su ch as flexible conf iguration, 
+should be addressed by system s supporting OM. 
+2.2 Data Requiremen ts:  System s supporting O M need a variety of data to support 
+investigations, incl uding data regarding dem ographics, cases, exposures, 
+investigations, agents, contact s, specim en/sa mple collection, laboratory tests, travel 
+and conveyance, and restriction m onitoring.  
+2.3 System Functions and Behaviors :  System s supporting OM should support case 
+investigatio n, maintain detailed and com prehensive linkages, trace contacts, and 
+quarantine and isolation monitoring activ ities. 
+2.4 Analysis, Visualization, and Report Generation :  Systems supporting OM should 
+enable investigators to produce both aggregat ed and individual reports about affected 
+entities and events. 
+2.5 System Integration and Data Exchange :  OM inform ation m ust be 
+exchangeable, based on established standa rds, between system s involved in the 
+investigation, identification, confirmati on, and reporting of a health event. 
+2.6 Vocabulary Standards: Standard vocabulary lists and data structures have been 
+defined by standards organiza tions. Where they exist, system s supporting OM should 
+use them .  As additional standard s are defined, th ey should be accepted an d 
+implem ented  
+2.7 Operations :  Personn el, ro les, activities, and responsibilities necessary  to support 
+all aspects of OM should be clearly defined. 
+2.8 System Security an d Availability : Secur ity of OM data in cludes the protection of 
+data from  corruption and  access by u nauthorized  individu als, as well as th e protection 
+of the actual system s supporting OM from  sabotage or other failure. A plan m ust be 
+established f or continuing activities when system s supporting OM are unavailable. 
+2.9 Privacy:  Patients, organizations, and personnel must be protected from fraudulent 
+and unauthorized use of their information. 
+2.1 SYST EM ARCHITE CTURE 
+2.1.1 System s des igned to support OM must offer c onfiguration flexibility so that new 
+data fields, entities, entity types and re lationship types m ay be added to capture 
+inform ation unique to each particular health event. 
+2.1.2 System s supporting OM m ust support struct ured data entry for common for ms and 
+fields to ensure data integrity, validity, and standardization.  A standardized data 
+struc ture ensures that data m apping of  common elem ents will only be  nece ssary on e 
+time, rather than for each event. 
+2.1.3 System s supporting O M should support m ultiple dep loyment options (e.g., client  
+server, d isconnected, and  potentially web based). 
+Revisio n Date: 4/28/2005  Page 4 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.1.3.1  System s supporting OM should provide  the ability for com puters in 
+disconnected m ode to reconnect to a server to share OM data am ong other 
+computers that operate in disconnected m ode. 
+2.1.3.2  OM data should be synchronized so that  all insta nces of  OM applic ation s 
+working from the sam e server are ab le to sh are a nd use the s ame data. 
+2.1.4 System s supporting OM should be able to el ectronically record and store data from 
+remote devices that m ay be uploaded to an aggregating system. 
+2.1.5 System s supporting OM should be capable of using configurable, dom ain-specific 
+vocabulary.   
+2.2 DATA REQUIREMENTS 
+The following high-level da ta requ irements a re neces sary to ensure  that the data  being 
+collected, analyzed, an d reported to  support OM are clearly defined. 
+2.2.1 Entity  Data 
+An entity is any being or object inv olved in a health event.  Entities ma y be classified as 
+a person, o rganization,  location, a nimal, ob ject, conveya nce, event, or other or ganism.  
+Each type of entity requ ires specific data to be collected. 
+2.2.1.1  System s supporting OM must have the cap ability to capture dem ographic data 
+about persons involved in an OM inves tigation, including:  S ubject ID, nam e, 
+address, date of birth, gender, phone nu mber, race, ethnicity, and country of 
+citizensh ip. 
+2.2.1.1.a  Other descriptive details m ay be captured, such as occupation and 
+work history.   
+2.2.1.2  System s supporting OM must have th e capability to captu re data abou t 
+organizations (e.g., a local health de partm ent, a university, a professional 
+association) involved in an OM inve stigation, including: organization nam e, 
+location, and contact inform ation. 
+2.2.1.3  System s supporting OM must have th e capability to captu re data abou t 
+locations involved in an OM investigati on, including:  nam e (if applicable), 
+type (e.g., floor, building, room , store), st reet address, cit y, state, zip code, 
+country, GPS coordinates, and other sp ecific details (e.g., a specific building 
+on a cam pus, a business branch locati on, a local chapter’s m eeting hall) 
+2.2.1.4  System s supporting OM must have the capability to captu re data abou t any 
+anim als involved in an OM investigati on, including: type (dog, m onkey, etc), 
+age, gender, owner’s nam e and address,  color, weight, and species. A Subject 
+ID should also be collected for anim als in an OM investigation.  It m ay be a 
+challenge to ensure unam biguous identification b ecause dem ographic d etails 
+of an anim al are not easily identifi ed; therefore, anim als involved in 
+investigations m ay need to be tagged. 
+Revisio n Date: 4/28/2005  Page 5 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.1.5  System s supporting OM must have the capability to captu re data for any 
+object involved in an OM investigation, su ch as a letter, invoice, food item, or 
+any object that canno t be class ified as a “person, organization, place, or 
+anim al.”  Collected data m ay include:  nam e of the object, type, physical 
+descriptors, address, iden tification num ber (e.g. seri al num ber, package slip 
+number), and relevant dates and tim es (e.g., invoice date, shipping date, 
+packaging d ate). 
+2.2.1.6  System s supporting OM must have the capability to captu re data abou t any 
+conveyance involved in an OM investiga tion, including:  type of conveyance, 
+route taken (e.g., flight num ber), etc. 
+2.2.1.7  System s supporting OM must have the capability to captu re data abou t any 
+public or private gathering of people (e.g., church social, ball gam e) involved 
+in an OM investigation, including:  tim e, location, nature of the event, etc. 
+2.2.1.8  System s supporting OM must have the capability to captu re data abou t any 
+living things other than persons or anim als that are involved in an OM 
+investigation, including: type of living thing, and other custom izable data 
+collection questions.  
+2.2.1.9  System s supporting OM must have the capab ility to captu re an entity’s tra vel 
+history to support investigations of en tities infected, expos ed or potentially 
+exposed.   
+2.2.2 Health Event Data 
+2.2.2.1  When a health event is investig ated, it must be as signed an ev ent iden tifier 
+(i.e., Event ID) that is uni que within the jurisdiction. 
+2.2.2.2  Data describing the health event should  be captured, includ ing the reason for 
+the investigation, th e category of event (e.g. enviro nmental, infectious), the 
+date the event began, the suspected agen t (if known) or investigation focus, 
+the geograp hic area im pacted by the event,  as well as the event status (e.g., 
+open, closed). 
+2.2.2.3  System s supporting OM should have the ab ility to record the case definition 
+for a health event. 
+2.2.2.4  System s supporting OM should have the ab ility to capture changes to the case 
+definition th at occu r as the health ev ent evolv es. 
+2.2.3 Travel Histor y and Conveyan ce Data 
+Travel histo ry provides specific information to indicate when, where, and how subjects  
+involved  in an event tr aveled to a location (or  to mu ltiple locations), and convey ance 
+data describes the veh icle in which the travel occur red.  Examples  of travel history 
+include a pe rson’s loca l trave l as a part of the ir daily ac tivities as well as  the shipme nt of 
+animals or plants from one country to another.  
+Revisio n Date: 4/28/2005  Page 6 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.3.1  Travel history data should include infor mation such as the m ethod of 
+transportation (e.g. bus, plane,  boat, car), flight num ber, departure and arrival 
+dates and tim es, and the origination and destination locations (city, state, and 
+country).   
+2.2.3.1.a  Inform ation about each leg of a trip, as well as the parent inform ation 
+about the trip, should be captured.  F or exam ple, if a person who lives 
+in Georgia travels to Seattle and becom es exposed to m onkey pox, 
+then visits a friend in Santa Fe, travel history and conveyance data 
+should be noted acco rdingly for each place the exposed person 
+traveled. 
+2.2.3.2  Travel h istory data to be collected for an anim al or object should include 
+shipping inv oices, an imal shelter d elivery and ad option receipts, and de livery 
+schedules (including delivery ve hicle and driver inform ation). 
+2.2.3.3  Detailed con veyance data m ust be collected when  relev ant to the 
+investigation, including the carrier identifier,  the type of conveyance (such as 
+airplane, bus, or train, among countless ot hers), as well as the m ake, m odel, 
+year, and id entification num ber (e.g. , VIN) of each vehicle with which th e 
+entity was in  contac t (if this inf ormation is r elevant to th e inv estigation ). 
+2.2.4 Case Investigation and Exposu re Contact Data 
+Case and exposure data provide more detaile d information beyond demographic data.  
+Cases can be persons or animals, and exposur e contacts can be person s, animals, other 
+organisms, or exposure settings , such as travel conveyan ce, location, organization, 
+object, or event.   
+2.2.4.1  Because attributes of both case and e xposure data m ay describ e the sam e 
+entity, system s supporting OM m ust have the ab ility to avoid capturing 
+redundant entity d emographic inform ation. 
+2.2.4.2  Public Health Case Data 
+2.2.4.2.a  Case data about the entity should in clude: a case identifier (i.e., Case 
+ID) tha t is unique within  the jurisdiction be ing r eported,  the suspected  
+agent, case diagnosis, health status (e.g., no symptom s, acute illness), 
+case status (e.g., confirm ed, probable,  suspect), investigation dates, 
+clinical history, sym ptom onset date and tim e, epidem iological links to 
+other cases, and priority  (e.g., high, m edium , low).  
+2.2.4.2.b  There m ust be a m eans to update the case diagnosis either m anually or 
+autom atically if the case definition ch anges durin g an event. 
+2.2.4.2.c  Epidem iological (ep i) data m ust be collected  to assist in the case 
+investigation of events.  Standard epi data to be colle cted includes : 
+onset date and tim e of sym ptoms, type of symptom s, risk factors, 
+medical history data, laborator y data, procedure data, and 
+questionnaire responses.   
+2.2.4.2.d  System s supporting OM m ust allow  for dyna mic, event-specific case 
+investigation data to be captured. 
+Revisio n Date: 4/28/2005  Page 7 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.4.2.e  In the context of a case, all entities exposed to a case m ust be recorded 
+and linked to the case. 
+2.2.4.2.f  Demographic inform ation should be collected about the investigator, 
+including their nam e, address, and contact inf ormation, so that the 
+investigator m ay be contacted to answer questions or to provide 
+additional infor mation. 
+2.2.4.2.g  Both the jurisdiction investigatin g the even t and the jurisdiction  
+reporting th e cases and  associated investigatio ns m ust be captured.   
+For exam ple, if a person becom es ill during travel in one jurisdiction 
+but is th e resident of  another, th e illness will b e reported by  the sta te 
+(jurisdiction) of residence and inve stigated by the jurisdiction visited. 
+2.2.4.2.h  System s supporting O M should have th e ability to cl assify entities 
+associa ted with the investig ation  as investigation con trols.  For  
+exam ple, controls  share  dem ographi c cha racteristics with the subjec t 
+of the cas e, but are not in fected with  the ag ent th at is th e focus of the 
+investigation. 
+2.2.4.3  Exposure Contact Data 
+2.2.4.3.a  Exposure investigation data to be captured m ust include inf ormation 
+related to exposure levels, type of  exposure (e.g., intim ate, social, 
+household, common conveyance), place of exposure, le ngth of tim e 
+the entity was exposed, frequency of exposure, and the entity’s 
+proxim ity to the source of exposure.  
+2.2.4.3.b  Detailed data m ust be collected a bout the source of e xposure as well as 
+the exposed entity to support contact exposure tracing.  Exposure data 
+related to bo th the  poten tial source  and the po tential sp read inc lude th e 
+entity’s type, Subject ID, Contact ID, contact’s na me and address, 
+exposure dates and tim es, health  status, and priority code. 
+2.2.4.3.c  Epi data m ust be co llected to  assist in the ex posure inv estiga tion of  
+health events.  Standard epi da ta to be collected for exposure 
+investigatio n para llels the data  to be collec ted f or case inv estigation 
+and includes: onset date and tim e of sym ptoms, type of sym ptoms, risk 
+factors, laboratory data, procedure data, and questionnaire responses.   
+2.2.4.3.d  System s supporting OM m ust support capturing dynam ic, event-
+specific data that describ es contact between two subjects.   
+2.2.5 Monitoring and Follow -up Data 
+Monitoring and follow- up data is used to track the progress and treatment of subjects 
+who were exposed or potentially exposed to a health event.  For more information about 
+monitoring and follow-up data, please reference “P HIN Countermeasure/Response  
+Administration Functional Requirements and Pr ocess Flows”, available at 
+www.cdc.go v/phin . 
+2.2.5.1  System s supporting OM should supp ort the m onitoring and follow-up 
+activ ities r equired when  track ing the  status of cases and exposed individuals. 
+Revisio n Date: 4/28/2005  Page 8 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.5.1.a  Monitoring data should be collected about cases and exposed 
+individuals who are isolat ed or qu arantined b ecause of a health event.  
+2.2.5.1.b  Follow-up d ata shou ld be collected from  subjects or their proxies to 
+track sym ptoms and compliance with  recomm ended treatment plans or 
+prophylaxis. 
+2.2.5.1.c  Follow-up data m ay be r eceived fro m take resp onse exam s of persons 
+who receiv ed a counterm easure that requires such an exam (i.e., 
+smallpox vaccination). 
+2.2.6 Specimen/Sample Collection a nd Laborator y Response Data 
+Specimen /sample collection and laboratory response data supports the collection of  
+clinical spe cimens, foo d sample s, environm ental sa mples,  and other types o f samples  
+that will be tested for biologic al, chemical, and radiological agents.  These  
+specimens/s amples  can  be collected from places, person s, animals, or environ mental 
+sources such as air, water, food, or soil. 
+2.2.6.1  Specim ens/sam ples collected for labo ratory testing m ust be assigned an 
+identifier (i.e., Specim en ID) that is unique within the jurisdiction. 
+2.2.6.2  The subject of a specim en/sam ple coll ected for laboratory testing m ust be 
+linked to the specim en/sam ple by an identi fier (i.e., Subject ID ) that is unique 
+within the jurisdiction. 
+2.2.6.3  System s supporting OM must be able to store data about the 
+specim ens/sam ples that are collected for laboratory testing.  E xamples of t his 
+data are: Specim en ID, Subject ID, purpos e for test, co llection date and tim e, 
+subject type (e.g., hum an, plant, anim al, food), specim en category, specim en 
+type, suspected agent, risk indicator (e .g., infectious, radioactive, corrosive), 
+person perform ing specim en/sample collection (including contact 
+inform ation), location of collecti on, and volum e and quantity details. 
+2.2.6.3.a  Clinical specim en data should incl ude inform ation about the specim en 
+source/site from  which the specim en was taken, sym ptom date of 
+onset, and w hether the sample is acute or convalescent. 
+2.2.6.3.b  Environm ental sam ple data shoul d include infor mation about the 
+collection m ethod, location (geocode d if possible) from which the  
+sample was  taken, source (e.g., rain or well for water, radiation 
+release, asb estos, chair or desk in a specified location ), nature of the 
+sample (e.g., soil, water, air), qualit y control data, collection begin and 
+end date and tim e for air sam ples, and original volum e and volum e of 
+concentrate tested for water s amples. 
+2.2.6.3.c  Food sam ple data should include infor mation about the lot num ber, 
+batch num ber, m anufac turer nam e, shipping invoice, temperature, 
+sample type (e.g., dairy – m ilk, red meat, spice), and product storage 
+condition. 
+Revisio n Date: 4/28/2005  Page 9 of 1 6 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.6.3.d  Bar-coding should be supported for the capture of detailed 
+specim en/sample data to im prove th e quality and efficiency of data 
+collection. 
+2.2.6.4  Chain of custody information for all sp ecim ens/sam ples should be captured.  
+2.2.6.5  Chain of custody information for forensic  and select agent samples m ust be 
+captured, including the person who colle cted the sam ple, the location of 
+collection, all people w ho cam e into contact with  the sam ple during the 
+preparation for shipm ent to the labor atory, and th e accep tance of the pack age 
+by the shipper.  
+2.2.6.6  System s supporting OM must be able to create a laboratory test request for a 
+specim en/sample or group of specim ens/samples.  More inform ation about 
+creating laboratory test re quests is found in section 2.5 System  Integration and 
+Data Exchange  of this docum ent. 
+2.2.6.7  Inform ation about batch shipm ents of sp ecim ens/sam ples that are transferred 
+to test laboratories or other facilities  must be collected, including the shipper 
+(e.g., UPS, FedEx), shipm ent tracking nu mber, and the sending organization’s 
+contact inform ation. 
+2.2.6.8  System s supporting OM should be able to  support the inclusion of labeling, 
+packaging and shipping instructions (e.g., container type, storage condition, 
+preservative), and the shipping m anifest with batch shipm ents of 
+specim ens/samples. 
+2.2.6.9  System s supporting OM must be able to store lab oratory resu lt(s) and link the 
+result(s) to the original laboratory te st request.  More inform ation about 
+receiving and linking laboratory te st requests is found in section 2.5 System  
+Integration and Data Exchange  of this docum ent. 
+2.2.6.10  System s supporting OM must store d ata about laboratory results.  Exam ples of 
+this da ta include the Spec imen ID, Subject ID, test date and tim e, test type 
+(LOINC), data for each organizatio n involved in the testing o f the 
+specim en/sample (e.g., testing or ref erence laboratory nam e, location, contact 
+inform ation), laboratory results and resu lt values (SNOMED) , other data such 
+as unit of measure for result value, ov erall interpretation, and any relevant 
+notes. 
+2.2.6.10.a  If the specim en/sam ple collection r ecord ex ists, the laboratory result 
+must be link ed to the spe cimen collec tion r ecord b y the Specim en ID. 
+2.2.6.10.b  If the specim en/sam ple collection r ecord does not exist, the laboratory 
+result m ust be linked to th e subject by the Subject ID. 
+2.2.6.10.c  All levels of gra nularity of results (e.g., spec imen/sam ple level, assay 
+level) m ust be supported. 
+ 
+Revisio n Date: 4/28/2005  Page 10  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.2.7 Prophy laxis and Treatment Data 
+2.2.7.1  System s supporting OM should capture or  be linked to data regarding the 
+prophylaxis or treatm ent to cases, expose d individuals, or at risk persons, 
+including the person who or dered the prophylaxis or treatm ent, and the nam e, 
+date, type, duration, and dosage of th e treatm ent or prophylaxis given. F or 
+specific data requirem ents regarding th e adm inistration of prophylaxis and 
+treatm ent, please referen ce PHIN Preparedness Countermeasure/Response 
+Administration Functional Requirem ents and Process Flows , available at 
+www.cdc.go v/phin .  
+2.2.7.2  Contraindication information should  be collected  to indicate why 
+vaccinations , treatm ents, or antidotes  may not have been administered o r why 
+the patient m ay not have com plied w ith prescribed interventions.   
+2.2.8 Adverse Event Data 
+2.2.8.1  If an affected person suffers a negativ e reaction to a vaccin e or prophylaxis 
+that was ad ministered, adverse event data m ay be collected and used to 
+determ ine th e need f or addition al interventions o r to de termine if  there is  a 
+problem  with the pharm aceutical, b atch, or the adm inistering  facility or 
+person. For specific data requirem ents re garding adverse event data, please 
+reference PHIN Preparedness Countermeasure/Response Administration 
+Functional Requirements and Process Flows , availab le at www.cdc.gov/phin . 
+2.2.9 Activity  Logging Data 
+2.2.9.1  System s supporting OM should capture info rmation such as the date and tim e 
+of an activity, activ ity ty pe, who initiated th e activit y, and contact information 
+to generate activity logs for m anage ment purposes.    
+2.2.9.2  Activity log s, which are tools f or investigators to track their actions during a 
+case, should be supported.   For example,  investigators m ay log calls m ade to 
+monitor symptom s or calls m ade to schedule follow-up visits.  
+2.2.9.3  Activity logs m ay also provide inform ation needed to support comm unication 
+with var ious jurisd ictions in the ev ent that the inv estigation cr osses 
+jurisd ictional boundaries .  For exam ple, if a perso n becom es ill during trav el 
+in one jurisdiction but is th e resident of another, th e illness will be reported by 
+the state (jur isdic tion) of residen ce, rather than by the jurisdiction visited. 
+2.3 SYST EM FUNCTIONS AND BE HAVIORS 
+2.3.1 Case Investigation 
+2.3.1.1  Electronic q uestionn aires must be developed and valida ted.  T hey will be 
+designed by investigators to collect comm on data elem ents (e.g., patient 
+demographics, test results, exposure cont acts), agent-specific data elem ents 
+(e.g., specific laboratory test), and other custom ized data elem ents. 
+2.3.1.1.a  Electronic questionn aires should  provide the capab ility to accep t 
+digital signatures. 
+Revisio n Date: 4/28/2005  Page 11  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.3.1.2  System s supporting OM must  provid e the ab ility to control the configuration 
+of and revisions to investig ation-specific questionnaires. 
+2.3.1.3  System s supporting OM must provid e the ab ility to publish  investig ation -
+specific questionnaires and im plementation guides. 
+2.3.1.4  Case investigation should be supported by reusable questionnai re libraries that 
+use comm on term inology (where available)  to maxim ize the efficiency of data 
+exchange. 
+2.3.1.5  System s supporting OM should provide a m anual or autom atic m eans of 
+updating the status of case records as the case definition changes.  
+2.3.1.6  System s supporting OM should track the ch anges m ade to the status of case 
+records as a result of cha nges in the case definition. 
+2.3.2 Linking 
+Linkages allow investigators to create meanin gful analysis, characterize the event, and 
+identify at-risk populations.   
+2.3.2.1  System s supporting OM must support dynam ically defined associations 
+between entities for the purpose of de fining relationships.  For exam ple, 
+person-to-person (e.g., fam ily relations hip, exposure relationship), person-to-
+place (e.g., household, comm on place), anim al-to-person, ob ject-to-p lace, 
+person-to-travel.  
+2.3.2.2  Entity -to-epi data links must m atch th e entity to their sym ptoms, survey 
+questions, specim ens/samples collecte d, laboratory results, and prophylaxis 
+and tre atment data. 
+2.3.2.3  Each new ca se must be able to link a n assigned E ntity ID to a n Event ID 
+within the scope of  the investigation. 
+2.3.2.4  System s supporting OM re quire the ability to capture inform ation about 
+possible cases and potential contacts fr om the ide ntification p rocess throu gh 
+the treatm ent and follow -up proces s, as supported  by linkages am ong entities, 
+events, and actions.  
+2.3.2.5  Laboratory results m ust be linked to corresponding specim ens/sam ples 
+includ ing multip le results f rom one specim en/sample), and s ubjects when the 
+participa ting labora tory r eturns the r esults.  Thes e linkage s must 
+unam biguously associate m ultiple lab oratory resu lts to case an d contact 
+identifiers. 
+2.3.2.5.a  If the specim en/sam ple was created from  another specim en/sam ple 
+(e.g., aliquots, and new specim en type s created from  a source sam ple), 
+laboratory results for the child specim ens/sam ples m ust be linked to 
+the corresponding parent specim en/sam ple. 
+2.3.3 Contact Exposure Tracing 
+2.3.3.1  Each investigation subject m ay be associated with exposure contacts, 
+including unam biguous links to contac ts in other jurisdictions.     
+Revisio n Date: 4/28/2005  Page 12  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.3.3.2  Contacts of exposed entities (e.g., peopl e, anim als, places) may be traced,  
+investigated, and m onitored. 
+2.3.3.3  System s supporting OM should be able to create new contacts from  existing 
+case records, and should also  identify the contact type. 
+2.3.3.4  System s supporting OM must support c ontact exposure tracing by allowing 
+one contac t to be linked to m ultiple c ases, and a llowing m ultiple contacts to 
+be linked to a single case. 
+2.3.3.5  System s supporting OM should be able to  produce contact work lists for each 
+investigator to use, and should al low sorting by priority or geography. 
+2.4 ANAL YSIS , VISUALIZATION, AND REPORT GENERATION 
+2.4.1 System s supporting  OM should allo w for analytical searches based upo n multiple 
+criteria. 
+2.4.2 System s supporting OM should have the ability to produce charts, m aps, and graphs 
+that illustrate OM data, such as  epi-curves  and th e effect of vaccination o r 
+prophylaxis on the number of ne w cases (dem onstrating the effec tiveness in 
+contain ing the health ev ent) or m aps that illu strate the num ber of  cases by  zip code. 
+2.4.3 System s supporting O M should generate el ectronic data dictionaries for dynam ic 
+data (or o ther use r-defin ed da ta descriptions to assist with ef fectiv e data exchange), 
+line lists, activity logs, aggregate data, a nd call-back lists to assist th e em ergency 
+response group and investigators in res ponding to and containing a health event. 
+2.4.4 Reports generated by system s supporting OM should clearly indica te the num ber of 
+cases, the num ber of contacts per case, the number of cases with no known epi-link 
+at the tim e of diagnosis, the laboratory results, and the number of va ccinations 
+and/or treatm ents adm inistered. 
+2.4.5 System s supporting OM  should have the ab ility to produce pre-form atted queries  
+and reports to allow faster and m ore accurate reporting, while still allowing the 
+flexibility of  ad-hoc reporting. 
+2.4.6 System s supporting OM should have the ab ility to produce individual reports for 
+each em ergency team  member or investigator. 
+2.4.7 System s supporting OM should have the ab ility to compare characteristics of 
+exposed and non-exposed (i.e., controls) persons. 
+2.4.8 System s supporting OM should have the ab ility to produce lists of action item s 
+(e.g., to do lists). 
+2.4.9 System s supporting OM  must have the abi lity to print ques tionnaires for m ultiple 
+uses, including taking to the field, use during phone interview s, etc.  
+2.4.10  System s supporting OM m ust be able to ag gregate data.  E xamples of aggregated 
+data to be supported are: nu mber of cases, num ber of contacts per case, and num ber 
+of vaccinations and/or treatm ents adm inistered. 
+2.4.11  Health even t data shou ld be agg regated into a cen tralized data  store (i.e., da ta 
+warehouse) designed specifically to s upport analysis of events over tim e. 
+Revisio n Date: 4/28/2005  Page 13  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.4.12  Data should  be accessib le for use w ith comm only availab le analytical tools (e.g.,  
+SAS, SPSS, EPI-INFO, MS Access,  MS Excel, Crystal Rep orts). 
+2.5 SYST EM INTEGRATION AND DATA EX CHANGE 
+Systems integration req uirements specific to systems suppo rting OM are included in the 
+section belo w and describe the types  of data that OM should be able to s end and receive.   
+This section is limited to describing the ty pes of data exchange that OM must support; 
+not the requirements f or transporting the dat a. Bi-directional, secure exchange of data 
+with partner organizations supports public he alth investigations across all levels of 
+public health.  Message construction and parsing, and secure data transport 
+requirements that span  PHIN fun ctional ar eas are separately defined and should be 
+reviewed in “PHIN Preparedness Cross Functional Components Requirements” , 
+available at www.cdc.go v/phin . 
+2.5.1 Contact inform ation for key response partne r organizations should be stored in a 
+local instan ce of a public health d irectory for associating  to a health  event, as  
+described in section  2.2.2  Health even t Data  of this docum ent.  
+2.5.2 System s supporting O M must be able to accept data fro m other partner system s 
+supporting OM. 
+2.5.3 System s supporting OM m ust be able to  create and send m essages for laboratory 
+test reques ts. This req uirement is  identified as a key perform ance m easure for  
+assessing preparedness as described in PHIN Preparedness Key P erformance 
+Measures , avai lable at www.cdc.gov/phin . 
+2.5.4 System s supporting OM should be able to receive, parse and process m essages for 
+laboratory test request responses, in  accordance with PHIN Laboratory Test Order 
+Response Message Implementation Guide , available at www.cdc.gov/phin . 
+2.5.5 System s supporting OM m ust be able to receiv e, parse and  process m essages for 
+laboratory results. This requirem ent is id entified  as a key  perform ance m easure for  
+assessing preparedness as described in PHIN Preparedness Key P erformance 
+Measures , avai lable at www.cdc.gov/phin . 
+2.5.5.1  Laboratory results should be linked to laboratory test requests, which 
+are linked to subjects.   
+2.5.6 System s supporting OM should be able to exchange m essages for laboratory results 
+with system s supporting surveillance, ear ly event detection (EED), and other 
+preparednes s areas. 
+2.5.7 System s supporting O M must be able to  exchange messages for confirm ed, 
+probable and suspect cases, and the other case  class ificatio ns that are noted in th e 
+PHIN m essage im plementation guide, with system s suppor ting surveillance, early 
+event detection (EED), and other preparedne ss areas.  This re quirem ent is identif ied 
+as a k ey perform ance m easure for asse ssing preparedness as described in PHIN  
+Preparedness Key Performance Measures , availab le at www.c dc.gov/phin . 
+Revisio n Date: 4/28/2005  Page 14  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.5.8 System s supporting OM m ust exchange messages for investigations and for 
+exposure contacts.  This requirem ent is identified as a key perfor mance measure for 
+assessing preparedness as described in PHIN Preparedness Key P erformance 
+Measures , avai lable at www.cdc.gov/phin . 
+2.5.9 System s supporting OM m ust be able to receiv e, parse and  process m essages for 
+counterm easures that have been adm inister ed.  This requirem ent is identified as a 
+key perform ance m easure for assessi ng preparedness as described in PHIN 
+Preparedness Key Performance Measures , availab le at www.c dc.gov/phin . 
+2.5.9.1  Counterm easures that have been ad ministered m ust be linked to the 
+entity that was adm inistered the coun termeasures.  
+2.5.10  System s supporting O M must be able  to create and send m essages for 
+counterm easure adm inistration requests.  Th is requirem ent is identified as a key 
+perform ance m easure for assessi ng preparedness as described in PHIN 
+Preparedness Key Performance Measures , availab le at www.c dc.gov/phin . 
+2.5.11  System s supporting OM m ust be able to ex chan ge aggregated data.  Exam ples of 
+aggregated data to be supported are: num ber of cases, num ber of contacts per case, 
+and num ber of vaccinations and/ or treatm ents adm inistered. 
+2.5.12  System s supporting OM should be able to pr ovide the aggregate data necessary for 
+health event m onitoring to system s that  support response tr acking, such as the 
+number of s uspect cases, num ber of pers ons under isolation or quarantine, and the 
+number of patien ts receiving counterm easures. 
+2.5.13  Mapping interfaces and data diction aries m ust be clearly defined and included in 
+data exchan ges to indicate and d escrib e both standard and customized fields 
+because system s supporting OM are configur able to m eet the individual needs of 
+each even t and therefore collect data specific to each event. 
+2.5.14  Message components should be grouped by observation type (e.g., laboratory, 
+symptom, exposure, risk, trea tment) by system s supporting OM. 
+2.5.15  System s supporting  OM should supp ort m ultiple  file form ats for im port and export,  
+such as databases, spreadsheets, m essages, and text files, am ong others. 
+2.5.16  Data exchange should support analysis and inform ation sharing of possible health 
+events at all levels of public he alth (e.g., national, state, local). 
+2.6 VOCABUL ARY STANDARDS 
+It is recommended that stan dards be used across systems supporting OM; however, it is 
+required th at vocabulary standards be used when exchanging data.  Vocabulary 
+requirements that spa n PHIN f unctiona l areas shou ld be rev iewed in “ PHIN 
+Preparedness Cross Functional Compon ents Requirements”, available at  
+www.cdc.go v/phin . 
+Revisio n Date: 4/28/2005  Page 15  of 16 
+OM_RSv1.0 FINAL.doc 
+Outb reak Management Functio nal Req uirements  Versio n: 1.0 
+2.7 OPERATI ONS  
+Operational requiremen ts, such as system bac kup policies and proced ures, continuity o f 
+operations, system monitoring, and employee trai ning ensure that public health partners 
+can effectively support ac tivities in OM  and  other PHIN  functional areas.  Operational 
+requirements specific to OM are defined belo w.  Operational requir ements that span 
+PHIN functional areas are separately defi ned and should be reviewed in “PHIN 
+Preparedness Cross Functional Componen ts Requirements”, available at  
+www.cdc.go v/phin . 
+2.7.1 Policies and  procedures for communicating in form ation to appropriate stakeholders 
+(e.g., state and federal em ergency m anagement organizations, FEMA, hazm at 
+team s, public works facilities, in telligen ce organ izations, the m edia, and the public) 
+should be clearly defined. 
+2.7.2 Polices reg arding d ata synchronization s hould be defined to suppo rt m ultiple 
+deploym ent options as discussed in section 2.1 System Architecture  of this  
+docum ent. 
+2.7.3 Configuration m anage ment protocols and pe rsonnel should be identified to support 
+multiple d eployment options. 
+2.7.3.1  Protocols and personnel should be id entified to support the set-up and 
+configuration of laptops and ot her field devices used in OM 
+investigations. 
+2.7.3.2  Processes and personnel should be id entified to suppor t agent-specific 
+deploym ent packages, including syndrom ic grouping libraries and 
+vocabula ry sub-sets, which will be u sed to ef ficiently co llect data 
+specific to the particular hea lth event being investigated.  
+2.7.4 Policies and procedures should be in pl ace for determ ining when follow up and 
+isolation and quaran tine m onitoring should be done  as a part of a focused 
+counterm easure adm inistration and response effort, rather than as a function of 
+contact exposure tracing. 
+2.8 SYST EM SECURITY AND AVAI LABILITY 
+Systems and data supporting OM must be protected from sabotage, corruption and 
+unauthorized access, an d must be a vailab le sub sequent to a  catastrophic event.  Se curity  
+and Availability requirements that span PH IN functional areas should be review ed in 
+“PHIN Preparedness Cross Functional C omponents Requirements”, available at 
+www.cdc.go v/phin . 
+2.9 PRIVACY 
+Privacy req uirements ensure that sensitive in formation is n ot access ibly to unauthorized  
+uses. Privacy requirements are broadly defi ned because th ey span all PHIN functional 
+areas. These requirements should be revi ewed in “PHIN Preparedness Cross Functional  
+Components Requirements”, available at www.cdc.gov/phin . 
+Revisio n Date: 4/28/2005  Page 16  of 16 
+OM_RSv1.0 FINAL.doc 

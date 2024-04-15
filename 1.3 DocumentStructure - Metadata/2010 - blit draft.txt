@@ -1,0 +1,21 @@
+D	Functional Requirements Specification BLIT102  - Laboratory Information System (LIS)
+2	Specific Requirements
+2.1	Functionality
+2.1.1	Module: Admin
+2.2	Usability
+2.2.1	User Interface Guidelines
+2.3	Reliability
+2.3.1	System Downtime
+2.4	Performance
+2.4.1	Quality Assurance
+2.5	Supportability
+2.5.1	Coding Standards
+2.5.2	Maintainability Standards
+2.6	Design Constraints
+2.6.1	Development Platform 
+2.6.2	Production Releases
+2.6.3	Development Process
+2.7	Online User Documentation and Help System Requirements
+2.7.1	Robohelp Tool
+2.9	Applicable Standards
+2.9.1	HIPAA Compliance

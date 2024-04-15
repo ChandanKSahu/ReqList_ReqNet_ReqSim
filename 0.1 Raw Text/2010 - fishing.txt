@@ -1,0 +1,1833 @@
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional 
+Requirements Specification 
+including 
+Product Profile & Self Declaration Form   
+ Version 1.2 
+15th  April 2010 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 2 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Notices 
+ 
+CONFIDENTIAL MATERIALS  
+This document contains highly confidential and prop rietary information. 
+DOCUMENT SUBJECT TO CHANGE  
+This document template and the technical informatio n it contains is subject to change by the UK Fisher ies Administration 
+at any time. 
+NO WARRANTY OR LICENSE  
+ALL INFORMATION IN THIS DOCUMENT IS PROVIDED “AS IS ”, WITHOUT ANY EXPRESS OR IMPLIED 
+WARRANTY, INCLUDING BUT NOT LIMITED TO A WARRANTY T HAT IT IS ACCURATE OR COMPLETE, 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE O R A WARRANTY AGAINST 
+INFRINGEMENT. THIS DOCUMENT GRANTS NO RIGHT OR OTHE R LICENSE, WHETHER EXPRESSLY OR 
+BY IMPLICATION. 
+ 
+Author(s): 
+John Paterson mailto:  John.Paterson3@scotland.gsi.gov.uk  
+Revision History 
+Revision  Date Comments 
+1.0 2010-01-08 ISSUED  
+1.1 2010-02-11 UPDATED TO REFLECT CHANGES TO THE XS D 
+1.2 2010-04-15 UPDATED TO CORRECT CHANGES TO TEXT 
+DESCRIPTIONS 
+ 
+ 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 3 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Table of Contents 
+1 Introduction ...................................... ................................................... ................................................... ................................................... .......... 4  
+1.1 Purpose of this document ...................... ................................................... ................................................... ......................................... 4 
+1.2 Scope ......................................... ................................................... ................................................... ................................................... .. 4 
+2 UK Fishing Vessel’s Electronic Logbook Functional R equirements Specification ......................... ................................................... ............ 5  
+2.1 Introduction .................................. ................................................... ................................................... .................................................. 5 
+2.2 Functional Requirements Specification ......... ................................................... ................................................... ................................. 5 
+2.2.1 General Requirements ........................ ................................................... ................................................... ....................... 5 
+2.3 Data Capture Functions ........................ ................................................... ................................................... .......................................... 5 
+2.3.1 Data Operations ............................. ................................................... ................................................... ............................ 5 
+2.3.2 Report Types ................................ ................................................... ................................................... ............................. 7 
+2.3.3 Data Definitions ............................ ................................................... ................................................... ............................ 9 
+2.4 Capture Functions.............................. ................................................... ................................................... ............................................. 9 
+2.4.1 Printing Features ........................... ................................................... ................................................... ............................. 9 
+2.5 Data Transmission ............................. ................................................... ................................................... ............................................. 9 
+2.5.1 Frequency of Transmission ................... ................................................... ................................................... ................... 10 
+2.5.2 Data Corrections ............................ ................................................... ................................................... .......................... 10 
+2.5.3 Data Deletions .............................. ................................................... ................................................... ........................... 10 
+2.5.4 Acknowledgement ............................. ................................................... ................................................... ...................... 10 
+2.5.5 Test Transmissions .......................... ................................................... ................................................... ........................ 10 
+2.6 Specific High Level Requirements .............. ................................................... ................................................... ................................. 10 
+3 Product Identification ............................ ................................................... ................................................... ................................................... .. 12  
+3.1 Product Identification ........................ ................................................... ................................................... ........................................... 12 
+3.2 Identification of Supplier .................... ................................................... ................................................... .......................................... 12 
+3.3 Identification of Electronic Logbook Software S pecification ...................................... ................................................... .................... 12 
+4 Product Profile ................................... ................................................... ................................................... ................................................... ...... 13  
+4.1 Instructions for completing the Product Profile  .................................................. ................................................... ............................. 13 
+4.2 Product Profile definitions and conventions ... ................................................... ................................................... .............................. 13 
+4.3 ELSS Data Capture and Data Operations ......... ................................................... ................................................... ............................ 14 
+4.4 Electronic Logbook Software Specification Suppo rted Features ..................................... ................................................... ................ 19 
+4.4.1 Electronic Logbook Data Definition .......... ................................................... ................................................... .............. 19 
+4.4.2 ERS Message Declaration (ERS) ............... ................................................... ................................................... .............. 19 
+4.4.3 Electronic Logbook - LOG Declaration (LOG) .. ................................................... ................................................... ..... 20 
+4.4.4 Electronic Logbook Sub-Declarations Format .. ................................................... ................................................... ....... 35 
+4.4.5 ELSS XML Schemas ............................ ................................................... ................................................... ................... 41 
+4.4.6 ELSS Capture Functions....................... ................................................... ................................................... ................... 42 
+4.4.7 ELSS Data Transmission Features ............. ................................................... ................................................... .............. 43 
+4.4.8 ELSS System Features ........................ ................................................... ................................................... ..................... 45 
+5 Product Commercial Description..................... ................................................... ................................................... .......................................... 46  
+6 Statement of Conformance .......................... ................................................... ................................................... ............................................... 47  
+7 References ........................................ ................................................... ................................................... ................................................... ......... 48  
+7.1 Normative References .......................... ................................................... ................................................... ........................................ 48 
+7.2 Definitions ................................... ................................................... ................................................... ................................................. 4 8 
+7.3 Abbreviations ................................. ................................................... ................................................... .............................................. 48 
+8 Document Changes .................................. ................................................... ................................................... ...................................................  49  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 4 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  1 Introduction 
+1.1  Purpose of this document 
+This document contains the Functional Requirements Specification for UK Fishing vessel’s Electronic Lo gbook. It also 
+includes the Product Profile & Self Declaration For m to provide a format for documenting the features of the UK Fishing 
+Vessel’s Electronic Logbook supported by a product being submitted for the Electronic Logbook Software  System 
+(ELSS) Approval Programme [ hereafter:  ELSS Approval Programme].  
+The purpose of this document is to specify the Func tional Requirements Specification for UK Fishing ve ssel’s Electronic 
+Logbook and enable a supplier to identify the parts  of the UK Fishing Vessel’s Electronic Logbook Func tional 
+Requirements Specification supported by their produ ct so that these features are validated within the ELSS Approval 
+Programme.  
+To evaluate the conformance of a particular product  to the UK Fishing Boats Electronic Logbook Softwar e Specification, 
+it is necessary to have a statement of which capabi lities and options have been implemented for the EL SS product.  
+This document is split into the following sections:  
+/square4 UK  Fishing Vessels Electronic Logbook Functional Requi rements Specification  – The Functional Requirements 
+Specification for a UK fishing vessel’s Electronic Logbook.  
+/square4 Product Identification  – This section captures the version details of the  ELSS product being submitted for 
+approval.   
+/square4 Product Profile  – The product profile is a questionnaire which mus t be completed by an ELSS supplier to list the 
+mandatory, optional and conditional features suppor ted in their product. 
+/square4 Product Feature Description  – This section allows a ELSS product supplier to p rovide a commercial description of 
+their ELSS Approved product which will appear on th e Approved Product Register 
+/square4 Self Declaration Form  – A Self-Declaration from the product supplier tha t they have implemented their product in 
+accordance to the information contained within this  document.  
+ 
+1.2  Scope  
+This document provides the UK Fishing Vessel’s Elec tronic Logbook Functional Requirements Specificatio n, published 
+by the UK Fisheries Department for the Electronic L ogbook Software System (ELSS) Approval Programme.  
+ 
+ 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 5 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  2 UK Fishing Vessel’s Electronic Logbook Functional R equirements 
+Specification  
+2.1  Introduction 
+Council Regulation (EC) No. 1966/2006 introduces a requirement for EC fishing vessels exceeding 15 met res in overall 
+length (some 780 UK fishing vessels fall into this category) to use electronic logbooks rather than re cord and submit 
+fishing activity on paper logbooks as is currently required.  This will be done in two stages with the  initial stage applying 
+only to fishing vessels exceeding 24 metres in over all length by 1 January 2010 (some 280 UK vessels) and the second 
+stage for those vessels exceeding 15 metres in over all length (a further 500 UK vessels) by 1 July 201 1 (applies from 1 
+January 2011 if fishing within waters of a 3 rd  Country – Council Regulation (EC) No. 1006/2008). 
+ 
+Commission Regulation (EC) No. 1077/2008 defines th e detailed rules to be implemented by Member States : 
+ 
+Article 4 refers to the reports required from fishi ng vessels.  The annex to this functional specifica tion provides 
+the data definitions that are required from UK fish ing vessels’ onboard electronic logbook software sy stems in 
+order to fulfil the regulatory requirements to repo rt to the UK fisheries administrations.  All electr onic reports 
+from UK fishing vessels are required to be transmit ted to the Electronic Recording and Reporting Syste m (ERS) 
+of the UK fisheries administrations as appropriate in order to comply with the applicable fishing regu lations. 
+ 
+This specification is intended to assist UK fishing  vessel masters, owners and their representatives i n ensuring that the 
+Electronic Logbook Software System (ELSS) used on b oard their vessels records and provides the require d logbook 
+information for transmission in accordance with the  reporting requirements set out in Council Regulati on (EC) No. 
+1966/2006 and Commission Regulation (EC) No. 1077/2 008. 
+ 
+2.2  Functional Requirements Specification 
+2.2.1  General Requirements 
+The ELSS must  capture all data necessary for recording the fishi ng activities undertaken by a UK fishing vessel. 
+The ELSS must  output the data as an XML file for transmission to  the UK fisheries administrations’ ERS system. 
+The ELSS data must  be validated against the UK XML/XSD before transmi ssion from the fishing vessel. 
+The ELSS data must  be transmitted at the required times set out below  in Section 2.5.1. 
+Each ELSS data transmission will be acknowledged by  a return message from the UK fisheries administrat ions’ ERS 
+system. 
+2.3  Data Capture Functions 
+2.3.1  Data Operations 
+There are four main Data Operations required to be processed by the ELSS.  These Operation Types are: 
+• Data operation to capture and deliver formatted ELS S data for transmission by a vessel’s communication s system(s) 
+to the UK fisheries administrations’ ERS system (DA T) 
+• Delete operation to capture and deliver a formatted  deletion request for transmission by a vessel’s co mmunications 
+system(s) to the UK fisheries administrations’ ERS system to delete previously send data (DEL) 
+• Correction operation to capture and deliver a forma tted correction request for transmission by a vesse l’s 
+communications system(s) to the UK fisheries admini strations’ ERS system to correct previously send da ta (COR) 
+• Receipt of acknowledgment operation  to  match ackn owledgement with original message and provide a 
+record/report of acknowledged and un-acknowledged t ransmissions  
+See below for detail on header data for transmissio ns from each operation 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 6 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  
+ 
+Figure 1: Data Operation Types 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 7 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  2.3.2  Report Types 
+The ELSS Report Types to be transmitted from a vess el are: 
+• Departure (DEP) 
+• Fishing Activity (FAR) 
+• Relocation of Catch (RLC) 
+• Transhipment (TRA) 
+• Entry into Zone (COE) 
+• Exit from Zone (COX) 
+• Control Point Area (GBRCON) 
+• Discard (DIS) 
+• Prior Notification of Arrival to Port (PNO) 
+• End of Fishing (EOF) 
+• Return to Port (RTP) 
+• Landing Declaration (LAN) 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 8 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  
+ 
+Figure 2: Report Types  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 9 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  2.3.3  Data Definitions 
+The data definitions for each report type that are required to be transmitted from the ELSS of a UK fi shing vessel are to 
+be found in the annex to this specification.  The d ata definitions and associated lists of valid codes  are incorporated in the 
+UK XML/XSD definitions.  These are available to all  ELSS suppliers from the UK FMC. 
+The data definitions also provide for the capture o f data items required for the submission of ELSS da ta to meet 3 rd  
+country requirements, e.g. Norway’s requirements th at include haul by haul reporting. 
+The ELSS may  also provide the means for recording additional da ta but this must not  interfere with the data capture and 
+submission functions as set out below. 
+2.4  Capture Functions 
+The ELSS must  provide data capture screens for the entry of the logbook, transhipment and landing declaration data that 
+is required to be transmitted to the UK fisheries a dministrations’ ERS system. 
+The ELSS must use English (UK) localizations for al l UK Electronic Logbook features. 
+All dates and times must be UTC. 
+The Electronic Logbook data may be populated from o ther, existing, onboard electronic systems, e.g. a GPS for inserting 
+the date, time and location of transmission, or for  inserting the same items at the time of capture, o nboard weighing 
+systems, existing onboard database(s) to avoid dupl ication of data entry. 
+2.4.1  Printing Features 
+The ELSS must  provide the ability to print out  the ELSS logbook  data (including landing declarations) using an onb oard 
+printer. 
+Additionally a formatted electronic print file may  be generated out of the ELSS.  This print file can  be made available to 
+a master’s representative on-shore, e.g. by email o ver the onboard communications system(s).  The ELSS  must  provide a 
+means so that electronic print files are protected so that they cannot  be modified in any way once generated and 
+distributed. 
+The ELSS may provide features to facilitate other p rint requirements including: 
+• Generation of hard copies of the Electronic Logbook  required when fishing in 3 rd  country or Regional Fisheries 
+waters, e.g. NAFO, Faroese and Norwegian waters. 
+• Generation of a hard copy logsheet or landing decla ration to act as a transport or takeover document. 
+• Generation of a hard copy for providing regulatory returns for Cod and Hake effort reporting. 
+2.5  Data Transmission 
+The ELSS must  provide Electronic Logbook data for transmission t o the UK fisheries administrations’ ERS system in 
+accordance with the frequency requirements defined below (Section 5.1). 
+The ELSS should  at least be able to transmit data via email, eithe r by being included in a packaged solution with an email 
+system or by linking with an existing on-board emai l service. Data is required to be emailed as  an xm l document 
+attached to an email with a standard Subject header   and sent to the email address of the UK fisheries  administrations’ 
+ERS system. 
+The subject header must  consist of  a character string containing ‘ERS – ‘  prefixed to the contents of the GBRRN 
+attribute of the Electronic Logbook data being tran smitted.  The GBRRN attribute is defined in the UK XML/XSD.  The 
+GBRRN attribute is defined uniquely as the vessels’  RSS Number appended to the current date (in YYYYMM DD 
+format) and a 6 digit sequence number, e.g. RSSNumb er+YYYYMMDD+999999.  An example of the contents of an 
+email subject could be ERS – A1234520090623000001. 
+The xml document file name should be based upon the  GBRRN attribute defined in the UK XML/XSD.  An exa mple of 
+this format could be A1234520090623000001.  The RSS  Number will require to be padded with trailing X’s  to ensure 
+that it is always 6 characters in length. 
+Each file should have the suffix of .xml, e.g. A123 4520090623000001.xml. 
+All xml documents attached to emails to the UK fish eries administrations’ ERS system must  be encrypted using PGP.  
+It is recognised that communications methods, other  than email, are available for data transmission. I f an alternative is 
+proposed, this should be advised to the Validation Authority and if feasible and practicable the UK Fi sheries 
+Administrations will endeavour to extend their  ERS  system to accommodate alternative methods. 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 10 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  2.5.1  Frequency of Transmission 
+The ELSS must  permit the Master of the vessel to generate format ted data for transmission to the UK fisheries 
+administrations’ ERS system.  There are 2 categorie s of transmission, those that must  be generated automatically by the 
+ELSS and those that can be generated and transmitte d under the control of the Master of the vessel.  T he data 
+transmission categories are specified below: 
+• Automatically by the ELSS (subject to be overridden  by the vessel master) 
+o at least on a daily basis not later than 24:00 even  when there is no catch data with the proviso that if the vessel is 
+in port, has no fish on board and has submitted a l anding declaration, transmission may be suspended s ubject to 
+prior notification to the Fisheries Monitoring Cent re of the flag Member State.  Transmission must  be resumed 
+when the vessel leaves port 
+o immediately after the last fishing operation has be en completed 
+o immediately on departing port 
+o immediately after a transhipment 
+immediately on completion of the Landing declaratio n 
+• Generation and transmission under the control of th e Master of the vessel 
+o before entering into port 
+o at the time of inspection at sea 
+o at the request of the UK fisheries administrations 
+2.5.2  Data Corrections 
+The ELSS must  provide facilities to capture and deliver for tran smission corrections to previously successfully 
+transmitted data.  Data corrections must  not be transmitted piecemeal; the entire report co ntaining one or more corrected 
+items must be transmitted.  There is no requirement  to identify the data items that have been correcte d in the generated 
+corrected report. .  .   
+All corrections must  be easily identifiable within the ELSS user interf ace. 
+The ELSS must  only permit correction messages to be generated an d sent for reports sent during a current trip up to  the 
+submission of the End of Fishing report for that vo yage  
+2.5.3  Data Deletions 
+The ELSS must  provide facilities to transmit deletions to previo usly transmitted data.   
+The ELSS must  only permit deletion messages to be generated and sent for reports sent during a current trip up to t he 
+End of Fishing report for that voyage. 
+All deletions must  be easily identifiable within the ELSS user interf ace. 
+2.5.4  Acknowledgement 
+The ELSS must  be able to receive acknowledgement (RET) messages transmitted from the UK fisheries administrations’ 
+ERS system.  The ELSS must  match each acknowledgement message with the approp riate transmitted data operation, 
+deletion or correction report.  The ELSS must  be able to confirm that a transmission has been su ccessfully acknowledged 
+or display any error message should the ELSS receiv e a negative acknowledgement message. 
+2.5.5  Test Transmissions 
+Prior to registering a product for approval, a test  address for all test email transmissions and test logon details to the UK 
+fisheries administrations’ ERS system will be provi ded on request.  All requests should be made by con tacting the 
+Validation Authority by email in the first instance .  The email address is ERS-Logbook-Approvals@NCCGr oup.com. 
+Once operational the UK XML/XSD allows for a test m essage to be sent to the UK fisheries administratio ns’ ERS 
+system.  This test facility must  be used to send test transmissions to establish th at the communications between the vessel 
+and the UK fisheries administrations’ ERS system ar e fully operational.  The UK fisheries administrati ons’ ERS system 
+will acknowledge any test messages but will not sto re any data that has been transmitted.  
+2.6  Specific High Level Requirements 
+Some high level requirements are required of the EL SS.  These requirements are listed below; 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 11 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  • ELSS must  retain all logbook reports and any corrections on the system at least until the end of each trip, i.e . on 
+submission  of the electronic landing declaration o r of a transhipment report. 
+• Any ELSS software updates must not  impact upon the ELSS’s ability to meet the require ments set out in this 
+document  and other test documentation . If it does  then the product must be submitted for re-approval , and can not 
+be deployed by fishing vessels until this is grante d and the new version id is published on the UKFA w eb site lists 
+• ELSS security and access controls such that  
+o one username/password must  be provided for the owner of each vessel 
+o the owner is then able to set up subsidiary users s uch as the master of the vessel with their own 
+username and password.   
+o the username is required to be recorded in each rep ort completed and in each transmission made; the 
+person who has entered the data is required to “sig n” the Electronic Logbook data stating that they ar e 
+aware of the responsibilities/liabilities they are committing to in completing and / or transmitting  a 
+report. 
+o Each copy of the ELSS installed must be provided wi th a unique (internal?) number that is 
+automatically entered into each transmission to ide ntify the instance of the ELSS from which the repor t 
+has been transmitted.  
+• ELSS must  only be supplied for use at sea and loaded onto an  onboard system and is not to be provided for onsho re 
+use by agents or representatives.  .  Onshore entry  is to be made through the ERS website or by use of  the offline 
+submission methods to be promulgated by the UK fish eries administrations, e.g. an emailed spreadsheet CSV 
+formatted file.  To this end the UK administrations  will provide the Owner with the means for his agen t(s) to logon 
+to the ERS website to view the vessel trip record t o date and the logbook numbers used, to aid their c ompletion of 
+the reports they wish to submit from their offices.  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 12 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  3 Product Identification 
+This section is to be completed by the ELSS product  supplier . 
+Please complete the tables below with information a bout your company and the ELSS product being submit ted for 
+consideration for ELSS Approval Programme. Fields m arked with in grey are mandatory.  
+Fields marked in red boldface  and with an asterisk ( *) are those that will be displayed publicly on the UK Fisheries 
+Department web page when the product is approved. 
+3.1  Product Identification 
+ 
+Question Response 
+Commercial Product Name * <e.g. Widget >  
+Commercial Product Model Number * 
+(if different from product name) <e.g. Widget A123>  
+Software Version Identifier <e.g. v1.2.3a> 
+Definition of supplier’s versioning 
+methodology <Describe/illustrate how supplier indicates major a nd minor version 
+changes via their version numbers, and to define wh at types of changes 
+the vendor includes in major and minor version chan ges> 
+ 
+ 
+Operating System Versions <e.g. Window XP SP3, Windows Vista SP2, Linux Redha t  etc> 
+Hardware Identifier  
+Special configuration  
+ 
+Other information  
+ 
+3.2  Identification of Supplier 
+ 
+Question Response 
+Organization / Company Name * <e.g. Acme Ltd>  
+Contact Name(s):  <e.g. John Doe>   
+Telephone Number: <e.g. +44700 465 789>  
+E-mail address: <e.g. John.Doe@acme.com>  
+Contact Address:  
+ 
+ 
+ 
+Other information:  
+3.3  Identification of Electronic Logbook Software Speci fication 
+ 
+Question Response 
+Title, reference number and date of publication of the 
+UK Fishing Boats Electronic Logbook Software 
+Specification < UK Fishing Vessel’s Electronic Logbook Functional 
+Requirements Specification - Version 1.4 > 
+Addenda/amendments/corrigenda/errata 
+implemented <Corrigenda Reference>  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 13 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4 Product Profile  
+4.1  Instructions for completing the Product Profile 
+To evaluate the conformance of a particular Electro nic Logbook Software System (ELSS) product to the U K Fishing 
+Vessel’s Electronic Logbook Functional Requirements  Specification, it is necessary to have a statement  of which 
+capabilities and options have been implemented.  Th is statement will be referred to as the ELSS Produc t Profile.  
+This section defines the ELSS Product Profile for t he UK Fishing Vessel’s Electronic Logbook Functiona l Requirements 
+Specification for the ELSS Approval Programme. 
+This section is in the form of a questionnaire to b e completed by a supplier for their ELSS product.  
+ 
+An item is provided for each optional capability an d for each major compulsory capability. Each item i ncludes an item 
+number, an item description, a status value specify ing the support requirement, and room for a support  answer to be 
+provided by the supplier. 
+ 
+The tables within this section are normative and ca n be used to express in compact form the supported capabilities for the 
+ELSS product of the UK Fishing Vessel’s Electronic Logbook Functional Requirements Specification. 
+ 
+4.2  Product Profile definitions and conventions 
+ 
+The next section lists the capabilities of the prod uct based on the UK Fishing Boats Electronic Logboo k Software 
+Specification.  
+ 
+This section contains the definitions and conventio ns used in the tables. 
+ 
+• Item : Conformance Requirement item reference definition . 
+• Ref No : Identifier reference defined within UK Fishing Bo ats Electronic Logbook Software Specification. 
+• Feature : Textual description of the Conformance Requiremen t. 
+• XML Syntax : XML type 
+• Code:   Reference Code. 
+• Description and Content:  This defines the syntax and semantics for item.  
+• Status : Each question specifies the status value applicab le to the capability: 
+ 
+Status  Symbol: Status  Description 
+(C) Compulsory  Compulsory if required by the Commu nity rules, international or bilateral 
+agreements 
+(CIF) Compulsory if When CIF does not apply then at tribute is optional 
+(O) Optional optional support 
+ 
+/square4 Support:  For each question in the ELSS Product Profile prof orma, a support answer should be in the form: 
+ 
+Support Symbols: 
+Yes Supported 
+No not supported 
+N/A no answer required 
+ 
+/square4 Notes:  This section allows the submitter of the ELSS Prod uct Profile proforma to provide additional 
+information in support of the submission. 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 14 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]   
+4.3  ELSS Data Capture and Data Operations 
+This section describes the UK Fisheries Operation M essages for ELSS Approval Programme.  A supplier mu st indicate the elements supported by their product  in the columns 
+marked in grey.   
+4.3.1.1  Data Operations (OPS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:OPS - Operations element element OPS This is the top level envelope of all o perations 
+sent to the WebService function setERS C   
+ers:OPS 02n Country of destination attribute AD The country of destination for this OP S message.  
+Must conform to the ISO alpha-3 country code. C    
+ers:OPS 03n Sending Country attribute FR The country sending this OPS message. Must 
+conform to the ISO alpha-3 country code. C   
+ers:OPS 04n Operation No attribute ON The Record Number of this ERS message.  Fixed 
+format defined by the pattern: "AAAYYYYMMDD999999" (AAA = Alphanumeric String, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) CIF not from 
+UK vessel 
+  
+ers:OPS 04a Operation No attribute GBR 
+ON unique ID (RSSNo+YYYYMMDD+999999) generated by sender.  Example ID A1234520090623000001.  RSSNo needs to be padded with trailing X's to ensure that it is 6 characters in length CIF from/to UK 
+vessel 
+  
+ers:OPS 05n Operation Date attribute OD The date of sending for this OPS messa ge. Fixed 
+format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:OPS 06n Operation Time attribute OT The time of sending for this OPS messag e. Fixed 
+format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:OPS 07a ELSS Software version number attribute GBRS 
+VN Version number of the software that transmits the LOG message C 
+  
+ers:OPS 07b ELSS Reference (serial) number attribute GBRS 
+RN Reference or serial number of the software that transmits the LOG message C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 15 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:OPS 07n Test flag attribute TS Set to "1" if this OPS message is to b e regarded 
+as a test message. O   
+ers:OPS 08n Pushing of Data to ERS element DAT Data operation to push logbook or sales no te 
+information to ERS CIF   
+ers:OPS 09n Return Acknowledgement of previous operation element RET Acknowledgment operation to reply to DAT, 
+DEL and COR operation CIF 
+  
+ers:OPS 010n Deletion of previously sent data element DEL Delete operation to ask ERS to delete pre viously 
+sent data CIF   
+ers:OPS 011n Correction to previously sent data element COR Correction operation to ask ERS to corre ct 
+previously sent data CIF   
+4.3.1.2  Pushing Data Message (DAT) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:DAT 014n Start of Data  Message element DAT Tag Indicating the start of the data mess age.  Data 
+operation to push logbook information to UK fisheries administrations. C 
+  
+ers:DAT 015n ERS  element ERS ERS element being pushed C    
+ 
+4.3.1.3  Deletion Message (DEL) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:DEL 016n Start of Deletion  Message element DEL Delete operation to ask UK fisheries administrations to delete previously sent data. C 
+  
+ers:DEL  017n  Record No.  attribute  RN  
+ The Record Number of the ERS message to be 
+deleted. Fixed format defined by the pattern: "AAAYYYYMMDD999999" (AAA = Alphanumeric String, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded 
+Numeric.)  CIF not from 
+UK vessel   
+ers:DEL 017a Record No. attribute GBRR 
+N The GB Record Number of the ERS message to be deleted. Fixed format defined by the pattern:  "RSSNoYYYYMMDD999999" (RSSNo = RSS Number, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) Example GBRRN: "A1234520090623000001" CIF from/to UK 
+vessel 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 16 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:DEL 018n Reason for Rejection attribute RE Reason for this operation. (Free text field.) O   
+ The following features are required for the ELSS pr oduct: 
+  
+Item Description  Status Support 
+Y|N|N/A Notes 
+Deletion-001 Product MUST only permit deletion messa ge to 
+be sent only during a current trip up to the End of  
+Fishing report for that voyage C   
+Deletion-002 Product MUST only permit deletion messa ges to 
+be sent only during a current trip up to the End of  
+Fishing report for that voyage.   C   
+Deletion-003 Product MUST provide a means to allow 
+deletions to be identifiable via the ELSS user interface  C 
+  
+4.3.1.4  Correction Message (COR) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:COR 019 Start of Correction  Message element COR Correction operation to ask UK fisheries administrations to correct previously sent data. C 
+  
+ers:COR 020n  Original Message Number attribute RN The  Record Number of the ERS message to be 
+corrected. Fixed format defined by the pattern: "AAAYYYYMMDD999999" (AAA = Alphanumeric String, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) CIF not from 
+UK vessel 
+  
+ers:COR 020a Original Message Number attribute GBRR 
+N The GB Record Number of the ERS message to be corrected. Fixed format defined by the pattern:  
+"RSSNoYYYYMMDD999999" (RSSNo = RSS Number, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) Example GBRRN: "A1234520090623000001" CIF from/to UK 
+vessel 
+  
+ers:COR 021n Reason for Correction attribute RE Reason for this operation. (Free text field.) O   
+ers:COR 022n ERS  element ERS Includes all relevant ERS data, i.e. th e whole 
+message C    
+   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 17 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  The following features are required for the ELSS pr oduct: 
+  
+Item Description  Status Support 
+Y|N|N/A Notes 
+Correction-001 Product MUST submit the whole Electro nic 
+Logbook report when sending a correction message i.e. the entire  report containing one or more corrected items is to be submitted for re-transmission and not piecemeal corrections C 
+  
+Correction-002 Product MUST only permit correction messages 
+to be sent only during a current trip up to the End  
+of Fishing report for that voyage.   C   
+Correction -003  Product MUST provide a means to allow 
+corrections to be identifiable via the ELSS user interface  C   
+ 
+4.3.1.5  Acknowledgement Message (RET) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:RET 023n Start of RET  Message element RET The message acknowledges the good or bad reception of the message identified by ON C 
+  
+ers:RET 024n Sent Message number attribute ON The R ecord Number of the ERS message being 
+referred to. Fixed format defined by the pattern: "AAAYYYYMMDD999999" (AAA = Alphanumeric String, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) CIF not from 
+UK vessel  
+  
+ers:RET 024a Sent Message number attribute GBR 
+ON The GB Record Number of the ERS message being referred to. Fixed format defined by the pattern:  "RSSNoYYYYMMDD999999" (RSSNo = RSS Number, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) Example GBRRN: "A1234520090623000001" CIF from/to UK 
+vessel 
+  
+ers:RET 025 Return status attribute RS 
+ Return status of the message. Status code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) C 
+  
+ers:RET 026 Reason for Rejection attribute RE Reaso n for this operation. (Free text field.)  O   
+ The following features are required for the ELSS pr oduct: 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 18 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]    
+Item Description  Status Support 
+Y|N|N/A Notes 
+Acknowledgement-001 Product MUST correlate each Ackno wledgment 
+message with the outgoing report and operation (DAT|DEL|COR).  C 
+  
+Acknowledgement-002 Product MUST provide a means of i ndicating that 
+the report as being successfully acknowledged and for displaying any error message or data provided in the acknowledgement. C 
+  
+Acknowledgement-003 Product MUST alert the Master if no 
+acknowledgement is received within  a time limit 
+as pre-set by the Master. C   
+   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 19 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4  Electronic Logbook Software Specification Supported  Features 
+This section of the ELSS Product Profile proforma i s a questionnaire in tabular form. In each item of these tables there is a status value which shall re flect the static conformance 
+requirements of the UK Fishing Vessel’s Electronic Logbook Functional Requirements Specification.  
+ 
+A supplier must indicate the elements supported by their product in the columns marked in grey. 
+4.4.1  Electronic Logbook Data Definition  
+This section describes the Data Definition for a UK  fishing vessels’ ELSS product. A supplier must ind icate the elements supported by their product in th e columns marked in grey.  
+4.4.2  ERS Message Declaration (ERS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:ERS 2 Start of Message element ERS Tag Indicating the start of the message  C    
+ers:ERS 5n Serial Number attribute RN The serial nu mber of this ERS message. 
+Fixed format defined by the pattern: "AAAYYYYMMDD999999" (AAA = Alphanumeric String, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) CIF not from 
+UK vessel 
+  
+ers:ERS 5a Serial Number attribute GBRRN The GB Reco rd Number of this ERS 
+message. Fixed format defined by the pattern:  "RSSNoYYYYMMDD999999" (RSSNo = RSS Number, YYYY = Year, MM = Month, DD = Date, 999999 = Zero-Padded Numeric.) Example GBRRN: "A1234520090623000001" CIF from/to UK 
+vessel 
+  
+ers:ERS 6 Message (record) date attribute RD The transmission date of the message. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:ERS 7 Message (record) time attribute RT The tr ansmission time of the message. 
+Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 20 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.3  Electronic Logbook - LOG Declaration (LOG) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:LOG 24 Start of log record element LOG Tag Indicating the start of the logbook 
+record C    
+ers:LOG 22a Logbook number attribute GBRLOGNO The unique logbook reference number  for 
+this specific voyage. Fixed format defined by the pattern: "RSSNoYYYY0000" (RSSNo = RSS Number, YYYY = Year, 0000 = Zero-Padded Numeric.) Example GBRLOGNO: A1234520100001.The first voyage of a calendar year will have '0001' as the last four digits of the GBRLOGNO. All logbook messages submitted for the same voyage will retain the same four digits. The second voyage of the calendar year will then use '0002' for the final four digits, the third voyage will use '0003' and so on. This sequence will always reset at the beginning of each new calendar year. C 
+  
+ers:LOG 22b Sequence within logbook number attribute GBRLOGSE 
+Q The unique voyage-specific sequence number for this logbook message. The first message of a given voyage should use the value '0001', the second message of the same voyage should use the value '0002' and so on. The sequence resets for each new voyage undertaken. C 
+  
+ers:LOG 25 Vessel's Community fleet register (CFR) number attribute IR The vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.) O 
+  
+ers:LOG 25a RSS Number (unique identifier for UK vessel) attribute GBRRSSNO The vessel's unique identity number as recorded by the UK Registrar of Seamen and Shipping. Fixed format defined by the pattern: "AAAAAA" ( AAAAAA = six character alphanumeric code.) C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 21 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:LOG 26 Vessel’s main identification attribute RC International radio call sign O   
+ers:LOG 27 Vessel’s external identification attribute XR Side (hull) registration number of the 
+vessel O   
+ers:LOG 28 Name of vessel attribute NA Name of the vessel O   
+ers:LOG 29 Name of the master attribute MA The name of the vessel's master. Any change of vessel master during a voyage must be notified in the next LOG message. C 
+  
+ers:LOG 30 Master address attribute MD The address of the vessel's master. Any change during a voyage must be notified 
+in the next LOG message.  C   
+ers:LOG 31 Country of registration attribute FS The flag state of the vessel's registration. Must conform to the ISO alpha-3 country code. C 
+  
+ers:LOG 31a Comments attribute GBRCOM Free form comments – a maximum of 500 characters O 
+  
+ 
+Please indicate your ELSS product’s support for the  following LogBook elements. A supplier must indica te the elements supported by their product in the c olumns 
+marked in grey . 
+ 
+Item Feature -  
+Element or attribute name Code Status Support  
+Y|N|N/A Notes 
+ Declarations     
+ers:DEP Departure Message DEP C    
+ers:FAR Fishing Activity Report declaration FAR C   
+ers:RLC Relocation declaration RLC C   
+ers:TRA Transhipment declaration TRA C   
+ers:COE Entry in Zone declaration COE C   
+ers:COX Exit from Zone declaration COX C   
+ers:GBRCON Control port area report declaration  GBRCON CIF Norway   
+ers:DIS Discard declaration DIS C   
+ers:PNO Prior Notification of Return declaration PNO C   
+ers:EOF End of Fishing declaration  EOF C   
+ers:RTP Return to Port declaration RTP C   
+ers:LAN Landing declaration  LAN C   
+ Sub-Declarations      
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 22 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Feature -  
+Element or attribute name Code Status Support  
+Y|N|N/A Notes 
+ers:POS Position sub-declaration POS C   
+ers:GEA Gear Deployment sub-declaration GEA C   
+ers:GES Gear Shot sub -declaration  GES C   
+ers:GER Gear Retrieved sub-declaration GER C   
+ers:GLS Gear Loss sub-declaration GLS C   
+ers:RAS Relevant Area sub-declaration  RAS C   
+ers:SPE Species sub-declaration SPE C   
+ers:PRO Processing sub-declaration PRO C   
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 23 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.3.1  Logbook Departure Declaration (DEP) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:DEP 34 Start of Departure Message element DEP Tag Indicating the start of the departur e 
+from port declaration C    
+ers:DEP 35 Date  attribute DA The departure date of the vessel. Fixed  
+format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:DEP 36 Time attribute TI The departure time of the vessel. Fixe d 
+format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:DEP 37 Port name attribute PO The port code of the port from which the vessel is departing. Fixed format defined by the pattern: "CCPPP" (CC = ISO alpha-2 country code, PPP = 3 letter port code.) Port code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:DEP 38 Anticipated activity attribute AA The anticipated activity of the vessel for the 
+departing voyage. Code list of defined anticipated activities to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:DEP 38a Anticipated Activity inside/outside a 
+fishing effort zone/area attribute GBRAAZO 
+NE Notice of vessel's intention to fish exclusively inside or outside zone. 'Y' indicates vessel WILL be fishing exclusively outside of the zone. 'N' indicates otherwise. CIF Fishing in a 
+zone/area 
+  
+ers:DEP 39n Gear on board element GEA 
+ (See details of sub-elements and attributes of GEA) CIF fishing 
+activity 
+intended   
+ers:DEP 40 Catch on board sub-declaration (list of species SPE sub-declarations) element SPE (see details of sub-elements and attrib utes 
+of SPE) CIF catch on 
+board vessel   
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 24 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.3.2  Fishing Activity Declaration (FAR) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:FAR 43 Start of fishing activity report declaration element FAR Tag indicating the start of a Fishing Activity Report. Every vessel is required to submit at least one FAR message per day before midnight and additionally in response to requests from the flag state where the fishing is being conducted. C 
+  
+ers:FAR 45 Inspection marker attribute IS 
+ Marker indictating that this FAR report was transmitted prior to inspection. Fixed format: "1" if true, "0" or not present otherwise. CIF inspection 
+occurred 
+  
+ers:FAR 46 Date  attribute DA 
+ The date of the fishing activity being reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:FAR 47 Time  attribute TI The time of the fishing activ ity being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) O 
+  
+ers:FAR 48  Relevant area sub -declaration  element  RAS  (See details of sub -elements and attributes 
+of RAS). CIF  no catch 
+onboard   
+ers:FAR 51 Gear sub-declaration  element GEA (See details of  sub-elements and attributes 
+of GEA) CIF any 
+undertaken   
+ers:FAR 53 Catch sub-declaration (list of species 
+SPE sub-declarations) element  SPE (See details of sub-elements and attributes 
+of SPE) CIF any fish 
+caught   
+  
+4.4.3.3  Relocation Declaration (RLC) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:RLC 56 Start of Relocation declaration  element RLC Tag  indicating the start of a Relocation 
+declaration. This is used when all or part of a catch is moved from a shared fishing gear to a vessel or from a vessel's hold or its fishing gear to a keep net, container or cage (outside the vessel) in which the live catch C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 25 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+is kept until landing. 
+ers:RLC 57 Date  attribute DA The date of the relocation bein g reported. 
+Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) CIF 
+  
+ers:RLC 58 Time  attribute TI The time of the relocation be ing reported. 
+Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) CIF 
+  
+ers:RLC 59 Receiving vessel CFR number attribute IR The rec eiving vessel's Community Fleet 
+Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.) CIF joint fishing 
+operation and 
+EU vessel 
+  
+ers:RLC 59a Receiving vessel external id attribute GBRRXR Ext ernal registration number of the 
+receiving vessel. CIF   
+ers:RLC 60 Receiving vessel radio call sign attribute TT In ternational radio call sign of the receiving 
+vessel CIF joint fishing 
+operation   
+ers:RLC 61 Flag state of receiving vessel  attribute TC Fla g state of the receiving vessel. Must 
+conform to the ISO alpha-3 country code. CIF joint fishing 
+operation   
+ers:RLC 62 Other Partner Vessel(s) CFR numbers attribute RF With format AAAXXXXXXXXX where A is an uppercase letter being the country of first registration within the EU and X being a letter or a number CIF joint fishing 
+operation and 
+partner is EU 
+vessel   
+ers:RLC 62a Other partner vessel(s) external id attribute GBR PXR External registration number of the partner 
+vessel. CIF   
+ers:RLC 63 Other Partner vessel(s) radio call 
+signs attribute TF International radio call sign of the p artner 
+vessel(s) CIF joint fishing 
+operation and 
+other partners   
+ers:RLC 64 Flag state(s) of other partner vessel(s) attribu te FC Flag state of the other partner vessel. Must 
+conform to the ISO alpha-3 country code. CIF joint fishing 
+operation and 
+other partners   
+ers:RLC 64a  Master’s name of partner vessel  attribute  GBRPMA  The name of the partner vessel's master.  CIF    
+ers:RLC 65 Relocated to attribute RT 
+  Three letter code for the relocation destination. (eg: Keep net = "KNE", Cage = "CGE" etc.) List of accepted codes to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en CIF 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 26 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+forcement/ers_en.htm) 
+ers:RLC 66 POS sub declaration element POS (See details of sub-elements and attributes 
+of POS) CIF   
+ers:RLC 67 Catch sub-declaration (list of species 
+SPE sub-declarations) element SPE (See details of sub-elements and attrib utes 
+of SPE) CIF   
+ 
+4.4.3.4  Transhipment Declaration (TRA) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:TRA 70 Start of Transhipment declaration element TRA Ta g indicating the start of a Transshipment 
+declaration message. For every transshipment of catch, a declaration is required from both the donor and the recipient. C 
+  
+ers:TRA 71 Date attribute DA The date of the transshipment be ing 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:TRA 72 Time attribute TI The time of the transshipment being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:TRA 74 Port name attribute PO 
+  The port code, if the transshipment occurred in a port. Fixed format defined by the pattern: "CCPPP" (CC = ISO alpha-2 country code, PPP = 3 letter port code.) Port code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) CIF took place 
+in port 
+  
+ers:TRA 75 Receiving vessel’s CFR number attribute IR The r eceiving vessel's CFR number, if an 
+EU vessel. Fixed format defined by the pattern: "AAAZZZZZZZZZ" (AAA = three character alphabetical uppercase country code of vessel's first registration, ZZZZZZZZZ = 9 character alphabetical identity string.) CIF community 
+vessel 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 27 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:TRA 75a Receiving vessel’s external id attribute GBRRXR E xternal registration number of the 
+receiving vessel. CIF   
+ers:TRA 76 Transhipment: receiving vessel  attribute TT Int ernational radio call sign of the receiving 
+vessel, if donor vessel.  C   
+ers:TRA 77 Transhipment: flag state of receiving 
+vessel attribute TC 
+ Flag state of the receiving vessel. Must conform to the ISO alpha-3 country code. C 
+  
+ers:TRA 78 Donor Vessel's CFR number attribute RF 
+ The donor vessel's Community Fleet Registration number. Fixed format defined by the pattern: "AAAXXXXXXXXX" (AAA = Fully capitalised country code of the vessel's first registration within the EU, XXXXXXXXX = 9 character alphanumeric code.) CIF community 
+vessel 
+  
+ers:TRA 78a Donor Vessel’s external id attribute GBRDXR Extern al registration number of the donor 
+vessel. CIF   
+ers:TRA 79  Transhipment: (donor) vessel  attribute  TF  International radio call sign of the donor 
+vessel, if receiving vessel. C   
+ers:TRA 80 Transhipment: flag state of donor 
+vessel  attribute FC Flag state of the donor vessel. Must 
+conform to the ISO alpha-3 country code. C   
+ers:TRA 81 POS sub declaration element POS (See details of sub-elements and attributes of POS) CIF required 
+(**) (NEAFC or 
+NAFO waters)   
+ers:TRA 82 Catch transhipped (list of species SPE 
+sub-declarations) element SPE (See details of sub-elements and attributes of SPE) C 
+  
+ 
+4.4.3.5  Entry in Zone Declaration (COE) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:COE 85  Start of Effort declaration: Entry in 
+zone  element  COE  Tag indicating the start of a Crossing 
+(Entry) notification message. Used to declare entry into a stock recovery area or Western Waters. C   
+ers:COE 86 Date  attribute DA The date of the entry being rep orted. Fixed 
+format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:COE 87 Time  attribute TI The time of the entry being r eported. Fixed 
+format defined by the pattern: "HH:MM" C   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 28 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+(HH = Hours, MM = Minutes. Values must conform to UTC standards.) 
+ers:COE 88 Target specie(s) attribute TS Species targeted w ithin zone. Fixed format 
+defined by the pattern "X" (X = single character alphabetical species code.) List of accepted codes to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:COE 88a Directed species attribute GBRDS Directed species.  Must conform to a single 
+FAO (Fisheries and Agricultural Organisation) species code. Supported as a Norwegian requirement. CIF Norway 
+  
+ers:COE 88b Fishing effort zone attribute GBRFE The name of the fishing effort zone. CIF   
+ers:COE 89 Relevant area sub-declaration element RAS (See de tails of sub-elements and attributes 
+of RAS) CIF Norway   
+ers:COE 89a POS sub declaration element POS (See details of sub-elements and attributes of POS) C 
+  
+ers:COE 89b Transzonal  attribute GBRTZ Indicates when a vess el is engaged in 
+transzonal fishing. Fixed format defined by the pattern "Y" or "N". (Y = vessel has engaged in transzonal fishing, N = vessel has not engaged in transzonal fishing.) C 
+  
+ers:COE 90 Catch on board sub-declaration (list 
+of species SPE sub-declarations) element SPE (See details of sub-elements and attributes of SPE) CIF Norway 
+  
+  
+4.4.3.6  Exit from Zone Declaration (COX) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:COX 92 Start of Effort declaration: Exit out of 
+zone  element COX Tag indicating the start of a Crossing ( Exit) 
+notification message. Used to declare exit out of a stock recovery area or Western Waters. C 
+  
+ers:COX 93 Date  attribute DA The date of the exit being repo rted. Fixed 
+format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 29 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:COX 94 Time attribute TI The time of the entry being re ported. Fixed 
+format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:COX 95 Target specie(s) attribute TS Species targeted w ithin zone. Fixed format 
+defined by the pattern "X" (X = single character alphabetical species code.) List of accepted codes to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) CIF not 
+conducting 
+other fishing 
+activities 
+  
+ers:COX 95a Fishing effort zone attribute GBRFE The name of the fishing effort zone. List of 
+accepted codes to be found at the UK Fisheries web site. (http://www.fishregister.gov.uk/schema/ers/ v1) CIF 
+  
+ers:COX 97 Position sub-declaration element POS (See detail s of sub-elements and attributes 
+of POS) C   
+ers:COX 97a Transzonal  attribute GBRTRZ Indicator of whether  a vessel has engaged 
+in transzonal fishing. Fixed format defined by the pattern "Y" or "N". (Y = vessel has engaged in transzonal fishing, N = vessel has not engaged in transzonal fishing.) C 
+  
+ers:COX 98 Catch taken sub-declaration element SPE (See det ails of sub-elements and attributes 
+of SPE) O   
+ 
+4.4.3.7  Control Point Area Report Declaration (GBRCON) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:GBRCON 99a Start of Control Point  Area report 
+declaration element GBRCON Tag indicating the start of a Control  Point 
+notification message. Used to make a trans-zonal fishing declaration. CIF Norway 
+  
+ers:GBRCON 99b Control Point  attribute GBRCP Control point the  vessel is exiting from. 
+Fixed format defined by the pattern "X9" (X = single character alphabetical in the range A-H, 9 = single digit numerical in the 
+range 1 -3.)  CIF Norway   
+ers:GBRCON 99c Date of arrival attribute GBRDA The estimated dat e of arrival at the control 
+point. Fixed format defined by the pattern: CIF Norway   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 30 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+"YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) 
+ers:GBRCON 99d Time of arrival attribute GBRTI The estimated ti me of arrival at the control 
+point. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) CIF Norway 
+  
+ers:GBRCON 99e Position sub-declaration element POS (See detai ls of sub-elements and attributes 
+of POS) CIF Norway   
+   
+4.4.3.8  Discard Declaration (DIS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:DIS 119 Start of Discard declaration  element DIS Tag in dicating the start of a Discard 
+declaration message. Must be sent at least once per day with an FAR message. C 
+  
+ers:DIS 120 Date  attribute DA The date of the discard being reported. 
+Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform 
+to UTC standards.)  C   
+ers:DIS 121 Time  attribute TI The time of the discard bein g reported. 
+Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:DIS 122 Position sub-declaration  element POS (See deta ils of sub-elements and attributes 
+of POS) C   
+ers:DIS 123 Discarded fish sub-declaration element SPE (See details of sub-elements and attributes 
+of SPE) CIF   
+ 
+4.4.3.9  Prior Notification of Return Declaration (PNO) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:PNO 126 Start of Prior Notification element PNO Tag indi cating the start of a Prior 
+Notification of Return declaration message. C   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 31 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+To be transmitted prior to return to port or if required by Community rules. 
+ers:PNO 126a Date of departure element GBRDDA The date of the departure being reported. 
+Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:PNO 126b Time of departure element GBRDTI The time  of the departure being reported. 
+Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:PNO 127 Predicted date attribute PD The estimate d date of arrival being 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:PNO 128 Predicted time  attribute PT The estimat ed time of arrival being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:PNO 129 Port name  attribute PO The port code fo r the port of arrival. Fixed 
+format defined by the pattern: "CCPPP" (CC = ISO alpha-2 country code, PPP = 3 letter port code.) Port code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:PNO 129a Location attribute GBRLS Landing locatio n in port.  Free text with a 
+maximum of 30 characters) CIF Norway 
+only and only 
+for landings    
+ers:PNO 130 Relevant area sub-declaration element RAS  (See details of sub-elements and attributes 
+of RAS).  CIF in the 
+Baltic sea   
+ers:PNO 131 Predicted landing date attribute DA The e stimated date of landing being 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) CIF in the 
+Baltic sea 
+  
+ers:PNO  132  Predicted landing time  attribute  TI  The estimated time of landing being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = CIF in the 
+Baltic sea   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 32 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+Minutes. Values must conform to UTC standards.) 
+ers:PNO  133 Catch on Board sub-declarations (list 
+of species SPE sub -declarations)  element SPE (See details of sub-elements and attrib utes 
+of SPE)  C   
+ers:PNO  134 Position sub-declaration element POS 
+ (See details of sub-elements and attributes of POS) CIF  
+  
+ 
+4.4.3.10  End of Fishing Declaration (EOF) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:EOF 137 Start of Sign off of catch declaration  element EOF Tag indicating the start of an End of Fi shing 
+declaration message. To be transmitted immediately after last fishing operation and before returning to port and landing fish. C 
+  
+ers:EOF 138 Date  attribute DA The date the fishing l og is recorded as complete. 
+Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = 
+Date. Values must conform to UTC standards.)  C   
+ers:EOF 139 Time  attribute TI The time the fishing log is recorded as complete. 
+Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ 
+4.4.3.11  Return to Port Declaration (RTP) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:RTP 142 Start of Return to port declaration  el ement RTP Tag indicating the start of a Return To P ort 
+declaration message. To be transmitted on entry into port, after any PNO declaration and before landing any fish. C 
+  
+ers:RTP  143 Date  attribute DA The date the vessel returned to port. Fixed format 
+defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:RTP  144 Time  attribute TI The time the vessel returned  to port. Fixed format 
+defined by the pattern: "HH:MM" (HH = Hours, 
+MM = Minutes. Values must conform to UTC C   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 33 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+standards.) 
+ers:RTP  145 Port name  attribute PO The port code for the p ort the vessel returned to. 
+Fixed format defined by the pattern: "CCPPP" (CC = ISO alpha-2 country code, PPP = 3 letter port code.) Port code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) C 
+  
+ers:RTP  146  Reason for return  attribute  RE  The reason code indica ting why the vessel 
+returned to port. Fixed format defined by the pattern: "XXX" (XXX = 3 character alphabetical uppercase code.) Reason code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) C   
+  
+4.4.3.12  Landing Declaration (LAN) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:LAN 149 Start of Landing declaration  element LAN  Tag indicating the start of a Landing declaration 
+messag e. To be transmitted after landing of catch.  C   
+ers:LAN 150 Date  attribute DA The date of the landin g being reported. Fixed 
+format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:LAN 151 Time  attribute TI The time of the landi ng being reported. Fixed 
+format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C 
+  
+ers:LAN 152 Sender type attribute TS Description of t he message sender type. Fixed 
+format, the response must be one of: "MAS" (Vessel Master) "REP" (Representative of the Vessel Master) or "AGE" (Agent of the Vessel 
+Master).  C   
+ers:LAN 153 Port name  attribute PO 
+ The port code for the port of landing. Fixed format defined by the pattern: "CCPPP" (CC = ISO alpha-2 country code, PPP = 3 letter port code.) Port code list to be found at the EC ERS C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 34 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) 
+ers:LAN 154 Catch landed sub-declaration (list of 
+SPE with PRO sub-declarations) element SPE (See details of sub-elements and attrib utes of 
+SPE) C   
+    
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 35 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.4  Electronic Logbook Sub-Declarations Format 
+Please indicate your product’s support for the foll owing sub-declarations. A supplier must indicate the elements supported by their product in the columns marked in grey. 
+4.4.4.1  Position Sub-declaration (POS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:POS 157 Start of Position sub-declaration  eleme nt POS Details of a geographical position given in 
+latitude (-90 to 90) and longtitude (-180 to 180). C 
+  
+ers:POS 158 Latitude (decimal) attribute LT Latitude  expressed in accordance with the 
+WGS84 format used for VMS  C   
+ers:POS 159 Longitude (decimal)  attribute LG Longit ude expressed in accordance with the 
+WGS84 format used for VMS  C   
+4.4.4.2  Gear Deployment Sub-declaration (GEA) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:GEA 162 Start of Gear deployment sub-
+declaration  element GEA Details of a gear deployment. C   
+ers:GEA 163 Gear type attribute GE Gear code correspond ing to the FAO’s 
+"International Standard Statistical Classification of the Fishing Gear." C 
+  
+ers:GEA 163a Gear specification attribute GBRGS Norwegia n requirement - gear specification 
+(trawls: 1=single, 2=double, 3=triple) CIF Norway   
+ers:GEA 163b Gear problem attribute GBRGP Norwegian req uirement - gear problems 
+(1=empty net, 2=net burst, 3=net split, 4=broken meshes, 5=lost gear, 6=other) CIF Norway 
+and gear 
+problem   
+ers:GEA 164 Mesh Size attribute ME Mesh size, measur ed in millimeters. CIF gear has 
+mesh subject to 
+size requirement    
+ers:GEA 165 Gear Size  attribute GC Gear capacity. CIF required for 
+type of gear 
+deployed   
+ers:GEA 165a Gear number attribute GBRGN 
+  Gear number. CIF 
+  
+ers:GEA 165b Gear number shot attribute GBRTNS Total nu mber of shots: gill nets and long 
+lines CIF   
+ers:GEA 166 Fishing operations attribute FO Number of  fishing operations (hauls) per 24 
+hour period CIF if vessel 
+licensed to fish   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 36 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+deep sea stocks  
+ers:GEA 167 Fishing time attribute DU Number of hours the gear was deployed CIF if vessel 
+licensed to fish 
+deep sea stocks    
+ers:GEA 168 Gear shot sub-declaration element GES 
+ (See details of sub-elements and attributes of GES  CIF required*** 
+(vessel uses 
+static or fixed 
+gear)    
+ers:GEA 169 Gear retrieved sub-declaration element GE R 
+  (See details of sub-elements and attributes of GER) CIF required*** 
+(vessel uses 
+static or fixed 
+gear)   
+ers:GEA 171 Fishing depths attribute FD 
+ Fishing depth. The distance from the water surface to the lowest part of the fishing gear, measured in meters. Applies to vessels using towed gear, long lines and 
+fixed nets.  CIF deep sea 
+fishing and in 
+Norwegian 
+waters   
+ers:GEA 172 Average number of hooks used on 
+longlines attribute NH The average number of hooks used on the  
+long lines CIF deep sea 
+fishing and in 
+Norwegian 
+waters   
+ers:GEA 173 The average length of the nets attribute  GL 
+ The average length of the nets used when using fixed nets, measured in metres. CIF deep sea 
+fishing and in 
+Norwegian 
+waters    
+ers:GEA 174 The average height of the nets attribute  GD The average height of the nets used when 
+using fixed nets, measured in metres. CIF deep sea 
+fishing and in 
+Norwegian 
+waters   
+ers:GEA 174a Nominal length of one net attribute NL Th e nominal length of one net, measured in 
+metres. CIF gill nets   
+ers:GEA 174b Number of nets attribute NN Number of nets  in a fleet CIF gill nets   
+ers:GEA 174c Number of fleets attribute FL Number of f leets deployed CIF gill nets   
+ers:GEA 174d Total length of gill nets on board attr ibute GBRGNT Total number of gill nets on board at tim e 
+of departure CIF gill nets   
+Ers:GEA 174e Gear loss sub-declaration element GLS (Se e details of sub-elements and attributes 
+of GLS) CIF   
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 37 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.4.3  Gear Shot Sub-declaration (GES) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:GES 177 Start of Position sub-declaration  eleme nt GES Tag containing gear shot info C   
+ers:GES 178 Date  attribute DA The date of the gear-sh ot event being 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:GES  179  Time  attribute  TI  The time of the gear -shot event being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = Minutes. Values must conform to UTC standards.) C   
+ers:GES 179a Start zone attribute GBRZO Indicator of  where zone fishing will be 
+commencing. Fixed format defined by the options: "XJM" (fishing commences in Jan Mayan) or  "XSV" (fishing commences in Svalbard). Data recorded in accordance with Norwegian requirements. CIF Norway 
+  
+ers:GES 180 POS sub-declaration element POS (See det ails of sub-elements and attributes 
+of POS) C   
+ers:GES  180a  Gill net fleet deployed  element  GBRGNFN  Unique reference number identifying the 
+gill net fleet deployed. CIF gill nets 
+deployed   
+ers:GES 180b Depth of gill net fleet deployed element  FD Fleet depth indicating the depth for each 
+fleet deployed. (Measured as the distance from the water surface to the lowest part of the fishing gear.) CIF gill nets 
+deployed 
+  
+4.4.4.4  Gear Retrieved Sub-declaration (GER) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:GER 183 Start of Position sub-declaration  eleme nt GER Tag containing gear retrieved info C   
+ers:GER 184 Date  attribute DA The date of the gear re trieval being 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:GER 185 Time attribute TI The time of the gear r etrieval being 
+reported. Fixed format defined by the pattern: "HH:MM" (HH = Hours, MM = C 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 38 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+Minutes. Values must conform to UTC standards.) 
+ers:GER 186 POS sub-declaration element POS (See det ails of sub-elements and attributes 
+of POS)  C   
+ers:GER 186a Gill net fleet retrieved attribute GBRGNFN  Unique reference number identifying the 
+gill net fleet retrieved. CIF gill nets 
+deployed   
+ers:GER 186b Soak time gill net fleet deployed attri bute ST Soak time of each gill net fleet deployed, 
+measured in hours. CIF gill nets 
+deployed   
+4.4.4.5  Gear Loss Sub-declaration (GLS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:GLS 197 Start of GLS sub declaration element GLS Data on fixed gear lost C   
+ers:GLS  198 Date gear lost attribute  DA The date of the gear loss event being 
+reported. Fixed format defined by the pattern: "YYYY-MM-DD" (YYYY = Year, MM = Month, DD = Date. Values must conform to UTC standards.) C 
+  
+ers:GLS  199 Number of units attribute  NN Numerical value indicating the quantity of 
+gear lost.  C   
+ers:GLS  200 POS sub-declaration element POS (See details of  sub-elements and attributes 
+of POS) C   
+ers:GLS 200a Gill net fleet lost attribute GBRGNFN Uniqu e reference number identifying the 
+gill net fleet lost. C   
+  
+4.4.4.6  Relevant Area Sub-declaration (RAS) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:RAS 202a Start of Relevant area sub-declaration element RAS The relevant area sub-declaration. 
+Dependent upon the reporting requirement, at least one field should be filled in. List of accepted codes to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:RAS 203 FAO area attribute FA  The FAO area. (Eg. "27") C   
+ers:RAS 204 FAO (ICES) sub-area attribute SA The FAO s ub-area. (Eg. "3") C   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 39 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:RAS 205 FAO (ICES) division  attribute ID FAO (ICE S) division (e.g. “d”)  CIF   
+ers:RAS 206 FAO (ICES) sub- division attribute SD FAO (ICES) sub-division (e.g. “24”) 
+(Meaning together with the above 27.3.d.24) CIF 
+  
+ers:RAS 207 Economic zone attribute  EZ The economic  zone  CIF   
+ers:RAS 208 Ices statistical rectangle attribute SR ICES statistical rectangle (e.g. “49E6”)  CIF   
+ers:RAS 210 Position Sub declaration element POS (See details of sub-elements and attributes of POS). CIF 
+  
+  
+ 
+4.4.4.7  Species Sub-declaration (SPE) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:SPE 213 Start of SPE sub-declaration  element S PE Details of fish caught by species C   
+ers:SPE 214 Species name  attribute SN Must conform  to a single FAO (Fisheries 
+and Agricultural Organisation) species code. Species code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_en forcement/ers_en.htm) C 
+  
+ers:SPE 215 Weight of fish  attribute WT 
+  Depending on context, this data item is to be either:  1. Total weight of fish (in kilograms) in catch period.  2. Total weight of fish (in kilograms) on board (aggregate) or  3. Total weight of fish (in kilograms) 
+landed.  CIF species not 
+counted   
+ers:SPE 215a Weight of fish to be landed / 
+transhipped attribute GBRWT Estimated weight of fish to be landed  (in 
+kgs).  Relevant when reporting PNO. CIF   
+ers:SPE 216 Number of fish  attribute NF Number of fis h in catch. Completed when 
+catch is measured in 'numbers of fish'. C    
+ers:SPE 216a Number of fish to be 
+landed/transhipped attribute GBRLNF Estimated number of fish landed.  Re levant 
+when reporting PNO. CIF   
+ers:SPE 217 Quantity held in nets  attribute NQ Estim ated quantity of fish held in nets. (ie. 
+not held in hold) O   
+ers:SPE 218 Number held in nets  attribute NB Estimat ed number of fish held in nets. (ie. 
+not held in hold)  O   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 40 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:SPE 219 Relevant area sub-declaration element R AS (See details of sub-elements and attributes 
+of RAS). C   
+ers:SPE 220 Gear type attribute GE Gear code correspon ding to the FAO’s 
+"International Standard Statistical Classification of the Fishing Gear." CIF landing 
+declaration for certain species 
+and catch areas   
+ers:SPE 221 Processing sub-declaration element PRO (See details of sub-elements and attributes of PRO) CIF for landing 
+(transhipment) 
+declaration   
+ 
+4.4.4.8  Processing Sub-declaration (PRO) 
+Item Ref 
+No Feature -  
+Element or attribute name XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+ers:PRO 224 Start of Processing sub-declaration  el ement PRO Tag containing fish processing details. 
+Processing/presentation for each species landed. C   
+ers:PRO 226 State of preservation  attribute PS Let ter code for the Preservation State of the fish. 
+(Eg. 'live', 'frozen', 'salted', etc.) Preservation  state 
+code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) C 
+  
+ers:PRO 227 Presentation of fish  attribute PR Lett er code for the Product Presentation, which 
+reflects the manner of processing. Presentation code list to be found at the EC ERS web site. (http://ec.europa.eu/fisheries/cfp/control_enforce ment/ers_en.htm) C 
+  
+ers:PRO 228 Processing’s type of packaging  attribu te TY 3 letter code (CRT=cartons, BOX=boxes, 
+BGS=bags, BLC=blocks)  C   
+ers:PRO 229 Number of packing units attribute NN Numb er of packing units. (ie. cartoons, boxes, 
+bags, containers, blocks etc.) C   
+ers:PRO 230 Av weight per unit of packing  attribut e AW Average product weight, measured in Kg. C   
+ers:PRO 231 Conversion factor attribute CF Conversi on factor. A numerical factor that is 
+applied to convert fish processed weight into fish live weight. O 
+  
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 41 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.5  ELSS XML Schemas  
+This section describes the UK Fishing Vessel’s Elec tronic Logbook Functional Requirements Specificatio n XML Schema Definitions (XSDs). A supplier must in dicate the elements 
+supported by their ELSS product in the columns mark ed in grey.  
+Item Ref 
+No Feature  XML 
+Syntax Code Description and content Status Support  
+Y|N|N/A Notes 
+- - UK Vessels XML Schema { ers-1.0-
+UK.xsd }  XSD - Definition of the general structure of all the 
+electronic messages that can be exchanged between Member States C  
+  
+- - UK ERS Codes Schema { ers-codes-
+1.0.xsd } XSD - Definition of predefined codes that can be used  
+for reporting (country codes, currency codes, fish size categories, fish presentation, FAO gear codes, etc...) C 
+  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 42 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  4.4.6  ELSS Capture Functions  
+This section provides the product supplier to provi de details of the features of the ELSS product to c apture data and print  hard copies of reporting req uired by UK Fisheries.  A 
+supplier must indicate how the following functional  requirements are supported by their product in the  columns marked in grey.  
+ 
+Item Description  Status Support 
+Y|N|N/A Notes 
+Capture-001 Product MUST provide data capture scree ns for the entry 
+of the logbook, transhipment and landing declaratio n data 
+that is required to be transmitted to the UK fisherie s 
+administrations’ ERS system. C   
+Capture-002 Product MUST provide a means for fisherm an to 
+manually enter required Electronic Logbook and Land ing 
+Declaration information. C   
+Capture-003 Product MAY provide automated features fo r populating 
+the Electronic Logbook information (e.g. interfacin g with 
+a GPS feature for inserting the location, date, tim e etc). 
+{ Please list systems in the Notes field } O   
+Capture-004 Product SHOULD provide Man-Machine Interf ace 
+factors suitable for operation of the ELSS on a moving/swaying platform O 
+  
+Capture-005 Product MUST use English (UK) localization  for all UK 
+Electronic Logbook features.   C   
+Capture-006 Product MUST use UTC for all dates and t imes C   
+Printing-001 Product MUST provide a means to provide a hard copy 
+print out of the Electronic Logbook and Landing Declaration using an onboard printer.   C 
+  
+Printing -002  Product MAY provide an electronic copy of the 
+Electronic Logbook or Landing Declaration to be transmitted and printed on-shore.   O   
+Printing-003 Product MUST provide a means so that el ectronic print 
+files are protected so that they are not able to be  modified 
+in any way once generated and distributed  CIF 
+Printing-003   
+Printing-004 Product MAY provide features to facilit ate other print 
+requirements, including: 
+/square4 Generation of hard copies of the Electronic Logbook when fishing in 3rd country or Regional Fisheries waters, e.g. NAFO, Faroese and Norwegian waters. 
+/square4 Generation of a hard copy Electronic Logbook or landing declaration as a transport or takeover document. 
+Generation of a hard copy for providing regulatory r eturn O 
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 43 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Description  Status Support 
+Y|N|N/A Notes 
+for Cod and Hake effort reporting. 
+  4.4.7  ELSS Data Transmission Features 
+This section provides the product supplier to provi de details of the transmission features, transport protocols and security features for their ELSS prod uct.  A supplier must indicate 
+the elements supported by their product in the colu mns marked in grey. 
+Item Description  Status Support 
+Y|N|N/A Notes 
+VMS-001 Provide details of the Vessel Monitoring Syst em 
+options used to send Electronic Logbook information to the UK ERS.  - 
+-  
+Tranmission-001 Product MUST enable  the transmissio n of the 
+required reports by an on-board email system eg by generating the data for transmission as xml documents attached to email for the email system deployed to be sent to an email address of the UK fisheries administrations’ ERS system .  C 
+  
+Tranmission-002 Product MUST use the Electronic Log book 
+filename syntax based on the GBRRN attribute i.e. [RSSNumber][YYYYMMDD][999999] C 
+  
+Transmission-003 Product MUST encrypt the Electronic  Logbook 
+XML file using the UK Fisheries public PGP key when sent as an email attachment  C 
+ Alternatives may be offered and deployed subject to satisfactory testing and acceptance 
+by the UKFAs 
+Transmission-004 Supplier MAY provide details of othe r transmission 
+methods supported by the ELSS product which should be considered by UK Fisheries for future  release of the ERS  O 
+  
+Transmission-005 Product MUST provide a means whereb y the 
+system can track whether the submitted Electronic Logbook report has been successfully transmitted to the ERS systems and to track whether an acknowledgment has been received for each transmission. C 
+  
+Transmission -006  Product MUST provide for a test mod e of operation 
+to enable the fishermen and the UK fisheries administrations to carry out test transmissions.  C   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 44 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]   
+4.4.7.1  Frequency of Transmission 
+This section provides the product supplier to provi de details of the features of the ELSS product that  prompt the fisherman to send information in compli ance to the frequency of 
+reporting required by UK Fisheries.  A supplier must indicate how the following function al requirements are supported by their product in t he columns marked in grey. 
+Item Description  Status Support 
+Y|N|N/A Notes 
+Frequency-001 Product MUST provide a means to ensur e that Electronic 
+Logbook is transmitted to the UK ERS at least on a d aily 
+basis not later than 24:00 hours even when there is  no 
+catch data with the proviso that if the vessel is in port, has  
+no fish on board and has submitted a landing declaration, transmission may be suspended subject to 
+prior notification to the Fisheries Monitoring Cent re of 
+the flag Member State.  Transmission shall be resume d 
+when the vessel leaves port .  C 
+  
+Frequency -002  Product MUST  provide a means to transmit the 
+Electronic Logbook at the time of completion in res ponse 
+to a UK fishing administration request C   
+Frequency-003 Product MUST provide a means to transm it the 
+Electronic Logbook immediately after the last fishi ng 
+operation has been completed.  C   
+Frequency-004 Product MUST provide a means of sendin g the 
+Electronic Logbook before entering into port. C   
+Frequency-005 Product MUST provide a means of sendin g the 
+Electronic Logbook immediately on departing a port.  C   
+Frequency-006 Product MUST provide a means of sendin g the 
+Electronic Logbook at the time of inspection at sea . C   
+Frequency-007 Product MUST provide a means of sendin g the 
+Electronic Logbook at the time of events defined in  
+Community legislation or by the UK fisheries administrations C 
+  
+Frequency-008 Product MUST provide a means of sendin g a 
+transhipment electronic logbook data immediately af ter 
+the transhipment C   
+Frequency-008 Product MUST provide a means of sendin g a 
+transhipment electronic logbook data immediately on  
+completion of a Landing Declaration    
+Frequency-009 Product MAY use stored zone definitions  to provide an 
+alarm for the Master to prepare a report or to gene rate a O   
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 45 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  Item Description  Status Support 
+Y|N|N/A Notes 
+report from catch data already stored e.g. exiting zone 
+report. 
+4.4.8  ELSS System Features 
+This section provides the product supplier to provi de details of the features of the ELSS product rela ting to baseline usability features required by UK Fisheries for the product.  A 
+supplier must indicate how the following functional requirements are suppo rted by their product in the columns marked in grey . 
+ 
+Item Description  Status Support 
+Y|N|N/A Notes 
+ELSS-Features-001 Product MUST retain all logbook r eports and 
+any corrections on the system at least until the end of each trip, i.e. on submission for transmission of the electronic landing 
+declaration or of a transhipment report  C   
+ELSS-Features-002 Software updates for a product MUST  NOT 
+impact upon requirements described in Council Regulation (EC) No. 1966/2006 and 
+commission Regulation (EC) No. 1077/2008  C   
+ELSS-Features-003 Product MUST: 
+/square4 provide a unique ID for the master of each vessel; 
+/square4 provide a means for the Master to assign a unique ID to each person with computer access; 
+/square4 provide a means for each unique ID to authenticate (e.g. with a password or passphrase or token) before accessing the system. 
+/square4  associate an Electronic Logbook report with a unique User ID 
+/square4 record a legal acknowledgement from the user entering the data for the Electronic Logbook record C 
+  
+ELSS-Features Product MUST only to be supplied for use at 
+sea and loaded onto an onboard system and is not to be provided for onshore use by agents or representatives  C 
+  
+.  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 46 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  5 Product Commercial Description 
+ 
+A product supplier will be provided with the opport unity to publish details of their ELSS Approved pro duct on the ELSS 
+Approved Product Register on the UK Fisheries publi c website. This section allows a product supplier t o provide a 
+commercial description of their ELSS Approved produ ct which will appear on the ELSS Approved Product R egister.  
+ 
+Reference to the product will be listed using detai ls marked in Section 2 of this document:  
+ 
+Commercial Product Name <e.g. Widget >  
+Commercial Product Model Number  
+(if different from product name) <e.g. Widget A123>  
+Organization / Company Name  <e.g Acme Ltd>  
+  
+ 
+Submission of this data by a product supplier is op tional.  
+ 
+If the product successfully completes the ELSS Appr oval process, would you like the 
+product listed on the UK Fisheries public website? < YES | NO >  
+ 
+ 
+Please specify how the product should be referred t o on the UK Fisheries public website: 
+ 
+ 
+ 
+ 
+ 
+Please specify any additional Instructions for publ ishing on the UK Fisheries public website: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.  
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 47 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  6 Statement of Conformance  
+By signing below I verify that my company has adher ed to the procedures defined within this document a nd that I 
+personally attest to all claims put forward by my c ompany within this document. I also acknowledge thr ough my 
+signature that I have the authority to enter my com pany into a declaration such as this. 
+ 
+ 
+Name: 
+  
+Signature: 
+  
+Title: 
+  
+Company: 
+  
+Date: 
+  
+ 
+ 
+ 
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 48 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  7 References 
+7.1  Normative References  
+[1]  COMMISSION REGULATION (EC) No 1966/2006 of 21 Novem ber 2006 
+http://ec.europa.eu/fisheries/cfp/control_enforceme nt/ers/guidelines_en.pdf  
+[2]  COMMISSION REGULATION (EC) No 1077/2008 of 3 Novemb er 2008  
+ http://ec.europa.eu/fisheries/cfp/control_enforceme nt/ers/guidelines_en.pdf  
+[3]  ERS Guidelines document: Data Exchanges between Mem ber States 
+ http://ec.europa.eu/fisheries/cfp/control_enforceme nt/ers/guidelines_en.pdf   
+ 
+7.2  Definitions 
+Definition Description 
+Approved Product Register A web-based record of all  approved products, which is maintained by UK 
+Fisheries  
+Approval Validation  The operation of independently validatin g the product submitted for approval 
+through auditing and testing.  
+Product Profile  A statement made by the supplier of an implementati on or system claimed to 
+conform to the ERS eLogbook specification, stating which capabilities have 
+been implemented, including which optional features  are supported. 
+Static Conformance Requirement A definition of the compulsory and optional behaviour a product must 
+implement in order to be considered conformant to t he ERS eLogbook 
+specification.  
+ 
+7.3  Abbreviations 
+Acronym Definition 
+ERS  Electronic Recording and Reporting Systems  
+ELSS  Electronic Logbook Software System  
+MS  European Union Member States  
+SDF  Self Declaration Form  
+XML  eXtensible Markup Language  
+XSD  XML Schema Definition  
+  
+UK Fishing Vessel’s Electronic Logbook Functional R equirement Specification 
+[including Product Profile & Self Declaration Form ] 
+Version 1.2   Page 49 of 49 
+ 
+Copyright © 2009,2010 UK Fisheries Administrations All Rights Reserved 
+PROTECT – COMMERCIAL [when completed]  8 Document Changes 
+Between And Description of changes 
+v1.0 v1.1 1.  Gear loss sub-declaration (GLS) [Ref No.: 174e] mov ed from Fishing Activity 
+Declaration (FAR) [Section: 4.4.3.2] to Gear Deploy ment Sub-declaration (GEA) 
+[Section: 4.4.4.2] 
+2.  Description and content for all items aligned to co mments in xsd (ers-1.1-uk.xsd) 
+ 
