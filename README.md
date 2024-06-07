@@ -28,4 +28,5 @@ The tree structure resonates with the hierarchical nature of the requirement all
 
 If you find this dataset useful, please cite:
 
-#### We thank the authors of *PURE: A Dataset of Public Requirements Documents* for making their dataset publicly available.
+#### Acknowledgement
+We thank the authors of *PURE: A Dataset of Public Requirements Documents* for making their dataset publicly available.
