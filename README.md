@@ -3,7 +3,7 @@
 ---
 > Dataset for the publication:
 
-**A Network and Semantic Similarity Dataset of Requirements from the Tree Structure of System Requirement Specifications**
+**ReqNet and ReqSim: A Network and Semantic Similarity Dataset of Requirements from the Tree Structure of System Requirement Specifications**
 
 ## Abstract
 
@@ -27,6 +27,18 @@ The tree structure resonates with the hierarchical nature of the requirement all
 ## Citation Information
 
 If you find this dataset useful, please cite:
-
+```
+@article{10.1115/1.4065786,
+    author = {Sahu, Chandan Kumar and Rai, Rahul and Wiecek, Margaret and Gorsich, David},
+    title = "{ReqNet and ReqSim: A Network and Semantic Similarity Dataset of Requirements from the Tree Structure of System Requirement Specifications}",
+    journal = {Journal of Computing and Information Science in Engineering},
+    pages = {1-15},
+    year = {2024},
+    month = {06},
+    issn = {1530-9827},
+    doi = {10.1115/1.4065786},
+    url = {https://doi.org/10.1115/1.4065786},
+}
+```
 #### Acknowledgement
 We thank the authors of *PURE: A Dataset of Public Requirements Documents* for making their dataset publicly available.
