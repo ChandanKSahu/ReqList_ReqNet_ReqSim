@@ -3,7 +3,7 @@
 ---
 > Dataset for the publication:
 
-**ReqNet and ReqSim: A Network and Semantic Similarity Dataset of Requirements from the Tree Structure of System Requirement Specifications**
+[**ReqNet and ReqSim: A Network and Semantic Similarity Dataset of Requirements from the Tree Structure of System Requirement Specifications**](https://doi.org/10.1115/1.4065786)
 
 ## Abstract
 
